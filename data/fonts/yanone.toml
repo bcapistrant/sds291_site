@@ -1,0 +1,11 @@
+# Font style metadata
+name = "yanone"
+
+# Optional Google font URL
+google_fonts = "Titillium+Web|IBM+Plex+Mono"
+
+# Font families
+heading_font = "Titillium Web"
+body_font = "Titillium Web"
+nav_font = "Titillium Web"
+mono_font = "IBM Plex Mono"

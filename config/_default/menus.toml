@@ -1,0 +1,41 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[main]]
+  name = "Syllabus"
+  url = "/syllabus/"
+  weight = 1
+
+[[main]]
+  name = "Schedule"
+  url = "/schedule/"
+  weight = 2
+
+[[main]]
+  name = "Classes"
+  url = "/Classes/"
+  weight = 3
+
+[[main]]
+  name = "Reference"
+  url = "/reference/"
+  weight = 4
+
+[[main]]
+  name = "Courses"
+  url = "courses/"
+  weight = 5
+
+[[main]]
+   name = '<i class="fab fa-slack"></i>'
+   url = "http://sds291-spring2020.slack.com"
+   weight = 6
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+# [[main]]
+#    name = "CV"
+#    url = "files/cv.pdf"
+#    weight = 70
