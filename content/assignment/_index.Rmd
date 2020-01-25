@@ -48,6 +48,18 @@ There are 7 problem sets on the schedule. **I will keep the highest grades for 6
 
 You may (and should!) work together on the problem sets, but *you must turn in your own answers.* You cannot work in groups of more than **four** people, and you must note who participated in the group in your assignment.
 
+Important points to consider for a complete assignment:
+
+- answer in complete sentences
+- use the conditions/terminology for scatterplots we talked about in class
+- answer in the context of these data and the question (i.e., use the units, so that it's easily interpretable)
+  - For example: with the Porsche data, convert the miles back to 1000s, and the price into $; see p. 29 for a good interpretation of slope and intercept in the context of the problem
+- explain your rationale and evidence for why you think something is or isn't true for subjective questions (e.g., 1.9c)
+- state the null and alternative hypotheses for any statistical tests
+- submit both .Rmd code and knitted PDF on Moodle
+- Use the server to make your life easier with knitting to PDF
+- _**Knit early**_ so pesky errors don't cause trouble just before the deadline
+
 
 ## Evaluation assignments
 

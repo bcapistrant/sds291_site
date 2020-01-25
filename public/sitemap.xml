@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>/assignment/00-assign-getting-started/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/class/01-class/</loc>
     <lastmod>2020-01-25T03:13:25-05:00</lastmod>
   </url>
@@ -189,7 +194,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -253,12 +258,12 @@
   </url>
   
   <url>
-    <loc>/reading/02-reading/</loc>
+    <loc>/reading/01-reading/</loc>
     <lastmod>2020-01-25T03:13:25-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/reading/01-reading/</loc>
+    <loc>/reading/02-reading/</loc>
     <lastmod>2020-01-25T03:13:25-05:00</lastmod>
   </url>
   
@@ -348,7 +353,7 @@
   
   <url>
     <loc>/syllabus/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-25T15:42:59-05:00</lastmod>
   </url>
   
 </urlset>

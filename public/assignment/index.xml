@@ -51,8 +51,8 @@
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;So are Python and other modern open source languages too.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Yours won’t be nearly as complicated as these, by the way. Nor do they need to be.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;So are Python and other modern open source languages too.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Yours won’t be nearly as complicated as these, by the way. Nor do they need to be.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -73,12 +73,51 @@
     <item>
       <title>Problem set 1</title>
       <link>/assignment/01-problem-set/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/assignment/01-problem-set/</guid>
       <description>
 
 
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
+&lt;p&gt;Questions 1.8, 1.9, and 2.3 from the book&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>/assignment/00-assign-getting-started/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/00-assign-getting-started/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#initial-course-administration-tasks&#34;&gt;Initial Course Administration Tasks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-started-with-r-refreshing-statistics&#34;&gt;Getting started with &lt;code&gt;R&lt;/code&gt; &amp;amp; Refreshing Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;initial-course-administration-tasks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Initial Course Administration Tasks&lt;/h3&gt;
+&lt;p&gt;There are a few small, administrative things to get started. These should have done during the first week of class.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Read the syllabus&lt;/li&gt;
+&lt;li&gt;Get a copy of &lt;a href=&#34;https://www.amazon.com/STAT2-Modeling-Regression-Ann-Cannon-ebook-dp-B07K6Y99J3/dp/B07K6Y99J3/ref=mt_kindle?_encoding=UTF8&amp;amp;me=&amp;amp;qid=1579815019&#34;&gt;the textbook&lt;/a&gt; (&amp;amp; see notes about buying the book in the syllabus)&lt;/li&gt;
+&lt;li&gt;Download the &lt;a href=&#34;https://www.polleverywhere.com/mobile&#34;&gt;PollEverywhere app&lt;/a&gt; to your phone or a device that you’ll have with you in the classroom&lt;/li&gt;
+&lt;li&gt;Set up an account with &lt;a href=&#34;https://rstudio.cloud/&#34;&gt;RStudio Cloud&lt;/a&gt; (easiest via Google with your Smith account). We will not be using the RStudio Cloud exclusively, but we will need to use it at a least a few points during the semester.&lt;/li&gt;
+&lt;li&gt;Join the &lt;a href=&#34;https://join.slack.com/t/sds291-spring2020/shared_invite/enQtODc2NzU0MTU5MjAxLTFmZmU2OTc5OTIzMDU5MzU5ZTEzNjZkMDllYmRlYmQ4NzI2ZTM4Y2Y2N2M2MWRjY2ZjMDVlMGRjN2JmZjdiZWY&#34;&gt;course Slack&lt;/a&gt; and post an animal gif in the channel for your section (Section 01: 1:20-2:35, or Section 02: 2:45 - 4:00pm). If you’re new to Slack, look through the Resources section of this page for some more information to get started.&lt;/li&gt;
+&lt;li&gt;Add a 1-2 songs to &lt;a href=&#34;https://open.spotify.com/playlist/70l14LCdw5XOAyk1RHeuAO?si=Enp-jrtiSeKWhU4XYueiqg&#34;&gt;a playlist for our class&lt;/a&gt;. I like playing music at the beginning of class and during in-class work time (there will be a lot), so add something you’d like to hear. See more &lt;a href=&#34;https://support.spotify.com/us/article/create-playlists-with-your-friends/&#34;&gt;here&lt;/a&gt; about adding to a collaborative playlist. If you don’t have a Spotify account or have trouble adding songs directly to Spotify, just add the song title and artist in this google form.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-started-with-r-refreshing-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Getting started with &lt;code&gt;R&lt;/code&gt; &amp;amp; Refreshing Statistics&lt;/h3&gt;
+&lt;p&gt;New to &lt;code&gt;R&lt;/code&gt;? Feeling rusty on your introductory statistics material?*&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Don’t fret – we’ll do this all together, no need to feel like you have to do any prep before class.&lt;/li&gt;
+&lt;li&gt;If you &lt;em&gt;want&lt;/em&gt; to practice &lt;code&gt;R&lt;/code&gt;, especially during the first few weeks of semester when the workload is a little lighter, try the &lt;a href=&#34;https://rstudio.cloud/learn/primers&#34;&gt;primers in RStudio Cloud&lt;/a&gt;, especially the first four (don’t worry about iterate or write functions)&lt;/li&gt;
+&lt;li&gt;Take a look back at your intro stats text book, or &lt;a href=&#34;https://drive.google.com/file/d/0B-DHaDEbiOGkRHNndUlBaHVmaGM/edit&#34;&gt;this open source textbook&lt;/a&gt;. You might want to review normal distributions, tests of differences in means (t-tests), ANOVA, and interpretation of p-values and confidence intervals. We’ll cover the regression specific material, but those ideas underlie much of regression. Again, I wouldn’t stress about this at this point, but a very quick skim could help get the dust off your recall of this material.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;*Many former students have had some anxiety coming into the class about the learning curve to learn &lt;code&gt;R&lt;/code&gt;. I am fully anticipating – and can empathize with! – this nervousness. We will talk plenty about how to get going with &lt;code&gt;R&lt;/code&gt; for those in the class who haven’t used it before, with additional resources as we get going. We’ll cover what you need in class, but if you want to do some extra practice in the first few weeks of the semester while things are (generally) quiet, it might be useful to do so.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -92,8 +131,7 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#suggested-outline&#34;&gt;Suggested outline&lt;/a&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#suggested-outline&#34;&gt;Suggested outline&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#program-overview&#34;&gt;Program overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#program-theory-and-implementation&#34;&gt;Program theory and implementation&lt;/a&gt;&lt;/li&gt;
@@ -222,8 +260,8 @@
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See the &lt;a href=&#34;https://cos.io/prereg/&#34;&gt;Center for Open Science’s directory of preregistrations&lt;/a&gt;, or &lt;a href=&#34;https://aspredicted.org/&#34;&gt;AsPredicted list&lt;/a&gt; for examples of this in real life. &lt;a href=&#34;https://osf.io/hsbyd&#34;&gt;Here’s one by me!&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;If you did problem sets 4 and 5, you’ve already done a lot of this work! I don’t recommend simply copying/pasting it as is into here—you’ll want to polish it up a little for this final report.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See the &lt;a href=&#34;https://cos.io/prereg/&#34;&gt;Center for Open Science’s directory of preregistrations&lt;/a&gt;, or &lt;a href=&#34;https://aspredicted.org/&#34;&gt;AsPredicted list&lt;/a&gt; for examples of this in real life. &lt;a href=&#34;https://osf.io/hsbyd&#34;&gt;Here’s one by me!&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;If you did problem sets 4 and 5, you’ve already done a lot of this work! I don’t recommend simply copying/pasting it as is into here—you’ll want to polish it up a little for this final report.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

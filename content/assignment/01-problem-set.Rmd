@@ -1,8 +1,8 @@
 ---
 title: "Problem set 1"
-date: "2020-01-22"
-due_date: "2020-01-22"
-due_time: "11:59 PM"
+date: "2020-02-03"
+due_date: "2020-02-03"
+due_time: "11:59 AM"
 menu:
   assignment:
     parent: Problem sets
@@ -16,4 +16,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-The instructions for this problem set will go live 2 weeks before the deadline.
+Questions 1.8, 1.9, and 2.3 from the book
+
+

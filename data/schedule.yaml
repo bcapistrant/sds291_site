@@ -5,16 +5,16 @@ lessons:
   - title: '<i class="fas fa-university"></i> **Context for and Use of Regression Modelling**'
     date: "January 27"
     reading: "01-reading"
-    assignment: "00-problem-set"
 
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: Fitting Models**'
     date: "January 29"
     reading: "02-reading"
-    assignment: "01-problem-set"
+    assignment: "00-assign-getting-started"
     
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: Slope Inference**'
     date: "February 3"
     reading: "03-reading"
+    assignment: "01-problem-set"
     
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: ANOVA Table**'
     date: "February 5"

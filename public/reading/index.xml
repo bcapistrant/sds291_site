@@ -338,6 +338,33 @@
     </item>
     
     <item>
+      <title>Context for and Use of Regression Modellinge</title>
+      <link>/reading/01-reading/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/01-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; and &lt;a href=&#34;/assignment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 0 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Gillham, N. W. (2001). &lt;a href=&#34;https://www.annualreviews.org/doi/abs/10.1146/annurev.genet.35.102401.090055?journalCode=genet&#34;&gt;Sir Francis Galton and the birth of eugenics&lt;/a&gt;. Annual review of genetics, 35(1), 83-101.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;if-youre-interested&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;If you’re interested&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Regression and inference</title>
       <link>/reading/02-reading/</link>
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
@@ -372,37 +399,6 @@
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel, &lt;em&gt;OpenIntro Statistics&lt;/em&gt;, 3rd ed., 2017, &lt;a href=&#34;https://www.openintro.org/stat/textbook.php?stat_book=os&#34; role=&#34;doc-biblioref&#34;&gt;https://www.openintro.org/stat/textbook.php?stat_book=os&lt;/a&gt;.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Evaluation, data science, the causal revolution, and the tidyverse</title>
-      <link>/reading/01-reading/</link>
-      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/01-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; and &lt;a href=&#34;/assignment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; DJ Patil, &lt;a href=&#34;https://www.youtube.com/watch?v=UOoMzaWOQJA&#34;&gt;&#34;What Makes a Radical and Revolutionary Technology?&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Stephen Goldsmith, &lt;a href=&#34;http://www.govtech.com/opinion/Next-Generation-Public-Employees-Must-Understand-Data-Policy.html&#34;&gt;“Next Generation of Public Employees Must Understand Data and Policy”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Chris Sommerfeld, &lt;a href=&#34;https://datasmart.ash.harvard.edu/news/article/the-rise-of-the-data-scientists-611&#34;&gt;“The Rise of the Data Scientists”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Zack Quaintance, &lt;a href=&#34;http://www.govtech.com/civic/Summit-on-Data-Smart-Government-Day-Two-Shows-How-Fast-the-Discipline-Has-Grown.html&#34;&gt;“Summit on Data-Smart Government Day Two Shows How Fast the Discipline Has Grown”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Hadley Wickham, &lt;a href=&#34;http://bulletin.imstat.org/2014/09/data-science-how-is-it-different-to-statistics%E2%80%89/&#34;&gt;“Data Science: How is it Different To Statistics?”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/readings/ds-venn.png&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;DJ Patil is the former Chief Data Scientist of the United States under President Obama. He gave this forum address at Brigham Young University on February 13, 2018.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

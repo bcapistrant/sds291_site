@@ -51,8 +51,8 @@
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;So are Python and other modern open source languages too.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Yours won’t be nearly as complicated as these, by the way. Nor do they need to be.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;So are Python and other modern open source languages too.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Yours won’t be nearly as complicated as these, by the way. Nor do they need to be.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -73,12 +73,51 @@
     <item>
       <title>Problem set 1</title>
       <link>/assignment/01-problem-set/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/assignment/01-problem-set/</guid>
       <description>
 
 
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
+&lt;p&gt;Questions 1.8, 1.9, and 2.3 from the book&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>/assignment/00-assign-getting-started/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/00-assign-getting-started/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#initial-course-administration-tasks&#34;&gt;Initial Course Administration Tasks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-started-with-r-refreshing-statistics&#34;&gt;Getting started with &lt;code&gt;R&lt;/code&gt; &amp;amp; Refreshing Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;initial-course-administration-tasks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Initial Course Administration Tasks&lt;/h3&gt;
+&lt;p&gt;There are a few small, administrative things to get started. These should have done during the first week of class.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Read the syllabus&lt;/li&gt;
+&lt;li&gt;Get a copy of &lt;a href=&#34;https://www.amazon.com/STAT2-Modeling-Regression-Ann-Cannon-ebook-dp-B07K6Y99J3/dp/B07K6Y99J3/ref=mt_kindle?_encoding=UTF8&amp;amp;me=&amp;amp;qid=1579815019&#34;&gt;the textbook&lt;/a&gt; (&amp;amp; see notes about buying the book in the syllabus)&lt;/li&gt;
+&lt;li&gt;Download the &lt;a href=&#34;https://www.polleverywhere.com/mobile&#34;&gt;PollEverywhere app&lt;/a&gt; to your phone or a device that you’ll have with you in the classroom&lt;/li&gt;
+&lt;li&gt;Set up an account with &lt;a href=&#34;https://rstudio.cloud/&#34;&gt;RStudio Cloud&lt;/a&gt; (easiest via Google with your Smith account). We will not be using the RStudio Cloud exclusively, but we will need to use it at a least a few points during the semester.&lt;/li&gt;
+&lt;li&gt;Join the &lt;a href=&#34;https://join.slack.com/t/sds291-spring2020/shared_invite/enQtODc2NzU0MTU5MjAxLTFmZmU2OTc5OTIzMDU5MzU5ZTEzNjZkMDllYmRlYmQ4NzI2ZTM4Y2Y2N2M2MWRjY2ZjMDVlMGRjN2JmZjdiZWY&#34;&gt;course Slack&lt;/a&gt; and post an animal gif in the channel for your section (Section 01: 1:20-2:35, or Section 02: 2:45 - 4:00pm). If you’re new to Slack, look through the Resources section of this page for some more information to get started.&lt;/li&gt;
+&lt;li&gt;Add a 1-2 songs to &lt;a href=&#34;https://open.spotify.com/playlist/70l14LCdw5XOAyk1RHeuAO?si=Enp-jrtiSeKWhU4XYueiqg&#34;&gt;a playlist for our class&lt;/a&gt;. I like playing music at the beginning of class and during in-class work time (there will be a lot), so add something you’d like to hear. See more &lt;a href=&#34;https://support.spotify.com/us/article/create-playlists-with-your-friends/&#34;&gt;here&lt;/a&gt; about adding to a collaborative playlist. If you don’t have a Spotify account or have trouble adding songs directly to Spotify, just add the song title and artist in this google form.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-started-with-r-refreshing-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Getting started with &lt;code&gt;R&lt;/code&gt; &amp;amp; Refreshing Statistics&lt;/h3&gt;
+&lt;p&gt;New to &lt;code&gt;R&lt;/code&gt;? Feeling rusty on your introductory statistics material?*&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Don’t fret – we’ll do this all together, no need to feel like you have to do any prep before class.&lt;/li&gt;
+&lt;li&gt;If you &lt;em&gt;want&lt;/em&gt; to practice &lt;code&gt;R&lt;/code&gt;, especially during the first few weeks of semester when the workload is a little lighter, try the &lt;a href=&#34;https://rstudio.cloud/learn/primers&#34;&gt;primers in RStudio Cloud&lt;/a&gt;, especially the first four (don’t worry about iterate or write functions)&lt;/li&gt;
+&lt;li&gt;Take a look back at your intro stats text book, or &lt;a href=&#34;https://drive.google.com/file/d/0B-DHaDEbiOGkRHNndUlBaHVmaGM/edit&#34;&gt;this open source textbook&lt;/a&gt;. You might want to review normal distributions, tests of differences in means (t-tests), ANOVA, and interpretation of p-values and confidence intervals. We’ll cover the regression specific material, but those ideas underlie much of regression. Again, I wouldn’t stress about this at this point, but a very quick skim could help get the dust off your recall of this material.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;*Many former students have had some anxiety coming into the class about the learning curve to learn &lt;code&gt;R&lt;/code&gt;. I am fully anticipating – and can empathize with! – this nervousness. We will talk plenty about how to get going with &lt;code&gt;R&lt;/code&gt; for those in the class who haven’t used it before, with additional resources as we get going. We’ll cover what you need in class, but if you want to do some extra practice in the first few weeks of the semester while things are (generally) quiet, it might be useful to do so.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -148,8 +187,7 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#suggested-outline&#34;&gt;Suggested outline&lt;/a&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#suggested-outline&#34;&gt;Suggested outline&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#program-overview&#34;&gt;Program overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#program-theory-and-implementation&#34;&gt;Program theory and implementation&lt;/a&gt;&lt;/li&gt;
@@ -278,8 +316,8 @@
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See the &lt;a href=&#34;https://cos.io/prereg/&#34;&gt;Center for Open Science’s directory of preregistrations&lt;/a&gt;, or &lt;a href=&#34;https://aspredicted.org/&#34;&gt;AsPredicted list&lt;/a&gt; for examples of this in real life. &lt;a href=&#34;https://osf.io/hsbyd&#34;&gt;Here’s one by me!&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;If you did problem sets 4 and 5, you’ve already done a lot of this work! I don’t recommend simply copying/pasting it as is into here—you’ll want to polish it up a little for this final report.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See the &lt;a href=&#34;https://cos.io/prereg/&#34;&gt;Center for Open Science’s directory of preregistrations&lt;/a&gt;, or &lt;a href=&#34;https://aspredicted.org/&#34;&gt;AsPredicted list&lt;/a&gt; for examples of this in real life. &lt;a href=&#34;https://osf.io/hsbyd&#34;&gt;Here’s one by me!&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;If you did problem sets 4 and 5, you’ve already done a lot of this work! I don’t recommend simply copying/pasting it as is into here—you’ll want to polish it up a little for this final report.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -1438,6 +1476,33 @@
     </item>
     
     <item>
+      <title>Context for and Use of Regression Modellinge</title>
+      <link>/reading/01-reading/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/01-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; and &lt;a href=&#34;/assignment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 0 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Gillham, N. W. (2001). &lt;a href=&#34;https://www.annualreviews.org/doi/abs/10.1146/annurev.genet.35.102401.090055?journalCode=genet&#34;&gt;Sir Francis Galton and the birth of eugenics&lt;/a&gt;. Annual review of genetics, 35(1), 83-101.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;if-youre-interested&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;If you’re interested&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Regression and inference</title>
       <link>/reading/02-reading/</link>
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
@@ -1472,37 +1537,6 @@
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel, &lt;em&gt;OpenIntro Statistics&lt;/em&gt;, 3rd ed., 2017, &lt;a href=&#34;https://www.openintro.org/stat/textbook.php?stat_book=os&#34; role=&#34;doc-biblioref&#34;&gt;https://www.openintro.org/stat/textbook.php?stat_book=os&lt;/a&gt;.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Evaluation, data science, the causal revolution, and the tidyverse</title>
-      <link>/reading/01-reading/</link>
-      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/01-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; and &lt;a href=&#34;/assignment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; DJ Patil, &lt;a href=&#34;https://www.youtube.com/watch?v=UOoMzaWOQJA&#34;&gt;&#34;What Makes a Radical and Revolutionary Technology?&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Stephen Goldsmith, &lt;a href=&#34;http://www.govtech.com/opinion/Next-Generation-Public-Employees-Must-Understand-Data-Policy.html&#34;&gt;“Next Generation of Public Employees Must Understand Data and Policy”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Chris Sommerfeld, &lt;a href=&#34;https://datasmart.ash.harvard.edu/news/article/the-rise-of-the-data-scientists-611&#34;&gt;“The Rise of the Data Scientists”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Zack Quaintance, &lt;a href=&#34;http://www.govtech.com/civic/Summit-on-Data-Smart-Government-Day-Two-Shows-How-Fast-the-Discipline-Has-Grown.html&#34;&gt;“Summit on Data-Smart Government Day Two Shows How Fast the Discipline Has Grown”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Hadley Wickham, &lt;a href=&#34;http://bulletin.imstat.org/2014/09/data-science-how-is-it-different-to-statistics%E2%80%89/&#34;&gt;“Data Science: How is it Different To Statistics?”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/readings/ds-venn.png&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;DJ Patil is the former Chief Data Scientist of the United States under President Obama. He gave this forum address at Brigham Young University on February 13, 2018.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -2262,9 +2296,10 @@ Figure 1: A fancy pie chart.
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
                     href=&#34;/reading/01-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/00-problem-set/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2281,7 +2316,7 @@ Figure 1: A fancy pie chart.
                     href=&#34;/reading/02-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/01-problem-set/&#34;&gt;
+                    href=&#34;/assignment/00-assign-getting-started/&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -2298,10 +2333,9 @@ Figure 1: A fancy pie chart.
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
                     href=&#34;/reading/03-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/assignment/01-problem-set/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -3248,7 +3282,7 @@ articulates general expectations for students’ conduct throughout the course. 
 &lt;p&gt;Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.
 Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of &lt;code&gt;R&lt;/code&gt; code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle and self-scheduled examinations should be completed independently and should not be discussed with other students during the open exam/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.&lt;/p&gt;
+&lt;p&gt;Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of &lt;code&gt;R&lt;/code&gt; code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take-home projects should be completed independently and should not be discussed with other students during the open exam/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.&lt;/p&gt;
 &lt;p&gt;With this in mind, I note that many of the materials used in this course build substantially from previous course instructors’ work, namely Ben Baumer, Amelia McNamara, Miles Ott, as well as contributions and insights on this syllabus from Chad Topaz, Jude Higdon, and Steven Miller. I thank them for their work and willigness to share these materials.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;course-accomodations&#34; class=&#34;section level3&#34;&gt;
