@@ -1,0 +1,52 @@
+main:
+  - name: Syllabus
+    url: /syllabus/
+    weight: 1
+  - name: Schedule
+    url: /schedule/
+    weight: 2
+  - name: Readings
+    url: /reading/
+    weight: 3
+  - name: Assignments
+    url: /assignment/
+    weight: 4
+  - name: Classes
+    url: /class/
+    weight: 5
+  - name: Group Project
+    url: /group/
+    weight: 6
+  - name: Reference
+    url: /reference/
+    weight: 7
+  - name: '<i class="fab fa-r-project"></i>'
+    url: https://rstudio.cloud/
+    weight: 8
+  - name: '<i class="fab fa-slack"></i>'
+    url: "http://sds291-spring2020.slack.com"
+    weight: 9
+assignment:
+  - name: Assignments
+    weight: 1
+  - name: Problem sets
+    weight: 2
+  - name: Take Home Projects
+    weight: 3
+  - name: Other projects & Work
+    weight: 4
+group:
+  - name: Introduction
+    weight: 1
+  - name: Group Formation
+    weight: 2
+  - name: Topic Selection
+    weight: 3
+  - name: Data Appendix
+    weight: 4
+  - name: Draft Results
+    weight: 5
+  - name: Poster
+    weight: 6
+  - name: Final Report
+    weight: 6

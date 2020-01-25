@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading policy | Multiple Regresison</title>
+    <link>/reading/</link>
+      <atom:link href="/reading/index.xml" rel="self" type="application/rss+xml" />
+    <description>Reading policy</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/social-image.png</url>
+      <title>Reading policy</title>
+      <link>/reading/</link>
+    </image>
+    
+    <item>
+      <title>Ethics and open science</title>
+      <link>/reading/14-reading/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/14-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;p&gt;This looks like a lot, but most of these are quite short.&lt;/p&gt;
+&lt;p&gt;Keep in mind throughout all these readings that an “algorithm” in these contexts is typically some fancy type of regression model where the outcome variable is something binary like “Safe babysitter/unsafe babysitter,” “Gave up seat in past/didn’t give up seat in past”, or “Violated probation in past/didn’t violate probation in past”, and the explanatory variables are hundreds of pieces of data that might predict those outcomes (social media history, flight history, race, etc.).&lt;/p&gt;
+&lt;p&gt;Data scientists build a (sometimes proprietary and complex) model based on existing data, plug in values for any given new person, multiply that person’s values by the coefficients in the model, and get a final score in the end for how likely someone is to be a safe babysitter or how likely someone is to return to jail.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;far fa-file-pdf&#34;&gt;&lt;/i&gt; Miguel A. Hernán, &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5888052/&#34;&gt;“The C-Word: Scientific Euphemisms Do Not Improve Causal Inference From Observational Data”&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Hannah Fresques and Meg Marco, &lt;a href=&#34;https://www.propublica.org/nerds/hadley-wickham-your-default-position-should-be-skepticism-and-other-advice-for-data-journalists&#34;&gt;“‘Your Default Position Should Be Skepticism’ and Other Advice for Data Journalists From Hadley Wickham,”&lt;/a&gt; &lt;em&gt;ProPublica&lt;/em&gt;, June 10, 2019&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; DJ Patil, &lt;a href=&#34;https://medium.com/@dpatil/a-code-of-ethics-for-data-science-cda27d1fac1&#34;&gt;“A Code of Ethics for Data Science”&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Mike Loukides, Hilary Mason, and DJ Patil, &lt;a href=&#34;https://www.amazon.com/dp/B07GTC8ZN7&#34;&gt;&lt;em&gt;Ethics and Data Science&lt;/em&gt;&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://medium.com/@AINowInstitute/ai-in-2018-a-year-in-review-8b161ead2b4e&#34;&gt;“AI in 2018: A Year in Review”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.nytimes.com/2018/05/04/books/review/automating-inequality-virginia-eubanks.html&#34;&gt;“How Big Data Is ‘Automating Inequality’”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://annenberg.usc.edu/news/diversity-and-inclusion/algorithms-oppression-safiya-noble-finds-old-stereotypes-persist-new&#34;&gt;“In ‘Algorithms of Oppression,’ Safiya Noble finds old stereotypes persist in new media”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-podcast&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://99percentinvisible.org/episode/the-age-of-the-algorithm/&#34;&gt;99% Invisible, “The Age of the Algorithm”&lt;/a&gt;: Note that this is a podcast, or a 20ish minute audio story. &lt;strong&gt;Listen to this.&lt;/strong&gt; The rest of the things on this page are helpful and supplementary (very few podcasts provide this much extra information), but you don’t need to go through it all.&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-podcast&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.wnycstudios.org/podcasts/otm/segments/biased-algorithms-biased-world&#34;&gt;On the Media, “Biased Algorithms, Biased World”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.washingtonpost.com/technology/2018/11/16/wanted-perfect-babysitter-must-pass-ai-scan-respect-attitude/?utm_term=.080010494ed5&#34;&gt;“Wanted: The ‘perfect babysitter.’ Must pass AI scan for respect and attitude.”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://qz.com/1427621/companies-are-on-the-hook-if-their-hiring-algorithms-are-biased/&#34;&gt;“Companies are on the hook if their hiring algorithms are biased”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.popsci.com/recidivism-algorithm-random-bias&#34;&gt;“Courts use algorithms to help determine sentencing, but random people get the same results”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fab fa-twitter-square&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://twitter.com/dhh/status/1192540900393705474&#34;&gt;David Heinemeier Hansson’s rant on the Apple Card&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;And &lt;a href=&#34;https://dhh.dk/2019/about-the-apple-card.html&#34;&gt;Jamie Heinemeier Hansson’s response&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Miguel A. Hernán, “The c-Word: Scientific Euphemisms Do Not Improve Causal Inference from Observational Data,” &lt;em&gt;American Journal of Publich Health&lt;/em&gt; 108, no. 5 (May 2018): 616–19, doi:&lt;a href=&#34;https://doi.org/10.2105/AJPH.2018.304337&#34; role=&#34;doc-biblioref&#34;&gt;10.2105/AJPH.2018.304337&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;This concise booklet is the result of DJ Patil’s call for ethics in the previous post.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Planning and running evaluations &#43; other types of evaluation</title>
+      <link>/reading/13-reading/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/13-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-file-pdf&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.cdc.gov/std/Program/pupestd/Types%20of%20Evaluation.pdf&#34;&gt;“Types of Evaluation,”&lt;/a&gt; National Center for HIV/AIDS, Viral Hepatitis, STD, and TB Prevention, Centers for Disease Control (CDC)&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 11–14 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instrumental variables II &amp; Regression discontinuity II</title>
+      <link>/reading/12-reading/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/12-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Review the readings from &lt;a href=&#34;/reading/11-reading/&#34;&gt;last week&lt;/a&gt; and &lt;a href=&#34;/reading/10-reading/&#34;&gt;the week before&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instrumental variables I</title>
+      <link>/reading/11-reading/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/11-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 5 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Instrumental variables” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Regression discontinuity I</title>
+      <link>/reading/10-reading/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/10-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 6 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 4 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Regression discontinuity” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Difference-in-differences II</title>
+      <link>/reading/09-reading/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/09-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Review the readings from &lt;a href=&#34;/reading/08-reading/&#34;&gt;last week&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Difference-in-differences I</title>
+      <link>/reading/08-reading/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/08-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 7 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 5 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Differences-in-differences” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Randomization and matching</title>
+      <link>/reading/07-reading/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/07-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 4 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-podcast&#34;&gt;&lt;/i&gt; Planet Money, &lt;a href=&#34;https://www.npr.org/2019/08/30/756028025/episode-937-moving-to-opportunity&#34;&gt;“Moving To Opportunity?,”&lt;/a&gt; episode 937&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Aaron Carroll, &lt;a href=&#34;https://www.nytimes.com/2018/08/06/upshot/employer-wellness-programs-randomized-trials.html&#34;&gt;“Workplace Wellness Programs Don’t Work Well. Why Some Studies Show Otherwise,”&lt;/a&gt; &lt;em&gt;The Upshot&lt;/em&gt;, August 6, 2018&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Threats to validity</title>
+      <link>/reading/06-reading/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/06-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 9 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DAGs and potential outcomes</title>
+      <link>/reading/05-reading/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/05-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Potential outcomes causal model” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Measurement and DAGs</title>
+      <link>/reading/04-reading/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/04-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;div id=&#34;measurement&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Measurement&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 5 in &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;.&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This is available on iCollege.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dags&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;DAGs&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;far fa-file-pdf&#34;&gt;&lt;/i&gt; Julia M. Rohrer, “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data”&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This will be posted on iCollege.&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Directed acyclical graphs” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Peter H. Rossi, Mark W. Lipsey, and Gary T. Henry, &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;, 8th ed. (Los Angeles: Sage, 2019).&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Julia M. Rohrer, “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data,” &lt;em&gt;Advances in Methods and Practices in Psychological Science&lt;/em&gt; 1, no. 1 (March 2018): 27–42, doi:&lt;a href=&#34;https://doi.org/10.1177/2515245917745629&#34; role=&#34;doc-biblioref&#34;&gt;10.1177/2515245917745629&lt;/a&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Theories of change and logic models</title>
+      <link>/reading/03-reading/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/03-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2 in &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;.&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This is available on iCollege.&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3 in &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;.&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This is available on iCollege.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;additional-pre-class-assignment&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Additional pre-class assignment&lt;/h2&gt;
+&lt;p&gt;Choose a social program that you’re interested in. Draw a logic model or results chain that is as detailed as you can get it, including all the inputs, activities, outputs, and outcomes you can think of. This doesn’t have to be perfect—we’ll talk about it and critique and improve it in class.&lt;/p&gt;
+&lt;p&gt;You can do this by hand or with something like &lt;a href=&#34;https://www.draw.io/&#34;&gt;Draw.io&lt;/a&gt;, &lt;a href=&#34;https://www.lucidchart.com/pages/home&#34;&gt;Lucidchart&lt;/a&gt;, or &lt;a href=&#34;https://creately.com/&#34;&gt;Creately&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Peter H. Rossi, Mark W. Lipsey, and Gary T. Henry, &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;, 8th ed. (Los Angeles: Sage, 2019).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Regression and inference</title>
+      <link>/reading/02-reading/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/02-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Properties of regression” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;p&gt;Look through your notes on regression from your last stats class. Also, you can skim through these resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://moderndive.com/6-regression.html&#34;&gt;6.1–6.4 in &lt;em&gt;ModernDive&lt;/em&gt;&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://moderndive.com/7-multiple-regression.html&#34;&gt;7.1–7.4 in &lt;em&gt;ModernDive&lt;/em&gt;&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 7.1–7.3 in &lt;em&gt;OpenIntro Statistics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 8.1 in &lt;em&gt;OpenIntro Statistics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’ll review all this regression stuff in class, so &lt;em&gt;don’t panic&lt;/em&gt; if this all looks terrifying! Also, take advantage of the videos that accompany the &lt;em&gt;OpenIntro&lt;/em&gt; chapters. And &lt;em&gt;also&lt;/em&gt;, the &lt;em&gt;OpenIntro&lt;/em&gt; chapters are heavier on the math—don’t worry if you don’t understand everything.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Chester Ismay and Albert Y. Kim, &lt;em&gt;ModernDive: An Introduction to Statistical and Data Sciences via R&lt;/em&gt;, 2018, &lt;a href=&#34;https://moderndive.com/&#34; role=&#34;doc-biblioref&#34;&gt;https://moderndive.com/&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel, &lt;em&gt;OpenIntro Statistics&lt;/em&gt;, 3rd ed., 2017, &lt;a href=&#34;https://www.openintro.org/stat/textbook.php?stat_book=os&#34; role=&#34;doc-biblioref&#34;&gt;https://www.openintro.org/stat/textbook.php?stat_book=os&lt;/a&gt;.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Evaluation, data science, the causal revolution, and the tidyverse</title>
+      <link>/reading/01-reading/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/01-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; and &lt;a href=&#34;/assignment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; DJ Patil, &lt;a href=&#34;https://www.youtube.com/watch?v=UOoMzaWOQJA&#34;&gt;&#34;What Makes a Radical and Revolutionary Technology?&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Stephen Goldsmith, &lt;a href=&#34;http://www.govtech.com/opinion/Next-Generation-Public-Employees-Must-Understand-Data-Policy.html&#34;&gt;“Next Generation of Public Employees Must Understand Data and Policy”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Chris Sommerfeld, &lt;a href=&#34;https://datasmart.ash.harvard.edu/news/article/the-rise-of-the-data-scientists-611&#34;&gt;“The Rise of the Data Scientists”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Zack Quaintance, &lt;a href=&#34;http://www.govtech.com/civic/Summit-on-Data-Smart-Government-Day-Two-Shows-How-Fast-the-Discipline-Has-Grown.html&#34;&gt;“Summit on Data-Smart Government Day Two Shows How Fast the Discipline Has Grown”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Hadley Wickham, &lt;a href=&#34;http://bulletin.imstat.org/2014/09/data-science-how-is-it-different-to-statistics%E2%80%89/&#34;&gt;“Data Science: How is it Different To Statistics?”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/readings/ds-venn.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;DJ Patil is the former Chief Data Scientist of the United States under President Obama. He gave this forum address at Brigham Young University on February 13, 2018.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

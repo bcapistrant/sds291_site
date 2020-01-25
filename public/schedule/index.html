@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Benjamin Capistrant">
+
+  
+  
+  
+    
+  
+  <meta name="description" content=" Here’s your roadmap for the semester!
+  Readings should be completed before each class session  Assignments are due by 11:59 AM on the day they are due (i.e., before noon on the day of class)  Class materials (slides, in-class activities, etc.) will be added on the day of class     Simple Linear Regressions Reading Assignment Group Project Class   January 27  Context for and Use of Regression Modelling         January 29  Simple Linear Regression: Fitting Models         February 3  Simple Linear Regression: Slope Inference          February 5  Simple Linear Regression: ANOVA Table          February 7  Group Roster          February 10  Simple Linear Regression: Review and Wrap Up         February 12  No Class - Work on Take Home Project 1          February 14  Draft of Group Topic          February 17  Take Home Project 1: Simple Linear Regression           Multiple Linear Regressions Reading Assignment Group Project Class   February 17  MLR: Intuition and Rationale          February 19  MLR: Fitting, Interpreting, and Conducting Slope Inference for Models          February 24  MLR: Parallel Slopes and Non-Parallel Slopes, Interaction         February 26  MLR: Multicollinearity, Nested F-Test          February 28  Final Group Topic          March 2  MLR: Leverage         March 4  MLR: Bootstrap for Inference          March 9  MLR: Article Review         March 11  MLR: Data Visualization          March 13  Data Extract and Analysis Plan          March 16 - 20  Spring Break           March 22  MLR: In-Class Project          March 24  MLR: In-Class Project          March 22  **MLR: Review **         March 24  No Class - Work on Take Home Project 2          March 26  Data Appendix          March 29  Take Home Project 2: Multiple Linear Regression           Logistic Regression Reading Assignment Group Project Class   March 29  Logistic Regression: Concepts and Introduction          March 31  Logistic Regression: Fitting and Interpreting Models          April 6  Logistic Regression: Odds, Odds Ratios, Probability         April 8  Logistic Regression: Multiple Regression          April 10  Updated Appendix, Descriptives, and Draft Results          April 13  Logistic Regression: Visualizing Coefficients and Predicted Probabilities          April 15  Logistic Regression: Log Likelihood, Ratio Tests          April 17  Draft Poster          April 20  Logistic Regression: Review         April 22  No Class - Work on Take Home Project 3          April 27  Take Home Project 3: Logistic Regression          April 27  Additional Topics / Project Work Time         April 29  Poster Presentations           Final Reading Assignment Group Project Class   May 8 Final project due (submit online by 7:00 PM)           ">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/schedule/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#002855">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i%7CIBM+Plex+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/schedule/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@bencapistrant">
+  <meta property="twitter:creator" content="@bencapistrant">
+  
+  <meta property="og:site_name" content="Multiple Regresison">
+  <meta property="og:url" content="/schedule/">
+  <meta property="og:title" content="Schedule | Multiple Regresison">
+  <meta property="og:description" content=" Here’s your roadmap for the semester!
+  Readings should be completed before each class session  Assignments are due by 11:59 AM on the day they are due (i.e., before noon on the day of class)  Class materials (slides, in-class activities, etc.) will be added on the day of class     Simple Linear Regressions Reading Assignment Group Project Class   January 27  Context for and Use of Regression Modelling         January 29  Simple Linear Regression: Fitting Models         February 3  Simple Linear Regression: Slope Inference          February 5  Simple Linear Regression: ANOVA Table          February 7  Group Roster          February 10  Simple Linear Regression: Review and Wrap Up         February 12  No Class - Work on Take Home Project 1          February 14  Draft of Group Topic          February 17  Take Home Project 1: Simple Linear Regression           Multiple Linear Regressions Reading Assignment Group Project Class   February 17  MLR: Intuition and Rationale          February 19  MLR: Fitting, Interpreting, and Conducting Slope Inference for Models          February 24  MLR: Parallel Slopes and Non-Parallel Slopes, Interaction         February 26  MLR: Multicollinearity, Nested F-Test          February 28  Final Group Topic          March 2  MLR: Leverage         March 4  MLR: Bootstrap for Inference          March 9  MLR: Article Review         March 11  MLR: Data Visualization          March 13  Data Extract and Analysis Plan          March 16 - 20  Spring Break           March 22  MLR: In-Class Project          March 24  MLR: In-Class Project          March 22  **MLR: Review **         March 24  No Class - Work on Take Home Project 2          March 26  Data Appendix          March 29  Take Home Project 2: Multiple Linear Regression           Logistic Regression Reading Assignment Group Project Class   March 29  Logistic Regression: Concepts and Introduction          March 31  Logistic Regression: Fitting and Interpreting Models          April 6  Logistic Regression: Odds, Odds Ratios, Probability         April 8  Logistic Regression: Multiple Regression          April 10  Updated Appendix, Descriptives, and Draft Results          April 13  Logistic Regression: Visualizing Coefficients and Predicted Probabilities          April 15  Logistic Regression: Log Likelihood, Ratio Tests          April 17  Draft Poster          April 20  Logistic Regression: Review         April 22  No Class - Work on Take Home Project 3          April 27  Take Home Project 3: Logistic Regression          April 27  Additional Topics / Project Work Time         April 29  Poster Presentations           Final Reading Assignment Group Project Class   May 8 Final project due (submit online by 7:00 PM)           "><meta property="og:image" content="/img/social-image.png">
+  <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="SDS 291: Multiple Regresison" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+
+
+  <title>Schedule | Multiple Regresison</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Multiple Regresison</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Multiple Regresison</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/reading/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/class/"><span>Classes</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/group/"><span>Group Project</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/reference/"><span>Reference</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http://sds291-spring2020.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Schedule</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>Here’s your roadmap for the semester!</p>
+<ul>
+<li><i class="fas fa-book-reader"></i> Readings should be completed <strong><em>before</em></strong> each class session</li>
+<li><i class="fas fa-laptop-code"></i> Assignments are due by <strong>11:59 AM</strong> on the day they are due (i.e., before noon on the day of class)</li>
+<li><i class="fas fa-chalkboard-teacher"></i> Class materials (slides, in-class activities, etc.) will be added on the day of class</li>
+</ul>
+<hr />
+<table class="table schedule" style="max-width:100%">
+    <tbody>
+        <tr>
+            <td align="right" style="width:20%;text-align:right"></td>
+            <td style="width:50%;text-align:left"><span class="fake-header-table">Simple Linear Regressions</span></td>
+
+            <td style="width:10%;text-align:center" class="mid-table-header">Reading</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Assignment</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Group Project</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Class</td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">January 27</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Context for and Use of Regression Modelling</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/01-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/00-problem-set/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">January 29</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Simple Linear Regression: Fitting Models</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/02-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/01-problem-set/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 3</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Simple Linear Regression: Slope Inference</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/03-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 5</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Simple Linear Regression: ANOVA Table</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/04-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 7</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-users"></i> <strong>Group Roster</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/group/01-group/">
+                    <i class="fas fa-users"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 10</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Simple Linear Regression: Review and Wrap Up</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/02-problem-set/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 12</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>No Class - Work on Take Home Project 1</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 14</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-users"></i> <strong>Draft of Group Topic</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/group/02-group/">
+                    <i class="fas fa-users"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 17</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-file-code"></i> <strong>Take Home Project 1: Simple Linear Regression</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/03-problem-set/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right"></td>
+            <td style="width:50%;text-align:left"><span class="fake-header-table">Multiple Linear Regressions</span></td>
+
+            <td style="width:10%;text-align:center" class="mid-table-header">Reading</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Assignment</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Group Project</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Class</td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 17</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Intuition and Rationale</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 19</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Fitting, Interpreting, and Conducting Slope Inference for Models</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 24</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Parallel Slopes and Non-Parallel Slopes, Interaction</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/04-eval-dag/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 26</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Multicollinearity, Nested F-Test</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">February 28</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-users"></i> <strong>Final Group Topic</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/group/03-group/">
+                    <i class="fas fa-users"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 2</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Leverage</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/05-eval-dag/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 4</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Bootstrap for Inference</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 9</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Article Review</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/05-eval-dag/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 11</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: Data Visualization</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 13</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-users"></i> <strong>Data Extract and Analysis Plan</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/group/04-group/">
+                    <i class="fas fa-users"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 16 - 20</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-star"></i> <strong>Spring Break</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 22</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: In-Class Project</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 24</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>MLR: In-Class Project</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 22</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> **MLR: Review **</td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/02-TakeHomeProject/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 24</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>No Class - Work on Take Home Project 2</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 26</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-users"></i> <strong>Data Appendix</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/group/05-group/">
+                    <i class="fas fa-users"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 29</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-file-code"></i> <strong>Take Home Project 2: Multiple Linear Regression</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/03-problem-set/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right"></td>
+            <td style="width:50%;text-align:left"><span class="fake-header-table">Logistic Regression</span></td>
+
+            <td style="width:10%;text-align:center" class="mid-table-header">Reading</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Assignment</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Group Project</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Class</td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 29</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Logistic Regression: Concepts and Introduction</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">March 31</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Logistic Regression: Fitting and Interpreting Models</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 6</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Logistic Regression: Odds, Odds Ratios, Probability</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/05-eval-dag/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 8</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Logistic Regression: Multiple Regression</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 10</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-users"></i> <strong>Updated Appendix, Descriptives, and Draft Results</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/group/06-group/">
+                    <i class="fas fa-users"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 13</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Logistic Regression: Visualizing Coefficients and Predicted Probabilities</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 15</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Logistic Regression: Log Likelihood, Ratio Tests</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 17</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-users"></i> <strong>Draft Poster</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/group/06-group/">
+                    <i class="fas fa-users"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 20</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Logistic Regression: Review</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/05-eval-dag/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 22</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>No Class - Work on Take Home Project 3</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 27</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-file-code"></i> <strong>Take Home Project 3: Logistic Regression</strong></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/03-problem-set/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 27</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Additional Topics / Project Work Time</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/03-TakeHomeProject/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">April 29</td>
+            <td style="width:50%;text-align:left"><i class="fas fa-university"></i> <strong>Poster Presentations</strong></td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/reading/05-reading/">
+                    <i class="fas fa-book-reader fa-lg"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-laptop-code"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right"></td>
+            <td style="width:50%;text-align:left"><span class="fake-header-table">Final</span></td>
+
+            <td style="width:10%;text-align:center" class="mid-table-header">Reading</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Assignment</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Group Project</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Class</td>
+        </tr>
+        <tr>
+            <td align="right" style="width:20%;text-align:right">May 8</td>
+            <td style="width:50%;text-align:left"><strong>Final project due</strong> (submit online by 7:00 PM)</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book-reader fa-lg"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a
+                    href="/assignment/final-project/">
+                    <i class="fas fa-laptop-code"></i></a></td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-users"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard-teacher fa-lg"></i></font>
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.b03c341a9a02bb3d0133df72033e26a2.js"></script>
+
+    
+
+
+
+
+
+
+    
+    
+    <div class="container">
+        <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>SDS 291: Multiple Regresison (Spring 2020)</strong><br>
+
+                <a href="https://www.smith.edu" target="_blank" rel="noopener">Smith College</a> &emsp;&emsp;
+                <a href="https://www.smith.edu/statistics" target="_blank" rel="noopener">Program on Statistical &amp; Data Sciences</a>
+            </p>
+
+            <p>
+                <a href="https://www.andrewheiss.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Benjamin Capistrant</a> &emsp;&emsp;
+                <a href="mailto:bcapistrant@smith.edu"><i class="fas fa-envelope"></i>
+                    bcapistrant@smith.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Monday &amp; Wednesday &emsp;&emsp;
+                <i class="far fa-clock"></i> 1:20-2:35 or 2:45-4:00 <br>
+                <i class="fas fa-university"></i> Sabin-Reed 301
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.andrewheiss.com" target="_blank" rel="noopener">Ben Capistrant</a></p>
+        
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            
+            <p><a href="https://github.com/bencapistrant/sds291_site" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

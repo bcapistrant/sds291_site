@@ -1,0 +1,30 @@
+---
+title: "Threats to validity"
+linktitle: "6: Threats to validity"
+date: "2020-02-19"
+class_date: "2020-02-19"
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  class:
+    parent: Class sessions
+    weight: 6
+type: docs
+weight: 6
+# pdf: /slides/PMAP-8521_2019-11-04.pdf
+# thumb: /slides/slides_2019-11-04.png
+editor_options: 
+  chunk_output_type: console
+---
+
+## Slides
+
+`r blogdown::shortcode("slides")`
+
+
+## Clearest and muddiest things
+
+`r blogdown::shortcode("feedback")`
