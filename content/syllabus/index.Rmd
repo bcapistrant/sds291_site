@@ -22,7 +22,7 @@ In this course, students will learn how to use statistical models to analyze rea
 
 The main goal of this course is to learn how to build statistical models - models that will let you understand and estimate the relationships between multiple phenomena, assess differences in an outcome of interest between multiple groups, and even make predictions. Our world is complicated, full of possible competing explanations for some apparent relationship. Multiple regression moves beyond many of the statistical tests and approaches from introductory statistics that consider simple differences between two variables (i.e., one response and one predictor variable, respecitvely). Instead, multiple regression offers one way to adjust statistically for myriad alternative explanations of the apparent relationship between the response and predictor; or to account statistically if the relationship between the response and predictor varies by other factors. With this course, you will develop useful quantitative modeling skills that allow you to harness data to enrich your understanding of the world we live in.
 
-## :(fas fa-graduation-cap): Course Objectives
+## <i class="fas fa-graduation-cap"></i> Course Objectives
 
 After completing this course, you will be able to choose different statstical modeling approaches (and understand their assumptions), be able to fit these models empirically using statistical software (`R`), assess how well the model you fit, and use that model to address your hypothesis, including to communicate what you found to a wide audience. Specifically, the course objectives are for you to:
 
@@ -36,11 +36,11 @@ After completing this course, you will be able to choose different statstical mo
 - Understand how multicolinearity and correlated predictors affect a model
 - Use odds and odds ratios to understand categorical response variables
 
-## :(fas fa-school): Prerequisites
+## <i class="fas fa-school"></i> Prerequisites
 
 A college-level introductory statistics course (e.g. MTH/SDS/PSY 201, GOV 190/203, SOC 203, MTH 219, MTH/SDS 220, ECO 220), a score of 4 or 5 on the AP Statistics Exam, or permission of the instructor. Students need to be familiar with basic statistical concepts including graphical and numerical descriptive statistics, the normal and $t$-distributions, hypothesis tests, and confidence intervals.
 
-## :(fas fa-book-reader): Required Readings
+## <i class="fas fa-book-reader"></i>  Required Readings
 
 This course uses one textbook. This book is __required__ and is available at the Grecourt bookstore in the basement of the Campus Center. In case you choose to acquire the book elsewhere, note that _you will not need online access for the purposes of this course_.
 
@@ -50,7 +50,7 @@ The [1st edition from 2013 is now much cheaper](https://www.amazon.com/gp/produc
  
 Additional recommended readings, such as applications of material covered in class in the news, will be available on the course website and via Slack.
 
-## :(fas fa-user-check): Assignments
+## <i class="fas fa-user-check"></i>  Assignments
 
 I will detail the policy for this course below. Basically, work hard in practice, try to learn stuff, work collaboratively, ask for lots of help, and don't cheat. Don't be that person.
 
@@ -94,7 +94,7 @@ Course grades will be a weighted average of the grades on your project, tests, h
 
 The purpose of grades is to provide formative feedback that aids your learning. I keep course grades in the online gradebook on Moodle so you can always check them there. But what matters is learning. I will enthusiastically talk to you about your learning anytime, and I encourage discussions in which we go over the work you have completed. These conversations let me hear about your challenges and questions, and provide important learning opportunities. However, my rule is that we shouldn't talk (and especially haggle) about the points or letter grade assigned unless I have made a clerical error.
 
-## :(fas fa-users-cog): Resources
+## <i class="fas fa-users-cog"></i>  Resources
 
 ### Course Website
 
@@ -123,7 +123,7 @@ Spinelli Center for Quantitative Learning (now in Seelye 207) supports students 
 #### Writing Support
 The Jacobson Center for Writing (Seelye 307) offers a variety of services design to help students improve writing skills, including drafts of their papers. This resource may be especially useful for the final project paper.
 
-## :(fas fa-exclamation-circle): Course Policies
+## <i class="fas fa-exclamation-circle"></i>  Course Policies
 
 ### Attendance
 Your attendance in class - including being on time - is crucial to your and your classmates' success. We are all going to learn this material together, so we need to have everyone present and working. I will make accommodations for an unavoidable absence if you notify me in advance. Our Honor Code means that you will be the judge of whether or not an absence was unavoidable. (For instance, staying in bed because you had the flu would be an unavoidable absence, but oversleeping because you stayed up late to write a paper would be an avoidable absence.) One necessary absence during the semester is not unusual; having more than two is uncommon.
