@@ -30,8 +30,8 @@ Please complete the pre-course questionnaire:
 ---
 class: middle, center
 
-<img src="img/slides/IMG_0143.JPG" alt="drawing" width="350"/>
-<img src="img/slides/IMG_2808.JPG" alt="drawing" width="350"/>
+<img src="img_slides/IMG_0143.JPG" alt="drawing" width="350"/>
+<img src="img_slides/IMG_2808.JPG" alt="drawing" width="350"/>
 ---
 class: middle, center
 
