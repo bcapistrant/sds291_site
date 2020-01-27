@@ -1,0 +1,147 @@
+---
+title: "Multiple Regression"
+author: "Benjamin D. Capistrant, Smith College"
+date: "January 27, 2020"
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+
+
+
+# Pre-Course Questionnaire
+
+Please complete the pre-course questionnaire: 
+
+## http://bit.ly/291Questionnaire
+
+---
+class: middle, center
+
+<img src="slides/IMG_0143.JPG" alt="drawing" width="350"/>
+<img src="slides/IMG_2808.JPG" alt="drawing" width="350"/>
+---
+class: middle, center
+
+# (My) Goals for the course
+
+## Get expertise as a statistical modeler
+
+## Practice communicating your findings in the context of real-world problems
+
+---
+class: middle, inverse, center
+# Why Model?
+
+## http://www.pollev.com/benc
+---
+# Samples and Populations, Statistics and Parameters
+
+- _Sample_: a (selected) sub-set of the population
+
+- _Statistics_: numerical values calculated with sample data, estimates of the population parameters
+
+---
+# Types of Variables to Model
+
+### Variable forms
+
+- **Quantitative**: numbers where arithmetic makes sense (AKA continuous)
+
+- **Categorical**: Groups/levels of a variable, each reflected by a different number
+
+    - **Binary**: Categorical with just two groups
+    
+### Response and Explanatory Variables
+
+- *Response:* AKA dependent variable, outcome variable
+
+- *Explanatory:* AKA independent variable, predictor variable
+
+---
+# Is the world getting warmer?
+
+[From "NYT"](https://www.nytimes.com/interactive/2018/01/21/world/year-in-weather.html#bdl)
+
+---
+### Questions
+
+- What's the response variable? 
+    - Is it Quantitative, Categorical or Binary? 
+    - What are it units?
+    
+- What's the explanatory variable? 
+    - Is it Quantitative, Categorical or Binary?
+    - What are it units?
+    
+- What would the regression equation be?
+
+---
+# Peas
+
+
+---
+# How can modeling be misused?
+
+---
+## How do you build a statistical model?
+
+1. *Choose* the model: What type of model?
+2. *Fit* the model to the data
+3. *Assess* the model: Is the model adequate? Could it be simpler? Are assumptions met?
+4. *Use*: Answer the question of interest
+
+---
+# 4 Step Process
+- What model do you **choose**? 
+    - What form are the data in (quantiative, categorical, etc.)?
+    - If you can, write out the equation you want to fit and the null and alternative hypotheses.
+- How do you **fit** this model? 
+    - If you can recall, write out the `R` commands to fit the model you chose.
+- What do you **assess** of the fitted model? 
+    - What are the assumptions of the model you chose and how would you evaluate them? 
+    - Are there other models that might work best?
+- Can we **use** this model?
+    - Given that the assumptions are met:
+        - what are the results of this fitted this model? and 
+        - to whom can we make inferences?
+
+---
+# Syllabus, Key Points
+
+- http://sds291.netlify.com
+
+- Quiz and Homeworks due Monday _before_ 111:59pm
+    - Homeworks using `R`, submitted as a knitted PDF
+    - Quizes via Moodle on reading, key terms, etc.
+    
+- Late policy: 0-48 hours partial credit (75%), 1 "free" 48 hour extension
+
+- Three Take Home Projects, no final exam during exam period
+
+- Data Analysis Project in a group of 3
+    - Components/Drafts due throughout the semester
+    - Presentations last week of class 
+    - Final paper due at end of finals period (in lieu of final exam)
+
+---
+class: inverse
+
+# Homework, Getting Started
+
+- Sign into Course Slack, post an animal gif of your choosing in your section channel
+
+- Install Poll Everywhere on your phone/mobile device
+
+- Read the syllabus
+
+- Read Chapters 0, 1.1-1.3
+
+- Decide on a song you want into the course playlist

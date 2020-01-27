@@ -1,0 +1,23 @@
+---
+title: "Context for and Use of Regression Modelling"
+linktitle: "1: Context for and Use of Regression Modelling"
+date: "2020-01-27"
+class_date: "2020-01-27"
+menu:
+  class:
+    parent: Class sessions
+    weight: 1
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Slides & Course Materials
+
+- <i class="fas fa-chalkboard-teacher"></i> Slides are [here](01/01_Lecture_Slides.html) ([Rmd code](01/01_Lecture_Notes.Rmd))
+
+- <i class="fas fa-clipboard-list"></i> Notes and Pea Activity are [here](01/01_Lecture_Notes.pdf) ([Rmd code](01/01_Lecture_Notes.Rmd))

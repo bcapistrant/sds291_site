@@ -1,77 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Multiple Regresison</title>
+    <title>Multiple Regression</title>
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <description>Multiple Regresison</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <description>Multiple Regression</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/social-image.png</url>
-      <title>Multiple Regresison</title>
+      <title>Multiple Regression</title>
       <link>/</link>
     </image>
     
     <item>
-      <title>Code-through</title>
-      <link>/assignment/code-through/</link>
-      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/code-through/</guid>
-      <description>
-
-
-&lt;p&gt;The objectives of this class include “Become curious and confident in consuming and producing evaluations,” “Run statistical models,” and “Share your analyses and data with the public.” To help you with this, you will write a code-through tutorial of some statistical, causal, program evaluation-focused, or data-based principle or example.&lt;/p&gt;
-&lt;p&gt;One of the reasons R is so popular is because the R community is exceptionally generous and open and sharing.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; The internet is full of tutorials and code-throughs where people explain how to do something interesting with R.&lt;/p&gt;
-&lt;p&gt;Additionally, teaching someone how to do something is one of the best ways to ensure that you know how to do it too. Some R developers have even started to adopt &lt;a href=&#34;https://twitter.com/gvwilson/status/1209099180133752838&#34;&gt;tutorial-focused approaches to development&lt;/a&gt;, where their code isn’t complete until they can easily teach it to others.&lt;/p&gt;
-&lt;p&gt;The code examples I include on each week’s class page and in the weekly RStudio.cloud projects are a good example of didactic tutorials. In addition, the &lt;a href=&#34;https://rweekly.org/&#34;&gt;R-Weekly e-mail newsletter&lt;/a&gt; includes dozens of these kinds of tutorials every week, and &lt;a href=&#34;https://twitter.com/dataandme&#34;&gt;Mara Averick&lt;/a&gt; (chief tidyverse advocate at RStudio) regularly tweets out links to different posts as well. Here are some others examples to give you a jist of what you can do:&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.garrickadenbuie.com/blog/2018/08/24/greatest-twitter-scheme/&#34;&gt;The Greatest Twitter Scheme of All Time?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://rud.is/b/2017/09/18/mapping-fall-foliage-with-sf/&#34;&gt;Mapping Fall Foliage with sf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.andrewheiss.com/blog/2017/08/10/exploring-minards-1812-plot-with-ggplot2/&#34;&gt;Exploring Minard’s 1812 plot with ggplot2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.infoworld.com/video/89987/r-tip-animations-in-r&#34;&gt;Animations in R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.andrewheiss.com/blog/2016/04/03/drone-sightings-in-the-us-visualized/&#34;&gt;Drone sightings in the US, visualized&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.andrewheiss.com/blog/2017/08/26/quickly-play-with-polity-iv-and-oecd-data-and-see-the-danger-of-us-democracy/&#34;&gt;Quickly play with Polity IV and OECD data (and see the danger of US democracy)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You will complete this assignment on your own, but you can get help from others (but you can’t all write about the same topic).&lt;/p&gt;
-&lt;div id=&#34;instructions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Instructions&lt;/h2&gt;
-&lt;p&gt;Here’s what you need to do:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Decide&lt;/strong&gt; what statistical or causal or program evaluation concept you want to demonstrate. Perhaps you want to show how DAGs are important and what you can do to control for back doors, or demonstrate how to run a regression discontinuity model, or how to make a plot that shows a program effect from a diff-in-diff model. This is entirely up to you!&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Write&lt;/strong&gt; a tutorial that walks a reader through a demonstration of this concept. Your problem sets have been focused on a final product. In this assignment, here the focus is didactic. Show intermediate steps, explain why you do what you do, etc. The reader should learn something new from this tutorial.&lt;/p&gt;
-&lt;p&gt;There’s no word count here, but there should be several steps and examples of the concept you’re demonstrating.&lt;/p&gt;
-&lt;p&gt;You should write this in R Markdown, since that allows you to mix prose and code.&lt;/p&gt;
-&lt;p&gt;Your demonstration &lt;strong&gt;must be reproducible&lt;/strong&gt;. Use built-in datasets from the &lt;code&gt;wooldridge&lt;/code&gt; package (like &lt;code&gt;injury&lt;/code&gt; or &lt;code&gt;jtrain2&lt;/code&gt; or &lt;code&gt;jtrain3&lt;/code&gt; and so on), or use the &lt;code&gt;wakefield&lt;/code&gt; package to simulate data, or point the reader to a CSV file from the internet and incorporate &lt;code&gt;read_csv()&lt;/code&gt; into your code-through.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Knit&lt;/strong&gt; the final version of your tutorial as a PDF, Word file, or HTML file.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Upload&lt;/strong&gt; the knitted document to iCollege.&lt;/p&gt;
-&lt;p&gt;If you’re feeling especially brave, post the HTML version of your document to some public website (&lt;a href=&#34;https://medium.com/&#34;&gt;Medium&lt;/a&gt;, a personal blog, etc.), tell me, and I’ll promote it in the #rstats community on Twitter. You’ll probably get super rich and famous if you do this.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I will grade this using a check system.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;So are Python and other modern open source languages too.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Yours won’t be nearly as complicated as these, by the way. Nor do they need to be.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Background and theory</title>
-      <link>/assignment/01-eval-background-theory/</link>
-      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-eval-background-theory/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this assignment will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem set 1</title>
+      <title>1. Problem set 1</title>
       <link>/assignment/01-problem-set/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/assignment/01-problem-set/</guid>
@@ -83,7 +25,7 @@
     </item>
     
     <item>
-      <title>Getting Started</title>
+      <title>0. Getting Started</title>
       <link>/assignment/00-assign-getting-started/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/assignment/00-assign-getting-started/</guid>
@@ -104,8 +46,8 @@
 &lt;li&gt;Get a copy of &lt;a href=&#34;https://www.amazon.com/STAT2-Modeling-Regression-Ann-Cannon-ebook-dp-B07K6Y99J3/dp/B07K6Y99J3/ref=mt_kindle?_encoding=UTF8&amp;amp;me=&amp;amp;qid=1579815019&#34;&gt;the textbook&lt;/a&gt; (&amp;amp; see notes about buying the book in the syllabus)&lt;/li&gt;
 &lt;li&gt;Download the &lt;a href=&#34;https://www.polleverywhere.com/mobile&#34;&gt;PollEverywhere app&lt;/a&gt; to your phone or a device that you’ll have with you in the classroom&lt;/li&gt;
 &lt;li&gt;Set up an account with &lt;a href=&#34;https://rstudio.cloud/&#34;&gt;RStudio Cloud&lt;/a&gt; (easiest via Google with your Smith account). We will not be using the RStudio Cloud exclusively, but we will need to use it at a least a few points during the semester.&lt;/li&gt;
-&lt;li&gt;Join the &lt;a href=&#34;https://join.slack.com/t/sds291-spring2020/shared_invite/enQtODc2NzU0MTU5MjAxLTFmZmU2OTc5OTIzMDU5MzU5ZTEzNjZkMDllYmRlYmQ4NzI2ZTM4Y2Y2N2M2MWRjY2ZjMDVlMGRjN2JmZjdiZWY&#34;&gt;course Slack&lt;/a&gt; and post an animal gif in the channel for your section (Section 01: 1:20-2:35, or Section 02: 2:45 - 4:00pm). If you’re new to Slack, look through the Resources section of this page for some more information to get started.&lt;/li&gt;
-&lt;li&gt;Add a 1-2 songs to &lt;a href=&#34;https://open.spotify.com/playlist/70l14LCdw5XOAyk1RHeuAO?si=Enp-jrtiSeKWhU4XYueiqg&#34;&gt;a playlist for our class&lt;/a&gt;. I like playing music at the beginning of class and during in-class work time (there will be a lot), so add something you’d like to hear. See more &lt;a href=&#34;https://support.spotify.com/us/article/create-playlists-with-your-friends/&#34;&gt;here&lt;/a&gt; about adding to a collaborative playlist. If you don’t have a Spotify account or have trouble adding songs directly to Spotify, just add the song title and artist in this google form.&lt;/li&gt;
+&lt;li&gt;Join the &lt;a href=&#34;https://join.slack.com/t/sds291-spring2020/shared_invite/enQtOTI0MzIwMjMwOTE3LTk1MjFmZTA4YjNjZmYxYTU4MTNiYjU3MWFhYTQ4MzNjNDkxYjZjMTE2YjE0N2Q4MmFmZmI2NTE3NTI2MzY2Mjc&#34;&gt;course Slack&lt;/a&gt; and post an animal gif in the channel for your section (Section 01: 1:20-2:35, or Section 02: 2:45 - 4:00pm). If you’re new to Slack, look through the Resources section of this page for some more information to get started.&lt;/li&gt;
+&lt;li&gt;Add a 1-2 songs to &lt;a href=&#34;https://open.spotify.com/playlist/70l14LCdw5XOAyk1RHeuAO?si=Enp-jrtiSeKWhU4XYueiqg&#34;&gt;a playlist for our class&lt;/a&gt;. I like playing music at the beginning of class and during in-class work time (there will be a lot), so add something you’d like to hear. See more &lt;a href=&#34;https://support.spotify.com/us/article/create-playlists-with-your-friends/&#34;&gt;here&lt;/a&gt; about adding to a collaborative playlist. If you don’t have a Spotify account or have trouble adding songs directly to Spotify, just add the song title and artist in &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1L_hHXNMI09c-XU1cTnEb5iivll3PYzBmfmdurVnYEww/edit?usp=sharing&#34;&gt;this google sheet&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;getting-started-with-r-refreshing-statistics&#34; class=&#34;section level3&#34;&gt;
@@ -122,36 +64,24 @@
     </item>
     
     <item>
-      <title>Evaluation, data science, the causal revolution, and the tidyverse</title>
+      <title>Context for and Use of Regression Modelling</title>
       <link>/class/01-class/</link>
-      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/class/01-class/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#slides-course-materials&#34;&gt;Slides &amp;amp; Course Materials&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
+&lt;div id=&#34;slides-course-materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides &amp;amp; Course Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-chalkboard-teacher&#34;&gt;&lt;/i&gt; Slides are &lt;a href=&#34;01/01_Lecture_Slides.html&#34;&gt;here&lt;/a&gt; (&lt;a href=&#34;01/01_Lecture_Notes.Rmd&#34;&gt;Rmd code&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-clipboard-list&#34;&gt;&lt;/i&gt; Notes and Pea Activity are &lt;a href=&#34;01/01_Lecture_Notes.pdf&#34;&gt;here&lt;/a&gt; (&lt;a href=&#34;01/01_Lecture_Notes.Rmd&#34;&gt;Rmd code&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -174,211 +104,6 @@
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Final project</title>
-      <link>/assignment/final-project/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/final-project/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#suggested-outline&#34;&gt;Suggested outline&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#program-overview&#34;&gt;Program overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#program-theory-and-implementation&#34;&gt;Program theory and implementation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#outcome-and-causation&#34;&gt;Outcome and causation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-and-methods&#34;&gt;Data and methods&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#synthetic-analysis&#34;&gt;Synthetic analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Evaluation research is tricky and costly. If you begin an intervention or launch a study prematurely, you can waste time and money—and potentially lives.&lt;/p&gt;
-&lt;p&gt;Even if you have a well designed program with an impeccable logic model and a perfect DAG, you might discover (too late!) that you forgot to collect some critical variables or realize that your identification strategy will not work.&lt;/p&gt;
-&lt;p&gt;From a more cynical perspective, you might (unethically) engage in the practice of &lt;a href=&#34;https://theconversation.com/one-reason-so-many-scientific-studies-may-be-wrong-66384&#34;&gt;p-hacking&lt;/a&gt;—running all sorts of different model specifications until you find the results you want, and then claim in your report that you had intended to run that model all along.&lt;/p&gt;
-&lt;p&gt;One increasingly popular method for (1) ensuring that your data and methods work before launching a study or intervention, and (2) declaring and committing to your hypotheses and methods and models before analyzing your data is to &lt;a href=&#34;https://blogs.plos.org/plos/2019/11/preregistration-can-bring-science-back-to-its-roots/&#34;&gt;&lt;em&gt;pre-register&lt;/em&gt; your research or evaluation&lt;/a&gt;. A &lt;a href=&#34;https://www.sciencemag.org/news/2018/09/more-and-more-scientists-are-preregistering-their-studies-should-you&#34;&gt;pre-registered study&lt;/a&gt; contains all the background work—an introduction, literature review, theory, hypotheses, and proposed analysis—but without the actual data. Authors post their expectations and hypotheses publicly so they can be held publicly accountable for any deviations from their proposed design.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The best preregistered studies use simulated data that has the same structure as the data that will be collected (i.e. same columns, sometimes the same correlations and relationships researchers expect to see in the collected data, etc.). Because there’s no data yet (or just fake data), you have more freedom when developing a preregistered study. You can experiment with different models, play with different approaches, manipulate data in different ways, and so on. If you realize that you need a new variable, or that you need to rearrange questions on a survey, or make any other kinds of changes, you can—you haven’t collected the data yet!&lt;/p&gt;
-&lt;p&gt;Once you finalize your plan and know all the data you need to collect, and once you’ve written out the different models you’ll run, all you have to do is collect the real data, plop it into your script (replacing the fake data you’d been using), and run the analysis script again to generate the actual, real results. In the results section, you get to either say “As predicted, we found…”, or “Contrary to expectations, we found that…”.&lt;/p&gt;
-&lt;p&gt;For your final project in this class, you will write a pre-registered analysis of a public or nonprofit social program that you’re interested in. You don’t need to worry about collecting data—you’ll create a synthetic dataset for your pre-analysis.&lt;/p&gt;
-&lt;p&gt;You will submit &lt;strong&gt;three things&lt;/strong&gt; via iCollege:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;A PDF of your preregistered report (see the outline below for details of what this needs to contain). You should compile this with R Markdown. You might want to write the prose-heavy sections in a word processor like Word or Google Docs and copy/paste the text into your R Markdown document, since RStudio doesn’t have a nice spell checker or grammar checker. This should have &lt;em&gt;no visible R code, warnings, or messages in it&lt;/em&gt; (set &lt;code&gt;echo=FALSE&lt;/code&gt; at the beginning of your document before you knit).&lt;/li&gt;
-&lt;li&gt;The same PDF as above, but with all the R code in it (set &lt;code&gt;echo=TRUE&lt;/code&gt; at the beginning of your document and reknit the file).&lt;/li&gt;
-&lt;li&gt;A CSV file of your fake data.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This project is due by &lt;strong&gt;7:00 PM on Wednesday, April 29, 2020.&lt;/strong&gt; &lt;span style=&#34;color: #EE6A24; font-weight: bold&#34;&gt; No late work will be accepted.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;You can either run the analysis in RStudio locally on your computer (highly recommended(!!), since you won’t have to worry about keeping all your work on RStudio’s servers), or use an RStudio.cloud project. You can make a copy of this RStudio.cloud project—it doesn’t have anything in it, but I have preinstalled all the packages we’ve used over the course of the semester, so you don’t have to.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://rstudio.cloud/spaces/26160/project/714408&#34;&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Empty RStudio.cloud project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/files/final-project.zip&#34;&gt;&lt;i class=&#34;fas fa-file-archive&#34;&gt;&lt;/i&gt; Empty RStudio project you can download and unzip on your computer&lt;/a&gt; (doesn’t include any packages, since you’re responsible for installing those)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;resources&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Resources&lt;/h2&gt;
-&lt;p&gt;Most importantly, &lt;strong&gt;do not hesitate&lt;/strong&gt; to work with classmates. You all must choose different programs, but you can work in groups of up to 4 people on your own projects. Also, &lt;strong&gt;absolutely do not hesitate&lt;/strong&gt; to ask me questions! I’m here to help!&lt;/p&gt;
-&lt;p&gt;You might find this evaluation (and its proposal) of a truancy program in the Provo School District in Utah helpful as an example for the first half of this assignment (program overview, theory, implementation, threats to validity, and outcomes). The PSD evaluation doesn’t have DAGs or fancy econometrics models like RCTs, diff-in-diff, RDD, IVs, or anything like that, so you can’t use it as an example of that part, but these should provide a good template for the program-specific sections. &lt;em&gt;This is longer than expected for this class&lt;/em&gt;. I provide suggested word counts in the outline below.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/files/psd-proposal-2011.pdf&#34;&gt;&lt;i class=&#34;fas fa-file-pdf&#34;&gt;&lt;/i&gt; &lt;code&gt;psd-proposal-2011&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/files/psd-final-report-2012.pdf&#34;&gt;&lt;i class=&#34;fas fa-file-pdf&#34;&gt;&lt;/i&gt; &lt;code&gt;psd-final-report-2012&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;suggested-outline&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Suggested outline&lt;/h2&gt;
-&lt;p&gt;Here’s an outline of what you’ll need to do.&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; You can download this as an RMarkdown file and change the text if you want. I’ve also included this as an RMarkdown file in the empty RStudio.cloud project.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/files/final-project/final-project-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; &lt;code&gt;final-project-template.Rmd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;introduction&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;Describe the motivation for this evaluation, briefly describe the program to be evaluated, and explain why it matters for society. (&lt;strong&gt;≈150 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;program-overview&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Program overview&lt;/h3&gt;
-&lt;p&gt;Provide in-depth background about the program. Include details about (1) when it was started, (2) why it was started, (3) what it was designed to address in society. If the program hasn’t started yet, explain why it’s under consideration. (&lt;strong&gt;≈300 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;program-theory-and-implementation&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Program theory and implementation&lt;/h3&gt;
-&lt;div id=&#34;program-theory-and-impact-theory-graph&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Program theory and impact theory graph&lt;/h4&gt;
-&lt;p&gt;Explain and explore the program’s underlying theory. Sometimes programs will explain why they exist in a mission statement, but often they don’t and you have to infer the theory from what the program looks like when implemented. What did the program designers plan on occurring? Was this theory based on existing research? If so, cite it. (&lt;strong&gt;≈300 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;Include a simple impact theory graph showing the program’s basic activities and outcomes. Recall from class and your reading that this is focused primarily on the theory and mechanisms, not on the implementation of the program.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;logic-model&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Logic model&lt;/h4&gt;
-&lt;p&gt;Describe the program’s inputs, activities, outputs, and outcomes. Pay careful attention to how they are linked—remember that every input needs to flow into an activity and every output must flow out of an activity. (&lt;strong&gt;≈150 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;Use flowchart software to connect the inputs, activities, outputs, and outcomes and create a complete logic model. Include this as a figure.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outcome-and-causation&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Outcome and causation&lt;/h3&gt;
-&lt;div id=&#34;main-outcome&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Main outcome&lt;/h4&gt;
-&lt;p&gt;Select one of the program’s outcomes to evaluate. Explain why you’ve chosen this (is it the most important? easiest to measure? has the greatest impact on society?) (&lt;strong&gt;≈50 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;measurement&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Measurement&lt;/h4&gt;
-&lt;p&gt;Using the concept of the “ladder of abstraction” that we discussed in class (e.g. identifying a witch, measuring poverty, etc.), make a list of all the possible attributes of the outcome. Narrow this list down to 3-4 key attributes. Discuss how you decided to narrow the concepts and justify why you think these attributes capture the outcome. Then, for each of these attributes, answer these questions:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Measurable definition&lt;/em&gt;: How would you specifically define this attribute? (i.e. if the attribute is “reduced crime”, define it as “The percent change in crime in a specific neighborhood during a certain time frame” or something similar)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Ideal measurement&lt;/em&gt;: How would you measure this attribute in an ideal world?&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Feasible measurement&lt;/em&gt;: How would you measure this given reality and given limitations in budget, time, etc.?&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Measurement of program effect&lt;/em&gt;: How would to connect this measure to people in the program? How would you check to see if the program itself had an effect?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(&lt;strong&gt;≈150 words&lt;/strong&gt; in this section)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;causal-theory&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Causal theory&lt;/h4&gt;
-&lt;p&gt;Given your measurement approach, describe and draw a causal diagram (DAG) that shows how your program causes the outcome. Note that this is not the same thing as the logic model—you’ll likely have nodes in the DAG that aren’t related to the program at all (like socioeconomic status, gender, experience, or other factors). The logic model provides the framework for the actual implementation of your program and connects all the moving parts to the outcomes. The DAG is how you can prove causation with statistical approaches. (&lt;strong&gt;≈150 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;hypotheses&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Hypotheses&lt;/h4&gt;
-&lt;p&gt;Make predictions of your program’s effect. Declare what you think will happen. (&lt;strong&gt;≈50 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-and-methods&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Data and methods&lt;/h3&gt;
-&lt;div id=&#34;identification-strategy&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Identification strategy&lt;/h4&gt;
-&lt;p&gt;How will you measure the actual program effect? Will you rely on an RCT? Differences-in-differences? Regression discontinuity? Instrumental variables? How does your approach account for selection bias and endogeneity? How does your approach isolate the causal effect of the program on the outcome?&lt;/p&gt;
-&lt;p&gt;Also briefly describe what kinds of threats to internal and external validity you face in your study.&lt;/p&gt;
-&lt;p&gt;(&lt;strong&gt;≈300 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Data&lt;/h4&gt;
-&lt;p&gt;Given your measurement approach, limits on feasibility, and identification strategy, describe the data you will use. Will you rely on administrative data collected by a government agency or nonprofit? Will you collect your own data? If so, what variables will you measure, and how? Will you conduct a survey or rely on outside observers or do something else? What does this data look like? What variables does it (or should it) include?&lt;/p&gt;
-&lt;p&gt;(&lt;strong&gt;≈100 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;synthetic-analysis&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Synthetic analysis&lt;/h3&gt;
-&lt;p&gt;Generate a synthetic (fake) dataset in R with all the variables you’ll need for the real life analysis. Analyze the data using your identification strategy. For instance:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If you’re relying on observational data, close all the backdoors, don’t adjust for colliders, and make a strong argument for isolation of the causal effect in the absence of treatment/control groups&lt;/li&gt;
-&lt;li&gt;If you’re doing an RCT, test the differences in means in the treatment and control groups (and follow all other best practices listed in the World Bank book, checking for balance across groups, etc.)&lt;/li&gt;
-&lt;li&gt;If you’re doing diff-in-diff, run a regression model with an interaction term to show the diff-in-diff&lt;/li&gt;
-&lt;li&gt;If you’re doing regression discontinuity, check for a jump in the outcome variable at the cutoff in the running variable&lt;/li&gt;
-&lt;li&gt;If you’re using instrumental variables, check the validity of your instrument and run a 2SLS model&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Include robustness checks to ensure the validity of your effect (i.e. if you’re doing regression discontinuity, test different bandwidths and kernel types; etc.)&lt;/p&gt;
-&lt;p&gt;(&lt;strong&gt;As many words as you need to fully describe your analysis and results&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;conclusion&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;What would the findings from this analysis mean for your selected program? What would it mean if you found an effect? What would it mean if you didn’t find an effect? Why does any of this matter? (&lt;strong&gt;≈75 words&lt;/strong&gt;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See the &lt;a href=&#34;https://cos.io/prereg/&#34;&gt;Center for Open Science’s directory of preregistrations&lt;/a&gt;, or &lt;a href=&#34;https://aspredicted.org/&#34;&gt;AsPredicted list&lt;/a&gt; for examples of this in real life. &lt;a href=&#34;https://osf.io/hsbyd&#34;&gt;Here’s one by me!&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;If you did problem sets 4 and 5, you’ve already done a lot of this work! I don’t recommend simply copying/pasting it as is into here—you’ll want to polish it up a little for this final report.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Measurement</title>
-      <link>/assignment/02-eval-measurement/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/02-eval-measurement/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this assignment will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem set 2</title>
-      <link>/assignment/02-problem-set/</link>
-      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/02-problem-set/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Regression and inference</title>
-      <link>/class/02-class/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/class/02-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
 </description>
     </item>
     
@@ -476,65 +201,6 @@
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem set 3</title>
-      <link>/assignment/03-problem-set/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/03-problem-set/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Causal model</title>
-      <link>/assignment/03-eval-dag/</link>
-      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/03-eval-dag/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this assignment will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Theories of change</title>
-      <link>/class/03-class/</link>
-      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/class/03-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Slides&lt;/h3&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
 </description>
     </item>
     
@@ -675,65 +341,6 @@
     </item>
     
     <item>
-      <title>Problem set 4</title>
-      <link>/assignment/04-problem-set/</link>
-      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/04-problem-set/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Threats to validity</title>
-      <link>/assignment/04-eval-threats/</link>
-      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/04-eval-threats/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this assignment will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Measurement and DAGs</title>
-      <link>/class/04-class/</link>
-      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/class/04-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Things you should know for Exam 2</title>
       <link>/reference/exam2/</link>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
@@ -765,718 +372,30 @@
     </item>
     
     <item>
-      <title>Problem set 5</title>
-      <link>/assignment/05-problem-set/</link>
-      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/05-problem-set/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>DAGs and potential outcomes</title>
-      <link>/class/05-class/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/class/05-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem set 6</title>
-      <link>/assignment/06-problem-set/</link>
-      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/06-problem-set/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Threats to validity</title>
-      <link>/class/06-class/</link>
-      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/class/06-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem set 7</title>
-      <link>/assignment/07-problem-set/</link>
-      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/07-problem-set/</guid>
-      <description>
-
-
-&lt;p&gt;The instructions for this problem set will go live 2 weeks before the deadline.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Randomization and matching</title>
-      <link>/class/07-class/</link>
-      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/class/07-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Difference-in-differences I</title>
-      <link>/class/08-class/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/class/08-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Difference-in-differences II</title>
-      <link>/class/09-class/</link>
-      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/class/09-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Regression discontinuity I</title>
-      <link>/class/10-class/</link>
-      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/class/10-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instrumental variables I</title>
-      <link>/class/11-class/</link>
-      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/class/11-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instrumental variables II and regression discontinuity II</title>
-      <link>/class/12-class/</link>
-      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/class/12-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Planning and running evaluations &#43; other types of evaluation</title>
-      <link>/class/13-class/</link>
-      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/class/13-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ethics and open science</title>
-      <link>/class/14-class/</link>
-      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/class/14-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-muddiest-things&#34;&gt;Clearest and muddiest things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;The slides from today will be posted here after class.&lt;/p&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-muddiest-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and muddiest things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;https://forms.gle/gDXoxmbQeps5suaJ6&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the muddiest thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ethics and open science</title>
-      <link>/reading/14-reading/</link>
-      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/14-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;p&gt;This looks like a lot, but most of these are quite short.&lt;/p&gt;
-&lt;p&gt;Keep in mind throughout all these readings that an “algorithm” in these contexts is typically some fancy type of regression model where the outcome variable is something binary like “Safe babysitter/unsafe babysitter,” “Gave up seat in past/didn’t give up seat in past”, or “Violated probation in past/didn’t violate probation in past”, and the explanatory variables are hundreds of pieces of data that might predict those outcomes (social media history, flight history, race, etc.).&lt;/p&gt;
-&lt;p&gt;Data scientists build a (sometimes proprietary and complex) model based on existing data, plug in values for any given new person, multiply that person’s values by the coefficients in the model, and get a final score in the end for how likely someone is to be a safe babysitter or how likely someone is to return to jail.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;far fa-file-pdf&#34;&gt;&lt;/i&gt; Miguel A. Hernán, &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5888052/&#34;&gt;“The C-Word: Scientific Euphemisms Do Not Improve Causal Inference From Observational Data”&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Hannah Fresques and Meg Marco, &lt;a href=&#34;https://www.propublica.org/nerds/hadley-wickham-your-default-position-should-be-skepticism-and-other-advice-for-data-journalists&#34;&gt;“‘Your Default Position Should Be Skepticism’ and Other Advice for Data Journalists From Hadley Wickham,”&lt;/a&gt; &lt;em&gt;ProPublica&lt;/em&gt;, June 10, 2019&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; DJ Patil, &lt;a href=&#34;https://medium.com/@dpatil/a-code-of-ethics-for-data-science-cda27d1fac1&#34;&gt;“A Code of Ethics for Data Science”&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Mike Loukides, Hilary Mason, and DJ Patil, &lt;a href=&#34;https://www.amazon.com/dp/B07GTC8ZN7&#34;&gt;&lt;em&gt;Ethics and Data Science&lt;/em&gt;&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://medium.com/@AINowInstitute/ai-in-2018-a-year-in-review-8b161ead2b4e&#34;&gt;“AI in 2018: A Year in Review”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.nytimes.com/2018/05/04/books/review/automating-inequality-virginia-eubanks.html&#34;&gt;“How Big Data Is ‘Automating Inequality’”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://annenberg.usc.edu/news/diversity-and-inclusion/algorithms-oppression-safiya-noble-finds-old-stereotypes-persist-new&#34;&gt;“In ‘Algorithms of Oppression,’ Safiya Noble finds old stereotypes persist in new media”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-podcast&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://99percentinvisible.org/episode/the-age-of-the-algorithm/&#34;&gt;99% Invisible, “The Age of the Algorithm”&lt;/a&gt;: Note that this is a podcast, or a 20ish minute audio story. &lt;strong&gt;Listen to this.&lt;/strong&gt; The rest of the things on this page are helpful and supplementary (very few podcasts provide this much extra information), but you don’t need to go through it all.&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-podcast&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.wnycstudios.org/podcasts/otm/segments/biased-algorithms-biased-world&#34;&gt;On the Media, “Biased Algorithms, Biased World”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.washingtonpost.com/technology/2018/11/16/wanted-perfect-babysitter-must-pass-ai-scan-respect-attitude/?utm_term=.080010494ed5&#34;&gt;“Wanted: The ‘perfect babysitter.’ Must pass AI scan for respect and attitude.”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://qz.com/1427621/companies-are-on-the-hook-if-their-hiring-algorithms-are-biased/&#34;&gt;“Companies are on the hook if their hiring algorithms are biased”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.popsci.com/recidivism-algorithm-random-bias&#34;&gt;“Courts use algorithms to help determine sentencing, but random people get the same results”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fab fa-twitter-square&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://twitter.com/dhh/status/1192540900393705474&#34;&gt;David Heinemeier Hansson’s rant on the Apple Card&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;And &lt;a href=&#34;https://dhh.dk/2019/about-the-apple-card.html&#34;&gt;Jamie Heinemeier Hansson’s response&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Miguel A. Hernán, “The c-Word: Scientific Euphemisms Do Not Improve Causal Inference from Observational Data,” &lt;em&gt;American Journal of Publich Health&lt;/em&gt; 108, no. 5 (May 2018): 616–19, doi:&lt;a href=&#34;https://doi.org/10.2105/AJPH.2018.304337&#34; role=&#34;doc-biblioref&#34;&gt;10.2105/AJPH.2018.304337&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;This concise booklet is the result of DJ Patil’s call for ethics in the previous post.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Planning and running evaluations &#43; other types of evaluation</title>
-      <link>/reading/13-reading/</link>
-      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/13-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-file-pdf&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.cdc.gov/std/Program/pupestd/Types%20of%20Evaluation.pdf&#34;&gt;“Types of Evaluation,”&lt;/a&gt; National Center for HIV/AIDS, Viral Hepatitis, STD, and TB Prevention, Centers for Disease Control (CDC)&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 11–14 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instrumental variables II &amp; Regression discontinuity II</title>
-      <link>/reading/12-reading/</link>
-      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/12-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Review the readings from &lt;a href=&#34;/reading/11-reading/&#34;&gt;last week&lt;/a&gt; and &lt;a href=&#34;/reading/10-reading/&#34;&gt;the week before&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Instrumental variables I</title>
-      <link>/reading/11-reading/</link>
-      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/11-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 5 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Instrumental variables” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Regression discontinuity I</title>
-      <link>/reading/10-reading/</link>
-      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/10-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 6 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 4 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Regression discontinuity” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Difference-in-differences II</title>
-      <link>/reading/09-reading/</link>
-      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/09-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Review the readings from &lt;a href=&#34;/reading/08-reading/&#34;&gt;last week&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Difference-in-differences I</title>
-      <link>/reading/08-reading/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/08-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 7 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 5 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Differences-in-differences” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Randomization and matching</title>
-      <link>/reading/07-reading/</link>
-      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/07-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 4 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-podcast&#34;&gt;&lt;/i&gt; Planet Money, &lt;a href=&#34;https://www.npr.org/2019/08/30/756028025/episode-937-moving-to-opportunity&#34;&gt;“Moving To Opportunity?,”&lt;/a&gt; episode 937&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Aaron Carroll, &lt;a href=&#34;https://www.nytimes.com/2018/08/06/upshot/employer-wellness-programs-randomized-trials.html&#34;&gt;“Workplace Wellness Programs Don’t Work Well. Why Some Studies Show Otherwise,”&lt;/a&gt; &lt;em&gt;The Upshot&lt;/em&gt;, August 6, 2018&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Threats to validity</title>
-      <link>/reading/06-reading/</link>
-      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/06-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 9 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>DAGs and potential outcomes</title>
-      <link>/reading/05-reading/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/05-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Potential outcomes causal model” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Measurement and DAGs</title>
-      <link>/reading/04-reading/</link>
-      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/04-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;div id=&#34;measurement&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Measurement&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 5 in &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;.&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This is available on iCollege.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dags&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;DAGs&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;far fa-file-pdf&#34;&gt;&lt;/i&gt; Julia M. Rohrer, “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data”&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This will be posted on iCollege.&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Directed acyclical graphs” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Peter H. Rossi, Mark W. Lipsey, and Gary T. Henry, &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;, 8th ed. (Los Angeles: Sage, 2019).&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Julia M. Rohrer, “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data,” &lt;em&gt;Advances in Methods and Practices in Psychological Science&lt;/em&gt; 1, no. 1 (March 2018): 27–42, doi:&lt;a href=&#34;https://doi.org/10.1177/2515245917745629&#34; role=&#34;doc-biblioref&#34;&gt;10.1177/2515245917745629&lt;/a&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Theories of change and logic models</title>
-      <link>/reading/03-reading/</link>
+      <title>Simple Linear Regression: Fitting Models</title>
+      <link>/reading/02-reading/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/03-reading/</guid>
+      <guid>/reading/02-reading/</guid>
       <description>
 
 
 &lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Required&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2 in &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2 in &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;.&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This is available on iCollege.&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3 in &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;.&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt; This is available on iCollege.&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1.1 - 1.3 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;additional-pre-class-assignment&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Additional pre-class assignment&lt;/h2&gt;
-&lt;p&gt;Choose a social program that you’re interested in. Draw a logic model or results chain that is as detailed as you can get it, including all the inputs, activities, outputs, and outcomes you can think of. This doesn’t have to be perfect—we’ll talk about it and critique and improve it in class.&lt;/p&gt;
-&lt;p&gt;You can do this by hand or with something like &lt;a href=&#34;https://www.draw.io/&#34;&gt;Draw.io&lt;/a&gt;, &lt;a href=&#34;https://www.lucidchart.com/pages/home&#34;&gt;Lucidchart&lt;/a&gt;, or &lt;a href=&#34;https://creately.com/&#34;&gt;Creately&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Paul J. Gertler et al., &lt;em&gt;Impact Evaluation in Practice&lt;/em&gt;, 2nd ed. (Inter-American Development Bank; World Bank, 2016), &lt;a href=&#34;https://openknowledge.worldbank.org/handle/10986/25030&#34; role=&#34;doc-biblioref&#34;&gt;https://openknowledge.worldbank.org/handle/10986/25030&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Peter H. Rossi, Mark W. Lipsey, and Gary T. Henry, &lt;em&gt;Evaluation: A Systematic Approach&lt;/em&gt;, 8th ed. (Los Angeles: Sage, 2019).&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;None&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Context for and Use of Regression Modellinge</title>
+      <title>Context for and Use of Regression Modeling</title>
       <link>/reading/01-reading/</link>
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
       <guid>/reading/01-reading/</guid>
@@ -1493,51 +412,9 @@
 &lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recommended&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Gillham, N. W. (2001). &lt;a href=&#34;https://www.annualreviews.org/doi/abs/10.1146/annurev.genet.35.102401.090055?journalCode=genet&#34;&gt;Sir Francis Galton and the birth of eugenics&lt;/a&gt;. Annual review of genetics, 35(1), 83-101.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Gillham, N. W. (2001). &lt;a href=&#34;https://www.annualreviews.org/doi/abs/10.1146/annurev.genet.35.102401.090055?journalCode=genet&#34;&gt;Sir Francis Galton and the birth of eugenics&lt;/a&gt;. Annual review of genetics, 35(1), 83-101.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Senn, S. (2011). &lt;a href=&#34;https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2011.00509.x&#34;&gt;Francis Galton and regression to the mean.&lt;/a&gt; Significance, 8(3), 124-126.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;if-youre-interested&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;If you’re interested&lt;/h2&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Regression and inference</title>
-      <link>/reading/02-reading/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/reading/02-reading/</guid>
-      <description>
-
-
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2 in &lt;em&gt;Mastering ’Metrics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; “Properties of regression” in &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Recommended&lt;/h2&gt;
-&lt;p&gt;Look through your notes on regression from your last stats class. Also, you can skim through these resources:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://moderndive.com/6-regression.html&#34;&gt;6.1–6.4 in &lt;em&gt;ModernDive&lt;/em&gt;&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://moderndive.com/7-multiple-regression.html&#34;&gt;7.1–7.4 in &lt;em&gt;ModernDive&lt;/em&gt;&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 7.1–7.3 in &lt;em&gt;OpenIntro Statistics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 8.1 in &lt;em&gt;OpenIntro Statistics&lt;/em&gt;&lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We’ll review all this regression stuff in class, so &lt;em&gt;don’t panic&lt;/em&gt; if this all looks terrifying! Also, take advantage of the videos that accompany the &lt;em&gt;OpenIntro&lt;/em&gt; chapters. And &lt;em&gt;also&lt;/em&gt;, the &lt;em&gt;OpenIntro&lt;/em&gt; chapters are heavier on the math—don’t worry if you don’t understand everything.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Joshua D. Angrist and Jörn-Steffen Pischke, &lt;em&gt;Mastering ’Metrics: The Path from Cause to Effect&lt;/em&gt; (Princeton, NJ: Princeton University Press, 2015).&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Scott Cunningham, &lt;em&gt;Causal Inference: The Mixtape&lt;/em&gt;, 2018, &lt;a href=&#34;https://www.scunning.com/mixtape.html&#34; role=&#34;doc-biblioref&#34;&gt;https://www.scunning.com/mixtape.html&lt;/a&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Chester Ismay and Albert Y. Kim, &lt;em&gt;ModernDive: An Introduction to Statistical and Data Sciences via R&lt;/em&gt;, 2018, &lt;a href=&#34;https://moderndive.com/&#34; role=&#34;doc-biblioref&#34;&gt;https://moderndive.com/&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel, &lt;em&gt;OpenIntro Statistics&lt;/em&gt;, 3rd ed., 2017, &lt;a href=&#34;https://www.openintro.org/stat/textbook.php?stat_book=os&#34; role=&#34;doc-biblioref&#34;&gt;https://www.openintro.org/stat/textbook.php?stat_book=os&lt;/a&gt;.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;Ibid.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -2304,10 +1181,8 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/class/01-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;January 29&lt;/td&gt;
@@ -2348,9 +1223,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 5&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Simple Linear Regression: ANOVA Table&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/04-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2375,9 +1251,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/group/01-group/&#34;&gt;
-                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2386,12 +1263,14 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 10&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Simple Linear Regression: Review and Wrap Up&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/02-problem-set/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2404,9 +1283,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 12&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;No Class - Work on Take Home Project 1&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2431,9 +1311,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/group/02-group/&#34;&gt;
-                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2446,9 +1327,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/03-problem-set/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2470,9 +1352,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 17&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Intuition and Rationale&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2489,9 +1372,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 19&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Fitting, Interpreting, and Conducting Slope Inference for Models&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2508,12 +1392,14 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 24&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Parallel Slopes and Non-Parallel Slopes, Interaction&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/04-eval-dag/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2526,9 +1412,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 26&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Multicollinearity, Nested F-Test&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2553,9 +1440,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/group/03-group/&#34;&gt;
-                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2564,12 +1452,14 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 2&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Leverage&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/05-eval-dag/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2582,9 +1472,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 4&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Bootstrap for Inference&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2601,12 +1492,14 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 9&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Article Review&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/05-eval-dag/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2619,9 +1512,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 11&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Data Visualization&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2646,9 +1540,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/group/04-group/&#34;&gt;
-                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2677,9 +1572,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 22&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: In-Class Project&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2696,9 +1592,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 24&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: In-Class Project&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2715,12 +1612,14 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 22&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; **MLR: Review **&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/02-TakeHomeProject/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2733,9 +1632,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 24&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;No Class - Work on Take Home Project 2&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2760,9 +1660,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/group/05-group/&#34;&gt;
-                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2775,9 +1676,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/03-problem-set/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2799,9 +1701,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 29&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Concepts and Introduction&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2818,9 +1721,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 31&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Fitting and Interpreting Models&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2837,12 +1741,14 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 6&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Odds, Odds Ratios, Probability&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/05-eval-dag/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2855,9 +1761,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 8&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Multiple Regression&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2882,9 +1789,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/group/06-group/&#34;&gt;
-                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2893,9 +1801,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 13&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Visualizing Coefficients and Predicted Probabilities&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2912,9 +1821,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 15&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Log Likelihood, Ratio Tests&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2939,9 +1849,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/group/06-group/&#34;&gt;
-                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2953,9 +1864,10 @@ Figure 1: A fancy pie chart.
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
                     href=&#34;/reading/05-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/05-eval-dag/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2968,9 +1880,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 22&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;No Class - Work on Take Home Project 3&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -2991,9 +1904,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/03-problem-set/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -3006,12 +1920,14 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 27&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Additional Topics / Project Work Time&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/03-TakeHomeProject/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -3024,9 +1940,10 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 29&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Poster Presentations&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -3056,9 +1973,10 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/assignment/final-project/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;

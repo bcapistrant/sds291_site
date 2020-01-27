@@ -30,8 +30,7 @@
   
     
   
-  <meta name="description" content="Required   Chapter 2 in Mastering ’Metrics1  “Properties of regression” in Causal Inference: The Mixtape2   Recommended Look through your notes on regression from your last stats class. Also, you can skim through these resources:
-  6.1–6.4 in ModernDive3  7.1–7.4 in ModernDive4  7.1–7.3 in OpenIntro Statistics5  8.1 in OpenIntro Statistics6  We’ll review all this regression stuff in class, so don’t panic if this all looks terrifying!">
+  <meta name="description" content=" Required   Chapter 1.1 - 1.3 in STAT2   Recommended  None   ">
 
   
   <link rel="alternate" hreflang="en-us" href="/reading/02-reading/">
@@ -234,17 +233,16 @@
   <meta property="twitter:site" content="@bencapistrant">
   <meta property="twitter:creator" content="@bencapistrant">
   
-  <meta property="og:site_name" content="Multiple Regresison">
+  <meta property="og:site_name" content="Multiple Regression">
   <meta property="og:url" content="/reading/02-reading/">
-  <meta property="og:title" content="Regression and inference | Multiple Regresison">
-  <meta property="og:description" content="Required   Chapter 2 in Mastering ’Metrics1  “Properties of regression” in Causal Inference: The Mixtape2   Recommended Look through your notes on regression from your last stats class. Also, you can skim through these resources:
-  6.1–6.4 in ModernDive3  7.1–7.4 in ModernDive4  7.1–7.3 in OpenIntro Statistics5  8.1 in OpenIntro Statistics6  We’ll review all this regression stuff in class, so don’t panic if this all looks terrifying!"><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:title" content="Simple Linear Regression: Fitting Models | Multiple Regression">
+  <meta property="og:description" content=" Required   Chapter 1.1 - 1.3 in STAT2   Recommended  None   "><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-22T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-01-29T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-25T03:13:25-05:00">
+    <meta property="article:modified_time" content="2020-01-27T13:01:28-05:00">
   
 
   
@@ -266,12 +264,12 @@
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
   <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
-  <meta name="application-name" content="SDS 291: Multiple Regresison" />
+  <meta name="application-name" content="SDS 291: Multiple Regression" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Regression and inference | Multiple Regresison</title>
+  <title>Simple Linear Regression: Fitting Models | Multiple Regression</title>
 
 </head>
 
@@ -324,7 +322,7 @@
 
     
     <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/">Multiple Regresison</a>
+      <a class="navbar-brand" href="/">Multiple Regression</a>
     </div>
     
 
@@ -337,7 +335,7 @@
 
     
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">Multiple Regresison</a>
+      <a class="navbar-brand" href="/">Multiple Regression</a>
     </div>
     
 
@@ -625,55 +623,7 @@
       </li>
       
       <li class="active">
-        <a href="/reading/02-reading/">2: Regression and inference</a>
-      </li>
-      
-      <li >
-        <a href="/reading/03-reading/">3: Theories of change and logic models</a>
-      </li>
-      
-      <li >
-        <a href="/reading/04-reading/">4: Measurement and DAGs</a>
-      </li>
-      
-      <li >
-        <a href="/reading/05-reading/">5: DAGs and potential outcomes</a>
-      </li>
-      
-      <li >
-        <a href="/reading/06-reading/">6: Threats to validity</a>
-      </li>
-      
-      <li >
-        <a href="/reading/07-reading/">7: Randomization and matching</a>
-      </li>
-      
-      <li >
-        <a href="/reading/08-reading/">8: Diff-in-diff I</a>
-      </li>
-      
-      <li >
-        <a href="/reading/09-reading/">9: Diff-in-diff II</a>
-      </li>
-      
-      <li >
-        <a href="/reading/10-reading/">10: RDD I</a>
-      </li>
-      
-      <li >
-        <a href="/reading/11-reading/">11: IV I</a>
-      </li>
-      
-      <li >
-        <a href="/reading/12-reading/">12: IV II &amp; RDD II</a>
-      </li>
-      
-      <li >
-        <a href="/reading/13-reading/">13: Planning evaluations &#43; other evaluations</a>
-      </li>
-      
-      <li >
-        <a href="/reading/14-reading/">14: Ethics and open science</a>
+        <a href="/reading/02-reading/">2: Fitting Models</a>
       </li>
       
     </ul>
@@ -693,13 +643,13 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Regression and inference</h1>
+                    <h1>Simple Linear Regression: Fitting Models</h1>
 
                     
 
                     
                     <div class="due-date p-2 mb-3 bg-primary text-white">
-                        Read before class on Wednesday, January 22, 2020
+                        Read before class on Wednesday, January 29, 2020
                     </div>
                     
 
@@ -712,31 +662,14 @@
 <div id="required" class="section level2">
 <h2>Required</h2>
 <ul>
-<li><i class="fas fa-book"></i> Chapter 2 in <em>Mastering ’Metrics</em><span class="citation"><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></span></li>
-<li><i class="fas fa-book"></i> “Properties of regression” in <em>Causal Inference: The Mixtape</em><span class="citation"><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></span></li>
+<li><i class="fas fa-book"></i> Chapter 1.1 - 1.3 in <em>STAT2</em></li>
 </ul>
 </div>
 <div id="recommended" class="section level2">
 <h2>Recommended</h2>
-<p>Look through your notes on regression from your last stats class. Also, you can skim through these resources:</p>
 <ul>
-<li><i class="fas fa-book"></i> <a href="https://moderndive.com/6-regression.html">6.1–6.4 in <em>ModernDive</em></a><span class="citation"><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></span></li>
-<li><i class="fas fa-book"></i> <a href="https://moderndive.com/7-multiple-regression.html">7.1–7.4 in <em>ModernDive</em></a><span class="citation"><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></span></li>
-<li><i class="fas fa-book"></i> 7.1–7.3 in <em>OpenIntro Statistics</em><span class="citation"><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></span></li>
-<li><i class="fas fa-book"></i> 8.1 in <em>OpenIntro Statistics</em><span class="citation"><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></span></li>
+<li>None</li>
 </ul>
-<p>We’ll review all this regression stuff in class, so <em>don’t panic</em> if this all looks terrifying! Also, take advantage of the videos that accompany the <em>OpenIntro</em> chapters. And <em>also</em>, the <em>OpenIntro</em> chapters are heavier on the math—don’t worry if you don’t understand everything.</p>
-</div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>Joshua D. Angrist and Jörn-Steffen Pischke, <em>Mastering ’Metrics: The Path from Cause to Effect</em> (Princeton, NJ: Princeton University Press, 2015).<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Scott Cunningham, <em>Causal Inference: The Mixtape</em>, 2018, <a href="https://www.scunning.com/mixtape.html" role="doc-biblioref">https://www.scunning.com/mixtape.html</a>.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Chester Ismay and Albert Y. Kim, <em>ModernDive: An Introduction to Statistical and Data Sciences via R</em>, 2018, <a href="https://moderndive.com/" role="doc-biblioref">https://moderndive.com/</a>.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>Ibid.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel, <em>OpenIntro Statistics</em>, 3rd ed., 2017, <a href="https://www.openintro.org/stat/textbook.php?stat_book=os" role="doc-biblioref">https://www.openintro.org/stat/textbook.php?stat_book=os</a>.<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>Ibid.<a href="#fnref6" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
 
                     </div>
@@ -749,7 +682,7 @@
                 </div>
 
                 <div class="body-footer">
-                    <p>Last updated on January 25, 2020</p>
+                    <p>Last updated on January 27, 2020</p>
 
                     
 
@@ -781,7 +714,7 @@
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>SDS 291: Multiple Regresison (Spring 2020)</strong><br>
+                <strong>SDS 291: Multiple Regression (Spring 2020)</strong><br>
 
                 <a href="https://www.smith.edu" target="_blank" rel="noopener">Smith College</a> &emsp;&emsp;
                 <a href="https://www.smith.edu/statistics" target="_blank" rel="noopener">Program on Statistical &amp; Data Sciences</a>

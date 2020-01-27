@@ -1,6 +1,6 @@
 ---
 title: "Simple Linear Regression: Fitting Models"
-linktitle: "1: Intro"
+linktitle: "2: Fitting Models"
 date: "2020-01-29"
 read_date: "2020-01-29"
 menu:

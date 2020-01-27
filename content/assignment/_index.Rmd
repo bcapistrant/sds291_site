@@ -1,0 +1,36 @@
+---
+title: Assignment details
+menu:
+  assignment:
+    parent: Assignments
+    weight: 1
+type: docs
+weight: 1
+---
+
+
+## Problem sets
+
+To practice writing R code, running inferential models, and thinking about causation, you will complete a series of problem sets. 
+
+There are 7 problem sets on the schedule. **I will keep the highest grades for 6 of them.** That is, I will drop the lowest score (even if it's a zero). This means you can skip one of the problem sets. You need to show that you made a good faith effort to work each question. I will not grade these in detail. The problem sets will be graded using a check system, which will hold numeric grade corrolaries.
+
+- ✔+: Problem set is 100% completed. Every question was attempted and answered, and most answers are correct. Document is clean and easy to follow. Work is exceptional. I will not assign these often.
+- ✔:  Problem set is 70–99% complete and most answers are correct. **This is the expected level of performance.**
+- ✔−: Problem set is less than 70% complete and/or most answers are incorrect. This indicates that you need to improve next time. I will hopefully not asisgn these often.
+
+You may (and should!) work together on the problem sets, but *you must turn in your own answers.* You cannot work in groups of more than **four** people, and you must note who participated in the group in your assignment.
+
+
+## Take Home Projects 
+
+There will be three take home projects - one on simple linear regression, one on multiple linear regression, and one on logistic regression.
+
+
+## Final project
+
+At the end of the course, you will demonstrate your knowledge of program evaluation and causal inference by completing a final project.
+
+Complete details for the final project will be available soon.
+
+There is no final exam. This project is your final exam.

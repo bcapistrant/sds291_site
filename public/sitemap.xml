@@ -3,28 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/assignment/code-through/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/01-eval-background-theory/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/assignment/01-problem-set/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-27T16:34:23-05:00</lastmod>
   </url>
   
   <url>
     <loc>/assignment/00-assign-getting-started/</loc>
-    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-25T17:05:57-05:00</lastmod>
   </url>
   
   <url>
     <loc>/class/01-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-27T13:01:28-05:00</lastmod>
   </url>
   
   <url>
@@ -39,7 +29,7 @@
   
   <url>
     <loc>/assignment/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-27T13:01:28-05:00</lastmod>
   </url>
   
   <url>
@@ -49,32 +39,12 @@
   
   <url>
     <loc>/class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-27T13:01:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>/reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/final-project/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/02-eval-measurement/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/02-problem-set/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/02-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-27T13:01:28-05:00</lastmod>
   </url>
   
   <url>
@@ -88,37 +58,7 @@
   </url>
   
   <url>
-    <loc>/assignment/03-problem-set/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/03-eval-dag/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/03-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/reference/exam1/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/04-problem-set/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/04-eval-threats/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/04-class/</loc>
     <lastmod>2020-01-25T03:13:25-05:00</lastmod>
   </url>
   
@@ -128,143 +68,18 @@
   </url>
   
   <url>
-    <loc>/assignment/05-problem-set/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/05-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/06-problem-set/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/06-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/07-problem-set/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/07-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/08-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/09-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/10-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/11-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/12-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/13-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/14-class/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
-    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/14-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/13-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/12-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/11-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/10-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/09-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/08-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/07-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/06-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/05-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/04-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/03-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/reading/01-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-27T16:34:23-05:00</lastmod>
   </url>
   
   <url>
     <loc>/reading/02-reading/</loc>
-    <lastmod>2020-01-25T03:13:25-05:00</lastmod>
+    <lastmod>2020-01-27T13:01:28-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reading/01-reading/</loc>
+    <lastmod>2020-01-25T17:05:57-05:00</lastmod>
   </url>
   
   <url>
@@ -353,7 +168,7 @@
   
   <url>
     <loc>/syllabus/</loc>
-    <lastmod>2020-01-25T15:42:59-05:00</lastmod>
+    <lastmod>2020-01-25T17:05:57-05:00</lastmod>
   </url>
   
 </urlset>
