@@ -18,164 +18,164 @@ lessons:
     
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: ANOVA Table**'
     date: "February 5"
-    reading: "04-reading"
+    #reading: "04-reading"
   
   - title: '<i class="fas fa-users"></i> **Group Roster**'
     date: "February 7"
-    group: "01-group"
+    $group: "01-group"
 
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: Review and Wrap Up**'
     date: "February 10"
-    reading: "05-reading"
-    assignment: "02-problem-set"
+    #reading: "05-reading"
+    #assignment: "02-problem-set"
 
   - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 1**'
     date: "February 12"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<i class="fas fa-users"></i> **Draft of Group Topic**'
     date: "February 14"
-    group: "02-group"
+    #group: "02-group"
     
   - title: '<i class="fas fa-file-code"></i> **Take Home Project 1: Simple Linear Regression**'
     date: "February 17"
-    assignment: "03-problem-set"
+    #assignment: "03-problem-set"
 
   - title: '<span class="fake-header-table">Multiple Linear Regressions</span>'
     header: True
     
   - title: '<i class="fas fa-university"></i> **MLR: Intuition and Rationale**'
     date: "February 17"
-    reading: "05-reading"
+    #reading: "05-reading"
     
   - title: '<i class="fas fa-university"></i> **MLR: Fitting, Interpreting, and Conducting Slope Inference for Models**'
     date: "February 19"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<i class="fas fa-university"></i> **MLR: Parallel Slopes and Non-Parallel Slopes, Interaction**'
     date: "February 24"
-    reading: "05-reading"
-    assignment: "04-eval-dag"
+    #reading: "05-reading"
+    #assignment: "04-eval-dag"
     
   - title: '<i class="fas fa-university"></i> **MLR: Multicollinearity, Nested F-Test**'
     date: "February 26"
-    reading: "05-reading"
+    #reading: "05-reading"
     
   - title: '<i class="fas fa-users"></i> **Final Group Topic**'
     date: "February 28"
-    group: "03-group"
+    #group: "03-group"
     
   - title: '<i class="fas fa-university"></i> **MLR: Leverage**'
     date: "March 2"
-    reading: "05-reading"
-    assignment: "05-eval-dag"
+    #reading: "05-reading"
+    #assignment: "05-eval-dag"
     
   - title: '<i class="fas fa-university"></i> **MLR: Bootstrap for Inference**'
     date: "March 4"
-    reading: "05-reading"
+    #reading: "05-reading"
     
   - title: '<i class="fas fa-university"></i> **MLR: Article Review**'
     date: "March 9"
-    reading: "05-reading"
-    assignment: "05-eval-dag"
+    #reading: "05-reading"
+    #assignment: "05-eval-dag"
     
   - title: '<i class="fas fa-university"></i> **MLR: Data Visualization**'
     date: "March 11"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<i class="fas fa-users"></i> **Data Extract and Analysis Plan**'
     date: "March 13"
-    group: "04-group"
+    #group: "04-group"
 
   - title: '<i class="fas fa-star"></i> **Spring Break**'
     date: "March 16 - 20"
     
   - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 22"
-    reading: "05-reading"
+    #reading: "05-reading"
     
   - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 24"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<i class="fas fa-university"></i> **MLR: Review **'
     date: "March 22"
-    reading: "05-reading"
-    assignment: "02-TakeHomeProject"
+    #reading: "05-reading"
+    #assignment: "02-TakeHomeProject"
     
   - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 2**'
     date: "March 24"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<i class="fas fa-users"></i> **Data Appendix**'
     date: "March 26"
-    group: "05-group"
+    #group: "05-group"
     
   - title: '<i class="fas fa-file-code"></i> **Take Home Project 2: Multiple Linear Regression**'
     date: "March 29"
-    assignment: "03-problem-set"
+    #assignment: "03-problem-set"
 
   - title: '<span class="fake-header-table">Logistic Regression</span>'
     header: True
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Concepts and Introduction**'
     date: "March 29"
-    reading: "05-reading"
+    #reading: "05-reading"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Fitting and Interpreting Models**'
     date: "March 31"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Odds, Odds Ratios, Probability**'
     date: "April 6"
-    reading: "05-reading"
-    assignment: "05-eval-dag"
+    #reading: "05-reading"
+    #assignment: "05-eval-dag"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
     date: "April 8"
-    reading: "05-reading" 
+    #reading: "05-reading" 
 
   - title: '<i class="fas fa-users"></i> **Updated Appendix, Descriptives, and Draft Results**'
     date: "April 10"
-    group: "06-group"
+    #group: "06-group"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Visualizing Coefficients and Predicted Probabilities**'
     date: "April 13"
-    reading: "05-reading"
+    #reading: "05-reading"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Log Likelihood, Ratio Tests**'
     date: "April 15"
-    reading: "05-reading"
+    #reading: "05-reading"
     
   - title: '<i class="fas fa-users"></i> **Draft Poster**'
     date: "April 17"
-    group: "06-group"
+    #group: "06-group"
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
     date: "April 20"
     reading: "05-reading"
-    assignment: "05-eval-dag"
+    #assignment: "05-eval-dag"
     
   - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 3**'
     date: "April 22"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<i class="fas fa-file-code"></i> **Take Home Project 3: Logistic Regression**'
     date: "April 27"
-    assignment: "03-problem-set"
+    #assignment: "03-problem-set"
     
   - title: '<i class="fas fa-university"></i> **Additional Topics / Project Work Time**'
     date: "April 27"
-    reading: "05-reading"
-    assignment: "03-TakeHomeProject"
+    #reading: "05-reading"
+    #assignment: "03-TakeHomeProject"
     
   - title: '<i class="fas fa-university"></i> **Poster Presentations**'
     date: "April 29"
-    reading: "05-reading"
+    #reading: "05-reading"
 
   - title: '<span class="fake-header-table">Final</span>'
     header: True
 
   - title: "**Final project due** (submit online by 7:00 PM)"
     date: "May 8"
-    assignment: "final-project"
+    #assignment: "final-project"

@@ -1,5 +1,5 @@
 ---
-title: "Problem set 1"
+title: "1. Problem set 1"
 date: "2020-02-03"
 due_date: "2020-02-03"
 due_time: "11:59 AM"
