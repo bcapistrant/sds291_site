@@ -18,6 +18,6 @@ editor_options:
 
 ## Slides & Course Materials
 
-- <i class="fas fa-chalkboard-teacher"></i> Slides are [here](01/01_Lecture_Slides.html) ([Rmd code](01/01_Lecture_Notes.Rmd))
+- <i class="fas fa-chalkboard-teacher"></i> Slides are [here](http://sds291.netlify.com/01/01_Lecture_Slides.html) (if interested, the raw [Rmd code](http://sds291.netlify.com/01/01_Lecture_Notes.Rmd))
 
-- <i class="fas fa-clipboard-list"></i> Notes and Pea Activity are [here](01/01_Lecture_Notes.pdf) ([Rmd code](01/01_Lecture_Notes.Rmd))
+- <i class="fas fa-clipboard-list"></i> Notes and Pea Activity are [here](http://sds291.netlify.com/01/01_Lecture_Notes.pdf) (if interested, the raw [Rmd code](http://sds291.netlify.com/01/01_Lecture_Notes.Rmd))
