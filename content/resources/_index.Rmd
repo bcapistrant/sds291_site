@@ -1,0 +1,11 @@
+---
+title: Resources
+menu:
+  resources:
+    parent: Resources
+    weight: 1
+type: docs
+weight: 1
+---
+
+Core resources for the course, especially working with `R`, revisiting intro stats concepts, and applications of regression models, will be posted here.

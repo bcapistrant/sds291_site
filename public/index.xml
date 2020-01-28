@@ -109,39 +109,97 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
     </item>
     
     <item>
-      <title>Installing R, RStudio, and tidyverse</title>
-      <link>/reference/install/</link>
-      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/reference/install/</guid>
+      <title>General Course Resources</title>
+      <link>/resources/course/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/course/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#rstudio.cloud&#34;&gt;RStudio.cloud&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#rstudio-on-your-computer&#34;&gt;RStudio on your computer&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#textbook-and-related-resources&#34;&gt;Textbook and related resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio&#34;&gt;RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#refresher-on-introductory-statistics&#34;&gt;Refresher on introductory statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;textbook-and-related-resources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Textbook and related resources&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.macmillanlearning.com/catalog/Product/stat2-cannon&#34;&gt;Stat2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;The book is available for purchase and rental at the bookstore or at Amazon (including a kindle version that works just fine – just be careful when copying and pasting text from the book, some characters aren’t readable by R and will throw some error). You do not need the book’s Online Access&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;RStudio&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose one of two options to use RStudio:
+&lt;ul&gt;
+&lt;li&gt;Log on to the Smith College &lt;a href=&#34;http://rstudio.smith.edu&#34;&gt;RStudio Server&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Use RStudio locally:
+&lt;ul&gt;
+&lt;li&gt;Download and instal &lt;a href=&#34;http://www.rstudio.com/products/rstudio/&#34;&gt;RStudio Desktop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download and install the following packages: &lt;code&gt;install.packages=c(&amp;quot;Stat2Data&amp;quot;,&amp;quot;tidyverse&amp;quot;, &amp;quot;mosaic&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;#Quantitative Resources on Campus&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.smith.edu/qlc/tutoring.html#S2&#34;&gt;Statistics TAs&lt;/a&gt; are available Sunday through Thursday from 7-9 pm in Sabin-Reed 301&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;refresher-on-introductory-statistics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Refresher on introductory statistics&lt;/h1&gt;
+&lt;p&gt;There are a few, great open-access (i.e., free!) textbooks that I encourage you to refer to revisit some core concepts from introductory statistics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.openintro.org/stat/index.php?stat_book=isrs&#34;&gt;OpenIntro with Randomization&lt;/a&gt;, most helpfully in a &lt;a href=&#34;http://www.openintro.org/download.php?file=isrs1&amp;amp;referrer=/stat/textbook.php&#34;&gt;pdf version&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://moderndive.com/&#34;&gt;Modern Dive&lt;/a&gt; by (SDS Professor) Albert Kim &amp;amp; Chester Ismay&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installing R, RStudio, and Packages</title>
+      <link>/resources/install/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/install/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#smith-college-rstudio-server&#34;&gt;Smith College RStudio Server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio.cloud&#34;&gt;RStudio.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio-locally-on-your-computer&#34;&gt;RStudio locally on your computer&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#install-r&#34;&gt;Install R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#install-rstudio&#34;&gt;Install RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#install-tidyverse&#34;&gt;Install &lt;code&gt;tidyverse&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#install-stat2data&#34;&gt;Install &lt;code&gt;Stat2Data&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;span class=&#34;newthought&#34;&gt;You will do all of your work&lt;/span&gt; in this class with the open source (and free!) programming language &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt;. You will use &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt; as the main program to access R. Think of R as an engine and RStudio as a car dashboard—R handles all the calculations and the actual statistics, while RStudio provides a nice interface for running R code.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;newthought&#34;&gt;We will do all of the modeling (and other computational work) in this class with the open source (and free!) programming language &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt;. You will use &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt; as the main program to access R. R is the language and what’s running “under the hood”, and RStudio is essentially a really user-friendly way to do what you want in R.&lt;/p&gt;
+&lt;p&gt;There are a few different ways to work with R and RStudio. For new users, I would recommend using the server. For anyone who has used R before, you can use the server or the desktop version.&lt;/p&gt;
+&lt;div id=&#34;smith-college-rstudio-server&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Smith College RStudio Server&lt;/h2&gt;
+&lt;p&gt;R is free, but it can sometimes be a pain to install and configure. Smith College runs it’s own version of RStudio that’s accessable through your web browser and won’t require installing anything. The Smith College RStudio Server is &lt;a href=&#34;http://rstudio.smith.edu&#34;&gt;here&lt;/a&gt;, and you all should have accounts set up already. This is a great option for class – I &lt;em&gt;strongly&lt;/em&gt; recommend anyone new to R and RStudio use this option. It requires a bit of uploading and downloading to get documents on and off the server (just like uploading and downloading from Google Drive, Dropbox, etc.), but otherwise is all set up with everything you need.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;rstudio.cloud&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;RStudio.cloud&lt;/h2&gt;
-&lt;p&gt;R is free, but it can sometimes be a pain to install and configure. To make life easier, you can (and should!) use the free &lt;a href=&#34;http://rstudio.cloud/&#34;&gt;RStudio.cloud&lt;/a&gt; service &lt;em&gt;initially&lt;/em&gt;, which lets you run a full instance of RStudio in your web browser. This means you won’t have to install anything on your computer to get started with R! We will have a shared class workspace in RStudio.cloud that will let you quickly copy templates for labs and problem sets.&lt;/p&gt;
-&lt;p&gt;Go to &lt;a href=&#34;https://rstudio.cloud/&#34; class=&#34;uri&#34;&gt;https://rstudio.cloud/&lt;/a&gt; and create an account. You’ll receive a link to join the shared class workspace separately. If you don’t get this link, let me know and I will invite you.&lt;/p&gt;
+&lt;p&gt;Similar to the college server, &lt;a href=&#34;http://rstudio.cloud/&#34;&gt;RStudio.cloud&lt;/a&gt; is a cloud-based application of RStudio that run by RStudio, not by the College and its IT tesm. There will still be up/downloading like with the server, but the main advantage of this approach is that we can all share the same documents in a class “workspace”, which makes getting stared even a little easier. Part of the “Getting Started” assignment was to make an account – again, easiest if connected to your Smith Google account – and I will provide a link to a shared class workspace before we start using RStudio.cloud.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;rstudio-on-your-computer&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;RStudio on your computer&lt;/h2&gt;
-&lt;p&gt;RStudio.cloud is convenient, but it can be slow and it is not designed to be able to handle larger datasets, more complicated analysis, or fancier graphics. Over the course of the semester, you should wean yourself off of RStudio.cloud and install all these things locally. This is also important if you want to customize fonts, since RStudio.cloud has extremely limited support for fonts other than Helvetica.&lt;/p&gt;
+&lt;div id=&#34;rstudio-locally-on-your-computer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;RStudio locally on your computer&lt;/h2&gt;
+&lt;p&gt;The server and cloud approaches are great for probably 80% of what we’ll do in the class. For the other 20% – probably the group project work – these can be slower. If you want to work on RStudio locally on your computer, you certainly can. For anyone planning to take another SDS course, this might be a good approach at some point in the semester.&lt;/p&gt;
 &lt;p&gt;Here’s how you install all these things&lt;/p&gt;
 &lt;div id=&#34;install-r&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Install R&lt;/h3&gt;
 &lt;p&gt;First you need to install R itself (the engine).&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Go to the CRAN (Collective R Archive Network)&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; website: &lt;a href=&#34;https://cran.r-project.org/&#34; class=&#34;uri&#34;&gt;https://cran.r-project.org/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Go to the CRAN (Collective R Archive Network)&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; website: &lt;a href=&#34;https://cran.r-project.org/&#34; class=&#34;uri&#34;&gt;https://cran.r-project.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Click on “Download R for &lt;code&gt;XXX&lt;/code&gt;”, where &lt;code&gt;XXX&lt;/code&gt; is either Mac or Windows:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/install/install-r-links.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -157,7 +215,7 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
 &lt;h3&gt;Install RStudio&lt;/h3&gt;
 &lt;p&gt;Next, you need to install RStudio, the nicer graphical user interface (GUI) for R (the dashboard). Once R and RStudio are both installed, you can ignore R and only use RStudio. RStudio will use R automatically and you won’t ever have to interact with it directly.&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Go to the free download location on RStudio’s website: &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/#download&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/#download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Go to the free download location on RStudio’s website: &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/#download&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/#download&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Select the installer that corresponds with your computer’s operating system (Windows or macOS):&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/install/install-r-rstudio.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Double click on the downloaded file (again, check your &lt;code&gt;Downloads&lt;/code&gt; folder). Click yes through all the prompts to install like any other program.&lt;/p&gt;&lt;/li&gt;
@@ -171,14 +229,18 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
 &lt;p&gt;This can sometimes be tedious when you’re installing lots of packages, though. &lt;a href=&#34;https://www.tidyverse.org/&#34;&gt;The tidyverse&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; for instance, consists of dozens of packages that all work together. Rather than install each individually, you can install a single magical package and get them all at the same time.&lt;/p&gt;
 &lt;p&gt;Go to the packages panel in RStudio, click on “Install,” type “tidyverse”, and press enter. You’ll see a bunch of output in the RStudio console as all the tidyverse packages are installed.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/install/install-r-tidyverse.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Notice also that RStudio will generate a line of code for you and run it: &lt;code&gt;install.packages(&#34;tidyverse&#34;)&lt;/code&gt;. You can also just paste and run this instead of using the packages panel.&lt;/p&gt;
+&lt;p&gt;Notice also that RStudio will generate a line of code for you and run it: &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;. You can also just paste and run this instead of using the packages panel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-stat2data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Install &lt;code&gt;Stat2Data&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The textbook for this course also has a package available with all of the datasets for the problems in the back of the book that we’ll be using for homework. You can repeat the steps above for &lt;code&gt;Stat2Data&lt;/code&gt; instead of &lt;code&gt;tidyverse&lt;/code&gt; or type the command directly into the console: &lt;code&gt;install.packages(&amp;quot;Stat2Data&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;It’s a goofy name, but CRAN is where most R packages—and R itself—lives.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A universe of packages centered around tidy data, including &lt;code&gt;ggplot2&lt;/code&gt;&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;It’s a goofy name, but CRAN is where most R packages—and R itself—lives.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A universe of packages centered around tidy data, including &lt;code&gt;ggplot2&lt;/code&gt;&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -202,173 +264,6 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Things you should know for Exam 1</title>
-      <link>/reference/exam1/</link>
-      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/reference/exam1/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#evidence-causation-and-evaluation&#34;&gt;Evidence, causation, and evaluation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#regression-and-inference&#34;&gt;Regression and inference&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#theories-of-change-and-measurement&#34;&gt;Theories of change and measurement&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#counterfactuals-and-dags&#34;&gt;Counterfactuals and DAGs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#threats-to-validity&#34;&gt;Threats to validity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;evidence-causation-and-evaluation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Evidence, causation, and evaluation&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;You should understand…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…the difference between experimental research and observational research&lt;/li&gt;
-&lt;li&gt;…the sometimes conflicting roles of science and intuition in public administration and policy&lt;/li&gt;
-&lt;li&gt;…the difference between the various types of evaluations and how they target specific parts of a logic model&lt;/li&gt;
-&lt;li&gt;…the difference between identifying correlation (math) and identifying correlation (philosophy and theory)&lt;/li&gt;
-&lt;li&gt;…what it means for a relationship to be causal&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;regression-and-inference&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Regression and inference&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;You should understand…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…the difference between correlation coefficients and regression coefficients&lt;/li&gt;
-&lt;li&gt;…the difference between outcome/response/dependent and explanatory/predictor/independent variables&lt;/li&gt;
-&lt;li&gt;…the two purposes of regression&lt;/li&gt;
-&lt;li&gt;…what each of the components in a regression equation stand for, in both “flavors” of notation:
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon\)&lt;/span&gt; for the statistical flavor&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(y = \alpha + \beta x_1 + \gamma x_2 + \epsilon\)&lt;/span&gt; for the econometrics flavor&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;…how sliders and switches work as metaphors for regression coefficients&lt;/li&gt;
-&lt;li&gt;…what it means to hold variables constant (or to control for variables)&lt;/li&gt;
-&lt;li&gt;…the different elements of the grammar of graphics and be able to identify how variables are encoded in a graph (i.e. how columns in a dataset can be represented through x/y coordinates, through color, through size, through fill, etc.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;You should be able to…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…write and interpret R code that calculates summary statistics for groups (i.e. &lt;code&gt;group_by() %&amp;gt;% summarize()&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;…write and interpret R code that builds linear models (i.e. &lt;code&gt;lm()&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;…interpret regression coefficients&lt;/li&gt;
-&lt;li&gt;…interpret other regression diagnostics like &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;…use the &lt;code&gt;%&amp;gt;%&lt;/code&gt; pipe in R to chain functions together&lt;/li&gt;
-&lt;li&gt;…use &lt;code&gt;ggplot()&lt;/code&gt; to visualize data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Helpful resources:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Garrett Grolemund and Hadley Wickham, &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;&lt;em&gt;R for Data Science&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Kieran Healy, &lt;a href=&#34;http://socviz.co/makeplot.html#how-ggplot-works&#34;&gt;“How ggplot works,”&lt;/a&gt; chapter 3 in &lt;em&gt;Data Visualization: A Practical Introduction&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;theories-of-change-and-measurement&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Theories of change and measurement&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;You should understand…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…how to describe a program’s theory of change&lt;/li&gt;
-&lt;li&gt;…the difference between inputs, activities, outputs, and outcomes&lt;/li&gt;
-&lt;li&gt;…the elements of a program’s impact theory: causes (activities) linked to effects (outcomes)&lt;/li&gt;
-&lt;li&gt;…the elements of a program’s logic model: the explicit links between all its inputs, activities, outputs, and outcomes&lt;/li&gt;
-&lt;li&gt;…the difference between implicit and articulated program theories&lt;/li&gt;
-&lt;li&gt;…the purpose of smaller-scale mechanism testing&lt;/li&gt;
-&lt;li&gt;…how indicators can be measured at different levels of abstraction&lt;/li&gt;
-&lt;li&gt;…what makes an indicator a good indicator&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;You should be able to…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…identify a program’s underlying theory based on its mission statement&lt;/li&gt;
-&lt;li&gt;…draw a program impact theory chart that links activities to outcomes&lt;/li&gt;
-&lt;li&gt;…draw a program logic model that links inputs to activities to outputs to outcomes&lt;/li&gt;
-&lt;li&gt;…identify the most central elements of a potential outcome measurement&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;counterfactuals-and-dags&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Counterfactuals and DAGs&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;You should understand…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…how a causal model encodes our understanding of a causal process&lt;/li&gt;
-&lt;li&gt;…how to identify front door and back door paths between treatment/exposure and outcome&lt;/li&gt;
-&lt;li&gt;…why we avoid closing front door paths&lt;/li&gt;
-&lt;li&gt;…why we close back door paths&lt;/li&gt;
-&lt;li&gt;…why adjusting for colliders can distort causal effects&lt;/li&gt;
-&lt;li&gt;…the difference between logic models and DAGs&lt;/li&gt;
-&lt;li&gt;…the difference between individual level causal effects, average treatment effects (ATE), conditional average treatment effect (CATE), average treatment on the treated effects (ATT), and average treatment on the untreated (ATU)&lt;/li&gt;
-&lt;li&gt;…what the fundamental problem of causal inference is and how we can attempt to address it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;You should be able to…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…draw a possible DAG for a given causal relationship&lt;/li&gt;
-&lt;li&gt;…identify all pathways between treatment/exposure and outcome&lt;/li&gt;
-&lt;li&gt;…identify which nodes in the DAG need to be adjusted for (or closed)&lt;/li&gt;
-&lt;li&gt;…identify colliders (which should not be adjusted for)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Helpful resources:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Malcom Barrett, &lt;a href=&#34;https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html&#34;&gt;“An Introduction to Directed Acyclic Graphs”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Malcom Barrett, &lt;a href=&#34;https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-ggdag.html&#34;&gt;“An Introduction to ggdag”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Judea Pearl, &lt;a href=&#34;http://causality.cs.ucla.edu/blog/index.php/2019/08/14/a-crash-course-in-good-and-bad-control/&#34;&gt;“A Crash Course in Good and Bad Control”&lt;/a&gt;: A quick summary of back doors, front doors, confounders, colliders, and when to control/not control for DAG nodes&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; Causal Inference Bootcamp, &lt;a href=&#34;https://modu.ssri.duke.edu/module/introduction-causal-inference/average-treatment-effect&#34;&gt;“Average Treatment Effects,”&lt;/a&gt; Duke University&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; Causal Inference Bootcamp, &lt;a href=&#34;https://modu.ssri.duke.edu/module/introduction-causal-inference/unit-level-effect&#34;&gt;“Unit Level Effects,”&lt;/a&gt; Duke University&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; Causal Inference Bootcamp, &lt;a href=&#34;https://modu.ssri.duke.edu/module/introduction-causal-inference/conditional-average-treatment-effect&#34;&gt;“Conditional Average Treatment Effects,”&lt;/a&gt; Duke University&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; Causal Inference Bootcamp, &lt;a href=&#34;https://modu.ssri.duke.edu/module/introduction-causal-inference/counterfactuals&#34;&gt;“Counterfactuals,”&lt;/a&gt; Duke University&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Neel Ocean, &lt;a href=&#34;http://www.neelocean.com/understanding-selection-bias/&#34;&gt;“Understanding Selection Bias”&lt;/a&gt;: explanation of how to identify selection bias from the ATT and the ATE, with an explanation of how ATE = ATT + selection bias under the potential outcomes framework&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-external-link-square-alt&#34;&gt;&lt;/i&gt; Paul Hünermund, &lt;a href=&#34;https://p-hunermund.com/2018/10/15/sample-selection-vs-selection-into-treatment/amp/?__twitter_impression=true&#34;&gt;“Sample Selection vs. Selection Into Treatment”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;threats-to-validity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Threats to validity&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;You should understand…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…what it means when a study has internal validity and know how to identify the major threats to internal validity, including: omitted variable bias (selection and attrition), trend issues (maturation, secular trends, seasonality, testing, regression to the mean), study calibration issues (measurement error, time frame of study), and contamination issues (Hawthorne effects, John Henry effects, spillovers, and intervening events)&lt;/li&gt;
-&lt;li&gt;…why selection bias is the most pernicious and difficult threat to internal validity and how we can account for it&lt;/li&gt;
-&lt;li&gt;…what it means when a study has external validity&lt;/li&gt;
-&lt;li&gt;…what it means when the measures used in a study have construct validity&lt;/li&gt;
-&lt;li&gt;…what it means when the analysis used in a study has statistical conclusion validity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;You should be able to…&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…identify existing and potential threats to validity in a study&lt;/li&gt;
-&lt;li&gt;…suggest ways of addressing these threats&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Helpful resources:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Really, just google &lt;a href=&#34;https://www.google.com/search?q=threats+to+internal+validity&#34;&gt;“threats to internal validity”&lt;/a&gt; or &lt;a href=&#34;https://www.google.com/search?q=threats+to+external+validity&#34;&gt;“threats to external validity”&lt;/a&gt; and you’ll find a billion different slide decks, articles, and lessons about these. They’re a pretty standard part of any research design class.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Things you should know for Exam 2</title>
-      <link>/reference/exam2/</link>
-      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/reference/exam2/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#randomization&#34;&gt;Randomization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#difference-in-difference&#34;&gt;Difference-in-difference&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#regression-discontinuity&#34;&gt;Regression discontinuity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#instrumental-variables&#34;&gt;Instrumental variables&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;randomization&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Randomization&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;difference-in-difference&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Difference-in-difference&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Regression discontinuity&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;instrumental-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Instrumental variables&lt;/h2&gt;
-&lt;/div&gt;
 </description>
     </item>
     

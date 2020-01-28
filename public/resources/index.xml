@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resources | Multiple Regression</title>
+    <link>/resources/</link>
+      <atom:link href="/resources/index.xml" rel="self" type="application/rss+xml" />
+    <description>Resources</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/social-image.png</url>
+      <title>Resources</title>
+      <link>/resources/</link>
+    </image>
+    
+    <item>
+      <title>General Course Resources</title>
+      <link>/resources/course/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/course/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#textbook-and-related-resources&#34;&gt;Textbook and related resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio&#34;&gt;RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#refresher-on-introductory-statistics&#34;&gt;Refresher on introductory statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;textbook-and-related-resources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Textbook and related resources&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.macmillanlearning.com/catalog/Product/stat2-cannon&#34;&gt;Stat2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;The book is available for purchase and rental at the bookstore or at Amazon (including a kindle version that works just fine – just be careful when copying and pasting text from the book, some characters aren’t readable by R and will throw some error). You do not need the book’s Online Access&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;RStudio&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose one of two options to use RStudio:
+&lt;ul&gt;
+&lt;li&gt;Log on to the Smith College &lt;a href=&#34;http://rstudio.smith.edu&#34;&gt;RStudio Server&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Use RStudio locally:
+&lt;ul&gt;
+&lt;li&gt;Download and instal &lt;a href=&#34;http://www.rstudio.com/products/rstudio/&#34;&gt;RStudio Desktop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download and install the following packages: &lt;code&gt;install.packages=c(&amp;quot;Stat2Data&amp;quot;,&amp;quot;tidyverse&amp;quot;, &amp;quot;mosaic&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;#Quantitative Resources on Campus&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.smith.edu/qlc/tutoring.html#S2&#34;&gt;Statistics TAs&lt;/a&gt; are available Sunday through Thursday from 7-9 pm in Sabin-Reed 301&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;refresher-on-introductory-statistics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Refresher on introductory statistics&lt;/h1&gt;
+&lt;p&gt;There are a few, great open-access (i.e., free!) textbooks that I encourage you to refer to revisit some core concepts from introductory statistics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.openintro.org/stat/index.php?stat_book=isrs&#34;&gt;OpenIntro with Randomization&lt;/a&gt;, most helpfully in a &lt;a href=&#34;http://www.openintro.org/download.php?file=isrs1&amp;amp;referrer=/stat/textbook.php&#34;&gt;pdf version&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://moderndive.com/&#34;&gt;Modern Dive&lt;/a&gt; by (SDS Professor) Albert Kim &amp;amp; Chester Ismay&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installing R, RStudio, and Packages</title>
+      <link>/resources/install/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/install/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#smith-college-rstudio-server&#34;&gt;Smith College RStudio Server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio.cloud&#34;&gt;RStudio.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio-locally-on-your-computer&#34;&gt;RStudio locally on your computer&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#install-r&#34;&gt;Install R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#install-rstudio&#34;&gt;Install RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#install-tidyverse&#34;&gt;Install &lt;code&gt;tidyverse&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#install-stat2data&#34;&gt;Install &lt;code&gt;Stat2Data&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;span class=&#34;newthought&#34;&gt;We will do all of the modeling (and other computational work) in this class with the open source (and free!) programming language &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt;. You will use &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt; as the main program to access R. R is the language and what’s running “under the hood”, and RStudio is essentially a really user-friendly way to do what you want in R.&lt;/p&gt;
+&lt;p&gt;There are a few different ways to work with R and RStudio. For new users, I would recommend using the server. For anyone who has used R before, you can use the server or the desktop version.&lt;/p&gt;
+&lt;div id=&#34;smith-college-rstudio-server&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Smith College RStudio Server&lt;/h2&gt;
+&lt;p&gt;R is free, but it can sometimes be a pain to install and configure. Smith College runs it’s own version of RStudio that’s accessable through your web browser and won’t require installing anything. The Smith College RStudio Server is &lt;a href=&#34;http://rstudio.smith.edu&#34;&gt;here&lt;/a&gt;, and you all should have accounts set up already. This is a great option for class – I &lt;em&gt;strongly&lt;/em&gt; recommend anyone new to R and RStudio use this option. It requires a bit of uploading and downloading to get documents on and off the server (just like uploading and downloading from Google Drive, Dropbox, etc.), but otherwise is all set up with everything you need.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rstudio.cloud&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;RStudio.cloud&lt;/h2&gt;
+&lt;p&gt;Similar to the college server, &lt;a href=&#34;http://rstudio.cloud/&#34;&gt;RStudio.cloud&lt;/a&gt; is a cloud-based application of RStudio that run by RStudio, not by the College and its IT tesm. There will still be up/downloading like with the server, but the main advantage of this approach is that we can all share the same documents in a class “workspace”, which makes getting stared even a little easier. Part of the “Getting Started” assignment was to make an account – again, easiest if connected to your Smith Google account – and I will provide a link to a shared class workspace before we start using RStudio.cloud.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rstudio-locally-on-your-computer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;RStudio locally on your computer&lt;/h2&gt;
+&lt;p&gt;The server and cloud approaches are great for probably 80% of what we’ll do in the class. For the other 20% – probably the group project work – these can be slower. If you want to work on RStudio locally on your computer, you certainly can. For anyone planning to take another SDS course, this might be a good approach at some point in the semester.&lt;/p&gt;
+&lt;p&gt;Here’s how you install all these things&lt;/p&gt;
+&lt;div id=&#34;install-r&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Install R&lt;/h3&gt;
+&lt;p&gt;First you need to install R itself (the engine).&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Go to the CRAN (Collective R Archive Network)&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; website: &lt;a href=&#34;https://cran.r-project.org/&#34; class=&#34;uri&#34;&gt;https://cran.r-project.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click on “Download R for &lt;code&gt;XXX&lt;/code&gt;”, where &lt;code&gt;XXX&lt;/code&gt; is either Mac or Windows:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/install-r-links.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If you use macOS, scroll down to the first &lt;code&gt;.pkg&lt;/code&gt; file in the list of files (in this picture, it’s &lt;code&gt;R-3.5.1.pkg&lt;/code&gt;; as of right now, the current version is 3.6.1) and download it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/install-r-mac.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you use Windows, click “base” (or click on the bolded “install R for the first time” link) and download it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/install-r-windows.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Double click on the downloaded file (check your &lt;code&gt;Downloads&lt;/code&gt; folder). Click yes through all the prompts to install like any other program.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-rstudio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Install RStudio&lt;/h3&gt;
+&lt;p&gt;Next, you need to install RStudio, the nicer graphical user interface (GUI) for R (the dashboard). Once R and RStudio are both installed, you can ignore R and only use RStudio. RStudio will use R automatically and you won’t ever have to interact with it directly.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Go to the free download location on RStudio’s website: &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/#download&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/#download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select the installer that corresponds with your computer’s operating system (Windows or macOS):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/install-r-rstudio.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Double click on the downloaded file (again, check your &lt;code&gt;Downloads&lt;/code&gt; folder). Click yes through all the prompts to install like any other program.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Double click on RStudio to run it (check your applications folder or start menu).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-tidyverse&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Install &lt;code&gt;tidyverse&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;R packages are easy to install with RStudio. Select the packages panel, click on “Install,” type the name of the package you want to install, and press enter.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/install-r-package-panel.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This can sometimes be tedious when you’re installing lots of packages, though. &lt;a href=&#34;https://www.tidyverse.org/&#34;&gt;The tidyverse&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; for instance, consists of dozens of packages that all work together. Rather than install each individually, you can install a single magical package and get them all at the same time.&lt;/p&gt;
+&lt;p&gt;Go to the packages panel in RStudio, click on “Install,” type “tidyverse”, and press enter. You’ll see a bunch of output in the RStudio console as all the tidyverse packages are installed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/install-r-tidyverse.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice also that RStudio will generate a line of code for you and run it: &lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;. You can also just paste and run this instead of using the packages panel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-stat2data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Install &lt;code&gt;Stat2Data&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;The textbook for this course also has a package available with all of the datasets for the problems in the back of the book that we’ll be using for homework. You can repeat the steps above for &lt;code&gt;Stat2Data&lt;/code&gt; instead of &lt;code&gt;tidyverse&lt;/code&gt; or type the command directly into the console: &lt;code&gt;install.packages(&amp;quot;Stat2Data&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;It’s a goofy name, but CRAN is where most R packages—and R itself—lives.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A universe of packages centered around tidy data, including &lt;code&gt;ggplot2&lt;/code&gt;&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

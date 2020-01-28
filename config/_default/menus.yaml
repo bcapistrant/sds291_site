@@ -17,8 +17,8 @@ main:
   - name: Group Project
     url: /group/
     weight: 6
-  - name: Reference
-    url: /reference/
+  - name: Resources
+    url: /resources/
     weight: 7
   - name: '<i class="fab fa-r-project"></i>'
     url: https://rstudio.cloud/
@@ -50,3 +50,6 @@ group:
     weight: 6
   - name: Final Report
     weight: 6
+resources:
+  - name: R and RStudio
+    weight: 1
