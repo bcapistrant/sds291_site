@@ -3,10 +3,10 @@ title: Intro to RStudio Interface
 date: "2020-01-27"
 menu:
   resources:
-    parent: Resources
-    weight: 2
+    parent: R and RStudio
+    weight: 1
 type: docs
-weight: 2
+weight: 1
 output:
   blogdown::html_page:
       toc: TRUE
