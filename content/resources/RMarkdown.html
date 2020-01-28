@@ -1,0 +1,69 @@
+---
+title: What's RMarkdown?
+date: "2020-01-27"
+menu:
+  resources:
+    parent: R and RStudio
+    weight: 4
+type: docs
+weight: 4
+output:
+  blogdown::html_page:
+      toc: TRUE
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#intro-and-background">Intro and Background</a><ul>
+<li><a href="#why-rmarkdown">Why <code>RMarkdown</code>?</a></li>
+<li><a href="#how-to-work-with-an-rmarkdown-file">How to work with an <code>RMarkdown</code> file?</a></li>
+<li><a href="#more-detailed-introduction">More detailed introduction</a></li>
+</ul></li>
+<li><a href="#troubleshooting-rmarkdown">Troubleshooting <code>RMarkdown</code></a><ul>
+<li><a href="#getting-more-help">Getting more help</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="intro-and-background" class="section level2">
+<h2>Intro and Background</h2>
+<p>Two videos made for a specific textbook and lab session that we won’t be using (some sections of introductory statistics and Intro to Data Science here at Smith have used this book). However, the general ideas remain applicable for our class.</p>
+<div id="why-rmarkdown" class="section level3">
+<h3>Why <code>RMarkdown</code>?</h3>
+<p>Take a look at this video that explains the principles of what a RMarkdown file does – and why it’s a powerful approach for combining statistical output and text to explain those results.</p>
+{{% youtube "lNWVQ2oxNho" %}}
+</div>
+<div id="how-to-work-with-an-rmarkdown-file" class="section level3">
+<h3>How to work with an <code>RMarkdown</code> file?</h3>
+<p>A second video gets more into the mechanics of what goes into an RMarkdown file for our purposes. Ignore the parts about using a “template” – that’s one of the pieces that’s specific to this textbook and lab. Pay attention, instead, to the general ideas such: header information, code chunks, where <code>R</code> code and text each go within the document, and what it means to <code>knit</code> the file.</p>
+{{% youtube "lNWVQ2oxNho" %}}
+</div>
+<div id="more-detailed-introduction" class="section level3">
+<h3>More detailed introduction</h3>
+<ul>
+<li><a href="http://www.biostat.jhsph.edu/~rpeng/">Roger Peng</a>, a biostatistician at Johns Hopkins, <a href="https://www.coursera.org/specializations/jhu-data-science">data science faculty</a> there, host of some <a href="http://nssdeviations.com/">statistics and data science podcasts</a>, and <a href="https://www.youtube.com/watch?v=i58Aul5ZB-E&amp;feature=youtu.be">pupeteer</a>, has a helpful video to get started with a new RMarkdown file.</li>
+</ul>
+{{% youtube "DNS7i2m4sB0" %}}
+</div>
+</div>
+<div id="troubleshooting-rmarkdown" class="section level2">
+<h2>Troubleshooting <code>RMarkdown</code></h2>
+<p>You document won’t knit</p>
+<p>There could be many reasons that cause a RMarkdown file not to be able to knit, so it’s hard in the abstract to give good advice. Usually, the error message will pinpoint the location of the problem. Read the error messages!!</p>
+<p>Error messages typically include the line number of the issue of where the issue is. Go to that line of your code and see if something doesn’t look right.</p>
+<p>Some most common problems we see in this class include:</p>
+<ul>
+<li><p>having your data loaded in the environment, but not in your RMarkdown file. Remember, an RMd file has to be self-contained, meaning everything that it will need is included in the file itself.</p></li>
+<li><p>including output in your code chunks</p></li>
+<li><p>including the &gt; or + prompts that come from the console in your code chunks,</p></li>
+<li><p>Not including all the packages you need for your code. This error will occur if you try to use a function in a package that you haven’t loaded previously in your Markdown document. <code>## Error in library(imadethisup): there is no package called 'imadethisup'</code></p></li>
+<li><p>There can be characters <code>R</code> doesn’t understand and cannot process. This most commonly happens when pasting text in from the pdf textbook, if you have a separate keyboard installed (for a different language), or you try to insert special characters, like greek symbols for an equation.</p></li>
+<li><p>As we get into the course, you may want to write out equations using the equation features in RMarkdown. These can get complicated – and thus, extremely error prone – very quickly. Most of the time you’re either missing a <code>$</code> or need a space (or to remove a space) between the <code>$</code> and the equation.</p></li>
+</ul>
+<p>-No Knit HTML button: This means that RStudio doesn’t understand your document is supposed to be an RMarkdown document, often because your file extension is .txt. To fix this, go to the Files tab (lower right corner, same pane as Plots and Help) and select the checkbox next to your document’s name. Then select Rename and remove the .txt and make sure the extension is .Rmd.</p>
+<div id="getting-more-help" class="section level3">
+<h3>Getting more help</h3>
+<p>When in doubt, consult the authoritative source. The R Markdown website contains a detailed tutorial with videos. There are also Cheatsheets available from within RStudio. Simply go to: Help -&gt; Cheatsheets -&gt; R Markdown Cheat Sheet for the most commonly used R Markdown commands.</p>
+</div>
+</div>

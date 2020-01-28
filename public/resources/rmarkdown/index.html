@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="Smith College RStudio Server RStudio.cloud RStudio locally on your computer Install R Install RStudio Install tidyverse Install Stat2Data    We will do all of the modeling (and other computational work) in this class with the open source (and free!) programming language R. You will use RStudio as the main program to access R. R is the language and what’s running “under the hood”, and RStudio is essentially a really user-friendly way to do what you want in R.">
+  <meta name="description" content="Intro and Background Why RMarkdown? How to work with an RMarkdown file? More detailed introduction  Troubleshooting RMarkdown Getting more help    Intro and Background Two videos made for a specific textbook and lab session that we won’t be using (some sections of introductory statistics and Intro to Data Science here at Smith have used this book). However, the general ideas remain applicable for our class.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/resources/install/">
+  <link rel="alternate" hreflang="en-us" href="/resources/rmarkdown/">
 
   
 
@@ -218,7 +218,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/resources/install/">
+  <link rel="canonical" href="/resources/rmarkdown/">
 
   
   
@@ -234,15 +234,15 @@
   <meta property="twitter:creator" content="@bencapistrant">
   
   <meta property="og:site_name" content="Multiple Regression">
-  <meta property="og:url" content="/resources/install/">
-  <meta property="og:title" content="Installing R, RStudio, and Packages | Multiple Regression">
-  <meta property="og:description" content="Smith College RStudio Server RStudio.cloud RStudio locally on your computer Install R Install RStudio Install tidyverse Install Stat2Data    We will do all of the modeling (and other computational work) in this class with the open source (and free!) programming language R. You will use RStudio as the main program to access R. R is the language and what’s running “under the hood”, and RStudio is essentially a really user-friendly way to do what you want in R."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:url" content="/resources/rmarkdown/">
+  <meta property="og:title" content="What&#39;s RMarkdown? | Multiple Regression">
+  <meta property="og:description" content="Intro and Background Why RMarkdown? How to work with an RMarkdown file? More detailed introduction  Troubleshooting RMarkdown Getting more help    Intro and Background Two videos made for a specific textbook and lab session that we won’t be using (some sections of introductory statistics and Intro to Data Science here at Smith have used this book). However, the general ideas remain applicable for our class."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-01-27T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-28T12:14:53-05:00">
+    <meta property="article:modified_time" content="2020-01-27T00:00:00&#43;00:00">
   
 
   
@@ -269,7 +269,7 @@
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Installing R, RStudio, and Packages | Multiple Regression</title>
+  <title>What&#39;s RMarkdown? | Multiple Regression</title>
 
 </head>
 
@@ -605,7 +605,7 @@
     <a class="docs-toc-link" href="/resources/install/">R and RStudio</a>
     <ul class="nav docs-sidenav">
       
-      <li class="active">
+      <li >
         <a href="/resources/install/">Installing R, RStudio, and Packages</a>
       </li>
       
@@ -617,7 +617,7 @@
         <a href="/resources/homework/">How to Do Homework in RStudio</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/resources/rmarkdown/">What&#39;s RMarkdown?</a>
       </li>
       
@@ -638,7 +638,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Installing R, RStudio, and Packages</h1>
+                    <h1>What&#39;s RMarkdown?</h1>
 
                     
 
@@ -651,79 +651,69 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#smith-college-rstudio-server">Smith College RStudio Server</a></li>
-<li><a href="#rstudio.cloud">RStudio.cloud</a></li>
-<li><a href="#rstudio-locally-on-your-computer">RStudio locally on your computer</a><ul>
-<li><a href="#install-r">Install R</a></li>
-<li><a href="#install-rstudio">Install RStudio</a></li>
-<li><a href="#install-tidyverse">Install <code>tidyverse</code></a></li>
-<li><a href="#install-stat2data">Install <code>Stat2Data</code></a></li>
+<li><a href="#intro-and-background">Intro and Background</a><ul>
+<li><a href="#why-rmarkdown">Why <code>RMarkdown</code>?</a></li>
+<li><a href="#how-to-work-with-an-rmarkdown-file">How to work with an <code>RMarkdown</code> file?</a></li>
+<li><a href="#more-detailed-introduction">More detailed introduction</a></li>
+</ul></li>
+<li><a href="#troubleshooting-rmarkdown">Troubleshooting <code>RMarkdown</code></a><ul>
+<li><a href="#getting-more-help">Getting more help</a></li>
 </ul></li>
 </ul>
 </div>
 
-<p><span class="newthought">We will do all of the modeling (and other computational work) in this class with the open source (and free!) programming language <a href="https://cran.r-project.org/">R</a>. You will use <a href="https://www.rstudio.com/">RStudio</a> as the main program to access R. R is the language and what’s running “under the hood”, and RStudio is essentially a really user-friendly way to do what you want in R.</p>
-<p>There are a few different ways to work with R and RStudio. For new users, I would recommend using the server. For anyone who has used R before, you can use the server or the desktop version.</p>
-<div id="smith-college-rstudio-server" class="section level2">
-<h2>Smith College RStudio Server</h2>
-<p>R is free, but it can sometimes be a pain to install and configure. Smith College runs it’s own version of RStudio that’s accessable through your web browser and won’t require installing anything. The Smith College RStudio Server is <a href="http://rstudio.smith.edu">here</a>, and you all should have accounts set up already. This is a great option for class – I <em>strongly</em> recommend anyone new to R and RStudio use this option. It requires a bit of uploading and downloading to get documents on and off the server (just like uploading and downloading from Google Drive, Dropbox, etc.), but otherwise is all set up with everything you need.</p>
+<div id="intro-and-background" class="section level2">
+<h2>Intro and Background</h2>
+<p>Two videos made for a specific textbook and lab session that we won’t be using (some sections of introductory statistics and Intro to Data Science here at Smith have used this book). However, the general ideas remain applicable for our class.</p>
+<div id="why-rmarkdown" class="section level3">
+<h3>Why <code>RMarkdown</code>?</h3>
+<p>Take a look at this video that explains the principles of what a RMarkdown file does – and why it’s a powerful approach for combining statistical output and text to explain those results.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/lNWVQ2oxNho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-<div id="rstudio.cloud" class="section level2">
-<h2>RStudio.cloud</h2>
-<p>Similar to the college server, <a href="http://rstudio.cloud/">RStudio.cloud</a> is a cloud-based application of RStudio that run by RStudio, not by the College and its IT tesm. There will still be up/downloading like with the server, but the main advantage of this approach is that we can all share the same documents in a class “workspace”, which makes getting stared even a little easier. Part of the “Getting Started” assignment was to make an account – again, easiest if connected to your Smith Google account – and I will provide a link to a shared class workspace before we start using RStudio.cloud.</p>
+
 </div>
-<div id="rstudio-locally-on-your-computer" class="section level2">
-<h2>RStudio locally on your computer</h2>
-<p>The server and cloud approaches are great for probably 80% of what we’ll do in the class. For the other 20% – probably the group project work – these can be slower. If you want to work on RStudio locally on your computer, you certainly can. For anyone planning to take another SDS course, this might be a good approach at some point in the semester.</p>
-<p>Here’s how you install all these things</p>
-<div id="install-r" class="section level3">
-<h3>Install R</h3>
-<p>First you need to install R itself (the engine).</p>
-<ol style="list-style-type: decimal">
-<li>Go to the CRAN (Collective R Archive Network)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> website: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
-<li><p>Click on “Download R for <code>XXX</code>”, where <code>XXX</code> is either Mac or Windows:</p>
-<p><img src="/img/install/install-r-links.png" width="75%" /></p>
+<div id="how-to-work-with-an-rmarkdown-file" class="section level3">
+<h3>How to work with an <code>RMarkdown</code> file?</h3>
+<p>A second video gets more into the mechanics of what goes into an RMarkdown file for our purposes. Ignore the parts about using a “template” – that’s one of the pieces that’s specific to this textbook and lab. Pay attention, instead, to the general ideas such: header information, code chunks, where <code>R</code> code and text each go within the document, and what it means to <code>knit</code> the file.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/lNWVQ2oxNho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+</div>
+<div id="more-detailed-introduction" class="section level3">
+<h3>More detailed introduction</h3>
 <ul>
-<li><p>If you use macOS, scroll down to the first <code>.pkg</code> file in the list of files (in this picture, it’s <code>R-3.5.1.pkg</code>; as of right now, the current version is 3.6.1) and download it.</p>
-<p><img src="/img/install/install-r-mac.png" width="100%" /></p></li>
-<li><p>If you use Windows, click “base” (or click on the bolded “install R for the first time” link) and download it.</p>
-<p><img src="/img/install/install-r-windows.png" width="100%" /></p></li>
-</ul></li>
-<li><p>Double click on the downloaded file (check your <code>Downloads</code> folder). Click yes through all the prompts to install like any other program.</p></li>
-</ol>
+<li><a href="http://www.biostat.jhsph.edu/~rpeng/">Roger Peng</a>, a biostatistician at Johns Hopkins, <a href="https://www.coursera.org/specializations/jhu-data-science">data science faculty</a> there, host of some <a href="http://nssdeviations.com/">statistics and data science podcasts</a>, and <a href="https://www.youtube.com/watch?v=i58Aul5ZB-E&amp;feature=youtu.be">pupeteer</a>, has a helpful video to get started with a new RMarkdown file.</li>
+</ul>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/DNS7i2m4sB0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-<div id="install-rstudio" class="section level3">
-<h3>Install RStudio</h3>
-<p>Next, you need to install RStudio, the nicer graphical user interface (GUI) for R (the dashboard). Once R and RStudio are both installed, you can ignore R and only use RStudio. RStudio will use R automatically and you won’t ever have to interact with it directly.</p>
-<ol style="list-style-type: decimal">
-<li>Go to the free download location on RStudio’s website: <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></li>
-<li><p>Select the installer that corresponds with your computer’s operating system (Windows or macOS):</p>
-<p><img src="/img/install/install-r-rstudio.png" width="100%" /></p></li>
-<li><p>Double click on the downloaded file (again, check your <code>Downloads</code> folder). Click yes through all the prompts to install like any other program.</p></li>
-</ol>
-<p>Double click on RStudio to run it (check your applications folder or start menu).</p>
-</div>
-<div id="install-tidyverse" class="section level3">
-<h3>Install <code>tidyverse</code></h3>
-<p>R packages are easy to install with RStudio. Select the packages panel, click on “Install,” type the name of the package you want to install, and press enter.</p>
-<p><img src="/img/install/install-r-package-panel.png" width="40%" /></p>
-<p>This can sometimes be tedious when you’re installing lots of packages, though. <a href="https://www.tidyverse.org/">The tidyverse</a><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> for instance, consists of dozens of packages that all work together. Rather than install each individually, you can install a single magical package and get them all at the same time.</p>
-<p>Go to the packages panel in RStudio, click on “Install,” type “tidyverse”, and press enter. You’ll see a bunch of output in the RStudio console as all the tidyverse packages are installed.</p>
-<p><img src="/img/install/install-r-tidyverse.png" width="60%" /></p>
-<p>Notice also that RStudio will generate a line of code for you and run it: <code>install.packages(&quot;tidyverse&quot;)</code>. You can also just paste and run this instead of using the packages panel.</p>
-</div>
-<div id="install-stat2data" class="section level3">
-<h3>Install <code>Stat2Data</code></h3>
-<p>The textbook for this course also has a package available with all of the datasets for the problems in the back of the book that we’ll be using for homework. You can repeat the steps above for <code>Stat2Data</code> instead of <code>tidyverse</code> or type the command directly into the console: <code>install.packages(&quot;Stat2Data&quot;)</code>.</p>
-<p><em>Note of thanks and attributions</em>: This page was developed based on previously developed materials, especially <a href="www.andresheiss.com">Andrew Heiss</a>, and is used here with appreciation and due attirbution.</p>
+
 </div>
 </div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>It’s a goofy name, but CRAN is where most R packages—and R itself—lives.<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>A universe of packages centered around tidy data, including <code>ggplot2</code><a href="#fnref2" class="footnote-back">↩</a></p></li>
-</ol>
+<div id="troubleshooting-rmarkdown" class="section level2">
+<h2>Troubleshooting <code>RMarkdown</code></h2>
+<p>You document won’t knit</p>
+<p>There could be many reasons that cause a RMarkdown file not to be able to knit, so it’s hard in the abstract to give good advice. Usually, the error message will pinpoint the location of the problem. Read the error messages!!</p>
+<p>Error messages typically include the line number of the issue of where the issue is. Go to that line of your code and see if something doesn’t look right.</p>
+<p>Some most common problems we see in this class include:</p>
+<ul>
+<li><p>having your data loaded in the environment, but not in your RMarkdown file. Remember, an RMd file has to be self-contained, meaning everything that it will need is included in the file itself.</p></li>
+<li><p>including output in your code chunks</p></li>
+<li><p>including the &gt; or + prompts that come from the console in your code chunks,</p></li>
+<li><p>Not including all the packages you need for your code. This error will occur if you try to use a function in a package that you haven’t loaded previously in your Markdown document. <code>## Error in library(imadethisup): there is no package called 'imadethisup'</code></p></li>
+<li><p>There can be characters <code>R</code> doesn’t understand and cannot process. This most commonly happens when pasting text in from the pdf textbook, if you have a separate keyboard installed (for a different language), or you try to insert special characters, like greek symbols for an equation.</p></li>
+<li><p>As we get into the course, you may want to write out equations using the equation features in RMarkdown. These can get complicated – and thus, extremely error prone – very quickly. Most of the time you’re either missing a <code>$</code> or need a space (or to remove a space) between the <code>$</code> and the equation.</p></li>
+</ul>
+<p>-No Knit HTML button: This means that RStudio doesn’t understand your document is supposed to be an RMarkdown document, often because your file extension is .txt. To fix this, go to the Files tab (lower right corner, same pane as Plots and Help) and select the checkbox next to your document’s name. Then select Rename and remove the .txt and make sure the extension is .Rmd.</p>
+<div id="getting-more-help" class="section level3">
+<h3>Getting more help</h3>
+<p>When in doubt, consult the authoritative source. The R Markdown website contains a detailed tutorial with videos. There are also Cheatsheets available from within RStudio. Simply go to: Help -&gt; Cheatsheets -&gt; R Markdown Cheat Sheet for the most commonly used R Markdown commands.</p>
+</div>
 </div>
 
                     </div>
@@ -736,7 +726,7 @@
                 </div>
 
                 <div class="body-footer">
-                    <p>Last updated on January 28, 2020</p>
+                    <p>Last updated on January 27, 2020</p>
 
                     
 
@@ -748,7 +738,7 @@
   
 
 <p class="edit-page">
-  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/install.html">
+  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/RMarkdown.html">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>

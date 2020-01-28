@@ -313,5 +313,81 @@
 </description>
     </item>
     
+    <item>
+      <title>What&#39;s RMarkdown?</title>
+      <link>/resources/rmarkdown/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/rmarkdown/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#intro-and-background&#34;&gt;Intro and Background&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#why-rmarkdown&#34;&gt;Why &lt;code&gt;RMarkdown&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-to-work-with-an-rmarkdown-file&#34;&gt;How to work with an &lt;code&gt;RMarkdown&lt;/code&gt; file?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#more-detailed-introduction&#34;&gt;More detailed introduction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#troubleshooting-rmarkdown&#34;&gt;Troubleshooting &lt;code&gt;RMarkdown&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-more-help&#34;&gt;Getting more help&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;intro-and-background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Intro and Background&lt;/h2&gt;
+&lt;p&gt;Two videos made for a specific textbook and lab session that we won’t be using (some sections of introductory statistics and Intro to Data Science here at Smith have used this book). However, the general ideas remain applicable for our class.&lt;/p&gt;
+&lt;div id=&#34;why-rmarkdown&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Why &lt;code&gt;RMarkdown&lt;/code&gt;?&lt;/h3&gt;
+&lt;p&gt;Take a look at this video that explains the principles of what a RMarkdown file does – and why it’s a powerful approach for combining statistical output and text to explain those results.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/lNWVQ2oxNho&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;how-to-work-with-an-rmarkdown-file&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;How to work with an &lt;code&gt;RMarkdown&lt;/code&gt; file?&lt;/h3&gt;
+&lt;p&gt;A second video gets more into the mechanics of what goes into an RMarkdown file for our purposes. Ignore the parts about using a “template” – that’s one of the pieces that’s specific to this textbook and lab. Pay attention, instead, to the general ideas such: header information, code chunks, where &lt;code&gt;R&lt;/code&gt; code and text each go within the document, and what it means to &lt;code&gt;knit&lt;/code&gt; the file.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/lNWVQ2oxNho&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;more-detailed-introduction&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;More detailed introduction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/~rpeng/&#34;&gt;Roger Peng&lt;/a&gt;, a biostatistician at Johns Hopkins, &lt;a href=&#34;https://www.coursera.org/specializations/jhu-data-science&#34;&gt;data science faculty&lt;/a&gt; there, host of some &lt;a href=&#34;http://nssdeviations.com/&#34;&gt;statistics and data science podcasts&lt;/a&gt;, and &lt;a href=&#34;https://www.youtube.com/watch?v=i58Aul5ZB-E&amp;amp;feature=youtu.be&#34;&gt;pupeteer&lt;/a&gt;, has a helpful video to get started with a new RMarkdown file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/DNS7i2m4sB0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;troubleshooting-rmarkdown&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Troubleshooting &lt;code&gt;RMarkdown&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;You document won’t knit&lt;/p&gt;
+&lt;p&gt;There could be many reasons that cause a RMarkdown file not to be able to knit, so it’s hard in the abstract to give good advice. Usually, the error message will pinpoint the location of the problem. Read the error messages!!&lt;/p&gt;
+&lt;p&gt;Error messages typically include the line number of the issue of where the issue is. Go to that line of your code and see if something doesn’t look right.&lt;/p&gt;
+&lt;p&gt;Some most common problems we see in this class include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;having your data loaded in the environment, but not in your RMarkdown file. Remember, an RMd file has to be self-contained, meaning everything that it will need is included in the file itself.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;including output in your code chunks&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;including the &amp;gt; or + prompts that come from the console in your code chunks,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Not including all the packages you need for your code. This error will occur if you try to use a function in a package that you haven’t loaded previously in your Markdown document. &lt;code&gt;## Error in library(imadethisup): there is no package called &#39;imadethisup&#39;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There can be characters &lt;code&gt;R&lt;/code&gt; doesn’t understand and cannot process. This most commonly happens when pasting text in from the pdf textbook, if you have a separate keyboard installed (for a different language), or you try to insert special characters, like greek symbols for an equation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As we get into the course, you may want to write out equations using the equation features in RMarkdown. These can get complicated – and thus, extremely error prone – very quickly. Most of the time you’re either missing a &lt;code&gt;$&lt;/code&gt; or need a space (or to remove a space) between the &lt;code&gt;$&lt;/code&gt; and the equation.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-No Knit HTML button: This means that RStudio doesn’t understand your document is supposed to be an RMarkdown document, often because your file extension is .txt. To fix this, go to the Files tab (lower right corner, same pane as Plots and Help) and select the checkbox next to your document’s name. Then select Rename and remove the .txt and make sure the extension is .Rmd.&lt;/p&gt;
+&lt;div id=&#34;getting-more-help&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Getting more help&lt;/h3&gt;
+&lt;p&gt;When in doubt, consult the authoritative source. The R Markdown website contains a detailed tutorial with videos. There are also Cheatsheets available from within RStudio. Simply go to: Help -&amp;gt; Cheatsheets -&amp;gt; R Markdown Cheat Sheet for the most commonly used R Markdown commands.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
