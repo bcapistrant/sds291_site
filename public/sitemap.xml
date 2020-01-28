@@ -18,18 +18,8 @@
   </url>
   
   <url>
-    <loc>/resources/homework/</loc>
-    <lastmod>2020-01-28T12:12:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/resources/install/</loc>
-    <lastmod>2020-01-28T12:12:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/resources/interface/</loc>
-    <lastmod>2020-01-28T12:03:13-05:00</lastmod>
+    <lastmod>2020-01-28T12:14:53-05:00</lastmod>
   </url>
   
   <url>
@@ -68,13 +58,23 @@
   </url>
   
   <url>
+    <loc>/resources/interface/</loc>
+    <lastmod>2020-01-28T12:14:53-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/courses/example/example2/</loc>
     <lastmod>2020-01-24T12:22:39-05:00</lastmod>
   </url>
   
   <url>
+    <loc>/resources/homework/</loc>
+    <lastmod>2020-01-28T12:14:53-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2020-01-28T12:12:14-05:00</lastmod>
+    <lastmod>2020-01-28T12:14:53-05:00</lastmod>
   </url>
   
   <url>

@@ -4,9 +4,9 @@ date: "2020-01-27"
 menu:
   resources:
     parent: R and RStudio
-    weight: 1
+    weight: 3
 type: docs
-weight: 1
+weight: 3
 output:
   blogdown::html_page:
       toc: TRUE
@@ -37,8 +37,9 @@ Again, you're encouraged to use the [Smith College RStudio Server](http://rstudi
 
 - Once you click "ok" and the file uploads, the file will appear in a list of all files located in your personal storage on the server.
 
-
-![](~/img/install/Uploading_to_RStudio_Server.gif)
+```{r, echo=FALSE, out.width="75%"}
+include_graphics("/img/install/Uploading_to_RStudio_Server.gif")
+```
 
 ## Open, edit (including putting in your answers), and knit the file
 
@@ -62,7 +63,9 @@ Again, you're encouraged to use the [Smith College RStudio Server](http://rstudi
 
 - RStudio will pop up a new window with your knitted, output file. (Note, if you have a pop-up blocker, you may not see the file immediately -- click "Try Again" to open the file)
 
-![]('/img/install/Knitting_On_Server.gif')
+```{r, echo=FALSE, out.width="75%"}
+include_graphics("/img/install/Knitting_On_Server.gif")
+```
 
 ## Export the file(s) from the server to your local computer.
 
@@ -70,7 +73,10 @@ Again, you're encouraged to use the [Smith College RStudio Server](http://rstudi
 
 - Select "More", and then "export" to download the files from the server
 
-![]("/img/install/Downloading_from_RStudio_Server.gif")
+```{r, echo=FALSE, out.width="75%"}
+include_graphics("/img/install/Downloading_from_RStudio_Server.gif")
+```
+
 
 # Upload the file(s) to Moodle for the HW assignment of interest. 
 
