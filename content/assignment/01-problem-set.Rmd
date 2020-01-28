@@ -16,6 +16,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-Questions 1.8, 1.9, and 2.3 from the book
+Questions 1.19, 1.21 (2nd Edition) or 1.8, 1.9 (1st Edition)
 
 
