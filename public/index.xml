@@ -20,7 +20,8 @@
       <description>
 
 
-&lt;p&gt;Questions 1.19, 1.21 (2nd Edition) or 1.8, 1.9 (1st Edition)&lt;/p&gt;
+&lt;p&gt;#Required
+Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&gt;
 </description>
     </item>
     
@@ -2145,7 +2146,7 @@ Figure 1: A fancy pie chart.
 &lt;p&gt;We will use the &lt;code&gt;R&lt;/code&gt; statistical software package extensively and exclusively. &lt;code&gt;R&lt;/code&gt; is open source software that is available for free on Mac, Windows, and Linux operating systems. There is an extensive section of the course Moodle site with &lt;code&gt;R&lt;/code&gt; resources, which may be espectially useful for those newer to &lt;code&gt;R&lt;/code&gt;. There are two ways to access &lt;code&gt;R&lt;/code&gt; for this class:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Server: &lt;a href=&#34;http://rstudio.smith.edu&#34;&gt;The Smith College  server&lt;/a&gt;, which you are strongly encouraged to use. Enrolled students will get an account for the server shortly after the beginning of the class. The advantages of using the server version are that it is cloud based: your work will be automatically saved and backed up, and you can work from any computer that has an internet connection (note: you need to be on a Smith College IP address to access the server, to access it off-campus, you may need to establish a VPN connection to Smith). Like any shared resource, there are limits on how much data you can store (only really relevant for projects, not homeworks) and how quickly it processes during periods of high use.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Desktop: You can also download &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; to your computer and run things locally. Note - homework will be submitted via PDF, which requries additional software &lt;code&gt;TeX&lt;/code&gt;. For Mac users, I recommend &lt;code&gt;MacTeX&lt;/code&gt;, and for Windows users, I recommend &lt;code&gt;MiKTeX&lt;/code&gt;((&lt;a href=&#34;https://www.latex-project.org/get/&#34; class=&#34;uri&#34;&gt;https://www.latex-project.org/get/&lt;/a&gt;](here)).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Desktop: You can also download &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; to your computer and run things locally. Note - homework will be submitted via PDF, which requries additional software &lt;code&gt;TeX&lt;/code&gt;. It seems like the best option our purposes is &lt;code&gt;TinyTeX&lt;/code&gt; which you can install as you would other &lt;code&gt;R&lt;/code&gt; packages – see more info on &lt;code&gt;TinyTeX&lt;/code&gt; &lt;a href=&#34;https://yihui.org/tinytex/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note that you do not have to choose one or the other; indeed, you can use both at different points in the class. For instance, you may want to get started using the server for homeworks and then transition to working on your project locally to maximize processing power and speed. Keeping your files on a cloud (e.g., Google Drive, Dropbox) in a folder shared among your group members will facilitate collaboration if you’re all working from your individual desktops.&lt;/p&gt;
 &lt;/div&gt;
