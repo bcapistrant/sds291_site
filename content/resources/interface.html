@@ -1,0 +1,69 @@
+---
+title: Intro to RStudio Interface
+date: "2020-01-27"
+menu:
+  resources:
+    parent: Resources
+    weight: 2
+type: docs
+weight: 2
+output:
+  blogdown::html_page:
+      toc: TRUE
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#intro-to-r-rstudio-rmarkdown">Intro to R, RStudio, RMarkdown</a><ul>
+<li><a href="#what-is-r-rstudio-and-rmarkdown">What is R, RStudio and RMarkdown?</a></li>
+</ul></li>
+<li><a href="#the-rstudio-interface-i.e.-what-am-i-looking-at-on-the-screen-and-what-do-i-do">The RStudio interface (i.e., what am I looking at on the screen and what do I do?)</a><ul>
+<li><a href="#upper-right-your-environment">Upper Right: your environment</a></li>
+<li><a href="#bottom-right-a-bunch-of-very-helpful-tabs">Bottom Right: a bunch of very helpful tabs</a></li>
+</ul></li>
+<li><a href="#upper-left-rmarkdown-files-appear-here-once-opened.">Upper Left: RMarkdown files appear here once opened.</a></li>
+</ul>
+</div>
+
+<div id="intro-to-r-rstudio-rmarkdown" class="section level2">
+<h2>Intro to R, RStudio, RMarkdown</h2>
+<div id="what-is-r-rstudio-and-rmarkdown" class="section level3">
+<h3>What is R, RStudio and RMarkdown?</h3>
+<ul>
+<li><p><strong><code>R</code>:</strong> is a programming language specifically designed for statistical analysis. R is open-source, and is developed by a team of statisticians and programmers in both academia and industry. It is updated frequently and has become the de facto industry standard. In the data science realm, alternatives to R include Python with the Pandas library, and Julia. In the statistics realm, alternatives include SAS, Stata, and SPSS.</p></li>
+<li><p><strong>RStudio</strong>: is an Integrated Development Environment (IDE) for R. RStudio is also open-source software, and depends upon a valid R installation to function. RStudio as available as both a both Desktop and Server application. You can think of RStudio as the piece of software through which you can run commands, do data cleaning statistical tests, and run more complicated programs that you write in R code. RStudio also has functionality to combine the statistical processes with text, figures, etc. with RMarkdown (below).</p></li>
+<li><p><strong>RMarkdown</strong>: is a syntax for composing relatively simple documents that combine R code and text. R Markdown is an extension of markdown (a general-purpose authoring format) that provides functionality for processing R code and output. If you’ve used Stata or SPSS before, think about RMarkdown some combination of your statistical program / do file and the text features of Word where you would write up your results. Rather than doing them separately, cutting and pasting results into Word, you can do it all in the same file with RMarkdown. With RMarkdown, you can do both R code and include written text both in the same file, “knit” it (i.e., combine the pieces of the file together) into output formats like pdf, Word document, and HTML. Your homeworks will be completed in RMarkdown (.rmd files) and knit into a .pdf format.</p></li>
+</ul>
+</div>
+</div>
+<div id="the-rstudio-interface-i.e.-what-am-i-looking-at-on-the-screen-and-what-do-i-do" class="section level2">
+<h2>The RStudio interface (i.e., what am I looking at on the screen and what do I do?)</h2>
+<p>In clockwise order, let’s talk through what’s going on in each of the quadrants of the screen</p>
+<pre><code>&lt;img src=&quot;/img/install/RStudio_Screenshot.png&quot; width=&quot;75%&quot; /&gt;</code></pre>
+<div id="upper-right-your-environment" class="section level3">
+<h3>Upper Right: your environment</h3>
+<ul>
+<li>This quadrant includes datasets, created variables, etc, and history shows all of the commands that you’ve previously entered.</li>
+</ul>
+</div>
+<div id="bottom-right-a-bunch-of-very-helpful-tabs" class="section level3">
+<h3>Bottom Right: a bunch of very helpful tabs</h3>
+<ul>
+<li>Files: anything you’ve uploaded to the server (datasets, markdown files) and the resulting files that you knitted together will be here</li>
+<li>Plots: any plots that you generate will show up in the panel in the lower right corner.</li>
+<li>Help: you can search here for help, to find commands, etc.</li>
+<li>Packages: the list of installed packages, such as packages to tell R how to make a graph, to fit a linear regression model. The textbook has a package that includes all of the datasets used in the examples – you can look to see if Stat2Data is listed</li>
+<li>Viewer: where output gets generated, including knitted files</li>
+</ul>
+<p>###Bottom Left / Left panel:</p>
+<p>Initially, when you open RStudio, all that’s on the left is the Console. Every time you launch RStudio, it will have the same text at the top of the console telling you the version of R that you’re running. Below that information is the prompt. Initially, interacting with R is all about typing commands and interpreting the output. To work interactively (i.e., you type a command right after the &gt;, press enter, and see the results), you can use the prompt.</p>
+</div>
+</div>
+<div id="upper-left-rmarkdown-files-appear-here-once-opened." class="section level2">
+<h2>Upper Left: RMarkdown files appear here once opened.</h2>
+<p>We will be using RMarkdown, where you can write sections of code and text interspersed with one another in one RMarkdown file (.rmd). You can tell RStudio to run code in an RMarkdown file line-by-line, chunk-by-chunk (chunk is the highly technical R term for a section of code), or to “knit” the text and the results of the executed code in the RMarkdown file into one complete finished product. When you open RMarkdown files, they appear in the top left quadrant of the screen (in orange below), and the console moves down.</p>
+<p>See an example below:</p>
+<pre><code>&lt;img src=&quot;/img/install/RMarkdown_Screenshot.png&quot; width=&quot;75%&quot; /&gt;</code></pre>
+<p><em>Note of thanks and attributions</em>: This page was developed based on previously developed materials, particularly from <a href="www.amelia.mn">Amelia McNamara</a> and <a href="www.andresheiss.com">Andrew Heiss</a>.</p>
+</div>

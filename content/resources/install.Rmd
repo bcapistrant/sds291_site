@@ -100,3 +100,6 @@ Notice also that RStudio will generate a line of code for you and run it: `insta
 ### Install `Stat2Data`
 
 The textbook for this course also has a package available with all of the datasets for the problems in the back of the book that we'll be using for homework.  You can repeat the steps above for `Stat2Data` instead of `tidyverse` or type the command directly into the console: `install.packages("Stat2Data")`.
+
+
+*Note of thanks and attributions*: This page was developed based on previously developed materials, especially [Andrew Heiss](www.andresheiss.com), and is used here with appreciation and due attirbution. 

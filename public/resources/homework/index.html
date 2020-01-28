@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Benjamin Capistrant">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Steps for Homework Sign into RStudio Server Upload the RMarkdown File Open, edit (including putting in your answers), and knit the file To edit the file Save the file to save your work. Knit the file [see the bottom if you’re working locally, on your desktop version]  Export the file(s) from the server to your local computer.  Upload the file(s) to Moodle for the HW assignment of interest.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/resources/homework/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#002855">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i%7CIBM+Plex+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/resources/homework/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@bencapistrant">
+  <meta property="twitter:creator" content="@bencapistrant">
+  
+  <meta property="og:site_name" content="Multiple Regression">
+  <meta property="og:url" content="/resources/homework/">
+  <meta property="og:title" content="How to Do Homework in RStudio | Multiple Regression">
+  <meta property="og:description" content="Steps for Homework Sign into RStudio Server Upload the RMarkdown File Open, edit (including putting in your answers), and knit the file To edit the file Save the file to save your work. Knit the file [see the bottom if you’re working locally, on your desktop version]  Export the file(s) from the server to your local computer.  Upload the file(s) to Moodle for the HW assignment of interest."><meta property="og:image" content="/img/social-image.png">
+  <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-01-27T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-01-27T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="SDS 291: Multiple Regression" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+
+
+  <title>How to Do Homework in RStudio | Multiple Regression</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Multiple Regression</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Multiple Regression</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/reading/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/class/"><span>Classes</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/group/"><span>Group Project</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/resources/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http://sds291-spring2020.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >R and RStudio</a>
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>How to Do Homework in RStudio</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+
+<div id="TOC">
+<ul>
+<li><a href="#steps-for-homework">Steps for Homework</a><ul>
+<li><a href="#sign-into-rstudio-server">Sign into RStudio Server</a></li>
+<li><a href="#upload-the-rmarkdown-file">Upload the RMarkdown File</a></li>
+<li><a href="#open-edit-including-putting-in-your-answers-and-knit-the-file">Open, edit (including putting in your answers), and knit the file</a><ul>
+<li><a href="#to-edit-the-file">To edit the file</a></li>
+<li><a href="#save-the-file-to-save-your-work.">Save the file to save your work.</a></li>
+<li><a href="#knit-the-file-see-the-bottom-if-youre-working-locally-on-your-desktop-version">Knit the file [see the bottom if you’re working locally, on your desktop version]</a></li>
+</ul></li>
+<li><a href="#export-the-files-from-the-server-to-your-local-computer.">Export the file(s) from the server to your local computer.</a></li>
+</ul></li>
+<li><a href="#upload-the-files-to-moodle-for-the-hw-assignment-of-interest.">Upload the file(s) to Moodle for the HW assignment of interest.</a></li>
+<li><a href="#if-you-are-using-rstudio-locally-i.e.-on-your-computer">If you are using RStudio locally (i.e., on your computer)</a></li>
+</ul>
+</div>
+
+<div id="steps-for-homework" class="section level1">
+<h1>Steps for Homework</h1>
+<p>If you are new to R and RStudio, there’s another page in this section that provides a little more background on what R is, the terminology of R, and an introduction to the user interface of RStudio. Please (re-) read that before getting into the specific steps of how to use RStudio to complete your homework (which is below).</p>
+<p>These instructions below are specific to using the RStudio Server, which you are encouraged to use. If you’re running RStudio locally on your desktop, you will have a different interface and process (see note below about additional software you need if running RStudio locally on your computer).</p>
+<div id="sign-into-rstudio-server" class="section level2">
+<h2>Sign into RStudio Server</h2>
+<p>Again, you’re encouraged to use the <a href="http://rstudio.smith.edu">Smith College RStudio Server</a>. Log in using your Smith username and password (i.e., same as for your email, BannerWeb, etc.)</p>
+</div>
+<div id="upload-the-rmarkdown-file" class="section level2">
+<h2>Upload the RMarkdown File</h2>
+<ul>
+<li><p>Click Upload on Files tab in the section of the Bottom-Right quadrant of the RStudio interface</p></li>
+<li><p>Select the RMarkdown file from wherever you downloaded it onto your computer</p></li>
+<li><p>Once you click “ok” and the file uploads, the file will appear in a list of all files located in your personal storage on the server.</p></li>
+</ul>
+<p><img src="~/img/install/Uploading_to_RStudio_Server.gif" /></p>
+</div>
+<div id="open-edit-including-putting-in-your-answers-and-knit-the-file" class="section level2">
+<h2>Open, edit (including putting in your answers), and knit the file</h2>
+<ul>
+<li>To open the file, just click on the file name in the Files tab. It will open in the top left quadrant</li>
+</ul>
+<div id="to-edit-the-file" class="section level3">
+<h3>To edit the file</h3>
+<ul>
+<li><p>Change your name and the date on the file in the header at the top of the file</p></li>
+<li><p>Type in your answers under the prompts for each exercise section</p></li>
+<li><p>As shown in the gif below, the document will be easier to read if put your answers in with a blank line before and after, but don’t worry too much about that for right now.</p></li>
+</ul>
+</div>
+<div id="save-the-file-to-save-your-work." class="section level3">
+<h3>Save the file to save your work.</h3>
+<ul>
+<li>You can also change the filename - to put your name in the filename, update a version number, etc. - with the File menu at the top left of the interface (File - &gt; Save As). Just name it what you want, and add “.rmd” as the file extension. It’s good practice to rename files so as not to mistakenly overwrite older files, to make sure you upload the version of the file you intend to submit, etc.</li>
+</ul>
+</div>
+<div id="knit-the-file-see-the-bottom-if-youre-working-locally-on-your-desktop-version" class="section level3">
+<h3>Knit the file [see the bottom if you’re working locally, on your desktop version]</h3>
+<ul>
+<li><p>Click on the knit button/icon in the quandrant with your RMarkdown file. Knit runs the RMarkdown file and combines (or knits) the r code (we don’t have any yet, but you will) and text into the output format of your choice.</p></li>
+<li><p>RStudio will pop up a new window with your knitted, output file. (Note, if you have a pop-up blocker, you may not see the file immediately – click “Try Again” to open the file)</p></li>
+</ul>
+<p><embed src="&#39;/img/install/Knitting_On_Server.gif&#39;" /></p>
+</div>
+</div>
+<div id="export-the-files-from-the-server-to-your-local-computer." class="section level2">
+<h2>Export the file(s) from the server to your local computer.</h2>
+<ul>
+<li><p>Select the file(s) you want to download from the Files tab in the bottom right</p></li>
+<li><p>Select “More”, and then “export” to download the files from the server</p></li>
+</ul>
+<p><embed src="%22/img/install/Downloading_from_RStudio_Server.gif%22" /></p>
+</div>
+</div>
+<div id="upload-the-files-to-moodle-for-the-hw-assignment-of-interest." class="section level1">
+<h1>Upload the file(s) to Moodle for the HW assignment of interest.</h1>
+<p>You can click and drag files or select them from your documents.</p>
+<p><img src="/img/install/Uploading_HW_to_Moodle.gif" width="75%" /></p>
+<p>You’re done!</p>
+<p><img src="https://media.giphy.com/media/slOhiKAVFgwr6/giphy.gif" /></p>
+</div>
+<div id="if-you-are-using-rstudio-locally-i.e.-on-your-computer" class="section level1">
+<h1>If you are using RStudio locally (i.e., on your computer)</h1>
+<p>One challenge of working on your desktop - even potentially if you have used RStudio before! – is that you may need an additional piece of software to knit to a pdf. Specifically, RStudio uses TeX, an open source software program that takes markdown files like RMarkdown and can output them into a variety of formats, including Microsoft Word and .pdf. Download and install the version of TeX based on your operating system; if you were running RStudio, be sure to re-start it. Once TeX is installed, RStudio should immediately find the TeX program you installed and be able to knit to a pdf.</p>
+<p><em>Simplest:</em> install the <code>TinyTeX</code> package</p>
+<p><em>More Robust:</em> Dowload and install the full TeX software
+- Mac users: MacTeX <a href="http://tug.org/mactex/" class="uri">http://tug.org/mactex/</a>
+- Windows users: MikTeX <a href="http://miktex.org/download" class="uri">http://miktex.org/download</a></p>
+<p>This software is already installed on the server, and you should have no trouble knitting to a pdf from the server. This is a big reason, especially early in the semester, why using the the server is much easier.</p>
+<p><img src="/img/install/install-r-tidyverse.png" width="60%" /></p>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 27, 2020</p>
+
+                    
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/homework.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>SDS 291: Multiple Regression (Spring 2020)</strong><br>
+
+                <a href="https://www.smith.edu" target="_blank" rel="noopener">Smith College</a> &emsp;&emsp;
+                <a href="https://www.smith.edu/statistics" target="_blank" rel="noopener">Program on Statistical &amp; Data Sciences</a>
+            </p>
+
+            <p>
+                <a href="https://www.andrewheiss.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Benjamin Capistrant</a> &emsp;&emsp;
+                <a href="mailto:bcapistrant@smith.edu"><i class="fas fa-envelope"></i>
+                    bcapistrant@smith.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Monday &amp; Wednesday &emsp;&emsp;
+                <i class="far fa-clock"></i> 1:20-2:35 or 2:45-4:00 <br>
+                <i class="fas fa-university"></i> Burton 301
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.andrewheiss.com" target="_blank" rel="noopener">Ben Capistrant</a></p>
+        
+            <p>A tremendous thanks to <a href="https://www.andrewheiss.com/" target="_blank" rel="noopener">Andrew Heiss</a> whose course sites served as the basis for the format and structure of this site. They employ the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>.  </p>
+            
+            <p><a href="https://github.com/bencapistrant/sds291_site" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.b03c341a9a02bb3d0133df72033e26a2.js"></script>
+
+    
+
+
+
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
