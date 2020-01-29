@@ -30,7 +30,7 @@ qplot(x=Year, y=Width, data=LeafWidth)
 
 ## 2. Find the least squares regression line for predicting leaf width based on year
 
-```{r reg, echo=FALSE, include=FALSE}
+```{r reg}
 model_width<-lm(Width~Year, data=LeafWidth)
 summary(model_width)
 ```
@@ -51,7 +51,7 @@ summary(model_width)
 
 [hint: do the calculation of the fitted value by hand, find the actual number from the data, and calculate the residual from there]
 
-```{r residual, echo=FALSE}
+```{r residual}
 LeafWidth %>%
   filter(Year==1994) %>%
   head()
@@ -63,19 +63,19 @@ LeafWidth %>%
 
 ### Make a scatterplot that includes the regression line
 
-```{r scatter, echo=FALSE, fig.height=4}
+```{r , fig.height=4}
 qplot(x=Year, y=Width, data=LeafWidth) + geom_smooth(method="lm", se=FALSE)
 ```
 
 
 ## Make a histogram of the residuals
 
-```{r scatter, echo=FALSE, fig.height=4, message=FALSE}
+```{r , fig.height=4, message=FALSE}
 qplot(x=model_width$residuals, geom="histogram")
 ```
 
 ## Make a probability plot and residual fitted plot
 
-```{r scatter, echo=FALSE, fig.height=4, message=FALSE}
+```{r , fig.height=4, message=FALSE}
 plot(model_width, which=c(1:2))
 ```
