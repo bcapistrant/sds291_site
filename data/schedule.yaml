@@ -11,6 +11,7 @@ lessons:
     date: "January 29"
     reading: "02-reading"
     assignment: "00-assign-getting-started"
+    class: "02-class"
     
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: Slope Inference**'
     date: "February 3"
@@ -19,7 +20,7 @@ lessons:
     
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: ANOVA Table**'
     date: "February 5"
-    #reading: "04-reading"
+    reading: "04-reading"
   
   - title: '<i class="fas fa-users"></i> **Group Roster**'
     date: "February 7"
@@ -27,7 +28,7 @@ lessons:
 
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: Review and Wrap Up**'
     date: "February 10"
-    #reading: "05-reading"
+    reading: "05-reading"
     #assignment: "02-problem-set"
 
   - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 1**'
