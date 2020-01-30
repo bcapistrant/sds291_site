@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Gorming a Group</title>
+      <title>Forming a Group</title>
       <link>/group/01-group/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/group/01-group/</guid>
@@ -23,6 +23,163 @@
 &lt;p&gt;You’ll need to find a group of 3 (you and 2 others) to work together throughout the semester on a project with a topic of your choosing.&lt;/p&gt;
 &lt;p&gt;When you have your group, please come up with a group name.&lt;/p&gt;
 &lt;p&gt;Then, fill out &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSe3Wu2dsmn-8OYaWon88ApV9OHBXjyTxg2JTWUTNreAWO-ZFQ/viewform?usp=sf_link&#34;&gt;this Google Form&lt;/a&gt; with your group name and members.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Introduction</title>
+      <link>/group/00-group/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/group/00-group/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#project-related-material&#34;&gt;Project related material&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#groups&#34;&gt;Groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assignment&#34;&gt;Assignment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#general-rules&#34;&gt;General Rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#timeline&#34;&gt;Timeline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submission&#34;&gt;Submission&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#proposals-draft-and-final&#34;&gt;Proposals (draft and final)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#places-to-find-data&#34;&gt;Places to Find Data&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#health&#34;&gt;Health&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#economics&#34;&gt;Economics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#non-us-populations&#34;&gt;Non-US populations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#stem-higher-education&#34;&gt;STEM &amp;amp; Higher Education&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#time-use&#34;&gt;Time-Use&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#final-products-report-and-presentation&#34;&gt;Final Products: Report and Presentation&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#report&#34;&gt;Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#content-1&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tone&#34;&gt;Tone&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;project-related-material&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Project related material&lt;/h1&gt;
+&lt;p&gt;As a major component of this class, you (and your group) will conduct a statistical study on a topic of your choice. This task will require you to write a project proposal, acquire and analyze relevant data, present your results orally to the class, and hand in a written report describing your study and its findings. Your project must involve fitting a regression model. The project is an opportunity to show off what you’ve learned about data analysis, visualization, and statistical inference. It is a major component of the class, and successful completion is required to pass.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;groups&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Groups&lt;/h1&gt;
+&lt;p&gt;You will work in a group of three, of your choosing. For project related questions via email / Slack, please use your group name and cc/tag your group mates as necessary.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignment&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Assignment&lt;/h1&gt;
+&lt;p&gt;You should pose a problem that you find interesting and which may be addressed (at least in part) through the analysis of data. Many interesting quantitative questions (and perhaps even more uninteresting ones) involve the relationships among several variables. Recent projects have considered the following questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What is gender pay gap in STEM workers?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Is alcohol use associated with incidents of intimate partner violence?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How is social support related to physical health and obesity?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Does prevalence of intergenerational households vary by region of the country?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How is income associated with total medical expenditures?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Are there differences in skin cancer testing rates by education and race?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How does the relationship between education and income vary by race/ethnicity?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You should pose the problem that you want to solve as precisely as possible at the outset. You should also make a hypothesis, a priori(before you analyze the data), about the results you expect to see. You may not propose a question without a succinct main hypothesis of one explanatory variable and one response variable; you may have up to 2 secondary hypotheses that you also explore.&lt;/p&gt;
+&lt;p&gt;We will be using data from IPUMS (see link below to a description of IPUMS for this project)&lt;/p&gt;
+&lt;p&gt;You might consider examples from previous Undergraduate Statistics Class Project winners to get a sense of the scope and presentation of a high quality project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;general-rules&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;General Rules&lt;/h1&gt;
+&lt;p&gt;You may discuss your project with other students, but each group will have a different topic, so there is a limit to how much you can help each other. You may consult other sources for information about the non-statistical, substantive issues in your problem, but you should credit these sources in your report. Feel free to consult with us about statistical questions. To foreshadow the presentation: note that everyone is expected to speak during the presentation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;timeline&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Timeline&lt;/h1&gt;
+&lt;p&gt;Please see the syllabus for due dates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submission&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submission&lt;/h1&gt;
+&lt;p&gt;All deliverables described above must be delivered electronically via Moodle by 11:55pm (five minutes before midnight) on the dates above. Only one person from the group should submit the group’s product for each checkpoint (with the exception of the Group Dynamic, which is individual).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;proposals-draft-and-final&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Proposals (draft and final)&lt;/h1&gt;
+&lt;p&gt;Count on brainstorming at least half a dozen serious ideas before you can groom one of them into a mature proposal.&lt;/p&gt;
+&lt;p&gt;For the most part, the choice of topic is left up to you. Try to pick something that’s interesting yet substantial and worth studying, and aim for a topic that you think nobody has tried before; remember that part of your overall grade will be based on originality.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;places-to-find-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Places to Find Data&lt;/h1&gt;
+&lt;p&gt;Finding the right data to answer your particular question is part of your responsibility for this assignment. You may also want to refine your research question so that it can be more clearly addressed by the data that you found. But be creative!&lt;/p&gt;
+&lt;p&gt;In order to help you narrow your choice and focus on appropriate data sets, as well as to maximize my ability to help you, projects can use data any of the IPUMS data, which are listed below and highlighted in more detail in the HTML file attached at the bottom:&lt;/p&gt;
+&lt;p&gt;IPUMS has many census, national and international survey datasets that are well-documented and cleaned.&lt;/p&gt;
+&lt;div id=&#34;health&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Health&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;National Health Interview Survey (health status, trends)&lt;/li&gt;
+&lt;li&gt;Medical Expenditure Panel Survey (health care, health care spending)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;economics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Economics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Current Population Survey&lt;/li&gt;
+&lt;li&gt;Census &amp;amp; American Community Survey Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;non-us-populations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Non-US populations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Demographic and Health Surveys (low- and middle-income countries)&lt;/li&gt;
+&lt;li&gt;International Census Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stem-higher-education&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;STEM &amp;amp; Higher Education&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;time-use&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Time-Use&lt;/h2&gt;
+&lt;p&gt;Most projects will measure a quantitative or a binary response variable (we will cover logistic regression for binary outcomes after Spring Break and in enough time that you can complete the project).&lt;/p&gt;
+&lt;p&gt;Once I respond to your initial proposal, you will revise it (perhaps starting with a different dataset), then submit a new proposal that addresses our feedback. Supply essentially the same information required for the initial proposal, but give a bit more detail on the rationale for the study (i.e., why does this question matter? what is its relevance outside of this class?), revised hypotheses, and clearer proposed methods to test those hypotheses.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;content&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Content&lt;/h1&gt;
+&lt;p&gt;Your initial and revised proposals should contain the following content:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Group Members:&lt;/em&gt; List the members of your group&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Title:&lt;/em&gt; Your title&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Purpose: &lt;/em&gt;Describe the general topic/phenomenon you want to study, as well some focused questions that you hope to answer and specific hypotheses that you intend to assess.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Data: &lt;/em&gt;Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. Which IPUMS surveys, in which years? Describe the source of the data - was it a survey, and if so, how were people selected and how was the data collected - in a few sentences. You can look to the IPUMS descriptions for details.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Population: &lt;/em&gt;Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you’ll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Response Variable: &lt;/em&gt;What the response variable? What are its units? Estimate the range of possible values that it may take on.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Explanatory Variables: &lt;/em&gt;You should have one, primary explanatory variable that is your main hypothesis. You may have other explanatory variables associated with secondary hypotheses (again, no more than 2). Then you will also have explanatory variables that you want to control for – factors that may be associated with your primary explanatory and your response variables that you want to include in your multiple regression model to adjust your main association for those competing explanations. Demographics (age, sex, race) and socioeconomic status are common ones for individual-level survey data. Carefully define each variable and describe how each was measured (self-report/direct observation). For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement. You may want to add more variables later on, but you should have at least the explanatory variables associated with your hypotheses and 5 additional variables you plan to control for already.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;final-products-report-and-presentation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Final Products: Report and Presentation&lt;/h1&gt;
+&lt;div id=&#34;report&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Report&lt;/h2&gt;
+&lt;p&gt;The report itself should be a 3-page paper reporting the results of your project that includes the following:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Introduction:&lt;/em&gt; Background/significance of the research, and a clearly stated research question an hypothesis/hypotheses. (What you’re doing and why)
+In a few paragraphs (1-3), you should explain clearly and precisely what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper! You should have at least 1-3 citations to previous research in this area to support your ideas and show what has already been done and what gap you are filling.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Methods:&lt;/em&gt; The methods used to obtain and analyze the data (How you’re doing it)
+This should include a brief description of your data set. Some questions you should consider (though this is not an exhaustive list): What is the population that was sampled? How was the sample collected? What variables are included in your analysis? Where did they come from? What are units of measurement? How much missing data did you have and what did you do about it? How did you choose which variables to include in your model? What kind of model did you fit? How did you evaluate the assumptions of this model? Don’t tell us the results, just tell us the steps you took. Think of this is as like in a lab report that is reproducible – someone else should be able to download the same data, follow your steps, and get the same results.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Results:&lt;/em&gt; The results of the analysis - both descriptive text and tables, charts, or graphs (What you found)
+This section is an explanation of what your model tells us about the research question. You should interpret coefficients in context and explain their relevance. What does your model tell us about your research question and hypothesis? You may want to include negative results, but be careful about how you interpret them. For example, you may want to say something along the lines of: “we found no evidence that explanatory variable xxis associated with response variable yy,” or “explanatory variable xx did not provide any additional explanatory power above what was already conveyed by explanatory variable zz.” On other hand, you probably shouldn’t claim: “there is no relationship between xx and yy,” which is akin to accepting the null.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Discussion:&lt;/em&gt; A discussion of the research, the limitations of the current research, reasonableness of any assumptions made, possibilities of future work/studies that should be conducted, etc. (How your findings help answer your question, why your findings matter (or don’t!))&lt;/p&gt;
+&lt;p&gt;A summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. Also include a few sentences about the strength(s) of your analysis / study. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is not implied by your research.&lt;/p&gt;
+&lt;p&gt;The entire written summary must be no more than 3 pages (single spaced, Arial 11pt font with standard 1 inch margins).&lt;/p&gt;
+&lt;p&gt;In addition to the 3 pages with the main content you should have a title page which includes:
+- The title of the project and
+- a one-paragraph abstract (summary) of the entire project (&amp;lt;150 words)&lt;/p&gt;
+&lt;p&gt;The abstract should not consist of more than 5 or 6 sentences, but should relate what you studied and what you found. It need only convey a general sense of what you actually did. The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper.&lt;/p&gt;
+&lt;p&gt;References should be listed at the end of the report and do not count against the 3 page limit.&lt;/p&gt;
+&lt;p&gt;Example: You might submit a 4.5 page Word document that is consists of the title page, 3 pages of text/graphs and half page of references.&lt;/p&gt;
+&lt;p&gt;(Optional) You may include up to 5 additional pages of information about your project in an appendix (as part of the single uploaded file),this could include secondary analysis results that didn’t fit, figures to check your model assumptions, descriptive statistics / figures, extra charts/tables, etc. The optional appendix may be reviewed, but you should not plan on it. Your material in the 3 page report should be self-contained; no information deemed critical to the evaluation of your project should be included in the Appendix.&lt;/p&gt;
+&lt;p&gt;Your report should be submitted via email as an R Markdown (.Rmd) file and the corresponding rendered output (.pdf) file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;content-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Content&lt;/h1&gt;
+&lt;p&gt;You should not need to present all of the R code that you wrote throughout the process of working on this project. Rather, the technical report should contain the minimal set of R code that is necessary to understand your results and findings in full. If you make a claim, it must be justified by explicit calculation. A knowledgeable reviewer should be able to compile your .Rmd file without modification, and verify every statement that you have made. All of the R code necessary to produce your figures and tables must appear in the technical report. In short, the technical report should enable a reviewer to reproduce your work in full.&lt;/p&gt;
+&lt;p&gt;The technical report is not simply a dump of all the R code you wrote during this project. Rather, it is a narrative, with technical details, that describes how you addressed your research question. You should not present tables or figures without a written explanation of the information that is supposed to be conveyed by that table or figure.&lt;/p&gt;
+&lt;p&gt;Keep in mind the distinction between data and information. Data is just numbers, whereas information is the result of analyzing that data and digesting it into meaningful ideas that human beings can understand. Your technical report should allow a reviewer to follow your steps from converting data into information. For example, simply displaying a table with the means and standard deviations of your variables is not meaningful. Writing a sentence that reiterates the content of the table (e.g. “the mean of variable xx was 34.5 and the standard deviation was 2.8…”) is equally meaningless. What you should strive to do is interpret these values in context (e.g. “although variables x1 and x2 have similar means, the spread of x1 is much larger, suggesting…”). Think of the text in the result section as a way to walk the reader through your tables / figures and to convey results that are important but not included in a table.&lt;/p&gt;
+&lt;p&gt;You should present figures and tables in your technical report in context. These items should be understandable on their own – in the sense that they have understandable titles, axis labels, legends, and captions. Someone glancing through your technical report should be able to make sense of your figures and tables without having to read the entire report. That said, you should also include a discussion of what you want the reader to learn from your figures and tables. Use the &lt;code&gt;stargazer&lt;/code&gt; package and consider plotting your results in a figure.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tone&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tone&lt;/h1&gt;
+&lt;p&gt;This document should be written for peer reviewers, who comprehend statistics at least as well as you do. You should aim for a level of complexity that is more statistically sophisticated than an article in the Science section of The New York Times, but less sophisticated than an academic journal. [Chance magazine might provide a good example.] For example, you may use terms that that you will likely never see in the Times(e.g. bootstrap), but should not dwell on technical points with no obvious ramifications for the reader (e.g. reporting F-statistics). Your goal for this paper is to convince a statistically-minded reader (e.g. a student in this class, or a student from another school who has taken an introductory statistics class) that you have addressed an interesting research question in a meaningful way. Even a reader with no background in statistics should be able to read your paper and get the gist of it.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -296,163 +453,6 @@
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Project Introduction</title>
-      <link>/group/00-group/</link>
-      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/group/00-group/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#project-related-material&#34;&gt;Project related material&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#groups&#34;&gt;Groups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#assignment&#34;&gt;Assignment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#general-rules&#34;&gt;General Rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#timeline&#34;&gt;Timeline&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#submission&#34;&gt;Submission&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#proposals-draft-and-final&#34;&gt;Proposals (draft and final)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#places-to-find-data&#34;&gt;Places to Find Data&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#health&#34;&gt;Health&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#economics&#34;&gt;Economics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#non-us-populations&#34;&gt;Non-US populations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#stem-higher-education&#34;&gt;STEM &amp;amp; Higher Education&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#time-use&#34;&gt;Time-Use&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#final-products-report-and-presentation&#34;&gt;Final Products: Report and Presentation&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#report&#34;&gt;Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#content-1&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tone&#34;&gt;Tone&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;project-related-material&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Project related material&lt;/h1&gt;
-&lt;p&gt;As a major component of this class, you (and your group) will conduct a statistical study on a topic of your choice. This task will require you to write a project proposal, acquire and analyze relevant data, present your results orally to the class, and hand in a written report describing your study and its findings. Your project must involve fitting a regression model. The project is an opportunity to show off what you’ve learned about data analysis, visualization, and statistical inference. It is a major component of the class, and successful completion is required to pass.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;groups&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Groups&lt;/h1&gt;
-&lt;p&gt;You will work in a group of three, of your choosing. For project related questions via email / Slack, please use your group name and cc/tag your group mates as necessary.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;assignment&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Assignment&lt;/h1&gt;
-&lt;p&gt;You should pose a problem that you find interesting and which may be addressed (at least in part) through the analysis of data. Many interesting quantitative questions (and perhaps even more uninteresting ones) involve the relationships among several variables. Recent projects have considered the following questions:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;What is gender pay gap in STEM workers?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Is alcohol use associated with incidents of intimate partner violence?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How is social support related to physical health and obesity?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Does prevalence of intergenerational households vary by region of the country?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How is income associated with total medical expenditures?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Are there differences in skin cancer testing rates by education and race?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How does the relationship between education and income vary by race/ethnicity?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You should pose the problem that you want to solve as precisely as possible at the outset. You should also make a hypothesis, a priori(before you analyze the data), about the results you expect to see. You may not propose a question without a succinct main hypothesis of one explanatory variable and one response variable; you may have up to 2 secondary hypotheses that you also explore.&lt;/p&gt;
-&lt;p&gt;We will be using data from IPUMS (see link below to a description of IPUMS for this project)&lt;/p&gt;
-&lt;p&gt;You might consider examples from previous Undergraduate Statistics Class Project winners to get a sense of the scope and presentation of a high quality project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;general-rules&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;General Rules&lt;/h1&gt;
-&lt;p&gt;You may discuss your project with other students, but each group will have a different topic, so there is a limit to how much you can help each other. You may consult other sources for information about the non-statistical, substantive issues in your problem, but you should credit these sources in your report. Feel free to consult with us about statistical questions. To foreshadow the presentation: note that everyone is expected to speak during the presentation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;timeline&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Timeline&lt;/h1&gt;
-&lt;p&gt;Please see the syllabus for due dates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;submission&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Submission&lt;/h1&gt;
-&lt;p&gt;All deliverables described above must be delivered electronically via Moodle by 11:55pm (five minutes before midnight) on the dates above. Only one person from the group should submit the group’s product for each checkpoint (with the exception of the Group Dynamic, which is individual).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;proposals-draft-and-final&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Proposals (draft and final)&lt;/h1&gt;
-&lt;p&gt;Count on brainstorming at least half a dozen serious ideas before you can groom one of them into a mature proposal.&lt;/p&gt;
-&lt;p&gt;For the most part, the choice of topic is left up to you. Try to pick something that’s interesting yet substantial and worth studying, and aim for a topic that you think nobody has tried before; remember that part of your overall grade will be based on originality.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;places-to-find-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Places to Find Data&lt;/h1&gt;
-&lt;p&gt;Finding the right data to answer your particular question is part of your responsibility for this assignment. You may also want to refine your research question so that it can be more clearly addressed by the data that you found. But be creative!&lt;/p&gt;
-&lt;p&gt;In order to help you narrow your choice and focus on appropriate data sets, as well as to maximize my ability to help you, projects can use data any of the IPUMS data, which are listed below and highlighted in more detail in the HTML file attached at the bottom:&lt;/p&gt;
-&lt;p&gt;IPUMS has many census, national and international survey datasets that are well-documented and cleaned.&lt;/p&gt;
-&lt;div id=&#34;health&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Health&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;National Health Interview Survey (health status, trends)&lt;/li&gt;
-&lt;li&gt;Medical Expenditure Panel Survey (health care, health care spending)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;economics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Economics&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Current Population Survey&lt;/li&gt;
-&lt;li&gt;Census &amp;amp; American Community Survey Data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;non-us-populations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Non-US populations&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Demographic and Health Surveys (low- and middle-income countries)&lt;/li&gt;
-&lt;li&gt;International Census Data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;stem-higher-education&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;STEM &amp;amp; Higher Education&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;time-use&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Time-Use&lt;/h2&gt;
-&lt;p&gt;Most projects will measure a quantitative or a binary response variable (we will cover logistic regression for binary outcomes after Spring Break and in enough time that you can complete the project).&lt;/p&gt;
-&lt;p&gt;Once I respond to your initial proposal, you will revise it (perhaps starting with a different dataset), then submit a new proposal that addresses our feedback. Supply essentially the same information required for the initial proposal, but give a bit more detail on the rationale for the study (i.e., why does this question matter? what is its relevance outside of this class?), revised hypotheses, and clearer proposed methods to test those hypotheses.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;content&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Content&lt;/h1&gt;
-&lt;p&gt;Your initial and revised proposals should contain the following content:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Group Members:&lt;/em&gt; List the members of your group&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Title:&lt;/em&gt; Your title&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Purpose: &lt;/em&gt;Describe the general topic/phenomenon you want to study, as well some focused questions that you hope to answer and specific hypotheses that you intend to assess.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Data: &lt;/em&gt;Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. Which IPUMS surveys, in which years? Describe the source of the data - was it a survey, and if so, how were people selected and how was the data collected - in a few sentences. You can look to the IPUMS descriptions for details.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Population: &lt;/em&gt;Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you’ll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Response Variable: &lt;/em&gt;What the response variable? What are its units? Estimate the range of possible values that it may take on.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Explanatory Variables: &lt;/em&gt;You should have one, primary explanatory variable that is your main hypothesis. You may have other explanatory variables associated with secondary hypotheses (again, no more than 2). Then you will also have explanatory variables that you want to control for – factors that may be associated with your primary explanatory and your response variables that you want to include in your multiple regression model to adjust your main association for those competing explanations. Demographics (age, sex, race) and socioeconomic status are common ones for individual-level survey data. Carefully define each variable and describe how each was measured (self-report/direct observation). For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement. You may want to add more variables later on, but you should have at least the explanatory variables associated with your hypotheses and 5 additional variables you plan to control for already.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;final-products-report-and-presentation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Final Products: Report and Presentation&lt;/h1&gt;
-&lt;div id=&#34;report&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Report&lt;/h2&gt;
-&lt;p&gt;The report itself should be a 3-page paper reporting the results of your project that includes the following:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Introduction:&lt;/em&gt; Background/significance of the research, and a clearly stated research question an hypothesis/hypotheses. (What you’re doing and why)
-In a few paragraphs (1-3), you should explain clearly and precisely what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper! You should have at least 1-3 citations to previous research in this area to support your ideas and show what has already been done and what gap you are filling.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Methods:&lt;/em&gt; The methods used to obtain and analyze the data (How you’re doing it)
-This should include a brief description of your data set. Some questions you should consider (though this is not an exhaustive list): What is the population that was sampled? How was the sample collected? What variables are included in your analysis? Where did they come from? What are units of measurement? How much missing data did you have and what did you do about it? How did you choose which variables to include in your model? What kind of model did you fit? How did you evaluate the assumptions of this model? Don’t tell us the results, just tell us the steps you took. Think of this is as like in a lab report that is reproducible – someone else should be able to download the same data, follow your steps, and get the same results.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Results:&lt;/em&gt; The results of the analysis - both descriptive text and tables, charts, or graphs (What you found)
-This section is an explanation of what your model tells us about the research question. You should interpret coefficients in context and explain their relevance. What does your model tell us about your research question and hypothesis? You may want to include negative results, but be careful about how you interpret them. For example, you may want to say something along the lines of: “we found no evidence that explanatory variable xxis associated with response variable yy,” or “explanatory variable xx did not provide any additional explanatory power above what was already conveyed by explanatory variable zz.” On other hand, you probably shouldn’t claim: “there is no relationship between xx and yy,” which is akin to accepting the null.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Discussion:&lt;/em&gt; A discussion of the research, the limitations of the current research, reasonableness of any assumptions made, possibilities of future work/studies that should be conducted, etc. (How your findings help answer your question, why your findings matter (or don’t!))&lt;/p&gt;
-&lt;p&gt;A summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. Also include a few sentences about the strength(s) of your analysis / study. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is not implied by your research.&lt;/p&gt;
-&lt;p&gt;The entire written summary must be no more than 3 pages (single spaced, Arial 11pt font with standard 1 inch margins).&lt;/p&gt;
-&lt;p&gt;In addition to the 3 pages with the main content you should have a title page which includes:
-- The title of the project and
-- a one-paragraph abstract (summary) of the entire project (&amp;lt;150 words)&lt;/p&gt;
-&lt;p&gt;The abstract should not consist of more than 5 or 6 sentences, but should relate what you studied and what you found. It need only convey a general sense of what you actually did. The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper.&lt;/p&gt;
-&lt;p&gt;References should be listed at the end of the report and do not count against the 3 page limit.&lt;/p&gt;
-&lt;p&gt;Example: You might submit a 4.5 page Word document that is consists of the title page, 3 pages of text/graphs and half page of references.&lt;/p&gt;
-&lt;p&gt;(Optional) You may include up to 5 additional pages of information about your project in an appendix (as part of the single uploaded file),this could include secondary analysis results that didn’t fit, figures to check your model assumptions, descriptive statistics / figures, extra charts/tables, etc. The optional appendix may be reviewed, but you should not plan on it. Your material in the 3 page report should be self-contained; no information deemed critical to the evaluation of your project should be included in the Appendix.&lt;/p&gt;
-&lt;p&gt;Your report should be submitted via email as an R Markdown (.Rmd) file and the corresponding rendered output (.pdf) file.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;content-1&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Content&lt;/h1&gt;
-&lt;p&gt;You should not need to present all of the R code that you wrote throughout the process of working on this project. Rather, the technical report should contain the minimal set of R code that is necessary to understand your results and findings in full. If you make a claim, it must be justified by explicit calculation. A knowledgeable reviewer should be able to compile your .Rmd file without modification, and verify every statement that you have made. All of the R code necessary to produce your figures and tables must appear in the technical report. In short, the technical report should enable a reviewer to reproduce your work in full.&lt;/p&gt;
-&lt;p&gt;The technical report is not simply a dump of all the R code you wrote during this project. Rather, it is a narrative, with technical details, that describes how you addressed your research question. You should not present tables or figures without a written explanation of the information that is supposed to be conveyed by that table or figure.&lt;/p&gt;
-&lt;p&gt;Keep in mind the distinction between data and information. Data is just numbers, whereas information is the result of analyzing that data and digesting it into meaningful ideas that human beings can understand. Your technical report should allow a reviewer to follow your steps from converting data into information. For example, simply displaying a table with the means and standard deviations of your variables is not meaningful. Writing a sentence that reiterates the content of the table (e.g. “the mean of variable xx was 34.5 and the standard deviation was 2.8…”) is equally meaningless. What you should strive to do is interpret these values in context (e.g. “although variables x1 and x2 have similar means, the spread of x1 is much larger, suggesting…”). Think of the text in the result section as a way to walk the reader through your tables / figures and to convey results that are important but not included in a table.&lt;/p&gt;
-&lt;p&gt;You should present figures and tables in your technical report in context. These items should be understandable on their own – in the sense that they have understandable titles, axis labels, legends, and captions. Someone glancing through your technical report should be able to make sense of your figures and tables without having to read the entire report. That said, you should also include a discussion of what you want the reader to learn from your figures and tables. Use the &lt;code&gt;stargazer&lt;/code&gt; package and consider plotting your results in a figure.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tone&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Tone&lt;/h1&gt;
-&lt;p&gt;This document should be written for peer reviewers, who comprehend statistics at least as well as you do. You should aim for a level of complexity that is more statistically sophisticated than an article in the Science section of The New York Times, but less sophisticated than an academic journal. [Chance magazine might provide a good example.] For example, you may use terms that that you will likely never see in the Times(e.g. bootstrap), but should not dwell on technical points with no obvious ramifications for the reader (e.g. reporting F-statistics). Your goal for this paper is to convince a statistically-minded reader (e.g. a student in this class, or a student from another school who has taken an introductory statistics class) that you have addressed an interesting research question in a meaningful way. Even a reader with no background in statistics should be able to read your paper and get the gist of it.&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
