@@ -1,0 +1,19 @@
+---
+title: "Group Formation"
+date: "2020-02-07"
+due_date: "2020-02-07"
+due_time: "11:59 PM"
+type: docs
+weight: 2
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+You'll need to find a group of 3 (you and 2 others) to work together throughout the semester on a project with a topic of your choosing.
+
+When you have your group, please come up with a group name.
+
+Then, fill out [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe3Wu2dsmn-8OYaWon88ApV9OHBXjyTxg2JTWUTNreAWO-ZFQ/viewform?usp=sf_link) with your group name and members.
