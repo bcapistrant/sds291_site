@@ -1,0 +1,19 @@
+---
+title: "Simple Linear Regression: Review & Wrap Up"
+linktitle: "5: SLR Review"
+date: "2020-02-10"
+read_date: "2020-02-10"
+menu:
+  reading:
+    parent: Readings
+    weight: 5
+type: docs
+---
+
+## Required
+
+- <i class="fas fa-book"></i> Chapters 0 - 2 in _STAT2_
+
+## Recommended
+
+- None

@@ -1,0 +1,19 @@
+---
+title: "Simple Linear Regression: ANOVA Table"
+linktitle: "4: Model Inference "
+date: "2020-02-05"
+read_date: "2020-02-05"
+menu:
+  reading:
+    parent: Readings
+    weight: 4
+type: docs
+---
+
+## Required
+
+- <i class="fas fa-book"></i> Chapter 2.2 in _STAT2_
+
+## Recommended
+
+- None

@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Multiple Regression</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/social-image.png</url>
       <title>Multiple Regression</title>
@@ -19,9 +19,27 @@
       <guid>/assignment/01-problem-set/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recommended&#34;&gt;Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#template-.rmd-file&#34;&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;#Required
-Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&gt;
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;p&gt;Questions 1.19, 1.21 (2nd Edition) or 1.8, 1.9 (1st Edition)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recommended&lt;/h1&gt;
+&lt;p&gt;Question 1.23 (2nd Edition) or 1.10 (1st Edition)&lt;/p&gt;
+&lt;p&gt;[Note: these questions will expect that you will have fit the regression model before characterizing the residuals]&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;template-.rmd-file&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/h1&gt;
+&lt;p&gt;There is a template RMarkdown file for thiese questions &lt;a href=&#34;http://sds291.netlify.com/HW/SDS291_HW1_Template.Rmd&#34;&gt;here.&lt;/a&gt; The link will download the &lt;code&gt;.RMd&lt;/code&gt; template file, which you can upload to the server as we did in class or open in the desktop version of RStudio.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -83,6 +101,59 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
 &lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-chalkboard-teacher&#34;&gt;&lt;/i&gt; Slides are &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Slides.html&#34;&gt;here&lt;/a&gt; (if interested, the raw &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Notes.Rmd&#34;&gt;Rmd code&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-clipboard-list&#34;&gt;&lt;/i&gt; Notes and Pea Activity are &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Notes.pdf&#34;&gt;here&lt;/a&gt; (if interested, the raw &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Notes.Rmd&#34;&gt;Rmd code&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1</title>
+      <link>/resources/01-textbookch1/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/01-textbookch1/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#rmarkdown&#34;&gt;RMarkdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chapter-1&#34;&gt;Chapter 1&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#examples-in-3-parts&#34;&gt;1.1 - Examples in 3 parts&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#part-1---example-1.1-loading-and-printing-the-data&#34;&gt;Part 1 - Example 1.1: Loading and Printing the Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#part-2---example-1.2-making-a-scatterplot&#34;&gt;Part 2 - Example 1.2: Making a Scatterplot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#part-3---example-1.3-fitting-a-regression-model&#34;&gt;Part 3 - Example 1.3: Fitting a Regression Model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assessing-conditions&#34;&gt;1.3 - Assessing Conditions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In an effort to spend more time explaining the &lt;code&gt;R&lt;/code&gt; syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes.&lt;/p&gt;
+&lt;p&gt;Note that these are based on the 2nd Edition of the data. The principles and steps are very similar for the 1st edition. For example, the 2nd edition uses Honda Accord prices, while the 1st edition used Porsche prices. 1st edition users can still use the &lt;code&gt;PorschePrice&lt;/code&gt; data from the &lt;code&gt;Stat2Data&lt;/code&gt; package.&lt;/p&gt;
+&lt;div id=&#34;rmarkdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;RMarkdown&lt;/h1&gt;
+&lt;p&gt;Here is a quick video overview of what’s going on in an RMarkdown file using the Smith College server.&lt;/p&gt;
+&lt;p&gt;{{&amp;lt; youtube KCKDULGkPbI&amp;gt;}}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;chapter-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Chapter 1&lt;/h1&gt;
+&lt;div id=&#34;examples-in-3-parts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1.1 - Examples in 3 parts&lt;/h2&gt;
+&lt;div id=&#34;part-1---example-1.1-loading-and-printing-the-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Part 1 - Example 1.1: Loading and Printing the Data&lt;/h3&gt;
+&lt;p&gt;{{&amp;lt; youtube F_tGm-Aj-4M &amp;gt;}}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;part-2---example-1.2-making-a-scatterplot&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Part 2 - Example 1.2: Making a Scatterplot&lt;/h3&gt;
+&lt;p&gt;{{&amp;lt; youtube O_oE3xfDOyE &amp;gt;}}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;part-3---example-1.3-fitting-a-regression-model&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Part 3 - Example 1.3: Fitting a Regression Model&lt;/h3&gt;
+&lt;p&gt;{{&amp;lt; youtube A24FVWmrzVI &amp;gt;}}&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assessing-conditions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1.3 - Assessing Conditions&lt;/h2&gt;
+&lt;p&gt;{{&amp;lt; youtube MAoN73IeNto &amp;gt;}}&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -178,7 +249,7 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
       <link>/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>/courses/example/example1/</guid>
-      <description>&lt;p&gt;In this tutorial, I&#39;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+      <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -191,6 +262,36 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fitting Regression Models</title>
+      <link>/class/02-class/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/class/02-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Original &lt;code&gt;.Rmd&lt;/code&gt; file we worked with in class is &lt;a href=&#34;http://sds291.netlify.com/02/02_Activity.Rmd&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Version after class with completed answers &lt;a href=&#34;http://sds291.netlify.com/02/02_Activity_afterClass.pdf&#34;&gt;as a knitted .pdf&lt;/a&gt; (and &lt;a href=&#34;http://sds291.netlify.com/02/02_Activity_afterClass.Rmd&#34;&gt;raw .Rmd&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Additional support and resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar to what we did today, check out a few videos in the &lt;a href=&#34;http://sds291.netlify.com/resources/&#34;&gt;Resources&lt;/a&gt; section that introduce RMarkdown and go through replicating the material in Chapter 1.1 to Chapter 1.3 of the textbook.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -507,6 +608,75 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
     </item>
     
     <item>
+      <title>Simple Linear Regression: Review &amp; Wrap Up</title>
+      <link>/reading/05-reading/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/05-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 0 - 2 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simple Linear Regression: ANOVA Table</title>
+      <link>/reading/04-reading/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/04-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2.2 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simple Linear Regression: Slope Inference</title>
+      <link>/reading/03-reading/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/03-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2.1 - 2.3 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Simple Linear Regression: Fitting Models</title>
       <link>/reading/02-reading/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
@@ -561,7 +731,7 @@ Questions 1.19, 1.21, 1.23 (2nd Edition) or 1.8, 1.9, 1.10 (1st Edition)&lt;/p&g
       <guid>/2019/07/12/writing-technical-content-in-academic/</guid>
       <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&#39;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
 &lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
 &lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
@@ -780,7 +950,7 @@ A Markdown aside is useful for displaying notices, hints, or definitions to your
       <guid>/publication/preprint/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including 
@@ -831,7 +1001,7 @@ date: 2019-09-01
  as a guide to the available options.&lt;/p&gt;
 &lt;p&gt;To set a 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;
-, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&#39;s folder.&lt;/p&gt;
+, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
 &lt;p&gt;For other tips, such as using math, see the guide on 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;
 .&lt;/p&gt;
@@ -962,7 +1132,7 @@ Three
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&#39;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
 &lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
 .reveal section h2,
@@ -1007,7 +1177,7 @@ Three
       <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt;
- of what you&#39;ll get in less than 10 minutes, or 
+ of what you&amp;rsquo;ll get in less than 10 minutes, or 
 &lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt;
  of personal, project, and business sites.&lt;/p&gt;
 &lt;ul&gt;
@@ -1196,7 +1366,7 @@ Three
 &lt;/div&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including 
@@ -1267,7 +1437,7 @@ Figure 1: A fancy pie chart.
 &lt;/div&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including 

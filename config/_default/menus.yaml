@@ -53,3 +53,5 @@ group:
 resources:
   - name: R and RStudio
     weight: 1
+  - name: Stat2 Textbook Example Replications
+    weight: 2

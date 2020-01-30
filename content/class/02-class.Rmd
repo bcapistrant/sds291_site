@@ -16,6 +16,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Slides & Course Materials
+## In-class Activity
 
-- R Markdown for In-Class Activity  [here](http://sds291.netlify.com/02_Activity.Rmd) 
+- Original `.Rmd` file we worked with in class is [here](http://sds291.netlify.com/02/02_Activity.Rmd) 
+
+- Version after class with completed answers [as a knitted .pdf](http://sds291.netlify.com/02/02_Activity_afterClass.pdf) (and [raw .Rmd](http://sds291.netlify.com/02/02_Activity_afterClass.Rmd))
+
+## Additional support and resources
+
+- Similar to what we did today, check out a few videos in the [Resources](http://sds291.netlify.com/resources/) section that introduce RMarkdown and go through replicating the material in Chapter 1.1 to Chapter 1.3 of the textbook.

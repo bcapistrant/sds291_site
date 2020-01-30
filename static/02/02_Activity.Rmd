@@ -1,0 +1,81 @@
+---
+title: "SDS 291 - Multiple Regression - Day 02"
+date: "January 29, 2020"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(Stat2Data)
+data("LeafWidth")
+```
+
+Biologists know that the leaves on plants tend to get smaller as temperatires rise. The dataset `LeafWidth` has fata on samples of leaves from the species _Dodonaea viscosa_ subsp, _angustissima_, which have been collected in a certain region of South Australia for man years.
+
+The variable `Width` is the average width, in mm, of leaves, taken at their widest points, that wer collected in a given year.
+
+
+## 1. Scatterplot of Leaf Width (mm) and Year
+
+```{r scatter, echo=FALSE, fig.height=4}
+qplot(x=Year, y=Width, data=LeafWidth)
+```
+
+### Describe the scatterplot in words.
+
+
+
+
+## 2. Find the least squares regression line for predicting leaf width based on year
+
+```{r reg}
+model_width<-lm(Width~Year, data=LeafWidth)
+summary(model_width)
+```
+
+
+### Write the fitted regression model
+
+### Interpret the value of the slope for the fitted model in the context of this setting.
+
+
+
+
+## 3. Assessing the model
+
+## What leaf width would the fitted model predict a leaf in 1994 would have?
+
+## Find the residual 
+
+[hint: do the calculation of the fitted value by hand, find the actual number from the data, and calculate the residual from there]
+
+```{r residual}
+LeafWidth %>%
+  filter(Year==1994) %>%
+  head()
+```
+
+
+## 4. Visualize the model
+
+
+### Make a scatterplot that includes the regression line
+
+```{r , fig.height=4}
+qplot(x=Year, y=Width, data=LeafWidth) + geom_smooth(method="lm", se=FALSE)
+```
+
+
+## Make a histogram of the residuals
+
+```{r , fig.height=4, message=FALSE}
+qplot(x=model_width$residuals, geom="histogram")
+```
+
+## Make a probability plot and residual fitted plot
+
+```{r , fig.height=4, message=FALSE}
+plot(model_width, which=c(1:2))
+```
