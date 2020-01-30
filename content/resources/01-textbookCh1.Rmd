@@ -4,7 +4,7 @@ date: "2020-01-27"
 menu:
   resources:
     parent: Texbook
-    weight: 2
+    weight: 1
 type: docs
 weight: 1
 output:
@@ -20,7 +20,9 @@ Note that these are based on the 2nd Edition of the data. The principles and ste
 
 Here is a quick video overview of what's going on in an  RMarkdown file using the Smith College server.
 
-{{< youtube KCKDULGkPbI>}}
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'KCKDULGkPbI')
+```
 
 
 # Chapter 1
@@ -29,16 +31,25 @@ Here is a quick video overview of what's going on in an  RMarkdown file using th
 
 ### Part 1 - Example 1.1: Loading and Printing the Data
 
-{{< youtube F_tGm-Aj-4M >}}
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'F_tGm-Aj-4M')
+```
+
 
 ### Part 2 - Example 1.2: Making a Scatterplot
 
-{{< youtube O_oE3xfDOyE >}}
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'O_oE3xfDOyE')
+```
 
 ### Part 3 - Example 1.3: Fitting a Regression Model
 
-{{< youtube A24FVWmrzVI >}}
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'A24FVWmrzVI')
+```
 
 ## 1.3 - Assessing Conditions
 
-{{< youtube MAoN73IeNto >}}
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'MAoN73IeNto')
+```
