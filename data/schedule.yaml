@@ -24,7 +24,7 @@ lessons:
   
   - title: '<i class="fas fa-users"></i> **Group Roster**'
     date: "February 7"
-    #group: "01-group"
+    group: "01-group"
 
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: Review and Wrap Up**'
     date: "February 10"
