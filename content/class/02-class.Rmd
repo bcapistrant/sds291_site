@@ -1,6 +1,6 @@
 ---
 title: "Fitting Regression Models"
-linktitle: "1: Fitting Regression Models"
+linktitle: "2: Fitting Regression Models"
 date: "2020-01-29"
 class_date: "2020-01-29"
 menu:
