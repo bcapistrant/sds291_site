@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Groups | Multiple Regression</title>
+    <title>Group Project details | Multiple Regression</title>
     <link>/group/</link>
       <atom:link href="/group/index.xml" rel="self" type="application/rss+xml" />
-    <description>Groups</description>
+    <description>Group Project details</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/social-image.png</url>
-      <title>Groups</title>
+      <title>Group Project details</title>
       <link>/group/</link>
     </image>
     
