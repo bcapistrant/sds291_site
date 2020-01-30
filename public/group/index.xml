@@ -5,7 +5,7 @@
     <link>/group/</link>
       <atom:link href="/group/index.xml" rel="self" type="application/rss+xml" />
     <description>Group Project details</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
       <url>/img/social-image.png</url>
       <title>Group Project details</title>
@@ -13,7 +13,21 @@
     </image>
     
     <item>
-      <title>Project Intro</title>
+      <title>Gorming a Group</title>
+      <link>/group/01-group/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/group/01-group/</guid>
+      <description>
+
+
+&lt;p&gt;You’ll need to find a group of 3 (you and 2 others) to work together throughout the semester on a project with a topic of your choosing.&lt;/p&gt;
+&lt;p&gt;When you have your group, please come up with a group name.&lt;/p&gt;
+&lt;p&gt;Then, fill out &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSe3Wu2dsmn-8OYaWon88ApV9OHBXjyTxg2JTWUTNreAWO-ZFQ/viewform?usp=sf_link&#34;&gt;this Google Form&lt;/a&gt; with your group name and members.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Introduction</title>
       <link>/group/00-group/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/group/00-group/</guid>
@@ -166,20 +180,6 @@ This section is an explanation of what your model tells us about the research qu
 &lt;h1&gt;Tone&lt;/h1&gt;
 &lt;p&gt;This document should be written for peer reviewers, who comprehend statistics at least as well as you do. You should aim for a level of complexity that is more statistically sophisticated than an article in the Science section of The New York Times, but less sophisticated than an academic journal. [Chance magazine might provide a good example.] For example, you may use terms that that you will likely never see in the Times(e.g. bootstrap), but should not dwell on technical points with no obvious ramifications for the reader (e.g. reporting F-statistics). Your goal for this paper is to convince a statistically-minded reader (e.g. a student in this class, or a student from another school who has taken an introductory statistics class) that you have addressed an interesting research question in a meaningful way. Even a reader with no background in statistics should be able to read your paper and get the gist of it.&lt;/p&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Group Formation</title>
-      <link>/group/01-group/</link>
-      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/group/01-group/</guid>
-      <description>
-
-
-&lt;p&gt;You’ll need to find a group of 3 (you and 2 others) to work together throughout the semester on a project with a topic of your choosing.&lt;/p&gt;
-&lt;p&gt;When you have your group, please come up with a group name.&lt;/p&gt;
-&lt;p&gt;Then, fill out &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSe3Wu2dsmn-8OYaWon88ApV9OHBXjyTxg2JTWUTNreAWO-ZFQ/viewform?usp=sf_link&#34;&gt;this Google Form&lt;/a&gt; with your group name and members.&lt;/p&gt;
 </description>
     </item>
     

@@ -1,13 +1,17 @@
 ---
-title: "Project Intro"
+title: "Project Introduction"
 date: "2020-02-07"
 due_date: "2020-02-07"
 due_time: "11:59 PM"
 type: docs
-weight: 1
+menu:
+  group:
+    parent: Introduction
+    weight: 2
 output:
   blogdown::html_page:
     toc: true
+weight: 2
 editor_options: 
   chunk_output_type: console
 ---

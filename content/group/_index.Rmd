@@ -9,4 +9,5 @@ weight: 1
 ---
 
 
+All of the relevant material for the course project will be here, from forming your group, coming up with an idea, the available data through to completion of the project and what the final report / presentation will entail. It will be updated periodically with additional information about the next pending assignments.
 
