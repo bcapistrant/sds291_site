@@ -65,5 +65,43 @@
 </description>
     </item>
     
+    <item>
+      <title>Inference for Slope Estimates</title>
+      <link>/class/03-class/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/03-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pre-class&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Watch this “lecture” before class (it’s ~20 minutes)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.Rmd&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;(http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd)&#34;&gt;template&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Additional support and resources&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

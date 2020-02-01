@@ -625,6 +625,44 @@ This section is an explanation of what your model tells us about the research qu
     </item>
     
     <item>
+      <title>Inference for Slope Estimates</title>
+      <link>/class/03-class/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/03-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pre-class&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Watch this “lecture” before class (it’s ~20 minutes)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.Rmd&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;(http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd)&#34;&gt;template&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Additional support and resources&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How to Do Homework in RStudio</title>
       <link>/resources/homework/</link>
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
@@ -855,8 +893,14 @@ This section is an explanation of what your model tells us about the research qu
 &lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Required&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2.1 - 2.3 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2.1 - 2.3 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Watch this “lecture” before class (it’s ~20 minutes)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recommended&lt;/h2&gt;
@@ -2500,8 +2544,8 @@ Figure 1: A fancy pie chart.
 &lt;li&gt;&lt;a href=&#34;#required-readings&#34;&gt;&lt;i class=&#34;fas fa-book-reader&#34;&gt;&lt;/i&gt; Required Readings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#assignments&#34;&gt;&lt;i class=&#34;fas fa-user-check&#34;&gt;&lt;/i&gt; Assignments&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#homework&#34;&gt;Homework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#final-project&#34;&gt;Final Project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tests&#34;&gt;Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#group-project&#34;&gt;Group Project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#take-home-individual-projects&#34;&gt;Take Home, Individual Projects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#quizzes&#34;&gt;Quizzes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#grading-policy&#34;&gt;Grading Policy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -2592,18 +2636,18 @@ Figure 1: A fancy pie chart.
 &lt;div id=&#34;assignments&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;i class=&#34;fas fa-user-check&#34;&gt;&lt;/i&gt; Assignments&lt;/h2&gt;
 &lt;p&gt;I will detail the policy for this course below. Basically, work hard in practice, try to learn stuff, work collaboratively, ask for lots of help, and don’t cheat. Don’t be that person.&lt;/p&gt;
-&lt;p&gt;The course assignments will include a homework assignment and quizes most weeks of the course, two exams, and a group project with sections/drafts due throughout the course culminating in a final presentation and paper. The homework and the project are the backbone of this course and must be completed satisfactorily to receive an A or B grade in the course.&lt;/p&gt;
+&lt;p&gt;The course assignments will include a homework assignment and quizes most weeks of the course, three individual, take-home projects, and a group project with sections/drafts due throughout the course culminating in a final presentation and paper. The homework and the group project are the backbone of this course and must be completed satisfactorily to receive an A or B grade in the course.&lt;/p&gt;
 &lt;div id=&#34;homework&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Homework&lt;/h3&gt;
 &lt;p&gt;Practice problems (mainly from the book) will be assigned (almost) every week on Monday in class and on Moodle; homework will be due via Moodle before 11:55AM of the following Monday. Homework should be completed in &lt;code&gt;RMarkdown&lt;/code&gt;; both the &lt;code&gt;RMarkdown&lt;/code&gt; and resulting knitted files should be submitted via Moodle. Homework will be graded, and you will be occasionally be asked to present your solution to a homework problem to the class. &lt;em&gt;&lt;strong&gt;Late homeworks will have 25% off if submitted within 48 hours of the deadline and no points thereafter.&lt;/strong&gt; Everyone has one free 48 hour extension that you may take whenever you need it. Please just let me know when you plan to take it.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;final-project&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Final Project&lt;/h3&gt;
+&lt;div id=&#34;group-project&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Group Project&lt;/h3&gt;
 &lt;p&gt;A significant, culminating activity for this class will be to conduct a statistical investigation on a question of interest to you. These projects will be done in groups of three of your choosing. You will use existing data - publicly and freely available data online, or from faculty research you may be involved in. The project will be broken into multiple component parts due throughout the semester, culminating in a 10 minute oral presenation (with slides) in the last week of class and a final written report due the last day of class. We will spend time in class discussing questions of a reasonable scope for this project, reviewing available data sources, and writing a proposal and resulting report.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;tests&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tests&lt;/h3&gt;
-&lt;p&gt;There will be three in-class tests throughout the semester. More details about the format and content of the exams will be available closer to the exam. There will not be a final exam during finals period; your project report will be due during that time.&lt;/p&gt;
+&lt;div id=&#34;take-home-individual-projects&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Take Home, Individual Projects&lt;/h3&gt;
+&lt;p&gt;There will be three, shorter take-home projects throughout the semester. More details about the format and content of the projects will be available closer to the projects. There will not be a final exam during finals period; your project report will be due during that time.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;quizzes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Quizzes&lt;/h3&gt;
@@ -2611,13 +2655,13 @@ Figure 1: A fancy pie chart.
 &lt;/div&gt;
 &lt;div id=&#34;grading-policy&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Grading Policy&lt;/h3&gt;
-&lt;p&gt;Course grades will be a weighted average of the grades on your project, tests, homework, and quizzes. A small amount of your grade for participation includes class attendance, participation in class activities and discussions, as well as professional conduct. Professional conduct expectations include: treating classmates, guest speakers, and instructors with respect; ensuring that all communication is done in a respectful and courteous manner - this includes email.&lt;/p&gt;
+&lt;p&gt;Course grades will be a weighted average of the grades on your group project, take home inidividual projects, homework, and quizzes. A small amount of your grade for participation includes class attendance, participation in class activities and discussions, as well as professional conduct. Professional conduct expectations include: treating classmates, guest speakers, and instructors with respect; ensuring that all communication is done in a respectful and courteous manner - this includes email.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;25%&lt;/strong&gt; of your grade will be determined by a semester-long group project, including progress and success on small assignments throughout the semester, as well as a written paper and a poster presentation given at the end of the semester.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;25%&lt;/strong&gt; of your grade will be determined by weekly homeworks practicing implementation of concepts in &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;10%&lt;/strong&gt; of your grade will be determined by a first test on simple linear regression.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;10%&lt;/strong&gt; of your grade will be determined by a second test on multiple linear regression.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;10%&lt;/strong&gt; of your grade will be determined by a third test on logistic regression.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;10%&lt;/strong&gt; of your grade will be determined by a first individual, take home project on simple linear regression.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;10%&lt;/strong&gt; of your grade will be determined by a second individual, take home project on multiple linear regression.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;10%&lt;/strong&gt; of your grade will be determined by a third individual, take home project on logistic regression.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;10%&lt;/strong&gt; of your grade will be determined by in-class projects and reading responses.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;5%&lt;/strong&gt; of your grade will be determined by weekly Moodle quizzes&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;5%&lt;/strong&gt; of your grade will be determined by your attendance and participation. Generally, attend class, ask and answer questions in class and/or on Slack.&lt;/p&gt;&lt;/li&gt;
@@ -2668,7 +2712,7 @@ Figure 1: A fancy pie chart.
 &lt;/div&gt;
 &lt;div id=&#34;collaboration&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Collaboration&lt;/h3&gt;
-&lt;p&gt;Much of this course will operate on a collaborative basis, and you are expected encouraged and to work together with a partner or in small groups to study, complete homework assignments, and prepare for exams. However, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of &lt;code&gt;R&lt;/code&gt; code from another student is not acceptable and will receive no credit. All students are bound by the Smith College Honor Code.&lt;/p&gt;
+&lt;p&gt;Much of this course will operate on a collaborative basis, and you are expected encouraged and to work together with a partner or in small groups to study, complete homework assignments, and prepare for course projects. However, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of &lt;code&gt;R&lt;/code&gt; code from another student is not acceptable and will receive no credit. All students are bound by the Smith College Honor Code.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;written-and-oral-communication-skills&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Written and Oral Communication Skills&lt;/h3&gt;
@@ -2691,7 +2735,7 @@ articulates general expectations for students’ conduct throughout the course. 
 &lt;p&gt;Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.
 Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of &lt;code&gt;R&lt;/code&gt; code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take-home projects should be completed independently and should not be discussed with other students during the open exam/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.&lt;/p&gt;
+&lt;p&gt;Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of &lt;code&gt;R&lt;/code&gt; code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take-home projects should be completed independently and should not be discussed with other students during the open individual take home project/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.&lt;/p&gt;
 &lt;p&gt;With this in mind, I note that many of the materials used in this course build substantially from previous course instructors’ work, namely Ben Baumer, Amelia McNamara, Miles Ott, as well as contributions and insights on this syllabus from Chad Topaz, Jude Higdon, and Steven Miller. I thank them for their work and willigness to share these materials.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;course-accomodations&#34; class=&#34;section level3&#34;&gt;

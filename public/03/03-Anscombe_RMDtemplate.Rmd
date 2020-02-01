@@ -1,0 +1,162 @@
+---
+title: "Simple Linear Regression"
+author: "YOUR NAME"
+date:   "TODAY'S DATE"
+output: pdf_document
+---
+
+```{r include=FALSE}
+# Some customization.  You can alter or delete as desired (if you know what you are doing).
+
+# This changes the default colors in lattice plots.
+#trellis.par.set(theme=theme.mosaic())  
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy=FALSE,     # display code as typed
+  size="small"    # slightly smaller font for code
+)
+```
+
+
+# Bring in the packages and the data
+```{r, message=FALSE, error=FALSE}
+require(tidyverse)  # loading the data management suite of tools
+require(ggplot2)    # the plotting functions for making graphs  
+data("anscombe")    # the data we will be using - this brings it into R memory for you to use
+```
+
+## Choose - Scatterplot
+
+As a first step to choosing an appropriate model, produce a scatterplot of the variables of interest:
+
+```{r}
+ggplot(data = anscombe, aes(x = x1, y = y1))  + #identifying the dataset and variable names
+    geom_point()                              # Plot the scatterplot 
+```
+
+`qplot`, or "quick" plot, is part of the ggplot/tidyverse package. This is a good way to get basic descriptive visualizations - histograms, boxplots, scatterplots, etc.  Since you specify an x and a y value, the default is to provide a scatterplot; for other specifications, you might need more code.
+
+1. Describe the relationship seen in the scatterplot above.  Think about each of the following 5 dimensions of scatterplots in your answer:
+
+- *Direction* (positive/negative)
+- *Linearity* (is there a curve or shape?)
+- *Unusual Observations* (outliers or points that don't follow the same pattern?)
+- *Strength* of relationship (are dots close together along a line or more spread out?)
+- *Magnitude* of the relationship (is the slope steep or shallow?)
+
+
+
+
+1. Write the equation for the **hypothetical model** we would like to fit?
+
+
+
+## Fit - Estimating the Model
+Use the `lm()` function to fit this model. Remember to save the regression model with a name (here, `m1`). Then use the `summary()` function to view the details of the model output.
+
+```{r}
+
+#fit the regression model
+m1<-lm(y1 ~ x1 , data = anscombe)
+summary(m1)
+
+#visualize the regression model
+ggplot(data = anscombe, aes(x = x1, y = y1))  +
+    geom_point() +           # Plot the scatterplot 
+    geom_smooth(method=lm,   # Add linear regression line
+                se=FALSE)    # Don't add shaded confidence region
+```
+
+
+1. Write the **fitted** regression equation.
+
+1. Interpret the values of the Intercept and of x1, respectively, in a sentence.
+
+1. What value of y1 would you expect if x1 was 6.5?  [Note: you can do the math from the equation above or get R to do the prediction for you - see below]
+
+```{r, error=FALSE, message=FALSE}
+library(mosaic)
+ans_predict<-makeFun(m1)
+ans_predict(x1=6.5)
+```
+
+# Assess - Is a linear regression model a good fit for these data?
+
+## Residuals and Predictions
+
+To bring the residuals into a dataframe to use and for `ggplot` to plot, we'll use the `broom` package (think of a broom sweeping up the messy regression results into a pile) to save the actual/observed and fitted/predicted values and the residuals together into a dataframe we will call `m1_data`.
+
+```{r, error=FALSE, message=FALSE, warning=FALSE}
+library(broom)
+m1_data<-augment(m1)
+#View(m1_data)
+```
+
+1. Find the residual for where x1=8.
+
+## Regression Assumptions
+
+1. Generate relevant plots to evaluate regression assumptions.  
+
+Note, there are a few ways to do this. One uses "base" R plots and the other uses `ggplot`; they get you the same information, but `ggplot` is more aesthetically pleasing, easier to modify, more flexible in terms of format, etc.
+```{r}
+plot(m1, which=c(1:2))
+```
+
+# Fitted-Residuals Plot
+
+```{r fitted-residual plot}
+ggplot(data = m1_data, aes(x = .fitted, y = .resid)) + geom_point()
+```
+
+## Q-Q Plot
+
+```{r qqplot, fig.height=4}
+ggplot(data = m1_data, aes(sample = .resid)) + geom_qq()
+```
+
+## Histogram of Residuals
+
+```{r histogram of residuals, fig.height=4}
+ggplot(data = m1_data, aes(x = .resid)) + geom_histogram()
+```
+
+1. Evaluate the regression plots with respect to the regression assumptions.
+
+# Hypothesis testing
+
+1. Test the hypothesis that x1 has a linear relationship with y1. Report and interpret the p-value for the test. [Note: be sure the state the null and alternative hypotheses for the test]
+
+1. Find and interpret (in a complete sentence) a 95% confidence interval for the slope.
+
+```{r}
+confint(m1)
+```
+
+# More practice
+
+## Residual Squared Error
+1. Practice calculating the RSE in R.  Explain line by line what's happening in the code below.
+
+# Regression/residual standard error
+
+$\hat{\sigma_{\epsilon}} = \sqrt{\frac{\sum(y - \bar{y}) ^2}{n-2}} = \sqrt{\frac{SSE}{n-2}}$
+
+```{r SSE RSE}
+SSE <- sum((m1_data$.resid)^2)
+SSE
+RSE<-sqrt(SSE/9)
+RSE
+```
+
+1. Do you get the same answers as what's reported in the linear model results and ANOVA table (we'll talk more about the ANOVA table next class -- just see if you can find the same number for now)
+
+```{r linear model and anova table}
+summary(m1)
+anova(m1)
+```
+
+1. Interpret the residual standard error in a sentence.
+

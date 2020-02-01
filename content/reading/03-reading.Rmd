@@ -14,6 +14,15 @@ type: docs
 
 - <i class="fas fa-book"></i> Chapter 2.1 - 2.3 in _STAT2_
 
+- Watch this "lecture" before class (it's ~20 minutes)
+
+
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'VhuC5J_bsZw')
+```
+
+
+
 ## Recommended
 
 - None

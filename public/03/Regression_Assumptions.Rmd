@@ -1,0 +1,343 @@
+---
+title: "Sections 1.2-3 - Assssing Conditions for a Simple Linear Model"
+author: "Stat2"
+date: "July 3, 2018"
+output:
+  pdf_document: default
+---
+
+Load needed packages.
+```{r message=FALSE, warning=FALSE}
+library(Stat2Data)
+library(e1071) #used to create a different type of probability plot with probplot() funtion
+```
+
+EXAMPLE 1.5 Accord prices (continued)
+
+Get the dataframe with **AccordPrice** data.
+```{r}
+data(AccordPrice)
+str(AccordPrice)
+```
+
+Find the least-squares regression line.
+```{r}
+regmodel=lm(Price~Mileage, data=AccordPrice)
+summary(regmodel)
+```
+
+The fitted values and many other statistics are stored in the regmodel object.
+```{r}
+fits=regmodel$fitted.values
+fits
+```
+
+The residuals are also stored in the regmodel object.  These will be very useful in checking conditions.
+```{r}
+resids=regmodel$residuals   #store the residual values in a varaible named "resids"
+resids
+```
+
+EXAMPLE 1.5 Accord prices (continued) 
+
+Compute the standard error of regression (by formula)
+```{r}
+n=length(AccordPrice$Mileage)
+SSE=sum(resids^2)                      #Sum of squared errors
+Se=sqrt(SSE/(n-2))
+Se
+```
+Note that you can find this value in the regression summary, labeled as "Resiudal standard error."
+
+The code below will generate plots showing different sorts of results for residual versus fits and normal quantile plots. 
+
+FIGURE 1.5 Residuals versus fitted values plot when linearity and constant variance conditions hold
+
+```{r}
+## ORIGINAL
+set.seed(11)    # for replcating the graphs
+residual=rnorm(100)
+YHat=runif(100,20,50)
+df_het<-as.data.frame(cbind(YHat,residual))
+plot(df_het$residual~df_het$YHat,ylim=c(-3,3),cex.lab=1.5,cex.axis=1.5,cex=1.5)
+abline(0,0,col="darkblue")
+
+
+## BENS VERSION
+
+library(tidyverse)
+library(ggridges)
+
+#THIS WORKS
+res1 <- rnorm(1000)
+YHat1 <- runif(1000,20,50)
+residuals_1<-as.data.frame(cbind(YHat1,res1))
+residuals_1$YHat2 <- cut(residuals_1$YHat1, seq(20, 50, 2), include.lowest = TRUE)
+
+ggplot(residuals_1,aes(x = res1, y = YHat2)) + 
+  geom_density_ridges() + theme(axis.text.x = element_text(angle=45)) +
+  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
+  #theme(axis.text.x = element_text(angle=45)) +
+  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
+                             "30", "32", "34", "36", "38",
+                             "40", "42", "44", "46", "48")) +
+  coord_flip()
+
+
+constant_1<-ggplot(residuals_1,aes(x = res1, y = YHat2)) + 
+  geom_density_ridges()  +
+  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
+  #theme(axis.text.x = element_text(angle=45)) +
+  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
+                             "30", "32", "34", "36", "38",
+                             "40", "42", "44", "46", "48")) +
+  geom_vline(xintercept = c(-1,1), color="black", size=.3 , linetype = "dashed") + 
+  geom_vline(xintercept = c(-2,2), color="black", size=.3 )
+
+constant_4850<-
+  constant_1 + 
+  geom_vline(xintercept = c(-1,1), color="red", size=.3, linetype="dashed") +
+  geom_vline(xintercept = c(-2,2), color="red", size=.3)
+
+constant_2022<-
+  constant_1 +
+  geom_vline(xintercept = c(-1,1), color="blue", size=.3, linetype="dashed") +
+  geom_vline(xintercept = c(-2,2), color="blue", size=.3)
+
+
+
+```
+
+FIGURE 1.6 Residuals versus fitted values plots illustrating problems with conditions
+
+FIGURE 1.6a - nonlinearity
+```{r}
+YHat=runif(100,20,50)
+newresidual=rnorm(100)+0.05*(YHat-32)^2
+residual=(newresidual-mean(newresidual))/sd(newresidual)
+plot(residual~YHat,cex.lab=1.5,cex.axis=1.5,cex=1.5)
+abline(0,0,col="darkblue")
+
+
+#THIS WORKS
+set.seed(11)
+YHat_nl <- runif(1000,20,50)
+newres_nl <- rnorm(1000)+0.05*(YHat_nl-32)^2
+res_nl=(newres_nl-mean(newres_nl))/sd(newres_nl)
+residuals_nl<-as.data.frame(cbind(YHat_nl,res_nl))
+
+
+nl_scatter <- qplot(x=YHat_nl, y=res_nl, data=residuals_nl) + theme_bw() +
+  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") +
+  geom_hline(yintercept = 0, color="black", size=.3 , linetype = "dashed")
+nl_scatter
+
+residuals_nl$YHat_nl2 <- cut(residuals_nl$YHat_nl, seq(20, 50, 2), include.lowest = TRUE)
+
+nl_ridge <- ggplot(residuals_nl,aes(x = res_nl, y = YHat_nl2)) + 
+  geom_density_ridges() +coord_flip() + theme_bw() + 
+  #geom_vline(xintercept = 0, color="blue", size=.5 ) + 
+  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
+  #theme(axis.text.x = element_text(angle=45)) +
+  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
+                             "30", "32", "34", "36", "38",
+                             "40", "42", "44", "46", "48"))
+
+```
+
+FIGURE 1.6b - nonconstant variability
+```{r}
+YHat=runif(100,20,50)
+newresidual=(YHat-19)*rnorm(100)
+residual=(newresidual-mean(newresidual))/sd(newresidual)
+plot(residual~YHat,cex.lab=1.5,cex.axis=1.5,cex=1.5,ylim=c(-3,3))
+abline(0,0,col="darkblue")
+
+
+YHat_nc <- runif(10000,20,50)
+newres_nc <- rnorm(10000)*(YHat_nc-19)
+res_nc=(newres_nc-mean(newres_nc))/sd(newres_nc)
+residuals_nc<-as.data.frame(cbind(YHat_nc,res_nc))
+qplot(x=YHat_nc, y=res_nc, data=residuals_nc)
+
+residuals_nc$YHat_nc2 <- cut(residuals_nc$YHat_nc, seq(20, 50, 2), include.lowest = TRUE)
+
+ggplot(residuals_nc,aes(x = res_nc, y = YHat_nc2)) + 
+  geom_density_ridges() + theme_bw() +
+  #geom_vline(xintercept = 0, color="blue", size=.5 ) + 
+  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
+  #theme(axis.text.x = element_text(angle=45)) +
+  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
+                             "30", "32", "34", "36", "38",
+                             "40", "42", "44", "46", "48")) +
+  coord_flip() 
+
+
+# residuals_nc %>%
+#   filter(YHat_nc2=="[20,22]") %>%
+#   summarise(mean_1stgrp = mean(res_nc),
+#          sd_1stgrp=sd(res_nc)) %>%
+#   mutate(l1sd=mean_1stgrp - sd_1stgrp,
+#          u1sd=mean_1stgrp + sd_1stgrp,
+#          l2sd=mean_1stgrp - (2*sd_1stgrp),
+#          u2sd=mean_1stgrp + (2*sd_1stgrp),
+#     )
+# 
+# residuals_nc %>%
+#     filter(YHat_nc2=="(48,50]") %>%
+#   summarise(mean_1stgrp = mean(res_nc),
+#          sd_1stgrp=sd(res_nc)) %>%
+#   mutate(l1sd=mean_1stgrp - sd_1stgrp,
+#          u1sd=mean_1stgrp + sd_1stgrp,
+#          l2sd=mean_1stgrp - (2*sd_1stgrp),
+#          u2sd=mean_1stgrp + (2*sd_1stgrp),
+#     )
+
+ggplot(residuals_nc,aes(x = res_nc, y = YHat_nc2)) + 
+  geom_density_ridges() + theme_bw() +
+  geom_vline(xintercept = c(-1,1), color="black", size=.3 , linetype = "dashed") + 
+  geom_vline(xintercept = c(-2,2), color="black", size=.3 ) + 
+  #geom_vline(xintercept = c(-1.6988,1.622518), color="red", size=.3, linetype="dashed") +
+  #geom_vline(xintercept = c(-3.359519,3.283197), color="red", size=.3) +
+  #geom_vline(xintercept = c(-0.110156,0.1220279), color="blue", size=.3, linetype="dashed") +
+  #geom_vline(xintercept = c(-0.226248,0.2381198), color="blue", size=.3) +
+  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
+  #theme(axis.text.x = element_text(angle=45)) +
+  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
+                             "30", "32", "34", "36", "38",
+                             "40", "42", "44", "46", "48"))
+
+
+
+
+residuals_nc %>%
+  filter(YHat_nc2=="[20,22]") %>%
+  summarise(mean_1stgrp = mean(res_nc),
+         sd_1stgrp=sd(res_nc)) %>%
+  mutate(l1sd=mean_1stgrp - sd_1stgrp,
+         u1sd=mean_1stgrp + sd_1stgrp,
+         l2sd=mean_1stgrp - (2*sd_1stgrp),
+         u2sd=mean_1stgrp + (2*sd_1stgrp),
+    )
+
+residuals_nc %>%
+    filter(YHat_nc2=="(48,50]") %>%
+  summarise(mean_1stgrp = mean(res_nc),
+         sd_1stgrp=sd(res_nc)) %>%
+  mutate(l1sd=mean_1stgrp - sd_1stgrp,
+         u1sd=mean_1stgrp + sd_1stgrp,
+         l2sd=mean_1stgrp - (2*sd_1stgrp),
+         u2sd=mean_1stgrp + (2*sd_1stgrp),
+    )
+
+```
+
+FIGURE 1.6c - Problem with linearity and constant variance
+This example uses the Perch data, then transforms.
+```{r}
+data(Perch)
+model1=lm(Weight~Length,data=Perch)
+YHat=(model1$fitted+400)/50
+newresidual=model1$residual
+residual=(newresidual-mean(newresidual))/sd(newresidual)
+plot(residual~YHat,cex.lab=1.5,cex.axis=1.5,cex=1.5,ylim=c(-3,3))
+abline(0,0,col="darkblue")
+```
+
+FIGURE 1.7 Examples of normal quantile plots
+
+FIGURE 1.7a  A "good" example
+```{r}
+residual=rnorm(100)
+qqnorm(residual,ylab="Residual",cex.lab=1.5,cex.axis=1.5,cex=1.5,main=NULL)
+qqline(residual,col="darkblue")
+```
+
+FIGURE 1.7b  Skewed residuals
+```{r}
+residual=rexp(100)
+qqnorm(residual,ylab="Residual",cex.lab=1.5,cex.axis=1.5,cex=1.5,main=NULL)
+qqline(residual,col="darkblue")
+```
+
+FIGURE 1.7c  Long tails.
+
+This example uses MetroHealth83 data from first edition.
+```{r}
+data("MetroHealth83")
+model2=lm(NumMDs~NumHospitals,data=MetroHealth83)
+newresidual=model2$residual
+residual=(newresidual-mean(newresidual))/sd(newresidual)
+qqnorm(residual,ylab="Residual",cex.lab=1.5,cex.axis=1.5,cex=1.5,main=NULL)
+qqline(residual,col="darkblue")
+```
+
+FIGURE 1.8 Examples of normal probability plots
+
+
+
+Figure 1.8a Shows normal probability plots from Minitab, which are less common in R.  Most R applications tend to use the QQ plot instead. There is a probplot function in the e1071 pacakge, which looks simialr to the Minitab plots.
+
+```{r}
+residual=rnorm(100)
+probplot(residual)
+```
+
+FIGURE 1.8b A Minitab-like normal plot with problems
+```{r}
+#using the residuals from Figure 1.7c
+probplot(model2$residuals)
+```
+
+EXAMPLE 1.6 Accord prices-checking conditions
+
+Add the regression line to the scatterplot.
+```{r}
+plot(Price~Mileage, data=AccordPrice)
+abline(regmodel)
+```
+
+FIGURE 1.9 Plot of Accord residuals versus fitted values
+
+Scatterplot of residuals versus fits (with horizontal line at zero for reference)
+```{r}
+plot(resids~fits)
+abline(0,0)
+```
+
+FIGURE 1.10 Histogram of Accord residuals
+
+```{r}
+hist(resids)
+```
+
+FIGURE 1.11 Normal quantile plot of residuals for Accord data
+
+```{r}
+qqnorm(resids)
+qqline(resids)
+```
+
+We can also use the plot command on a regression model to generate several diagnostic plots
+
+```{r}
+plot(regmodel)
+```
+
+----------------------------------------------------------
+Alternative Solutions
+
+Note: Several of the residual plots from plot(regmodel) use standardized residuals which aren't introduced until Topic 4.3. These are easy to find directly from a model.  They can be substituted for ordinary residuals in any of the residual plots.
+```{r}
+stdres=rstandard(regmodel)
+stdres
+studres=rstudent(regmodel)
+studres
+```
+
+Plot standardized residuals, instead of residuals, against fitted values.
+```{r}
+plot(stdres~regmodel$fitted.values,ylim=c(-3,3),cex.lab=1.5,cex.axis=1.5,cex=1.5)
+abline(0,0,col="darkblue")
+```
+

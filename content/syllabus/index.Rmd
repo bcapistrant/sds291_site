@@ -54,19 +54,19 @@ Additional recommended readings, such as applications of material covered in cla
 
 I will detail the policy for this course below. Basically, work hard in practice, try to learn stuff, work collaboratively, ask for lots of help, and don't cheat. Don't be that person.
 
-The course assignments will include a homework assignment and quizes most weeks of the course, two exams, and a group project with sections/drafts due throughout the course culminating in a final presentation and paper. The homework and the project are the backbone of this course and must be completed satisfactorily to receive an A or B grade in the course.
+The course assignments will include a homework assignment and quizes most weeks of the course, three individual, take-home projects, and a group project with sections/drafts due throughout the course culminating in a final presentation and paper. The homework and the group project are the backbone of this course and must be completed satisfactorily to receive an A or B grade in the course.
 
 ### Homework
 
 Practice problems (mainly from the book) will be assigned (almost) every week on Monday in class and on Moodle; homework will be due via Moodle before 11:55AM of the following Monday. Homework should be completed in `RMarkdown`; both the `RMarkdown` and resulting knitted files should be submitted via Moodle. Homework will be graded, and you will be occasionally be asked to present your solution to a homework problem to the class. _**Late homeworks will have 25\% off if submitted within 48 hours of the deadline and no points thereafter.** Everyone has one free 48 hour extension that you may take whenever you need it. Please just let me know when you plan to take it._
 
-### Final Project
+### Group Project
 
 A significant, culminating activity for this class will be to conduct a statistical investigation on a question of interest to you. These projects will be done in groups of three of your choosing. You will use existing data - publicly and freely available data online, or from faculty research you may be involved in. The project will be broken into multiple component parts due throughout the semester, culminating in a 10 minute oral presenation (with slides) in the last week of class and a final written report due the last day of class. We will spend time in class discussing questions of a reasonable scope for this project, reviewing available data sources, and writing a proposal and resulting report.
 
-### Tests
+### Take Home, Individual Projects
 
-There will be three in-class tests throughout the semester. More details about the format and content of the exams will be available closer to the exam. There will not be a final exam during finals period; your project report will be due during that time.
+There will be three, shorter take-home projects throughout the semester. More details about the format and content of the projects will be available closer to the projects. There will not be a final exam during finals period; your project report will be due during that time.
 
 ### Quizzes
 
@@ -74,17 +74,17 @@ There will be brief ($\leq$ 20 minutes) quizes on Moodle due every week on Monda
 
 ### Grading Policy
 
-Course grades will be a weighted average of the grades on your project, tests, homework, and quizzes. A small amount of your grade for participation includes class attendance, participation in class activities and discussions, as well as professional conduct. Professional conduct expectations include: treating classmates, guest speakers, and instructors with respect; ensuring that all communication is done in a respectful and courteous manner - this includes email.
+Course grades will be a weighted average of the grades on your group project, take home inidividual projects, homework, and quizzes. A small amount of your grade for participation includes class attendance, participation in class activities and discussions, as well as professional conduct. Professional conduct expectations include: treating classmates, guest speakers, and instructors with respect; ensuring that all communication is done in a respectful and courteous manner - this includes email.
 
 - **25%** of your grade will be determined by a semester-long group project, including progress and success on small assignments throughout the semester, as well as a written paper and a poster presentation given at the end of the semester.
 
 - **25%** of your grade will be determined by weekly homeworks practicing implementation of concepts in `R`.
 
-- **10%** of your grade will be determined by a first test on simple linear regression.
+- **10%** of your grade will be determined by a first individual, take home project on simple linear regression.
 
-- **10%** of your grade will be determined by a second test on multiple linear regression.
+- **10%** of your grade will be determined by a second individual, take home project on multiple linear regression.
 
-- **10%** of your grade will be determined by a third test on logistic regression.
+- **10%** of your grade will be determined by a third individual, take home project on logistic regression.
 
 - **10%** of your grade will be determined by in-class projects and reading responses.
 
@@ -129,7 +129,7 @@ The Jacobson Center for Writing (Seelye 307) offers a variety of services design
 Your attendance in class - including being on time - is crucial to your and your classmates' success. We are all going to learn this material together, so we need to have everyone present and working. I will make accommodations for an unavoidable absence if you notify me in advance. Our Honor Code means that you will be the judge of whether or not an absence was unavoidable. (For instance, staying in bed because you had the flu would be an unavoidable absence, but oversleeping because you stayed up late to write a paper would be an avoidable absence.) One necessary absence during the semester is not unusual; having more than two is uncommon.
 
 ### Collaboration
-Much of this course will operate on a collaborative basis, and you are expected encouraged and to work together with a partner or in small groups to study, complete homework assignments, and prepare for exams. However, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable and will receive no credit. All students are bound by the Smith College Honor Code.
+Much of this course will operate on a collaborative basis, and you are expected encouraged and to work together with a partner or in small groups to study, complete homework assignments, and prepare for course projects. However, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable and will receive no credit. All students are bound by the Smith College Honor Code.
 
 ### Written and Oral Communication Skills
 Your ability to communicate results, which may be technical in nature, to your audience, which is likely to be non-technical, is critical to your success as a data analyst. The homework and project assignments in this class will place an emphasis on the clarity of your writing. In addition, there were will be many opportunities throughout the class where you will be asked to present your results from in class exercises, homeworks and the final project to your classmates. Consider this course as a way to develop these crucial communication skills and be quick to seek support from peers, in office hours, and from other resources (see above) as needed to do so.
@@ -148,7 +148,7 @@ articulates general expectations for students' conduct throughout the course. Wh
 > Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.
 	Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.
 
-Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take-home projects should be completed independently and should not be discussed with other students during the open exam/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.
+Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take-home projects should be completed independently and should not be discussed with other students during the open individual take home project/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.
 
 With this in mind, I note that many of the materials used in this course build substantially from previous course instructors' work, namely Ben Baumer, Amelia McNamara, Miles Ott, as well as contributions and insights on this syllabus from Chad Topaz, Jude Higdon, and Steven Miller. I thank them for their work and willigness to share these materials.
 

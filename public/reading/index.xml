@@ -69,8 +69,14 @@
 &lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Required&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2.1 - 2.3 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 2.1 - 2.3 in &lt;em&gt;STAT2&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Watch this “lecture” before class (it’s ~20 minutes)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recommended&lt;/h2&gt;
