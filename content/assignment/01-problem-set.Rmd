@@ -29,3 +29,7 @@ Question 1.23 (2nd Edition) or 1.10 (1st Edition)
 # Template `.RMd` file
 
 There is a template RMarkdown file for thiese questions [here.](http://sds291.netlify.com/HW/SDS291_HW1_Template.Rmd) The link will download the `.RMd` template file, which you can upload to the server as we did in class or open in the desktop version of RStudio.
+
+# Submit on Moodle
+
+Use the Homework 1 submission on Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). If your registration is still in process and you don't yet have Moodle access, you can submit it via email.

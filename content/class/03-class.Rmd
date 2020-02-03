@@ -18,7 +18,7 @@ editor_options:
 
 ## Pre-class
 
-- Watch this "lecture" before class (it's ~20 minutes) [slides are here: [html](http://sds291.netlify.com/03/03_Lecture_Slides.html) and [.Rmd]((http://sds291.netlify.com/03/03_Lecture_Slides.Rmd))
+- Watch this "lecture" before class (it's ~20 minutes) (links to slides as [html](http://sds291.netlify.com/03/03_Lecture_Slides.html) and [.Rmd](http://sds291.netlify.com/03/03_Lecture_Slides.Rmd))
 
 ```{r echo=FALSE}
 blogdown::shortcode('youtube', 'VhuC5J_bsZw')

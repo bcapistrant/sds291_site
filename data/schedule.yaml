@@ -17,6 +17,7 @@ lessons:
     date: "February 3"
     reading: "03-reading"
     assignment: "01-problem-set"
+    class: "03-class"
     
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: ANOVA Table**'
     date: "February 5"
