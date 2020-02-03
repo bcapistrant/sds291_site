@@ -28,7 +28,7 @@ blogdown::shortcode('youtube', 'VhuC5J_bsZw')
 
 ## In-class Activity
 
-- [Lab Exercise](http://sds291.netlify.com/03/03-lab.Rmd) and `.RMd` [template]((http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd))
+- [Lab Exercise](http://sds291.netlify.com/03/03-lab.html) and `.RMd` [template](http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd)
 
 ## Additional support and resources
 
