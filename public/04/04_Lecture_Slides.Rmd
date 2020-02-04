@@ -1,5 +1,5 @@
 ---
-title: "Model Inference and Statistics"
+title: "Model Inference and Partitioning Error"
 author: "Benjamin D. Capistrant, Smith College"
 date: "Feb. 5, 2020"
 output:
