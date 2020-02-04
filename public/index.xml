@@ -1916,7 +1916,7 @@ Figure 1: A fancy pie chart.
                     href=&#34;/assignment/01-problem-set/&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/quiz//&#34;&gt;
+                    href=&#34;/quiz/01-quiz/&#34;&gt;
                     &lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -2906,7 +2906,7 @@ Figure 1: A fancy pie chart.
             &lt;li&gt;&lt;i class=&#34;far fa-calendar&#34;&gt;&lt;/i&gt; Monday &amp;amp; Wednesday&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;far fa-calendar-alt&#34;&gt;&lt;/i&gt; January 27–May 1, 2020&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;far fa-clock&#34;&gt;&lt;/i&gt; 1:20-2:35 or 2:45-4:00&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; Burton 301&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; M: S-R 301, W: S-R 220&lt;/li&gt;
             
         &lt;/ul&gt;
     &lt;/div&gt;

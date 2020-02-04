@@ -17,6 +17,7 @@ lessons:
     date: "February 3"
     reading: "03-reading"
     assignment: "01-problem-set"
+    quiz: "01-quiz"
     class: "03-class"
     
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: ANOVA Table**'
@@ -31,7 +32,7 @@ lessons:
     date: "February 10"
     reading: "05-reading"
     #assignment: "02-problem-set"
-    #quiz:  
+    #quiz:  "02-problem-set"
 
   - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 1**'
     date: "February 12"
