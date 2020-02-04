@@ -12,4 +12,4 @@ type: docs
 ---
 
 
-- <i class="fas fa-question-circle"></i> See Moodle
+- <i class="fas fa-question-circle"></i> See Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 

@@ -1,0 +1,574 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Model Inference \& Partitioning Regression Error},
+            pdfauthor={SDS 291},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{Model Inference \& Partitioning Regression Error}
+\author{SDS 291}
+\date{2/5/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{regression-output}{%
+\section{Regression Output}\label{regression-output}}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = y1 ~ x1, data = anscombe)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.92127 -0.45577 -0.04136  0.70941  1.83882 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)   
+## (Intercept)   3.0001     1.1247   2.667  0.02573 * 
+## x1            0.5001     0.1179   4.241  0.00217 **
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.237 on 9 degrees of freedom
+## Multiple R-squared:  0.6665, Adjusted R-squared:  0.6295 
+## F-statistic: 17.99 on 1 and 9 DF,  p-value: 0.00217
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Interpret the slope in a sentence.
+\end{enumerate}
+
+\vspace{1 in}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Use the information in the table for x1 to calculate the t-value for
+  the slope.
+\end{enumerate}
+
+\vspace{1 in}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Test the hypothesis that x1 has a linear relationship with y1.
+\end{enumerate}
+
+\vspace{1 in}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Calculate the 95\% confidence interval for the slope to 3 decimal
+  places (t* = 2.26) and interpret in a sentence.
+\end{enumerate}
+
+\newpage
+
+\hypertarget{residuals-and-model-error}{%
+\section{Residuals and Model Error}\label{residuals-and-model-error}}
+
+\includegraphics{04_in-class_files/figure-latex/smaller scatterplot with line-1.pdf}
+
+\begin{longtable}[]{@{}llllllll@{}}
+\toprule
+\begin{minipage}[b]{0.02\columnwidth}\raggedright
+x1\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+observed (\(y\))\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright
+predicted (\(\hat{y}\) line)\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+residual (\(y-\hat{y}\))\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+residual\(^2\)\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+mean y (\(\bar{y}\))\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+model deviation \(\hat{y}-\bar{y}\)\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+model\(^2\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+4.26\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+5.68\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+7.24\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+7\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+4.82\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+6.95\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8.81\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8.04\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+11\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8.33\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+12\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10.84\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+7.58\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+14\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+9.96\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+7.5\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+---\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-----\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+-------------\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+----------------\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+----------------\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+-------------\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+----------------\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+----------------\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.02\columnwidth}\raggedright
+\emph{Sum}\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\emph{the}\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+\emph{Residuals}\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\emph{and Model}\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Calculate the residual (observed - predicted, or \(y-\bar{y}\)) and
+  the model (predicted - mean, or \(\hat{y}-\bar{y}\)) for each value of
+  x.
+\item
+  Square each residual and model term.
+\item
+  Calculate the sum of squared residuals (SSR) and the Sum of Squares of
+  the Model (SSM).
+\item
+  Calculate the sum of squares total (SST = SSR + SSM) \vspace{1 in}
+\item
+  Calculate \(r^2\) (\(r^2 = \frac{SSModel}{SSTotal}\) or
+  \(r^2 = 1- \frac{SSError}{SSTotal}\))
+\end{enumerate}
+
+\hypertarget{anova-table}{%
+\section{ANOVA Table}\label{anova-table}}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+Source & df & Sum of Squares & Mean Square & F-Statistic\tabularnewline
+\midrule
+\endhead
+Model & 1 & & &\tabularnewline
+Error & n-2 & & &\tabularnewline
+--- & ----- & ------------- & ---------------- &
+----------------\tabularnewline
+Total & n-1 & & &\tabularnewline
+--- & ----- & ------------- & ---------------- &
+----------------\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Calculate the mean squares for the model
+  (\(MSModel = \frac{SSModel}{1}\)) and the
+  \(MSError = \frac{SSE}{n-2}\)) \vspace{1 in}
+\item
+  Calculate the F statistic: \(F = \frac{MSModel}{MSError}\)
+  \vspace{1 in}
+\item
+  Look at the F Distribution calculator (at
+  \url{https://gallery.shinyapps.io/dist_calc/}) and estimate the
+  p-value for your F statistic with 1 and n-2 degrees of freedom.
+\end{enumerate}
+
+\newpage
+
+\hypertarget{comparing-to-r-output}{%
+\section{Comparing to R output}\label{comparing-to-r-output}}
+
+\hypertarget{regression-output-1}{%
+\subsection{Regression Output}\label{regression-output-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(m1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = y1 ~ x1, data = anscombe)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.92127 -0.45577 -0.04136  0.70941  1.83882 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)   
+## (Intercept)   3.0001     1.1247   2.667  0.02573 * 
+## x1            0.5001     0.1179   4.241  0.00217 **
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.237 on 9 degrees of freedom
+## Multiple R-squared:  0.6665, Adjusted R-squared:  0.6295 
+## F-statistic: 17.99 on 1 and 9 DF,  p-value: 0.00217
+\end{verbatim}
+
+\hypertarget{confidence-intervals}{%
+\subsection{Confidence Intervals}\label{confidence-intervals}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{confint}\NormalTok{(m1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                 2.5 %    97.5 %
+## (Intercept) 0.4557369 5.5444449
+## x1          0.2333701 0.7668117
+\end{verbatim}
+
+\hypertarget{anova-table-1}{%
+\subsection{ANOVA table}\label{anova-table-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{anova}\NormalTok{(m1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: y1
+##           Df Sum Sq Mean Sq F value  Pr(>F)   
+## x1         1 27.510 27.5100   17.99 0.00217 **
+## Residuals  9 13.763  1.5292                   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identify where in the output above you find the results that you
+  calculated:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    t-statistic for the slope
+  \item
+    confidence interval for the slope
+  \item
+    F statistic
+  \item
+    \(R^2\)
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}

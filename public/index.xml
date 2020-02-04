@@ -13,6 +13,39 @@
     </image>
     
     <item>
+      <title>2. Problem set 2</title>
+      <link>/assignment/02-problem-set/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/02-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#template-.rmd-file&#34;&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;p&gt;Questions 2.15, 2.18, and 2.25 (2nd Edition) or 2.13, 2.16, and 2.17 (1st Edition)&lt;/p&gt;
+&lt;p&gt;Skip 2.25 / 2.17 A&lt;/p&gt;
+&lt;p&gt;For 2.25 / 2.17 D, refer to 2.18 / 2.16 A instead of 2.25 / 2.17 A&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;template-.rmd-file&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/h1&gt;
+&lt;p&gt;There is a template RMarkdown file for these questions &lt;a href=&#34;http://sds291.netlify.com/HW/SDS291_HW2_Template.Rmd&#34;&gt;here.&lt;/a&gt; The link will download the &lt;code&gt;.RMd&lt;/code&gt; template file, which you can upload to the server as we did in class or open in the desktop version of RStudio.&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;Use the Homework 1 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Forming a Group</title>
       <link>/group/01-group/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
@@ -630,49 +663,6 @@ This section is an explanation of what your model tells us about the research qu
     </item>
     
     <item>
-      <title>Inference for Slope Estimates</title>
-      <link>/class/03-class/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/class/03-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Pre-class&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Watch this “lecture” before class (it’s ~20 minutes) (links to slides as &lt;a href=&#34;http://sds291.netlify.com/03/03_Lecture_Slides.html&#34;&gt;html&lt;/a&gt; and &lt;a href=&#34;http://sds291.netlify.com/03/03_Lecture_Slides.Rmd&#34;&gt;.Rmd&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;In-class Activity&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Completed Exercise with Sample Answers: as &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.Rmd&#34;&gt;&lt;code&gt;.RMd&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Additional support and resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;What’s a QQplot? Read &lt;a href=&#34;https://www.openintro.org/download.php?file=isrs1_tablet&amp;amp;referrer=/stat/textbook.php&#34;&gt;OpenIntro Statistics, p.93-101&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How do I format regression equations in RMarkdown? Check out the &lt;a href=&#34;resources/equations.html&#34;&gt;Resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>How to Do Homework in RStudio</title>
       <link>/resources/homework/</link>
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
@@ -766,6 +756,41 @@ This section is an explanation of what your model tells us about the research qu
 &lt;/ul&gt;
 &lt;p&gt;This software is already installed on the server, and you should have no trouble knitting to a pdf from the server. This is a big reason, especially early in the semester, why using the the server is much easier.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Model Inference &amp; Decomposing Regression Error</title>
+      <link>/class/03-class/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/03-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pre-class&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Completed Exercise with Sample Answers: as &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.Rmd&#34;&gt;&lt;code&gt;.RMd&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Additional support and resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What’s a QQplot? Read &lt;a href=&#34;https://www.openintro.org/download.php?file=isrs1_tablet&amp;amp;referrer=/stat/textbook.php&#34;&gt;OpenIntro Statistics, p.93-101&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How do I format regression equations in RMarkdown? Check out the &lt;a href=&#34;resources/equations.html&#34;&gt;Resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1009,7 +1034,7 @@ This section is an explanation of what your model tells us about the research qu
 
 
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -1023,7 +1048,7 @@ This section is an explanation of what your model tells us about the research qu
 
 
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

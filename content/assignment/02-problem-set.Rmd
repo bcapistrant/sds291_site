@@ -1,0 +1,35 @@
+---
+title: "2. Problem set 2"
+date: "2020-02-10"
+due_date: "2020-02-10"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Problem sets
+    weight: 2
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Required
+
+Questions 2.15, 2.18, and 2.25 (2nd Edition) or 2.13, 2.16, and 2.17 (1st Edition)
+
+Skip 2.25 / 2.17 A
+
+For 2.25 / 2.17 D, refer to 2.18 / 2.16 A instead of 2.25 / 2.17 A
+
+# Template `.RMd` file
+
+There is a template RMarkdown file for these questions [here.](http://sds291.netlify.com/HW/SDS291_HW2_Template.Rmd) The link will download the `.RMd` template file, which you can upload to the server as we did in class or open in the desktop version of RStudio.
+
+You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.  
+
+# Submit on Moodle
+
+Use the Homework 1 submission on Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 

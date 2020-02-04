@@ -1,14 +1,14 @@
 ---
-title: "Inference for Slope Estimates"
-linktitle: "3: Statistical Inference"
-date: "2020-02-03"
-class_date: "2020-02-03"
+title: "Model Inference & Decomposing Regression Error"
+linktitle: "4: ANOVA Table"
+date: "2020-02-05"
+class_date: "2020-02-05"
 menu:
   class:
     parent: Class sessions
-    weight: 3
+    weight: 4
 type: docs
-weight: 3
+weight: 4
 output:
   blogdown::html_page:
     toc: true
@@ -18,11 +18,6 @@ editor_options:
 
 ## Pre-class
 
-- Watch this "lecture" before class (it's ~20 minutes) (links to slides as [html](http://sds291.netlify.com/03/03_Lecture_Slides.html) and [.Rmd](http://sds291.netlify.com/03/03_Lecture_Slides.Rmd))
-
-```{r echo=FALSE}
-blogdown::shortcode('youtube', 'VhuC5J_bsZw')
-```
 
 
 ## In-class Activity

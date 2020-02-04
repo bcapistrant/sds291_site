@@ -1,0 +1,119 @@
+---
+title: "SDS 291 - Homework 2"
+author: "YOUR NAME HERE"
+date: "TODAYS DATE"
+output: pdf_document
+---
+
+```{r include=FALSE, warning=FALSE, message=FALSE, error=FALSE}
+# Some customization to format the file, bring in the data you need.  Do not alter.
+
+# knitr settings to control how R chunks work and how the pdf is compiled when knit.
+require(knitr)
+opts_chunk$set(
+  tidy=TRUE,                     # display code as typed
+  size="small",                   # slightly smaller font for code
+  tidy.opts=list(width.cutoff=65), # wrap text and long comments
+  fig.width=7, fig.height=5           #figure size
+)
+#Requiring Stat2Data package for the data
+# If you're working locally on your computer, you will need to install some of these packages--see code below.
+#install.packages(Stat2Data) 
+require(Stat2Data)
+require(tidyverse)
+```
+
+
+
+- Questions 2.15, 2.18, and 2.25 (2nd Edition) or 2.13, 2.16, and 2.17 (1st Edition)
+
+- Skip 2.25 / 2.17 A
+
+- For 2.25 / 2.17 D, refer to 2.18 / 2.16 A instead of 2.25 / 2.17 A
+
+
+
+```{r}
+#This brings in the dataset we need from the Stat2Data package
+data("Cereal")
+```
+
+# Question 2.15
+
+## 2.15A
+
+```{r}
+
+```
+
+
+[DELETE THIS AND PUT YOUR ANSWER HERE]
+
+
+## 2.15B
+
+```{r}
+
+```
+
+
+
+
+# Question 2.18
+
+## 2.18A
+
+```{r}
+
+```
+
+[DELETE THIS AND PUT YOUR ANSWER HERE]
+
+
+## 2.18B
+
+```{r}
+
+```
+
+[DELETE THIS AND PUT YOUR ANSWER HERE]
+
+## 2.18C
+
+```{r}
+
+```
+
+[DELETE THIS AND PUT YOUR ANSWER HERE]
+
+
+
+
+# Question 2.25
+
+<!--- Skip 2.25A --->
+
+## 2.25B
+
+```{r}
+
+```
+
+
+[DELETE THIS AND PUT YOUR ANSWER HERE]
+
+
+## 2.25C
+
+```{r}
+
+```
+
+
+[DELETE THIS AND PUT YOUR ANSWER HERE]
+
+## 2.25D
+
+<!--- Refer to 2.18A instead of 2.25A for the comparison this question asks for --->
+
+[DELETE THIS AND PUT YOUR ANSWER HERE]
