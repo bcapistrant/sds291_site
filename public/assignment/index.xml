@@ -87,5 +87,33 @@
 </description>
     </item>
     
+    <item>
+      <title>Quiz 1</title>
+      <link>/assignment/01-quiz/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/01-quiz/</guid>
+      <description>
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quiz 2</title>
+      <link>/assignment/02-quiz/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/02-quiz/</guid>
+      <description>
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

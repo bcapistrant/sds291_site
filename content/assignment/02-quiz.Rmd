@@ -1,0 +1,15 @@
+---
+title: "Quiz 2"
+linktitle: "Quiz 2"
+date: "2020-02-03"
+due_date: "2020-02-10"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Quizes
+    weight: 2
+type: docs
+---
+
+
+- <i class="fas fa-question-circle"></i> See Moodle

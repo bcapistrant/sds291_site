@@ -31,6 +31,7 @@ lessons:
     date: "February 10"
     reading: "05-reading"
     #assignment: "02-problem-set"
+    #quiz:  
 
   - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 1**'
     date: "February 12"

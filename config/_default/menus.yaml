@@ -33,8 +33,10 @@ assignment:
     weight: 2
   - name: Take Home Projects
     weight: 3
-  - name: Other projects & Work
+  - name: Quizes
     weight: 4
+  - name: Other projects & Work
+    weight: 5
 group:
   - name: Introduction
     weight: 1

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quizes | Multiple Regression</title>
+    <link>/quizes/</link>
+      <atom:link href="/quizes/index.xml" rel="self" type="application/rss+xml" />
+    <description>Quizes</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/social-image.png</url>
+      <title>Quizes</title>
+      <link>/quizes/</link>
+    </image>
+    
+    <item>
+      <title>Quiz 1</title>
+      <link>/quizes/01-quiz/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/quizes/01-quiz/</guid>
+      <description>
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quiz 2</title>
+      <link>/quizes/02-quiz/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/quizes/02-quiz/</guid>
+      <description>
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
