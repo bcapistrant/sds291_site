@@ -1,0 +1,86 @@
+---
+title: Equations in RMarkdown
+date: "2020-01-27"
+menu:
+  resources:
+    parent: R and RStudio
+    weight: 4
+type: docs
+weight: 4
+output:
+  blogdown::html_page:
+      toc: TRUE
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+This class will involve a fair amount of writing out formulae for regression equations, specifying hypotheses, referring to statistics by their greek symbols, etc. You may want to write out nicely formatted equations for this class. Again, you don't have to, but it can be useful to know how to do it -- especially before the regression equations start getting more complicated.
+
+Let's get familiar with how you might write the regression equation we're about to fit in R. 
+
+## Basics of Notation
+
+We need to know a little bit of different notation for equations.
+
+* `$`: begin and end the equation. 
+
+* `$$`: before and after the equation put the equation in the center of a new line
+
+* `\`: precedes any symbol, accent, operator, or other non-text item
+
+* `_`: subscript
+
+* `^`: superscript
+
+* `{}`: any text that gets an accent (e.g., see *hat* below) or to denote explicitly a word after a subscript/superscript
+
+## Key Examples for Multiple Regression
+
+* `\beta`: $\beta$
+
+* `\epsilon`: $\epsilon$
+
+* `\cdot`: $\cdot$ (e.g., `\cdot Mileage` is $\cdot Mileage$)
+
+* `\bar{}`: $\bar{y}$
+
+* `\hat{}`: $\hat{y}$ (e.g., `\hat{\beta}` is $\hat{\beta}$ )
+
+* `\widehat{}`: $\widehat{}$ (e.g., `\widehat{SmithCollege}` is $\widehat{SmithCollege}$)
+
+
+## Some other features that may be useful in the course:
+
+* `\ne`: $\ne$ or not-equal-to -- for hypothesis testing
+
+* `\pm`: $\pm$ or plus-or-minus -- for confidence intervals
+
+* `\frac{}{}`: a fraction, where the numerator is in the first set of brackets and the denominator is in the other -- for $R^2$ or test statistics, etc.
+
+* `\sqrt{}`: $\sqrt{}$ square root
+
+
+## Examples:
+
+- `$H_0: \beta_1 \ne 0$` is $H_0: \beta_1 \ne 0$.
+
+- `$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$` results in $y = \beta_0+\beta_1 \cdot Mileage+\epsilon$.
+
+- `$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$` results in $y = \beta_0+\beta_1 \cdot Mileage+\epsilon$.
+
+- `$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$` results in 
+$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$
+
+## Notes of caution & Other Resources
+
+- If you have an error, check the spacing before or after the `$`
+- This notation language is all based on `LaTeX`, so if you need to google, be sure to include that key word
+- This material as a [`.pdf`](mathtype_cheatsheet.pdf) and [`.Rmd`](mathtype_cheatsheet.Rmd)
+
+Here is a video of talking through the equations in Chapter 1 of the _STAT2_ book.
+
+```{r}
+blogdown::shortcode('youtube', 'szZP0WrQW4M')
+```

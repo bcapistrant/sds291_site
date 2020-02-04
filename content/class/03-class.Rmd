@@ -25,10 +25,15 @@ blogdown::shortcode('youtube', 'VhuC5J_bsZw')
 ```
 
 
-
 ## In-class Activity
 
 - [Lab Exercise](http://sds291.netlify.com/03/03-lab.html) and `.RMd` [template](http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd)
 
+- Completed Exercise with Sample Answers: as [`.pdf`](http://sds291.netlify.com/03/03-lab_CompletedSolutions.pdf) and [`.RMd`](http://sds291.netlify.com/03/03-lab_CompletedSolutions.Rmd)
+
 ## Additional support and resources
+
+- What's a QQplot? Read [OpenIntro Statistics, p.93-101](https://www.openintro.org/download.php?file=isrs1_tablet&referrer=/stat/textbook.php)
+
+- How do I format regression equations in RMarkdown? Check out the [Resources](resources/equations.html) 
 

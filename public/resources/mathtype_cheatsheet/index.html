@@ -30,10 +30,11 @@
   
     
   
-  <meta name="description" content="RMarkdown Chapter 1 1.1 - Examples in 3 parts Part 1 - Example 1.1: Loading and Printing the Data Part 2 - Example 1.2: Making a Scatterplot Part 3 - Example 1.3: Fitting a Regression Model  1.3 - Assessing Conditions    In an effort to spend more time explaining the R syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes.">
+  <meta name="description" content="Let’s get familiar with how you might write the regression equation we’re about to fit in R. We need to know a little bit of different notation for equations.
+ $: begin and end the equation. $$: before and after the equation put the equation in the center of a new line \: precedes any symbol, accent, operator, or other non-text item _: subscript ^: superscript {}: any text that gets an accent (e.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/resources/01-textbookch1/">
+  <link rel="alternate" hreflang="en-us" href="/resources/mathtype_cheatsheet/">
 
   
 
@@ -218,7 +219,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/resources/01-textbookch1/">
+  <link rel="canonical" href="/resources/mathtype_cheatsheet/">
 
   
   
@@ -234,15 +235,14 @@
   <meta property="twitter:creator" content="@bencapistrant">
   
   <meta property="og:site_name" content="Multiple Regression">
-  <meta property="og:url" content="/resources/01-textbookch1/">
-  <meta property="og:title" content="Chapter 1 | Multiple Regression">
-  <meta property="og:description" content="RMarkdown Chapter 1 1.1 - Examples in 3 parts Part 1 - Example 1.1: Loading and Printing the Data Part 2 - Example 1.2: Making a Scatterplot Part 3 - Example 1.3: Fitting a Regression Model  1.3 - Assessing Conditions    In an effort to spend more time explaining the R syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:url" content="/resources/mathtype_cheatsheet/">
+  <meta property="og:title" content="Equation Notation in R | Multiple Regression">
+  <meta property="og:description" content="Let’s get familiar with how you might write the regression equation we’re about to fit in R. We need to know a little bit of different notation for equations.
+ $: begin and end the equation. $$: before and after the equation put the equation in the center of a new line \: precedes any symbol, accent, operator, or other non-text item _: subscript ^: superscript {}: any text that gets an accent (e."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-27T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-29T19:47:54-05:00">
   
 
   
@@ -269,7 +269,7 @@
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Chapter 1 | Multiple Regression</title>
+  <title>Equation Notation in R | Multiple Regression</title>
 
 </head>
 
@@ -568,210 +568,254 @@
 </nav>
 
 
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Equation Notation in R</h1>
+
+  
+
+  
     
 
-<div class="container-fluid docs">
-    <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
-            
 
-
-
-
+<div class="article-metadata">
 
   
+  
+
+  
+  <span class="article-date">
     
-  
-
-
-
-
-<form class="docs-search d-flex align-items-center">
-  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    <span><i class="fas fa-bars"></i></span>
-  </button>
-
-  
-</form>
-
-<nav class="collapse docs-links" id="docs-nav">
-  
-
-  
-  
-  
-  
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/resources/install/">R and RStudio</a>
-    <ul class="nav docs-sidenav">
-      
-      <li >
-        <a href="/resources/install/">Installing R, RStudio, and Packages</a>
-      </li>
-      
-      <li >
-        <a href="/resources/interface/">Intro to RStudio Interface</a>
-      </li>
-      
-      <li >
-        <a href="/resources/homework/">How to Do Homework in RStudio</a>
-      </li>
-      
-      <li >
-        <a href="/resources/equations/">Equations in RMarkdown</a>
-      </li>
-      
-      <li >
-        <a href="/resources/rmarkdown/">What&#39;s RMarkdown?</a>
-      </li>
-      
-    </ul>
     
+      
+    
+    January 1, 0001
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>Let’s get familiar with how you might write the regression equation we’re about to fit in R. We need to know a little bit of different notation for equations.</p>
+<ul>
+<li><code>$</code>: begin and end the equation.</li>
+<li><code>$$</code>: before and after the equation put the equation in the center of a new line</li>
+<li><code>\</code>: precedes any symbol, accent, operator, or other non-text item</li>
+<li><code>_</code>: subscript</li>
+<li><code>^</code>: superscript</li>
+<li><code>{}</code>: any text that gets an accent (e.g., see <em>hat</em>) or to denote explicitly a word after a subscript/superscript</li>
+<li><code>\beta</code>: <span class="math inline">\(\beta\)</span></li>
+<li><code>\epsilon</code>: <span class="math inline">\(\epsilon\)</span></li>
+<li><code>\cdot</code>: <span class="math inline">\(\cdot\)</span> (e.g., <code>\cdot Mileage</code> is <span class="math inline">\(\cdot Mileage\)</span>)</li>
+<li><code>\bar{}</code>: <span class="math inline">\(\bar{y}\)</span></li>
+<li><code>\hat{}</code>: <span class="math inline">\(\hat{y}\)</span> (e.g., <code>\hat{\beta}</code> is <span class="math inline">\(\hat{\beta}\)</span> )</li>
+<li><code>\widehat{}</code>: <span class="math inline">\(\widehat{}\)</span> (e.g., <code>\widehat{SmithCollege}</code> is <span class="math inline">\(\widehat{SmithCollege}\)</span>)</li>
+</ul>
+<p>Some other features that may be useful in the course:</p>
+<ul>
+<li><code>\ne</code>: <span class="math inline">\(\ne\)</span> or not-equal-to</li>
+<li><code>\pm</code>: <span class="math inline">\(\pm\)</span> or plus-or-minus</li>
+<li><code>\frac{}{}</code>: a fraction, where the numerator is in the first set of brackets and the denominator is in the other</li>
+<li><code>\sqrt{}</code>: <span class="math inline">\(\sqrt{}\)</span> square root</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>$H_0: \beta_1 \ne 0$</code> is <span class="math inline">\(H_0: \beta_1 \ne 0\)</span>.</li>
+<li><code>$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$</code> results in <span class="math inline">\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)</span>.</li>
+<li><p><code>$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$</code> results in <span class="math inline">\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)</span>.</p></li>
+<li><p><code>$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$</code> results in
+<span class="math display">\[\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage\]</span></p></li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/admin/">Benjamin Capistrant</a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
 
   </div>
-  
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" >Textbook</a>
-
-  </div>
-  
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/resources/01-textbookch1/">Texbook</a>
-    <ul class="nav docs-sidenav">
-      
-      <li class="active">
-        <a href="/resources/01-textbookch1/">Chapter 1</a>
-      </li>
-      
-    </ul>
-    
-
-  </div>
-  
-  
-</nav>
-
-        </div>
+</article>
 
         
 
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
-            <article class="article">
+      
 
-                <div class="docs-article-container">
-                    <h1>Chapter 1</h1>
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
 
-                    
+    
 
-                    
+    
+    
 
-                    
+    
+    
+    <script>const code_highlighting = true;</script>
+    
 
-                    <div class="article-style">
-                        
+    
 
-<div id="TOC">
-<ul>
-<li><a href="#rmarkdown">RMarkdown</a></li>
-<li><a href="#chapter-1">Chapter 1</a><ul>
-<li><a href="#examples-in-3-parts">1.1 - Examples in 3 parts</a><ul>
-<li><a href="#part-1---example-1.1-loading-and-printing-the-data">Part 1 - Example 1.1: Loading and Printing the Data</a></li>
-<li><a href="#part-2---example-1.2-making-a-scatterplot">Part 2 - Example 1.2: Making a Scatterplot</a></li>
-<li><a href="#part-3---example-1.3-fitting-a-regression-model">Part 3 - Example 1.3: Fitting a Regression Model</a></li>
-</ul></li>
-<li><a href="#assessing-conditions">1.3 - Assessing Conditions</a></li>
-</ul></li>
-</ul>
-</div>
+    
+    
 
-<p>In an effort to spend more time explaining the <code>R</code> syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes.</p>
-<p>Note that these are based on the 2nd Edition of the data. The principles and steps are very similar for the 1st edition. For example, the 2nd edition uses Honda Accord prices, while the 1st edition used Porsche prices. 1st edition users can still use the <code>PorschePrice</code> data from the <code>Stat2Data</code> package.</p>
-<div id="rmarkdown" class="section level1">
-<h1>RMarkdown</h1>
-<p>Here is a quick video overview of what’s going on in an RMarkdown file using the Smith College server.</p>
+    
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/KCKDULGkPbI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+    
+    
 
-</div>
-<div id="chapter-1" class="section level1">
-<h1>Chapter 1</h1>
-<div id="examples-in-3-parts" class="section level2">
-<h2>1.1 - Examples in 3 parts</h2>
-<div id="part-1---example-1.1-loading-and-printing-the-data" class="section level3">
-<h3>Part 1 - Example 1.1: Loading and Printing the Data</h3>
+    
+    
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/F_tGm-Aj-4M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+    
+    
 
-</div>
-<div id="part-2---example-1.2-making-a-scatterplot" class="section level3">
-<h3>Part 2 - Example 1.2: Making a Scatterplot</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.b03c341a9a02bb3d0133df72033e26a2.js"></script>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/O_oE3xfDOyE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-<div id="part-3---example-1.3-fitting-a-regression-model" class="section level3">
-<h3>Part 3 - Example 1.3: Fitting a Regression Model</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/A24FVWmrzVI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-</div>
-<div id="assessing-conditions" class="section level2">
-<h2>1.3 - Assessing Conditions</h2>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/MAoN73IeNto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-</div>
-
-                    </div>
-
-                    
-
-
-
-                    
-                </div>
-
-                <div class="body-footer">
-                    <p>Last updated on January 29, 2020</p>
-
-                    
+    
 
 
 
 
 
-  
-  
 
-<p class="edit-page">
-  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/01-textbookCh1.html">
-    <i class="fas fa-pen pr-2"></i>Edit this page
-  </a>
-</p>
-
-
-
-
-                    
-
-                </div>
-
-            </article>
-
-            <footer>
+    
+    
+    <div class="container">
+        <footer>
     <hr>
 
     <div class="row course-info">
@@ -809,84 +853,7 @@
     </div>
 </footer>
 
-
-        </main>
     </div>
-</div>
-
-        
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-
-      
-
-      
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
-        
-      
-
-    
-
-    
-    
-
-    
-    
-    <script>const code_highlighting = true;</script>
-    
-
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/js/academic.min.b03c341a9a02bb3d0133df72033e26a2.js"></script>
-
-    
-
-
-
-
-
-
-    
     
 
     

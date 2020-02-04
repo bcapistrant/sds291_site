@@ -94,11 +94,16 @@
 &lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;In-class Activity&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Completed Exercise with Sample Answers: as &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.Rmd&#34;&gt;&lt;code&gt;.RMd&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Additional support and resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What’s a QQplot? Read &lt;a href=&#34;https://www.openintro.org/download.php?file=isrs1_tablet&amp;amp;referrer=/stat/textbook.php&#34;&gt;OpenIntro Statistics, p.93-101&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How do I format regression equations in RMarkdown? Check out the &lt;a href=&#34;resources/equations.html&#34;&gt;Resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>

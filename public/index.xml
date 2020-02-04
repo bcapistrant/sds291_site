@@ -658,11 +658,16 @@ This section is an explanation of what your model tells us about the research qu
 &lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;In-class Activity&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Completed Exercise with Sample Answers: as &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.Rmd&#34;&gt;&lt;code&gt;.RMd&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Additional support and resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What’s a QQplot? Read &lt;a href=&#34;https://www.openintro.org/download.php?file=isrs1_tablet&amp;amp;referrer=/stat/textbook.php&#34;&gt;OpenIntro Statistics, p.93-101&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How do I format regression equations in RMarkdown? Check out the &lt;a href=&#34;resources/equations.html&#34;&gt;Resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -761,6 +766,85 @@ This section is an explanation of what your model tells us about the research qu
 &lt;/ul&gt;
 &lt;p&gt;This software is already installed on the server, and you should have no trouble knitting to a pdf from the server. This is a big reason, especially early in the semester, why using the the server is much easier.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Equations in RMarkdown</title>
+      <link>/resources/equations/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/equations/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#basics-of-notation&#34;&gt;Basics of Notation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#key-examples-for-multiple-regression&#34;&gt;Key Examples for Multiple Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#some-other-features-that-may-be-useful-in-the-course&#34;&gt;Some other features that may be useful in the course:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#examples&#34;&gt;Examples:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#notes-of-caution-other-resources&#34;&gt;Notes of caution &amp;amp; Other Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This class will involve a fair amount of writing out formulae for regression equations, specifying hypotheses, referring to statistics by their greek symbols, etc. You may want to write out nicely formatted equations for this class. Again, you don’t have to, but it can be useful to know how to do it – especially before the regression equations start getting more complicated.&lt;/p&gt;
+&lt;p&gt;Let’s get familiar with how you might write the regression equation we’re about to fit in R.&lt;/p&gt;
+&lt;div id=&#34;basics-of-notation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Basics of Notation&lt;/h2&gt;
+&lt;p&gt;We need to know a little bit of different notation for equations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$&lt;/code&gt;: begin and end the equation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$$&lt;/code&gt;: before and after the equation put the equation in the center of a new line&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\&lt;/code&gt;: precedes any symbol, accent, operator, or other non-text item&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;_&lt;/code&gt;: subscript&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;^&lt;/code&gt;: superscript&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;{}&lt;/code&gt;: any text that gets an accent (e.g., see &lt;em&gt;hat&lt;/em&gt; below) or to denote explicitly a word after a subscript/superscript&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;key-examples-for-multiple-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Key Examples for Multiple Regression&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\cdot&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; (e.g., &lt;code&gt;\cdot Mileage&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(\cdot Mileage\)&lt;/span&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\bar{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\bar{y}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\hat{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; (e.g., &lt;code&gt;\hat{\beta}&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; )&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\widehat{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\widehat{}\)&lt;/span&gt; (e.g., &lt;code&gt;\widehat{SmithCollege}&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(\widehat{SmithCollege}\)&lt;/span&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-other-features-that-may-be-useful-in-the-course&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Some other features that may be useful in the course:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\ne&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\ne\)&lt;/span&gt; or not-equal-to – for hypothesis testing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\pm&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\pm\)&lt;/span&gt; or plus-or-minus – for confidence intervals&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\frac{}{}&lt;/code&gt;: a fraction, where the numerator is in the first set of brackets and the denominator is in the other – for &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; or test statistics, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;\sqrt{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{}\)&lt;/span&gt; square root&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Examples:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$H_0: \beta_1 \ne 0$&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(H_0: \beta_1 \ne 0\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$&lt;/code&gt; results in &lt;span class=&#34;math inline&#34;&gt;\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$&lt;/code&gt; results in &lt;span class=&#34;math inline&#34;&gt;\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$&lt;/code&gt; results in
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;notes-of-caution-other-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Notes of caution &amp;amp; Other Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;If you have an error, check the spacing before or after the &lt;code&gt;$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;This notation language is all based on &lt;code&gt;LaTeX&lt;/code&gt;, so if you need to google, be sure to include that key word&lt;/li&gt;
+&lt;li&gt;This material as a &lt;a href=&#34;mathtype_cheatsheet.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;mathtype_cheatsheet.Rmd&#34;&gt;&lt;code&gt;.Rmd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a video of talking through the equations in Chapter 1 of the &lt;em&gt;STAT2&lt;/em&gt; book.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode(&amp;#39;youtube&amp;#39;, &amp;#39;szZP0WrQW4M&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/szZP0WrQW4M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 </description>
     </item>
@@ -1683,6 +1767,47 @@ Figure 1: A fancy pie chart.
 &lt;p&gt;Supplementary notes can be added here, including 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;
 .&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Equation Notation in R</title>
+      <link>/resources/mathtype_cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mathtype_cheatsheet/</guid>
+      <description>
+
+
+&lt;p&gt;Let’s get familiar with how you might write the regression equation we’re about to fit in R. We need to know a little bit of different notation for equations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$&lt;/code&gt;: begin and end the equation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$$&lt;/code&gt;: before and after the equation put the equation in the center of a new line&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\&lt;/code&gt;: precedes any symbol, accent, operator, or other non-text item&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_&lt;/code&gt;: subscript&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;^&lt;/code&gt;: superscript&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{}&lt;/code&gt;: any text that gets an accent (e.g., see &lt;em&gt;hat&lt;/em&gt;) or to denote explicitly a word after a subscript/superscript&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\beta&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\epsilon&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\cdot&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; (e.g., &lt;code&gt;\cdot Mileage&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(\cdot Mileage\)&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\bar{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\bar{y}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\hat{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; (e.g., &lt;code&gt;\hat{\beta}&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; )&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\widehat{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\widehat{}\)&lt;/span&gt; (e.g., &lt;code&gt;\widehat{SmithCollege}&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(\widehat{SmithCollege}\)&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some other features that may be useful in the course:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\ne&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\ne\)&lt;/span&gt; or not-equal-to&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\pm&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\pm\)&lt;/span&gt; or plus-or-minus&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\frac{}{}&lt;/code&gt;: a fraction, where the numerator is in the first set of brackets and the denominator is in the other&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\sqrt{}&lt;/code&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{}\)&lt;/span&gt; square root&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$H_0: \beta_1 \ne 0$&lt;/code&gt; is &lt;span class=&#34;math inline&#34;&gt;\(H_0: \beta_1 \ne 0\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$&lt;/code&gt; results in &lt;span class=&#34;math inline&#34;&gt;\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$&lt;/code&gt; results in &lt;span class=&#34;math inline&#34;&gt;\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$&lt;/code&gt; results in
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

@@ -1,0 +1,44 @@
+---
+title: "Equation Notation in R"
+author: "SDS 291"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Let's get familiar with how you might write the regression equation we're about to fit in R. We need to know a little bit of different notation for equations.
+
+* `$`: begin and end the equation. 
+* `$$`: before and after the equation put the equation in the center of a new line
+* `\`: precedes any symbol, accent, operator, or other non-text item
+* `_`: subscript
+* `^`: superscript
+* `{}`: any text that gets an accent (e.g., see *hat*) or to denote explicitly a word after a subscript/superscript
+* `\beta`: $\beta$
+* `\epsilon`: $\epsilon$
+* `\cdot`: $\cdot$ (e.g., `\cdot Mileage` is $\cdot Mileage$)
+* `\bar{}`: $\bar{y}$
+* `\hat{}`: $\hat{y}$ (e.g., `\hat{\beta}` is $\hat{\beta}$ )
+* `\widehat{}`: $\widehat{}$ (e.g., `\widehat{SmithCollege}` is $\widehat{SmithCollege}$)
+
+
+Some other features that may be useful in the course:
+
+* `\ne`: $\ne$ or not-equal-to
+* `\pm`: $\pm$ or plus-or-minus 
+* `\frac{}{}`: a fraction, where the numerator is in the first set of brackets and the denominator is in the other
+* `\sqrt{}`: $\sqrt{}$ square root
+
+
+Examples:
+
+- `$H_0: \beta_1 \ne 0$` is $H_0: \beta_1 \ne 0$.
+- `$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$` results in $y = \beta_0+\beta_1 \cdot Mileage+\epsilon$.
+- `$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$` results in $y = \beta_0+\beta_1 \cdot Mileage+\epsilon$.
+
+- `$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$` results in 
+$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$

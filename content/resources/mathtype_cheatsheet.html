@@ -1,0 +1,40 @@
+---
+title: "Equation Notation in R"
+author: "SDS 291"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+
+<p>Let’s get familiar with how you might write the regression equation we’re about to fit in R. We need to know a little bit of different notation for equations.</p>
+<ul>
+<li><code>$</code>: begin and end the equation.</li>
+<li><code>$$</code>: before and after the equation put the equation in the center of a new line</li>
+<li><code>\</code>: precedes any symbol, accent, operator, or other non-text item</li>
+<li><code>_</code>: subscript</li>
+<li><code>^</code>: superscript</li>
+<li><code>{}</code>: any text that gets an accent (e.g., see <em>hat</em>) or to denote explicitly a word after a subscript/superscript</li>
+<li><code>\beta</code>: <span class="math inline">\(\beta\)</span></li>
+<li><code>\epsilon</code>: <span class="math inline">\(\epsilon\)</span></li>
+<li><code>\cdot</code>: <span class="math inline">\(\cdot\)</span> (e.g., <code>\cdot Mileage</code> is <span class="math inline">\(\cdot Mileage\)</span>)</li>
+<li><code>\bar{}</code>: <span class="math inline">\(\bar{y}\)</span></li>
+<li><code>\hat{}</code>: <span class="math inline">\(\hat{y}\)</span> (e.g., <code>\hat{\beta}</code> is <span class="math inline">\(\hat{\beta}\)</span> )</li>
+<li><code>\widehat{}</code>: <span class="math inline">\(\widehat{}\)</span> (e.g., <code>\widehat{SmithCollege}</code> is <span class="math inline">\(\widehat{SmithCollege}\)</span>)</li>
+</ul>
+<p>Some other features that may be useful in the course:</p>
+<ul>
+<li><code>\ne</code>: <span class="math inline">\(\ne\)</span> or not-equal-to</li>
+<li><code>\pm</code>: <span class="math inline">\(\pm\)</span> or plus-or-minus</li>
+<li><code>\frac{}{}</code>: a fraction, where the numerator is in the first set of brackets and the denominator is in the other</li>
+<li><code>\sqrt{}</code>: <span class="math inline">\(\sqrt{}\)</span> square root</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>$H_0: \beta_1 \ne 0$</code> is <span class="math inline">\(H_0: \beta_1 \ne 0\)</span>.</li>
+<li><code>$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$</code> results in <span class="math inline">\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)</span>.</li>
+<li><p><code>$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$</code> results in <span class="math inline">\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)</span>.</p></li>
+<li><p><code>$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$</code> results in
+<span class="math display">\[\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage\]</span></p></li>
+</ul>

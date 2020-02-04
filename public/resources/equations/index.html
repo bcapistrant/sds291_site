@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="RMarkdown Chapter 1 1.1 - Examples in 3 parts Part 1 - Example 1.1: Loading and Printing the Data Part 2 - Example 1.2: Making a Scatterplot Part 3 - Example 1.3: Fitting a Regression Model  1.3 - Assessing Conditions    In an effort to spend more time explaining the R syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes.">
+  <meta name="description" content="Basics of Notation Key Examples for Multiple Regression Some other features that may be useful in the course: Examples: Notes of caution &amp; Other Resources   This class will involve a fair amount of writing out formulae for regression equations, specifying hypotheses, referring to statistics by their greek symbols, etc. You may want to write out nicely formatted equations for this class. Again, you don’t have to, but it can be useful to know how to do it – especially before the regression equations start getting more complicated.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/resources/01-textbookch1/">
+  <link rel="alternate" hreflang="en-us" href="/resources/equations/">
 
   
 
@@ -218,7 +218,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/resources/01-textbookch1/">
+  <link rel="canonical" href="/resources/equations/">
 
   
   
@@ -234,15 +234,15 @@
   <meta property="twitter:creator" content="@bencapistrant">
   
   <meta property="og:site_name" content="Multiple Regression">
-  <meta property="og:url" content="/resources/01-textbookch1/">
-  <meta property="og:title" content="Chapter 1 | Multiple Regression">
-  <meta property="og:description" content="RMarkdown Chapter 1 1.1 - Examples in 3 parts Part 1 - Example 1.1: Loading and Printing the Data Part 2 - Example 1.2: Making a Scatterplot Part 3 - Example 1.3: Fitting a Regression Model  1.3 - Assessing Conditions    In an effort to spend more time explaining the R syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:url" content="/resources/equations/">
+  <meta property="og:title" content="Equations in RMarkdown | Multiple Regression">
+  <meta property="og:description" content="Basics of Notation Key Examples for Multiple Regression Some other features that may be useful in the course: Examples: Notes of caution &amp; Other Resources   This class will involve a fair amount of writing out formulae for regression equations, specifying hypotheses, referring to statistics by their greek symbols, etc. You may want to write out nicely formatted equations for this class. Again, you don’t have to, but it can be useful to know how to do it – especially before the regression equations start getting more complicated."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-01-27T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-29T19:47:54-05:00">
+    <meta property="article:modified_time" content="2020-01-27T00:00:00&#43;00:00">
   
 
   
@@ -269,7 +269,7 @@
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Chapter 1 | Multiple Regression</title>
+  <title>Equations in RMarkdown | Multiple Regression</title>
 
 </head>
 
@@ -617,7 +617,7 @@
         <a href="/resources/homework/">How to Do Homework in RStudio</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/resources/equations/">Equations in RMarkdown</a>
       </li>
       
@@ -639,7 +639,7 @@
     <a class="docs-toc-link" href="/resources/01-textbookch1/">Texbook</a>
     <ul class="nav docs-sidenav">
       
-      <li class="active">
+      <li >
         <a href="/resources/01-textbookch1/">Chapter 1</a>
       </li>
       
@@ -660,7 +660,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Chapter 1</h1>
+                    <h1>Equations in RMarkdown</h1>
 
                     
 
@@ -673,66 +673,72 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#rmarkdown">RMarkdown</a></li>
-<li><a href="#chapter-1">Chapter 1</a><ul>
-<li><a href="#examples-in-3-parts">1.1 - Examples in 3 parts</a><ul>
-<li><a href="#part-1---example-1.1-loading-and-printing-the-data">Part 1 - Example 1.1: Loading and Printing the Data</a></li>
-<li><a href="#part-2---example-1.2-making-a-scatterplot">Part 2 - Example 1.2: Making a Scatterplot</a></li>
-<li><a href="#part-3---example-1.3-fitting-a-regression-model">Part 3 - Example 1.3: Fitting a Regression Model</a></li>
-</ul></li>
-<li><a href="#assessing-conditions">1.3 - Assessing Conditions</a></li>
-</ul></li>
+<li><a href="#basics-of-notation">Basics of Notation</a></li>
+<li><a href="#key-examples-for-multiple-regression">Key Examples for Multiple Regression</a></li>
+<li><a href="#some-other-features-that-may-be-useful-in-the-course">Some other features that may be useful in the course:</a></li>
+<li><a href="#examples">Examples:</a></li>
+<li><a href="#notes-of-caution-other-resources">Notes of caution &amp; Other Resources</a></li>
 </ul>
 </div>
 
-<p>In an effort to spend more time explaining the <code>R</code> syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes.</p>
-<p>Note that these are based on the 2nd Edition of the data. The principles and steps are very similar for the 1st edition. For example, the 2nd edition uses Honda Accord prices, while the 1st edition used Porsche prices. 1st edition users can still use the <code>PorschePrice</code> data from the <code>Stat2Data</code> package.</p>
-<div id="rmarkdown" class="section level1">
-<h1>RMarkdown</h1>
-<p>Here is a quick video overview of what’s going on in an RMarkdown file using the Smith College server.</p>
+<p>This class will involve a fair amount of writing out formulae for regression equations, specifying hypotheses, referring to statistics by their greek symbols, etc. You may want to write out nicely formatted equations for this class. Again, you don’t have to, but it can be useful to know how to do it – especially before the regression equations start getting more complicated.</p>
+<p>Let’s get familiar with how you might write the regression equation we’re about to fit in R.</p>
+<div id="basics-of-notation" class="section level2">
+<h2>Basics of Notation</h2>
+<p>We need to know a little bit of different notation for equations.</p>
+<ul>
+<li><p><code>$</code>: begin and end the equation.</p></li>
+<li><p><code>$$</code>: before and after the equation put the equation in the center of a new line</p></li>
+<li><p><code>\</code>: precedes any symbol, accent, operator, or other non-text item</p></li>
+<li><p><code>_</code>: subscript</p></li>
+<li><p><code>^</code>: superscript</p></li>
+<li><p><code>{}</code>: any text that gets an accent (e.g., see <em>hat</em> below) or to denote explicitly a word after a subscript/superscript</p></li>
+</ul>
+</div>
+<div id="key-examples-for-multiple-regression" class="section level2">
+<h2>Key Examples for Multiple Regression</h2>
+<ul>
+<li><p><code>\beta</code>: <span class="math inline">\(\beta\)</span></p></li>
+<li><p><code>\epsilon</code>: <span class="math inline">\(\epsilon\)</span></p></li>
+<li><p><code>\cdot</code>: <span class="math inline">\(\cdot\)</span> (e.g., <code>\cdot Mileage</code> is <span class="math inline">\(\cdot Mileage\)</span>)</p></li>
+<li><p><code>\bar{}</code>: <span class="math inline">\(\bar{y}\)</span></p></li>
+<li><p><code>\hat{}</code>: <span class="math inline">\(\hat{y}\)</span> (e.g., <code>\hat{\beta}</code> is <span class="math inline">\(\hat{\beta}\)</span> )</p></li>
+<li><p><code>\widehat{}</code>: <span class="math inline">\(\widehat{}\)</span> (e.g., <code>\widehat{SmithCollege}</code> is <span class="math inline">\(\widehat{SmithCollege}\)</span>)</p></li>
+</ul>
+</div>
+<div id="some-other-features-that-may-be-useful-in-the-course" class="section level2">
+<h2>Some other features that may be useful in the course:</h2>
+<ul>
+<li><p><code>\ne</code>: <span class="math inline">\(\ne\)</span> or not-equal-to – for hypothesis testing</p></li>
+<li><p><code>\pm</code>: <span class="math inline">\(\pm\)</span> or plus-or-minus – for confidence intervals</p></li>
+<li><p><code>\frac{}{}</code>: a fraction, where the numerator is in the first set of brackets and the denominator is in the other – for <span class="math inline">\(R^2\)</span> or test statistics, etc.</p></li>
+<li><p><code>\sqrt{}</code>: <span class="math inline">\(\sqrt{}\)</span> square root</p></li>
+</ul>
+</div>
+<div id="examples" class="section level2">
+<h2>Examples:</h2>
+<ul>
+<li><p><code>$H_0: \beta_1 \ne 0$</code> is <span class="math inline">\(H_0: \beta_1 \ne 0\)</span>.</p></li>
+<li><p><code>$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$</code> results in <span class="math inline">\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)</span>.</p></li>
+<li><p><code>$y = \beta_0+\beta_1 \cdot Mileage+\epsilon$</code> results in <span class="math inline">\(y = \beta_0+\beta_1 \cdot Mileage+\epsilon\)</span>.</p></li>
+<li><p><code>$$\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage$$</code> results in
+<span class="math display">\[\hat{y} = \hat{\beta}_0+\hat{\beta}_1 \cdot Mileage\]</span></p></li>
+</ul>
+</div>
+<div id="notes-of-caution-other-resources" class="section level2">
+<h2>Notes of caution &amp; Other Resources</h2>
+<ul>
+<li>If you have an error, check the spacing before or after the <code>$</code></li>
+<li>This notation language is all based on <code>LaTeX</code>, so if you need to google, be sure to include that key word</li>
+<li>This material as a <a href="mathtype_cheatsheet.pdf"><code>.pdf</code></a> and <a href="mathtype_cheatsheet.Rmd"><code>.Rmd</code></a></li>
+</ul>
+<p>Here is a video of talking through the equations in Chapter 1 of the <em>STAT2</em> book.</p>
+<pre class="r"><code>blogdown::shortcode(&#39;youtube&#39;, &#39;szZP0WrQW4M&#39;)</code></pre>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/KCKDULGkPbI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/szZP0WrQW4M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-</div>
-<div id="chapter-1" class="section level1">
-<h1>Chapter 1</h1>
-<div id="examples-in-3-parts" class="section level2">
-<h2>1.1 - Examples in 3 parts</h2>
-<div id="part-1---example-1.1-loading-and-printing-the-data" class="section level3">
-<h3>Part 1 - Example 1.1: Loading and Printing the Data</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/F_tGm-Aj-4M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-<div id="part-2---example-1.2-making-a-scatterplot" class="section level3">
-<h3>Part 2 - Example 1.2: Making a Scatterplot</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/O_oE3xfDOyE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-<div id="part-3---example-1.3-fitting-a-regression-model" class="section level3">
-<h3>Part 3 - Example 1.3: Fitting a Regression Model</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/A24FVWmrzVI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-</div>
-<div id="assessing-conditions" class="section level2">
-<h2>1.3 - Assessing Conditions</h2>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/MAoN73IeNto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
 </div>
 
                     </div>
@@ -745,7 +751,7 @@
                 </div>
 
                 <div class="body-footer">
-                    <p>Last updated on January 29, 2020</p>
+                    <p>Last updated on January 27, 2020</p>
 
                     
 
@@ -757,7 +763,7 @@
   
 
 <p class="edit-page">
-  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/01-textbookCh1.html">
+  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/equations.html">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
