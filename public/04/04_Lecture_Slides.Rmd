@@ -35,7 +35,17 @@ AccordPrice <- AccordPrice %>%
 
 ```
 
+---
+class: inverse
 
+# In Person Help
+## *Stat TA Hours:* Wed, Thurs, Sunday 7-9pm Sabin-Reed 301
+## *Student Hours:* Monday 10:30-12:30
+
+# Slack - #HW2 channel
+
+# [What's coming up?](/schedule/)
+---
 # Residuals
 
 .pull-left[

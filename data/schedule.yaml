@@ -23,6 +23,7 @@ lessons:
   - title: '<i class="fas fa-university"></i> **Simple Linear Regression: ANOVA Table**'
     date: "February 5"
     reading: "04-reading"
+    class: "04-class"
   
   - title: '<i class="fas fa-users"></i> **Group Roster**'
     date: "February 7"

@@ -666,6 +666,47 @@ This section is an explanation of what your model tells us about the research qu
     </item>
     
     <item>
+      <title>Hypothesis Testing and Slope Inference</title>
+      <link>/class/03-class/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/03-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pre-Class&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode(&amp;#39;youtube&amp;#39;, &amp;#39;VhuC5J_bsZw&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Completed Exercise with Sample Answers: as &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.Rmd&#34;&gt;&lt;code&gt;.RMd&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Additional support and resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What’s a QQplot? Read &lt;a href=&#34;https://www.openintro.org/download.php?file=isrs1_tablet&amp;amp;referrer=/stat/textbook.php&#34;&gt;OpenIntro Statistics, p.93-101&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How do I format regression equations in RMarkdown? Check out the &lt;a href=&#34;resources/equations.html&#34;&gt;Resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How to Do Homework in RStudio</title>
       <link>/resources/homework/</link>
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
@@ -781,47 +822,6 @@ This section is an explanation of what your model tells us about the research qu
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt; Handout&lt;/a&gt; (and &lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; code&lt;/a&gt; )&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.html&#34;&gt;Lecture Slides&lt;/a&gt; ( and &lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hypothesis Testing and Slope Inference</title>
-      <link>/class/03-class/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/class/03-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-Class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Pre-Class&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode(&amp;#39;youtube&amp;#39;, &amp;#39;VhuC5J_bsZw&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;In-class Activity&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/03/03-lab.html&#34;&gt;Lab Exercise&lt;/a&gt; and &lt;code&gt;.RMd&lt;/code&gt; &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_RMDtemplate.Rmd&#34;&gt;template&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Completed Exercise with Sample Answers: as &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;http://sds291.netlify.com/03/03-lab_CompletedSolutions.Rmd&#34;&gt;&lt;code&gt;.RMd&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;additional-support-and-resources&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Additional support and resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;What’s a QQplot? Read &lt;a href=&#34;https://www.openintro.org/download.php?file=isrs1_tablet&amp;amp;referrer=/stat/textbook.php&#34;&gt;OpenIntro Statistics, p.93-101&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How do I format regression equations in RMarkdown? Check out the &lt;a href=&#34;resources/equations.html&#34;&gt;Resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -2002,10 +2002,8 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/class/04-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;February 7&lt;/td&gt;
@@ -2948,7 +2946,7 @@ Figure 1: A fancy pie chart.
         &lt;h3&gt;Instructor&lt;/h3&gt;
 
         &lt;ul class=&#34;icon-list&#34;&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-user&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.andrewheiss.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Dr. Benjamin Capistrant&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fas fa-user&#34;&gt;&lt;/i&gt; &lt;a href=&#34;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Dr. Benjamin Capistrant&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; Lilly Hall 310&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-envelope&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:bcapistrant@smith.edu&#34;&gt; bcapistrant@smith.edu&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fab fa-twitter&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://twitter.com/bencapistrant&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; @bencapistrant&lt;/a&gt;&lt;/li&gt;
@@ -3061,7 +3059,7 @@ Figure 1: A fancy pie chart.
 &lt;/div&gt;
 &lt;div id=&#34;student-hours&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Student Hours&lt;/h3&gt;
-&lt;p&gt;I am available in my office Mondays 11:00AM-12:30pm, Wednesdays 9:00-10:00AM for students to stop by and discuss anything that relates to the course or would be helpful to talk about in person. These hours are a great opportunity to clarify issues that have come up in class and in homeworks (including &lt;code&gt;R&lt;/code&gt;), to discuss research opportunities, your academic interests as they relate to SDS, talk about a news story you read that involved statistical modeling, even just to say hi. Some questions are easier to answer in person than via email, and many - myself included! - feel more comfortable asking questions one-on-one than in front of class. Student hours are a great option for both scenarios. Practically, the hours on Monday are a good opportunity to resolve questions that came up in the previous week’s class before the quiz or on the homeworks that are due most Mondays.&lt;/p&gt;
+&lt;p&gt;I am available in my office Mondays 10:30AM-12:30pm, Wednesdays 9:30-11:00AM for students to stop by and discuss anything that relates to the course or would be helpful to talk about in person. These hours are a great opportunity to clarify issues that have come up in class and in homeworks (including &lt;code&gt;R&lt;/code&gt;), to discuss research opportunities, your academic interests as they relate to SDS, talk about a news story you read that involved statistical modeling, even just to say hi. Some questions are easier to answer in person than via email, and many - myself included! - feel more comfortable asking questions one-on-one than in front of class. Student hours are a great option for both scenarios. Practically, the hours on Monday are a good opportunity to resolve questions that came up in the previous week’s class before the quiz or on the homeworks that are due most Mondays.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;additional-support-on-campus&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Additional Support on Campus&lt;/h3&gt;
@@ -3091,7 +3089,7 @@ Figure 1: A fancy pie chart.
 &lt;/div&gt;
 &lt;div id=&#34;written-and-oral-communication-skills&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Written and Oral Communication Skills&lt;/h3&gt;
-&lt;p&gt;Your ability to communicate results, which may be technical in nature, to your audience, which is likely to be non-technical, is critical to your success as a data analyst. The homework and project assignments in this class will place an emphasis on the clarity of your writing. In addition, there were will be many opportunities throughout the class where you will be asked to present your results from in class exercises, homeworks and the final project to your classmates. Consider this course as a way to develop these crucial communication skills and be quick to seek support from peers, in office hours, and from other resources (see above) as needed to do so.&lt;/p&gt;
+&lt;p&gt;Your ability to communicate results, which may be technical in nature, to your audience, which is likely to be non-technical, is critical to your success as a data analyst. The homework and project assignments in this class will place an emphasis on the clarity of your writing. In addition, there were will be many opportunities throughout the class where you will be asked to present your results from in class exercises, homeworks and the final project to your classmates. Consider this course as a way to develop these crucial communication skills and be quick to seek support from peers, in student hours, and from other resources (see above) as needed to do so.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;email-and-course-communications&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Email and Course Communications&lt;/h3&gt;

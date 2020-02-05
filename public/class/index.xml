@@ -66,29 +66,6 @@
     </item>
     
     <item>
-      <title>Model Inference &amp; Decomposing Regression Error</title>
-      <link>/class/04-class/</link>
-      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/class/04-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;In-class Activity&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt; Handout&lt;/a&gt; (and &lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; code&lt;/a&gt; )&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.html&#34;&gt;Lecture Slides&lt;/a&gt; ( and &lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Hypothesis Testing and Slope Inference</title>
       <link>/class/03-class/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
@@ -124,6 +101,29 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;What’s a QQplot? Read &lt;a href=&#34;https://www.openintro.org/download.php?file=isrs1_tablet&amp;amp;referrer=/stat/textbook.php&#34;&gt;OpenIntro Statistics, p.93-101&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;How do I format regression equations in RMarkdown? Check out the &lt;a href=&#34;resources/equations.html&#34;&gt;Resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Model Inference &amp; Decomposing Regression Error</title>
+      <link>/class/04-class/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/04-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt; Handout&lt;/a&gt; (and &lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; code&lt;/a&gt; )&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.html&#34;&gt;Lecture Slides&lt;/a&gt; ( and &lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
