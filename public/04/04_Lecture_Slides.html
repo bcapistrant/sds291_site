@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Model Inference and Partitioning Error</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Benjamin D. Capistrant, Smith College" />
+    <meta name="date" content="2020-02-05" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Model Inference and Partitioning Error
+### Benjamin D. Capistrant, Smith College
+### Feb. 5, 2020
+
+---
+
+
+
+
+
+
+
+# Residuals
+
+.pull-left[
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+]
+
+---
+# Sum of Squared Residuals
+
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+
+---
+class: middle, inverse, center
+
+# Separating Model Variance
+
+## SSTotal = SSModel + SSError
+
+## `\(\sum(y-\bar{y})^2 = \sum(\hat{y}-\bar{y})^2 + \sum(y-\hat{y})^2\)`
+---
+# Sum of Squares Total
+
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+# Partitioning SST into SSM &amp; SSE
+
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+# If the relationship were weak
+
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+---
+# If the relationship were weak
+
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+---
+# If the relationship were strong
+
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+# If the relationship were strong
+
+![](04_Lecture_Slides_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+
+---
+class: middle, inverse, center
+
+# A "significant" Model will have:
+
+# Big SSM, Small SSE
+
+---
+class: middle, inverse, center
+
+# ANOVA Table
+
+
+
+---
+#
+Rows and Columns of the ANOVA Table
+In R, each slope coefficient has its own row in the Table. The residuals have their own row.
+
+### Degrees of Freedom
+
+### Sum of Square
+
+### Mean Squares ( `\(\frac{Sum Squares}{df}\)` )
+
+### F value (test statistic: `\(F= \frac{MSModel}{MSError}\)`)
+  - `\(H_0: \beta_1=0\)` and `\(H_A: \beta_1 \ne 0\)`
+
+### p-value for the F test
+
+### [Shiny App - practice your F test intuition](https://gallery.shinyapps.io/dist_calc/)
+
+---
+### Recreate for Accord Price
+
+The df and Sum Sq are:
+
+_ | DF | Sum Sq | Mean Sq | F value | Pr(&gt;F)
+------ | --- | --- |  --- | --- | 
+Mileage | 1 | 687.66 | | |
+Residuals | 28 | 266.49 | | |
+
+---
+# R-Squared
+
+$$ R^2 = \frac{SSModel}{SSTotal} = \frac{\sum (\hat{y}-\bar{y})^2}{\sum (y-\bar{y})^2}$$
+
+Use the values from the ANOVA table below between Price and Milege to calculate `\(r^2\)`.
+
+```r
+anova(m1)
+```
+
+```
+## Analysis of Variance Table
+## 
+## Response: Price
+##           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## Mileage    1 687.66  687.66  72.253 3.055e-09 ***
+## Residuals 28 266.49    9.52                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+&gt; `\(R^2\)`, or the percent of variation in the response variable explained by the model, is ...
+
+&gt; XX% of the variation in used Honda Accord Prices can be explained by the car's mileage.
+
+---
+### Residual/Regression Standard Error
+
+`$$\hat{\sigma_{\epsilon}} = \sqrt{\frac{\sum(y - \bar{y}) ^2}{n-2}} = \sqrt{\frac{SSE}{n-2}}$$`
+
+Use the values from the ANOVA table below between Price and Milege to calculate `\(r^2\)`.
+
+```
+## Analysis of Variance Table
+## 
+## Response: Price
+##           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## Mileage    1 687.66  687.66  72.253 3.055e-09 ***
+## Residuals 28 266.49    9.52                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+&gt; The regression standard error, or the average amount of error in the regression model, is ...
+
+&gt; The regression model predicting used Honda Accords' prices as a function of the car's mileage is off by, on average, $XXX.
+
+---
+### These values aren't saved in R, but you can re-create them.
+
+```r
+#SSTotal = SSModel + SSE
+SSTotal &lt;- var( AccordPrice$Price ) * (nrow(AccordPrice)-1)
+SSE&lt;- sum(m1$resid^2 )
+SSModel&lt;- SSTotal - SSE
+c(SSTotal, SSE, SSModel)
+```
+
+```
+## [1] 954.1537 266.4892 687.6644
+```
+
+
+```r
+# R2
+our_r2&lt;-SSModel/SSTotal
+our_r2
+```
+
+```
+## [1] 0.7207062
+```
+
+
+```r
+# RSE
+n2_df&lt;-nrow(AccordPrice)-2
+our_rse&lt;-sqrt(SSE/n2_df)
+our_rse
+```
+
+```
+## [1] 3.08504
+```
+
+---
+# Cautions about `\(R^2\)`
+
+- What is a "big" `\(R^2\)`?
+
+- You likely don't care unless predicting
+    - Remember why we model: prediction, assessing relationships, testing differences
+        - Investment in education and GDP growth
+        - Wage differences by age
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="/Library/Frameworks/R.framework/Versions/3.6/Resources/library/sds/rmarkdown/templates/xaringan/resources/macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

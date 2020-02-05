@@ -67,21 +67,50 @@
     
     <item>
       <title>Model Inference &amp; Decomposing Regression Error</title>
-      <link>/class/03-class/</link>
+      <link>/class/04-class/</link>
       <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/04-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt; Handout&lt;/a&gt; (and &lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; code&lt;/a&gt; )&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.html&#34;&gt;Lecture Slides&lt;/a&gt; ( and &lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hypothesis Testing and Slope Inference</title>
+      <link>/class/03-class/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/class/03-class/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-Class&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Pre-class&lt;/h2&gt;
+&lt;h2&gt;Pre-Class&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode(&amp;#39;youtube&amp;#39;, &amp;#39;VhuC5J_bsZw&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;In-class Activity&lt;/h2&gt;

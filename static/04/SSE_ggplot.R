@@ -1,6 +1,7 @@
 library(dplyr)
 library(ggplot2)
 library(latex2exp)
+library(Stat2Data)
 data("AccordPrice")
 fit <- lm(Price ~ Mileage, data = AccordPrice)
 AccordPrice <- AccordPrice %>%
@@ -86,7 +87,7 @@ ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome var
         panel.grid.minor = element_blank(),
         panel.background = element_blank())
 
-### SSM
+### SST
 ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome variable on y-axis
   theme_bw() +
   geom_point() + # Plot the actual points
@@ -95,7 +96,7 @@ ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome var
   geom_smooth(method="lm", se=FALSE, size=0.5) +  
   #geom_hline(yintercept=14.27667, color="red") +
   geom_segment(aes(x=3 ,xend=150,y=AccordPrice$y_bar,yend=AccordPrice$y_bar), color="red") +
-  geom_segment(aes(x=predicted, y=Price, xend = predicted, yend = AccordPrice$y_bar), color="red", linetype="dashed", size=0.25) +
+  geom_segment(aes(x=Mileage, y=Price, xend = Mileage, yend = AccordPrice$y_bar), color="red", linetype="dashed", size=0.25) +
   annotate("text",x=-.3, y=27, hjust=1, vjust=0.5,
             label=TeX("$y_i$"), size=8) +
   annotate("text",x=-.3, y=20, hjust=1, vjust=0.25,

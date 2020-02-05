@@ -1,8 +1,8 @@
 ---
-title: "Model Inference & Decomposing Regression Error"
-linktitle: "4: ANOVA Table"
-date: "2020-02-05"
-class_date: "2020-02-05"
+title: "Hypothesis Testing and Slope Inference"
+linktitle: "3: ANOVA Table"
+date: "2020-02-03"
+class_date: "2020-02-03"
 menu:
   class:
     parent: Class sessions
@@ -16,9 +16,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Pre-class
-
-
+## Pre-Class
+```{r}
+blogdown::shortcode('youtube', 'VhuC5J_bsZw')
+```
 
 ## In-class Activity
 
@@ -31,4 +32,3 @@ editor_options:
 - What's a QQplot? Read [OpenIntro Statistics, p.93-101](https://www.openintro.org/download.php?file=isrs1_tablet&referrer=/stat/textbook.php)
 
 - How do I format regression equations in RMarkdown? Check out the [Resources](resources/equations.html) 
-

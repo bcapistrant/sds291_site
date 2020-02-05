@@ -14,8 +14,47 @@ library(broom)
 data("anscombe")
 ```
 
+# 1. Lecture Notes
 
-# Regression Output
+### A. Separating Model Variance
+
+\vspace{2 in}
+
+#### A.1. SSTotal
+\vspace{1.5 in}
+
+#### A.2. SSModel
+\vspace{1.5 in}
+
+#### A.3. SSError
+\vspace{1.5 in}
+
+\newpage
+
+### B. ANOVA Table
+
+\vspace{1.5 in}
+
+#### B.1. Degrees of Freedom
+\vspace{1.25 in}
+
+#### B.2. Mean Squared Model / Mean Squared Error
+\vspace{1.25 in}
+
+#### B.3. F Statistic
+\vspace{1.25 in}
+
+#### B.4. $R^2$
+\vspace{1.25 in}
+
+#### B.5. Regression Standard Error
+\vspace{1.25 in}
+
+\newpage
+
+# 2. In-Class Activity
+
+## Regression Output
 ```{r scatterplot with line, echo=FALSE, fig.height=4}
 m1<-lm(y1 ~ x1 , data = anscombe)
 summary(m1)
@@ -25,15 +64,15 @@ summary(m1)
 
 \vspace{1 in}
 
-2. Use the information in the table for x1 to calculate the t-value for the slope.
+1. Use the information in the table for x1 to calculate the t-value for the slope.
 
 \vspace{1 in}
 
-2. Test the hypothesis that x1 has a linear relationship with y1.
+1. Test the hypothesis that x1 has a linear relationship with y1.
 
 \vspace{1 in}
 
-3. Calculate the 95% confidence interval for the slope to 3 decimal places (t* = 2.26) and interpret in a sentence.
+1. Calculate the 95% confidence interval for the slope to 3 decimal places (t* = 2.26) and interpret in a sentence.
 
 \newpage
 # Residuals and Model Error
@@ -47,7 +86,7 @@ ggplot(data = anscombe, aes(x = x1, y = y1))  +
     geom_point() +           # Plot the scatterplot 
     geom_smooth(method=lm,   # Add linear regression line
                 se=FALSE) +  # Don't add shaded confidence region
-    geom_hline(yintercept=y1_mean, linetype="dashed", color="red")
+    geom_hline(yintercept=y1_mean, color="red")
 ```
 
 
@@ -70,14 +109,14 @@ ggplot(data = anscombe, aes(x = x1, y = y1))  +
 
 1. Calculate the residual (observed - predicted, or $y-\bar{y}$) and the model (predicted - mean, or $\hat{y}-\bar{y}$) for each value of x.
 
-1. Square each residual and model term.
+2. Square each residual and model term.
 
-1. Calculate the sum of squared residuals (SSR) and the Sum of Squares of the Model (SSM).
+3. Calculate the sum of squared residuals (SSR) and the Sum of Squares of the Model (SSM).
 
-1. Calculate the sum of squares total (SST = SSR + SSM)
+4. Calculate the sum of squares total (SST = SSR + SSM)
 \vspace{1 in}
 
-1. Calculate $r^2$ ($r^2 = \frac{SSModel}{SSTotal}$ or $r^2 = 1- \frac{SSError}{SSTotal}$)
+5. Calculate $r^2$ ($r^2 = \frac{SSModel}{SSTotal}$ or $r^2 = 1- \frac{SSError}{SSTotal}$)
 
 # ANOVA Table
 
@@ -97,6 +136,8 @@ ggplot(data = anscombe, aes(x = x1, y = y1))  +
 \vspace{1 in}
 
 1. Look at the F Distribution calculator (at https://gallery.shinyapps.io/dist_calc/) and estimate the p-value for your F statistic with 1 and n-2 degrees of freedom.
+
+1. Calculate Regression Standard Error ( $\hat\sigma_\epsilon = \sqrt{\frac{SSE}{n-2}}$ ) and interpret in a sentence.
 
 \newpage
 # Comparing to R output
@@ -121,3 +162,4 @@ anova(m1)
     1. confidence interval for the slope
     1. F statistic
     1. $R^2$
+    1. $\hat\sigma_\epsilon$

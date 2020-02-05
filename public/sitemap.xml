@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/assignment/02-problem-set/</loc>
-    <lastmod>2020-02-04T09:45:38-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/group/01-group/</loc>
     <lastmod>2020-01-29T20:03:04-05:00</lastmod>
   </url>
@@ -78,6 +73,11 @@
   </url>
   
   <url>
+    <loc>/assignment/02-problem-set/</loc>
+    <lastmod>2020-02-04T09:45:38-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/class/02-class/</loc>
     <lastmod>2020-01-29T19:40:31-05:00</lastmod>
   </url>
@@ -100,6 +100,11 @@
   <url>
     <loc>/resources/homework/</loc>
     <lastmod>2020-01-28T12:28:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/class/04-class/</loc>
+    <lastmod>2020-01-27T13:01:28-05:00</lastmod>
   </url>
   
   <url>

@@ -13,39 +13,6 @@
     </image>
     
     <item>
-      <title>2. Problem set 2</title>
-      <link>/assignment/02-problem-set/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/02-problem-set/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#template-.rmd-file&#34;&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Required&lt;/h1&gt;
-&lt;p&gt;Questions 2.15, 2.18, and 2.25 (2nd Edition) or 2.13, 2.16, and 2.17 (1st Edition)&lt;/p&gt;
-&lt;p&gt;Skip 2.25 / 2.17 A&lt;/p&gt;
-&lt;p&gt;For 2.25 / 2.17 D, refer to 2.18 / 2.16 A instead of 2.25 / 2.17 A&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;template-.rmd-file&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/h1&gt;
-&lt;p&gt;There is a template RMarkdown file for these questions &lt;a href=&#34;http://sds291.netlify.com/HW/SDS291_HW2_Template.Rmd&#34;&gt;here.&lt;/a&gt; The link will download the &lt;code&gt;.RMd&lt;/code&gt; template file, which you can upload to the server as we did in class or open in the desktop version of RStudio.&lt;/p&gt;
-&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
-&lt;p&gt;Use the Homework 1 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Forming a Group</title>
       <link>/group/01-group/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
@@ -495,6 +462,39 @@ This section is an explanation of what your model tells us about the research qu
     </item>
     
     <item>
+      <title>2. Problem set 2</title>
+      <link>/assignment/02-problem-set/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/02-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#template-.rmd-file&#34;&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;p&gt;Questions 2.15, 2.18, and 2.25 (2nd Edition) or 2.13, 2.16, and 2.17 (1st Edition)&lt;/p&gt;
+&lt;p&gt;Skip 2.25 / 2.17 A&lt;/p&gt;
+&lt;p&gt;For 2.25 / 2.17 D, refer to 2.18 / 2.16 A instead of 2.25 / 2.17 A&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;template-.rmd-file&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Template &lt;code&gt;.RMd&lt;/code&gt; file&lt;/h1&gt;
+&lt;p&gt;There is a template RMarkdown file for these questions &lt;a href=&#34;http://sds291.netlify.com/HW/SDS291_HW2_Template.Rmd&#34;&gt;here.&lt;/a&gt; The link will download the &lt;code&gt;.RMd&lt;/code&gt; template file, which you can upload to the server as we did in class or open in the desktop version of RStudio.&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;Use the Homework 1 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Fitting Regression Models</title>
       <link>/class/02-class/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
@@ -592,6 +592,7 @@ This section is an explanation of what your model tells us about the research qu
 &lt;li&gt;&lt;a href=&#34;#the-rstudio-interface-i.e.-what-am-i-looking-at-on-the-screen-and-what-do-i-do&#34;&gt;The RStudio interface (i.e., what am I looking at on the screen and what do I do?)&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#upper-right-your-environment&#34;&gt;Upper Right: your environment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#bottom-right-a-bunch-of-very-helpful-tabs&#34;&gt;Bottom Right: a bunch of very helpful tabs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bottom-left-left-panel&#34;&gt;Bottom Left / Left panel:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#upper-left-rmarkdown-files-appear-here-once-opened.&#34;&gt;Upper Left: RMarkdown files appear here once opened.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -611,7 +612,7 @@ This section is an explanation of what your model tells us about the research qu
 &lt;div id=&#34;the-rstudio-interface-i.e.-what-am-i-looking-at-on-the-screen-and-what-do-i-do&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The RStudio interface (i.e., what am I looking at on the screen and what do I do?)&lt;/h2&gt;
 &lt;p&gt;In clockwise order, let’s talk through what’s going on in each of the quadrants of the screen&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/img/install/RStudio_Screenshot.png&amp;quot; width=&amp;quot;75%&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/RStudio_Screenshot.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;upper-right-your-environment&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Upper Right: your environment&lt;/h3&gt;
 &lt;ul&gt;
@@ -627,7 +628,9 @@ This section is an explanation of what your model tells us about the research qu
 &lt;li&gt;Packages: the list of installed packages, such as packages to tell R how to make a graph, to fit a linear regression model. The textbook has a package that includes all of the datasets used in the examples – you can look to see if Stat2Data is listed&lt;/li&gt;
 &lt;li&gt;Viewer: where output gets generated, including knitted files&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###Bottom Left / Left panel:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bottom-left-left-panel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bottom Left / Left panel:&lt;/h3&gt;
 &lt;p&gt;Initially, when you open RStudio, all that’s on the left is the Console. Every time you launch RStudio, it will have the same text at the top of the console telling you the version of R that you’re running. Below that information is the prompt. Initially, interacting with R is all about typing commands and interpreting the output. To work interactively (i.e., you type a command right after the &amp;gt;, press enter, and see the results), you can use the prompt.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -635,7 +638,7 @@ This section is an explanation of what your model tells us about the research qu
 &lt;h2&gt;Upper Left: RMarkdown files appear here once opened.&lt;/h2&gt;
 &lt;p&gt;We will be using RMarkdown, where you can write sections of code and text interspersed with one another in one RMarkdown file (.rmd). You can tell RStudio to run code in an RMarkdown file line-by-line, chunk-by-chunk (chunk is the highly technical R term for a section of code), or to “knit” the text and the results of the executed code in the RMarkdown file into one complete finished product. When you open RMarkdown files, they appear in the top left quadrant of the screen (in orange below), and the console moves down.&lt;/p&gt;
 &lt;p&gt;See an example below:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/img/install/RMarkdown_Screenshot.png&amp;quot; width=&amp;quot;75%&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/RMarkdown_Screenshot.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note of thanks and attributions&lt;/em&gt;: This page was developed based on previously developed materials, particularly from &lt;a href=&#34;www.amelia.mn&#34;&gt;Amelia McNamara&lt;/a&gt; and &lt;a href=&#34;www.andresheiss.com&#34;&gt;Andrew Heiss&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -762,21 +765,50 @@ This section is an explanation of what your model tells us about the research qu
     
     <item>
       <title>Model Inference &amp; Decomposing Regression Error</title>
-      <link>/class/03-class/</link>
+      <link>/class/04-class/</link>
       <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/04-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.pdf&#34;&gt;&lt;code&gt;.pdf&lt;/code&gt; Handout&lt;/a&gt; (and &lt;a href=&#34;http://sds291.netlify.com/04/04_in-class.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; code&lt;/a&gt; )&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.html&#34;&gt;Lecture Slides&lt;/a&gt; ( and &lt;a href=&#34;http://sds291.netlify.com/04/04_Lecture_Slides.Rmd&#34;&gt;raw &lt;code&gt;.RMd&lt;/code&gt; file&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hypothesis Testing and Slope Inference</title>
+      <link>/class/03-class/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/class/03-class/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pre-class&#34;&gt;Pre-Class&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#additional-support-and-resources&#34;&gt;Additional support and resources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;pre-class&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Pre-class&lt;/h2&gt;
+&lt;h2&gt;Pre-Class&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode(&amp;#39;youtube&amp;#39;, &amp;#39;VhuC5J_bsZw&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VhuC5J_bsZw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;In-class Activity&lt;/h2&gt;
@@ -1048,7 +1080,8 @@ This section is an explanation of what your model tells us about the research qu
 
 
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Quiz 2 will be open as of Friday 2/7/20 at 12:00pm (noon) and due before noon on Monday 2/10.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt; See Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -2003,14 +2036,12 @@ Figure 1: A fancy pie chart.
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
                     href=&#34;/reading/05-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/assignment/02-problem-set/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/assignment/02-quiz/&#34;&gt;
+                    &lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;

@@ -11,5 +11,6 @@ menu:
 type: docs
 ---
 
+- Quiz 2 will be open as of Friday 2/7/20 at 12:00pm (noon) and due before noon on Monday 2/10.
 
 - <i class="fas fa-question-circle"></i> See Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 

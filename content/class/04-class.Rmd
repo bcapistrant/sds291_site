@@ -1,0 +1,23 @@
+---
+title: "Model Inference & Decomposing Regression Error"
+linktitle: "4: ANOVA Table"
+date: "2020-02-05"
+class_date: "2020-02-05"
+menu:
+  class:
+    parent: Class sessions
+    weight: 4
+type: docs
+weight: 4
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activity
+
+- [`.pdf` Handout](http://sds291.netlify.com/04/04_in-class.pdf) (and [raw `.RMd` code](http://sds291.netlify.com/04/04_in-class.Rmd) )
+
+- [Lecture Slides](http://sds291.netlify.com/04/04_Lecture_Slides.html) ( and [ raw `.RMd` file](http://sds291.netlify.com/04/04_Lecture_Slides.Rmd)

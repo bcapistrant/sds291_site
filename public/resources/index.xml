@@ -239,6 +239,7 @@
 &lt;li&gt;&lt;a href=&#34;#the-rstudio-interface-i.e.-what-am-i-looking-at-on-the-screen-and-what-do-i-do&#34;&gt;The RStudio interface (i.e., what am I looking at on the screen and what do I do?)&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#upper-right-your-environment&#34;&gt;Upper Right: your environment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#bottom-right-a-bunch-of-very-helpful-tabs&#34;&gt;Bottom Right: a bunch of very helpful tabs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bottom-left-left-panel&#34;&gt;Bottom Left / Left panel:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#upper-left-rmarkdown-files-appear-here-once-opened.&#34;&gt;Upper Left: RMarkdown files appear here once opened.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -258,7 +259,7 @@
 &lt;div id=&#34;the-rstudio-interface-i.e.-what-am-i-looking-at-on-the-screen-and-what-do-i-do&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The RStudio interface (i.e., what am I looking at on the screen and what do I do?)&lt;/h2&gt;
 &lt;p&gt;In clockwise order, let’s talk through what’s going on in each of the quadrants of the screen&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/img/install/RStudio_Screenshot.png&amp;quot; width=&amp;quot;75%&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/RStudio_Screenshot.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;upper-right-your-environment&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Upper Right: your environment&lt;/h3&gt;
 &lt;ul&gt;
@@ -274,7 +275,9 @@
 &lt;li&gt;Packages: the list of installed packages, such as packages to tell R how to make a graph, to fit a linear regression model. The textbook has a package that includes all of the datasets used in the examples – you can look to see if Stat2Data is listed&lt;/li&gt;
 &lt;li&gt;Viewer: where output gets generated, including knitted files&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###Bottom Left / Left panel:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bottom-left-left-panel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bottom Left / Left panel:&lt;/h3&gt;
 &lt;p&gt;Initially, when you open RStudio, all that’s on the left is the Console. Every time you launch RStudio, it will have the same text at the top of the console telling you the version of R that you’re running. Below that information is the prompt. Initially, interacting with R is all about typing commands and interpreting the output. To work interactively (i.e., you type a command right after the &amp;gt;, press enter, and see the results), you can use the prompt.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -282,7 +285,7 @@
 &lt;h2&gt;Upper Left: RMarkdown files appear here once opened.&lt;/h2&gt;
 &lt;p&gt;We will be using RMarkdown, where you can write sections of code and text interspersed with one another in one RMarkdown file (.rmd). You can tell RStudio to run code in an RMarkdown file line-by-line, chunk-by-chunk (chunk is the highly technical R term for a section of code), or to “knit” the text and the results of the executed code in the RMarkdown file into one complete finished product. When you open RMarkdown files, they appear in the top left quadrant of the screen (in orange below), and the console moves down.&lt;/p&gt;
 &lt;p&gt;See an example below:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/img/install/RMarkdown_Screenshot.png&amp;quot; width=&amp;quot;75%&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/install/RMarkdown_Screenshot.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note of thanks and attributions&lt;/em&gt;: This page was developed based on previously developed materials, particularly from &lt;a href=&#34;www.amelia.mn&#34;&gt;Amelia McNamara&lt;/a&gt; and &lt;a href=&#34;www.andresheiss.com&#34;&gt;Andrew Heiss&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>

@@ -19,54 +19,288 @@ sds::mono_light_smith()
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-library(tidyverse)
-library(broom)
-library(ggridges)
-library(knitr)
+library(dplyr)
+library(ggplot2)
+library(latex2exp)
 library(Stat2Data)
+data("AccordPrice")
+fit <- lm(Price ~ Mileage, data = AccordPrice)
+AccordPrice <- AccordPrice %>%
+  mutate(predicted = predict(fit),
+         residuals = residuals(fit),
+         top_right = Mileage + residuals,
+         bottom_right = Mileage + residuals,
+         y_bar = mean(Price)
+    )
+
 ```
 
+
+# Residuals
+
+.pull-left[
+```{r, warning=FALSE,error=FALSE,message=FALSE}
+# Residual - Overall
+ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  geom_point(aes(x=Mileage, y = predicted), color="blue", size=2) + 
+  #geom_point(aes(x = top_right, y = Price), shape = 1, color="white") + 
+  #geom_point(aes(x = bottom_right, y = predicted), shape = 1, color="white") +
+  geom_smooth(method="lm", se=FALSE, size=0.5) +  
+  geom_segment(aes(x=Mileage, y=Price, xend = Mileage, yend = predicted)) +
+  #coord_cartesian(xlim = c(0,20), ylim=c(15,35)) + 
+  annotate("text",x=4.5, y=27, hjust=1, vjust=0.5,
+            label=TeX("$y$"), size=8) +
+  annotate("text",x=4.5, y=20, hjust=1, vjust=1,
+            label=TeX("$\\hat{y}$"), color="blue", size=8)  
+
+```
+]
+
+.pull-right[
+```{r, warning=FALSE,error=FALSE,message=FALSE}
+# Residual - ZOOMED
+ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  geom_point(aes(x=Mileage, y = predicted), color="blue", size=2) + 
+  geom_point(aes(x = top_right, y = Price), shape = 1, color="white") + 
+  geom_point(aes(x = bottom_right, y = predicted), shape = 1, color="white") +
+  geom_smooth(method="lm", se=FALSE, size=0.5) +  
+  geom_segment(aes(x=Mileage, y=Price, xend = Mileage, yend = predicted)) +
+  coord_cartesian(xlim = c(0,20), ylim=c(15,35)) + 
+  annotate("text",x=4.5, y=27, hjust=1, vjust=0.5,
+            label=TeX("$y$"), size=8) +
+  annotate("text",x=4.5, y=20, hjust=1, vjust=1,
+            label=TeX("$\\hat{y}$"), color="blue", size=8)   
+```
+
+]
+
+---
+# Sum of Squared Residuals
+
+```{r, warning=FALSE,error=FALSE,message=FALSE}
+# Squared Residuals
+ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  geom_point(aes(x=Mileage, y = predicted), color="blue", size=2) + 
+  geom_point(aes(x = top_right, y = Price), shape = 1, color="white") + 
+  geom_point(aes(x = bottom_right, y = predicted), shape = 1, color="white") +
+  geom_smooth(method="lm", se=FALSE, size=0.5) +  
+  geom_segment(aes(x=Mileage, y=Price, xend = Mileage, yend = predicted)) +
+  coord_cartesian(xlim = c(0,20), ylim=c(15,35)) + 
+  annotate("text",x=4.5, y=27, hjust=1, vjust=0.5,
+            label=TeX("$y$"), size=8) +
+  annotate("text",x=4.5, y=20, hjust=1, vjust=1,
+            label=TeX("$\\hat{y}$"), color="blue", size=8) + 
+  geom_segment(aes(x=Mileage, y=Price, yend = Price, xend = top_right), color = "grey", linetype = "dashed") +   geom_segment(aes(x=bottom_right, y=predicted, yend = Price, xend = top_right), color = "grey", linetype = "dashed") + 
+   geom_segment(aes(x=Mileage, y=predicted, yend = predicted, xend = bottom_right), color = "lightgrey", linetype = "dashed") +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+```
+
+---
 class: middle, inverse, center
 
 # Separating Model Variance
 
+## SSTotal = SSModel + SSError
+
+## $\sum(y-\bar{y})^2 = \sum(\hat{y}-\bar{y})^2 + \sum(y-\hat{y})^2$
 ---
-# SST
+# Sum of Squares Total
+
+```{r, error=FALSE, message=FALSE, warning=FALSE}
+ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  #geom_point(aes(x=Mileage, y = y_bar), color="red", size=1) + 
+  #geom_point(aes(x=Mileage, y = predicted), color="blue", size=1) + 
+  geom_smooth(method="lm", se=FALSE, size=0.5) +  
+  #geom_hline(yintercept=14.27667, color="red") +
+  geom_segment(aes(x=3 ,xend=150,y=AccordPrice$y_bar,yend=AccordPrice$y_bar), color="red") +
+  geom_segment(aes(x=Mileage, y=Price, xend = Mileage, yend = AccordPrice$y_bar), color="black", linetype="dashed", size=0.5) +
+  annotate("text",x=-.3, y=27, hjust=1, vjust=0.5,
+            label=TeX("$y_i$"), size=8) +
+  annotate("text",x=-.3, y=20, hjust=1, vjust=0.25,
+            label=TeX("$\\hat{y}_i$"), color="blue", size=8) + 
+  annotate("text",x=-.3, y=14, hjust=1, vjust=0.5,
+            label=TeX("$\\bar{y}$"), color="red", size=8) + 
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+```
 
 ---
-# SSE
+# Partitioning SST into SSM & SSE
+
+```{r, warning=FALSE, message=FALSE, error=FALSE}
+
+ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  #geom_point(aes(x=Mileage, y = y_bar), color="red", size=1) + 
+  #geom_point(aes(x=Mileage, y = predicted), color="blue", size=1) + 
+  geom_smooth(method="lm", se=FALSE, size=0.5) +  
+  #geom_hline(yintercept=14.27667, color="red") +
+  geom_segment(aes(x=3 ,xend=150,y=AccordPrice$y_bar,yend=AccordPrice$y_bar), color="red") +
+  geom_segment(aes(x=Mileage, y=Price, xend = Mileage, yend = predicted), color="blue", linetype="solid", size=0.5) +
+  geom_segment(aes(x=Mileage, y=predicted, xend = Mileage, yend = AccordPrice$y_bar), color="red", linetype="dashed", size=0.5) +
+  annotate("text",x=-.3, y=27, hjust=1, vjust=0.5,
+            label=TeX("$y_i$"), size=8) +
+  annotate("text",x=-.3, y=20, hjust=1, vjust=0.25,
+            label=TeX("$\\hat{y}_i$"), color="blue", size=8) + 
+  annotate("text",x=-.3, y=14, hjust=1, vjust=0.5,
+            label=TeX("$\\bar{y}$"), color="red", size=8) + 
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+```
 
 ---
-# SSM
+# If the relationship were weak
+
+```{r, warning=FALSE, message=FALSE, error=FALSE}
+library(MASS)
+weak <- as.data.frame(mvrnorm(1000, mu = c(0,0), Sigma = matrix(c(1,0.13,0.13,1), ncol = 2),
+               empirical = TRUE))
+fitweak <- lm(V1 ~ V2, data = weak)
+weak <- weak %>%
+  mutate(predicted = predict(fitweak),
+         residuals = residuals(fitweak),
+         y_bar = mean(V1)
+    ) %>%
+  rename(x=V2, y=V1)
+
+
+ggplot(weak, aes(x=x, y=y)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  #geom_point(aes(x=Mileage, y = y_bar), color="red", size=1) + 
+  #geom_point(aes(x=Mileage, y = predicted), color="blue", size=1) + 
+  geom_smooth(method="lm", se=FALSE, size=0.5)
+
+
+```
+
+---
+# If the relationship were weak
+
+```{r, warning=FALSE, message=FALSE, error=FALSE}
+ggplot(weak, aes(x=x, y=y)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  #geom_point(aes(x=Mileage, y = y_bar), color="red", size=1) + 
+  #geom_point(aes(x=Mileage, y = predicted), color="blue", size=1) + 
+  geom_smooth(method="lm", se=FALSE, size=0.5) +  
+  #geom_hline(yintercept=0, color="red") +
+  geom_segment(aes(x=-2 ,xend=2,y=weak$y_bar,yend=weak$y_bar), color="red") +
+  geom_segment(aes(x=x, y=y, xend = x, yend = predicted), color="blue", linetype="solid", size=0.5) +
+  geom_segment(aes(x=x, y=predicted, xend = x, yend = weak$y_bar), color="red", linetype="solid", size=0.5) +
+  annotate("text",x=-2.25, y=1.7, hjust=1, vjust=0.5,
+            label=TeX("$y_i$"), size=8) +
+  annotate("text",x=-2.25, y=-0.4, hjust=1, vjust=0.25,
+            label=TeX("$\\hat{y}_i$"), color="blue", size=8) + 
+  annotate("text",x=-2.25, y=0, hjust=1, vjust=0.5,
+            label=TeX("$\\bar{y}$"), color="red", size=8) + 
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+```
+
+---
+# If the relationship were strong
+
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+
+strong <- as.data.frame(mvrnorm(1000, mu = c(0,0), Sigma = matrix(c(1,0.83,0.83,1), ncol = 2),
+               empirical = TRUE))
+fitstrong <- lm(V1 ~ V2, data = strong)
+strong <- strong %>%
+  mutate(predicted = predict(fitstrong),
+         residuals = residuals(fitstrong),
+         y_bar = mean(V1)
+    ) %>%
+  rename(x=V2, y=V1)
+
+
+ggplot(strong, aes(x=x, y=y)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  #geom_point(aes(x=Mileage, y = y_bar), color="red", size=1) + 
+  #geom_point(aes(x=Mileage, y = predicted), color="blue", size=1) + 
+  geom_smooth(method="lm", se=FALSE, size=0.5)
+
+```
+
+---
+# If the relationship were strong
+
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+
+ggplot(strong, aes(x=x, y=y)) +  # Set up canvas with outcome variable on y-axis
+  theme_bw() +
+  geom_point() + # Plot the actual points
+  #geom_point(aes(x=Mileage, y = y_bar), color="red", size=1) + 
+  #geom_point(aes(x=Mileage, y = predicted), color="blue", size=1) + 
+  geom_smooth(method="lm", se=FALSE, size=0.5) +  
+  #geom_hline(yintercept=0, color="red") +
+  geom_segment(aes(x=-2 ,xend=2,y=strong$y_bar,yend=strong$y_bar), color="red") +
+  geom_segment(aes(x=x, y=y, xend = x, yend = predicted), color="blue", linetype="solid", size=0.5) +
+  geom_segment(aes(x=x, y=predicted, xend = x, yend = strong$y_bar), color="red", linetype="solid", size=0.5) +
+  annotate("text",x=-2.25, y=1.7, hjust=1, vjust=0.5,
+            label=TeX("$y_i$"), size=8) +
+  annotate("text",x=-2.25, y=-0.4, hjust=1, vjust=0.25,
+            label=TeX("$\\hat{y}_i$"), color="blue", size=8) + 
+  annotate("text",x=-2.25, y=0, hjust=1, vjust=0.5,
+            label=TeX("$\\bar{y}$"), color="red", size=8) + 
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+```
+
+
+---
+class: middle, inverse, center
+
+# A "significant" Model will have:
+
+# Big SSM, Small SSE
 
 ---
 class: middle, inverse, center
 
 # ANOVA Table
 
----
-
-# ANOVA Table
-
-```{r, echo=TRUE}
-data("PorschePrice")
-m1<-lm(Price~Mileage, data=PorschePrice)
-summary(m1)
-anova(m1)
+```{r}
+data("AccordPrice")
+m1<-lm(Price~Mileage, data=AccordPrice)
 ```
 
 ---
-### Rows and Columns of the ANOVA Table
+#
+Rows and Columns of the ANOVA Table
 In R, each slope coefficient has its own row in the Table. The residuals have their own row.
 
-- Degrees of Freedom
-- Sum of Square
-- Mean Squares ($\frac{Sum Squares}{df}$)
-- F value (test statistic: $F= \frac{MSModel}{MSResiduals}$)
-    - $H_0: \beta_1=0$ and $H_A: \beta_1 \ne 0$
-- p-value for the F test
+### Degrees of Freedom
 
-[Shiny App - practice your F test intuition](https://gallery.shinyapps.io/dist_calc/)
+### Sum of Square
+
+### Mean Squares ( $\frac{Sum Squares}{df}$ )
+
+### F value (test statistic: $F= \frac{MSModel}{MSError}$)
+  - $H_0: \beta_1=0$ and $H_A: \beta_1 \ne 0$
+
+### p-value for the F test
+
+### [Shiny App - practice your F test intuition](https://gallery.shinyapps.io/dist_calc/)
 
 ---
 ### Recreate for Accord Price
@@ -81,28 +315,52 @@ Residuals | 28 | 266.49 | | |
 ---
 # R-Squared
 
-One thing we can use the values in the ANOVA table to do is calulate the $r^2$, the percent variablility in Price explained by the model. Remember that $r^2$ is the ratio of SSModel ($\sum (\hat{y}-\bar{y})^2$) and SSTotal ($\sum (y-\bar{y})^2$), or 
-
 $$ R^2 = \frac{SSModel}{SSTotal} = \frac{\sum (\hat{y}-\bar{y})^2}{\sum (y-\bar{y})^2}$$
 
 Use the values from the ANOVA table below between Price and Milege to calculate $r^2$.
 ```{r, echo=TRUE}
-m2<-lm(Price~Mileage, data=PorschePrice)
-anova(m2)
+anova(m1)
 ```
+
+> $R^2$, or the percent of variation in the response variable explained by the model, is ...
+
+> XX% of the variation in used Honda Accord Prices can be explained by the car's mileage.
+
+---
+### Residual/Regression Standard Error
+
+$$\hat{\sigma_{\epsilon}} = \sqrt{\frac{\sum(y - \bar{y}) ^2}{n-2}} = \sqrt{\frac{SSE}{n-2}}$$
+
+Use the values from the ANOVA table below between Price and Milege to calculate $r^2$.
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+anova(m1)
+```
+
+> The regression standard error, or the average amount of error in the regression model, is ...
+
+> The regression model predicting used Honda Accords' prices as a function of the car's mileage is off by, on average, $XXX.
 
 ---
 ### These values aren't saved in R, but you can re-create them.
 ```{r, echo=TRUE}
 #SSTotal = SSModel + SSE
-SSTotal <- var( Cereal$Calories ) * (nrow(Cereal)-1)
+SSTotal <- var( AccordPrice$Price ) * (nrow(AccordPrice)-1)
 SSE<- sum(m1$resid^2 )
 SSModel<- SSTotal - SSE
 c(SSTotal, SSE, SSModel)
+```
 
+```{r, echo=TRUE}
 # R2
-ourr2<-SSModel/SSTotal
-ourr2
+our_r2<-SSModel/SSTotal
+our_r2
+```
+
+```{r, echo=TRUE}
+# RSE
+n2_df<-nrow(AccordPrice)-2
+our_rse<-sqrt(SSE/n2_df)
+our_rse
 ```
 
 ---
@@ -114,399 +372,3 @@ ourr2
     - Remember why we model: prediction, assessing relationships, testing differences
         - Investment in education and GDP growth
         - Wage differences by age
-        
-        
-
-
-
-
-
-
-
-
-# **L N E**: Linearity, Normality and Equal Variance
-
-## Illustrated well in diagnostic plots
-
-- **ALL:** Residual - Fitted Plots
-
-- **Normality**: Histogram and/or QQ / Normal Probability Plot
-
----
-class: middle, center
-
-# **L N E**: Linearity, Normality and Equal Variance
-
-# First: when assumptions are met 
-
-# Second: illustrate assumption _violations_
-
----
-class: middle, center
-
-# **L N E:**  Scatterplot
-
-```{r}
-set.seed(20)
-x <- seq(from=0, to=100, by=0.1)
-y1 <- 500 + 2*(x-4)
-noise <- rnorm(length(x), mean=10, sd=10)
-y <- noise + y1
-assumptions_1<-as.data.frame(cbind(y,x))
-```
-
-```{r, fig.height = 5.5, fig.width= 10}
-qplot(y=y, x=x, data=assumptions_1) + theme_bw() + geom_smooth(method = "lm", se=FALSE)
-```
-
-
----
-class: middle, center
-
-```{r, fig.height = 5.5, fig.width= 10}
-assumptions_lm<-lm(y~x, data=assumptions_1)
-assumptions_df<-augment(assumptions_lm)
-assumptions_df$YHat <- cut(assumptions_df$.fitted, seq(500, 700, 25), include.lowest = TRUE)
-```
-
-# **L N E:** Linearity, Normality & Equal Variances
-
-.pull-left[ 
-### Residual-Fitted Plot
-
-```{r, fig.height = 6}
-qplot(x = .fitted, y = .resid, data = assumptions_df) + geom_hline(yintercept = 0, color="red") +theme_bw()
-```
-
-]
-
-.pull-right[
-### Distributions
-
-```{r, fig.height = 6, warning=FALSE, messsage=FALSE, error=FALSE}
-suppressMessages(print(
-  ggplot(assumptions_df,aes(x = .resid, y = YHat)) + 
-  geom_density_ridges() +
-  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
-  #theme(axis.text.x = element_text(angle=45)) +
-  scale_y_discrete(labels=  c("500", "525", "550", "575", 
-                              "600", "625", "650", "675",
-                              "700")) +
-  coord_flip()
-))
-
- # assumptions_df %>%
- # summarise(mean_1stgrp = mean(.resid),
- #          sd_1stgrp=sd(.resid))
-
-# assumptions_df %>%
-#     #filter(YHat %in% c("(525,550]", "(1.05e+03,1.08e+03]")) %>%
-#     group_by(YHat) %>%
-#   summarise(mean_1stgrp = mean(.resid),
-#          sd_1stgrp=sd(.resid))
-
-```
-]
-
----
-class: middle, center
-
-## Equal Variance & Statistical Inference
-
-```{r, fig.height = 6, fig.width = 10, warning=FALSE, messsage=FALSE, error=FALSE}
-suppressMessages(print(
-  ggplot(assumptions_df,aes(x = .resid, y = YHat)) + 
-  geom_density_ridges() +
-  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
-  #theme(axis.text.x = element_text(angle=45)) +
-  scale_y_discrete(labels=  c("500", "525", "550", "575", 
-                              "600", "625", "650", "675",
-                              "700")) +
-  geom_vline(xintercept = c(-10,10), color="black", size=.3 , linetype = "dashed") + 
-  geom_vline(xintercept = c(-20,20), color="black", size=.3 ) +
-  geom_vline(xintercept = 2.658021e-16, color="black", size=1 ) 
-)) 
-  # geom_vline(xintercept = c(-9.839193,9.839193), color="red", size=.3, linetype="dashed") +
-  # geom_vline(xintercept = c((9.839193*-2),(9.839193*2)), color="red", size=.3) +
-  # geom_vline(xintercept = c(-9.726648,9.726648), color="blue", size=.3, linetype="dashed") +
-  # geom_vline(xintercept = c((9.726648*-2), (9.726648*2)), color="blue", size=.3) 
-
-# assumptions_df %>%
-#     #filter(YHat %in% c("(525,550]", "(1.05e+03,1.08e+03]")) %>%
-#     group_by(YHat) %>%
-#   summarise(mean_1stgrp = mean(.resid),
-#          sd_1stgrp=sd(.resid))
-
-```
-
----
-class: middle, center
-
-# Linearity _Violation_
-
-## Scatterplot
-
-```{r}
-set.seed(20)
-x <- seq(from=0, to=100, by=0.1)
-y1 <- 500 + 0.15*(x-10)^2
-noise <- rnorm(length(x), mean=80, sd=200)
-y <- noise + y1
-linearity_1<-as.data.frame(cbind(y,x))
-```
-
-```{r, fig.height = 5.5, fig.width= 10}
-qplot(y=y, x=x, data=linearity_1) + theme_bw()
-```
-
----
-class: middle, center
-
-# Linearity _Violations_
-
-.pull-left[ 
-### Regression Model
-
-```{r, fig.height = 6}
-qplot(y=y, x=x, data=linearity_1) + theme_bw() + geom_smooth(method = "lm", se=FALSE)
-```
-
-]
-
-.pull-right[
-### Residual-Fitted Plot
-
-```{r, fig.height = 6}
-m0<-lm(y~x, data=linearity_1)
-m0_df<-augment(m0)
-qplot(x = .fitted, y = .resid, data = m0_df) + geom_hline(yintercept = 0, color="red") +theme_bw()
-```
-]
-
-
----
-class: middle, center
-
-```{r}
-YHat_nc <- runif(10000,20,50)
-newres_nc <- rnorm(10000)*(YHat_nc-19)
-res_nc=(newres_nc-mean(newres_nc))/sd(newres_nc)
-residuals_nc<-as.data.frame(cbind(YHat_nc,res_nc))
-
-residuals_nc$YHat_nc2 <- cut(residuals_nc$YHat_nc, seq(20, 50, 2), include.lowest = TRUE)
-
-```
-
-# Equal Variance _Violation_
-
-.pull-left[ 
-### Regression Model
-
-```{r, fig.height = 6}
-qplot(y=res_nc, x=YHat_nc, data=residuals_nc) + 
-  theme_bw() + 
-  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
-  geom_hline(yintercept = 0)
-```
-
-]
-
-.pull-right[
-### Residual-Fitted Plot
-
-```{r, fig.height = 6}
-suppressMessages(print(
-  ggplot(residuals_nc,aes(x = res_nc, y = YHat_nc2)) + 
-  geom_density_ridges() + theme_bw() +
-  #geom_vline(xintercept = 0, color="blue", size=.5 ) + 
-  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
-  #theme(axis.text.x = element_text(angle=45)) +
-  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
-                             "30", "32", "34", "36", "38",
-                             "40", "42", "44", "46", "48")) +
-  coord_flip() 
-))
-
-```
-]
-
----
-class: middle, center
-
-## Equal Variance Violations & Statistical Inference
-
-```{r, fig.height = 6, fig.width = 10, warning=FALSE, messsage=FALSE, error=FALSE}
-suppressMessages(print(
-  ggplot(residuals_nc,aes(x = res_nc, y = YHat_nc2)) + 
-  geom_density_ridges() + theme_bw() +
-  #geom_vline(xintercept = 0, color="blue", size=.5 ) + 
-  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
-  #theme(axis.text.x = element_text(angle=45)) +
-  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
-                             "30", "32", "34", "36", "38",
-                             "40", "42", "44", "46", "48")) +
-  geom_vline(xintercept = c(-1,1), color="black", size=.3 , linetype = "dashed") + 
-  geom_vline(xintercept = c(-2,2), color="black", size=.3 ) 
- 
-  # geom_vline(xintercept = c(-9.839193,9.839193), color="red", size=.3, linetype="dashed") +
-  # geom_vline(xintercept = c((9.839193*-2),(9.839193*2)), color="red", size=.3) +
-  # geom_vline(xintercept = c(-9.726648,9.726648), color="blue", size=.3, linetype="dashed") +
-  # geom_vline(xintercept = c((9.726648*-2), (9.726648*2)), color="blue", size=.3) 
-
-# assumptions_df %>%
-#     #filter(YHat %in% c("(525,550]", "(1.05e+03,1.08e+03]")) %>%
-#     group_by(YHat) %>%
-#   summarise(mean_1stgrp = mean(.resid),
-#          sd_1stgrp=sd(.resid))
-))
-```
-
----
-class: middle, center
-
-### Equal Variance Violations & Statistical Inference
-
-```{r, fig.height = 5, out.width='100%', warning=FALSE, messsage=FALSE, error=FALSE}
-suppressMessages(print(
-  ggplot(residuals_nc,aes(x = res_nc, y = YHat_nc2)) + 
-  geom_density_ridges() + theme_bw() +
-  #geom_vline(xintercept = 0, color="blue", size=.5 ) + 
-  xlab("Residuals") + ylab("Fitted Values (estimated value of y-hat)") + 
-  #theme(axis.text.x = element_text(angle=45)) +
-  scale_y_discrete(labels= c("20", "22", "24", "26", "28",
-                             "30", "32", "34", "36", "38",
-                             "40", "42", "44", "46", "48")) +
-  geom_vline(xintercept = c(-1,1), color="black", size=.3 , linetype = "dashed") + 
-  geom_vline(xintercept = c(-2,2), color="black", size=.3 ) +
-  geom_vline(xintercept = c(-1.6988,1.622518), color="red", size=.3, linetype="dashed") +
-  geom_vline(xintercept = c(-3.359519,3.283197), color="red", size=.3) +
-  geom_vline(xintercept = c(-0.110156,0.1220279), color="blue", size=.3, linetype="dashed") +
-  geom_vline(xintercept = c(-0.226248,0.2381198), color="blue", size=.3) 
-))
-```
-
-
----
-# Equal Variance & Linearity Can Happen At The Same Time!
-
-.pull-left[
-```{r,fig.height = 6, out.width='100%'}
-data("Perch")
-qplot(x=Weight, y=Length, data=Perch) + theme_bw() + geom_smooth(method="lm", se=FALSE)
-```
-]
-
-.pull-right[
-```{r ,fig.height = 6, out.width='100%'}
-data(Perch)
-model1=lm(Weight~Length,data=Perch)
-YHat=(model1$fitted+400)/50
-newresidual=model1$residual
-residual=(newresidual-mean(newresidual))/sd(newresidual)
-qplot(x=YHat, y=residual) + theme_bw() +geom_hline(yintercept=0, color="red")
-```
-]
----
-class: middle, inverse, center
-
-# Hypothesis Testing & Statistical Inference
-
----
-# Null & Alternative Hypotheses
-
-- $H_0: \beta_1 = 0$
-- $H_A: \beta_1 \neq 0$
-
-### Notes
-- No hats -- we specify the hypotheses _before_ we fit the model
-- 0 corresponds to a horizontal line
-    - Horizontal Line: no relationship between the explanatory (x) and response (y) variable
-    
----
-# Other ways to think about these hypotheses
-
-.pull-left[
-- Is the slope of the relationship between x and y significantly different (steeper, either positively or negatively...b/c of the $\neq$ we're hypothesizing it could be either + or -) than just a flat line?
-
-- Does this model do a better job of predicting y than just using the average value of y? 
-]
-
-.pull-right[
-```{r, out.width='100%'}
-data(AccordPrice)
-library(latex2exp)
-ggplot(AccordPrice, aes(x=Mileage, y=Price)) +  # Set up canvas with outcome variable on y-axis
-  theme_bw() +
-  geom_point() + # Plot the actual points
-  #geom_point(aes(x=Mileage, y = y_bar), color="red", size=1) + 
-  #geom_point(aes(x=Mileage, y = predicted), color="blue", size=1) + 
-  #geom_smooth(method="lm", se=FALSE, size=0.5) +  
-  geom_hline(yintercept=14.27667, color="red") +
-  theme(panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank())
-```
-
-
-]
-
----
-### Remember the *t-test* from Intro. Stats...
-
-$$ t = \frac{\bar{x}-\mu}{\sqrt{\frac{s}{n}}} $$
-
-### In english...
-
-$$ t = \frac{\text{estimate} - \text{null}}{\text{standard error}} $$
-
-### Since our null value for regression is 0...
-
-$$t=\frac{\hat{\beta_1}}{SE_\hat{\beta_1}}$$
-
----
-# What do we do with the test statistic?
-
-<img src="dist_calc.png" alt="drawing" width="550"/>
-
-
-### https://gallery.shinyapps.io/dist_calc/
-
-
----
-# test statistic, p-values, and hypotheses
-
-.pull-left[
-### Reject the null and accept the alternative hypothesis
-
-### Fail to reject the null hypothesis
-]
-
-.pull-right[
-
-<img src="courtroom.jpg" alt="drawing" width="300"/>
-
-]
-
----
-# Notes of caution with p-values
-
-## Careful with phrasing their interpretation
-
-- "the probability that this relationship was due to chance was less than 5% ($\alpha = 0.05$), since the p-value was..." is wordy but better than the overly general "the p-value is small".
-
-## Careful with their implications
-- What kind of Significance?
-
-### Readings:
-- [OpenIntro](https://www.openintro.org/download.php?file=isrs1_tablet&referrer=/stat/textbook.php) p.70-71
--  _STAT2_ 2nd Edition section on this (chapter 2.1-2.2)
-
-    
----
-# Confidence Intervals instead?
-
-$$\hat{\beta_1} \pm (t^* \cdot {SE_\hat{\beta_1}})$$
-
->We are 95% confident that the population parameter (or the "true" relationship between x and y in the population of interest) is between ... and ....
-
-### [OpenIntro](https://www.openintro.org/download.php?file=isrs1_tablet&referrer=/stat/textbook.php) p.102-107
