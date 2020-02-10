@@ -1,0 +1,178 @@
+---
+title: "SLR Review"
+author: "SDS 291"
+date: "Feb 10, 2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(Stat2Data)
+require(mosaic)
+require(magrittr)
+require(tidyverse)
+require(oilabs)
+```
+
+## Chapter 0 - What is a Statistical Model?
+
+- Samples, Population
+- Statistics, Parameters
+- Study designs:
+    + Observational
+    + Experiments
+- Variables:
+    + Explanatory
+    + Response
+- Variable Types / Forms:
+    + Quantitative
+    + Categorical
+        + Binary
+            + Indicator
+- Modeling partitions data into two components: the model and error
+
+## Chapter 1 - Simple Linear Regression
+
+Remember Porsche Prices? We want to understand the Price of a used Porsche as a function of its Mileage.
+
+- What's the regression equation?
+    + $Y=\beta_0+\beta_1 \cdot Mileage + \epsilon$ where $\epsilon \sim N(0,\sigma_\epsilon)$
+
+- What's the fitted regression equation?
+
+- Pay attention to hats and errors!
+    + When do hats appear?
+    + When don't error terms appear in equations? Why?
+  
+- What is the residual? How do you calculate it? 
+
+- What is the sum of squared residuals/error (SSE)? Why do we square and then sum the residuals?
+
+## Chapter 1 - Simple Linear Regression
+
+Remember Porsche Prices? We want to understand the Price of a used Porsche as a function of its Mileage.
+
+- What's the regression equation? 
+    + $Y=\beta_0+\beta_1 \cdot Mileage + \epsilon$ where $\epsilon \sim N(0,\sigma_\epsilon)$
+
+- What's the fitted regression equation?
+    + $\hat{Y}=\hat{\beta_0}+\hat{\beta_1} \cdot Mileage$ or
+    + $\widehat{Price}=50.04+-.27 \cdot Mileage$
+    + But **not**:
+        + $\hat{Y}=\hat{\beta_0}+\hat{\beta_1} \cdot Mileage + \epsilon$ or
+        + $\hat{Y}=\hat{\beta_0}+\hat{\beta_1} \cdot \hat{Mileage}$
+        + $\widehat{Price}=\hat{50.04}+\hat{-.27} \cdot Mileage$
+
+- Fitted equations
+    + Hats on y, betas (not on "x" or #s) and no error
+  
+- What is the residual?
+    + Difference between actual/observed and fitted/predicted value of y for a given observations
+    + $y-\hat{y}$
+
+- SSE:
+    + We __square__ residuals to even make positive/negative residuals the same scale; 
+    + We __sum__ them to understand the total amount of error in the model.
+
+## 1.1 Interpreting terms
+For the fitted equation $\widehat{Price}=71.09-0.5894\cdot Mileage$ where Prices is in $1000s and Mileage is 1000s of miles.
+
+- Interpret the *intercept*
+- Interpret the *slope*
+- Calculate and interpret the residual for a car with 21,500 Miles that was sold for $69,4000.
+
+## 1.1 Interpret the slope 
+
+```{r, echo = FALSE}
+data("PorschePrice")
+m0<-lm(Price~Mileage, data=PorschePrice)
+summary(m0)
+```
+
+- *just no*: -.5894
+- *still not great*: The slope is -.5894
+- *getting there, but not just yet*: Every unit difference in Mileage is associated with a -0.58940 lower value of the outcome.
+- *Best*: The slope is the coefficient for Mileage (-0.58940): every additional 1000 miles on a used Porsche is associated with, on average, a $589 lower price.
+
+## 1.2-1.3 Stating and Assessing Conditions of the model
+- Define each assumption of the linear regression model
+    + Linearity
+    + Zero Mean
+    + Constant Variance / Homoscedasticity
+    + Independence
+    + Random and Normally Distributed Errors (for inference)
+- Regression Standard Error
+    + Size of the "typical" error
+    + $\hat{sigma_\epsilon}=\sqrt{\frac{\sum(y-\hat{y})^2}{n-2}}=\sqrt{\frac{SSE}{n-2}}$
+      + __Note__ - just for simple linear regression
+- Know how to evaluate each assumption
+    + Residual x Fitted Plots
+    + Normal Quantile Plot (QQPlot)
+    + Histogram
+
+## Chapter 2
+
+## Hypothesis Testing
+
+- Know the null and alternative hypotheses for the different tests we have covered.
+
+From OpenIntro
+> _Even if we fail to reject the null hypothesis, we typically do not accept the null hypothesis as truth._ Failing to find strong evidence for the alternative hypothesis is not equivalent to providing evidence that the null hypothesis
+
+
+## Confidence Interval Interpretation
+
+```{r, echo=FALSE}
+data("PorschePrice")
+m<-lm(Price~Mileage, data=PorschePrice)
+summary(m)
+confint(m,level=0.95)
+```
+
+__Interpret the Confidence Interval for Mileage__
+
+- *Just no*: The 95% Confidence Interval is -.71,-0.47.
+- *Good*: We are 95% confident that the true value for $\beta_1$ is between -0.705 and -0.473.
+- *Better*: We are 95% condident that the true association between a Porsche's mileage and it price is between -0.705 and -0.473.
+- *Best*: We are 95% condident that the true association between a Porsche's mileage and it price is between -0.705 and -0.473. In other words, we are 95% confident that, overall in the population, for every additional 1,000 miles a Porsche has, its price will be \$705 to \$473 lower.
+
+## p-value interpretation
+```{r, echo=FALSE}
+data("PorschePrice")
+m<-lm(Price~Mileage, data=PorschePrice)
+summary(m)
+```
+
+From OpenIntro:
+> The p-value is the probability of observing data at least as favorable to the alternative hypothesis as our current data set, if the null hypothesis were true. 
+> We say that the data provide statistically significant evidence against the null hypothesis if the p-value is less than some reference value, usually $\alpha$ = 0.05.
+
+__Interpret the p-value for Mileage__
+
+- *Just no*: The p-value is very small so it's highly significant.
+- *A little better*: The p-value is <0.05.
+- *Good*: The p-value is 3.98e-11 (p=0.00000000000398), which is <0.05, so we reject the null hypothesis and conclude that the estimated relationship between Mileage and Price ($\hat{\beta_1}$=-0.5890) is statistically significantly different from 0. 
+- *Best*: The p-value is 3.98e-11 (p=0.00000000000398), which is <0.05. This p-value means there is a <5% probability the estimted coefficient for Mileage is -.5890 or smaller is due to chance in the true population. We reject the null hypothesis and conclude that the estimated relationship between Mileage and Price ($\hat{\beta_1}$=-0.5890) is statistically significantly different from 0 at the $\alpha$=0.05 level.
+
+## ANOVA
+
+```{r}
+anova(m)
+```
+
+## $R^2$
+
+```{r}
+summary(m)
+anova(m)
+```
+
+## Note of Caution
+
+```{r, fig.height=3, fig.width=3, echo=FALSE}
+data("anscombe")
+qplot(x=x1,y=y1, data=anscombe) + geom_smooth(method="lm", se=FALSE)
+qplot(x=x2,y=y2, data=anscombe) + geom_smooth(method="lm", se=FALSE)
+qplot(x=x3,y=y3, data=anscombe) + geom_smooth(method="lm", se=FALSE)
+qplot(x=x4,y=y4, data=anscombe) + geom_smooth(method="lm", se=FALSE)
+```

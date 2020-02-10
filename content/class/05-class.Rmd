@@ -1,0 +1,23 @@
+---
+title: "Model Inference & Decomposing Regression Error"
+linktitle: "5 SLR Review"
+date: "2020-02-10"
+class_date: "2020-02-10"
+menu:
+  class:
+    parent: Class sessions
+    weight: 5
+type: docs
+weight: 5
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activity
+
+- [Slides](http://sds291.netlify.com/05/SLR_reviewsession_v01.html)
+
+- [Google Doc](http://bit.ly/SLRSummary)

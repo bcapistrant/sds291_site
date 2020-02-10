@@ -98,8 +98,13 @@
   </url>
   
   <url>
+    <loc>/assignment/01-take-home-project/</loc>
+    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/class/03-class/</loc>
-    <lastmod>2020-02-05T00:55:24-05:00</lastmod>
+    <lastmod>2020-02-05T10:29:28-05:00</lastmod>
   </url>
   
   <url>
@@ -123,13 +128,18 @@
   </url>
   
   <url>
-    <loc>/reading/05-reading/</loc>
-    <lastmod>2020-01-29T19:22:57-05:00</lastmod>
+    <loc>/class/05-class/</loc>
+    <lastmod>2020-01-27T13:01:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-02-05T00:55:24-05:00</lastmod>
+    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/reading/05-reading/</loc>
+    <lastmod>2020-01-29T19:22:57-05:00</lastmod>
   </url>
   
   <url>
@@ -253,7 +263,7 @@
   
   <url>
     <loc>/syllabus/</loc>
-    <lastmod>2020-02-01T15:12:39-05:00</lastmod>
+    <lastmod>2020-02-05T10:29:28-05:00</lastmod>
   </url>
   
 </urlset>
