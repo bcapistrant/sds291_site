@@ -142,7 +142,7 @@
 &lt;div id=&#34;overall-instructions&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overall Instructions&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;The assignment is &lt;a href=&#34;http://sds291.netflify.com/exam/take-home-exam.csv&#34;&gt;here.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The assignment is &lt;a href=&#34;http://sds291.netlify.com/exam/take-home-exam.html&#34;&gt;here.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;There are three sections: A, B and C. A &amp;amp; B (mostly) cover the same thing and should be numbered accordingly (A1, B1, etc.). C is not graded, it just asks for your reflection.&lt;/li&gt;
 &lt;li&gt;There is not an &lt;code&gt;.rmd&lt;/code&gt; template. You can use one from a problem set or start a blank file.&lt;/li&gt;
 &lt;li&gt;The file should be knitted to a &lt;code&gt;.pdf.&lt;/code&gt; and submitted with your &lt;code&gt;.rmd&lt;/code&gt; file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details.&lt;/li&gt;
