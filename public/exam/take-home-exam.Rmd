@@ -63,11 +63,11 @@ You want to go a step further to determine what this model is telling you and wh
 
 14. Interpret the 95% CI for the slope in a sentence (or two), in the context of this problem.
 
-15. Does this CI include 0? Based on your answers in 3b3, did you expect the CI would include 0? Why or why not?
+15. Does this CI include 0? Based on your answers in 11, did you expect the CI would include 0? Why or why not?
 
 ### Intercept Inference
 
-**(Hint: the structure of the hypotheses and the tests is the same for the intercept as for the slope)**
+**(Hint: the structure of the hypotheses and the tests is the same for the intercept as for the slope -- in other words, you can substitute $\beta_0$ for the slope)**
 
 16. State the null and alternative hypotheses - both in notation and conceptually in 1 sentence - of the test of significance of the intercept.
 
