@@ -54,7 +54,7 @@ Additional recommended readings, such as applications of material covered in cla
 
 I will detail the policy for this course below. Basically, work hard in practice, try to learn stuff, work collaboratively, ask for lots of help, and don't cheat. Don't be that person.
 
-The course assignments will include a homework assignment and quizes most weeks of the course, three individual, take-home projects, and a group project with sections/drafts due throughout the course culminating in a final presentation and paper. The homework and the group project are the backbone of this course and must be completed satisfactorily to receive an A or B grade in the course.
+The course assignments will include a homework assignment and quizes most weeks of the course, three individual, take home exams, and a group project with sections/drafts due throughout the course culminating in a final presentation and paper. The homework and the group project are the backbone of this course and must be completed satisfactorily to receive an A or B grade in the course.
 
 ### Homework
 
@@ -64,9 +64,9 @@ Practice problems (mainly from the book) will be assigned (almost) every week on
 
 A significant, culminating activity for this class will be to conduct a statistical investigation on a question of interest to you. These projects will be done in groups of three of your choosing. You will use existing data - publicly and freely available data online, or from faculty research you may be involved in. The project will be broken into multiple component parts due throughout the semester, culminating in a 10 minute oral presenation (with slides) in the last week of class and a final written report due the last day of class. We will spend time in class discussing questions of a reasonable scope for this project, reviewing available data sources, and writing a proposal and resulting report.
 
-### Take Home, Individual Projects
+### Take Home, Individual Exams
 
-There will be three, shorter take-home projects throughout the semester. More details about the format and content of the projects will be available closer to the projects. There will not be a final exam during finals period; your project report will be due during that time.
+There will be three, shorter take home exams throughout the semester. More details about the format and content of the projects will be available closer to the projects. There will not be a final exam during finals period; your group project report will be due during that time.
 
 ### Quizzes
 
@@ -80,11 +80,11 @@ Course grades will be a weighted average of the grades on your group project, ta
 
 - **25%** of your grade will be determined by weekly homeworks practicing implementation of concepts in `R`.
 
-- **10%** of your grade will be determined by a first individual, take home project on simple linear regression.
+- **10%** of your grade will be determined by a first individual, take home exam on simple linear regression.
 
-- **10%** of your grade will be determined by a second individual, take home project on multiple linear regression.
+- **10%** of your grade will be determined by a second individual, take home exam on multiple linear regression.
 
-- **10%** of your grade will be determined by a third individual, take home project on logistic regression.
+- **10%** of your grade will be determined by a third individual, take home exam on logistic regression.
 
 - **10%** of your grade will be determined by in-class projects and reading responses.
 
@@ -148,7 +148,7 @@ articulates general expectations for students' conduct throughout the course. Wh
 > Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.
 	Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.
 
-Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take-home projects should be completed independently and should not be discussed with other students during the open individual take home project/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.
+Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take home exams should be completed independently and should not be discussed with other students during the open individual take home exam/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.
 
 With this in mind, I note that many of the materials used in this course build substantially from previous course instructors' work, namely Ben Baumer, Amelia McNamara, Miles Ott, as well as contributions and insights on this syllabus from Chad Topaz, Jude Higdon, and Steven Miller. I thank them for their work and willigness to share these materials.
 

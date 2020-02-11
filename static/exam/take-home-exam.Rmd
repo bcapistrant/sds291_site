@@ -1,0 +1,111 @@
+---
+title: "Take Home Project 1"
+author: "SDS 291, Spring 2020"
+date: "Due: 2/17/2020"
+output:
+  html_document:
+    css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Birthweight is an important public health measure, reflecting social determinants of health, pregnancy / maternal health care and also newborn and infant developmental trajectories that have the ability to impact the baby's health for the rest of their lives. Assessing the relationship of the risk factors for a child's birthweight is an important first step for public health and health care interventions. 
+
+As part of an analysis exercise for an internship with the North Carolina Department of Public Health, you were asked to explore the relationships between birthweight and each of these two risk factors (maternal age and gestational duration). You have data on birth weight (in pounds, lbs) and two characteristics of the birth parent / pregnancy - maternal age (in years) and gestational duration (in number of weeks) - that are associated with birthweight from North Carolina in a given year (2015). The data are a random sample of 1,000 births from all the births in that year. You do not need deep knowledge of birthweight for this exercise -- no additional reading or googling should be needed -- but for context, < 5.5 lbs is considered low birthweight, 37 weeks is considered a full-term pregnancy, and mothers < 15 and > 35 years old are at higher risk of having a child who is lower birthweight.
+
+Your answers should be in complete sentences and interpreted in the context of this problem -- with appropriate units and explained with respect to the actual explanatory and response variables you are modeling. This is not just an exercise in getting the "right" answer, but to practice communicating those answers thoughtfully to a non-technical audience -- someone who has a working understanding of introductory statistics, but is not themselves a data analyst so much as someone who consumes statistical results.
+
+# A. Birthweight (`weight`) and Maternal Age (`mage`)
+
+## Visualize and Choose the Model
+1. Generate a visual of the relationship between your explanatory and response variable and interpret what you see.
+
+2. You decide to fit a simple linear regression model to determine the relationship between your explanatory and response variable. Write the hypothetical model you plan to fit to / estimate with your data.
+
+## Fit the model
+
+3. Use R to estimate the regression model and write the fitted regression equation - both with and without the numeric values from your fitted model.
+
+4. Interpret the intercept in a sentence, in the context of this problem.
+
+5. Interpret the slope in a sentence, in the context of this problem.
+
+6. What is the average amount of error in the model?  Interpret this value in the context of this problem (i.e., in a full sentence, with appropriate units).
+
+## Assessing the Model
+
+You want to go a step further to determine what this model is telling you and whether you think this is a model you want to use.
+
+### Assumptions
+
+7. Define each of the regression assumptions / conditions.
+
+8. Evaluate whether the assumptions are met. Use the information you have from the data and, in cases where you don't know enough about the data, state your assumptions about what you think is likely to be true (i.e., don't just say, "we don't know" but speculate about what you think is probably true and explain why). Generate visual evidence where relevant, and interpret that visual evidence in the context of the problem.
+
+### Slope Inference
+
+9. State the null and alternative hypotheses - both in notation and conceptually in 1 sentence - of the test of significance of the slope. 
+
+10. Use the relevant output from your model to state your evidence of the results of this test, and interpret those values in a sentence.
+
+11. Draw your conclusion about the hypothesis test in the context of this problem.
+
+### Confidence Intervals
+ 
+12. State the equation for a confidence interval. Use that equation and the evidence from your regression summary to calculate the 95% CI for the slope (the critical value is 1.96). Round to 3 places and show your work.
+
+13. Use a function in R to calculate the 95% confidence interval for the slope.
+
+14. Interpret the 95% CI for the slope in a sentence (or two), in the context of this problem.
+
+15. Does this CI include 0? Based on your answers in 3b3, did you expect the CI would include 0? Why or why not?
+
+### Intercept Inference
+
+**(Hint: the structure of the hypotheses and the tests is the same for the intercept as for the slope)**
+
+16. State the null and alternative hypotheses - both in notation and conceptually in 1 sentence - of the test of significance of the intercept.
+
+17. Use the relevant output from your model to state your evidence of the results of this test, and interpret those values in a sentence.
+
+18. Draw your conclusion about the hypothesis test in the context of this problem. How useful is this information for understanding the relationship between your explanatory and response variable?
+
+### Model Inference
+
+19. How much of the variation in your response variable is explained by the model? Interpret this in a complete sentence.
+
+20. Explain what the Sum of Squared Errors is and what its value is in this model.
+
+21. Explain what the Sum of Squared Model is and what its value is in this model.
+
+22. Does the model explain a significant amount of the total variation / error? State relevant hypotheses and test results, and interpret your answer in the context of this problem.
+
+## Would you use this model?
+
+23. Now at the interview for this summer internship in public health, you are asked to explain what this model meant to the director of maternal health for  North Carolina; they need just the important take-away points explained intuitively. If you would use the model to explain the relationship between the explanatory and response variable, briefly (2-3 sentences) summarize for the director what the model tells you about this relationship and why you think it's a reasonable model. If you wouldn't use this model, explain why not in the same context.  Assume that the director understands statistics generally, but either avoid using technical jargon, or be sure to explain your terms in ways that they will understand.
+
+24. Add to your explanation what the model would expect a child's weight would be, on average, for a mother that was 20 and 40 years old?
+
+25. Start to anticipate a multiple regression model. If you want to use this model, what potential confounding factors would you want to include to adjust/control for in a model that is trying to estimate the relationship between your explanatory and response variable? (reminder: a potential confounding variable is a separate variable that is associated with and thus could explain part of the relationship between your explanatory and response variables -- like temperature confounding the relationship between ice cream and homicide). Explain why you think those two things would be important to control for in the context of this model.
+
+# B. Repeat these steps for gestational duration `weeks`
+
+Keep the numbering the same as the A1-A25 questions - so A1 is B1 with weeks instead of age - but:
+
+- Skip:
+    - A7 (defining the regression assumptions), but not A8 (evaluating the assumptions) and 
+    - A16, A17, A18 (Intercept inference). 
+- Replace:
+    - A24: 30 and 40 weeks instead of 20 and 40 years old
+
+# C. Reflections (un-graded)
+
+- Summarize some of the things have you learned - or clarified / deepened your understanding from what you already knew - thus far in this course.
+
+- What are some of the specific things that you're still looking to clarify? Please identify discrete concepts rather than more general statements (i.e., "evaluating scatterplots for regression models" is specific and "learn R" is very general -- what *specifically*?).
+

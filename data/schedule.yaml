@@ -36,7 +36,7 @@ lessons:
     quiz: "02-quiz"
     class: "05-class"
 
-  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 1**'
+  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 1**'
     date: "February 12"
     #reading: "05-reading"
 
@@ -44,9 +44,9 @@ lessons:
     date: "February 14"
     #group: "02-group"
     
-  - title: '<i class="fas fa-file-code"></i> **Take Home Project 1: Simple Linear Regression**'
+  - title: '<i class="fas fa-file-code"></i> **Take Home Exam 1: Simple Linear Regression**'
     date: "February 17"
-    #assignment: "03-problem-set"
+    #assignment: "01-take-home-exam"
 
   - title: '<span class="fake-header-table">Multiple Linear Regressions</span>'
     header: True
@@ -110,7 +110,7 @@ lessons:
     #reading: "05-reading"
     #assignment: "02-TakeHomeProject"
     
-  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 2**'
+  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 2**'
     date: "March 24"
     #reading: "05-reading"
 
@@ -118,7 +118,7 @@ lessons:
     date: "March 26"
     #group: "05-group"
     
-  - title: '<i class="fas fa-file-code"></i> **Take Home Project 2: Multiple Linear Regression**'
+  - title: '<i class="fas fa-file-code"></i> **Take Home Exam 2: Multiple Linear Regression**'
     date: "March 29"
     #assignment: "03-problem-set"
 
@@ -163,11 +163,11 @@ lessons:
     reading: "05-reading"
     #assignment: "05-eval-dag"
     
-  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Project 3**'
+  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 3**'
     date: "April 22"
     #reading: "05-reading"
 
-  - title: '<i class="fas fa-file-code"></i> **Take Home Project 3: Logistic Regression**'
+  - title: '<i class="fas fa-file-code"></i> **Take Home Exam 3: Logistic Regression**'
     date: "April 27"
     #assignment: "03-problem-set"
     
