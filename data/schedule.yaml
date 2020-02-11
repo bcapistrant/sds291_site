@@ -46,7 +46,7 @@ lessons:
     
   - title: '<i class="fas fa-file-code"></i> **Take Home Exam 1: Simple Linear Regression**'
     date: "February 17"
-    #assignment: "01-take-home-exam"
+    assignment: "01-take-home-exam"
 
   - title: '<span class="fake-header-table">Multiple Linear Regressions</span>'
     header: True

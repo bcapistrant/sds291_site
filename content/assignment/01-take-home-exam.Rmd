@@ -27,7 +27,7 @@ editor_options:
 - You can read in the data directly, as below:
 
 ```{r, eval=FALSE}
-data<-read.csv("http://sds291.netflify.com/exam/291birthweight.csv")
+data<-read.csv("http://sds291.netlify.com/exam/291birthweight.csv")
 ```
 
 

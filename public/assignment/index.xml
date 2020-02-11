@@ -148,7 +148,7 @@
 &lt;li&gt;The file should be knitted to a &lt;code&gt;.pdf.&lt;/code&gt; and submitted with your &lt;code&gt;.rmd&lt;/code&gt; file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details.&lt;/li&gt;
 &lt;li&gt;You can read in the data directly, as below:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data&amp;lt;-read.csv(&amp;quot;http://sds291.netflify.com/exam/291birthweight.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data&amp;lt;-read.csv(&amp;quot;http://sds291.netlify.com/exam/291birthweight.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;guidelines-for-the-exam&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Guidelines for the Exam&lt;/h1&gt;
