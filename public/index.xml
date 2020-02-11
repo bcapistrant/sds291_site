@@ -13,6 +13,66 @@
     </image>
     
     <item>
+      <title>Take Home Exam 1</title>
+      <link>/assignment/01-take-home-exam/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/01-take-home-exam/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overall-instructions&#34;&gt;Overall Instructions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#guidelines-for-the-exam&#34;&gt;Guidelines for the Exam&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-you-cannot-do&#34;&gt;What you cannot do&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-you-can-do&#34;&gt;What you &lt;em&gt;can&lt;/em&gt; do&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#some-general-suggestions&#34;&gt;Some general suggestions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note of explanation&lt;/em&gt;: I’m (now) calling this an exam, and doing so reluctantly. Having two different kinds of projects seemed to confuse some, which I can understand but was not my intent. I didn’t want to call this an exam because just the word test or exam heightens peoples’ anxiety, mostly unnecessarily (or disproportionately). Numerically this is equivalent to ~2 homework/problem sets, so I would encourage you to think about this as just like a bigger problem set.&lt;/p&gt;
+&lt;div id=&#34;overall-instructions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overall Instructions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The assignment is &lt;a href=&#34;http://sds291.netlify.com/exam/take-home-exam.html&#34;&gt;here.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are three sections: A, B and C. A &amp;amp; B (mostly) cover the same thing and should be numbered accordingly (A1, B1, etc.). C is not graded, it just asks for your reflection.&lt;/li&gt;
+&lt;li&gt;There is not an &lt;code&gt;.rmd&lt;/code&gt; template. You can use one from a problem set or start a blank file.&lt;/li&gt;
+&lt;li&gt;The file should be knitted to a &lt;code&gt;.pdf.&lt;/code&gt; and submitted with your &lt;code&gt;.rmd&lt;/code&gt; file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details.&lt;/li&gt;
+&lt;li&gt;You can read in the data directly, as below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data&amp;lt;-read.csv(&amp;quot;http://sds291.netlify.com/exam/291birthweight.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;guidelines-for-the-exam&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Guidelines for the Exam&lt;/h1&gt;
+&lt;div id=&#34;what-you-cannot-do&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What you cannot do&lt;/h2&gt;
+&lt;p&gt;This exam is to be done completely independently: you may not talk to or work with anyone about the exam before the exam period closes (2/17/20 at 12:00pm Noon). All code and answers must be entirely your own.&lt;/p&gt;
+&lt;p&gt;You’re expected to abide by the college honor code about this exam. Any allegations or suspicion of violations of these policies or the honor code are taken extremely seriously and will be reported to the honor board.&lt;/p&gt;
+&lt;p&gt;Don’t cheat. Please.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-can-do&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What you &lt;em&gt;can&lt;/em&gt; do&lt;/h2&gt;
+&lt;p&gt;You can ask me questions to clarify any logistical piece, phrasing of the questions, or other similar details about the exam. Please DM me on slack with questions and I will likely answer them for everyone so that everyone has the same information.&lt;/p&gt;
+&lt;p&gt;I will also be having student hours on Wednesday (11-1pm). Note that these are a different time than usual student hours on Wednesday. I can address both clarifying questions for the exam and review concepts that we’ve covered so far in class, but I cannot speak to the exam content directly. For example, if you’re wondering about how to interpret the slope, bring examples from the book, from class, or previous problem sets.&lt;/p&gt;
+&lt;p&gt;You can ask Stat TAs about general concepts for the exam in a similar way.&lt;/p&gt;
+&lt;p&gt;You can use your book. In fact, I’d strongly encourage it.&lt;/p&gt;
+&lt;p&gt;You can use your class notes – labs, slides, notes you’ve taken, etc.&lt;/p&gt;
+&lt;p&gt;You can google for help if needed. You shouldn’t need any &lt;code&gt;R&lt;/code&gt; code you haven’t already seen in class, and much of the advice on the internet is spotty in quality, so I would take it with a grain of salt. But you can use the internet.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-general-suggestions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some general suggestions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Many of these concepts are subjective and may not have totally clear right or wrong answers. The safe bet is always to explain your rationale sufficiently.&lt;/li&gt;
+&lt;li&gt;Most of the questions are pretty explicit about what you should be interpreting, but when in doubt, ask.&lt;/li&gt;
+&lt;li&gt;Keep things organized, make it clear what your answer is (especially in a longer answer that can wander and make it hard to get your take away message), include everything (output, figures, etc.) you need for that particular answer (or refer clearly to where it is if you don’t want to reproduct it).&lt;/li&gt;
+&lt;li&gt;Homework 2 will not be returned before this exam is due. There will not be an answer set distributed. If you have questions about homework 2, please come to office hours or clarify concepts with the Stat TAs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Forming a Group</title>
       <link>/group/01-group/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
@@ -662,66 +722,6 @@ This section is an explanation of what your model tells us about the research qu
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Take Home Exam 1</title>
-      <link>/assignment/01-take-home-exam/</link>
-      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-take-home-exam/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#overall-instructions&#34;&gt;Overall Instructions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#guidelines-for-the-exam&#34;&gt;Guidelines for the Exam&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-you-cannot-do&#34;&gt;What you cannot do&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#what-you-can-do&#34;&gt;What you &lt;em&gt;can&lt;/em&gt; do&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#some-general-suggestions&#34;&gt;Some general suggestions&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Note of explanation&lt;/em&gt;: I’m (now) calling this an exam, and doing so reluctantly. Having two different kinds of projects seemed to confuse some, which I can understand but was not my intent. I didn’t want to call this an exam because just the word test or exam heightens peoples’ anxiety, mostly unnecessarily (or disproportionately). Numerically this is equivalent to ~2 homework/problem sets, so I would encourage you to think about this as just like a bigger problem set.&lt;/p&gt;
-&lt;div id=&#34;overall-instructions&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Overall Instructions&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;The assignment is &lt;a href=&#34;http://sds291.netlify.com/exam/take-home-exam.html&#34;&gt;here.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;There are three sections: A, B and C. A &amp;amp; B (mostly) cover the same thing and should be numbered accordingly (A1, B1, etc.). C is not graded, it just asks for your reflection.&lt;/li&gt;
-&lt;li&gt;There is not an &lt;code&gt;.rmd&lt;/code&gt; template. You can use one from a problem set or start a blank file.&lt;/li&gt;
-&lt;li&gt;The file should be knitted to a &lt;code&gt;.pdf.&lt;/code&gt; and submitted with your &lt;code&gt;.rmd&lt;/code&gt; file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details.&lt;/li&gt;
-&lt;li&gt;You can read in the data directly, as below:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data&amp;lt;-read.csv(&amp;quot;http://sds291.netlify.com/exam/291birthweight.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;guidelines-for-the-exam&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Guidelines for the Exam&lt;/h1&gt;
-&lt;div id=&#34;what-you-cannot-do&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What you cannot do&lt;/h2&gt;
-&lt;p&gt;This exam is to be done completely independently: you may not talk to or work with anyone about the exam before the exam period closes (2/17/20 at 12:00pm Noon). All code and answers must be entirely your own.&lt;/p&gt;
-&lt;p&gt;You’re expected to abide by the college honor code about this exam. Any allegations or suspicion of violations of these policies or the honor code are taken extremely seriously and will be reported to the honor board.&lt;/p&gt;
-&lt;p&gt;Don’t cheat. Please.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-you-can-do&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What you &lt;em&gt;can&lt;/em&gt; do&lt;/h2&gt;
-&lt;p&gt;You can ask me questions to clarify any logistical piece, phrasing of the questions, or other similar details about the exam. Please DM me on slack with questions and I will likely answer them for everyone so that everyone has the same information.&lt;/p&gt;
-&lt;p&gt;I will also be having student hours on Wednesday (11-1pm). Note that these are a different time than usual student hours on Wednesday. I can address both clarifying questions for the exam and review concepts that we’ve covered so far in class, but I cannot speak to the exam content directly. For example, if you’re wondering about how to interpret the slope, bring examples from the book, from class, or previous problem sets.&lt;/p&gt;
-&lt;p&gt;You can ask Stat TAs about general concepts for the exam in a similar way.&lt;/p&gt;
-&lt;p&gt;You can use your book. In fact, I’d strongly encourage it.&lt;/p&gt;
-&lt;p&gt;You can use your class notes – labs, slides, notes you’ve taken, etc.&lt;/p&gt;
-&lt;p&gt;You can google for help if needed. You shouldn’t need any &lt;code&gt;R&lt;/code&gt; code you haven’t already seen in class, and much of the advice on the internet is spotty in quality, so I would take it with a grain of salt. But you can use the internet.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;some-general-suggestions&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Some general suggestions&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Many of these concepts are subjective and may not have totally clear right or wrong answers. The safe bet is always to explain your rationale sufficiently.&lt;/li&gt;
-&lt;li&gt;Most of the questions are pretty explicit about what you should be interpreting, but when in doubt, ask.&lt;/li&gt;
-&lt;li&gt;Keep things organized, make it clear what your answer is (especially in a longer answer that can wander and make it hard to get your take away message), include everything (output, figures, etc.) you need for that particular answer (or refer clearly to where it is if you don’t want to reproduct it).&lt;/li&gt;
-&lt;li&gt;Homework 2 will not be returned before this exam is due. There will not be an answer set distributed. If you have questions about homework 2, please come to office hours or clarify concepts with the Stat TAs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 </description>
     </item>
     

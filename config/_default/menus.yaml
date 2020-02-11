@@ -31,7 +31,7 @@ assignment:
     weight: 1
   - name: Problem sets
     weight: 2
-  - name: Take Home Projects
+  - name: Take Home Exams
     weight: 3
   - name: Quizes
     weight: 4
