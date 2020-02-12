@@ -725,10 +725,16 @@
 <div id="overall-instructions" class="section level1">
 <h1>Overall Instructions</h1>
 <ul>
-<li>The assignment is <a href="http://sds291.netlify.com/exam/take-home-exam.html">here.</a></li>
+<li>The assignment is <a href="http://sds291.netlify.com/exam/take-home-exam.html">here.</a> [<em>note, this was last updated with clarifications on Wednesday at ~1:30pm</em> ]</li>
 <li>There are three sections: A, B and C. A &amp; B (mostly) cover the same thing and should be numbered accordingly (A1, B1, etc.). C is not graded, it just asks for your reflection.</li>
 <li>There is not an <code>.rmd</code> template. You can use one from a problem set or start a blank file.</li>
-<li>The file should be knitted to a <code>.pdf.</code> and submitted with your <code>.rmd</code> file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details.</li>
+<li>The file should be knitted to a <code>.pdf.</code> and submitted with your <code>.rmd</code> file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details on where exactly to submit.</li>
+<li>To be safe, should include your code in the knitted output, which you can do with the following command in your first code chunk (it’s already there in the HW templates:</li>
+</ul>
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)</code></pre>
+<ul>
+<li>Be clear and organized about your output, and make it clear where you are getting your numbers/answers from. For example, if you have a summary output of a model under question X, and you answering question M with something that comes from the output you have in question X, just refer back to Question X in your answer.</li>
+<li>If you’re formatting equations with Markdown, see <a href="https://sds291.netlify.com/resources/equations/">the resources section of the course site</a> for some suggestions on key symbols and formatting.</li>
 <li>You can read in the data directly, as below:</li>
 </ul>
 <pre class="r"><code>data&lt;-read.csv(&quot;http://sds291.netlify.com/exam/291birthweight.csv&quot;)</code></pre>

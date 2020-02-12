@@ -20,10 +20,18 @@ editor_options:
 
 # Overall Instructions
 
-- The assignment is [here.](http://sds291.netlify.com/exam/take-home-exam.html)
+- The assignment is [here.](http://sds291.netlify.com/exam/take-home-exam.html) [*note, this was last updated with clarifications on Wednesday at ~1:30pm* ]
 - There are three sections: A, B and C. A & B (mostly) cover the same thing and should be numbered accordingly (A1, B1, etc.). C is not graded, it just asks for your reflection.
 - There is not an `.rmd` template. You can use one from a problem set or start a blank file.
-- The file should be knitted to a `.pdf.` and submitted with your `.rmd` file on Moodle, just like a homework/problem set.  Check your section's moodle page for more details.
+- The file should be knitted to a `.pdf.` and submitted with your `.rmd` file on Moodle, just like a homework/problem set.  Check your section's moodle page for more details on where exactly to submit.
+- To be safe, should include your code in the knitted output, which you can do with the following command in your first code chunk (it's already there in the HW templates:
+
+```{r, eval=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- Be clear and organized about your output, and make it clear where you are getting your numbers/answers from. For example, if you have a summary output of a model under question X, and you answering question M with something that comes from the output you have in question X, just refer back to Question X in your answer.
+- If you're formatting equations with Markdown, see [the resources section of the course site](https://sds291.netlify.com/resources/equations/) for some suggestions on key symbols and formatting.
 - You can read in the data directly, as below:
 
 ```{r, eval=FALSE}

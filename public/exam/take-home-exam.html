@@ -406,17 +406,17 @@ summary {
 <div id="visualize-and-choose-the-model" class="section level2">
 <h2>Visualize and Choose the Model</h2>
 <ol style="list-style-type: decimal">
-<li><p>Generate a visual of the relationship between your explanatory and response variable and interpret what you see.</p></li>
-<li><p>You decide to fit a simple linear regression model to determine the relationship between your explanatory and response variable. Write the hypothetical model you plan to fit to / estimate with your data.</p></li>
+<li><p>Generate a visual of the relationship between your explanatory and response variable and interpret what you see. Do not include the regression line.</p></li>
+<li><p>You decide to fit a simple linear regression model to determine the relationship between your explanatory and response variable. Write the hypothetical model you plan to fit to / estimate with your data. (<em><strong>Hint</strong>: Review the slides and book material of the different regression model equations and which are used when.</em>)</p></li>
 </ol>
 </div>
 <div id="fit-the-model" class="section level2">
 <h2>Fit the model</h2>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Use R to estimate the regression model and write the fitted regression equation - both with and without the numeric values from your fitted model.</p></li>
+<li><p>Use R to estimate the regression model and write the fitted regression equation. You should have one equation expressed in two different ways, one with the fitted values (i.e., numbers) and one way without the numbers.</p></li>
 <li><p>Interpret the intercept in a sentence, in the context of this problem.</p></li>
 <li><p>Interpret the slope in a sentence, in the context of this problem.</p></li>
-<li><p>What is the average amount of error in the model? Interpret this value in the context of this problem (i.e., in a full sentence, with appropriate units).</p></li>
+<li><p>What is the average amount of error in the model? Interpret this value in the context of this problem (i.e., in a full sentence, with appropriate units). (<em><strong>Hint</strong>: The “average amount of error in the model” is a way to interpret one of the statistics that waS discussed in Chapter 1 readings and in the review slides on Monday</em>)</p></li>
 </ol>
 </div>
 <div id="assessing-the-model" class="section level2">
@@ -433,22 +433,22 @@ summary {
 <h3>Slope Inference</h3>
 <ol start="9" style="list-style-type: decimal">
 <li><p>State the null and alternative hypotheses - both in notation and conceptually in 1 sentence - of the test of significance of the slope.</p></li>
-<li><p>Use the relevant output from your model to state your evidence of the results of this test, and interpret those values in a sentence.</p></li>
-<li><p>Draw your conclusion about the hypothesis test in the context of this problem.</p></li>
+<li><p>Interpret the relevant test statistics or p-values values in a sentence. <em>(i.e., do this calculation by hand)</em></p></li>
+<li><p>Draw your conclusion about the hypothesis test based on those test statistics or p-values, including in the context of this problem (i.e., of these specific explanatory and response variables).</p></li>
 </ol>
 </div>
 <div id="confidence-intervals" class="section level3">
 <h3>Confidence Intervals</h3>
 <ol start="12" style="list-style-type: decimal">
-<li><p>State the equation for a confidence interval. Use that equation and the evidence from your regression summary to calculate the 95% CI for the slope (the critical value is 1.96). Round to 3 places and show your work.</p></li>
-<li><p>Use a function in R to calculate the 95% confidence interval for the slope.</p></li>
+<li><p>State the equation for a confidence interval. Use that equation and the evidence from your regression summary to calculate the 95% CI for the slope (the critical value is 1.96). Round to 3 places and show your work. <em>(i.e., do this calculation by hand)</em></p></li>
+<li><p>Use a function in R to calculate the 95% confidence interval for the slope. <em>(i.e., have R calculate this directly for you)</em></p></li>
 <li><p>Interpret the 95% CI for the slope in a sentence (or two), in the context of this problem.</p></li>
-<li><p>Does this CI include 0? Based on your answers in 3b3, did you expect the CI would include 0? Why or why not?</p></li>
+<li><p>Does this CI include 0? Based on your answers in 11, did you expect the CI would include 0? Why or why not?</p></li>
 </ol>
 </div>
 <div id="intercept-inference" class="section level3">
 <h3>Intercept Inference</h3>
-<p><strong>(Hint: the structure of the hypotheses and the tests is the same for the intercept as for the slope)</strong></p>
+<p><em>(<strong>Hint</strong>: the structure of the hypotheses and the calculation of the tests is the same for the intercept as for the slope – in other words, you can substitute <span class="math inline">\(\beta_0\)</span> for the slope. We haven’t done this in class, so you’re still expected to practice this, but it will be graded more loosely.)</em></p>
 <ol start="16" style="list-style-type: decimal">
 <li><p>State the null and alternative hypotheses - both in notation and conceptually in 1 sentence - of the test of significance of the intercept.</p></li>
 <li><p>Use the relevant output from your model to state your evidence of the results of this test, and interpret those values in a sentence.</p></li>
@@ -461,16 +461,16 @@ summary {
 <li><p>How much of the variation in your response variable is explained by the model? Interpret this in a complete sentence.</p></li>
 <li><p>Explain what the Sum of Squared Errors is and what its value is in this model.</p></li>
 <li><p>Explain what the Sum of Squared Model is and what its value is in this model.</p></li>
-<li><p>Does the model explain a significant amount of the total variation / error? State relevant hypotheses and test results, and interpret your answer in the context of this problem.</p></li>
+<li><p>Does the model explain a significant amount of the total variation? State relevant hypotheses and test results, and interpret your answer in the context of this problem.</p></li>
 </ol>
 </div>
 </div>
 <div id="would-you-use-this-model" class="section level2">
 <h2>Would you use this model?</h2>
 <ol start="23" style="list-style-type: decimal">
-<li><p>Now at the interview for this summer internship in public health, you are asked to explain what this model meant to the director of maternal health for North Carolina; they need just the important take-away points explained intuitively. If you would use the model to explain the relationship between the explanatory and response variable, briefly (2-3 sentences) summarize for the director what the model tells you about this relationship and why you think it’s a reasonable model. If you wouldn’t use this model, explain why not in the same context. Assume that the director understands statistics generally, but either avoid using technical jargon, or be sure to explain your terms in ways that they will understand.</p></li>
+<li><p>Now at the interview for this summer internship in public health, you are asked to explain what this model meant to the director of maternal health for North Carolina; they need just the important take-away points explained intuitively. If you <em>would</em> recommend they use the model to explain the relationship between the explanatory and response variable, briefly (2-3 sentences) summarize for the director what the model tells you about this relationship and why you think it’s a reasonable model. If you <em>wouldn’t</em> recommend they use this model, explain why not in the same context. Assume that the director understands statistics generally, but either avoid using technical jargon, or be sure to explain your terms in ways that they will understand.</p></li>
 <li><p>Add to your explanation what the model would expect a child’s weight would be, on average, for a mother that was 20 and 40 years old?</p></li>
-<li><p>Start to anticipate a multiple regression model. If you want to use this model, what potential confounding factors would you want to include to adjust/control for in a model that is trying to estimate the relationship between your explanatory and response variable? (reminder: a potential confounding variable is a separate variable that is associated with and thus could explain part of the relationship between your explanatory and response variables – like temperature confounding the relationship between ice cream and homicide). Explain why you think those two things would be important to control for in the context of this model.</p></li>
+<li><p>Start to anticipate a multiple regression model. If you want to use this model, what are 2-3 potential confounding variables would you want to include to adjust/control for in a model that is trying to estimate the relationship between your explanatory and response variable? (reminder: a potential confounding variable is a separate variable that is associated with and thus could explain part of the relationship between your explanatory and response variables – like temperature confounding the relationship between ice cream and homicide). Explain why you think each of those variables would be important to control for in the context of this model.</p></li>
 </ol>
 </div>
 </div>
