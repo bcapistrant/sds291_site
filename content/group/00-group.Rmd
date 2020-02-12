@@ -59,10 +59,10 @@ Count on brainstorming at least half a dozen serious ideas before you can groom 
 
 For the most part, the choice of topic is left up to you. Try to pick something that’s interesting yet substantial and worth studying, and aim for a topic that you think nobody has tried before; remember that part of your overall grade will be based on originality.
 
-# Places to Find Data
+# IPUMS Data
 Finding the right data to answer your particular question is part of your responsibility for this assignment. You may also want to refine your research question so that it can be more clearly addressed by the data that you found. But be creative! 
 
-In order to help you narrow your choice and focus on appropriate data sets, as well as to maximize my ability to help you, projects can use data any of the IPUMS data, which are listed below and highlighted in more detail in the HTML file attached at the bottom:
+In order to help you narrow your choice and focus on appropriate data sets, as well as to maximize my ability to help you, projects can (and must) use data any of the IPUMS data, which are listed below and highlighted in more detail in the HTML file attached at the bottom:
 
 IPUMS has many census, national and international survey datasets that are well-documented and cleaned.
 
