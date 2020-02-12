@@ -50,8 +50,7 @@ You want to go a step further to determine what this model is telling you and wh
 ### Slope Inference
 
 9. State the null and alternative hypotheses - both in notation and conceptually in 1 sentence - of the test of significance of the slope. 
-
-10. Interpret the relevant test statistics or p-values values in a sentence. *(i.e., do this calculation by hand)*
+10. Interpret the relevant test statistics or p-values values in a sentence. *(i.e., just interpret the value in a sentence as a way to illustrate your understanding of these pieces of evidence. Discuss below what these values make you conclude about your hypotheses.)*
 
 11. Draw your conclusion about the hypothesis test based on those test statistics or p-values, including in the context of this problem (i.e., of these specific explanatory and response variables).
 
