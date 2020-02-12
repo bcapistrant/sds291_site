@@ -17,15 +17,22 @@ editor_options:
 
 <div id="TOC">
 <ul>
-<li><a href="#ipums-integrated-public-use-micro-data-system">IPUMS: Integrated Public Use Micro-data System</a><ul>
 <li><a href="#why-are-we-using-ipums-for-this-class">Why are we using IPUMS for this class?</a></li>
-<li><a href="#ipums-data-sources-how-theyre-used-in-the-news">IPUMS Data Sources &amp; How they’re used in the News</a></li>
+<li><a href="#ipums-data-sources-how-theyre-used-in-the-news">IPUMS Data Sources &amp; How they’re used in the News</a><ul>
+<li><a href="#current-population-survey-cps">Current Population Survey (CPS)</a></li>
+<li><a href="#us-census-american-community-survey">US Census &amp; American Community Survey</a></li>
+<li><a href="#demographic-and-health-survey-dhs">Demographic and Health Survey (DHS)</a></li>
+<li><a href="#american-time-use-survey-atus">American Time Use Survey (ATUS)</a></li>
+<li><a href="#ipums-health-surveys">IPUMS Health Surveys</a><ul>
+<li><a href="#national-health-interview-survey">National Health Interview Survey</a></li>
+<li><a href="#medical-expenditure-panel-surveys">Medical Expenditure Panel Surveys</a></li>
+<li><a href="#youth-risk-behavioral-surveillance-system">Youth Risk Behavioral Surveillance System</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
 
-<div id="ipums-integrated-public-use-micro-data-system" class="section level1">
-<h1>IPUMS: Integrated Public Use Micro-data System</h1>
+<p>IPUMS: Integrated Public Use Micro-data System</p>
 <p>IPUMS is a database / repository that we will be using for the group projects in class. You may only work with IPUMS data, which sounds like a constraint, but is actually a great opportunity to work with relatively clean, well-documented data that could include any number of possible topics.</p>
 <p><a href="https://www.ipums.org/whatIsIPUMS.shtml">What is IPUMS?</a></p>
 <blockquote>
@@ -34,15 +41,15 @@ editor_options:
 <blockquote>
 <p>IPUMS has created the world’s largest accessible database of census microdata. IPUMS includes almost a billion records from U.S. censuses from 1790 to the present and over a billion records from the international censuses of over 100 countries. We have also harmonized survey data with over 30,000 integrated variables and 150 million records, including the Current Population Survey, the American Community Survey, the National Health Interview Survey, the Demographic and Health Surveys, and an expanding collection of labor force, health, and education surveys. In total, IPUMS currently disseminates integrated microdata describing 1.4 billion individuals drawn from over 750 censuses and surveys.</p>
 </blockquote>
-<div id="why-are-we-using-ipums-for-this-class" class="section level3">
-<h3>Why are we using IPUMS for this class?</h3>
+<div id="why-are-we-using-ipums-for-this-class" class="section level1">
+<h1>Why are we using IPUMS for this class?</h1>
 <p>The IPUMS user interface, data documentation, and having already “cleaned” much of the data will make your life substantially easier. Specifically, it will give you only the data you choose/need and remarkably better documented than many other sources of data you might find elsewhere. The benefit here is that you can focus instead on the actual task for this project - using your regression modeling skills you’re developing in the class - rather than wrangling unnecessary data. Given the breadth of the surveys / datasources included under the IPUMS umbrella, IPUMS should also serve a wide range of interests, especially economics, health, and social sciences. With 750 censuses/surveys, everyone in our class should be able to find a topic of interest from the IPUMS data. Last (but certainly not least), they have a R package called <code>ipumsr</code> (package <a href="https://cran.r-project.org/web/packages/ipumsr">here</a> and vignettes <a href="https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums.html">here</a>) to help import their data into R.</p>
 </div>
-<div id="ipums-data-sources-how-theyre-used-in-the-news" class="section level3">
-<h3>IPUMS Data Sources &amp; How they’re used in the News</h3>
+<div id="ipums-data-sources-how-theyre-used-in-the-news" class="section level1">
+<h1>IPUMS Data Sources &amp; How they’re used in the News</h1>
 <p>Some of the bigger surveys that IPUMS has worked to integrate over time get cited frequently in the press and used by other analysts, like Nathan Yau in his <a href="blog">Flowing Data</a>. Although most of these examples aren’t of regression modeling per se, they should give a sense of some of the flavor for what data each survey has and the kinds of questions you can answer with each of the surveys. For more academic applications of these data, you could also see <a href="https://www.ipums.org/awardwinners.shtml">IPUMS research award winners</a> for some inspiration.</p>
-<div id="current-population-survey-cps" class="section level4">
-<h4>Current Population Survey (CPS)</h4>
+<div id="current-population-survey-cps" class="section level2">
+<h2>Current Population Survey (CPS)</h2>
 <p>IPUMS CPS harmonizes microdata from the monthly U.S. labor force survey, the Current Population Survey (CPS), covering the period 1962 to the present. Data include demographic information, rich employment data, program participation and supplemental data on topics such as fertility, tobacco use, volunteer activities, voter registration, computer and internet use, food security, and more.</p>
 <ul>
 <li><a href="https://fivethirtyeight.com/tag/current-population-survey/">FiveThirtyEight</a>
@@ -62,8 +69,8 @@ editor_options:
 </ul></li>
 </ul>
 </div>
-<div id="us-census-american-community-survey" class="section level4">
-<h4>US Census &amp; American Community Survey</h4>
+<div id="us-census-american-community-survey" class="section level2">
+<h2>US Census &amp; American Community Survey</h2>
 <p>The American Community Survey is administered by the Census Bureau and includes information annually in between the decennial Census on ~1% of the US population. American Community Survey has information on many different subjects of demographics, economics, and social well-being; some are listed here at the <a href="https://www.census.gov/programs-surveys/acs/guidance/subjects.html">Census.</a> IPUMS has both the annual ACS and the decennial Census via <a href="https://usa.ipums.org/usa/">IPUMS USA</a>. (Note: there are also international census data via <a href="https://international.ipums.org/">IPUMS International</a>)</p>
 <ul>
 <li><a href="https://fivethirtyeight.com/tag/american-community-survey/">FiveThirtyEight</a>
@@ -85,38 +92,25 @@ editor_options:
 <li><p><a href="https://twitter.com/mapmakerbot/">Map Maker Bot</a> automatically generates maps of the US using ACS data. Maybe some of the visuals will spark interest for a research topic!</p></li>
 </ul>
 </div>
-<div id="demographic-and-health-survey-dhs" class="section level4">
-<h4>Demographic and Health Survey (DHS)</h4>
+<div id="demographic-and-health-survey-dhs" class="section level2">
+<h2>Demographic and Health Survey (DHS)</h2>
 <p>IPUMS-DHS facilitates analysis of Demographic and Health Surveys, administered in low- and middle-income countries since the 1980s. IPUMS-DHS contains thousands of consistently coded variables on the health and well-being of women, children, and births, for 22 African countries and India. There is detailed information on population, health status and health care, HIV and nutrition.</p>
 <p>These data are available via <a href="https://www.idhsdata.org/">IPUMS DHS</a></p>
 <ul>
-<li>Smith College GOV Prof. Kim Yi Dionne in Washington Post, Dec 1, 2017: <a href="https://www.washingtonpost.com/news/monkey-cage/wp/2017/12/01/its-world-aids-day-who-actually-needs-more-aids-awareness/?utm_term=.e7f416ec810b">It’s World AIDS Day. Who actually needs more AIDS awareness?</a></li>
+<li>Former Smith College GOV Prof. Kim Yi Dionne in Washington Post, Dec 1, 2017: <a href="https://www.washingtonpost.com/news/monkey-cage/wp/2017/12/01/its-world-aids-day-who-actually-needs-more-aids-awareness/?utm_term=.e7f416ec810b">It’s World AIDS Day. Who actually needs more AIDS awareness?</a></li>
 <li>Quartz, Jan 29, 2018: <a href="https://qz.com/1191272/economic-survey-2018-indias-preference-for-boys-has-produced-21-million-unwanted-girls/">India’s preference for boys has produced 21 million “unwanted girls”</a></li>
 <li>The Economist. <a href="https://www.economist.com/news/middle-east-and-africa/21607897-amid-worries-about-kidnapped-girls-nigerias-traditions-are-unkind-too-bring-back">Bring back the girls: Fertility and Son-preference in Nigeria</a></li>
 </ul>
 </div>
-<div id="american-time-use-survey-atus" class="section level4">
-<h4>American Time Use Survey (ATUS)</h4>
+<div id="american-time-use-survey-atus" class="section level2">
+<h2>American Time Use Survey (ATUS)</h2>
 <p>The ATUS is a nationally representative U.S. time diary survey for period since 2003. ATUS data facilitate analysis of the average amount of time per day individuals did various activities in a given day: how much someone worked, did household activities, engaged in leisure (e.g., TV watching) and sports activities, and providing childcare and eldercare.</p>
-<p>The data are available via <a href="https://www.atusdata.org/atus/">IPUMS Time Use</a>.</p>
-<ul>
-<li>NYTimes
-<ul>
-<li><a href="https://www.nytimes.com/interactive/2015/01/06/upshot/how-nonemployed-americans-spend-their-weekdays-men-vs-women.html">How Nonemployed Americans Spend Their Weekdays: Men Vs. Women</a></li>
-</ul></li>
-<li><p>Flowing Data - Interactive graphic <a href="http://projects.flowingdata.com/timeuse/">How Americans Spend Their Day</a></p></li>
-<li>Washington Post
-<ul>
-<li><a href="https://www.washingtonpost.com/news/wonk/wp/2016/06/28/americans-are-watching-more-tv-and-working-less-new-federal-data-show/">Americans are watching more TV and working less</a></li>
-<li><a href="https://www.washingtonpost.com/news/wonk/wp/2017/07/11/its-not-just-young-men-everyones-playing-a-lot-more-video-games/">It’s not just young men - everyone’s playing a lot more video games</a></li>
-</ul></li>
-<li><p>Slate from 2013 <a href="http://www.slate.com/articles/business/moneybox/2013/01/atus_and_productivity_why_so_much_economics_data_is_garbage_and_how_that.html">Economists Use Shoddy Data</a></p></li>
-</ul>
+<p>The structure of these data are idiosyncratic and not ideal for our purposes. I would recommend not using these data.</p>
 </div>
-<div id="ipums-health-surveys" class="section level4">
-<h4>IPUMS Health Surveys</h4>
-<div id="national-health-interview-survey" class="section level5">
-<h5>National Health Interview Survey</h5>
+<div id="ipums-health-surveys" class="section level2">
+<h2>IPUMS Health Surveys</h2>
+<div id="national-health-interview-survey" class="section level3">
+<h3>National Health Interview Survey</h3>
 <p>The National Health Interview Survey is a survey collecting information on the health, health care access, and health behaviors of the civilian, non-institutionalized U.S. population, with digital data files available from 1963 to present. IPUMS Health Surveys harmonizes these data and allows users to create custom NHIS data extracts for analysis.</p>
 <p>NHIS data are used to:</p>
 <ul>
@@ -135,16 +129,16 @@ editor_options:
 -Washington Post <a href="https://www.washingtonpost.com/news/to-your-health/wp/2017/03/07/arthritis-afflicts-about-1-in-4-adults-in-the-u-s-cdc-report-finds/?utm_term=.d5b958f2131d">Arthritis afflicts about 1 in 4 adults in the U.S., CDC report finds</a></p></li>
 </ul>
 </div>
-<div id="medical-expenditure-panel-surveys" class="section level5">
-<h5>Medical Expenditure Panel Surveys</h5>
+<div id="medical-expenditure-panel-surveys" class="section level3">
+<h3>Medical Expenditure Panel Surveys</h3>
 <p>MEPS provides nationally representative, longitudinal data from 1996 to the present on health status, medical conditions, healthcare utilization, and healthcare expenditures for the U.S. civilian, non-institutionalized population. IPUMS MEPS harmonizes these data and allows users to create customized data extracts for analysis.</p>
 <ul>
 <li>NPR, <a href="https://www.npr.org/sections/health-shots/2017/04/25/525475221/changes-to-federal-insurance-plans-could-hurt-families-of-chronically-ill-kids">Changes To Federal Insurance Plans Could Hurt Families Of Chronically Ill Kids</a></li>
 <li>Kaiser Health News <a href="https://khn.org/news/despite-aca-cost-protections-most-adolescents-skip-regular-checkups/">Despite ACA Cost Protections, Most Adolescents Skip Regular Checkups</a></li>
 </ul>
 </div>
-<div id="youth-risk-behavioral-surveillance-system" class="section level5">
-<h5>Youth Risk Behavioral Surveillance System</h5>
+<div id="youth-risk-behavioral-surveillance-system" class="section level3">
+<h3>Youth Risk Behavioral Surveillance System</h3>
 <p>IPUMS YRBSS is a cross-sectional national survey of youth in grades 9-12 with emphasis on health risk behaviors that are often established during childhood and adolescence:</p>
 <ul>
 <li>tobacco use</li>
@@ -155,7 +149,6 @@ editor_options:
 <li>inadequate physical activity</li>
 </ul>
 <p><a href="http://blog.popdata.org/youthhealth/">IPUMS YRBSS</a></p>
-</div>
 </div>
 </div>
 </div>
