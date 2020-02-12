@@ -1,5 +1,5 @@
 ---
-title: "Model Group Draft Proposal"
+title: "Model Group Final Proposal"
 date: "2020-02-28"
 menu:
   group:
