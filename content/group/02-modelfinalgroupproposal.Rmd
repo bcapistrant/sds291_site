@@ -1,0 +1,171 @@
+---
+title: "Model Group Draft Proposal"
+date: "2020-02-28"
+menu:
+  group:
+    parent: Topic Selection
+    weight: 2
+type: docs
+weight: 2
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Template for This File
+
+[Here is the raw `.RMD` file that generated this page](http://sds291.netlify.com/group/02-modelfinalgroupproposal.rmd).
+
+## Group Name and Members
+
+<!---List your group's name and the first and last name of all group members here--->
+
+**"Model" Group**
+
+Members:
+
+- Prof. Capistrant
+- Tyra Banks
+- Jenny Shimizu
+
+## Title
+
+<!---Come up with a working title for your project based on your topic and focus.--->
+
+Quality of Life among Sexual Minority Cancer Survivors
+
+## Purpose and Hypotheses
+
+<!---Describe the general topic/phenomenon you want to study, as well some focused questions that you hope to answer and specific hypotheses that you intend to assess.* 
+
+*You should have 1 primary hypothesis of a single assocation between a response-explanatory variable and 1-2 secondary hypotheses, like a secondary outcome and/or testing whether your main asssociation varies (i.e., interacts with) by some third variable--->
+
+This project focuses on the self-reported quality of life and general health of sexual minorities (i.e, gay/bisexual/lesbian identified persons) with a history of cancer. There is some evidence that sexual minorities with history of cancer may have worse quality of life than heterosexual counterparts. This difference may be pronounced for those with sex-specific cancers, where the interactions with providers or the changes to one's sexual/gender identity matter differently for sexual minorities. There may also be differences within sexual minorities by race, as per intersectionality theory. This project will test that association in a large, nationally-representative sample.
+
+The **primary hypothesis** is that, among those with history of cancer, sexual minorities will have lower quality of life than heterosexual counterparts.
+
+The **secondary hypotheses** are:
+
+1. The difference in quality of life between sexual minorities and heterosexual cancer survivors will be larger for sex-specific cancers (e.g., breast or prostate) than other cancers.
+
+1. Sexual minorities of color will have worse outcomes than white sexual minorities.
+
+## Data 
+
+<!---Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. We will discuss data management techniques in the coming weeks, but for now you should simply list multiple sources if you have them.--->
+
+This study will use data from IPUMS-NHIS. National Health Interview Survey (NHIS) annually surveys the US non-institutionalized population about their health, health care, and health conditions. NHIS first asked questions about sexual orientation in 2013. Because sexual minority populations with cancer will be relatively rare, we will pool data from 2013-2016 to maximize the sample size and increase statistical power.
+
+## Population
+
+<!---Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you'll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.--->
+
+NHIS includes individual survey respondents such that each observation is a different person. 
+
+NHIS is an annual, cross-sectional household survey. Individuals are clustered in households, particularly that one adult and one random child are included from each household. Since we are only interested in adults, each observation should be independent of the others as none of them will be co-residents in the same household.  Moreover, although we are pooling data from multiple years, since the survey is cross-sectional, the independence assumption is not violated with repeated measures on the same person.
+
+As this topicis specific to those with a history of cancer, we will filter the data to include only those with history of cancer using the variable [`CANCEREV`](https://nhis.ipums.org/nhis-action/variables/CANCEREV#codes_section). Thus, the population of inference will be the US adult population with cancer.
+
+## Response Variable
+
+<!---What is the response variable? What are its units? Estimate the range of possible values that it may take on.--->
+
+The response variable will be a measure of self-rated health: "Would you say your health in general is excellent, very good, good, fair, or poor?". The variable is called [`HEALTH`](https://nhis.ipums.org/nhis-action/variables/HEALTH#codes_section) in IPUMS-NHIS.
+
+The response options are: 1=Excellent; 2=Very good; 3=Good; 4=Fair; 5=Poor; 7=Refused; 9=Don't know.
+
+We will create a new, two-level variable from these responses that indicates good health: Excellent/Very good vs. Good/Fair/Poor.
+
+We will use logistic regression to model this outcome.
+
+## Explanatory Variables
+
+<!---You should have one, primary explanatory variable that is your main hypothesis. You may have other explanatory variables associated with secondary hypotheses (again, no more than 2).*
+
+*Then you will also have explanatory variables that you want to control for -- factors that may be associated with your primary explanatory and your response variables that you want to include in your multiple regression model to adjust your main association for those competing explanations. Demographics (age, sex, race) and socioeconomic status are common ones for individual-level survey data.*
+
+*Carefully define each variable and describe how each was measured (self-report/direct observation). For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement. You may want to add more variables later on, but you should have at least the explanatory variables associated with your hypotheses and 5 additional variables you plan to control for already.--->
+
+### Primary hypothesis
+As stated above in "Population", we will restrict this analysis to those who have cancer.
+
+The primary hypotheses will use a variable indicating sexual orientation . We will create this variable from two different sources. 
+
+Individuals self-report their sexual orientation ([`SEXORIEN`](https://nhis.ipums.org/nhis-action/variables/SEXORIEN#codes_section) in NHIS) in response to a question: "Which of the following best represents how you think of yourself?"
+
+Answer options: 1=Gay; 2=Straight, that is, not gay; 3=Bisexual; 4=Something else; 5=I don't know the answer; 7=Refused. 
+
+We will combine responses and create a variable that indicates being either gay/bisexual vs. straight/something else/don't know. 
+
+The test of our hypothesis will be 
+
+$H_0: \beta1=0$
+
+$H_A: \beta1\neq0$
+
+from the regression model: 
+$$logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority  +\beta'X$$
+
+where $\beta'X$ is a vector of covariates included to control for potential confounding. They are described below.
+
+### Secondary hypotheses
+
+*1. The difference in quality of life between sexual minorities and heterosexual cancer survivors will be larger for sex-specific cancers (e.g., breast or prostate) than other cancers.*
+
+We will create an indicator variable of those with breast, ovarian, cervical, uterine, testicular or prostate cancer vs. other kinds of cancer. NHIS asks questions about cancer type at every year between 2013-2016, detailed [here](https://nhis.ipums.org/nhis-action/variables/group?id=conditions_cancer).
+
+We will test this hypothesis with an interaction between sexual orientation and sex-specific cancer type.
+
+The test of our hypothesis will be 
+
+$H_0: \beta3=0$
+
+$H_A: \beta3\neq0$
+
+
+$$
+\begin{split}
+logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 SexSpecificCancers + \\
+ \beta_3 (SexualMinority \times SexSpecificCancers) +\beta'X
+\end{split}
+$$
+
+<!-- If you're going to use a dichotomous outcome, don't worry about specifying the regression equation since we haven't covered it yet, but think about what it would be. If you're planning to use a linear model, you should be able to write out the regression equation for the test of each hypothesis -->
+
+*2. Sexual minorities of color will have worse outcomes than white sexual minorities.*
+
+This information comes from a question about the respondent's race: "What race or races do you consider yourself to be? Please select 1 or more of these categories." IPUMS included 5 categories: White, Black/African American, American Indian/Alaskan Native, Asian, Multiple Race in the  [`RACENEW`](https://nhis.ipums.org/nhis-action/variables/RACENEW#codes_section) variable.
+
+We will try to test each racial group separately, but we may have to collapse into an indicator/binary variable of white vs. non-white race.
+
+$H_0: \beta3=0$
+
+$H_A: \beta3\neq0$
+
+$$
+\begin{split}
+logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
+\beta_3 (SexualMinority \times NonWhiteRace) +\beta'X
+\end{split}
+$$
+
+This analysis will be restricted to only sexual minorities.
+
+#### Potential Confounders
+
+We suspect that demographic and socio-economic factors will be important to control for, as they would be associated with both sexual orientation and with health.
+
+1. Age [`AGE`](https://nhis.ipums.org/nhis-action/variables/group?id=demographic_core)
+1. Sex [`SEX`](https://nhis.ipums.org/nhis-action/variables/group?id=demographic_core)
+1. Marital Status [`MARSTCOHAB`](https://nhis.ipums.org/nhis-action/variables/group?id=demographic_core)
+1. Race [`RACENEW`](https://nhis.ipums.org/nhis-action/variables/group?id=demographic_ethnicity)
+1. Hispanic Ethnicity [`HISPYN`](https://nhis.ipums.org/nhis-action/variables/group?id=demographic_ethnicity)
+1. Education [`EDUC`](https://nhis.ipums.org/nhis-action/variables/group?id=economic_education)
+
+We might want to control for other health characteristics like smoking, physical activity, diet, and mental health. We will explore that in our analysis after we review the literature to find what is most commonly done.

@@ -13,6 +13,73 @@
     </image>
     
     <item>
+      <title>Draft Proposal</title>
+      <link>/group/02-group-draftproposal/</link>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/group/02-group-draftproposal/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#content-of-the-proposal&#34;&gt;Content of the Proposal&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#group-members-name&#34;&gt;Group Members / Name&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#title&#34;&gt;Title&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data&#34;&gt;Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#population&#34;&gt;Population&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#response-variable&#34;&gt;Response Variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#explanatory-variables&#34;&gt;Explanatory Variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#going-from-draft-into-final-proposal&#34;&gt;Going from Draft into Final Proposal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The initial and revised proposals should ideally be the same structure/content, with the draft being less complete or with a few different ideas, etc.&lt;/p&gt;
+&lt;p&gt;For the initial, draft proposal, many of the specifics may be sketchy still. That’s fine, and part of why we have a draft to get you thinking about this and give us a chance to work together to figure out what makes most sense. If you’re stuck on the idea phase, just list a bunch of the ideas you’re thinking about and which of the IPUMS data sets looks most relevant.&lt;/p&gt;
+&lt;p&gt;Submit this as a pdf to moodle. The pdf doesn’t &lt;em&gt;need&lt;/em&gt; to be made R - you can make it in Google Docs or Word, just saved as a pdf - especially for the draft, but &lt;a href=&#34;http://sds291.netlify.com/group/02-modelfinalgroupproposal.rmd&#34;&gt;here is an &lt;code&gt;.RMD&lt;/code&gt; file for the Model Group Draft Proposal&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;content-of-the-proposal&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Content of the Proposal&lt;/h2&gt;
+&lt;p&gt;Include the following:&lt;/p&gt;
+&lt;div id=&#34;group-members-name&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Group Members / Name&lt;/h3&gt;
+&lt;p&gt;List the members of your group and your group name&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;title&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Title&lt;/h3&gt;
+&lt;p&gt;Proposed title of your project&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;purpose&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Purpose&lt;/h3&gt;
+&lt;p&gt;Describe the general topic/phenomenon you want to study, as well some focused questions that you hope to answer and specific hypotheses that you intend to assess.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;p&gt;Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. Which IPUMS surveys, in which years? Describe the source of the data - was it a survey, and if so, how were people selected and how was the data collected - in a few sentences. You can look to the IPUMS descriptions for details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;population&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Population&lt;/h3&gt;
+&lt;p&gt;Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you’ll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;response-variable&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Response Variable&lt;/h3&gt;
+&lt;p&gt;What the response variable? What are its units? Estimate the range of possible values that it may take on. [&lt;em&gt;Most projects will use a quantitative or a binary response variable (we will cover logistic regression for binary outcomes after Spring Break and in enough time that you can complete the project)&lt;/em&gt;].&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explanatory-variables&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Explanatory Variables&lt;/h3&gt;
+&lt;p&gt;You should have one, primary explanatory variable that is your main hypothesis. You may have other explanatory variables associated with secondary hypotheses (no more than 2 secondary hypotheses, or three hypotheses total).&lt;/p&gt;
+&lt;p&gt;Then you will also have explanatory variables that you want to control for – variables that may be associated with your primary explanatory and your response variables that you want to include in your multiple regression model to adjust your main association for those competing explanations. Demographics (age, sex, race) and socioeconomic status are common ones for individual-level survey data. Your final regression model must include at least 5 confounding variables beyond your main explanatory variable that is included in your hypothesis.&lt;/p&gt;
+&lt;p&gt;Carefully define each variable and describe how each was measured (self-report/direct observation). For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;going-from-draft-into-final-proposal&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Going from Draft into Final Proposal&lt;/h2&gt;
+&lt;p&gt;Once I respond to your initial proposal (within a week or so of submitting), you will revise it (perhaps starting with a different dataset), then submit a new proposal that addresses our feedback. Note that you may well need to start from scratch, so be thoughtful but open during the drafting process, and know that there will need to be revision.&lt;/p&gt;
+&lt;p&gt;The Final Proposal should include essentially the same information required as the initial proposal, but with more detail on the rationale for the study (i.e., why does this question matter? what is its relevance outside of this class?), revised hypotheses, and clearer proposed methods to test those hypotheses. See the Model Group Draft Proposal for an example of a fully fleshed out, comprehensive example of a final proposal.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Forming a Group</title>
       <link>/group/01-group/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
@@ -179,6 +246,214 @@ This section is an explanation of what your model tells us about the research qu
 &lt;div id=&#34;tone&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Tone&lt;/h1&gt;
 &lt;p&gt;This document should be written for peer reviewers, who comprehend statistics at least as well as you do. You should aim for a level of complexity that is more statistically sophisticated than an article in the Science section of The New York Times, but less sophisticated than an academic journal. [Chance magazine might provide a good example.] For example, you may use terms that that you will likely never see in the Times(e.g. bootstrap), but should not dwell on technical points with no obvious ramifications for the reader (e.g. reporting F-statistics). Your goal for this paper is to convince a statistically-minded reader (e.g. a student in this class, or a student from another school who has taken an introductory statistics class) that you have addressed an interesting research question in a meaningful way. Even a reader with no background in statistics should be able to read your paper and get the gist of it.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Final Proposal</title>
+      <link>/group/02-group-finalproposal/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/group/02-group-finalproposal/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#content-of-the-proposal&#34;&gt;Content of the Proposal&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#group-members-name&#34;&gt;Group Members / Name&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#title&#34;&gt;Title&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data&#34;&gt;Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#population&#34;&gt;Population&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#response-variable&#34;&gt;Response Variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#explanatory-variables&#34;&gt;Explanatory Variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#going-from-draft-into-final-proposal&#34;&gt;Going from Draft into Final Proposal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Submit this as a pdf to moodle. The pdf doesn’t &lt;em&gt;need&lt;/em&gt; to be made R - you can make it in Google Docs or Word, just saved as a pdf - especially for the draft, but &lt;a href=&#34;http://sds291.netlify.com/group/02-modelfinalgroupproposal.rmd&#34;&gt;here is an &lt;code&gt;.RMD&lt;/code&gt; file for the Model Group Draft Proposal&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;content-of-the-proposal&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Content of the Proposal&lt;/h2&gt;
+&lt;p&gt;Include the following:&lt;/p&gt;
+&lt;div id=&#34;group-members-name&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Group Members / Name&lt;/h3&gt;
+&lt;p&gt;List the members of your group and your group name&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;title&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Title&lt;/h3&gt;
+&lt;p&gt;Proposed title of your project&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;purpose&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Purpose&lt;/h3&gt;
+&lt;p&gt;Describe the general topic/phenomenon you want to study, as well some focused questions that you hope to answer and specific hypotheses that you intend to assess.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;p&gt;Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. Which IPUMS surveys, in which years? Describe the source of the data - was it a survey, and if so, how were people selected and how was the data collected - in a few sentences. You can look to the IPUMS descriptions for details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;population&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Population&lt;/h3&gt;
+&lt;p&gt;Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you’ll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;response-variable&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Response Variable&lt;/h3&gt;
+&lt;p&gt;What the response variable? What are its units? Estimate the range of possible values that it may take on. [&lt;em&gt;Most projects will use a quantitative or a binary response variable (we will cover logistic regression for binary outcomes after Spring Break and in enough time that you can complete the project)&lt;/em&gt;].&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explanatory-variables&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Explanatory Variables&lt;/h3&gt;
+&lt;p&gt;You should have one, primary explanatory variable that is your main hypothesis. You may have other explanatory variables associated with secondary hypotheses (no more than 2 secondary hypotheses, or three hypotheses total).&lt;/p&gt;
+&lt;p&gt;Then you will also have explanatory variables that you want to control for – variables that may be associated with your primary explanatory and your response variables that you want to include in your multiple regression model to adjust your main association for those competing explanations. Demographics (age, sex, race) and socioeconomic status are common ones for individual-level survey data. Your final regression model must include at least 5 confounding variables beyond your main explanatory variable that is included in your hypothesis.&lt;/p&gt;
+&lt;p&gt;Carefully define each variable and describe how each was measured (self-report/direct observation). For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;going-from-draft-into-final-proposal&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Going from Draft into Final Proposal&lt;/h2&gt;
+&lt;p&gt;Once I respond to your initial proposal (within a week or so of submitting), you will revise it (perhaps starting with a different dataset), then submit a new proposal that addresses our feedback. Note that you may well need to start from scratch, so be thoughtful but open during the drafting process, and know that there will need to be revision.&lt;/p&gt;
+&lt;p&gt;You may also want to summarize what’s different from your Draft to your Final proposal to illustrate the work you did in the revision.&lt;/p&gt;
+&lt;p&gt;The Final Proposal should include essentially the same information required as the initial proposal, but with more detail on the rationale for the study (i.e., why does this question matter? what is its relevance outside of this class?), revised hypotheses, and clearer proposed methods to test those hypotheses. See the Model Group Draft Proposal for an example of a fully fleshed out, comprehensive example of a final proposal.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Model Group Draft Proposal</title>
+      <link>/group/02-modelfinalgroupproposal/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/group/02-modelfinalgroupproposal/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#template-for-this-file&#34;&gt;Template for This File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#group-name-and-members&#34;&gt;Group Name and Members&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#title&#34;&gt;Title&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose-and-hypotheses&#34;&gt;Purpose and Hypotheses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data&#34;&gt;Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#population&#34;&gt;Population&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#response-variable&#34;&gt;Response Variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#explanatory-variables&#34;&gt;Explanatory Variables&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#primary-hypothesis&#34;&gt;Primary hypothesis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#secondary-hypotheses&#34;&gt;Secondary hypotheses&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;template-for-this-file&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Template for This File&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/group/02-modelfinalgroupproposal.rmd&#34;&gt;Here is the raw &lt;code&gt;.RMD&lt;/code&gt; file that generated this page&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;group-name-and-members&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Group Name and Members&lt;/h2&gt;
+&lt;!---List your group&#39;s name and the first and last name of all group members here---&gt;
+&lt;p&gt;&lt;strong&gt;“Model” Group&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Members:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prof. Capistrant&lt;/li&gt;
+&lt;li&gt;Tyra Banks&lt;/li&gt;
+&lt;li&gt;Jenny Shimizu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;title&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Title&lt;/h2&gt;
+&lt;!---Come up with a working title for your project based on your topic and focus.---&gt;
+&lt;p&gt;Quality of Life among Sexual Minority Cancer Survivors&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;purpose-and-hypotheses&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Purpose and Hypotheses&lt;/h2&gt;
+&lt;!---Describe the general topic/phenomenon you want to study, as well some focused questions that you hope to answer and specific hypotheses that you intend to assess.* 
+
+*You should have 1 primary hypothesis of a single assocation between a response-explanatory variable and 1-2 secondary hypotheses, like a secondary outcome and/or testing whether your main asssociation varies (i.e., interacts with) by some third variable---&gt;
+&lt;p&gt;This project focuses on the self-reported quality of life and general health of sexual minorities (i.e, gay/bisexual/lesbian identified persons) with a history of cancer. There is some evidence that sexual minorities with history of cancer may have worse quality of life than heterosexual counterparts. This difference may be pronounced for those with sex-specific cancers, where the interactions with providers or the changes to one’s sexual/gender identity matter differently for sexual minorities. There may also be differences within sexual minorities by race, as per intersectionality theory. This project will test that association in a large, nationally-representative sample.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;primary hypothesis&lt;/strong&gt; is that, among those with history of cancer, sexual minorities will have lower quality of life than heterosexual counterparts.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;secondary hypotheses&lt;/strong&gt; are:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The difference in quality of life between sexual minorities and heterosexual cancer survivors will be larger for sex-specific cancers (e.g., breast or prostate) than other cancers.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sexual minorities of color will have worse outcomes than white sexual minorities.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data&lt;/h2&gt;
+&lt;!---Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. We will discuss data management techniques in the coming weeks, but for now you should simply list multiple sources if you have them.---&gt;
+&lt;p&gt;This study will use data from IPUMS-NHIS. National Health Interview Survey (NHIS) annually surveys the US non-institutionalized population about their health, health care, and health conditions. NHIS first asked questions about sexual orientation in 2013. Because sexual minority populations with cancer will be relatively rare, we will pool data from 2013-2016 to maximize the sample size and increase statistical power.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;population&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Population&lt;/h2&gt;
+&lt;!---Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you&#39;ll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.---&gt;
+&lt;p&gt;NHIS includes individual survey respondents such that each observation is a different person.&lt;/p&gt;
+&lt;p&gt;NHIS is an annual, cross-sectional household survey. Individuals are clustered in households, particularly that one adult and one random child are included from each household. Since we are only interested in adults, each observation should be independent of the others as none of them will be co-residents in the same household. Moreover, although we are pooling data from multiple years, since the survey is cross-sectional, the independence assumption is not violated with repeated measures on the same person.&lt;/p&gt;
+&lt;p&gt;As this topicis specific to those with a history of cancer, we will filter the data to include only those with history of cancer using the variable &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/CANCEREV#codes_section&#34;&gt;&lt;code&gt;CANCEREV&lt;/code&gt;&lt;/a&gt;. Thus, the population of inference will be the US adult population with cancer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;response-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Response Variable&lt;/h2&gt;
+&lt;!---What is the response variable? What are its units? Estimate the range of possible values that it may take on.---&gt;
+&lt;p&gt;The response variable will be a measure of self-rated health: “Would you say your health in general is excellent, very good, good, fair, or poor?”. The variable is called &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/HEALTH#codes_section&#34;&gt;&lt;code&gt;HEALTH&lt;/code&gt;&lt;/a&gt; in IPUMS-NHIS.&lt;/p&gt;
+&lt;p&gt;The response options are: 1=Excellent; 2=Very good; 3=Good; 4=Fair; 5=Poor; 7=Refused; 9=Don’t know.&lt;/p&gt;
+&lt;p&gt;We will create a new, two-level variable from these responses that indicates good health: Excellent/Very good vs. Good/Fair/Poor.&lt;/p&gt;
+&lt;p&gt;We will use logistic regression to model this outcome.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explanatory-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Explanatory Variables&lt;/h2&gt;
+&lt;!---You should have one, primary explanatory variable that is your main hypothesis. You may have other explanatory variables associated with secondary hypotheses (again, no more than 2).*
+
+*Then you will also have explanatory variables that you want to control for -- factors that may be associated with your primary explanatory and your response variables that you want to include in your multiple regression model to adjust your main association for those competing explanations. Demographics (age, sex, race) and socioeconomic status are common ones for individual-level survey data.*
+
+*Carefully define each variable and describe how each was measured (self-report/direct observation). For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement. You may want to add more variables later on, but you should have at least the explanatory variables associated with your hypotheses and 5 additional variables you plan to control for already.---&gt;
+&lt;div id=&#34;primary-hypothesis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Primary hypothesis&lt;/h3&gt;
+&lt;p&gt;As stated above in “Population”, we will restrict this analysis to those who have cancer.&lt;/p&gt;
+&lt;p&gt;The primary hypotheses will use a variable indicating sexual orientation . We will create this variable from two different sources.&lt;/p&gt;
+&lt;p&gt;Individuals self-report their sexual orientation (&lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/SEXORIEN#codes_section&#34;&gt;&lt;code&gt;SEXORIEN&lt;/code&gt;&lt;/a&gt; in NHIS) in response to a question: “Which of the following best represents how you think of yourself?”&lt;/p&gt;
+&lt;p&gt;Answer options: 1=Gay; 2=Straight, that is, not gay; 3=Bisexual; 4=Something else; 5=I don’t know the answer; 7=Refused.&lt;/p&gt;
+&lt;p&gt;We will combine responses and create a variable that indicates being either gay/bisexual vs. straight/something else/don’t know.&lt;/p&gt;
+&lt;p&gt;The test of our hypothesis will be&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_0: \beta1=0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_A: \beta1\neq0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;from the regression model:
+&lt;span class=&#34;math display&#34;&gt;\[logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority  +\beta&amp;#39;X\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(\beta&amp;#39;X\)&lt;/span&gt; is a vector of covariates included to control for potential confounding. They are described below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;secondary-hypotheses&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Secondary hypotheses&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;1. The difference in quality of life between sexual minorities and heterosexual cancer survivors will be larger for sex-specific cancers (e.g., breast or prostate) than other cancers.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We will create an indicator variable of those with breast, ovarian, cervical, uterine, testicular or prostate cancer vs. other kinds of cancer. NHIS asks questions about cancer type at every year between 2013-2016, detailed &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/group?id=conditions_cancer&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will test this hypothesis with an interaction between sexual orientation and sex-specific cancer type.&lt;/p&gt;
+&lt;p&gt;The test of our hypothesis will be&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_0: \beta3=0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_A: \beta3\neq0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{split}
+logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 SexSpecificCancers + \\
+ \beta_3 (SexualMinority \times SexSpecificCancers) +\beta&amp;#39;X
+\end{split}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;!-- If you&#39;re going to use a dichotomous outcome, don&#39;t worry about specifying the regression equation since we haven&#39;t covered it yet, but think about what it would be. If you&#39;re planning to use a linear model, you should be able to write out the regression equation for the test of each hypothesis --&gt;
+&lt;p&gt;&lt;em&gt;2. Sexual minorities of color will have worse outcomes than white sexual minorities.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This information comes from a question about the respondent’s race: “What race or races do you consider yourself to be? Please select 1 or more of these categories.” IPUMS included 5 categories: White, Black/African American, American Indian/Alaskan Native, Asian, Multiple Race in the &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/RACENEW#codes_section&#34;&gt;&lt;code&gt;RACENEW&lt;/code&gt;&lt;/a&gt; variable.&lt;/p&gt;
+&lt;p&gt;We will try to test each racial group separately, but we may have to collapse into an indicator/binary variable of white vs. non-white race.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_0: \beta3=0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_A: \beta3\neq0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{split}
+logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
+\beta_3 (SexualMinority \times NonWhiteRace) +\beta&amp;#39;X
+\end{split}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This analysis will be restricted to only sexual minorities.&lt;/p&gt;
+&lt;div id=&#34;potential-confounders&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Potential Confounders&lt;/h4&gt;
+&lt;p&gt;We suspect that demographic and socio-economic factors will be important to control for, as they would be associated with both sexual orientation and with health.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Age &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/group?id=demographic_core&#34;&gt;&lt;code&gt;AGE&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sex &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/group?id=demographic_core&#34;&gt;&lt;code&gt;SEX&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Marital Status &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/group?id=demographic_core&#34;&gt;&lt;code&gt;MARSTCOHAB&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Race &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/group?id=demographic_ethnicity&#34;&gt;&lt;code&gt;RACENEW&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hispanic Ethnicity &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/group?id=demographic_ethnicity&#34;&gt;&lt;code&gt;HISPYN&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Education &lt;a href=&#34;https://nhis.ipums.org/nhis-action/variables/group?id=economic_education&#34;&gt;&lt;code&gt;EDUC&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We might want to control for other health characteristics like smoking, physical activity, diet, and mental health. We will explore that in our analysis after we review the literature to find what is most commonly done.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

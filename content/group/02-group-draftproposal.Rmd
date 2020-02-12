@@ -1,0 +1,65 @@
+---
+title: "Draft Proposal"
+date: "2020-02-14"
+due_date: "2020-02-14"
+due_time: "11:59 PM"
+menu:
+  group:
+    parent: Topic Selection
+    weight: 1
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+The initial and revised proposals should ideally be the same structure/content, with the draft being less complete or with a few different ideas, etc.
+
+For the initial, draft proposal, many of the specifics may be sketchy still.  That's fine, and part of why we have a draft to get you thinking about this and give us a chance to work together to figure out what makes most sense. If you're stuck on the idea phase, just list a bunch of the ideas you're thinking about and which of the IPUMS data sets looks most relevant.
+
+Submit this as a pdf to moodle. The pdf doesn't *need* to be made R - you can make it in Google Docs or Word, just saved as a pdf - especially for the draft, but [here is an `.RMD` file for the Model Group Draft Proposal](http://sds291.netlify.com/group/02-modelfinalgroupproposal.rmd).
+
+## Content of the Proposal
+
+Include the following:
+
+### Group Members / Name
+
+List the members of your group and your group name
+
+### Title
+
+Proposed title of your project
+
+### Purpose
+
+Describe the general topic/phenomenon you want to study, as well some focused questions that you hope to answer and specific hypotheses that you intend to assess.
+
+### Data
+
+Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. Which IPUMS surveys, in which years? Describe the source of the data - was it a survey, and if so, how were people selected and how was the data collected - in a few sentences. You can look to the IPUMS descriptions for details.
+
+### Population
+
+Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you’ll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.
+
+### Response Variable
+
+What the response variable? What are its units? Estimate the range of possible values that it may take on. [*Most projects will use a quantitative or a binary response variable (we will cover logistic regression for binary outcomes after Spring Break and in enough time that you can complete the project)*].
+
+### Explanatory Variables
+
+You should have one, primary explanatory variable that is your main hypothesis. You may have other explanatory variables associated with secondary hypotheses (no more than 2 secondary hypotheses, or three hypotheses total). 
+
+Then you will also have explanatory variables that you want to control for -- variables that may be associated with your primary explanatory and your response variables that you want to include in your multiple regression model to adjust your main association for those competing explanations. Demographics (age, sex, race) and socioeconomic status are common ones for individual-level survey data. Your final regression model must include at least 5 confounding variables beyond your main explanatory variable that is included in your hypothesis.
+
+Carefully define each variable and describe how each was measured (self-report/direct observation). For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement.
+
+## Going from Draft into Final Proposal
+
+Once I respond to your initial proposal (within a week or so of submitting), you will revise it (perhaps starting with a different dataset), then submit a new proposal that addresses our feedback. Note that you may well need to start from scratch, so be thoughtful but open during the drafting process, and know that there will need to be revision.
+
+The Final Proposal should include essentially the same information required as the initial proposal, but with more detail on the rationale for the study (i.e., why does this question matter? what is its relevance outside of this class?), revised hypotheses, and clearer proposed methods to test those hypotheses.  See the Model Group Draft Proposal for an example of a fully fleshed out, comprehensive example of a final proposal.
