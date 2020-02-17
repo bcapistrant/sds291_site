@@ -1,0 +1,19 @@
+---
+title: "Bootstrap for Regression Inference"
+linktitle: "12: Bootstrap"
+date: "2020-03-04"
+read_date: "2020-03-04"
+menu:
+  reading:
+    parent: Readings
+    weight: 12
+type: docs
+---
+
+## Required
+
+- <i class="fas fa-book"></i> Chapters 4.7 in _STAT2_
+
+## Recommended
+
+- None

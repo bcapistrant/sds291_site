@@ -1,0 +1,19 @@
+---
+title: "Multicollinearity and Nested F Tests"
+linktitle: "10: Multicollinearity & Nested F"
+date: "2020-02-26"
+read_date: "2020-02-26"
+menu:
+  reading:
+    parent: Readings
+    weight: 10
+type: docs
+---
+
+## Required
+
+- <i class="fas fa-book"></i> Chapters 3.5-3.6 in _STAT2_
+
+## Recommended
+
+- None

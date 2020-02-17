@@ -1,0 +1,77 @@
+---
+title: "SLR/2D into MLR/3D"
+author: "SDS 291, Fall 2020"
+date: "2/17/2020"
+output:
+  html_document:
+    css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(Stat2Data)
+data("AccordPrice")
+library(tidyverse)
+```
+
+Using the `AccordPrice` Data, let's work with the book's example that we know well at this point.
+
+## Simple Linear Regression
+
+We're fitting a regression model of Mileage and Price.
+
+```{r 2d}
+qplot(x=Mileage, y=Price, data=AccordPrice) + geom_smooth(method="lm", se=FALSE) + theme_bw()
+```
+
+```{r, echo=FALSE}
+m0<-lm(Price~Mileage, data=AccordPrice)
+summary(m0)
+```
+
+## Now Multiple Regression - 3D
+
+You may want to adjust for the car's age. Lots of miles on a newer car means something different than lots of miles on an older car (the condition of the car overall has more wear and is more outdated).
+
+```{r 3d, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
+# Note: You'll *probably* need to install the `rgl` package once before running this.
+# This does not work on the server -- the RGL package will not install there. 
+# Find a desktop version (like the computers in SR 301 or in other computer labs) to test this out
+
+#install.packages("rgl")
+
+library(rgl)
+open3d()
+Price<-AccordPrice$Price
+Mileage<-AccordPrice$Mileage
+Age<-AccordPrice$Age
+fit<-lm(Price~Mileage+Age)
+plot3d(Mileage, Age, Price, type = "s", col = "red", size = .5)
+
+coefs <- coef(fit)
+a <- coefs["Mileage"]
+b <- coefs["Age"]
+c <- -1
+d <- coefs["(Intercept)"]
+planes3d(a, b, c, d, alpha = 0.5)
+
+rglwidget(width = 1000, height = 1000, reuse = FALSE)
+```
+
+
+```{r, echo=FALSE}
+summary(fit)
+```
+
+# Connecting the 2D with 3D
+
+1. Can you move the 3D box around to the point that it depicts (something very close to) the 2D / simple relationship between Mileage and Price?
+
+1. How does the quantitative value of the slope parameter(s) correspond to the visual? From the numeric output, would you have expected a steep or a shallow slope? Is that what you see visually?
+
+1. How is the numerical concept of "controlling for" expressed visually?
+
+1. What will the residuals look like in the 3D model?

@@ -1,0 +1,64 @@
+---
+title: "MLR Example"
+author: "SDS 291"
+date: "2/19/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+library(Stat2Data)
+data("RailsTrails")
+```
+
+We're using data from a sample of 104 homes in Northampton, MA to see whether being close to the bike trail enhances the value of the home. Specifically, we're looking at the association between square feet (a house's size) and distance from the rail trail with the house's estimated value in 2014. The variables we're using are: 
+
+- `Price2014`: Zillow price estimate from 2014 (in thousands of dollars)
+- `Distance`: Distance (in miles) to the nearest entry point to the rail trail network
+- `SquareFeet`: Square footage of interior finished space (in thousands of sf)
+
+# Regression Output
+```{r regression line}
+m1<-lm(Price2014 ~ SquareFeet + Distance , data = RailsTrails)
+summary(m1)
+```
+
+1. Write the fitted regression equation.
+
+\vspace{1 in}
+
+2. Test the hypothesis that distance from the rail trail has a linear relationship with house price in 2014.
+
+\vspace{1 in}
+
+3. Calculate the 95% confidence interval for Distance to 3 decimal places (t* = 1.96) and interpret in a sentence.
+
+\vspace{1 in}
+
+4. What price would this model predict for a 1700 square foot house that it .986 miles from the rail trail? (Be cautious with the units)
+
+\vspace{1 in}
+
+4. An actual house in this dataset that is 1700 square feet and .986 miles from the rail trail entrance had an Zillow price estimate of $222,864. Calculate the residual for this house and interpret it in a sentence in the context of this problem.
+
+\vspace{1 in}
+
+\newpage
+# Residuals and Model Error
+
+```{r ANOVA Table}
+anova(m1)
+```
+
+1. Calculate the $R^2$ (same equation as simple linear regression, p.103-104) and Adjusted $R^2$ for the model (see p.105 for the equation). Interpret each in a sentence.
+\vspace{1 in}
+
+1. Calculate the regression standard error for this model (p.99) and interepret it in a sentence.
+\vspace{1 in}
+
+1. Calculate the F statistic for the model: $F = \frac{MSModel}{MSError}$ (see p.102 for making sense of the ANOVA table)
+\vspace{1 in}
+
+1. State the null and alternative hypotheses for the F test (see p.102). Look at the F Distribution calculator (at https://gallery.shinyapps.io/dist_calc/) and estimate the p-value for your F statistic with the degrees of freedom above (it will be an approximation - the slider bars won't go as high as you need them to - but it gives you the rough answer for your hypothesis). What do you conclude about your hypothesis?

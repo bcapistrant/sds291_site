@@ -1,0 +1,19 @@
+---
+title: "Leverage"
+linktitle: "11: Leverage"
+date: "2020-03-02"
+read_date: "2020-03-02"
+menu:
+  reading:
+    parent: Readings
+    weight: 11
+type: docs
+---
+
+## Required
+
+- <i class="fas fa-book"></i> Chapters 4.4 in _STAT2_
+
+## Recommended
+
+- None

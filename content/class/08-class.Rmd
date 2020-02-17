@@ -1,0 +1,21 @@
+---
+title: "Fitting, Interpreting, and Conducting Slope Inference for Model"
+linktitle: "8 MLR Intro 2"
+date: "2020-02-19"
+class_date: "2020-02-19"
+menu:
+  class:
+    parent: Class sessions
+    weight: 8
+type: docs
+weight: 8
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activity
+
+- [Activity](http://sds291.netlify.com/08/08_InClassActivity.pdf) ( [raw `.Rmd` file](http://sds291.netlify.com/08/08_InClassActivity.rmd) )

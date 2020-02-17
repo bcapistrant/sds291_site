@@ -42,7 +42,7 @@ lessons:
 
   - title: '<i class="fas fa-users"></i> **Draft of Group Topic**'
     date: "February 14"
-    #group: "02-group"
+    group: "02-group-draftproposal"
     
   - title: '<i class="fas fa-file-code"></i> **Take Home Exam 1: Simple Linear Regression**'
     date: "February 17"
@@ -53,42 +53,46 @@ lessons:
     
   - title: '<i class="fas fa-university"></i> **MLR: Intuition and Rationale**'
     date: "February 17"
-    #reading: "05-reading"
+    reading: "07-reading"
+    class: "07-class"
     
   - title: '<i class="fas fa-university"></i> **MLR: Fitting, Interpreting, and Conducting Slope Inference for Models**'
     date: "February 19"
-    #reading: "05-reading"
+    reading: "08-reading"
+    #class: "08-class"
 
   - title: '<i class="fas fa-university"></i> **MLR: Parallel Slopes and Non-Parallel Slopes, Interaction**'
     date: "February 24"
-    #reading: "05-reading"
-    #assignment: "04-eval-dag"
+    reading: "09-reading"
+    assignment: "03-problem-set"
+    #class: "09-class"
     
   - title: '<i class="fas fa-university"></i> **MLR: Multicollinearity, Nested F-Test**'
     date: "February 26"
-    #reading: "05-reading"
+    reading: "10-reading"
+    #class: "10-class"
     
   - title: '<i class="fas fa-users"></i> **Final Group Topic**'
     date: "February 28"
-    #group: "03-group"
+    group: "02-group-finalproposal"
     
   - title: '<i class="fas fa-university"></i> **MLR: Leverage**'
     date: "March 2"
-    #reading: "05-reading"
-    #assignment: "05-eval-dag"
+    reading: "11-reading"
+    #assignment: "04-problem-set"
     
   - title: '<i class="fas fa-university"></i> **MLR: Bootstrap for Inference**'
     date: "March 4"
-    #reading: "05-reading"
+    reading: "12-reading"
     
   - title: '<i class="fas fa-university"></i> **MLR: Article Review**'
     date: "March 9"
-    #reading: "05-reading"
-    #assignment: "05-eval-dag"
+    reading: "13-reading"
+    #assignment: "05-problem-set"
     
   - title: '<i class="fas fa-university"></i> **MLR: Data Visualization**'
     date: "March 11"
-    #reading: "05-reading"
+    reading: "14-reading"
 
   - title: '<i class="fas fa-users"></i> **Data Extract and Analysis Plan**'
     date: "March 13"

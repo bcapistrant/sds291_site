@@ -1,0 +1,149 @@
+---
+title: "MLR Examples"
+author: "SDS 291"
+date: "2/24/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+library(Stat2Data)
+data("RailsTrails")
+```
+
+# Rail Trail Multiple Regression Example
+We're still using data from a sample of 104 homes in Northampton, MA to see whether being close to the bike trail enhances the value of the home. Specifically, we're looking at the association between square feet (a house's size) and distance from the rail trail with the house's estimated value in 2014. The variables we're using are: 
+
+- `Price2014`: Zillow price estimate from 2014 (in thousands of dollars)
+- `Distance`: Distance (in miles) to the nearest entry point to the rail trail network
+- `SquareFeet`: Square footage of interior finished space (in thousands of sf)
+
+```{r regression line}
+library(Stat2Data)
+data("RailsTrails")
+m1<-lm(Price2014 ~ SquareFeet + Distance , data = RailsTrails)
+summary(m1)
+```
+
+1. What price would this model predict for a 1000 square foot house that is _1 mile_ from the rail trail? (Be cautious with the units)
+
+\vspace{1 in}
+
+1. What price would this model predict for a 1000 square foot house that is _2 miles_ from the rail trail? (Be cautious with the units)
+
+\vspace{1 in}
+
+\newpage
+
+
+# Adjusting for Distance Group
+
+Rather than distance in miles, what if we thought a more useful measure would be whether the house was closer (<1 mile from an entrance to the rail trail) or further away ($\geq$ 1 mile from a rail trail entrance)?
+
+- `Price2014`: Zillow price estimate from 2014 (in thousands of dollars)
+- `DistGroup`: 
+    - `Closer`: <1 mile to the nearest entry point to the rail trail network
+    - `Farther Away`: $\geq$ 1 mile to the nearest entry point to the rail trail network
+- `SquareFeet`: Square footage of interior finished space (in thousands of sf)
+
+`R` treats `DistGroup` as a `factor` variable. It can also be treated as a numeric variable, where one category has the value of 0 and the other category has the value of 1. In other words, you can think that the numerical equivalent is: "Closer" = 0 and "Farther Away" = 1.
+
+```{r Distance Group}
+m2<-lm(Price2014 ~ SquareFeet+DistGroup , data = RailsTrails)
+summary(m2)
+```
+
+1. What price would this model predict for a 1000 square foot house that is _Closer_ from the rail trail? 
+
+\vspace{1 in}
+
+1. What price would this model predict for a 1000 square foot house that is _Farther Away_ from the rail trail?
+
+\vspace{1 in}
+
+1. What price would this model predict for a 2000 square foot house that is _Closer_ from the rail trail? 
+
+\vspace{1 in}
+
+1. What price would this model predict for a 2000 square foot house that is _Farther Away_ from the rail trail?
+
+\vspace{1 in}
+
+\newpage
+
+# Bedrooms
+
+Rather than square feet, let's consider the number of bedrooms the house has, in addition to its distance from the rail trail.
+
+- `Price2014`: Zillow price estimate from 2014 (in thousands of dollars)
+- `BedGroup`: Categorical Variable of house type by group of bedrooms:
+    - 1-2 bedrooms (reference), 
+    - 3 bedrooms, 
+    - 4+ bedrooms
+- `Distance`: Distance (in miles) to the nearest entry point to the rail trail network
+
+You can think about `BedGroup` similarly to `DistGroup` and consider the 3 bedroom group output in the model below akin to an indicator variable with the values of 0 or 1: 0 if the house doesn't have 3 bedrooms and 1 if it does have 3 bedrooms. Same for 4+ bedrooms.
+
+```{r}
+m3 <- lm(Price2014 ~ Distance+BedGroup, data = RailsTrails)
+summary(m3)
+```
+
+
+## 1000 Square Feet Houses
+
+1. What price would this model predict for a 1000 square foot house that has 1-2 Bedrooms? 
+
+\vspace{1 in}
+
+1. What price would this model predict for a 1000 square foot house that has 3 bedrooms?
+
+\vspace{1 in}
+
+1. What price would this model predict for a 1000 square foot house that has 4+ bedrooms? 
+
+\vspace{1 in}
+
+## 2000 Square Feet Houses
+1. What price would this model predict for a 2000 square foot house that has 1-2 Bedrooms? 
+
+\vspace{1 in}
+
+1. What price would this model predict for a 2000 square foot house that has 3 bedrooms?
+
+\vspace{1 in}
+
+1. What price would this model predict for a 2000 square foot house that has 4+ bedrooms? 
+
+\vspace{1 in}
+
+\newpage
+
+# Back to Distance Group
+
+What if we thought that the Square Footage of a house would *vary* by whether it's closer or further from the rail trail.  A big house may not matter as much if it's really far from the rail trail, and a smaller house may be more valuable if it's closer to the rail trail than if it were further away.
+```{r}
+m4 <- lm(Price2014 ~ SquareFeet*DistGroup , data = RailsTrails)
+summary(m4)
+
+#qplot(y=Price2014, x=SquareFeet, data=RailsTrails, color=DistGroup) + 
+# geom_smooth(method=lm,se=FALSE,fullrange = TRUE)
+```
+
+1. What price would this model predict for a 1000 square foot house that is _Closer_ from the rail trail? 
+
+\vspace{1 in}
+
+1. What price would this model predict for a 1000 square foot house that is _Farther Away_ from the rail trail?
+
+\vspace{1 in}
+
+1. What price would this model predict for a 2000 square foot house that is _Closer_ from the rail trail? 
+
+\vspace{1 in}
+
+1. What price would this model predict for a 2000 square foot house that is _Farther Away_ from the rail trail?
+
+\vspace{1 in}

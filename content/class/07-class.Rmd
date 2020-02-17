@@ -1,0 +1,25 @@
+---
+title: "Multiple Linear Regression Introduction"
+linktitle: "7 MLR Intro"
+date: "2020-02-17"
+class_date: "2020-02-17"
+menu:
+  class:
+    parent: Class sessions
+    weight: 7
+type: docs
+weight: 7
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activity
+
+- [Slides](http://sds291.netlify.com/07/07_Lecture_Slides.html)
+
+- [Google Doc for Taking Notes](https://docs.google.com/document/d/1jduEDFO4oYwXkDHHg3q9zJQBnIVzlaaXrdFbd2kzIEA/edit?usp=sharing). This is "view only" -- make a copy for yourself and note away!
+
+- Extra Practice with 2D & 3D: the [lab exercise](http://sds291.netlify.com/07/AccordPrice3DPractice.html) and [raw `.rmd` file](http://sds291.netlify.com/07/AccordPrice3DPractice.rmd) (Note: to run this .rmd file, you'll need the `rgl` package, which isn't included on the server -- effectively, you can only re-run this `.rmd` with a *desktop* version of R/RStudio)

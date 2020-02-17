@@ -1,0 +1,19 @@
+---
+title: "Data Visualization"
+linktitle: "14: Data Visualization"
+date: "2020-03-11"
+read_date: "2020-03-11"
+menu:
+  reading:
+    parent: Readings
+    weight: 14
+type: docs
+---
+
+## Required
+
+- <i class="fas fa-book"></i>  Healy, K. (2018). [Data visualization: a practical introduction](https://socviz.co/modeling.html#modeling). Chapter 6: Work with models. Princeton University Press.
+
+## Recommended
+
+- None
