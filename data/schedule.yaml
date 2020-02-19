@@ -59,7 +59,7 @@ lessons:
   - title: '<i class="fas fa-university"></i> **MLR: Fitting, Interpreting, and Conducting Slope Inference for Models**'
     date: "February 19"
     reading: "08-reading"
-    #class: "08-class"
+    class: "08-class"
 
   - title: '<i class="fas fa-university"></i> **MLR: Parallel Slopes and Non-Parallel Slopes, Interaction**'
     date: "February 24"
@@ -85,12 +85,12 @@ lessons:
     date: "March 4"
     reading: "12-reading"
     
-  - title: '<i class="fas fa-university"></i> **MLR: Article Review**'
+  - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 9"
     reading: "13-reading"
     #assignment: "05-problem-set"
     
-  - title: '<i class="fas fa-university"></i> **MLR: Data Visualization**'
+  - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 11"
     reading: "14-reading"
 
@@ -100,16 +100,8 @@ lessons:
 
   - title: '<i class="fas fa-star"></i> **Spring Break**'
     date: "March 16 - 20"
-    
-  - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
-    date: "March 22"
-    #reading: "05-reading"
-    
-  - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
-    date: "March 24"
-    #reading: "05-reading"
 
-  - title: '<i class="fas fa-university"></i> **MLR: Review **'
+  - title: '<i class="fas fa-university"></i> **MLR: Review**'
     date: "March 22"
     #reading: "05-reading"
     #assignment: "02-TakeHomeProject"

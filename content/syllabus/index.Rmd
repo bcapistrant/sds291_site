@@ -66,7 +66,7 @@ A significant, culminating activity for this class will be to conduct a statisti
 
 ### Take Home, Individual Exams
 
-There will be three, shorter take home exams throughout the semester. More details about the format and content of the projects will be available closer to the projects. There will not be a final exam during finals period; your group project report will be due during that time.
+There will be three, shorter take home exams throughout the semester. More details about the format and content of the projects will be available closer to the projects. I grant extensions only if your Class Dean is involved at least 24 hours before of the assignment deadline and suggests that flexibility with deadlines would be useful; exceptions to this rule for emergencies (i.e., hospitalizations) will be considered on a case by case basis. There will not be a final exam during finals period; your group project report will be due during that time.
 
 ### Quizzes
 
@@ -138,7 +138,7 @@ Your ability to communicate results, which may be technical in nature, to your a
 Student Hours and Slack will be the best way to reach me. I am actively on slack during the work day (9-5pm) and sometimes in the evenings. If you have questions about HW, please post them to the Slack channel for that assignment and answer other peoples' questions if you know the answer! If you do get in touch via email, I will do my best to respond within 24 hours during the week and 48 hours on the weekend. It will be helpful if you include an informative subject line, including the course number (i.e., "SDS 291 HW 3 Question").
 
 ### Timeliness, Deadlines, and Extensions
-Deadlines matter in this class, both because: a. these parameters help us keep our focus on the course content rather than logistics and b. because they matter in "the real world". When assignments are due _before_ 11:55am, Moodle counts submissions at 11:55:01am as late. This policy can be very challenging for people who put off their work until the last minute; I encourage you to start homework assignments early. Late work has 25\% off if submitted within the first 48 hours after the deadline. I allow for one "free", no-penalty 48 hour extension. If you need another extension or a longer extension during the semester, I grant extensions only if your Class Dean is involved well in advance of the assignment deadline and suggests that flexibility with deadlines would be useful. 
+Deadlines matter in this class, both because: a. these parameters help us keep our focus on the course content rather than logistics and b. because they matter in "the real world". When assignments are due _before_ 11:55am, Moodle counts submissions at 11:55:01am as late. This policy can be very challenging for people who put off their work until the last minute; I encourage you to start homework assignments early. Late work has 25\% off if submitted within the first 48 hours after the deadline. I allow for one "free", no-penalty 48 hour extension -- this applies to homeworks. If you need another extension or a longer extension during the semester, I grant extensions only if your Class Dean is involved well in advance of the assignment deadline and suggests that flexibility with deadlines would be useful. 
 
 ### Academic Honor Code
 The 
