@@ -1162,7 +1162,10 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#for-3.17&#34;&gt;For 3.17:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#for-3.25&#34;&gt;For 3.25:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -1170,9 +1173,20 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 &lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Required&lt;/h1&gt;
 &lt;p&gt;Questions 3.17, 3.22, and 3.25 (2nd Edition) - these are specific to 2nd Edition&lt;/p&gt;
-&lt;p&gt;For 3.25:
-- &lt;strong&gt;To Clarify:&lt;/strong&gt; questions like “What does this regression say about…” or “What is the effect of…” should be answered with both an interpretation of the coefficient in the context of the problem &lt;em&gt;and&lt;/em&gt; a reflection on the statistical significance of that coefficient.
-- &lt;strong&gt;To Add&lt;/strong&gt;, 3.25d: How well are the regression conditions/assumptions met in the multiple regression models in 3.25b and 3.25c, respectively?&lt;/p&gt;
+&lt;div id=&#34;for-3.17&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;For 3.17:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Do not use &lt;code&gt;R&lt;/code&gt; for this problem–use the material in the book.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;B. Calculate a 95% CI where &lt;span class=&#34;math inline&#34;&gt;\(t^*\)&lt;/span&gt; is 1.96. Do not calculate a 90% CI.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;for-3.25&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;For 3.25:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;To Clarify:&lt;/strong&gt; questions like “What does this regression say about…” or “What is the effect of…” should be answered with both an interpretation of the coefficient in the context of the problem &lt;em&gt;and&lt;/em&gt; a reflection on the statistical significance of that coefficient.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;To Add&lt;/strong&gt;, 3.25d: How well are the regression conditions/assumptions met in the multiple regression models in 3.25b and 3.25c, respectively?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Submit on Moodle&lt;/h1&gt;

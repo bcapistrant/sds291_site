@@ -20,8 +20,16 @@ editor_options:
 
 Questions 3.17, 3.22, and 3.25 (2nd Edition) - these are specific to 2nd Edition
 
-For 3.25:
+## For 3.17:
+
+- Do not use `R` for this problem--use the material in the book.
+
+- B. Calculate a 95% CI where $t^*$ is 1.96. Do not calculate a 90% CI.
+
+## For 3.25:
+
 - __To Clarify:__ questions like "What does this regression say about..." or "What is the effect of..." should be answered with both an interpretation of the coefficient in the context of the problem *and* a reflection on the statistical significance of that coefficient.
+
 - __To Add__, 3.25d: How well are the regression conditions/assumptions met in the multiple regression models in 3.25b and 3.25c, respectively?
 
 # Submit on Moodle
