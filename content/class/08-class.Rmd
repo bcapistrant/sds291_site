@@ -18,4 +18,6 @@ editor_options:
 
 ## In-class Activity
 
-- [Activity](http://sds291.netlify.com/08/08_InClassActivity.pdf) ( [raw `.Rmd` file](http://sds291.netlify.com/08/08_InClassActivity.rmd) )
+- [Activity 1](http://sds291.netlify.com/08/08_InClassActivity.pdf) ( [raw `.Rmd` file](http://sds291.netlify.com/08/08_InClassActivity.rmd) )
+
+- [Activity 2](http://sds291.netlify.com/08/Marshmallow3dPractice.html) ( [raw `.Rmd` file](http://sds291.netlify.com/08/Marshmallow3dPractice.rmd) )
