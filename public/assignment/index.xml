@@ -197,6 +197,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#for-3.17&#34;&gt;For 3.17:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#for-3.22&#34;&gt;For 3.22:&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#for-3.25&#34;&gt;For 3.25:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
@@ -211,6 +212,12 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Do not use &lt;code&gt;R&lt;/code&gt; for this problem–use the material in the book.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;B. Calculate a 95% CI where &lt;span class=&#34;math inline&#34;&gt;\(t^*\)&lt;/span&gt; is 1.96. Do not calculate a 90% CI.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;for-3.22&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;For 3.22:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Do as stated in the book.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;for-3.25&#34; class=&#34;section level2&#34;&gt;

@@ -26,6 +26,10 @@ Questions 3.17, 3.22, and 3.25 (2nd Edition) - these are specific to 2nd Edition
 
 - B. Calculate a 95% CI where $t^*$ is 1.96. Do not calculate a 90% CI.
 
+## For 3.22:
+
+- Do as stated in the book.
+
 ## For 3.25:
 
 - __To Clarify:__ questions like "What does this regression say about..." or "What is the effect of..." should be answered with both an interpretation of the coefficient in the context of the problem *and* a reflection on the statistical significance of that coefficient.
