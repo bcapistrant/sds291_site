@@ -1,0 +1,107 @@
+---
+title: "SLR/2D into MLR/3D - Part 2"
+author: "SDS 291, Spring 2020"
+date: "2/19/2020"
+output:
+  html_document:
+    css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+set.seed(8675309)
+marshmallow<-1:8
+length <- runif(8,1,4)
+width <- runif(8,1,4)
+
+b0 <- 1
+b1 <- 3
+b2 <- -2
+sigma <- 1.5
+
+eps <- rnorm(length,0,sigma)
+height <- b0 + b1*length  + b2*width + eps
+df<-as.data.frame(cbind(marshmallow,height,length,width))
+df2<-df %>%
+  mutate(length=round(length,digits=1),
+         width=round(width,digits=1),
+         height=round(height,digits=1)
+    )
+
+```
+
+```{r}
+df2 %>%
+  kable() %>%
+  kable_styling()
+```
+
+# Plot the data points.
+
+Use the variable names literally -- let one edge of the brownie be the axis for length, the other the width, and y is the height (how where on the toothpick the marshmallow should go).
+
+What are the range of units of length and width? Of Height?  Use these ranges thoughtfully in the next step.
+
+1. Either put the marshmallows on fist and then put the toothpick where it should be for its values of width and length; or do the opposite order (place all toothpicks, then put marshmallows on)
+
+# Imagine where the regression line would go?
+
+1. Describe the relationship between x1 and y. Is the slope positive or negative, steep or shallow?
+
+1. Describe the relationship between x2 and y. Is the slope positive or negative, steep or shallow?
+
+# Fit the regression plane
+
+1. Tear off a rectangle of parchment paper roughly the size of the brownie.
+
+1. Put it through the toothpicks -- ie, poke holes through the paper -- so it best fits the data points (best = mean zero of the residuals).
+
+You may have to move and replace some marshmallows...
+
+# Visualize what "controlling for" means
+
+```{r 3d, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
+# Note: You'll *probably* need to install the `rgl` package once before running this.
+# This does not work on the server -- the RGL package will not install there. 
+# Find a desktop version (like the computers in SR 301 or in other computer labs) to test this out
+
+#install.packages("rgl")
+
+library(rgl)
+open3d()
+fit<-lm(height~length+width)
+plot3d(length, width, height, type = "s", col = "red", size = .5)
+
+coefs <- coef(fit)
+a <- coefs["length"]
+b <- coefs["width"]
+c <- -1
+d <- coefs["(Intercept)"]
+planes3d(a, b, c, d, alpha = 0.5)
+
+rglwidget(width = 1000, height = 1000, reuse = FALSE)
+```
+
+
+<!-- # Connecting the 2D with 3D -->
+
+<!-- 1. Can you move the 3D box around to the point that it depicts (something very close to) the 2D / simple relationship between Mileage and Price? -->
+
+<!-- 1. How does the quantitative value of the slope parameter(s) correspond to the visual? From the numeric output, would you have expected a steep or a shallow slope? Is that what you see visually? -->
+
+<!-- 1. How is the numerical concept of "controlling for" expressed visually? -->
+
+<!-- 1. What will the residuals look like in the 3D model? -->
+
+# Connecting to the numeric data
+
+```{r, echo=FALSE}
+summary(fit)
+plot(fit, which=c(1:2))
+```
