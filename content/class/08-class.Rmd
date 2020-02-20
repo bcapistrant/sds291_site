@@ -20,6 +20,8 @@ editor_options:
 
 - [Activity 1](http://sds291.netlify.com/08/08_InClassActivity.pdf) ( [raw `.Rmd` file](http://sds291.netlify.com/08/08_InClassActivity.rmd) )
 
+    - [Activity 1, "Answers"](http://sds291.netlify.com/08/08_InClassActivity_Answers.pdf) 
+
 - [Activity 2](http://sds291.netlify.com/08/Marshmallow3dPractice.html) ( [raw `.Rmd` file](http://sds291.netlify.com/08/Marshmallow3dPractice.rmd) )
 
     - [Activity 2, "Answers" with 3D plot](http://sds291.netlify.com/08/Marshmallow3dPractice_Answers.html) 
