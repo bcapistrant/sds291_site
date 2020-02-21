@@ -1,0 +1,40 @@
+---
+title: "Data Wrangling with dplyr"
+linktitle: "Workshop 2 - dplyr"
+date: "2020-03-27"
+class_date: "2020-03-27"
+menu:
+  class:
+    parent: Group Project Extra Sessions
+    weight: 2
+type: docs
+weight: 2
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Who & What
+
+Emma Livingston, a Senior SDS major, will be leading another workshop on using `dplyr` - part of the tidyverse packages we have been using - for data management, such making new variables, renaming and/or recoding variables.
+
+# When & Where
+
+- McConnell 103
+- Friday, 3/27 from 2-4pm
+
+# Goals for the Session are to:
+
+- Practice Creating New Variables with `mutate()`
+- Learn how to select variables (`select()`) and keep rows (`filter()`)
+- Renaming variables and recoding values
+
+# What you will need for the session
+
+- A computer that can run RStudio
+
+# Do I *Have* to Attend? Do I *Have* to Use GitHub?
+
+No and No. This is gently encouraged, especially if you haven't taken SDS 192: Intro to Data Science, but definitely optional.

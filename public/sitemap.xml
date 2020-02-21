@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/class/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/reading/</loc>
     <lastmod>2020-03-11T00:00:00+00:00</lastmod>
   </url>
@@ -15,11 +20,6 @@
   <url>
     <loc>/assignment/</loc>
     <lastmod>2020-02-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/class/</loc>
-    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -88,6 +88,11 @@
   </url>
   
   <url>
+    <loc>/class/02-groupworkshop/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/group/02-group-finalproposal/</loc>
     <lastmod>2020-02-28T00:00:00+00:00</lastmod>
   </url>
@@ -95,6 +100,16 @@
   <url>
     <loc>/group/02-modelfinalgroupproposal/</loc>
     <lastmod>2020-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/class/01-groupworkshop/</loc>
+    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/class/03-groupworkshop/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -173,12 +188,12 @@
   </url>
   
   <url>
-    <loc>/reading/14-reading/</loc>
-    <lastmod>2020-03-11T00:00:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/reading/14-reading/</loc>
     <lastmod>2020-03-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -205,6 +220,11 @@
   <url>
     <loc>/reading/09-reading/</loc>
     <lastmod>2020-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/assignment/03-quiz/</loc>
+    <lastmod>2020-02-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>

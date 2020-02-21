@@ -5,7 +5,7 @@
     <link>/class/</link>
       <atom:link href="/class/index.xml" rel="self" type="application/rss+xml" />
     <description>Class details</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 19 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/social-image.png</url>
       <title>Class details</title>
@@ -31,6 +31,152 @@
 &lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-chalkboard-teacher&#34;&gt;&lt;/i&gt; Slides are &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Slides.html&#34;&gt;here&lt;/a&gt; (if interested, the raw &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Notes.Rmd&#34;&gt;Rmd code&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-clipboard-list&#34;&gt;&lt;/i&gt; Notes and Pea Activity are &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Notes.pdf&#34;&gt;here&lt;/a&gt; (if interested, the raw &lt;a href=&#34;http://sds291.netlify.com/01/01_Lecture_Notes.Rmd&#34;&gt;Rmd code&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Wrangling with dplyr</title>
+      <link>/class/02-groupworkshop/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/class/02-groupworkshop/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#who-what&#34;&gt;Who &amp;amp; What&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#when-where&#34;&gt;When &amp;amp; Where&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#goals-for-the-session-are-to&#34;&gt;Goals for the Session are to:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-you-will-need-for-the-session&#34;&gt;What you will need for the session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#do-i-have-to-attend-do-i-have-to-use-github&#34;&gt;Do I &lt;em&gt;Have&lt;/em&gt; to Attend? Do I &lt;em&gt;Have&lt;/em&gt; to Use GitHub?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;who-what&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Who &amp;amp; What&lt;/h1&gt;
+&lt;p&gt;Emma Livingston, a Senior SDS major, will be leading another workshop on using &lt;code&gt;dplyr&lt;/code&gt; - part of the tidyverse packages we have been using - for data management, such making new variables, renaming and/or recoding variables.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;when-where&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;When &amp;amp; Where&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;McConnell 103&lt;/li&gt;
+&lt;li&gt;Friday, 3/27 from 2-4pm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;goals-for-the-session-are-to&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Goals for the Session are to:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Practice Creating New Variables with &lt;code&gt;mutate()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Learn how to select variables (&lt;code&gt;select()&lt;/code&gt;) and keep rows (&lt;code&gt;filter()&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Renaming variables and recoding values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-will-need-for-the-session&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;What you will need for the session&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;A computer that can run RStudio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;do-i-have-to-attend-do-i-have-to-use-github&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Do I &lt;em&gt;Have&lt;/em&gt; to Attend? Do I &lt;em&gt;Have&lt;/em&gt; to Use GitHub?&lt;/h1&gt;
+&lt;p&gt;No and No. This is gently encouraged, especially if you haven’t taken SDS 192: Intro to Data Science, but definitely optional.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Working as a Group in RStudio: Using GitHub</title>
+      <link>/class/01-groupworkshop/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/01-groupworkshop/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#who-what&#34;&gt;Who &amp;amp; What&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#when-where&#34;&gt;When &amp;amp; Where&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#goals-for-the-session-are-to&#34;&gt;Goals for the Session are to:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-you-will-need-for-the-session&#34;&gt;What you will need for the session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#do-i-have-to-attend-do-i-have-to-use-github&#34;&gt;Do I &lt;em&gt;Have&lt;/em&gt; to Attend? Do I &lt;em&gt;Have&lt;/em&gt; to Use GitHub?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;who-what&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Who &amp;amp; What&lt;/h1&gt;
+&lt;p&gt;Emma Livingston, a Senior SDS major, will be leading a workshop on using &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; for collaboration on your group project analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;when-where&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;When &amp;amp; Where&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;McConnell 103&lt;/li&gt;
+&lt;li&gt;Friday, 2/28 from 2-4pm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;goals-for-the-session-are-to&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Goals for the Session are to:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Establish an account with GitHub&lt;/li&gt;
+&lt;li&gt;Create a GitHub Repository (repo)&lt;/li&gt;
+&lt;li&gt;Have all group members set up access to the repo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-will-need-for-the-session&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;What you will need for the session&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;A computer with RStudio Desktop Installed (the server won’t work – you’ll need RStudio installed locally)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;do-i-have-to-attend-do-i-have-to-use-github&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Do I &lt;em&gt;Have&lt;/em&gt; to Attend? Do I &lt;em&gt;Have&lt;/em&gt; to Use GitHub?&lt;/h1&gt;
+&lt;p&gt;No and No. This is gently encouraged, especially if you’re considering an SDS major, but definitely optional.&lt;/p&gt;
+&lt;p&gt;There are many other – often simpler – ways to collaborate. You could have your data on a shared GoogleDrive, all install FileStream and work from there.&lt;/p&gt;
+&lt;p&gt;GitHub is useful for more advanced ways of resolving collaboration issues like having two conflicting versions of the same R code.&lt;/p&gt;
+&lt;p&gt;If you’re thinking of an SDS major, this might be good to try out; if you’re not, feel free to skip it. There will be subsequent workshops that will be more applicable to everyone who is working in R, like data management and data visualization.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization with ggplot</title>
+      <link>/class/03-groupworkshop/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/03-groupworkshop/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#who-what&#34;&gt;Who &amp;amp; What&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#when-where&#34;&gt;When &amp;amp; Where&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#goals-for-the-session-are-to&#34;&gt;Goals for the Session are to:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-you-will-need-for-the-session&#34;&gt;What you will need for the session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#do-i-have-to-attend-do-i-have-to-use-github&#34;&gt;Do I &lt;em&gt;Have&lt;/em&gt; to Attend? Do I &lt;em&gt;Have&lt;/em&gt; to Use GitHub?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;who-what&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Who &amp;amp; What&lt;/h1&gt;
+&lt;p&gt;Emma Livingston, a Senior SDS major, will be leading a final workshop, this time on using &lt;code&gt;ggplot&lt;/code&gt; - part of the tidyverse packages we have been using - for data visualization, particularly visualizing regression results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;when-where&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;When &amp;amp; Where&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;McConnell 103&lt;/li&gt;
+&lt;li&gt;Friday, 4/17 from 2-4pm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;goals-for-the-session-are-to&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Goals for the Session are to:&lt;/h1&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-will-need-for-the-session&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;What you will need for the session&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;A computer that can run RStudio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;do-i-have-to-attend-do-i-have-to-use-github&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Do I &lt;em&gt;Have&lt;/em&gt; to Attend? Do I &lt;em&gt;Have&lt;/em&gt; to Use GitHub?&lt;/h1&gt;
+&lt;p&gt;No and No. This is gently encouraged, especially if you haven’t taken SDS 192: Intro to Data Science, but definitely optional.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

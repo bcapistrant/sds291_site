@@ -1,0 +1,46 @@
+---
+title: "Working as a Group in RStudio: Using GitHub"
+linktitle: "Workshop 1 - GitHub"
+date: "2020-02-28"
+class_date: "2020-02-28"
+menu:
+  class:
+    parent: Group Project Extra Sessions
+    weight: 1
+type: docs
+weight: 2
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Who & What
+
+Emma Livingston, a Senior SDS major, will be leading a workshop on using [GitHub](https://github.com/) for collaboration on your group project analysis.
+
+# When & Where
+
+- McConnell 103
+- Friday, 2/28 from 2-4pm
+
+# Goals for the Session are to:
+
+- Establish an account with GitHub
+- Create a GitHub Repository (repo)
+- Have all group members set up access to the repo
+
+# What you will need for the session
+
+- A computer with RStudio Desktop Installed (the server won't work -- you'll need RStudio installed locally)
+
+# Do I *Have* to Attend? Do I *Have* to Use GitHub?
+
+No and No. This is gently encouraged, especially if you're considering an SDS major, but definitely optional.
+
+There are many other -- often simpler -- ways to collaborate. You could have your data on a shared GoogleDrive, all install FileStream and work from there. 
+
+GitHub is useful for more advanced ways of resolving collaboration issues like having two conflicting versions of the same R code. 
+
+If you're thinking of an SDS major, this might be good to try out; if you're not, feel free to skip it. There will be subsequent workshops that will be more applicable to everyone who is working in R, like data management and data visualization.

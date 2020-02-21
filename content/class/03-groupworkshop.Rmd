@@ -1,0 +1,38 @@
+---
+title: "Data Visualization with ggplot"
+linktitle: "Workshop 3 - ggplot"
+date: "2020-02-18"
+class_date: "2020-04-17"
+menu:
+  class:
+    parent: Group Project Extra Sessions
+    weight: 3
+type: docs
+weight: 2
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Who & What
+
+Emma Livingston, a Senior SDS major, will be leading a final workshop, this time on using `ggplot` - part of the tidyverse packages we have been using - for data visualization, particularly visualizing regression results.
+
+# When & Where
+
+- McConnell 103
+- Friday, 4/17 from 2-4pm
+
+# Goals for the Session are to:
+
+TBD
+
+# What you will need for the session
+
+- A computer that can run RStudio
+
+# Do I *Have* to Attend? Do I *Have* to Use GitHub?
+
+No and No. This is gently encouraged, especially if you haven't taken SDS 192: Intro to Data Science, but definitely optional.

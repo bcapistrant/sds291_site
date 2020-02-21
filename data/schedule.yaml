@@ -65,6 +65,7 @@ lessons:
     date: "February 24"
     reading: "09-reading"
     assignment: "03-problem-set"
+    quiz: "03-quiz"
     #class: "09-class"
     
   - title: '<i class="fas fa-university"></i> **MLR: Multicollinearity, Nested F-Test**'
@@ -72,9 +73,10 @@ lessons:
     reading: "10-reading"
     #class: "10-class"
     
-  - title: '<i class="fas fa-users"></i> **Final Group Topic**'
+  - title: '<i class="fas fa-users"></i> **Final Group Topic & GitHub Session**'
     date: "February 28"
     group: "02-group-finalproposal"
+    class: "01-groupworkshop"
     
   - title: '<i class="fas fa-university"></i> **MLR: Leverage**'
     date: "March 2"
@@ -110,8 +112,9 @@ lessons:
     date: "March 24"
     #reading: "05-reading"
 
-  - title: '<i class="fas fa-users"></i> **Data Appendix**'
-    date: "March 26"
+  - title: '<i class="fas fa-users"></i> **Data Appendix & `dplyr` workshop**'
+    date: "March 27"
+    class: "02-groupworkshop"
     #group: "05-group"
     
   - title: '<i class="fas fa-file-code"></i> **Take Home Exam 2: Multiple Linear Regression**'
@@ -150,8 +153,9 @@ lessons:
     date: "April 15"
     #reading: "05-reading"
     
-  - title: '<i class="fas fa-users"></i> **Draft Poster**'
+  - title: '<i class="fas fa-users"></i> **Data Visualization Workshop**'
     date: "April 17"
+    class: "03-groupworkshop"
     #group: "06-group"
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
@@ -162,6 +166,10 @@ lessons:
   - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 3**'
     date: "April 22"
     #reading: "05-reading"
+    
+  - title: '<i class="fas fa-users"></i> **Draft Poster**'
+    date: "April 24"
+    #group: "06-group"
 
   - title: '<i class="fas fa-file-code"></i> **Take Home Exam 3: Logistic Regression**'
     date: "April 27"
