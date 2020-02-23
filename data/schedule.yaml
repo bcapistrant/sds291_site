@@ -66,7 +66,7 @@ lessons:
     reading: "09-reading"
     assignment: "03-problem-set"
     quiz: "03-quiz"
-    #class: "09-class"
+    class: "09-class"
     
   - title: '<i class="fas fa-university"></i> **MLR: Multicollinearity, Nested F-Test**'
     date: "February 26"

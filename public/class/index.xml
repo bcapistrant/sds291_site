@@ -363,5 +363,27 @@
 </description>
     </item>
     
+    <item>
+      <title>Parallel &amp; Non-Parallel Slopes</title>
+      <link>/class/09-class/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/class/09-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/09/09_InClass.pdf&#34;&gt;Activity&lt;/a&gt; ( &lt;a href=&#34;http://sds291.netlify.com/09/09_InClass.rmd&#34;&gt;raw &lt;code&gt;.Rmd&lt;/code&gt; file&lt;/a&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

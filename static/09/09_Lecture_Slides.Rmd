@@ -1,0 +1,60 @@
+---
+title: "Regression Lines"
+author: "SDS 291"
+date: "Class 9 - February 24, 2020"
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+header-includes:
+   - \usepackage[fleqn]{amsmath}
+---
+
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith()
+knitr::opts_chunk$set(echo = TRUE)
+library(Stat2Data)
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval=FALSE}
+data("Jurors")
+m0<-lm(PctReport~Period, data=Jurors)
+m1<-lm(PctReport~Period+I2000, data=Jurors)
+m2<-lm(PctReport~Period*I2000, data=Jurors)
+summary(m0)
+summary(m1)
+summary(m2)
+```
+
+---
+## What does each fitted regression equation look like in this scatterplot?
+
+.pull-left[
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(tidyverse)
+require(Stat2Data)
+data("Jurors")
+qplot(y=PctReport, x=Period, data=Jurors)
+```
+]
+
+.pull-right[
+
+#### Equation 1
+$\widehat{PctReport} = 85.99-0.72\cdot Period$
+
+#### Equation 2
+$\widehat{PctReport} = 77.08-0.72\cdot Period+17.83\cdot I2000$
+
+#### Equation 3
+$\widehat{PctReport} = 76.42-0.67\cdot Period + 19.15\cdot I2000 \\ -0.09(Period \times I2000)$
+
+
+]

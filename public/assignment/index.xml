@@ -202,8 +202,8 @@
 &lt;li&gt;&lt;a href=&#34;#a.-fit-the-simple-linear-regression-model-of-price2014-on-distance.-interpret-the-relationship-between-price2014-and-distance-in-the-context-of-this-problem.&#34;&gt;a. Fit the simple linear regression model of &lt;em&gt;Price2014&lt;/em&gt; on &lt;em&gt;distance&lt;/em&gt;. Interpret the relationship between &lt;em&gt;Price2014&lt;/em&gt; and distance in the context of this problem.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#b.-next-fit-a-multiple-linear-regression-model-with-distance-and-bedrooms.-how-has-the-addition-of-bedrooms-changed-our-estimate-of-the-relationship-of-distance-to-price2014-use-both-the-estimated-coefficients-and-adjusted-r2-in-your-answer.&#34;&gt;b. Next fit a multiple linear regression model with &lt;em&gt;Distance&lt;/em&gt; and &lt;em&gt;Bedrooms&lt;/em&gt;. How has the addition of bedrooms changed our estimate of the relationship of distance to &lt;em&gt;Price2014&lt;/em&gt;? Use both the estimated coefficients and Adjusted &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; in your answer.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#c.-find-the-95-confidence-interval-for-the-distance-coefficent-from-the-model-in-b-and-interpret-it-in-the-context-of-this-problem.&#34;&gt;c. Find the 95% Confidence Interval for the distance coefficent from the model in “b” and interpret it in the context of this problem.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#d.-estimate-the-expected-value-of-two-houses-each-2000-feet-from-the-trail-one-with-3-and-one-with-4-bedrooms.-interpret-this-value-in-a-sentence.&#34;&gt;d. Estimate the expected value of two houses, each 2000 &lt;em&gt;feet&lt;/em&gt; from the trail, one with 3 and one with 4 bedrooms. Interpret this value in a sentence.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#e.-estimate-the-expected-value-of-two-houses-each-with-2-bedrooms-one-thats-1500-and-another-that-is-2500-feet-from-the-rail-trail.-interpret-this-value-in-a-sentence.&#34;&gt;e. Estimate the expected value of two houses, each with 2 bedrooms, one that’s 1500 and another that is 2500 &lt;em&gt;feet&lt;/em&gt; from the rail trail. Interpret this value in a sentence.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#d.-estimate-the-expected-value-of-two-houses-each-0.75-miles-from-the-trail-one-with-3-and-one-with-4-bedrooms.-interpret-this-value-in-a-sentence.&#34;&gt;d. Estimate the expected value of two houses, each 0.75 miles from the trail, one with 3 and one with 4 bedrooms. Interpret this value in a sentence.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#e.-estimate-the-expected-value-of-two-houses-each-with-2-bedrooms-one-thats-0.25-miles-and-another-thats-1.25-miles-from-the-rail-trail.-interpret-this-value-in-a-sentence.&#34;&gt;e. Estimate the expected value of two houses, each with 2 bedrooms, one that’s 0.25 miles and another that’s 1.25 miles from the rail trail. Interpret this value in a sentence.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
@@ -216,7 +216,7 @@
 &lt;div id=&#34;for-3.17&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;For 3.17:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Do not use &lt;code&gt;R&lt;/code&gt; for this problem–use the material in the book.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Do not use &lt;code&gt;R&lt;/code&gt; for this problem to fit the regression model or to automatically do the calculations. Use the numbers from the output material in the book.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;B. Calculate a 95% CI where &lt;span class=&#34;math inline&#34;&gt;\(t^*\)&lt;/span&gt; is 1.96. Do not calculate a 90% CI.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -231,7 +231,7 @@
 &lt;p&gt;We’re using the same data as from class this week: a sample of 104 homes in Northampton, MA to see whether being close to the bike trail enhances the value of the home. Specifically, we’re looking at the association between square feet (a house’s size) and distance from the rail trail with the house’s estimated value in 2014. The variables we’re using are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Price2014&lt;/code&gt;: Zillow price estimate from 2014 (in thousands of dollars)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Distance&lt;/code&gt;: Distance (in &lt;em&gt;feet&lt;/em&gt; - note the different unit from the in class exercise) to the nearest entry point to the rail trail network&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Distance&lt;/code&gt;: Distance (in &lt;em&gt;miles&lt;/em&gt;) to the nearest entry point to the rail trail network&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Bedrooms&lt;/code&gt;: Number of bedrooms&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;a.-fit-the-simple-linear-regression-model-of-price2014-on-distance.-interpret-the-relationship-between-price2014-and-distance-in-the-context-of-this-problem.&#34; class=&#34;section level3&#34;&gt;
@@ -243,11 +243,11 @@
 &lt;div id=&#34;c.-find-the-95-confidence-interval-for-the-distance-coefficent-from-the-model-in-b-and-interpret-it-in-the-context-of-this-problem.&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;c. Find the 95% Confidence Interval for the distance coefficent from the model in “b” and interpret it in the context of this problem.&lt;/h3&gt;
 &lt;/div&gt;
-&lt;div id=&#34;d.-estimate-the-expected-value-of-two-houses-each-2000-feet-from-the-trail-one-with-3-and-one-with-4-bedrooms.-interpret-this-value-in-a-sentence.&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;d. Estimate the expected value of two houses, each 2000 &lt;em&gt;feet&lt;/em&gt; from the trail, one with 3 and one with 4 bedrooms. Interpret this value in a sentence.&lt;/h3&gt;
+&lt;div id=&#34;d.-estimate-the-expected-value-of-two-houses-each-0.75-miles-from-the-trail-one-with-3-and-one-with-4-bedrooms.-interpret-this-value-in-a-sentence.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;d. Estimate the expected value of two houses, each 0.75 miles from the trail, one with 3 and one with 4 bedrooms. Interpret this value in a sentence.&lt;/h3&gt;
 &lt;/div&gt;
-&lt;div id=&#34;e.-estimate-the-expected-value-of-two-houses-each-with-2-bedrooms-one-thats-1500-and-another-that-is-2500-feet-from-the-rail-trail.-interpret-this-value-in-a-sentence.&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;e. Estimate the expected value of two houses, each with 2 bedrooms, one that’s 1500 and another that is 2500 &lt;em&gt;feet&lt;/em&gt; from the rail trail. Interpret this value in a sentence.&lt;/h3&gt;
+&lt;div id=&#34;e.-estimate-the-expected-value-of-two-houses-each-with-2-bedrooms-one-thats-0.25-miles-and-another-thats-1.25-miles-from-the-rail-trail.-interpret-this-value-in-a-sentence.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;e. Estimate the expected value of two houses, each with 2 bedrooms, one that’s 0.25 miles and another that’s 1.25 miles from the rail trail. Interpret this value in a sentence.&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
