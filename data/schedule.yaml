@@ -81,7 +81,7 @@ lessons:
   - title: '<i class="fas fa-university"></i> **MLR: Leverage**'
     date: "March 2"
     reading: "11-reading"
-    #assignment: "04-problem-set"
+    assignment: "04-problem-set"
     
   - title: '<i class="fas fa-university"></i> **MLR: Bootstrap for Inference**'
     date: "March 4"

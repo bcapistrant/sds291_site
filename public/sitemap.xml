@@ -13,13 +13,13 @@
   </url>
   
   <url>
-    <loc>/group/</loc>
-    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
+    <loc>/assignment/</loc>
+    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/assignment/</loc>
-    <lastmod>2020-02-24T00:00:00+00:00</lastmod>
+    <loc>/group/</loc>
+    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -150,6 +150,11 @@
   <url>
     <loc>/resources/homework/</loc>
     <lastmod>2020-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/assignment/04-problem-set/</loc>
+    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
