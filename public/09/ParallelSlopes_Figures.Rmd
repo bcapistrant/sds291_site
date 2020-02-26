@@ -1,0 +1,47 @@
+---
+title: "Parallel Slopes"
+author: "SDS 291, Spring 2020"
+date: "2/24/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r, warning=FALSE, error=FALSE, message=FALSE, echo=FALSE}
+require(tidyverse)
+require(Stat2Data)
+library(moderndive)
+data("Jurors")
+qplot(y=PctReport, x=Period, data=Jurors)
+```
+
+## Model 1
+
+```{r, echo=TRUE}
+qplot(y=PctReport, x=Period, data=Jurors) + geom_smooth(method="lm", se=FALSE)
+summary(lm(PctReport~Period,data=Jurors))
+```
+
+
+## Model 2
+
+```{r, echo=TRUE}
+qplot(y=PctReport, x=Period, group=I2000, color=I2000, data=Jurors) + geom_parallel_slopes()
+summary(lm(PctReport~Period+I2000,data=Jurors))
+```
+
+
+## Model 3
+
+```{r, echo=TRUE}
+qplot(y=PctReport, x=Period, group=I2000, color=I2000, data=Jurors) + geom_smooth(method="lm", se=FALSE)
+summary(lm(PctReport~Period+I2000+Period*I2000,data=Jurors))
+```

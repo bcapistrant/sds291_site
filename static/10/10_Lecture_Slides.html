@@ -45,11 +45,14 @@ class: center, middle, inverse, title-slide
 - Individual coefficients and t-tests can be deceptive and unreliable.
 
 ---
-## Intuition &amp; and Example
+## Intuition and Example
 
 ### Intuition: two variables that are highly related to each other
-Modeling Weight as a function of Height ($X_1$) and Inseam ($X_2$): 
-`$$weight=\beta_0+\beta_1 Height+ \beta_2 Inseam + \epsilon$$`
+
+Modeling Weight as a function of Height ( `\(X_1\)` ) and Inseam ( `\(X_2\)` ): 
+
+
+#### `$$weight=\beta_0+\beta_1 Height+ \beta_2 Inseam + \epsilon$$`
 
 ---
 ### Example: picking a group project team
@@ -67,11 +70,11 @@ Ernie | Bio, Lab, Computing
 Fred | Stat, Writing
 
 ---
-## Effects of Multicollinearity
+class: center
 
-If predictors are highly correlated among themselves:
+## If predictors are highly correlated among themselves:
 
-  - The regression coefficients and tests can be extremely variable and difficult to interpret individually.
+## The regression coefficients and tests can be extremely variable and difficult to interpret individually.
   
 ---
 ## Example of Height and Inseam
@@ -181,8 +184,8 @@ cor(rdata)
 
 In most extreme cases - two variables are functions of the other:
 
-  - Height ($X_1$)
-  - Pants inseam ($X_2$)
+  - Height ( `\(X_1\)` )
+  - Pants inseam ( `\(X_2\)` )
     
 Let's assume we're in a world where everyone's leg length is the same ratio of their height : inseam = 0.34*height
 
@@ -193,6 +196,11 @@ Let's assume we're in a world where everyone's leg length is the same ratio of t
 ## height_true   0.9982694   1.0000000   1.0000000
 ## inseam_true   0.9982694   1.0000000   1.0000000
 ```
+
+
+---
+### True collinearity
+
 
 ```
 ## 
@@ -216,12 +224,10 @@ Let's assume we're in a world where everyone's leg length is the same ratio of t
 ## F-statistic: 2.824e+04 on 1 and 98 DF,  p-value: &lt; 2.2e-16
 ```
 
-We constructed that example to be exactly collinear (we're calling the variables "_true" because they're perfectly collinear), when it's unlikely to be the case (two people with the same height might have different length legs).
-
 ---
 ## How do we detect multicollinearity
 
-- **Warning Signs:** High Correlation Coefficients
+### **Warning Signs:** High Correlation Coefficients
 
 Original example (not perfect collinearity): What is the correlation between height and inseam?
 
@@ -231,116 +237,66 @@ Original example (not perfect collinearity): What is the correlation between hei
 ```
 
 
-- **Better Test:** Variance Inflation Factor (VIF)
-    - `\(VIF = \frac{1}{1-{R_i}^2}\)` where `\({R_i}^2\)` is for predicting `\(X_i\)` using the other predictors.
-        - VIF &gt; 5 `\(\sim\)` `\({R_i}^2\)`&gt; 80%
-        - VIF `\(\geq\)` 5 is questionnable
-        - VIT `\(\geq\)` 10 is a problem
+### **Better Test:** Variance Inflation Factor (VIF)
 
----    
-## Exploring the VIF - calculating manually
-  - `\(VIF = \frac{1}{1-{R_i}^2}\)` where `\({{R_i}^2}\)` is for predicting `\(X_i\)` using the other predictors.
-      - The VIF for height used the `\(R^2\)` from the model `\(Height = \beta_0+ \beta_1 \cdot Inseam + \beta_2 \cdot Age + \epsilon\)`
-      - The VIF for inseam used the `\(R^2\)` from the model `\(Inseam = \beta_0 + \beta_1 \cdot Height + \beta_2 \cdot Age + \epsilon\)`
-      - **What's the model for the VIF of Age?**
+#### `\(VIF = \frac{1}{1-{R_i}^2}\)` where `\({R_i}^2\)` is for predicting `\(X_i\)` using the other predictors.
+
+- VIF &gt; 5 `\(\sim\)` `\({R_i}^2\)`&gt; 80%
+- VIF `\(\geq\)` 5 is questionnable
+- VIT `\(\geq\)` 10 is a problem
+
+---
+##  Calculating VIF manually
+
+### `\(VIF = \frac{1}{1-{R_i}^2}\)` where `\({{R_i}^2}\)` is for predicting `\(X_i\)` using the other predictors.
+
+#### The VIF for height used the `\(R^2\)` from the model `\(Height = \beta_0+ \beta_1 \cdot Inseam + \beta_2 \cdot Age + \epsilon\)`
+
+#### The VIF for inseam used the `\(R^2\)` from the model `\(Inseam = \beta_0 + \beta_1 \cdot Height + \beta_2 \cdot Age + \epsilon\)`
+
+#### **What's the model for the VIF of Age?**
   
 
-```
-## 
-## Call:
-## lm(formula = height ~ inseam + age, data = rdata)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -0.59321 -0.23306 -0.01279  0.18597  0.75928 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  0.02024    0.03090   0.655    0.514    
-## inseam       0.94533    0.03194  29.595   &lt;2e-16 ***
-## age          0.02753    0.03245   0.848    0.398    
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.3078 on 97 degrees of freedom
-## Multiple R-squared:  0.9145,	Adjusted R-squared:  0.9127 
-## F-statistic: 518.7 on 2 and 97 DF,  p-value: &lt; 2.2e-16
-```
 
-```
-## 
-## Call:
-## lm(formula = inseam ~ height + age, data = rdata)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -0.81922 -0.16569  0.01617  0.19982  0.55612 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept) -0.02648    0.03097  -0.855    0.395    
-## height       0.95236    0.03218  29.595   &lt;2e-16 ***
-## age          0.01129    0.03267   0.345    0.730    
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.309 on 97 degrees of freedom
-## Multiple R-squared:  0.914,	Adjusted R-squared:  0.9122 
-## F-statistic: 515.2 on 2 and 97 DF,  p-value: &lt; 2.2e-16
-```
+  - Height ( `\(R^2\)` = 0.914): 1/(1-0.914) = 11.695
+  - Weight ( `\(R^2\)` = 0.914): 1/(1-0.914) = 11.623
+  - Age ( `\(R^2\)` = 0.143): 1/(1-0.143) = 1.167
 
-```
-## 
-## Call:
-## lm(formula = age ~ inseam + height, data = rdata)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -2.79279 -0.54459  0.00692  0.55481  2.15850 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)
-## (Intercept)  0.06224    0.09634   0.646    0.520
-## inseam       0.10887    0.31514   0.345    0.730
-## height       0.26751    0.31534   0.848    0.398
-## 
-## Residual standard error: 0.9596 on 97 degrees of freedom
-## Multiple R-squared:  0.1435,	Adjusted R-squared:  0.1258 
-## F-statistic: 8.123 on 2 and 97 DF,  p-value: 0.0005476
-```
+---
+##  Calculating VIF automatically 
 
-  - Height ($R^2$ = 0.9144948): 1/(1-0.9144948) = 11.6951905
-  - Weight ($R^2$ = 0.9139662): 1/(1-0.9139662) = 11.6233416
-  - Age ($R^2$ = 0.1434511): 1/(1-0.1434511) = 1.1674756
+#### We use the `vif()` function from the `car` package to do this automatically from a model that has all three explanatory variables.
 
-We use the `vif()` function from the `car` package to do this automatically from a model that has all three explanatory variables.
 
 ```r
-# Model 3: predictors 1,2 and 3
+# Reminder - We already fit this
+# Model 3 (slide #10): predictors 1,2 and 3
 # m3 &lt;- lm(weight ~ height+inseam+age, rdata)
 
 require(car)
-vif(m3)
+round(vif(m3), digits=3)
 ```
 
 ```
-##    height    inseam       age 
-## 11.695190 11.623342  1.167476
+## height inseam    age 
+## 11.695 11.623  1.167
 ```
 
 ---
 ## What can you do about collinearity?
 
-1. Drop some of the predictors
+#### 1. Drop some of the predictors
 
-2. Combine some of the predictors
+#### 2. Combine some of the predictors
 
-3. Pay less attention to the individual coefficients and tests (depends on your goal...)
+#### 3. Pay less attention to the individual coefficients and tests (depends on your goal...)
 
-## Some other things you might see (Google is a black hole...)
+## Some other things you might see 
 
-- `\(\frac{1}{1-{R_i}^2} = \frac{1}{Tolerance}\)`
-- Decomposing correlation matrices into eigenvalues as a diagnostic
+##### (Google is a black hole...)
+
+#### `\(\frac{1}{1-{R_i}^2} = \frac{1}{Tolerance}\)`
+#### Decomposing correlation matrices into eigenvalues as a diagnostic
 
 ---
 ## Collinearity Summary
@@ -358,9 +314,12 @@ vif(m3)
     - Drop or combine some of the predictors
 
 ---
+
+class: center, inverse, middle
+
 ## Comparing Models: Nested F-Tests
 
-
+---
 ## Tests to Compare Two Regression Lines
 
 Y = Active pulse
@@ -369,26 +328,27 @@ Y = Active pulse
 
 `\(ActivePulse=\beta_0 + \beta_1 RestingPulse + \beta_2 Female + \beta_3 RestingPulse \times Female + \epsilon\)`
 
-- **What is the test of different intercept?**
+#### **What is the test of different intercept?**
 
-- **What is the test of different slope?**
+#### **What is the test of different slope?**
 
-- **What is the fitted equation for _Males_?**
+#### **What is the fitted equation for _Males_?**
 
-- **What is the fitted equation for _Females_?**
+#### **What is the fitted equation for _Females_?**
 
----        
-## How do we test whether these models are significantly different?
+---
+## Are these models are significantly different?
 
-- **What is the fitted equation for _Males_?**
+#### **What is the fitted equation for _Males_?**
+
 `$$ActivePulse_{Males}=\beta_0 + \beta_1 RestingPulse + \epsilon$$`
 
-- **What is the fitted equation for _Females_?**
+#### **What is the fitted equation for _Females_?**
 
 `\(ActivePulse_{Females}=(\beta_0 + \beta_1(X_1) + \beta_2(1) + \beta_3(1)X_1 + \epsilon)\)` = 
 `\(ActivePulse_{Females}=(\beta_0 + \beta_2)+ ((\beta_1 +\beta_3) RestingPulse) + \epsilon\)`
 
-- The difference between the models is both `\(\beta_2\)` **and** `\(\beta_3\)`
+#### The difference between the models is both `\(\beta_2\)` **and** `\(\beta_3\)`
 
 ---
 ## How do we test whether these models are significantly different?
@@ -400,17 +360,19 @@ Y = Active pulse
   - `\(H_0: \beta_1 = \beta_2 = \beta_3 = 0\)`
   - `\(H_A: some \beta_i \neq 0\)`
     
-*How do we test `\(\beta_2\)` and `\(\beta_3\)` together?*
+### *How do we test `\(\beta_2\)` and `\(\beta_3\)` together?*
 
+---
 ## Nested Models
 
-- If all predictors in Model A are also in Model B, Model A is *nested* in Model B.
-  - `\(ActivePulse = \beta_0 + \beta_1 RestingPulse + \epsilon\)` is nested in `\(ActivePulse = \beta_0 + \beta_1 RestingPulse + \beta_2 Female +\beta_3 RestingPulse \times Female + \epsilon\)`
-  - Model B is the **Full** model, Model A is the **Nested** Model
+#### If all predictors in Model A are also in Model B, Model A is *nested* in Model B.
+  - Model A: `\(ActivePulse = \beta_0 + \beta_1 RestingPulse + \epsilon\)` is nested in Model B: `\(ActivePulse = \beta_0 + \beta_1 RestingPulse + \beta_2 Female +\beta_3 RestingPulse \times Female + \epsilon\)`
 
-- How can we:
-    - Test whether we need the extra terms in Model B
-    - Quantify how much the additional terms "add" to Model A?
+### _Model B is the **Full** model, Model A is the **Nested** (or reduced) Model_
+
+#### How can we:
+  - Test whether we need the extra terms in Model B
+  - Quantify how much the additional terms "add" to Model A?
 
 ---
 ## Nested F-Test
@@ -425,7 +387,7 @@ Basic idea:
 
 4. Compare the test statistic (t.s.) to an F-distribution.
 
-$$ t.s. =  \frac {\frac {SSModel_{Full} - SSModel_{Nested}} {k_{Full} - k_{Nested}}} {\frac {SSE_{Full}} {n-k-1_{Full}}}$$
+`$$ts=\frac{(SSM_\text{Full} - SSM_\text{Nested}) / (k_\text{Full} - k_\text{Nested})}{SSE_\text{Full}/ n-k-1_\text{Full}}$$`
 
 ---
 Formally, `\(\beta_i\)` reflects all predictors that are included in the full model but not the nested model:
@@ -458,43 +420,27 @@ nestedmodel&lt;-lm(Active~Rest, data=Pulse)
 
 .pull-left[
 Full Model: ANOVA Table
-
-```
-## Analysis of Variance Table
-## 
-## Response: Active
-##            Df Sum Sq Mean Sq  F value Pr(&gt;F)    
-## Rest        1  29868 29867.9 132.6550 &lt;2e-16 ***
-## Sex         1    504   503.7   2.2373 0.1361    
-## Rest:Sex    1    114   113.5   0.5043 0.4784    
-## Residuals 228  51335   225.2                    
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
+&lt;img src="anova_full.png" width="100%" /&gt;
 
 Nested Model: ANOVA Table
-
-```
-## Analysis of Variance Table
-## 
-## Response: Active
-##            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
-## Rest        1  29868 29867.9  132.23 &lt; 2.2e-16 ***
-## Residuals 230  51953   225.9                      
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
+&lt;img src="anova_nested.png" width="100%" /&gt;
 ]
 
 .pull-right[
-What are the values of the following:
+### What are the values of the following:
 
-  - `\(SSModel_{Full}\)`:
-  - `\(SSModel_{Nested}\)`:
-  - \# of predictors (or `\(k_{Full} - k_{Nested}\)`):
-  - `\(SSE_{Full}\)`:
-  - `\(n-k-1\)`:
-  - Nested F Test Statistic: `\(\frac {\frac {SSModel_{Full} - SSModel_{Nested}} {k_{Full} - k_{Nested}}} {\frac {SSE_{Full}} {n-k-1_{Full}}}\)`
+`\(SSModel_\text{Full}\)`
+
+`\(SSModel_\text{Nested}\)`
+
+\# of predictors (or `\(k_\text{Full} - k_\text{Nested}\)`)
+
+`\(SSE_\text{Full}\)`
+
+`\(n-k-1\)`
+
+`\(ts=\frac{(SSM_\text{Full} - SSM_\text{Nested}) / (k_\text{Full} - k_\text{Nested})}{SSE_\text{Full}/ n-k-1_\text{Full}}\)`
+
 ]
 ---  
 ## Nested F-Test Example: Calculating Nested F test statistic automatically
@@ -516,7 +462,8 @@ anova(nestedmodel,fullmodel)
 
 
 ---
-class: inverse, center
+class: inverse, center, middle
+
 ## Moving from Binary to Categorical Explanatory Variables
 
 ---
@@ -551,11 +498,10 @@ If:
 ###Example 1
 What we include *gender* rather than just female vs. non-female? Instead, you have a variable with three levels:
 
-`\(gender =\)` \begin{cases}
-  0 &amp; \text{if Male} \\
-  1 &amp; \text{if Female} \\
-  2 &amp; \text{if Gender non-conforming, Trans*, GenderQueer}
-  \end{cases}
+`gender` =
+- 0 if Male
+- 1 if Female
+- 2 if Gender non-conforming, Trans*, GenderQueer
 
 `\(income=\beta_0 + \beta_1 age + \beta_2 education + \beta_3 gender + \epsilon\)`
 
@@ -578,29 +524,22 @@ This is a *very strange* interpretation. What does it mean to have a "1-unit inc
 **Essentially, gender is included here as a quantitative variable, when it is categorical. This approach does not make sense and should not be used.**
 
 ---
-## Interpreting Terms - Categorical -&gt; Multiple Binary Explanatory Variables
+### Multiple Binary, Indicator Explanatory Variables
 
-What if you made Female and "Gender non-conforming, Trans*, GenderQueer" categories into indicator variables?
+`female` =
+- 0 if Not-Female
+- 1 if Female
 
-`\(Female =\)` \begin{cases}
-  0 &amp; \text{Not Female} \\
-  1 &amp; \text{if Female}
-  \end{cases}
+`male` =
+- 0 if Not-Male
+- 1 if Male
 
-  `\(Male =\)` \begin{cases}
-  0 &amp; \text{Not Male} \\
-  1 &amp; \text{if Male}
-  \end{cases}
+`Trans_NB` =
+- 0 if cisgender
+- 1 if Trans or Non-Binary
 
-  `\(NonConforming =\)` \begin{cases}
-  0 &amp; \text{Not NonConforming} \\
-  1 &amp; \text{if Gender non-conforming, Trans*, GenderQueer}
-  \end{cases}
-
-
-`\(income=\beta_0 + \beta_1 age + \beta_2 education + \beta_3 Female + \beta_4 NonConforming + \epsilon\)`
-
-If Income ($), Age (years), and Education (years) are quantitative variables, and Female and NonConforming are binary indicator variables as defined above.
+If Income ($), Age (years), and Education (years) are quantitative variables, and Female and Trans_NB are binary indicator variables as defined above.
+`\(income=\beta_0 + \beta_1 age + \beta_2 education + \beta_3 Female + \beta_4 Trans_NB + \epsilon\)`
 
 **How do you interpret each term in the model?**
 
@@ -611,9 +550,12 @@ If Income ($), Age (years), and Education (years) are quantitative variables, an
 - The `\(\beta_3\)` term for Female is now interpreted as: Females have, on average, `\(\beta_3\)` higher or lower income than men, in the population, adjusted for age and education. 
 - The `\(\beta_4\)` term for NonConforming is now interpreted as: Gender Non-Conforming people have, on average, `\(\beta_4\)` higher or lower income than men, in the population, adjusted for age and education.
 - This is a much more intuitive explanation than above where gender was included as a quantitative variable  ---&gt;
+---
+### Multiple Binary, Indicator Explanatory Variables
 
+What about: `\(income=\beta_0 + \beta_1 age + \beta_2 education + \beta_3 Male + \beta_4 Female + \beta_5 Trans_NB + \epsilon\)` ?
 
-What about: `\(income=\beta_0 + \beta_1 age + \beta_2 education + \beta_3 Male + \beta_4 Female + \beta_5 NonConforming + \epsilon\)` ?
+**How do you interpret each term in the model?**
 
 &lt;!--- **Answer**: This model won't estimate, because one of the gender dummy variables needs to be left out as a reference group. Remember from collinearity that this was true - it's a similar idea here where if you know about two of the three categories, you won't be able to separately estimate the third. ---&gt;
     </textarea>
