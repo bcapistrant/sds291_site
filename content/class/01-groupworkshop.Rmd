@@ -44,3 +44,11 @@ There are many other -- often simpler -- ways to collaborate. You could have you
 GitHub is useful for more advanced ways of resolving collaboration issues like having two conflicting versions of the same R code. 
 
 If you're thinking of an SDS major, this might be good to try out; if you're not, feel free to skip it. There will be subsequent workshops that will be more applicable to everyone who is working in R, like data management and data visualization.
+
+# Slides and Materials
+
+Couldn't make it, but want to know more? Take a look at the slides, which walk through step by step.
+
+- [Slides from the session](https://emmal73.github.io/github_slides.html)
+
+And see StatTAs during drop in hours to help.
