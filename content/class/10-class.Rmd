@@ -19,3 +19,8 @@ editor_options:
 ## In-class Activity
 
 - [Slides](http://sds291.netlify.com/10/10_Lecture_Slides.html) ( [raw `.Rmd` file](http://sds291.netlify.com/10/10_Lecture_Slides.rmd) )
+
+## Reference / Extra Practice - Nested F Tests and Multiple Categorical Variables
+
+- [Lab](http://sds291.netlify.com/10/10_Lab.html) ( [raw `.Rmd` file](http://sds291.netlify.com/10/10_Lab.rmd) )
+  - [Answers Set](http://sds291.netlify.com/10/10_Lab)Answers.pdf) ( [raw `.Rmd` file](http://sds291.netlify.com/10/10_Lab_Answers.rmd) )

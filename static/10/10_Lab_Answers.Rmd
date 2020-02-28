@@ -1,0 +1,188 @@
+---
+title: "Day 10 - Categorical Variables and Nested F Tests"
+author: "SDS 291"
+date: "February 26, 2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, tidy=FALSE)
+```
+
+
+## Birthweight and parental smoking
+Using data from the mosaic package. Birth weight, date, and gestational period collected as part of the Child Health and Development Studies from Oakland, CA in 1961 and 1962; we're working with a sample of 1,263 babies and their parents. The study is [still ongoing](http://www.chdstudies.org/index.php), now following its 3rd generation.
+
+- Response variable
+    - `wt`: birth weight (in ounces) 
+    
+- Explanatory Variable(s)
+    - `smoke`: smoke does mother smoke? 0=never, 1=smokes now, 2=until current pregnancy, 3=once did, not now
+    - `age`: mother's age in years at termination of pregnancy
+
+Bring in the data
+
+```{r,  message=FALSE, echo=TRUE}
+require(mosaic)
+require(tidyverse)
+require(magrittr)
+data("Gestation")
+Gestation<-Gestation %>% filter(!is.na(smoke), !is.na(wt))
+```
+
+Now fit the model: $$bithweight=\beta_0+\beta_1 smoke+ \epsilon$$
+```{r,  message=FALSE, echo=TRUE}
+m_quant<-lm(wt~smoke, data=Gestation)
+summary(m_quant)
+```
+
+####How do you interpret the coefficient for `smoke`?
+
+**Answer**: Like the example with gender above, this is treating `smoke` as a quantitative variable. So it can be interpreted as a 1-unit increase in smoking status is associated with a 0.42lb lighter child at birth, on average in the population. 
+
+\newpage
+
+## What if smoking status were a categorical variable?
+
+###R uses `factor` variables to indicate categorical variables. 
+
+You could make a new variable `smoke_factor` with the same values as `smoke` but where `R` knows the variable should be formatted as a factor.
+```{r,  echo=TRUE, message=FALSE}
+Gestation<-Gestation %>%
+  mutate(smoke_factor=as.factor(smoke))
+m_cat1<-lm(wt~smoke_factor, data=Gestation)
+summary(m_cat1)
+```
+
+#### What is the average expected birthweight of a child whose mother never smoked?
+
+ **Answer**: The average expected birthweight of a child whose mother never smoked is 122.78 ounces. 
+
+#### Interpret the coefficient for `smoke_factor1`.
+
+ **Answer**: The coefficient for `smoke_factor1` reflects the difference in the average expected birthweight of a child whose mother is a current smoker to a child whose mother never smoked. Specifically, a child born to a mother who is a current smoker will weigh 8.67 ounces lighter at birth than a child born to a mother who never smoked, on average in this population. This -8.67 ounce difference in birthweight between current and never smoker mothers is statisticially significant from 0 since the t-statistic (-7.8) is below the critical value of 1.96, and the p-value (9.53e-15) is <0.05. 
+
+#### Interpret the coefficient for `smoke_factor2`.
+
+ **Answer**: The coefficient for `smoke_factor2` reflects the difference in the average expected birthweight of a child whose mother who smoked until pregnancy to a mother who never smoked. A child of a woman who smoked prior to pregnancy weighed, on average, .3066 ounces more than a child of a never smoker mother in this population. This difference was not statistically signigicantly different from 0, since the t-statistic (0.156) was <1.96 and the p-value (0.876) was >0.05. 
+
+It's hard to keep the values of these levels straight. Especially if you had multiple factor variables. Instead, you might make the factor levels be something more conceptually understandable.
+
+```{r,  echo=TRUE}
+Gestation<-Gestation %>%
+  mutate(smoke_cat=as.factor(if_else(smoke==0,"never smoker",
+                             if_else(smoke==1,"current smoker",
+                             if_else(smoke==2,"pre-pregnancy smoker",
+                             if_else(smoke==3,"other former smoker","NA"))))
+                   )
+        )
+tally(~smoke_cat, data=Gestation)
+smoke_factor_labels<-lm(wt~I(smoke_cat), data=Gestation)
+summary(smoke_factor_labels)
+```
+
+#### What is the average expected birthweight of a child whose mother never smoked?
+
+**Answer**: The average expected birthweight of a child whose mother never smoked was 122.78 ounces (114.109+8.668). 
+
+#### What is the average expected birthweight of a child whose mother was a current smoker?
+
+ **Answer**: The average expected birthweight of a child whose mother was a current smoker was 114.11 ounces. 
+
+## How to get the right reference group?
+You can tell `R` what you want the reference group to be with `relevel()` function.
+```{r,  echo=TRUE}
+Gestation$smoke_cat<-relevel(Gestation$smoke_cat, ref = "never smoker")
+```
+
+But *the better option* is to make dummy/indicator variables for each of the categories.
+```{r,  echo=TRUE, message=FALSE}
+Gestation<-Gestation %>%
+  mutate(
+    smoke_nev=if_else(smoke==0,1,0),
+    smoke_cur=if_else(smoke==1,1,0),
+    smoke_pre=if_else(smoke==2,1,0),
+    smoke_fmr=if_else(smoke==3,1,0)
+  )
+tally(c("smoke_nev", "smoke_cur", "smoke_pre", "smoke_fmr"), data=Gestation)
+smoke_indicators<-lm(wt~smoke_nev+smoke_cur+smoke_pre+smoke_fmr, data=Gestation)
+summary(smoke_indicators)
+```
+
+\newpage
+
+## What does the ANOVA table tell us?
+```{r,  echo=TRUE, message=FALSE}
+anova(smoke_indicators)
+```
+
+#### What's the MSModel?
+
+ The MSModel is 7879.333 ((23399.5+.1+238.4)/3), which has an F-statistic of 25.19 on 3 and 1222 DF. This model explains a statistically signficant more of the variance in birthweight than a constant model with no variables, as evidenced by the small p-value (8.196e-16) which is <0.05. 
+
+\newpage
+
+## What about a more parsimonious model?
+
+Webster's Dictionary defines parsimony as "the quality of being careful with money or resources." Essentially, we use parsimonious as an adjective to describe a simpler model; we're being careful with our degrees of freedom and number of coefficients in the model, and would prefer to "spend" fewer of them. A simpler model is generally better -- it's easier to explain.
+
+```{r,  echo=TRUE, message=FALSE}
+Gestation<-Gestation %>%
+  mutate(smoke_cur_d=as.factor(if_else(smoke==1,"Smoker","NonSmoker")))
+smoke_cur_d<-lm(wt~smoke_cur_d, data=Gestation)
+summary(smoke_cur_d)
+```
+
+
+#### How does this change our interpretation of `smoke_cur_d`?
+
+ **Answer**: The reference group is now not-current-smokers, a combination of never smokers and former smokers (both those pre-pregnancy and who had quit longer before pregnancy). A child of a mother who currently smokes will be, on average, 8.94 ounces lighter than a mother who does not currently smoke in this population. 
+
+#### Do we need the 4 category variable or is the dichotomous/binary variable enough?
+
+```{r,  echo=TRUE, message=FALSE}
+anova(smoke_cur_d,smoke_indicators)
+```
+
+**Answer**: We fail to reject the null hypothesis that the coefficients for smoke_pre and smoke_fmr both equal 0. We can conclude that, since these extra coefficients in the model were together not different from 0, that the nested, parsimonious model of a binary variable (current vs. non-current smokers) is sufficient) 
+
+What we want to do is to test whether the model with four categories of smoking is _better_ than the a binary definition of smoking (current vs. not current, which includes never, former, and smokers until pregnancy). Essentially, is the right plot with a binary explanatory variable better than the left of a model with four categories of `smoke`:
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE, fig.height=4}
+library(moderndive)
+qplot(y=wt, x=age, color=smoke_cat, data=Gestation)+geom_parallel_slopes(se=FALSE)
+smoke_cur_dage<-lm(wt~smoke_cur_d+age, data=Gestation)
+```
+
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE, fig.height=4}
+qplot(y=wt, x=age, color=smoke_cur_d, data=Gestation)+geom_parallel_slopes(se=FALSE)
+wt4cat_temp<-lm(wt~smoke_cat+age, data=Gestation)
+```
+
+\newpage
+We are essentially testing the hypothesis that former smokers and quit at pregnancy are the same as never smokers vs. the alternative that one of them is different. 
+
+$$H_0: \beta_\text{former} = \beta_\text{quit-at-pregancy} = 0 $$
+$$H_A: \beta_i \neq 0 $$
+
+##### Nested Model
+```{r}
+anova(smoke_cur_dage)
+```
+
+##### Full Model
+```{r}
+anova(wt4cat_temp)
+```
+
+##### Nested F Test
+```{r}
+anova(smoke_cur_dage, wt4cat_temp)
+```
+
+The nested-F test is $$Nested F = \frac{\frac{SSM_\text{full}-SSM_\text{nested}}{\text{Number of predictors}}}{\frac{SSE_\text{Full}}{n-k-1}}$$
+
+In this case, we have $Nested F = \frac{\frac{23632-23393}{2}}{\frac{382224}{1219}} = \frac{\frac{230.14}{2}}{313.5} = \frac{115.07}{313.5} = 0.367$
+
+We fail to reject the null hypothesis (the F statistic is very small, <1, and the p-value is very large and above our standard threshold 0.69>0.05) and conclude that we don't have evidence that former and quit-at-pregnancy aren't the same as each other.  Thus, a model with just non-smokers vs. smokers does just as well as a model with all four categories (current vs. never, former, quit-at-pregnancy). 

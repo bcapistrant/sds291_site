@@ -121,20 +121,9 @@ PriceM2_2000far<-80.10 + (150.50*2) -36.97
 
 $\widehat{Price2014} = 80.10 + 150.50 \cdot 2 -36.97 \cdot 1=$ `r PriceM2_2000far`
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4}
-#calculating the different intercepts
-intercepts <- c(coef(m2)["(Intercept)"],
-                coef(m2)["(Intercept)"] + coef(m2)["DistGroupFarther Away"])
-
-#putting these into a new data frame with the slope and transmission indicator variable
-lines.df <- data.frame(intercepts = intercepts,
-                       slopes = rep(coef(m2)["SquareFeet"], 2),
-                       distgroup = as.factor(levels(RailsTrails$DistGroup)))
-#making the plot
-qplot(x = SquareFeet, y = Price2014, color = DistGroup, data = RailsTrails) + 
-  geom_abline(aes(intercept = intercepts, 
-                  slope = slopes, 
-                  color = distgroup), data = lines.df)
+```{r, echo=TRUE, warning=FALSE, message=FALSE, fig.height=4}
+library(moderndive)
+qplot(y=Price2014, x=SquareFeet, color=DistGroup, data=RailsTrails)+geom_parallel_slopes(se=FALSE)
 ```
 
 \vspace{0.5 in}

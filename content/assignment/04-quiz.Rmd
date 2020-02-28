@@ -1,13 +1,13 @@
 ---
-title: "Quiz 3"
-linktitle: "Quiz 3"
-date: "2020-02-21"
-due_date: "2020-02-24"
+title: "Quiz 4"
+linktitle: "Quiz 4"
+date: "2020-02-27"
+due_date: "2020-03-02"
 due_time: "11:59 AM"
 menu:
   assignment:
     parent: Quizes
-    weight: 3
+    weight: 4
 type: docs
 ---
 

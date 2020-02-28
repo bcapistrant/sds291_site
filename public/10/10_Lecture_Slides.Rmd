@@ -27,11 +27,9 @@ require(tidyverse)
 
 - Multicollinearity
 
-- How to test whether one model is "better" than another?
+- Nested F-Tests: How to test whether one model is "better" than another?
 
 - Categorical Explanatory variables
-
-- Short Lab
 
 ---
 ## Multicollinearity

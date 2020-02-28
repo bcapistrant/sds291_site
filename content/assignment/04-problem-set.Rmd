@@ -18,7 +18,9 @@ editor_options:
 
 # Required
 
-Questions 3.32, 3.47, and 4.15 (2nd Edition) or 3.19, 3.32, 4.14 (1st Edition)
+Questions 3.32, 3.47, and 4.15* (2nd Edition) or 3.19, 3.32, 4.14* (1st Edition)
+
+\*This question is strongly encouraged, but optional.
 
 # Submit on Moodle
 
