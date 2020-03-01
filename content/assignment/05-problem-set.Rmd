@@ -1,0 +1,35 @@
+---
+title: "5. Problem set 5"
+date: "2020-03-02"
+due_date: "2020-03-09"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Problem sets
+    weight: 5
+type: docs
+weight: 5
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Required
+
+Questions 4.10, 4.22 (2nd Edition) or 4.9, 4.21 (1st Edition)
+
+# Recommended
+
+4.20 (2nd Ed), 4.19 (1st Edition)
+
+Recommended for additional practice, won't count for or against your grade. If you do this question, please include it at the end of the required questions
+
+# Submit on Moodle
+
+There is no template for this assignment. You're a pro at making your own RMarkdown files now!
+
+You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline. 
+
+Use the Homework 5 submission on Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 

@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Benjamin Capistrant">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Why are we using IPUMS for this class? IPUMS Data Sources &amp; How they’re used in the News Current Population Survey (CPS) US Census &amp; American Community Survey Demographic and Health Survey (DHS) American Time Use Survey (ATUS) IPUMS Health Surveys National Health Interview Survey Medical Expenditure Panel Surveys Youth Risk Behavioral Surveillance System     IPUMS: Integrated Public Use Micro-data System
+IPUMS is a database / repository that we will be using for the group projects in class.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/group/04-group-ipums-whatisipums/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#002855">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i%7CIBM+Plex+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/group/04-group-ipums-whatisipums/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@bencapistrant">
+  <meta property="twitter:creator" content="@bencapistrant">
+  
+  <meta property="og:site_name" content="Multiple Regression">
+  <meta property="og:url" content="/group/04-group-ipums-whatisipums/">
+  <meta property="og:title" content="What can I do with IPUMS Data? | Multiple Regression">
+  <meta property="og:description" content="Why are we using IPUMS for this class? IPUMS Data Sources &amp; How they’re used in the News Current Population Survey (CPS) US Census &amp; American Community Survey Demographic and Health Survey (DHS) American Time Use Survey (ATUS) IPUMS Health Surveys National Health Interview Survey Medical Expenditure Panel Surveys Youth Risk Behavioral Surveillance System     IPUMS: Integrated Public Use Micro-data System
+IPUMS is a database / repository that we will be using for the group projects in class."><meta property="og:image" content="/img/social-image.png">
+  <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-02-14T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-02-14T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="SDS 291: Multiple Regression" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+
+
+  <title>What can I do with IPUMS Data? | Multiple Regression</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Multiple Regression</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Multiple Regression</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/reading/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/class/"><span>Classes</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/group/"><span>Group Project</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resources/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.smith.edu/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http://sds291-spring2020.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/group/">Introduction</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/group/">Group Project details</a>
+      </li>
+      
+      <li >
+        <a href="/group/00-group/">Project Introduction</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/group/01-group/">Group Formation</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/group/01-group/">Forming a Group</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/group/02-group-draftproposal/">Topic Selection</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/group/02-group-draftproposal/">Draft Proposal</a>
+      </li>
+      
+      <li >
+        <a href="/group/02-group-finalproposal/">Final Proposal</a>
+      </li>
+      
+      <li >
+        <a href="/group/02-modelfinalgroupproposal/">Model Group Final Proposal</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/group/04-group-ipums-whatisipums/">IPUMS Data</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/group/04-group-ipums-whatisipums/">What can I do with IPUMS Data?</a>
+      </li>
+      
+      <li >
+        <a href="/group/04-group-ipums-gettingdata/">How Do I Get the IPUMS Data</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Data Extract and Analysis Plan</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Data Appendix</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Draft Results</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Poster</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Final Report</a>
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>What can I do with IPUMS Data?</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+
+<div id="TOC">
+<ul>
+<li><a href="#why-are-we-using-ipums-for-this-class">Why are we using IPUMS for this class?</a></li>
+<li><a href="#ipums-data-sources-how-theyre-used-in-the-news">IPUMS Data Sources &amp; How they’re used in the News</a><ul>
+<li><a href="#current-population-survey-cps">Current Population Survey (CPS)</a></li>
+<li><a href="#us-census-american-community-survey">US Census &amp; American Community Survey</a></li>
+<li><a href="#demographic-and-health-survey-dhs">Demographic and Health Survey (DHS)</a></li>
+<li><a href="#american-time-use-survey-atus">American Time Use Survey (ATUS)</a></li>
+<li><a href="#ipums-health-surveys">IPUMS Health Surveys</a><ul>
+<li><a href="#national-health-interview-survey">National Health Interview Survey</a></li>
+<li><a href="#medical-expenditure-panel-surveys">Medical Expenditure Panel Surveys</a></li>
+<li><a href="#youth-risk-behavioral-surveillance-system">Youth Risk Behavioral Surveillance System</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>IPUMS: Integrated Public Use Micro-data System</p>
+<p>IPUMS is a database / repository that we will be using for the group projects in class. You may only work with IPUMS data, which sounds like a constraint, but is actually a great opportunity to work with relatively clean, well-documented data that could include any number of possible topics.</p>
+<p><a href="https://www.ipums.org/whatIsIPUMS.shtml">What is IPUMS?</a></p>
+<blockquote>
+<p>IPUMS provides census and survey data from around the world integrated across time and space. IPUMS integration and documentation makes it easy to study change, conduct comparative research, merge information across data types, and analyze individuals within family and community context. Data and services available free of charge.</p>
+</blockquote>
+<blockquote>
+<p>IPUMS has created the world’s largest accessible database of census microdata. IPUMS includes almost a billion records from U.S. censuses from 1790 to the present and over a billion records from the international censuses of over 100 countries. We have also harmonized survey data with over 30,000 integrated variables and 150 million records, including the Current Population Survey, the American Community Survey, the National Health Interview Survey, the Demographic and Health Surveys, and an expanding collection of labor force, health, and education surveys. In total, IPUMS currently disseminates integrated microdata describing 1.4 billion individuals drawn from over 750 censuses and surveys.</p>
+</blockquote>
+<div id="why-are-we-using-ipums-for-this-class" class="section level1">
+<h1>Why are we using IPUMS for this class?</h1>
+<p>The IPUMS user interface, data documentation, and having already “cleaned” much of the data will make your life substantially easier. Specifically, it will give you only the data you choose/need and remarkably better documented than many other sources of data you might find elsewhere. The benefit here is that you can focus instead on the actual task for this project - using your regression modeling skills you’re developing in the class - rather than wrangling unnecessary data. Given the breadth of the surveys / datasources included under the IPUMS umbrella, IPUMS should also serve a wide range of interests, especially economics, health, and social sciences. With 750 censuses/surveys, everyone in our class should be able to find a topic of interest from the IPUMS data. Last (but certainly not least), they have a R package called <code>ipumsr</code> (package <a href="https://cran.r-project.org/web/packages/ipumsr">here</a> and vignettes <a href="https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums.html">here</a>) to help import their data into R.</p>
+</div>
+<div id="ipums-data-sources-how-theyre-used-in-the-news" class="section level1">
+<h1>IPUMS Data Sources &amp; How they’re used in the News</h1>
+<p>Some of the bigger surveys that IPUMS has worked to integrate over time get cited frequently in the press and used by other analysts, like Nathan Yau in his <a href="blog">Flowing Data</a>. Although most of these examples aren’t of regression modeling per se, they should give a sense of some of the flavor for what data each survey has and the kinds of questions you can answer with each of the surveys. For more academic applications of these data, you could also see <a href="https://www.ipums.org/awardwinners.shtml">IPUMS research award winners</a> for some inspiration.</p>
+<div id="current-population-survey-cps" class="section level2">
+<h2>Current Population Survey (CPS)</h2>
+<p>IPUMS CPS harmonizes microdata from the monthly U.S. labor force survey, the Current Population Survey (CPS), covering the period 1962 to the present. Data include demographic information, rich employment data, program participation and supplemental data on topics such as fertility, tobacco use, volunteer activities, voter registration, computer and internet use, food security, and more.</p>
+<ul>
+<li><a href="https://fivethirtyeight.com/tag/current-population-survey/">FiveThirtyEight</a>
+<ul>
+<li><a href="https://fivethirtyeight.com/features/33-million-americans-still-dont-have-health-insurance/">33 Million Americans Still Don’t Have Health Insurance</a></li>
+<li><a href="https://fivethirtyeight.com/features/college-freshmen-are-more-politically-engaged-than-they-have-been-in-decades/">College Freshmen Are More Politically Engaged Than They Have Been In Decades</a></li>
+</ul></li>
+<li><em>NYTimes</em>sts
+<ul>
+<li><a href="https://www.nytimes.com/interactive/2017/11/28/upshot/what-the-tax-bill-would-look-like-for-25000-middle-class-families.html?_r=1">What the Tax Bill Would Look Life for 25,000 Middle Class Families</a> and a [companion, process piece on how that was built] (<a href="https://www.nytimes.com/2017/12/19/insider/how-to-build-a-tax-calculator-thats-actually-useful.html" class="uri">https://www.nytimes.com/2017/12/19/insider/how-to-build-a-tax-calculator-thats-actually-useful.html</a>)</li>
+<li><a href="https://www.nytimes.com/interactive/2017/09/18/upshot/black-white-wealth-gap-perceptions.html">Whites have a huge wealth edge over blacks (but don’t know it)</a></li>
+</ul></li>
+<li><em>Flowing Data</em>
+<ul>
+<li><a href="https://flowingdata.com/2017/11/28/career-paths/">Constructed Career Paths from Job Switching Data</a></li>
+<li><a href="http://flowingdata.com/2017/05/02/shifting-incomes-for-young-people/">Shifting Incomes for Young People</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="us-census-american-community-survey" class="section level2">
+<h2>US Census &amp; American Community Survey</h2>
+<p>The American Community Survey is administered by the Census Bureau and includes information annually in between the decennial Census on ~1% of the US population. American Community Survey has information on many different subjects of demographics, economics, and social well-being; some are listed here at the <a href="https://www.census.gov/programs-surveys/acs/guidance/subjects.html">Census.</a> IPUMS has both the annual ACS and the decennial Census via <a href="https://usa.ipums.org/usa/">IPUMS USA</a>. (Note: there are also international census data via <a href="https://international.ipums.org/">IPUMS International</a>)</p>
+<ul>
+<li><a href="https://fivethirtyeight.com/tag/american-community-survey/">FiveThirtyEight</a>
+<ul>
+<li><a href="https://fivethirtyeight.com/features/same-sex-couples-are-more-domestic-in-more-tolerant-states/">Same-Sex Couples Settle Down More Often in States That Welcome Them</a></li>
+</ul></li>
+<li><p>Forbes, Feb 8, 2018: <a href="https://www.forbes.com/sites/petesaunders1/2018/02/08/comparing-americas-major-metro-housing-markets/#36b5429f29fc">Comparing America’s Major Metro Housing Markets</a></p></li>
+<li><em>Washington Post</em>
+<ul>
+<li><a href="https://www.washingtonpost.com/news/wonk/wp/2017/09/15/the-average-american-spent-more-than-9-full-days-getting-to-and-from-work-last-year/">The average American spent more than 9 full days getting to and from work last year</a></li>
+<li><a href="https://www.washingtonpost.com/news/wonk/wp/2017/10/25/is-100000-middle-class-in-america/?utm_term=.e2dda08f1475">Is $100,000 middle class in America?</a></li>
+</ul></li>
+<li><a href="https://flowingdata.com/tag/american-community-survey/">Flowing Data</a>
+<ul>
+<li><a href="http://flowingdata.com/2018/01/23/the-demographics-of-others/">The Demographics of Others</a></li>
+<li><a href="http://flowingdata.com/2016/03/03/marrying-age/">Marrying Age: This is when Americans get married</a>, or conversely…</li>
+<li><a href="http://flowingdata.com/2017/07/25/divorce-and-occupation/">Divorce Rate by Occupation</a></li>
+</ul></li>
+<li><p><a href="https://twitter.com/mapmakerbot/">Map Maker Bot</a> automatically generates maps of the US using ACS data. Maybe some of the visuals will spark interest for a research topic!</p></li>
+</ul>
+</div>
+<div id="demographic-and-health-survey-dhs" class="section level2">
+<h2>Demographic and Health Survey (DHS)</h2>
+<p>IPUMS-DHS facilitates analysis of Demographic and Health Surveys, administered in low- and middle-income countries since the 1980s. IPUMS-DHS contains thousands of consistently coded variables on the health and well-being of women, children, and births, for 22 African countries and India. There is detailed information on population, health status and health care, HIV and nutrition.</p>
+<p>These data are available via <a href="https://www.idhsdata.org/">IPUMS DHS</a></p>
+<ul>
+<li>Former Smith College GOV Prof. Kim Yi Dionne in Washington Post, Dec 1, 2017: <a href="https://www.washingtonpost.com/news/monkey-cage/wp/2017/12/01/its-world-aids-day-who-actually-needs-more-aids-awareness/?utm_term=.e7f416ec810b">It’s World AIDS Day. Who actually needs more AIDS awareness?</a></li>
+<li>Quartz, Jan 29, 2018: <a href="https://qz.com/1191272/economic-survey-2018-indias-preference-for-boys-has-produced-21-million-unwanted-girls/">India’s preference for boys has produced 21 million “unwanted girls”</a></li>
+<li>The Economist. <a href="https://www.economist.com/news/middle-east-and-africa/21607897-amid-worries-about-kidnapped-girls-nigerias-traditions-are-unkind-too-bring-back">Bring back the girls: Fertility and Son-preference in Nigeria</a></li>
+</ul>
+</div>
+<div id="american-time-use-survey-atus" class="section level2">
+<h2>American Time Use Survey (ATUS)</h2>
+<p>The ATUS is a nationally representative U.S. time diary survey for period since 2003. ATUS data facilitate analysis of the average amount of time per day individuals did various activities in a given day: how much someone worked, did household activities, engaged in leisure (e.g., TV watching) and sports activities, and providing childcare and eldercare.</p>
+<p>The structure of these data are idiosyncratic and not ideal for our purposes. I would recommend not using these data.</p>
+</div>
+<div id="ipums-health-surveys" class="section level2">
+<h2>IPUMS Health Surveys</h2>
+<div id="national-health-interview-survey" class="section level3">
+<h3>National Health Interview Survey</h3>
+<p>The National Health Interview Survey is a survey collecting information on the health, health care access, and health behaviors of the civilian, non-institutionalized U.S. population, with digital data files available from 1963 to present. IPUMS Health Surveys harmonizes these data and allows users to create custom NHIS data extracts for analysis.</p>
+<p>NHIS data are used to:</p>
+<ul>
+<li>Monitor progress towards national health objectives</li>
+<li>Evaluate health policies and programs</li>
+<li>Track changes in health behaviors and health care use</li>
+</ul>
+<p>Topics included</p>
+<ul>
+<li>Medical conditions</li>
+<li>Health insurance</li>
+<li>Doctor’s office visits</li>
+<li><p>Physical activity and other health behaviors</p></li>
+<li>Kaiser Family Foundation Data Notes <a href="https://www.kff.org/disparities-policy/issue-brief/the-affordable-care-act-and-insurance-coverage-changes-by-sexual-orientation/">The Affordable Care Act and Insurance Coverage Changes by Sexual Orientation</a></li>
+<li><p>Reuters. <a href="https://www.reuters.com/article/us-health-autism-trend/little-change-in-proportion-of-u-s-kids-with-autism-idUSKBN1FB2WO">Little change in proportion of US kids with autism</a>
+-Washington Post <a href="https://www.washingtonpost.com/news/to-your-health/wp/2017/03/07/arthritis-afflicts-about-1-in-4-adults-in-the-u-s-cdc-report-finds/?utm_term=.d5b958f2131d">Arthritis afflicts about 1 in 4 adults in the U.S., CDC report finds</a></p></li>
+</ul>
+</div>
+<div id="medical-expenditure-panel-surveys" class="section level3">
+<h3>Medical Expenditure Panel Surveys</h3>
+<p>MEPS provides nationally representative, longitudinal data from 1996 to the present on health status, medical conditions, healthcare utilization, and healthcare expenditures for the U.S. civilian, non-institutionalized population. IPUMS MEPS harmonizes these data and allows users to create customized data extracts for analysis.</p>
+<ul>
+<li>NPR, <a href="https://www.npr.org/sections/health-shots/2017/04/25/525475221/changes-to-federal-insurance-plans-could-hurt-families-of-chronically-ill-kids">Changes To Federal Insurance Plans Could Hurt Families Of Chronically Ill Kids</a></li>
+<li>Kaiser Health News <a href="https://khn.org/news/despite-aca-cost-protections-most-adolescents-skip-regular-checkups/">Despite ACA Cost Protections, Most Adolescents Skip Regular Checkups</a></li>
+</ul>
+</div>
+<div id="youth-risk-behavioral-surveillance-system" class="section level3">
+<h3>Youth Risk Behavioral Surveillance System</h3>
+<p>IPUMS YRBSS is a cross-sectional national survey of youth in grades 9-12 with emphasis on health risk behaviors that are often established during childhood and adolescence:</p>
+<ul>
+<li>tobacco use</li>
+<li>alcohol and other drug use</li>
+<li>unintentional injuries</li>
+<li>sexual behavior</li>
+<li>unhealthy diet</li>
+<li>inadequate physical activity</li>
+</ul>
+<p><a href="http://blog.popdata.org/youthhealth/">IPUMS YRBSS</a></p>
+</div>
+</div>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on February 14, 2020</p>
+
+                    
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/group/04-group-IPUMS-whatisIPUMS.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>SDS 291: Multiple Regression (Spring 2020)</strong><br>
+
+                <a href="https://www.smith.edu" target="_blank" rel="noopener">Smith College</a> &emsp;&emsp;
+                <a href="https://www.smith.edu/statistics" target="_blank" rel="noopener">Program on Statistical &amp; Data Sciences</a>
+            </p>
+
+            <p>
+                <a href="" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Benjamin Capistrant</a> &emsp;&emsp;
+                <a href="mailto:bcapistrant@smith.edu"><i class="fas fa-envelope"></i>
+                    bcapistrant@smith.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Monday &amp; Wednesday &emsp;&emsp;
+                <i class="far fa-clock"></i> 1:20-2:35 or 2:45-4:00 <br>
+                <i class="fas fa-university"></i> M: S-R 301, W: S-R 220
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="" target="_blank" rel="noopener">Ben Capistrant</a></p>
+        
+            <p>A tremendous thanks to <a href="https://www.andrewheiss.com/" target="_blank" rel="noopener">Andrew Heiss</a> whose course sites served as the basis for the format and structure of this site. They employ the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>.  </p>
+            
+            <p><a href="https://github.com/bencapistrant/sds291_site" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.b03c341a9a02bb3d0133df72033e26a2.js"></script>
+
+    
+
+
+
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

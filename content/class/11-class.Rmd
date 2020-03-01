@@ -1,0 +1,23 @@
+---
+title: "Outliers, Leverage & Influence"
+linktitle: "11 Outliers, Leverage & Influence"
+date: "2020-03-02"
+class_date: "2020-03-02"
+menu:
+  class:
+    parent: Class sessions
+    weight: 11
+type: docs
+weight: 11
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activity
+
+- [Slides](http://sds291.netlify.com/11/11_Lecture_Slides.html) ( [raw `.Rmd` file](http://sds291.netlify.com/11/11_Lecture_Slides.rmd) )
+
+- [Google Doc for Note Taking](https://docs.google.com/document/d/177QFw45yhkvJvaeU1fYGu5QiLLbY2pRxT2_Ipa2qmQY/edit?usp=sharing) {this is view only - make a copy or dowload as a pdf and annotate as you wish}

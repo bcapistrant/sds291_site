@@ -21,7 +21,7 @@ main:
     url: /resources/
     weight: 7
   - name: '<i class="fab fa-r-project"></i>'
-    url: https://rstudio.cloud/
+    url: https://rstudio.smith.edu/
     weight: 8
   - name: '<i class="fab fa-slack"></i>'
     url: "http://sds291-spring2020.slack.com"
@@ -44,14 +44,18 @@ group:
     weight: 2
   - name: Topic Selection
     weight: 3
-  - name: Data Appendix
+  - name: IPUMS Data
     weight: 4
-  - name: Draft Results
+  - name: Data Extract and Analysis Plan
     weight: 5
+  - name: Data Appendix
+    weight: 6
+  - name: Draft Results
+    weight: 7
   - name: Poster
-    weight: 6
+    weight: 8
   - name: Final Report
-    weight: 6
+    weight: 9
 resources:
   - name: R and RStudio
     weight: 1

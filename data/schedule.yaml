@@ -78,15 +78,17 @@ lessons:
     group: "02-group-finalproposal"
     class: "01-groupworkshop"
     
-  - title: '<i class="fas fa-university"></i> **MLR: Leverage**'
+  - title: '<i class="fas fa-university"></i> **MLR: Outliers, Leverage & Influence**'
     date: "March 2"
     reading: "11-reading"
     assignment: "04-problem-set"
     quiz: "04-quiz"
+    class: "11-class"
     
   - title: '<i class="fas fa-university"></i> **MLR: Bootstrap for Inference**'
     date: "March 4"
     reading: "12-reading"
+    #class: "12-class"
     
   - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 9"

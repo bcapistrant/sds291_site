@@ -5,7 +5,7 @@
     <link>/assignment/</link>
       <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>Assignment details</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
       <url>/img/social-image.png</url>
       <title>Assignment details</title>
@@ -284,6 +284,39 @@
 &lt;p&gt;There is no template for this assignment. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
 &lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
 &lt;p&gt;Use the Homework 4 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>5. Problem set 5</title>
+      <link>/assignment/05-problem-set/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/05-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recommended&#34;&gt;Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;p&gt;Questions 4.10, 4.22 (2nd Edition) or 4.9, 4.21 (1st Edition)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recommended&lt;/h1&gt;
+&lt;p&gt;4.20 (2nd Ed), 4.19 (1st Edition)&lt;/p&gt;
+&lt;p&gt;Recommended for additional practice, won’t count for or against your grade. If you do this question, please include it at the end of the required questions&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;There is no template for this assignment. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;p&gt;Use the Homework 5 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

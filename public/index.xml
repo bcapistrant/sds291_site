@@ -13,6 +13,44 @@
     </image>
     
     <item>
+      <title>How Do I Get the IPUMS Data</title>
+      <link>/group/04-group-ipums-gettingdata/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/group/04-group-ipums-gettingdata/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-data-do-you-want&#34;&gt;What data do you want?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-do-you-get-the-data-from-ipums&#34;&gt;How do you get the data &lt;em&gt;from IPUMS&lt;/em&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-do-you-get-the-data-into-rstudio&#34;&gt;How do you get the data &lt;em&gt;into RStudio&lt;/em&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Getting data from IPUMS is very easy – that’s part of why we use it in this class for projects.&lt;/p&gt;
+&lt;div id=&#34;what-data-do-you-want&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;What data do you want?&lt;/h1&gt;
+&lt;p&gt;There are a variety of ways to have identified what you need, but the gist is that you can browse through how the variables are organized, use an A-Z index, or a search through the variable names and descriptions. Hopefully by this point in the group project process, the variable identification process is more or less complete.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-do-you-get-the-data-from-ipums&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How do you get the data &lt;em&gt;from IPUMS&lt;/em&gt;?&lt;/h1&gt;
+&lt;p&gt;A good analogy of the IPUMS website interface is online shopping: you’re working to identify the variables you want, you put them in your cart, select which years/samples you want, and then submit the extract (i.e., “checking out” or “buying” what’s in your cart).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-do-you-get-the-data-into-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How do you get the data &lt;em&gt;into RStudio&lt;/em&gt;?&lt;/h1&gt;
+&lt;p&gt;Once your data extract has been processed, you need to download two files - a data file and a codebook - and then use the &lt;code&gt;ipumsr&lt;/code&gt; package to bring those data into R/RStudio.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;ipumsr&lt;/code&gt; package has &lt;a href=&#34;https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums.html&#34;&gt;helpful vignettes&lt;/a&gt; that introduces this process and has helpful screen shots of what you need.&lt;/p&gt;
+&lt;p&gt;Here’s a video I made walking through these steps.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/z9JSYh4jBCQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Take Home Exam 1</title>
       <link>/assignment/01-take-home-exam/</link>
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
@@ -147,9 +185,9 @@
     
     <item>
       <title>What can I do with IPUMS Data?</title>
-      <link>/group/02-group-ipums/</link>
+      <link>/group/04-group-ipums-whatisipums/</link>
       <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/group/02-group-ipums/</guid>
+      <guid>/group/04-group-ipums-whatisipums/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1728,6 +1766,39 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
     </item>
     
     <item>
+      <title>5. Problem set 5</title>
+      <link>/assignment/05-problem-set/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/05-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recommended&#34;&gt;Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;p&gt;Questions 4.10, 4.22 (2nd Edition) or 4.9, 4.21 (1st Edition)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recommended&lt;/h1&gt;
+&lt;p&gt;4.20 (2nd Ed), 4.19 (1st Edition)&lt;/p&gt;
+&lt;p&gt;Recommended for additional practice, won’t count for or against your grade. If you do this question, please include it at the end of the required questions&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;There is no template for this assignment. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;p&gt;Use the Homework 5 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Model Inference &amp; Decomposing Regression Error</title>
       <link>/class/05-class/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
@@ -1867,6 +1938,29 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/10/10_Lab&#34;&gt;Answers Set&lt;/a&gt;Answers.pdf) ( &lt;a href=&#34;http://sds291.netlify.com/10/10_Lab_Answers.rmd&#34;&gt;raw &lt;code&gt;.Rmd&lt;/code&gt; file&lt;/a&gt; )&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Outliers, Leverage &amp; Influence</title>
+      <link>/class/11-class/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/class/11-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/11/11_Lecture_Slides.html&#34;&gt;Slides&lt;/a&gt; ( &lt;a href=&#34;http://sds291.netlify.com/11/11_Lecture_Slides.rmd&#34;&gt;raw &lt;code&gt;.Rmd&lt;/code&gt; file&lt;/a&gt; )&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/document/d/177QFw45yhkvJvaeU1fYGu5QiLLbY2pRxT2_Ipa2qmQY/edit?usp=sharing&#34;&gt;Google Doc for Note Taking&lt;/a&gt; {this is view only - make a copy or dowload as a pdf and annotate as you wish}&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -3336,7 +3430,7 @@ Figure 1: A fancy pie chart.
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 2&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Leverage&lt;/strong&gt;&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;MLR: Outliers, Leverage &amp;amp; Influence&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
                     href=&#34;/reading/11-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
@@ -3350,10 +3444,8 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/class/11-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;March 4&lt;/td&gt;

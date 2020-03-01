@@ -1,0 +1,312 @@
+---
+title: "Identifying Unusual Points in Regression"
+author: "SDS 291"
+date: "March 2, 2020"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(Stat2Data)
+require(tidyverse)
+require(magrittr)
+```
+
+## Outliers, Leverage, and Influence
+
+**Outliers:** Points that do not fit the regression line well, far away vertically from other points
+
+  - These affect the error 
+  - We deal with them in the residual
+      - Standardized residuals: standardize the residuals by subtracting the mean residual
+      - Studentized residuals: take out the point in question and re-estimate the residuals
+  
+**Leverage:** how much a point draws the slope of the regression toward that point
+
+  - We calculate the leverage statistic $h_i$ to quantify how much leverage these points have on the regression line
+
+**Influence:** Combines concepts of both leverage and outliers
+
+- Broadly, how much impact a particular case has on the estimated regression equation
+- Depends on how close the trend lies to the trend of the rest of the data (i.e., residuals) *and* its leverage.
+- Cook's Distance quantifies how much a given point influences the regression fit
+
+
+## Identifying Unusual Points in Regression
+
+Statistic | Moderately Unusual | Very Unusual
+---|---|---
+Standardized Residual | beyond $\pm$ 2 | beyond $\pm$ 3
+Studentized Residual | beyond $\pm$ 2 | beyond $\pm$ 3
+Levereage, $h_i$ | $>(2(k+1))/n$ | $>(3(k+1))/n$ 
+Cook's D | >0.5 | >1.0
+
+## Outliers
+
+We're interested in the whether the average distance to win a gold medal increases over time. In other words, are the athelete's getting better over time?
+
+```{r}
+data(LongJumpOlympics) #dataset names that are bolded in your book are in the Stat2Data package!
+qplot(y=Gold, x=Year, data=LongJumpOlympics)+geom_smooth(method="lm", se=FALSE)
+```
+
+```{r}
+LongJump<-lm(Gold~Year, data=LongJumpOlympics)
+summary(LongJump)
+plot(LongJump, which=1)
+```
+
+## What are residuals?
+
+- Raw residuals: $y-\hat{y}$
+
+Is a residual of 2.6 big or small?
+
+## What are standardized residuals?
+
+### What's the standard normal distribution?
+
+
+- If X has mean $\mu$ and std. dev. $\sigma$, then $\frac{X-\mu}{\sigma}$ has mean = 0 and SD = 1 (i.e., $\sim N(0,1)$)
+
+
+### Standardized residuals
+
+- Standardized residuals: $\frac{y-\hat{y}}{\hat{\sigma_\epsilon}}$
+
+- Values $\pm$ 2 (moderately unusual) or $\pm$ 3 (very unusual)
+
+
+Let's look at the standardized residual:
+```{r}
+LJResids<- LongJumpOlympics %>%
+  mutate(R_raw=LongJump$residuals, R_stnd=rstandard(LongJump), R_fit=LongJump$fitted)
+qplot(x=R_fit, y=R_stnd, data=LJResids) + 
+  geom_hline(yintercept=c(-3, 3), color="red", linetype=2) + 
+  geom_hline(yintercept=c(-2, 2), color="black", linetype=2) +
+  geom_hline(yintercept=0, color="grey", linetype=3) +
+  scale_y_continuous(name="Standardized Residuals", breaks=seq(-3.5,3.5,0.5))
+```
+
+
+
+## Leverage
+
+### 2000 Election
+
+In the 2000 Presidential Election, Palm Beach County had an uncommon ballot type that became the subject of much speculation after the outcome of the election wherein President George W Bush won. Critics of the ballot type claimed voters accidentally voted for Buchanan when they intended to vote for another candidate on the ballot. To assess this claim empirically, we can see exactly how unusual Palm Beach County was relative to other counties its state (Florida).
+
+
+## Looking Visually at the Regression Lines with and without Questionnable Counties
+
+```{r}
+data(PalmBeach)
+PB<-lm(Buchanan~Bush, data=PalmBeach)
+beta0_PB <- PB$coeff[1]
+slope_PB <- PB$coeff[2]
+
+PalmBeach_1 <- PalmBeach %>%
+  filter(County!="PALM BEACH")
+
+PB_1<-lm(Buchanan~Bush, data=PalmBeach_1)
+beta0_noPB <- PB_1$coeff[1]
+slope_noPB <- PB_1$coeff[2]
+
+
+PalmBeach_2 <- PalmBeach %>%
+  filter(County!="DADE")
+
+PB_2<-lm(Buchanan~Bush, data=PalmBeach_2)
+beta0_noDADE <- PB_2$coeff[1]
+slope_noDADE <- PB_2$coeff[2]
+
+OnlyPB <- PalmBeach %>%
+  filter(County=="PALM BEACH")
+OnlyDADE <- PalmBeach %>%
+  filter(County=="DADE")
+
+ggplot(PalmBeach, aes(x = Bush, y = Buchanan)) + geom_point() + 
+  geom_point(data=OnlyPB, aes(x=Bush, y=Buchanan), colour="red", size=2) +
+  geom_point(data=OnlyDADE, aes(x=Bush, y=Buchanan), colour="blue", size=2) +
+  labs( x= 'Bush', y='Buchanan') +
+  geom_abline(intercept = beta0_PB , slope = slope_PB)  
+  # + geom_abline(intercept = beta0_noPB , slope = slope_noPB, colour = "red") +
+  #geom_abline(intercept = beta0_noDADE , slope = slope_noDADE, colour = "blue") 
+```
+
+## What if we remove Palm Beach County?
+
+```{r}
+ggplot(PalmBeach, aes(x = Bush, y = Buchanan)) + geom_point() + 
+  ggtitle("With (Black) and Without Palm Beach County (Red)") +
+  geom_point(data=OnlyPB, aes(x=Bush, y=Buchanan), colour="red", fill="white", size=2, shape=21) +
+  # geom_point(data=OnlyDADE, aes(x=Bush, y=Buchanan), colour="blue", fill="white", size=2) +
+  labs( x= 'Bush', y='Buchanan') +
+  geom_abline(intercept = beta0_PB , slope = slope_PB) + 
+  geom_abline(intercept = beta0_noPB , slope = slope_noPB, colour = "red") 
+# + geom_abline(intercept = beta0_noDADE , slope = slope_noDADE, colour = "blue") 
+```
+
+## What if we remove Dade County?
+```{r}
+ggplot(PalmBeach, aes(x = Bush, y = Buchanan)) + geom_point() + 
+  ggtitle("With (Black) and Without Palm Beach County (Red) and Dade County (Blue)") +
+  #geom_point(data=OnlyPB, aes(x=Bush, y=Buchanan), colour="red", fill="white", size=2, shape=21) +
+  geom_point(data=OnlyDADE, aes(x=Bush, y=Buchanan), colour="blue", fill="white", size=2, shape=21) +
+  labs( x= 'Bush', y='Buchanan') +
+  geom_abline(intercept = beta0_PB , slope = slope_PB) + 
+  #geom_abline(intercept = beta0_noPB , slope = slope_noPB, colour = "red") +
+  geom_abline(intercept = beta0_noDADE , slope = slope_noDADE, colour = "blue") 
+
+```
+
+## What if we remove both?
+
+```{r}
+PalmBeach_3 <- PalmBeach %>%
+  filter(County!="PALM BEACH" & County!="DADE")
+PB_3<-lm(Buchanan~Bush, data=PalmBeach_3)
+beta0_neither <- PB_3$coeff[1]
+slope_neither <- PB_3$coeff[2]
+
+ggplot(PalmBeach, aes(x = Bush, y = Buchanan)) + geom_point() + 
+  ggtitle("With (Black) and Without either Palm Beach County or Dade County (Dashed)") +
+  geom_point(data=OnlyPB, aes(x=Bush, y=Buchanan), colour="grey", fill="white", size=2, shape=21) +
+  geom_point(data=OnlyDADE, aes(x=Bush, y=Buchanan), colour="grey", fill="white", size=2, shape=21) +
+  labs( x= 'Bush', y='Buchanan') +
+  geom_abline(intercept = beta0_PB , slope = slope_PB) + 
+  #geom_abline(intercept = beta0_noPB , slope = slope_noPB, colour = "red") +
+  geom_abline(intercept = beta0_neither , slope = slope_neither, linetype="dashed") 
+```
+
+
+## Leverage
+
+- Points far from the mean value of the predictor ($\bar{x}$)
+    - For SLR, quantified leverage could just be distance from mean
+        - But that's not very generalizable to MLR
+
+- In SLR:
+    - For a given observation $i$, leverage in SLR is $h_i = \frac{1}{n} + \frac{(x_i - \bar{x})^2}{\sum(x_i - \bar{x})^2}$
+    - The sum of all leverage ($\sum h_i$) is 2
+    - "Typical" leverage is 2/n, moderately unusual is $h_i>4/n$, and very unusual is $h_i>6/n$
+
+- In MLR: 
+    - Leverage points have unusual values for any individual or combination of predictors
+    - No simple equation, but can be calculated
+    - They can influence the regression fit
+    - The sum of all leverage is $\sum h_i = k+1$
+    - "Typical" leverage is $(k+1)/n$, moderately unusual is $> 2(k+1)/n$, and very unusual is $>3(k+1)/n$
+    
+## Leverage - Butterfly Ballots Example
+```{r, echo=TRUE}
+data("PalmBeach") #bringing in the data
+PB_lm<-lm(Buchanan~Bush, data=PalmBeach) #fitting the regression model
+PB_diag<-ls.diag(PB_lm) #using the least squares diagnostic (ls.diag) function to calculate the leverage and standardized residuals
+h_i<-PB_diag$hat
+county_lev<-cbind(PalmBeach,h_i)
+```
+
+We also want to know the average value of our `x` variable: $\overline{Bush} =$ `r county_lev %>% summarise(mean_Bush=mean(Bush))`
+
+which we depict with a yellow vertical line:
+
+```{r}
+ggplot(PalmBeach, aes(x = Bush, y = Buchanan)) + geom_point() + 
+  ggtitle("Palm Beach County (Red) or Dade County (Blue)") +
+  geom_point(data=OnlyPB, aes(x=Bush, y=Buchanan), colour="red", size=2) +
+  geom_point(data=OnlyDADE, aes(x=Bush, y=Buchanan), colour="blue", size=2) +
+  labs( x= 'Bush', y='Buchanan') +
+  geom_abline(intercept = beta0_PB , slope = slope_PB) +
+  geom_vline(xintercept=43355.76, color="yellow")
+```
+
+To list the counties with moderate or very unusual values of `x`, or number of Bush votes:
+```{r, echo=TRUE}
+k<-1 #SLR - 1 slope term
+n<-67 #67 counties
+county_lev %>%
+  mutate(m_unusual=ifelse(h_i>(2*(k+1)/n),"y","n"),
+         v_unusual=ifelse(h_i>(3*(k+1)/n),"y","n"),
+         typ_lev=(k+1)/n,
+         pct_typ_lev=h_i/typ_lev) %>%
+  filter(m_unusual=="y")
+```
+
+We see that there are two counties with only moderately unusual values of x ($h_i>\frac{4}{67}$), or number of Bush votes - Palm Beach and Duval. There are four counties with very unusual values of x ($h_i>\frac{6}{67}$), or number of Bush votes: Broward, Dade, Hillsborough, and Pinellas. Dade County had almost 10 times (9.96) more than the typical leverage values ($\frac{2}{67}$).
+
+To highlight the counties with potential leverage visually:
+```{r}
+require(ggplot2)
+ggplot(county_lev, aes(x= Bush, y= Buchanan,label=County)) +
+geom_point() +
+  geom_smooth(method='lm',formula=y~x, se=FALSE) +
+geom_text(data=subset(county_lev, Bush>150000),color="blue", vjust = "inward", hjust = "inward", size=2)+
+geom_text(data=subset(county_lev, Bush>175000),color="red", vjust = "inward", hjust = "inward", size=2)+
+  geom_vline(xintercept=43355.76, color="yellow") +
+  geom_vline(xintercept=150000, color="blue") +
+    geom_vline(xintercept=175000, color="red")
+```
+
+## Standardized and Studentized Residuals
+- For outliers, we can check their role in a model with standardized or studentized residuals
+    - Both use the leverage point
+- Standardized residuals = $stndres_i = \frac{y_i-\hat{y}}{\hat{\sigma_\epsilon}\sqrt{1-h_i}}$
+    - Remember, standardized generally means subtract the mean and divide by the standard deviation/error
+    - $\hat{\sigma_\epsilon}$ is the regression standard deviation
+- Studentized residual = $studres_i = \frac{y_i-\hat{y}}{\hat{\sigma_{(i)}}\sqrt{1-h_i}}$
+    - $\hat{\sigma_{(i)}}$ = the standard deviation of the regression with observation $i$ excluded
+- Moderate outliers have residuals beyond $\pm 2$, serious outliers have residuals beyond $\pm 3$
+
+```{r, echo = TRUE}
+resid<-PB_lm$resid
+stnd_res<-PB_diag$std.res
+stud_res<-PB_diag$stud.res
+fitted<-PB_lm$fitted
+county_resid<-cbind(PalmBeach,resid, stnd_res, stud_res, fitted)
+county_resid%>%
+  mutate(m_out_stnd=ifelse(abs(stnd_res)>2,"y","n"),
+         s_out_stnd=ifelse(abs(stnd_res)>3,"y","n"),
+         m_out_stud=ifelse(abs(stud_res)>2,"y","n"),
+         s_out_stud=ifelse(abs(stud_res)>3,"y","n")) %>%
+  filter(m_out_stnd=="y" | m_out_stud=="y")
+```
+
+
+And Visually:
+```{r}
+qplot(x=fitted, y=stnd_res, data=county_resid) + 
+  geom_hline(yintercept=c(-3, 3), color="red", linetype=2) + 
+  geom_hline(yintercept=c(-2, 2), color="black", linetype=2) +
+  geom_hline(yintercept=0, color="grey", linetype=3) +
+  scale_y_continuous(name="Standardized Residuals", breaks=seq(-4,8,1))
+```
+## Put this together - Cook's Distance
+
+- Cook's Distance quantifies how much a given point influences the regression fit
+    - It combines the role an outlier or an influence point could have
+
+- Depends on:
+    - how close the observation fits in the trend of the data (standardized / studentized residual)
+    - how much leverage that observation has ($h_i$)
+
+$D_i = {\frac{(stdres_i)^2}{k+1}}{(\frac{h_i}{1-h_i})}$
+
+- Moderately influential cases have $D_i>0.5$ and very influential cases have $D_i>1$
+
+- Remember, leverage for SLR is >4/n (moderately unusual) and >6/n (very unusual). Here, n=67
+    - For MLR: >2(k+1)/n or >3(k+1)/n
+```{r, echo = TRUE}
+cooks<-PB_diag$cooks
+county_cook<-cbind(PalmBeach,cooks)
+county_cook%>%
+  mutate(mod_inf=ifelse(cooks>0.5,"y","n"),
+         ver_inf=ifelse(cooks>1,"y","n")) %>%
+  filter(mod_inf=="y")
+plot(PB_lm, which=5)
+```
+
+
+## Caveats & Caution
+
+The goal here is to identify points, not necessarily to delete them.

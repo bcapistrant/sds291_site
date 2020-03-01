@@ -1,0 +1,37 @@
+---
+title: "How Do I Get the IPUMS Data"
+date: "2020-03-01"
+menu:
+  group:
+    parent: IPUMS Data
+    weight: 2
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+Getting data from IPUMS is very easy -- that's part of why we use it in this class for projects.
+
+# What data do you want?
+
+There are a variety of ways to have identified what you need, but the gist is that you can browse through how the variables are organized, use an A-Z index, or a search through the variable names and descriptions. Hopefully by this point in the group project process, the variable identification process is more or less complete.
+
+# How do you get the data _from IPUMS_?
+
+A good analogy of the IPUMS website interface is online shopping: you're working to identify the variables you want, you put them in your cart, select which years/samples you want, and then submit the extract (i.e., "checking out" or "buying" what's in your cart).
+
+# How do you get the data _into RStudio_?
+
+Once your data extract has been processed, you need to download two files - a data file and a codebook - and then use the `ipumsr` package to bring those data into R/RStudio.
+
+The `ipumsr` package has [helpful vignettes](https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums.html) that introduces this process and has helpful screen shots of what you need.
+
+Here's a video I made walking through these steps.
+
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'z9JSYh4jBCQ')
+```

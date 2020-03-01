@@ -1,0 +1,41 @@
+---
+title: "How Do I Get the IPUMS Data"
+date: "2020-03-01"
+menu:
+  group:
+    parent: IPUMS Data
+    weight: 2
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#what-data-do-you-want">What data do you want?</a></li>
+<li><a href="#how-do-you-get-the-data-from-ipums">How do you get the data <em>from IPUMS</em>?</a></li>
+<li><a href="#how-do-you-get-the-data-into-rstudio">How do you get the data <em>into RStudio</em>?</a></li>
+</ul>
+</div>
+
+<p>Getting data from IPUMS is very easy – that’s part of why we use it in this class for projects.</p>
+<div id="what-data-do-you-want" class="section level1">
+<h1>What data do you want?</h1>
+<p>There are a variety of ways to have identified what you need, but the gist is that you can browse through how the variables are organized, use an A-Z index, or a search through the variable names and descriptions. Hopefully by this point in the group project process, the variable identification process is more or less complete.</p>
+</div>
+<div id="how-do-you-get-the-data-from-ipums" class="section level1">
+<h1>How do you get the data <em>from IPUMS</em>?</h1>
+<p>A good analogy of the IPUMS website interface is online shopping: you’re working to identify the variables you want, you put them in your cart, select which years/samples you want, and then submit the extract (i.e., “checking out” or “buying” what’s in your cart).</p>
+</div>
+<div id="how-do-you-get-the-data-into-rstudio" class="section level1">
+<h1>How do you get the data <em>into RStudio</em>?</h1>
+<p>Once your data extract has been processed, you need to download two files - a data file and a codebook - and then use the <code>ipumsr</code> package to bring those data into R/RStudio.</p>
+<p>The <code>ipumsr</code> package has <a href="https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums.html">helpful vignettes</a> that introduces this process and has helpful screen shots of what you need.</p>
+<p>Here’s a video I made walking through these steps.</p>
+{{% youtube "z9JSYh4jBCQ" %}}
+</div>

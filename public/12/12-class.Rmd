@@ -1,0 +1,24 @@
+---
+title: "Bootstrap for Inference"
+linktitle: "12 Bootstrap for Inference"
+date: "2020-03-04"
+class_date: "2020-03-04"
+menu:
+  class:
+    parent: Class sessions
+    weight: 12
+type: docs
+weight: 12
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activity
+
+### Bootstrap Intuition
+
+### Bootstrap for Regression
+- [Slides](http://sds291.netlify.com/12/12_Lecture_Slides.html) ( [raw `.Rmd` file](http://sds291.netlify.com/12/12_Lecture_Slides.rmd) )

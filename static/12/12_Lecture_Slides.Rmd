@@ -1,0 +1,171 @@
+---
+title: "Bootstrap & Bootstraped SEs/CIs"
+author: "SDS 291"
+date: "March 4, 2020"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE, warning=FALSE, error=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(tidyverse)
+require(magrittr)
+require(mosaic)
+```
+
+## Assumptions for Regression
+
+Linear regression assumes:
+
+- Linearity
+- Constant Variance
+- Normality of Residuals
+
+What do you do if those assumptions aren't met?
+
+- Transformation the X or Y variables 
+- **Use a different testing approach that has fewer assumptions**
+
+Book talks about two different approaches, each has its own specific pupose:
+
+- Randomization test: To test the relationship between two factors (4.5)
+- Bootstrap: To estimate the standard deviation/error for a statistic and/or bounds/CI around a statistic
+
+## The Bootstrap
+
+We are sampling *with replacement* to get a *sampling distribution*.
+
+  - Bootstrap focuses on the sampling distribution, which means it can help calculate standard errors and 95% CIs.
+
+The key idea of *how* to do it:
+
+- We create new samples from the original sample by sampling with replacement
+    - Since the sample is collected randomly, we can assume the population looks like many different iterations of this sample
+- We calculate the desired statistic
+- We repeat many times to get the bootstrap distribution
+    - Then use this distribution to estimated SD/SE, etc.
+
+The key idea of *why* we'd do it:
+
+- We want to characterize the sampling distribution underlying a given statistic so we can calcuate CIs
+- Works when the assumption of the errors being normally distributed is violated
+    - Examples: slope of the regression line 
+
+## Bootstrap Example: Porsche Data
+In this example we are examining the prices of Porsches. We want to estimate the `Price` as a function of the `Mileage`. Our sample of 30 cars looks like this:
+
+```{r, message=FALSE, echo=TRUE}
+require(Stat2Data)
+require(mosaic)
+data("PorschePrice")
+qplot(y=Price, x=Mileage, data=PorschePrice)+geom_smooth(method="lm", se=FALSE)
+```
+
+## Bootstrap Sample
+
+To create a bootstrap sample, we select rows from the data frame uniformly at random, but with replacement. Here we've created one bootstrap sample and estimated the slope of the regression line as the bootstrap statistic.
+
+```{r, echo=TRUE}
+qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", se=FALSE)
+#xyplot(Price ~ Mileage, data=resample(PorschePrice), pch=19, cex=2, alpha=0.5, type=c("p","r"), lwd=5)
+```
+
+
+## Bootstrap distributions and confidence intervals
+
+One advantage of the bootstrap is that it allows us to construct a sampling distribution for the slope coefficient that is not depedent upon the conditions for linear regression being met. 
+
+The original confidence intervals for our SLR model depend upon the conditions (normality, etc.) being true. 
+
+Remember the Life Expectancy example we had for simple linear regression?
+
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+data<-read_csv("http://www.science.smith.edu/~bcapistrant/LEActivity.csv")
+LAC<-data %>%
+  filter(region=="Latin America & Caribbean")
+fm<-lm(life_exp~year, data=LAC)
+summary(fm)
+confint(fm)
+plot(fm, which=2)
+```
+
+That violates the normality assumption and thus limits our ability to use inferential statistics (t-tests, p-values, 95% CIs) -- we know that the calculated CIs and tests are wrong since the assumptions have been violated.
+
+Now let's create a bootstrap distribution for the regression coefficients.
+
+```{r, echo=TRUE}
+bootstrap <- do(10000) * coef(lm(life_exp~year, data=resample(LAC)))
+p2 <- densityplot(~year, data=bootstrap)
+ladd(panel.abline(v=coef(fm)["year"], col="red", lwd=3), plot=p2)
+```
+
+The bootstrap distribution will always be centered around the value from our real data (in this case 0.306), but shows us some other likely values for the coefficient (essentially, sampling error). One way to quantify this variability is to create a confidence interval.
+
+
+## Creating CIs 
+
+Remember (from the reading I'm sure you all did before class!), there are three methods for constructing confidence intervals from the bootstrap. The most robust method is using quantiles of the bootstrap distribution (Method #2), but we'll talk about all three. 
+
+### Method #1 - SD of the Bootstrap Distribution
+
+The first method assumes that the bootstrap distribution is **normal**. 
+
+  - Huh?? If it were normal, we would just use a normal distribution to approximate the sampling distribution. (If you're scratching your head, it's not you. Yes, this assumption is weird.)
+
+In this case we could use the standard deviation of the bootstrap distribution to construct a confidence interval for the slope coefficient. 
+
+```{r, echo=TRUE}
+zs <- qnorm(c(0.025, 0.975))
+coef(fm)["year"] + zs * sd(~year, data=bootstrap)
+```
+
+### Method #2 - Quantiles from the Bootstrap Distribution
+
+The second method does not require that the bootstrap distribution be normal.
+
+This approach works best when the distribution is roughly symmetric. 
+
+In this case we simply use the *percentiles of the bootstrap distribution* to build confidence intervals. **This method makes the most sense in the most cases.**
+
+```{r, echo=TRUE}
+qdata(~year, p=c(0.025, 0.975), data=bootstrap)
+```
+
+### Method #3 - Reverse the quantiles from the bootstrap distribution
+
+If the bootstrap distribution is skewed, then we need to modify the second method to work in reverse. This is because our estimate may already differ from the true population parameter. 
+
+The bootstrap distribution for the slope coefficient in this case, however, is not skewed. 
+
+```{r, echo=TRUE}
+qs <- qdata(~year, p = c(0.025, 0.975), data=bootstrap)$quantile
+coef(fm)["year"] - (qs - coef(fm)["year"])
+```
+
+
+## Porsche Price Example
+
+```{r}
+data("PorschePrice")
+fm<-lm(Price~Mileage, data=PorschePrice)
+summary(fm)
+confint(fm)
+plot(fm, which=2)
+
+bootstrap <- do(10000) * coef(lm(Price~Mileage, data=resample(PorschePrice)))
+p2 <- densityplot(~Mileage, data=bootstrap)
+ladd(panel.abline(v=coef(fm)["Mileage"], col="red", lwd=3), plot=p2)
+```
+
+```{r, echo=TRUE}
+zs <- qnorm(c(0.025, 0.975))
+coef(fm)["Mileage"] + zs * sd(~Mileage, data=bootstrap)
+```
+
+```{r, echo=TRUE}
+qdata(~Mileage, p=c(0.025, 0.975), data=bootstrap)
+```
+
+```{r, echo=TRUE}
+qs <- qdata(~Mileage, p = c(0.025, 0.975), data=bootstrap)$quantile
+coef(fm)["Mileage"] - (qs - coef(fm)["Mileage"])
+```
