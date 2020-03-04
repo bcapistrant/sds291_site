@@ -18,7 +18,9 @@ editor_options:
 
 # Required
 
-Questions 4.10, 4.22 (2nd Edition) or 4.9, 4.21 (1st Edition)
+Questions 4.10 (except b), 4.22 (2nd Edition) or 4.9 (except b), 4.21 (1st Edition)
+
+For code, see slides from Monday's class for 4.10 (especially the `ls.diag` function) and Wednesday's class for 4.22; also see the "lab" that we didn't get to in class for sample code and suggestions. Be sure to notice what packages need to be included from the RMD files.
 
 # Recommended
 

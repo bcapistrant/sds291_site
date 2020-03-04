@@ -1782,7 +1782,8 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 
 &lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Required&lt;/h1&gt;
-&lt;p&gt;Questions 4.10, 4.22 (2nd Edition) or 4.9, 4.21 (1st Edition)&lt;/p&gt;
+&lt;p&gt;Questions 4.10 (except b), 4.22 (2nd Edition) or 4.9 (except b), 4.21 (1st Edition)&lt;/p&gt;
+&lt;p&gt;For code, see slides from Monday’s class for 4.10 (especially the &lt;code&gt;ls.diag&lt;/code&gt; function) and Wednesday’s class for 4.22; also see the “lab” that we didn’t get to in class for sample code and suggestions. Be sure to notice what packages need to be included from the RMD files.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;recommended&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Recommended&lt;/h1&gt;
