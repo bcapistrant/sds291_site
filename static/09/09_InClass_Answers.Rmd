@@ -253,7 +253,10 @@ qplot(x = Distance, y = Price2014, color = BedGroup, data = RailsTrails) +
 
 # Back to Distance Group
 
-What if we thought that the Square Footage of a house would *vary* by whether it's closer or further from the rail trail.  A big house may not matter as much if it's really far from the rail trail, and a smaller house may be more valuable if it's closer to the rail trail than if it were further away.
+What if we thought that the relationship between Square Footage of a house and its price would *vary* by whether it's closer or further from the rail trail.  A big house may not matter as much if it's really far from the rail trail, and a smaller house may be more valuable if it's closer to the rail trail than if it were further away. 
+
+You can also think about bigger houses in terms of an addition to a house -- will adding another 500$ft^2$ increase the value of your price the same amount regardless of where the house is located, or do you think that adding 500$ft^2$ to a house close to the rail trail will matter more/less for the total house's price than if the house were further from the rail trail.  Imagine you were a realtor and were asked whether a homeowner should build an addition to their house -- how would you respond?
+
 ```{r}
 m4 <- lm(Price2014 ~ SquareFeet*DistGroup , data = RailsTrails)
 summary(m4)
