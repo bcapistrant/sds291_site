@@ -1978,6 +1978,7 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 &lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#bootstrap-intuition&#34;&gt;Bootstrap Intuition&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#bootstrap-for-regression&#34;&gt;Bootstrap for Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#practice-in-r&#34;&gt;Practice in &lt;code&gt;R&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -1991,6 +1992,12 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 &lt;h3&gt;Bootstrap for Regression&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/12/12_Lecture_Slides.html&#34;&gt;Slides&lt;/a&gt; ( &lt;a href=&#34;http://sds291.netlify.com/12/12_Lecture_Slides.rmd&#34;&gt;raw &lt;code&gt;.Rmd&lt;/code&gt; file&lt;/a&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;practice-in-r&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Practice in &lt;code&gt;R&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/12/12_InClassLab.html&#34;&gt;Lab&lt;/a&gt; ( &lt;a href=&#34;http://sds291.netlify.com/12/12_InClassLab.rmd&#34;&gt;raw &lt;code&gt;.Rmd&lt;/code&gt; file&lt;/a&gt; )&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
