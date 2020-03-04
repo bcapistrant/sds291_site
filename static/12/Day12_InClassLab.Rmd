@@ -16,7 +16,7 @@ Two things about the bootstrap for homeworks:
 
 # Set the Seed
 I'm going to set the seed at the beginning, in the code chunk below.
-```{r, error=FALSE, message=FALSE, warning=FALSE}
+```{r, error=FALSE, message=FALSE, warning=FALSE, eval=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 require(Stat2Data)
 require(mosaic)
@@ -34,7 +34,7 @@ The seed can be any number -- today's date, your birthday, your telephone number
 Fit the simple linear regression equation $GPA=\beta_0+\beta_1 SATM + \beta_2 HSGPA+ \beta_3 (SATM \times HSGPA) + \epsilon$ and construct a 95% CI for the estimate for $\beta_3$. [Hint: Remember that you can use `confint()` to calculate the 95% CI for all terms in the model (put the name of the model in the parentheses)].
 
 
-```{r}
+```{r, eval=FALSE}
 SATM_orig<-lm(GPA~SATM*HSGPA, data=FirstYearGPA)
 summary(SATM_orig)
 confint(SATM_orig)
@@ -45,7 +45,7 @@ You'll note that here the coefficient from the model SATM_orig is saved as `SATM
 ## Construct the Bootstrap Distribution for Regression Coefficients
 
 Construct the bootstrap distribution by estimating the coefficients from the regression model (i.e., the bootstrap statistic) in 5000 bootstrap samples. Make a histogram of the bootstrap distribution of the slope coefficient for SATM.
-```{r}
+```{r, eval=FALSE}
 SATM_bootstrap<- do(5000) * coef(lm(GPA~SATM*HSGPA, data=resample(FirstYearGPA)))
 glimpse(SATM_bootstrap)
 qplot(x=SATM.HSGPA, data=SATM_bootstrap)
@@ -60,7 +60,7 @@ Estimate the CI with each of the three approaches and compare them at the end.
 
 
 ### Method 1: Standard Deviation 
-```{r}
+```{r, eval=FALSE}
 zs <- qnorm(c(0.025, 0.975))
 coef(SATM_orig)["SATM:HSGPA"] + zs * sd(~SATM.HSGPA, data=SATM_bootstrap)
 ```
@@ -68,14 +68,14 @@ coef(SATM_orig)["SATM:HSGPA"] + zs * sd(~SATM.HSGPA, data=SATM_bootstrap)
 
 ### Method #2 - Quantiles from the Bootstrap Distribution
 
-```{r}
+```{r, eval=FALSE}
 qdata(~SATM.HSGPA, p=c(0.025, 0.975), data=SATM_bootstrap)
 ```
 
 
 ### Method #3 - Reverse the quantiles from the bootstrap distribution
 
-```{r}
+```{r, eval=FALSE}
 qs <- qdata(~SATM.HSGPA, p = c(0.025, 0.975), data=SATM_bootstrap)$quantile
 coef(SATM_orig)["SATM:HSGPA"] - (qs - coef(SATM_orig)["SATM:HSGPA"])
 ```
