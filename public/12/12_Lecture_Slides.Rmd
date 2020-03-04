@@ -64,11 +64,19 @@ qplot(y=Price, x=Mileage, data=PorschePrice)+geom_smooth(method="lm", se=FALSE)
 
 To create a bootstrap sample, we select rows from the data frame uniformly at random, but with replacement. Here we've created one bootstrap sample and estimated the slope of the regression line as the bootstrap statistic.
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, fig.height=3, fig.width=3}
 qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", se=FALSE)
-#xyplot(Price ~ Mileage, data=resample(PorschePrice), pch=19, cex=2, alpha=0.5, type=c("p","r"), lwd=5)
 ```
 
+```{r, echo=FALSE, fig.height=3, fig.width=3}
+qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", se=FALSE)
+```
+```{r, echo=FALSE, fig.height=3, fig.width=3}
+qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", se=FALSE)
+```
+```{r, echo=FALSE, fig.height=3, fig.width=3}
+qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", se=FALSE)
+```
 
 ## Bootstrap distributions and confidence intervals
 
@@ -76,16 +84,19 @@ One advantage of the bootstrap is that it allows us to construct a sampling dist
 
 The original confidence intervals for our SLR model depend upon the conditions (normality, etc.) being true. 
 
-Remember the Life Expectancy example we had for simple linear regression?
+Remember the birthweight example we had for simple linear regression?
 
 ```{r, warning=FALSE, error=FALSE, message=FALSE}
-data<-read_csv("http://www.science.smith.edu/~bcapistrant/LEActivity.csv")
-LAC<-data %>%
-  filter(region=="Latin America & Caribbean")
-fm<-lm(life_exp~year, data=LAC)
-summary(fm)
-confint(fm)
-plot(fm, which=2)
+data_bwt<-read.csv("http://sds291.netlify.com/exam/291birthweight.csv")
+
+m_mage<-lm(weight~mage, data=data_bwt)
+summary(m_mage)
+confint(m_mage)
+plot(m_mage, which=2)
+
+library(broom)
+m_mage_df<-augment(m_mage)
+qplot(x=.resid, data=m_mage_df)
 ```
 
 That violates the normality assumption and thus limits our ability to use inferential statistics (t-tests, p-values, 95% CIs) -- we know that the calculated CIs and tests are wrong since the assumptions have been violated.
@@ -93,9 +104,12 @@ That violates the normality assumption and thus limits our ability to use infere
 Now let's create a bootstrap distribution for the regression coefficients.
 
 ```{r, echo=TRUE}
-bootstrap <- do(10000) * coef(lm(life_exp~year, data=resample(LAC)))
-p2 <- densityplot(~year, data=bootstrap)
-ladd(panel.abline(v=coef(fm)["year"], col="red", lwd=3), plot=p2)
+bootstrap <- do(10000) * coef(lm(weight~mage, data=resample(data_bwt)))
+p2 <- ggplot(bootstrap, aes(x=mage)) + 
+  geom_density() +
+  geom_vline(aes(xintercept=coef(m_mage)["mage"]),
+            color="red", size=1)
+p2
 ```
 
 The bootstrap distribution will always be centered around the value from our real data (in this case 0.306), but shows us some other likely values for the coefficient (essentially, sampling error). One way to quantify this variability is to create a confidence interval.
@@ -114,8 +128,15 @@ The first method assumes that the bootstrap distribution is **normal**.
 In this case we could use the standard deviation of the bootstrap distribution to construct a confidence interval for the slope coefficient. 
 
 ```{r, echo=TRUE}
-zs <- qnorm(c(0.025, 0.975))
-coef(fm)["year"] + zs * sd(~year, data=bootstrap)
+zs <- qnorm(0.975)
+sd <- bootstrap %>% 
+  summarise(sd=sd(mage))
+
+uci<-coef(m_mage)["mage"] + (zs * sd) %>%
+    rename(uci=sd)
+lci<-coef(m_mage)["mage"] - (zs * sd)%>%
+    rename(lci=sd)
+cbind(lci,uci)
 ```
 
 ### Method #2 - Quantiles from the Bootstrap Distribution
@@ -127,7 +148,7 @@ This approach works best when the distribution is roughly symmetric.
 In this case we simply use the *percentiles of the bootstrap distribution* to build confidence intervals. **This method makes the most sense in the most cases.**
 
 ```{r, echo=TRUE}
-qdata(~year, p=c(0.025, 0.975), data=bootstrap)
+qdata(~mage, p=c(0.025, 0.975), data=bootstrap)
 ```
 
 ### Method #3 - Reverse the quantiles from the bootstrap distribution
@@ -137,8 +158,8 @@ If the bootstrap distribution is skewed, then we need to modify the second metho
 The bootstrap distribution for the slope coefficient in this case, however, is not skewed. 
 
 ```{r, echo=TRUE}
-qs <- qdata(~year, p = c(0.025, 0.975), data=bootstrap)$quantile
-coef(fm)["year"] - (qs - coef(fm)["year"])
+qs <- qdata(~mage, p = c(0.025, 0.975), data=bootstrap)$quantile
+coef(m_mage)["mage"] - (qs - coef(m_mage)["mage"])
 ```
 
 
@@ -151,21 +172,25 @@ summary(fm)
 confint(fm)
 plot(fm, which=2)
 
-bootstrap <- do(10000) * coef(lm(Price~Mileage, data=resample(PorschePrice)))
-p2 <- densityplot(~Mileage, data=bootstrap)
-ladd(panel.abline(v=coef(fm)["Mileage"], col="red", lwd=3), plot=p2)
+bootstrap_Porsche <- do(10000) * coef(lm(Price~Mileage, data=resample(PorschePrice)))
+
+p2_PP <- ggplot(bootstrap_Porsche, aes(x=Mileage)) + 
+  geom_density() +
+  geom_vline(aes(xintercept=coef(fm)["Mileage"]),
+            color="red", size=1)
+p2_PP
 ```
 
 ```{r, echo=TRUE}
 zs <- qnorm(c(0.025, 0.975))
-coef(fm)["Mileage"] + zs * sd(~Mileage, data=bootstrap)
+coef(fm)["Mileage"] + zs * sd(~Mileage, data=bootstrap_Porsche)
 ```
 
 ```{r, echo=TRUE}
-qdata(~Mileage, p=c(0.025, 0.975), data=bootstrap)
+qdata(~Mileage, p=c(0.025, 0.975), data=bootstrap_Porsche)
 ```
 
 ```{r, echo=TRUE}
-qs <- qdata(~Mileage, p = c(0.025, 0.975), data=bootstrap)$quantile
+qs <- qdata(~Mileage, p = c(0.025, 0.975), data=bootstrap_Porsche)$quantile
 coef(fm)["Mileage"] - (qs - coef(fm)["Mileage"])
 ```

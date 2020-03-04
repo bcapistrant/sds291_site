@@ -452,5 +452,36 @@
 </description>
     </item>
     
+    <item>
+      <title>Bootstrap for Inference</title>
+      <link>/class/12-class/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/class/12-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#bootstrap-intuition&#34;&gt;Bootstrap Intuition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bootstrap-for-regression&#34;&gt;Bootstrap for Regression&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;div id=&#34;bootstrap-intuition&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bootstrap Intuition&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bootstrap-for-regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bootstrap for Regression&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/12/12_Lecture_Slides.html&#34;&gt;Slides&lt;/a&gt; ( &lt;a href=&#34;http://sds291.netlify.com/12/12_Lecture_Slides.rmd&#34;&gt;raw &lt;code&gt;.Rmd&lt;/code&gt; file&lt;/a&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
