@@ -24,4 +24,4 @@ editor_options:
 - [Slides](http://sds291.netlify.com/12/12_Lecture_Slides.html) ( [raw `.Rmd` file](http://sds291.netlify.com/12/12_Lecture_Slides.rmd) )
 
 ### Practice in `R`
-- [Lab](http://sds291.netlify.com/12/12_InClassLab.html) ( [raw `.Rmd` file](http://sds291.netlify.com/12/12_InClassLab.rmd) )
+- [Lab](http://sds291.netlify.com/12/Day12_InClassLab.html) ( [raw `.Rmd` file](http://sds291.netlify.com/12/Day12_InClassLab.rmd) )
