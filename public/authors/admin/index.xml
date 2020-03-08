@@ -6,5 +6,11 @@
       <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Multiple Regression</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>/img/social-image.png</url>
+      <title>Multiple Regression</title>
+      <link>/authors/admin/</link>
+    </image>
+    
   </channel>
 </rss>

@@ -13,6 +13,44 @@
     </image>
     
     <item>
+      <title>IPUMS Extract &amp; Analysis Plan</title>
+      <link>/group/05-group-dataextractandanalysisplan/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/group/05-group-dataextractandanalysisplan/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#content-of-the-document&#34;&gt;Content of the Document&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-extract-what-variables-and-samples-you-plan-to-request-from-ipums&#34;&gt;Data Extract: What Variables and Samples you Plan to Request from IPUMS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#analysis-plan-what-do-you-plan-to-do-with-the-data-once-you-have-it-from-ipums&#34;&gt;Analysis Plan: What do you plan to do with the data once you have it from IPUMS?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Submit this as a pdf to moodle. The pdf doesn’t &lt;em&gt;need&lt;/em&gt; to be made R - you can make it in Google Docs or Word, just saved as a pdf.&lt;/p&gt;
+&lt;p&gt;You should essentially add this additional material to your final group proposal. You can either add this at the end or integreate it where appropriate (i.e., when talking about a specific variable).&lt;/p&gt;
+&lt;div id=&#34;content-of-the-document&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Content of the Document&lt;/h2&gt;
+&lt;p&gt;Include the following:&lt;/p&gt;
+&lt;div id=&#34;data-extract-what-variables-and-samples-you-plan-to-request-from-ipums&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Extract: What Variables and Samples you Plan to Request from IPUMS&lt;/h3&gt;
+&lt;p&gt;This should be a list of the exact variables - by their variable name in the IPUMS system - you plan to include in a data extract request and the “sample”, or which time period(s) you are including.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analysis-plan-what-do-you-plan-to-do-with-the-data-once-you-have-it-from-ipums&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Analysis Plan: What do you plan to do with the data once you have it from IPUMS?&lt;/h3&gt;
+&lt;p&gt;This information should include a very clear list of steps or of the process that you expect to undertake to do any necessary data management/wrangling to get the variables in the format you need.&lt;/p&gt;
+&lt;p&gt;It should specify the steps you plan to take – not to actually take them yet, just thinking through the plan – to investigate the distributions of the variables.&lt;/p&gt;
+&lt;p&gt;You should have written out the regression models – in equation notation – with all of the variables as they will be included, and (re-)stated which coefficients of the model reflect your the hypothesis.&lt;/p&gt;
+&lt;p&gt;This last point should make really clear whether you are including variables as a factor (see the suggested HW4 question) or multiple indicator variables, and in either case which level will be the reference group. You will need to spell out the hypothetical regression model with each and every beta estimate that you plan to include.&lt;/p&gt;
+&lt;p&gt;Again, this does not expect that you have done any of this work yet with your data or in R. It is simply an exercise to get you thinking about what exactly you will need to do next – this keeps you organized and in many cases is an additional opportunity to explicate your thinking about your topic since this is getting even a little closer to actually testing your hypotheses. And for those of you newer to &lt;code&gt;R&lt;/code&gt;, it will help articulate where you may want to get additional help for this kind of work (plan to come to the &lt;code&gt;dplyr&lt;/code&gt; workshop on Friday 3/27, 2-4pm!).&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;next&lt;/em&gt; assignment will be a data appendix, where you will illustrate that you have the data in hand and have brought it into R, what of the steps you list above that you have been able to complete and what you have left to do, what unanticipated issues have arisen, and what this exploratory data analysis (not yet having fit a model, just exploring the variables one at a time and with scatterplots and other visuals) is telling you about your main research question.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How Do I Get the IPUMS Data</title>
       <link>/group/04-group-ipums-gettingdata/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
@@ -763,7 +801,7 @@ This section is an explanation of what your model tells us about the research qu
       <link>/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>/courses/example/example1/</guid>
-      <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+      <description>&lt;p&gt;In this tutorial, I&#39;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -2378,7 +2416,7 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
       <guid>/2019/07/12/writing-technical-content-in-academic/</guid>
       <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;p&gt;On this page, you&#39;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
 &lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
 &lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
@@ -2597,7 +2635,7 @@ A Markdown aside is useful for displaying notices, hints, or definitions to your
       <guid>/publication/preprint/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including 
@@ -2648,7 +2686,7 @@ date: 2019-09-01
  as a guide to the available options.&lt;/p&gt;
 &lt;p&gt;To set a 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;
-, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
+, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&#39;s folder.&lt;/p&gt;
 &lt;p&gt;For other tips, such as using math, see the guide on 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;
 .&lt;/p&gt;
@@ -2779,7 +2817,7 @@ Three
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Let&#39;s make headers navy colored.&lt;/p&gt;
 &lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
 .reveal section h2,
@@ -2824,7 +2862,7 @@ Three
       <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt;
- of what you&amp;rsquo;ll get in less than 10 minutes, or 
+ of what you&#39;ll get in less than 10 minutes, or 
 &lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt;
  of personal, project, and business sites.&lt;/p&gt;
 &lt;ul&gt;
@@ -3013,7 +3051,7 @@ Three
 &lt;/div&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including 
@@ -3084,7 +3122,7 @@ Figure 1: A fancy pie chart.
 &lt;/div&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including 

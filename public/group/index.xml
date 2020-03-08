@@ -13,6 +13,44 @@
     </image>
     
     <item>
+      <title>IPUMS Extract &amp; Analysis Plan</title>
+      <link>/group/05-group-dataextractandanalysisplan/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/group/05-group-dataextractandanalysisplan/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#content-of-the-document&#34;&gt;Content of the Document&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-extract-what-variables-and-samples-you-plan-to-request-from-ipums&#34;&gt;Data Extract: What Variables and Samples you Plan to Request from IPUMS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#analysis-plan-what-do-you-plan-to-do-with-the-data-once-you-have-it-from-ipums&#34;&gt;Analysis Plan: What do you plan to do with the data once you have it from IPUMS?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Submit this as a pdf to moodle. The pdf doesn’t &lt;em&gt;need&lt;/em&gt; to be made R - you can make it in Google Docs or Word, just saved as a pdf.&lt;/p&gt;
+&lt;p&gt;You should essentially add this additional material to your final group proposal. You can either add this at the end or integreate it where appropriate (i.e., when talking about a specific variable).&lt;/p&gt;
+&lt;div id=&#34;content-of-the-document&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Content of the Document&lt;/h2&gt;
+&lt;p&gt;Include the following:&lt;/p&gt;
+&lt;div id=&#34;data-extract-what-variables-and-samples-you-plan-to-request-from-ipums&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Extract: What Variables and Samples you Plan to Request from IPUMS&lt;/h3&gt;
+&lt;p&gt;This should be a list of the exact variables - by their variable name in the IPUMS system - you plan to include in a data extract request and the “sample”, or which time period(s) you are including.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analysis-plan-what-do-you-plan-to-do-with-the-data-once-you-have-it-from-ipums&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Analysis Plan: What do you plan to do with the data once you have it from IPUMS?&lt;/h3&gt;
+&lt;p&gt;This information should include a very clear list of steps or of the process that you expect to undertake to do any necessary data management/wrangling to get the variables in the format you need.&lt;/p&gt;
+&lt;p&gt;It should specify the steps you plan to take – not to actually take them yet, just thinking through the plan – to investigate the distributions of the variables.&lt;/p&gt;
+&lt;p&gt;You should have written out the regression models – in equation notation – with all of the variables as they will be included, and (re-)stated which coefficients of the model reflect your the hypothesis.&lt;/p&gt;
+&lt;p&gt;This last point should make really clear whether you are including variables as a factor (see the suggested HW4 question) or multiple indicator variables, and in either case which level will be the reference group. You will need to spell out the hypothetical regression model with each and every beta estimate that you plan to include.&lt;/p&gt;
+&lt;p&gt;Again, this does not expect that you have done any of this work yet with your data or in R. It is simply an exercise to get you thinking about what exactly you will need to do next – this keeps you organized and in many cases is an additional opportunity to explicate your thinking about your topic since this is getting even a little closer to actually testing your hypotheses. And for those of you newer to &lt;code&gt;R&lt;/code&gt;, it will help articulate where you may want to get additional help for this kind of work (plan to come to the &lt;code&gt;dplyr&lt;/code&gt; workshop on Friday 3/27, 2-4pm!).&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;next&lt;/em&gt; assignment will be a data appendix, where you will illustrate that you have the data in hand and have brought it into R, what of the steps you list above that you have been able to complete and what you have left to do, what unanticipated issues have arisen, and what this exploratory data analysis (not yet having fit a model, just exploring the variables one at a time and with scatterplots and other visuals) is telling you about your main research question.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How Do I Get the IPUMS Data</title>
       <link>/group/04-group-ipums-gettingdata/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
