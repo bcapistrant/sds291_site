@@ -25,4 +25,4 @@ editor_options:
 
 ### Practice in `R`
 - [Lab](http://sds291.netlify.com/12/Day12_InClassLab.html) ( [raw `.Rmd` file](http://sds291.netlify.com/12/Day12_InClassLab.rmd) )
-    - [Sample Solutions](http://sds291.netlify.com/12/Day12_InClassLab_Answers_AndCautionforHW.html) ( [solutions raw `.Rmd` file](http://sds291.netlify.com/12/Day12_InClassLab_Answers_AndCautionforHW.rmd) )
+    - [Sample Solutions](http://sds291.netlify.com/12/Day12_InClassLab_Answers.pdf) ( [solutions raw `.Rmd` file](http://sds291.netlify.com/12/Day12_InClassLab_Answers.rmd) )
