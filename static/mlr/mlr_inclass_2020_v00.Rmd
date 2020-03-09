@@ -199,7 +199,7 @@ skim(usa_data2)
 
 1. Create and interpret a scatterplot of you main explanatory and response variables: age and travel time. For Unusual Observations, now clarify potential leverage/influence/outliers.
 
-*__Before Moving On:__* Save your code to your google drive - each person should have their own markdown file - and then combine them into one master Markdown file. Knit this file to a .pdf and submit it to Moodle for Day 1. Submit as a group - one file for the group.
+*__Before Moving On:__* Save your code to your google drive - each person should have their own markdown file - and then combine them into one master Markdown file. Knit this file and submit it to Moodle for Day 1. Submit as a group - one file for the group.
 
 # Analysis - Day 2
 
@@ -298,4 +298,4 @@ And come to the Data Visualization Workshop Friday, 4/17 2-4pm!
 
 1. How does this pattern explain your explanation of these patterns from the model output above?  Explain in a paragraph of 3-5 sentences.
 
-*__Before Moving On:__*  Knit this file to a .pdf and submit it to Moodle for Day 2.
+*__Before Moving On:__*  Knit this file and submit it to Moodle for Day 2.
