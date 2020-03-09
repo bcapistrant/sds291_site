@@ -51,7 +51,6 @@ In this example we are examining the prices of Porsches. We want to estimate the
 
 ```r
 require(Stat2Data)
-require(mosaic)
 data("PorschePrice")
 qplot(y=Price, x=Mileage, data=PorschePrice)+geom_smooth(method="lm", se=FALSE)
 ```
@@ -64,6 +63,115 @@ To create a bootstrap sample, we select rows from the data frame uniformly at ra
 
 
 ```r
+library(mosaic)
+```
+
+```
+## Loading required package: lattice
+```
+
+```
+## Loading required package: ggformula
+```
+
+```
+## Loading required package: ggstance
+```
+
+```
+## 
+## Attaching package: 'ggstance'
+```
+
+```
+## The following objects are masked from 'package:ggplot2':
+## 
+##     geom_errorbarh, GeomErrorbarh
+```
+
+```
+## 
+## New to ggformula?  Try the tutorials: 
+## 	learnr::run_tutorial("introduction", package = "ggformula")
+## 	learnr::run_tutorial("refining", package = "ggformula")
+```
+
+```
+## Loading required package: mosaicData
+```
+
+```
+## Loading required package: Matrix
+```
+
+```
+## 
+## Attaching package: 'Matrix'
+```
+
+```
+## The following objects are masked from 'package:tidyr':
+## 
+##     expand, pack, unpack
+```
+
+```
+## Registered S3 method overwritten by 'mosaic':
+##   method                           from   
+##   fortify.SpatialPolygonsDataFrame ggplot2
+```
+
+```
+## 
+## The 'mosaic' package masks several functions from core packages in order to add 
+## additional features.  The original behavior of these functions should not be affected by this.
+## 
+## Note: If you use the Matrix package, be sure to load it BEFORE loading mosaic.
+```
+
+```
+## 
+## Attaching package: 'mosaic'
+```
+
+```
+## The following object is masked from 'package:Matrix':
+## 
+##     mean
+```
+
+```
+## The following objects are masked from 'package:dplyr':
+## 
+##     count, do, tally
+```
+
+```
+## The following object is masked from 'package:purrr':
+## 
+##     cross
+```
+
+```
+## The following object is masked from 'package:ggplot2':
+## 
+##     stat
+```
+
+```
+## The following objects are masked from 'package:stats':
+## 
+##     binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,
+##     quantile, sd, t.test, var
+```
+
+```
+## The following objects are masked from 'package:base':
+## 
+##     max, mean, min, prod, range, sample, sum
+```
+
+```r
 qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", se=FALSE)
 ```
 
@@ -72,6 +180,8 @@ qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", 
 <img src="12_Lecture_Slides_files/figure-slidy/unnamed-chunk-3-1.png" width="288" />
 <img src="12_Lecture_Slides_files/figure-slidy/unnamed-chunk-4-1.png" width="288" />
 <img src="12_Lecture_Slides_files/figure-slidy/unnamed-chunk-5-1.png" width="288" />
+
+We need the `mosaic` package for the resampling function.
 
 ## Bootstrap distributions and confidence intervals
 
@@ -117,6 +227,7 @@ Now let's create a bootstrap distribution for the regression coefficients.
 
 
 ```r
+library(mosaic)
 bootstrap <- do(10000) * coef(lm(weight~mage, data=resample(data_bwt)))
 p2 <- ggplot(bootstrap, aes(x=mage)) + 
   geom_density() +
@@ -129,6 +240,7 @@ p2
 
 The bootstrap distribution will always be centered around the value from our real data (in this case 0.013372), but shows us some other likely values for the coefficient (essentially, sampling error). One way to quantify this variability is to create a confidence interval.
 
+Again, we need the `mosaic` package for the resampling function.
 
 ## Creating CIs 
 
@@ -157,7 +269,7 @@ cbind(lci,uci)
 
 ```
 ##            lci        uci
-## 1 -0.002371764 0.02911535
+## 1 -0.002158424 0.02890201
 ```
 
 ### Method #2 - Quantiles from the Bootstrap Distribution
@@ -175,8 +287,8 @@ qdata(~mage, p=c(0.025, 0.975), data=bootstrap)
 
 ```
 ##           quantile     p
-## 2.5%  -0.002119143 0.025
-## 97.5%  0.029308818 0.975
+## 2.5%  -0.001836926 0.025
+## 97.5%  0.029161457 0.975
 ```
 
 ### Method #3 - Reverse the quantiles from the bootstrap distribution
@@ -192,7 +304,7 @@ coef(m_mage)["mage"] - (qs - coef(m_mage)["mage"])
 ```
 
 ```
-## [1]  0.028862726 -0.002565235
+## [1]  0.028580509 -0.002417874
 ```
 
 
@@ -235,7 +347,7 @@ coef(fm)["Mileage"] + zs * sd(~Mileage, data=bootstrap_Porsche)
 ```
 
 ```
-## [1] -0.6896867 -0.4891152
+## [1] -0.6909074 -0.4878945
 ```
 
 
@@ -245,8 +357,8 @@ qdata(~Mileage, p=c(0.025, 0.975), data=bootstrap_Porsche)
 
 ```
 ##         quantile     p
-## 2.5%  -0.6870217 0.025
-## 97.5% -0.4858929 0.975
+## 2.5%  -0.6887676 0.025
+## 97.5% -0.4848711 0.975
 ```
 
 
@@ -256,5 +368,5 @@ coef(fm)["Mileage"] - (qs - coef(fm)["Mileage"])
 ```
 
 ```
-## [1] -0.4917802 -0.6929090
+## [1] -0.4900343 -0.6939308
 ```

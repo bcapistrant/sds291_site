@@ -14,6 +14,8 @@ type: docs
 
 - <i class="fas fa-book"></i> Calzo, J. P., Mays, V. M., Björkenstam, C., Björkenstam, E., Kosidou, K., & Cochran, S. D. (2019). [Parental sexual orientation and children's psychological well‐being: 2013–2015 National Health Interview Survey.](https://srcd-onlinelibrary-wiley-com.libproxy.smith.edu/doi/full/10.1111/cdev.12989) *Child development*, 90(4), 1097-1108. 
 
+- [Article Review](http://sds291.netlify.com/mlr/ArticleReview.pdf) (and [raw .rmd template](http://sds291.netlify.com/mlr/ArticleReview.rmd))
+
 ## Recommended
 
 - None

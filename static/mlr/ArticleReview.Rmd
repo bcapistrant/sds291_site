@@ -1,0 +1,99 @@
+---
+title: "Article Review"
+author: "YOUR NAME HERE"
+date: "3/9/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***
+Calzo, J. P., Mays, V. M., Björkenstam, C., Björkenstam, E., Kosidou, K., & Cochran, S. D. (2019). [Parental sexual orientation and children's psychological well‐being: 2013–2015 National Health Interview Survey.](https://srcd-onlinelibrary-wiley-com.libproxy.smith.edu/doi/full/10.1111/cdev.12989) *Child development*, 90(4), 1097-1108. 
+***
+
+## Big Picture Takeaway
+
+### 1. In 2 sentences (and no more!), state: a. what the main research question of this paper was and b. what they found.
+
+## Introduction
+
+### 2. Reflect on the first section of the paper -- the "__Introduction__", even if it isn't called that with a header (after the abstract and before the Methods section).
+
+#### 2.a. What kinds of information did they include in this section? What is the writing style like? Was it easy or hard to read? Why?
+
+#### 2.b. Was it clear why this particular study was important? Did you "buy" their argument? Explain why or why not. What did you find so convincing, or what was missing?
+
+## Method
+
+### 3. Reflect on the __Method__ section of the paper, with a little more attention on identifying important pieces of this section than on your reaction to it.
+
+#### 3.a. What kinds of information was included in the _Participants_ section? 
+
+##### 3.a.1. List all of the different concepts that were included.
+
+##### 3.a.2. What, if any, information do you have from this section about the regression assumptions?
+
+#### 3.b. What kinds of information was included in the _Measures_ section? 
+
+##### 3.b.1. List all of the different variables that were included.
+
+##### 3.b.2. What is their response variable? Is it quantitative, categorical, or binary? What are the units or the groups of a categorical/binary variable? How was this data collected?
+
+##### 3.b.3. What is their main explanatory variable? Is it quantitative, categorical, or binary? What are the units or the groups of a categorical/binary variable (and is the reference group mentioned)? How was this data collected? (If there is more than one, include this information for each.)
+
+##### 3.b.4. What are their confounding variables? List them all and specify what kind of variable (quantitative, categorical, or binary) they are. Why these confounding variables? Would you have included others?
+
+#### 3.c. What kinds of information was included in the _Analysis_ section? 
+
+##### 3.c.1. What statistical tests or steps did they do in their initial analysis?
+
+##### 3.c.2. Describe their regression models. Are they linear, logistic? Simple, multiple? If they included multiple models, how are the models different from each other? Did this approach make sense?
+
+##### 3.c.3. What coefficients or estimates do they report? What pieces of statistical tests are included?
+
+
+## Results
+
+### 4. Reflect on the text of the __Results__ section of the paper. Was it easy to follow? How much did the text interpret the coefficients vs. just stating the coefficients?
+
+### 5. Explain what's happening in Table 1.
+
+#### 5.a. What are the rows and what are the columns of the table? 
+
+#### 5.b. What information is presented in each "cell"?
+
+#### 5.c. What information is included in the footnote?
+
+#### 5.d. Which part of the Analysis section does this connect to?
+
+#### 5.e. How does the text in the Results section relate to the Table 1? Why do you think the authors included the text that they did, and why do you think they left parts of Table 1 out of the text (if they did)?
+
+### 6. Explain what's happening in Table 2. 
+
+#### 6.a. What are the rows and what are the columns of the table? 
+
+#### 6.b. What information is presented in each "cell"?
+
+#### 6.c. What information is included in the footnote?
+
+#### 6.d. Which part of the Analysis section does this connect to?
+
+#### 6.e. How does the text in the Results section relate to the Table 2? Why do you think the authors included the text that they did, and why do you think they left parts of Table 2 out of the text (if they did)?
+
+#### 6.f. Write out the fitted regression equation for Model A in equation notation.
+
+#### 6.g. Write out the fitted regression equation for Model B in equation notation.
+
+## Discussion
+
+### 7. Reflect on the __Discussion__ section.
+
+#### 7.a. What kinds of information did they include in this section? What is the writing style like? Was it easy or hard to read? Why?
+
+#### 7.b. How was this section different from the results section, both in wrtiting style and the information included?
+
+#### 7.c. What do the authors focus on in the last two paragraphs? And are the specific pieces they mention what you would expect? Were you surprised by what they included here? What did you expect to see and didn't (if anything)?
+
+#### 7.d. How does this section relate to the introduction?

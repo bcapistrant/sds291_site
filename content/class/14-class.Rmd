@@ -1,0 +1,30 @@
+---
+title: "Multiple Linear Regression - In Class Practice, Modeling"
+linktitle: "14 MLR & IPUMS - Modeling"
+date: "2020-03-09"
+class_date: "2020-03-09"
+menu:
+  class:
+    parent: Class sessions
+    weight: 14
+type: docs
+weight: 14
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activity
+
+- [Activity](http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html)
+
+Use your RMD from Day 1, and extend it on with regression modeling.
+
+### Submit to Moodle
+There is no template for this activity. You're a pro at making your own RMarkdown files now!
+
+You are expected to knit to pdf and to submit your rmd as well (just like a homework). Please submit 1 .rmd and 1 .pdf per group.
+
+Use the Day 14 submission on Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 

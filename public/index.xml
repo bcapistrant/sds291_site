@@ -2047,6 +2047,68 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
     </item>
     
     <item>
+      <title>Multiple Linear Regression - In Class Practice, Data Wrangling</title>
+      <link>/class/13-class/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/class/13-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-to-moodle&#34;&gt;Submit to Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html&#34;&gt;Activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You need to have gotten through the bringing in and cleaning up the data by the end of Day 1. We will extend this on Day 2 with regression modeling.&lt;/p&gt;
+&lt;div id=&#34;submit-to-moodle&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Submit to Moodle&lt;/h3&gt;
+&lt;p&gt;There is no template for this activity. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf and to submit your rmd as well (just like a homework). Please submit 1 .rmd and 1 .pdf per group.&lt;/p&gt;
+&lt;p&gt;Use the Day 13 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multiple Linear Regression - In Class Practice, Modeling</title>
+      <link>/class/14-class/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/class/14-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-to-moodle&#34;&gt;Submit to Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html&#34;&gt;Activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Use your RMD from Day 1, and extend it on with regression modeling.&lt;/p&gt;
+&lt;div id=&#34;submit-to-moodle&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Submit to Moodle&lt;/h3&gt;
+&lt;p&gt;There is no template for this activity. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf and to submit your rmd as well (just like a homework). Please submit 1 .rmd and 1 .pdf per group.&lt;/p&gt;
+&lt;p&gt;Use the Day 14 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Data Visualization</title>
       <link>/reading/14-reading/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
@@ -2080,7 +2142,8 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 &lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Required&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Calzo, J. P., Mays, V. M., Björkenstam, C., Björkenstam, E., Kosidou, K., &amp;amp; Cochran, S. D. (2019). &lt;a href=&#34;https://srcd-onlinelibrary-wiley-com.libproxy.smith.edu/doi/full/10.1111/cdev.12989&#34;&gt;Parental sexual orientation and children’s psychological well‐being: 2013–2015 National Health Interview Survey.&lt;/a&gt; &lt;em&gt;Child development&lt;/em&gt;, 90(4), 1097-1108.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Calzo, J. P., Mays, V. M., Björkenstam, C., Björkenstam, E., Kosidou, K., &amp;amp; Cochran, S. D. (2019). &lt;a href=&#34;https://srcd-onlinelibrary-wiley-com.libproxy.smith.edu/doi/full/10.1111/cdev.12989&#34;&gt;Parental sexual orientation and children’s psychological well‐being: 2013–2015 National Health Interview Survey.&lt;/a&gt; &lt;em&gt;Child development&lt;/em&gt;, 90(4), 1097-1108.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/ArticleReview.pdf&#34;&gt;Article Review&lt;/a&gt; (and &lt;a href=&#34;http://sds291.netlify.com/mlr/ArticleReview.rmd&#34;&gt;raw .rmd template&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
