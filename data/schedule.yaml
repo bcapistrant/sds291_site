@@ -93,10 +93,12 @@ lessons:
   - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 9"
     reading: "13-reading"
+    class: "13-class"
     assignment: "05-problem-set"
     
   - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 11"
+    class: "14-class"
     reading: "14-reading"
 
   - title: '<i class="fas fa-users"></i> **Data Extract and Analysis Plan**'
