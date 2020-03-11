@@ -16,6 +16,12 @@ editor_options:
   chunk_output_type: console
 ---
 
+## Preparing for non-face-to-face instruction
+
+Please fill out [this brief survey](https://docs.google.com/forms/d/e/1FAIpQLSf_w69VFlYvefJunY_gphM61hHoGnfOs5Wks8YMWEMymSnewg/viewform?usp=sf_link) so that I can understand what capacity you will have when we shift to remote instruction, what ideas you have to make this go most smoothly, and concerns you have and want to raise.
+
+We will also talk some of this through in class together.
+
 ## In-class Activity
 
 - [Activity](http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html)
