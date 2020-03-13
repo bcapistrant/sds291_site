@@ -16,6 +16,9 @@ editor_options:
   chunk_output_type: console
 ---
 
+*__AS OF MARCH 12, THIS ASSIGNMENT IS OPTIONAL. MORE DETAILS ON THE GROUP PROJECT TO BE DETERMINED__*
+
+
 Submit this as a pdf to moodle. The pdf doesn't *need* to be made R - you can make it in Google Docs or Word, just saved as a pdf.
 
 You should essentially add this additional material to your final group proposal.  You can either add this at the end or integreate it where appropriate (i.e., when talking about a specific variable). 

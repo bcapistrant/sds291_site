@@ -101,97 +101,97 @@ lessons:
     class: "14-class"
     reading: "14-reading"
 
-  - title: '<i class="fas fa-users"></i> **Data Extract and Analysis Plan**'
+  - title: '<i class="fas fa-users"></i> **OPTIONAL: Data Extract and Analysis Plan**'
     date: "March 13"
     #group: "04-group"
 
   - title: '<i class="fas fa-star"></i> **Spring Break**'
-    date: "March 16 - 20"
+    date: "March 16 - 27"
 
-  - title: '<i class="fas fa-university"></i> **MLR: Review**'
-    date: "March 22"
+#  - title: '<i class="fas fa-university"></i> **MLR: Review**'
+#    date: "March 22"
     #reading: "05-reading"
     #assignment: "02-TakeHomeProject"
     
-  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 2**'
-    date: "March 24"
-    #reading: "05-reading"
+#  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 2**'
+#    date: "March 24"
+#    #reading: "05-reading"
 
-  - title: '<i class="fas fa-users"></i> **Data Appendix & `dplyr` workshop**'
-    date: "March 27"
-    class: "02-groupworkshop"
-    #group: "05-group"
+#  - title: '<i class="fas fa-users"></i> **Data Appendix & `dplyr` workshop**'
+#    date: "March 27"
+#    class: "02-groupworkshop"
+#    #group: "05-group"
     
-  - title: '<i class="fas fa-file-code"></i> **Take Home Exam 2: Multiple Linear Regression**'
-    date: "March 29"
-    #assignment: "03-problem-set"
+#  - title: '<i class="fas fa-file-code"></i> **Take Home Exam 2: Multiple Linear Regression**'
+#    date: "March 29"
+#    #assignment: "03-problem-set"
 
-  - title: '<span class="fake-header-table">Logistic Regression</span>'
+  - title: '<span class="fake-header-table">Remote Learning - Content and Schedule TBD</span>'
     header: True
     
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Concepts and Introduction**'
-    date: "March 29"
-    #reading: "05-reading"
+#  - title: '<i class="fas fa-university"></i> **Logistic Regression: Concepts and Introduction**'
+#    date: "March 29"
+#    #reading: "05-reading"
     
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Fitting and Interpreting Models**'
-    date: "March 31"
-    #reading: "05-reading"
+#  - title: '<i class="fas fa-university"></i> **Logistic Regression: Fitting and Interpreting Models**'
+#    date: "March 31"
+#    #reading: "05-reading"
 
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Odds, Odds Ratios, Probability**'
-    date: "April 6"
-    #reading: "05-reading"
-    #assignment: "05-eval-dag"
+#  - title: '<i class="fas fa-university"></i> **Logistic Regression: Odds, Odds Ratios, Probability**'
+#    date: "April 6"
+#    #reading: "05-reading"
+#    #assignment: "05-eval-dag"
     
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
-    date: "April 8"
-    #reading: "05-reading" 
+#  - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
+#    date: "April 8"
+#    #reading: "05-reading" 
 
-  - title: '<i class="fas fa-users"></i> **Updated Appendix, Descriptives, and Draft Results**'
-    date: "April 10"
-    #group: "06-group"
+#  - title: '<i class="fas fa-users"></i> **Updated Appendix, Descriptives, and Draft Results**'
+#    date: "April 10"
+#    #group: "06-group"
     
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Visualizing Coefficients and Predicted Probabilities**'
-    date: "April 13"
+#  - title: '<i class="fas fa-university"></i> **Logistic Regression: Visualizing Coefficients and Predicted Probabilities**'
+#    date: "April 13"
+#    #reading: "05-reading"
+    
+#  - title: '<i class="fas fa-university"></i> **Logistic Regression: Log Likelihood, Ratio Tests**'
+#    date: "April 15"
     #reading: "05-reading"
     
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Log Likelihood, Ratio Tests**'
-    date: "April 15"
-    #reading: "05-reading"
-    
-  - title: '<i class="fas fa-users"></i> **Data Visualization Workshop**'
-    date: "April 17"
-    class: "03-groupworkshop"
-    #group: "06-group"
+#  - title: '<i class="fas fa-users"></i> **Data Visualization Workshop**'
+#    date: "April 17"
+#    class: "03-groupworkshop"
+#    #group: "06-group"
 
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
-    date: "April 20"
-    reading: "05-reading"
-    #assignment: "05-eval-dag"
+#  - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
+#    date: "April 20"
+#    reading: "05-reading"
+#    #assignment: "05-eval-dag"
     
-  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 3**'
-    date: "April 22"
-    #reading: "05-reading"
+#  - title: '<i class="fas fa-university"></i> **No Class - Work on Take Home Exam 3**'
+#    date: "April 22"
+#    #reading: "05-reading"
     
-  - title: '<i class="fas fa-users"></i> **Draft Poster**'
-    date: "April 24"
-    #group: "06-group"
+#  - title: '<i class="fas fa-users"></i> **Draft Poster**'
+#    date: "April 24"
+#    #group: "06-group"
 
-  - title: '<i class="fas fa-file-code"></i> **Take Home Exam 3: Logistic Regression**'
-    date: "April 27"
-    #assignment: "03-problem-set"
+#  - title: '<i class="fas fa-file-code"></i> **Take Home Exam 3: Logistic Regression**'
+#    date: "April 27"
+#    #assignment: "03-problem-set"
     
-  - title: '<i class="fas fa-university"></i> **Additional Topics / Project Work Time**'
-    date: "April 27"
-    #reading: "05-reading"
-    #assignment: "03-TakeHomeProject"
+#  - title: '<i class="fas fa-university"></i> **Additional Topics / Project Work Time**'
+#    date: "April 27"
+#    #reading: "05-reading"
+#    #assignment: "03-TakeHomeProject"
     
-  - title: '<i class="fas fa-university"></i> **Poster Presentations**'
-    date: "April 29"
-    #reading: "05-reading"
+#  - title: '<i class="fas fa-university"></i> **Poster Presentations**'
+#    date: "April 29"
+#    #reading: "05-reading"
 
-  - title: '<span class="fake-header-table">Final</span>'
-    header: True
+#  - title: '<span class="fake-header-table">Final</span>'
+#    header: True
 
-  - title: "**Final project due** (submit online by 7:00 PM)"
-    date: "May 8"
-    #assignment: "final-project"
+#  - title: "**Final project due** (submit online by 7:00 PM)"
+#   date: "May 8"
+#    #assignment: "final-project"
