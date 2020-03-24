@@ -103,7 +103,7 @@ lessons:
 
   - title: '<i class="fas fa-users"></i> **OPTIONAL: Data Extract and Analysis Plan**'
     date: "March 13"
-    #group: "04-group"
+    group: "05-group-dataextractandanalysisplan"
 
   - title: '<i class="fas fa-star"></i> **Spring Break**'
     date: "March 16 - 27"

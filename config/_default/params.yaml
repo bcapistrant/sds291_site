@@ -97,17 +97,18 @@ instructor:
   #url: "https://www.andrewheiss.com"
   twitter: bencapistrant
   github: bencapistrant
-  office: "Lilly Hall 310"
+  office: "guest room"
+  phone: +1-413-341-0237
   contact_policy: >-
-    Slack, Student Hours, and E-mail are the best way to get in contact with me, in that order. I will try to respond to all course-related messages within 24 hours during the week and 48 hours on the weekend (*really*). We all have full lives to balance with our work in this class - I am no exception - and our goal should be attentive and timely, but not immediate, exchanges.
-  student_hours: "M 10:30-12:30, W 9:30-11:00"
+    Slack, E-mail, and text are the best way to get in contact with me, in that order (call in emergencies). I will try to respond to all course-related messages within 24 hours during the week and 48 hours on the weekend (*really*). We all have full lives to balance with our work in this class - I am no exception - and our goal should be attentive and timely, but not immediate, exchanges.
+  student_hours: "TBD"
 
 course:
   number: "SDS 291"
   semester: "Spring 2020"
   days: "Monday & Wednesday"
-  time: "1:20-2:35 or 2:45-4:00"
-  location: "M: S-R 301, W: S-R 220"
+  time: "TBD"
+  location: "Zoom"
   dates: "January 27–May 1, 2020"
   github: "bencapistrant/sds291_site"
   copyrightYear: "2020"

@@ -1,0 +1,143 @@
+
+<div id="TOC">
+<ul>
+<li><a href="#what-kinds-of-activities-should-we-be-doing">What kinds of activities should we be doing?</a></li>
+<li><a href="#where-are-you-all-now-and-what-does-that-mean-for-when-we-should-have-class-via-zoom">Where are you all now? And what does that mean for when we should have class via Zoom?</a></li>
+<li><a href="#time-for-the-course">Time for the course</a></li>
+</ul>
+</div>
+
+<p>Most of you will remember the survey we did in class the Wednesday before spring break. This was really helpful for me to:</p>
+<ol style="list-style-type: decimal">
+<li>understand the environment you’ll be learning in for the rest of the semester and</li>
+<li>guide some important decisions for how to structure the class.</li>
+</ol>
+<p>Below are some of the results of what you said in that poll and some reflections from me about what that suggests as to how we move forward. Not everything you answered is included, especially things where there was pretty uniform/universal answer (i.e., nearly everyone had a laptop). Instead, I wanted to illustrate to you how I used your information to inform the plan for how to move forward – and for you to know what your classmates are facing in their learning – for the rest of the semester.</p>
+<pre class="r"><code>#split data
+activity_tomerge&lt;-RL_deID %&gt;%
+  select(ID, classactivities) %&gt;% #Keeping only the ID and classactivities variable
+  mutate(Q2 = strsplit(classactivities, split = &quot;,\\s?&quot;)) %&gt;% #Splitting the multiple options that are separated by commas into multiple variables
+  unnest() %&gt;%
+  mutate(Value = 1) %&gt;% #Making the new variable take the value of 1 if someone had checked that box
+  spread(Q2, Value, fill = 0) %&gt;% #Spreading this back out into columns, filling in with 0s where the option wasn&#39;t checked
+  rename(act_pracprob=`Additional practice problems and solutions`,
+         act_asnow=`just do the lectures via Zoom`,
+         act_youtube=`Lectures on YouTube`,
+         act_discques=`Online discussion and open questions during class time (instead of any lecture during class time)`,
+         act_papers=`Reviewing papers using these regression models and having online discussions in a discussion forum (Moodle or Slack)`,
+         act_OHslack=`Scheduled office hour time held via Slack`,
+         act_OHZoom=`Scheduled office hour time held via Zoom`) %&gt;% #Renaming the variables more consistently
+  select(ID, starts_with(&quot;act_&quot;)) # Just keeping the ID and activity variables - this can merge back with other data via the ID
+
+activity_tograph &lt;- activity_tomerge %&gt;%
+  gather(&quot;activity&quot;, &quot;type&quot;, -ID) %&gt;% #Gather the different activities into rows rather than columns
+  group_by(activity) %&gt;% # Run the next set of sets within the group of activity
+  count(type) %&gt;% # Count the 1s (yes/checked) and 0s (no/unchecked)
+  mutate(total=sum(n)) %&gt;% # Count the total per activity
+  ungroup() %&gt;% # Stop operating by Activity group
+  mutate(pct=round((n/total)*100, digits=1)) %&gt;% #Calculate a percentage variable of the % of responses checked for a given activity
+  filter(type==1) %&gt;% # Only keep the Yes/Checked options (the &quot;no&quot; options are just the inverse percentage (%no = 100 - %yes))
+  mutate(class_activity=as.factor(if_else(activity==&quot;act_asnow&quot;, &quot;Same syllabus, classes via Zoom&quot;,
+                            if_else(activity==&quot;act_discques&quot;, &quot;No lecture, open question/discussion&quot;,        
+                            if_else(activity==&quot;act_OHslack&quot;, &quot;Office hours via Slack&quot;,
+                            if_else(activity==&quot;act_OHZoom&quot;, &quot;Office hours via Zoom&quot;, 
+                            if_else(activity==&quot;act_papers&quot;, &quot;Reviewing Papers&quot;, 
+                            if_else(activity==&quot;act_pracprob&quot;, &quot;Additional Practice Problems and Solutions&quot;, 
+                            if_else(activity==&quot;act_youtube&quot;, &quot;Lectures via YouTube&quot;, NA_character_ ))))))))
+  ) %&gt;% # Making Activity a factor variable and renaming the variable labels by the activities
+  select(class_activity,pct) # Keep only the activity name and the percent
+
+activity_plot&lt;- activity_tograph %&gt;%
+  mutate(class_activity = fct_reorder(class_activity, desc(pct)))%&gt;%
+  ggplot(aes(y=pct, x=class_activity, fill=class_activity, color=class_activity)) + geom_bar(stat=&quot;identity&quot;) +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        legend.position=&quot;bottom&quot;,
+        legend.title = element_blank()) + guides(fill=guide_legend(nrow=4)) + 
+  ylab(&quot;Percent&quot;) + ggtitle(&quot;Preferences for Remote Learning Class Activities&quot;)</code></pre>
+<div id="what-kinds-of-activities-should-we-be-doing" class="section level1">
+<h1>What kinds of activities should we be doing?</h1>
+<pre class="r"><code>activity_plot</code></pre>
+<p><img src="remote_learning_survey_results_files/figure-html/activityplot-1.png" width="65%" style="float:right; padding:10px" /></p>
+<p>From my read of this graph, people would prefer that we:</p>
+<ol style="list-style-type: decimal">
+<li>Do more or less the same syllabus and schedule, that is</li>
+<li>Delivered via Zoom (and recorded for (re-)watching), with</li>
+<li>Remote office hours (either Zoom and/or Slack).</li>
+</ol>
+</div>
+<div id="where-are-you-all-now-and-what-does-that-mean-for-when-we-should-have-class-via-zoom" class="section level1">
+<h1>Where are you all now? And what does that mean for when we should have class via Zoom?</h1>
+<pre class="r"><code>timezone &lt;- RL_deID %&gt;%
+  mutate(timezone_grp=as.factor(if_else(timezone==&quot;Eastern&quot;, &quot;Eastern&quot;,
+                                if_else(timezone %in% c(&quot;Central&quot;, &quot;eastern or central&quot;), &quot;Central&quot;,
+                                if_else(timezone==&quot;Mountain&quot;, &quot;Mountain&quot;,
+                                if_else(timezone %in% c(&quot;Pacific&quot;, &quot;Either Eastern or Pacific. Waiting to hear if, as a grad student, I will be able to stay or have to go back to Seattle (home).&quot;, &quot;I will be in eastern, mountain and pacific through out the semester.  going home is complicated but I am willing to wake up early/stay up late for class/studies&quot;), &quot;Pacific&quot;, 
+                                  &quot;9-12 Hours ahead of Eastern&quot;
+                                                       )))))) %&gt;%
+  count(timezone_grp) %&gt;% # Count the 1s (yes/checked) and 0s (no/unchecked)
+  mutate(total=sum(n)) %&gt;% # Count the total per activity
+  ungroup() %&gt;% # Stop operating by Activity group
+  mutate(pct=round((n/total)*100, digits=1),
+         timezone_grp=fct_relevel(timezone_grp, &quot;Eastern&quot;, &quot;Central&quot;, &quot;Mountain&quot;, &quot;Pacific&quot;, &quot;9-12 Hours ahead of Eastern&quot;))
+
+timezone_plot &lt;- timezone %&gt;%  
+    ggplot(aes(y=pct, x=timezone_grp, fill=timezone_grp, color=timezone_grp)) + geom_bar(stat=&quot;identity&quot;) +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        legend.position=&quot;bottom&quot;,
+        legend.title = element_blank()) + guides(fill=guide_legend(nrow=4)) + 
+  ylab(&quot;Percent&quot;) + ggtitle(&quot;Time Zone&quot;)</code></pre>
+<pre class="r"><code>timezone_plot</code></pre>
+<p><img src="remote_learning_survey_results_files/figure-html/timezone-plot-1.png" width="672" /></p>
+<p>Most of you are in the U.S., primarily in the East coast/time zone. If we are indeed keeping class in real time, an afternoon class probably still works to accomodate those in the western time zones. For those out of the U.S., the best compromise will be to record lectures and have them posted to Moodle for you to watch. I’ll plan office hours that are more in line with the time differences - either early AM Eastern (~7AM) / afternoon or evening in Asia or later evening (10PM) / morning Asia, at least one of either per week. I’ll make a specific poll to see which of those options you’d prefer – stay tuned.</p>
+</div>
+<div id="time-for-the-course" class="section level1">
+<h1>Time for the course</h1>
+<pre class="r"><code>table(RL_deID$timeforcourse, useNA=&quot;always&quot;)</code></pre>
+<pre><code>## 
+##                     0-2 hours per week less than now 
+##                                                   11 
+##                     2-5 hours per week less than now 
+##                                                    4 
+##                      5+ hours per week less than now 
+##                                                    1 
+##   I&#39;m going to have more time - this might be better 
+##                                                    6 
+## I&#39;m going to have the same about of time as I do now 
+##                                                   28 
+##                                                 &lt;NA&gt; 
+##                                                    2</code></pre>
+<pre class="r"><code>timeforclass &lt;- RL_deID %&gt;%
+  mutate(timecourse_grp=as.factor(if_else(timeforcourse==&quot;I&#39;m going to have the same about of time as I do now&quot;, &quot;Same&quot;,
+                                if_else(timeforcourse==&quot;0-2 hours per week less than now&quot;, &quot;0-2h less&quot;,
+                                if_else(timeforcourse==&quot;2-5 hours per week less than now&quot;, &quot;2-5h less&quot;,
+                                if_else(timeforcourse==&quot;5+ hours per week less than now&quot;, &quot;5+h less&quot;,
+                                if_else(timeforcourse==&quot;I&#39;m going to have more time - this might be better&quot;, &quot;More&quot;, NA_character_)))))),
+         timecourse_grp=fct_explicit_na(timecourse_grp,na_level = &quot;(Missing)&quot;)) %&gt;%
+  count(timecourse_grp) %&gt;% # Count the 1s (yes/checked) and 0s (no/unchecked)
+  mutate(total=sum(n)) %&gt;% # Count the total per activity
+  ungroup() %&gt;% # Stop operating by Activity group
+  mutate(pct=round((n/total)*100, digits=1),
+         timecourse_grp=fct_explicit_na(timecourse_grp,na_level = &quot;(Missing)&quot;),
+         timecourse_grp=fct_relevel(timecourse_grp, &quot;More&quot;, &quot;Same&quot;, &quot;0-2h less&quot;, &quot;2-5h less&quot;, &quot;5+h less&quot;, &quot;(Missing)&quot;))
+
+table(timeforclass$timecourse_grp)</code></pre>
+<pre><code>## 
+##      More      Same 0-2h less 2-5h less  5+h less (Missing) 
+##         1         1         1         1         1         1</code></pre>
+<pre class="r"><code>timeforclass_plot &lt;- timeforclass %&gt;%  
+    ggplot(aes(y=pct, x=timecourse_grp, fill=timecourse_grp, color=timecourse_grp)) + geom_bar(stat=&quot;identity&quot;) +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        legend.position=&quot;bottom&quot;,
+        legend.title = element_blank()) + guides(fill=guide_legend(nrow=4)) + 
+  ylab(&quot;Percent&quot;) + ggtitle(&quot;Amount of Time to Dedicate to Class&quot;)</code></pre>
+<pre class="r"><code>timeforclass_plot</code></pre>
+<p><img src="remote_learning_survey_results_files/figure-html/time%20for%20class-plot-1.png" width="672" /></p>
+<p>Most of you expect to have about the same amount of time as you did when you were on campus to dedicate to this class. I fully expect that your responses on Wednesday before spring break may have been optimistic and have changed now a few weeks into this reality. Moreover, about 30% of you thought you would have less time. I think the best approach here is minimal and realistic expectations so that everyone feels set up for success. Practically this means, I’m planning to make less required work and offering more recommended additional problems.</p>
+<p>For those who can do more, you’re welcome to - and the sky is the limit there. There are some (12%) who said you might have <em>more</em> time. If you find yourself wanting substantially more work - or a bigger scope of work - there are many possibilities for additional regression modeling work within my own research projects and/or plenty of other data. I will come up with a few ideas of how to structure this and will look for more input from you all soon. If you have thoughts in the meantime, please let me know.</p>
+</div>

@@ -17,15 +17,18 @@ main:
   - name: Group Project
     url: /group/
     weight: 6
+  - name: Blog
+    url: /blog/
+    weight: 7
   - name: Resources
     url: /resources/
-    weight: 7
+    weight: 8
   - name: '<i class="fab fa-r-project"></i>'
     url: https://rstudio.smith.edu/
-    weight: 8
+    weight: 9
   - name: '<i class="fab fa-slack"></i>'
     url: "http://sds291-spring2020.slack.com"
-    weight: 9
+    weight: 10
 assignment:
   - name: Assignments
     weight: 1
@@ -61,3 +64,5 @@ resources:
     weight: 1
   - name: Textbook
     weight: 2
+  - name: Archived Course Materials
+    weight: 3
