@@ -1,0 +1,26 @@
+---
+title: "Odds, Probability, & Odds Ratios"
+linktitle: "16: Odds & Probability"
+date: "2020-04-01"
+read_date: "2020-04-01"
+menu:
+  reading:
+    parent: Readings
+    weight: 16
+type: docs
+---
+
+## Required  
+
+- <i class="fas fa-book"></i>  _STAT2_ Textbook
+  - 9.1-9.2, with specific attention to the _concepts_ of odds, probability, and odds ratios (not on the regression model just yet) 
+
+- <i class="fas fa-book-medical"> Journal Article
+  - Guan, W. J., Ni, Z. Y., Hu, Y., Liang, W. H., Ou, C. Q., He, J. X., ... & Du, B. (2020). [Clinical characteristics of coronavirus disease 2019 in China.](https://www-nejm-org.libproxy.smith.edu/doi/full/10.1056/NEJMoa2002032) _New England Journal of Medicine_. DOI: 10.1056/NEJMoa2002032
+  - Tenny S, Hoffman MR. Odds Ratio (OR) [Updated 2019 Nov 26]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2020 Jan-. Available from: https://www-ncbi-nlm-nih-gov.libproxy.smith.edu/books/NBK431098/
+  
+- <i class="fas fa-newspaper"></i> Newspaper Articles/ Blog Posts
+  - Carroll, A.E. (2017, Nov 10). [A Link Between Alcohol and Cancer? It’s Not Nearly as Scary as It Seems](https://www.nytimes.com/2017/11/10/upshot/health-alcohol-cancer-research.html) _The New York Times_.   
+
+## Recommended
+

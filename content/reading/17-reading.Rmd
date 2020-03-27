@@ -1,0 +1,19 @@
+---
+title: "Intro to Logistic Regression"
+linktitle: "17: Logistic Intro"
+date: "2020-04-06"
+read_date: "2020-04-06"
+menu:
+  reading:
+    parent: Readings
+    weight: 17
+type: docs
+---
+
+## Required  
+
+- <i class="fas fa-book"></i>  _STAT2_ Textbook
+  - 9.1-9.2, with specific attention to using _regression modelling_ to estimate odds, probability, and odds ratios (not on the regression model just yet) 
+
+## Recommended
+

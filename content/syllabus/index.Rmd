@@ -1,5 +1,5 @@
 ---
-title: Syllabus
+title: Syllabus Addendum
 slug: syllabus
 citeproc: true
 output:
@@ -16,144 +16,187 @@ library(pander)
 
 `r blogdown::shortcode("courseinfo")`
 
-## Course Description
+## Previous Syllabus & This Addendum
 
-In this course, students will learn how to use statistical models to analyze real-world data. Students will develop an understanding to how to choose the best regression model for a different types of response variables, include and transform different types of explanatory variables, and fit models with statistical software. This course will encourage and foster communication skills to convey results precisely and clearly to a general, non-technical audience.
+The original syllabus for the course is [archived in the Resources section](http://sds291.netlify.com/resources/03-archived-syllabus.html). While many of the general components of that syllabus still hold, enough has changed that it made sense to create a new document and state clearly what is going on between the end of March and the beginning of May.
 
-The main goal of this course is to learn how to build statistical models - models that will let you understand and estimate the relationships between multiple phenomena, assess differences in an outcome of interest between multiple groups, and even make predictions. Our world is complicated, full of possible competing explanations for some apparent relationship. Multiple regression moves beyond many of the statistical tests and approaches from introductory statistics that consider simple differences between two variables (i.e., one response and one predictor variable, respecitvely). Instead, multiple regression offers one way to adjust statistically for myriad alternative explanations of the apparent relationship between the response and predictor; or to account statistically if the relationship between the response and predictor varies by other factors. With this course, you will develop useful quantitative modeling skills that allow you to harness data to enrich your understanding of the world we live in.
+This addendum is like syllabus 2.0 - it clarifies what activities we're doing and how those activities count toward your course grade.  There are many thing we were doing before break and this move to remote learning that no longer make sense. If you don't see it listed here, we're not doing it anymore.  If you have questions, of course, please ask.
 
-## <i class="fas fa-graduation-cap"></i> Course Objectives
+## General Operating Principles
 
-After completing this course, you will be able to choose different statstical modeling approaches (and understand their assumptions), be able to fit these models empirically using statistical software (`R`), assess how well the model you fit, and use that model to address your hypothesis, including to communicate what you found to a wide audience. Specifically, the course objectives are for you to:
+The following principles are adapted from [Prof. Brandon Bayne](https://religion.unc.edu/_people/full-time-faculty/bayne/) at University of North Carolina - Chapel Hill, shared via [twitter.](https://twitter.com/brandonbayne/status/1239336664176250880?s=20) They summarize much of the foundation of what it means to do this class, this way, at this point in time. 
 
-- Master the 4-step process of choosing, fitting, assessing, and using statistical models
-- Identify and fit models for quantitative and categorical responses, including effective use of transformations when conditions are not met
-- Understand confounding conceptually, and successfully implement approaches to adjust for confounding and moderation/modification in statistical software
-- Detect outliers and influential points in models
-- Test hypotheses and construct confidence intervals for slopes of regression models
-- Construct prediction intervals based on regression models
-- Compare different regression models and identify the best model empirically
-- Understand how multicolinearity and correlated predictors affect a model
-- Use odds and odds ratios to understand categorical response variables
+### Nobody signed up for this
+- Not for the sickness, not for the social distancing, not for the sudden end of our collective lives together on campus
+- Not for the anti-Asian bigotry and racism, nor for the economic hardships many people and families now face
+- Not for the anxiety, isolation, and uncertainty
+- Not for an online class, not for teaching / tutoring or learning remotely
+- Not for working/learning from home, not for the lack of schedule, not for mastering new technologies, not for varied access to learning materials
 
-## <i class="fas fa-school"></i> Prerequisites
+### The humane option is the best option.
 
-A college-level introductory statistics course (e.g. MTH/SDS/PSY 201, GOV 190/203, SOC 203, MTH 219, MTH/SDS 220, ECO 220), a score of 4 or 5 on the AP Statistics Exam, or permission of the instructor. Students need to be familiar with basic statistical concepts including graphical and numerical descriptive statistics, the normal and $t$-distributions, hypothesis tests, and confidence intervals.
+We are going to prioritize:
 
-## <i class="fas fa-book-reader"></i>  Required Readings
+- supporting each other as humans
+- simple solutions that make sense for the most
+- sharing resources and communicating clearly
 
-This course uses one textbook. This book is __required__ and is available at the Grecourt bookstore in the basement of the Campus Center. In case you choose to acquire the book elsewhere, note that _you will not need online access for the purposes of this course_.
+Let's assume good intentions, give the benefit of the doubt, and cut ourselves and each other some slack.
 
-- Cannon, A.R., Cobb, G.W., Hartlaub, B.A.,... Whitmer, J.A. (2019). _STAT2: Modeling with Regression and ANOVA_ (2nd Ed.). New York: W.H. Freeman.
+[We are all in this together...](https://www.youtube.com/watch?v=BlRvE9dKWQc)
 
-The [1st edition from 2013 is now much cheaper](https://www.amazon.com/gp/product/1464148260/ref=dbs_a_def_rwt_bibl_vppi_i0) and will work for probably 80% of what you'll need; the remainder is new homework problems, improved descriptions, and a few additional chapters. You can access the data freely for the new homework problems and will just need to check in with a copy of the 2nd edition periodically. The library will have copies of the new edition on reserve, and I will try to highlight places of noticeable difference.
- 
-Additional recommended readings, such as applications of material covered in class in the news, will be available on the course website and via Slack.
+### We cannot just do the same thing online that we did when we were together.
+- Some assignments are no longer possible
+- Some expectations are no longer reasonable
+- Some objectives are no longer valuable
 
-## <i class="fas fa-user-check"></i>  Assignments
+### We will prioritize flexible activities that will be accessible to all
+- We will have accessible materials for wide accessibility, across time zones, and in myriad contexts so that you can do this work whenever works for you
+- We will have real-time sessions - lectures, office hours, discussion - as a way to learn together and combat isolation. These are optional.
+- Some of you may be bored or want to throw yourself into work to keep yourself busy; some of you are overwhelmed and can't imagine how to do this. Both can be true within the same week, day or hour. We will have a reasonable, minimum set of expectations, and plenty of opportunities for additional work if you want to do that.
 
-I will detail the policy for this course below. Basically, work hard in practice, try to learn stuff, work collaboratively, ask for lots of help, and don't cheat. Don't be that person.
+### We will remain flexible and adjust to the situation.
+- A lot can and will change in the 6 weeks (one or more of us could get sick, need to care for others, etc.), and we will most likely need to adjust things again
+- Some parts of the course that seemed like a good idea in theory may not work in practice
+- Everybody needs support and understanding in this unprecedented moment
 
-The course assignments will include a homework assignment and quizes most weeks of the course, three individual, take home exams, and a group project with sections/drafts due throughout the course culminating in a final presentation and paper. The homework and the group project are the backbone of this course and must be completed satisfactorily to receive an A or B grade in the course.
+
+## <i class="fas fa-compress"></i> Summary of What Has(n't) Changed
+
+__What stays?__ We are still:
+
+- Using the _STAT2_ textbook for readings and problems
+- Having weekly problem sets to practice implementing new content in `R`
+- Using Slack for course communications, questions on course material (and problem sets)
+- Using this course site as the main place course information will be posted.
+- Using Moodle for hosting information that shouldn't be on the open-web, for submitting assignments, quizzes.
+
+__What goes?__ We are no longer:
+
+- Doing the group project as a required part of the course
+- Having Take Home Exam 2 just on multiple linear regression
+- Requiring Moodle quizes -- they're now optional
+
+__What's new?__ We are starting to:
+
+- Use Zoom for "lecture" and for student hours
+- Dedicated question time on Slack
+- Engage with Spinelli Center tutoring (i.e., STAT TAs) remotely
+
+## <i class="fas fa-graduation-cap"></i> Course Objectives (for the second half of Spring 2020)
+
+Our course objectives are for you to:
+
+- Apply your understanding of multiple linear regression modeling with additional practice based on real-world data
+- Extend your understanding of linear modeling to categorical / binary response variables
+- Define odds, probability, and the relationship between the two
+- Compare ordinary least squares and maximum likelihood estimation approaches to fitting regression models 
+- Calculate and interpret odds ratios from multiple logistic regression models
+
+_tl;dr_ - The goal is to learn multiple _logistic_ regression.
+
+## <i class="fas fa-users-cog"></i> Activities: How will we spend our time toward meeting those objectives?
+
+We will start off by keeping things *more or less* as they were. See your [results of the survey](https://sds291.netlify.com/blog/01-RLSurvey.html) from before break that made me think this was a reasonable approach. There will be real-time (synchronous) and non-real-time (asynchronous) activities, and you should feel free to choose whichever of these works for you at that point.
+
+| Activity | Synchronous Option | Asynchronous Options |
+|----------|--------------------|-----------------------|
+| "Class"  | Zoom Sessions (times TBD)   | Watch Recordings of Zoom Sessions, Posted to Moodle; Review Slides & .Rmd code; Do class activities, compare to solutions; engage on slack. |
+| Student Hours | Zoom Sessions (times TBD) | Watch Recordings of Zoom Sessions, Slack for questions|
+| Stat TAs | Appointment system - TBD | Class Slack |
+| Quizzes  | N/A                | Posted Wednesday, "Due" Monday |
+| Homework practice in `R` | N/A | Posted Wednesday, "Due" Monday |
+
+### "Class"
+
+We will have Zoom Sessions that will be similar to the in-class sessions we have been having. We will go over slides, do practice problems, and engage in discussion and question/answers about the readings and new course material.
+
+All materials will be online after the real-time "class" session via Zoom, including recordings of the Zoom meeting that will be posted to Moodle within 24 hours of the class (hopefully sooner, but it has been taking a while to get those recordings processed). Given that many of you will not be able to participate in real-time sessions on Eastern time, I would encourage you to consider the following steps:
+
+- review the slides and the raw `R` code files (the rmd) to review the concepts, 
+- do any in-class activities (and try not to peak at the answer set before you're done!), 
+- ask questions on Slack or in a Student Hour Zoom session that corresponds more with your home time zone, 
+- and/or watch the video of the Zoom session if you have the internet bandwidth.
+
+## <i class="fas fa-user-check"></i> Assignments: How will you demonstrate you've met those objectives?
 
 ### Homework
 
-Practice problems (mainly from the book) will be assigned (almost) every week on Monday in class and on Moodle; homework will be due via Moodle before 11:55AM of the following Monday. Homework should be completed in `RMarkdown`; both the `RMarkdown` and resulting knitted files should be submitted via Moodle. Homework will be graded, and you will be occasionally be asked to present your solution to a homework problem to the class. _**Late homeworks will have 25\% off if submitted within 48 hours of the deadline and no points thereafter.** Everyone has one free 48 hour extension that you may take whenever you need it. Please just let me know when you plan to take it._
+#### What's the same
+Homework will be as it has been this semester:
 
-### Group Project
+- Due via moodle on Monday, 11:55 AM Eastern time.
+- Submitted as knitted .pdf and .rmd code.
+- Graded with the check, check-minus system.
 
-A significant, culminating activity for this class will be to conduct a statistical investigation on a question of interest to you. These projects will be done in groups of three of your choosing. You will use existing data - publicly and freely available data online, or from faculty research you may be involved in. The project will be broken into multiple component parts due throughout the semester, culminating in a 10 minute oral presenation (with slides) in the last week of class and a final written report due the last day of class. We will spend time in class discussing questions of a reasonable scope for this project, reviewing available data sources, and writing a proposal and resulting report.
+#### What's different / new
+- There will be 4 homework assignments
+- Everyone has one additional, free 48 hour extension for homework during this second have of the semester that you may take whenever you need it. If you used one during the first part of the semester, you get another. If you didn't use your extension before, you have a second one. Please just let me know when you plan to take it/them.
+
 
 ### Take Home, Individual Exams
 
-There will be three, shorter take home exams throughout the semester. More details about the format and content of the projects will be available closer to the projects. I grant extensions only if your Class Dean is involved at least 24 hours before of the assignment deadline and suggests that flexibility with deadlines would be useful; exceptions to this rule for emergencies (i.e., hospitalizations) will be considered on a case by case basis. There will not be a final exam during finals period; your group project report will be due during that time.
+#### What's the same
+- The take home exam will be similar to the simple linear regression exam and (in scope) to the multiple linear regression IPUMS project we did in class before break: you'll have one topic and dataset to focus on, and will be expected to show what you've learned on a number of different topics we've covered throughout this part of the semester. 
+- Exam extensions are only granted if your Class Dean is involved at least 24 hours before of the assignment deadline and suggests that flexibility with deadlines would be useful; exceptions to this rule for emergencies (i.e., hospitalizations) will be considered on a case by case basis.
+- We'll have a review session and then you'll have a week to work on it.
+
+#### What's different / new
+- There is no second take home exam on multiple linear regression.
+- Essentially, this is the planned third take home exam and will focus on logistic regression.
+- It will be during the last week of class / due by the end of the original Finals period (Friday, May 8).
 
 ### Quizzes
 
-There will be brief ($\leq$ 20 minutes) quizes on Moodle due every week on Monday before 11:55AM (to be precise). You will be able to repeat the quiz as many times as needed before Monday at 11:55AM. So, effectively, the grade is for completion of the quiz, since you can retake it. The goal of the quizzes is to give timely feedback on your understanding of the previous week's material before the course moves on to new material. In rare cases, a quiz will also include questions about the assigned readings for the week ahead. Quizzes will be easy if you have been keeping up with the reading and the homework. The quiz contents will be discussed in Thursday's class. _**There will be no make-up quizzes, but your lowest quiz score will be dropped**_.  The quizes on Moodle will open Friday at noon (12:00pm) and close Monday before 11:55AM; you have 3 days to find 20 minutes to complete the quiz.
+#### What's the same
+- There will be brief ($\leq$ 20 minutes) quizes on Moodle due every week on Monday before 11:55AM (to be precise). 
+- You will be able to repeat the quiz as many times as needed before Monday at 11:55AM. So, effectively, the grade is for completion of the quiz, since you can retake it. 
+
+#### What's different
+- These are no longer required, they're only optional.
 
 ### Grading Policy
 
-Course grades will be a weighted average of the grades on your group project, take home inidividual projects, homework, and quizzes. A small amount of your grade for participation includes class attendance, participation in class activities and discussions, as well as professional conduct. Professional conduct expectations include: treating classmates, guest speakers, and instructors with respect; ensuring that all communication is done in a respectful and courteous manner - this includes email.
+Since we have shifted so dramatically what we can do and the grading system (S/U), the following only applies to the assignments due during this second half of the course.
 
-- **25%** of your grade will be determined by a semester-long group project, including progress and success on small assignments throughout the semester, as well as a written paper and a poster presentation given at the end of the semester.
+- **60%** for homework assignments (15% each)
 
-- **25%** of your grade will be determined by weekly homeworks practicing implementation of concepts in `R`.
+- **20%** for take home exam on logistic regression
 
-- **10%** of your grade will be determined by a first individual, take home exam on simple linear regression.
+- **20%** of your grade will be determined by your engagement in the course: attending class or student hours via Zoom, asking and answering questions via Slack. (see course policies below)
 
-- **10%** of your grade will be determined by a second individual, take home exam on multiple linear regression.
-
-- **10%** of your grade will be determined by a third individual, take home exam on logistic regression.
-
-- **10%** of your grade will be determined by in-class projects and reading responses.
-
-- **5%** of your grade will be determined by weekly Moodle quizzes
-
-- **5%** of your grade will be determined by your attendance and participation. Generally, attend class, ask and answer questions in class and/or on Slack.
-
-The purpose of grades is to provide formative feedback that aids your learning. I keep course grades in the online gradebook on Moodle so you can always check them there. But what matters is learning. I will enthusiastically talk to you about your learning anytime, and I encourage discussions in which we go over the work you have completed. These conversations let me hear about your challenges and questions, and provide important learning opportunities. However, my rule is that we shouldn't talk (and especially haggle) about the points or letter grade assigned unless I have made a clerical error.
 
 ## <i class="fas fa-users-cog"></i>  Resources
 
-### Course Website
-
-Course information, including this syllabus, will be available on the course Moodle site. I will update information posted there regularly with class handouts, homework, project assignments, and announcements.
-
-### Computing
-
-We will use the `R` statistical software package extensively and exclusively. `R` is open source software that is available for free on Mac, Windows, and Linux operating systems. There is an extensive section of the course Moodle site with `R` resources, which may be espectially useful for those newer to `R`. There are two ways to access `R` for this class:
-
-- Server: [The Smith College \texttt{RStudio} server](http://rstudio.smith.edu), which you are strongly encouraged to use. Enrolled students will get an account for the server shortly after the beginning of the class.  The advantages of using the server version are that it is cloud based: your work will be automatically saved and backed up, and you can work from any computer that has an internet connection (note: you need to be on a Smith College IP address to access the server, to access it off-campus, you may need to establish a VPN connection to Smith). Like any shared resource, there are limits on how much data you can store (only really relevant for projects, not homeworks) and how quickly it processes during periods of high use.
-
-- Desktop: You can also download `R` and `RStudio` to your computer and run things locally. Note - homework will be submitted via PDF, which requries additional software `TeX`. It seems like the best option our purposes is `TinyTeX` which you can install as you would other `R` packages -- see more info on `TinyTeX` [here.](https://yihui.org/tinytex/)
-
-Note that you do not have to choose one or the other; indeed, you can use both at different points in the class. For instance, you may want to get started using the server for homeworks and then transition to working on your project locally to maximize processing power and speed. Keeping your files on a cloud (e.g., Google Drive, Dropbox) in a folder shared among your group members will facilitate collaboration if you're all working from your individual desktops.
-
 ### Student Hours
-I am available in my office Mondays 10:30AM-12:30pm, Wednesdays 9:30-11:00AM for students to stop by and discuss anything that relates to the course or would be helpful to talk about in person. These hours are a great opportunity to clarify issues that have come up in class and in homeworks (including `R`), to discuss research opportunities, your academic interests as they relate to SDS, talk about a news story you read that involved statistical modeling, even just to say hi. Some questions are easier to answer in person than via email, and many - myself included! - feel more comfortable asking questions one-on-one than in front of class. Student hours are a great option for both scenarios. Practically, the hours on Monday are a good opportunity to resolve questions that came up in the previous week's class before the quiz or on the homeworks that are due most Mondays.
+I will be available at multiple set times during the week (specific times TBD) to answer questions and discuss material via Zoom and Slack.  I will also available by email and phone/text to have a one-on-one discussion as needed.
 
-### Additional Support on Campus
 #### Stat TAs
-There are Stat TAs available from 7 to 9 pm on Sunday - Thursday evenings in McConnell 301. Each TA has a brief bio at the [https://www.smith.edu/qlc/tutoring.html](Spinelli Center website). Most are familiar with the material covered in this course and all can provide support for working in `R`.
-
-#### Data Assistants \& Data Research and Statistics Counselor
-Spinelli Center for Quantitative Learning (now in Seelye 207) supports students doing quantitative work across the curriculum. The Center has a Statistics Counselor and Data Assistants available for appointments.
-
-#### Writing Support
-The Jacobson Center for Writing (Seelye 307) offers a variety of services design to help students improve writing skills, including drafts of their papers. This resource may be especially useful for the final project paper.
+There will be Stat TAs available - many of the same ones from earlier in the semester. The specific details of how are _nearly_ worked out, and will be shared here when they are finalized.
 
 ## <i class="fas fa-exclamation-circle"></i>  Course Policies
 
-### Attendance
-Your attendance in class - including being on time - is crucial to your and your classmates' success. We are all going to learn this material together, so we need to have everyone present and working. I will make accommodations for an unavoidable absence if you notify me in advance. Our Honor Code means that you will be the judge of whether or not an absence was unavoidable. (For instance, staying in bed because you had the flu would be an unavoidable absence, but oversleeping because you stayed up late to write a paper would be an avoidable absence.) One necessary absence during the semester is not unusual; having more than two is uncommon.
+### Attendance and Engagement
+Attendance and engagement will be demonstrated by any of the following per class session:
 
-### Collaboration
-Much of this course will operate on a collaborative basis, and you are expected encouraged and to work together with a partner or in small groups to study, complete homework assignments, and prepare for course projects. However, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable and will receive no credit. All students are bound by the Smith College Honor Code.
+- attending Zoom class time and commenting on one thought or question you had via Slack (or in real time in Zoom or Zoom chat)
+- watching Zoom class time video and commenting on one thought or question you had via Slack
+- attending Zoom student hours
+- asking or answering 2 questions on Slack on the class material within a week of the class
 
-### Written and Oral Communication Skills
-Your ability to communicate results, which may be technical in nature, to your audience, which is likely to be non-technical, is critical to your success as a data analyst. The homework and project assignments in this class will place an emphasis on the clarity of your writing. In addition, there were will be many opportunities throughout the class where you will be asked to present your results from in class exercises, homeworks and the final project to your classmates. Consider this course as a way to develop these crucial communication skills and be quick to seek support from peers, in student hours, and from other resources (see above) as needed to do so.
+This expectation should not be taken *too* literally. Attendance and engagement in the class is meant to give you an opportunity to get "credit" for staying engaged with your classmates and learning together. It isn't something to penalize. As it did during in-person instruction, the honor code plays in: I trust you to choose to engage in the ways that make sense for you. And again, people are going to need to attend and engage very differently - and differently sometimes from day to day. So I'm asking you to _use as many ways to stay engaged with your peers_ while you learn this material, and to _be helpful to your peers by answering their questions when you can_.
 
-### Email and Course Communications
-Student Hours and Slack will be the best way to reach me. I am actively on slack during the work day (9-5pm) and sometimes in the evenings. If you have questions about HW, please post them to the Slack channel for that assignment and answer other peoples' questions if you know the answer! If you do get in touch via email, I will do my best to respond within 24 hours during the week and 48 hours on the weekend. It will be helpful if you include an informative subject line, including the course number (i.e., "SDS 291 HW 3 Question").
+### Privacy
 
-### Timeliness, Deadlines, and Extensions
-Deadlines matter in this class, both because: a. these parameters help us keep our focus on the course content rather than logistics and b. because they matter in "the real world". When assignments are due _before_ 11:55am, Moodle counts submissions at 11:55:01am as late. This policy can be very challenging for people who put off their work until the last minute; I encourage you to start homework assignments early. Late work has 25\% off if submitted within the first 48 hours after the deadline. I allow for one "free", no-penalty 48 hour extension -- this applies to homeworks. If you need another extension or a longer extension during the semester, I grant extensions only if your Class Dean is involved well in advance of the assignment deadline and suggests that flexibility with deadlines would be useful. 
+To keep this a safe learning environment for everyone, please do not share screenshots, class sessions, lecture slides, online discussions and other course-related content & media with anyone outside this class. There will be challenges for all of us and it is extremely important for everyone to feel comfortable while learning. Fear of being recorded can be a big obstacle to that. Moreover, sharing materials like Zoom recordings will unintentially and automatically disclose your classmates by name, which is an invasion of their privacy. To the principle of "no one signed up for this", your steps to engage with the class in ways that build community and protect each other is really critical - maybe now more than ever.
 
 ### Academic Honor Code
 The 
 [Smith College honor code](https://www.smith.edu/sao/handbook/socialconduct/honorcode.php)
-articulates general expectations for students' conduct throughout the course. While some specific applications of the honor code are noted throughout other sections of the syllabus, these examples are illustrative and not exhaustive. In accordance with the honor code statement below, suspected cases of academic dishonesty will be reported to the Academic Honor Board.
-
-> Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information and honest and respectful use of college resources.
-	Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. All submitted work of any kind must be the original work of the student who must cite all the sources used in its preparation.
-
-Again, every word that you write must be your own. Copying and pasting sentences, paragraphs, or blocks of `R` code from another student is not acceptable, will receive no credit, and warrants notification of the Academic Honor Board. Similarly, Moodle quizes and take home exams should be completed independently and should not be discussed with other students during the open individual take home exam/quiz window. Per College policy, suspected violations will be reported to Academic Honor Board.
-
-With this in mind, I note that many of the materials used in this course build substantially from previous course instructors' work, namely Ben Baumer, Amelia McNamara, Miles Ott, as well as contributions and insights on this syllabus from Chad Topaz, Jude Higdon, and Steven Miller. I thank them for their work and willigness to share these materials.
+articulates general expectations for students' conduct throughout the course and applies to our course in this new iteration, including academic honesty and issues of privacy in particular.
 
 ### Course Accomodations
-If you have documented accomodations with [Office of Disability Services](https://www.smith.edu/about-smith/disability-services), please share the letter from their office via email as soon as possible. This includes if changes to exisiting accomodations or any new accomodations emerge through the semester.
+If you have documented accomodations with [Office of Disability Services](https://www.smith.edu/about-smith/disability-services), let's check in to make sure that your accomodations are still met in this new iteration of class activities and in your new learning environment.
 
 ### Health and Well-Being
-Your well-being matters to me personally and as a course instructor vis-a-vis your success in this course. I encourage you to use your support resources (including those on campus, like your Class Dean, RA, and Health Services) early and often. If you have social, health, emotional or financial challenges that significantly affect your performance in the course, please feel free to email me and set up a time to talk.
+Your well-being matters to me personally and as a course instructor vis-a-vis your success in this course. I encourage you to use your formal support resources (including your Class Dean, advisor, and Health Services) early and often. If you have social, health, emotional or financial challenges that significantly affect your performance in the course, please feel free to email me and set up a time to talk.

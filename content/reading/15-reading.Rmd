@@ -1,0 +1,34 @@
+---
+title: "Transformations"
+linktitle: "15: Transformations"
+date: "2020-03-29"
+read_date: "2020-03-29"
+menu:
+  reading:
+    parent: Readings
+    weight: 15
+type: docs
+---
+
+## Required  
+
+- <i class="fas fa-book"></i>  _STAT2_ Textbook
+  - 1.4 
+  - 3.4 (just the polynomial sub-section)
+
+- <i class="fas fa-newspaper"></i> Newspaper Articles/ Blog Posts
+  - McCardle, M. (2020, March 10). [When a danger is growing exponentially, everything looks fine until it doesn’t.](https://www.washingtonpost.com/opinions/2020/03/10/coronavirus-what-matters-isnt-what-you-can-see-what-you-cant/) _The Washington Post_.
+  - Chang, K. (2020, March 20). [A Different Way to Chart the Spread of Coronavirus](https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html). _The New York Times_.
+
+## Recommended
+
+- <i class="fas fa-newspaper"></i> Newspaper Articles/ Blog Posts
+  - Burn-Murdoch, J. (2020, March 25). [Coronavirus tracked: the latest figures as the pandemic spreads.](https://www.ft.com/coronavirus-latest) _Financial Times_. (Just look at the figures/graphs, paying attention to the y-axes and shape of trends)
+
+- <i class="fab fa-twitter"></i> This twitter thread from [@jburnmurdoch](https://twitter.com/jburnmurdoch), the data viz person from the _FT_* who created the graphs in the above reading
+
+```{r echo=FALSE}
+blogdown::shortcode('tweet', '1237748598051409921')
+```
+
+* A former Smithie [Christine Zhang](https://twitter.com/christinezhang) just joined the data journalism team at _FT_ -- they're clearly a good group!
