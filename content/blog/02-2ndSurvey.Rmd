@@ -121,15 +121,13 @@ I'm proposing 1 hour of student hours via Zoom on Tuesdays and Thursdays at 8 AM
 
 ### Group Project
 
-![](project_feelings.png)
-<!---img src="project_feelings.png" width="550"/---> 
+<img src="https://sds291.netlify.com/break/project_feelings.png" alt="test" height="550"/> 
 
 Most of you agreed with making the project optional, and about half seemed to think they would keep working on it.  I'm _more than happy_ to support those who do want to keep going.  I'll let you talk amongst yourselves and just get in touch with me about where you stand on that, and we can just work directly and/or make "optional" assignments if enough groups are still going to be working on it that some shared structure and timeline would be useful.
 
 ### COVID-19 Specific Examples in Class
 
-![](covid_specific.png)
-
+<img src="https://sds291.netlify.com/break/covid_specific.png" alt="test" height="550"/> 
 
 Most of you were interested in using COVID-19 related examples in class. 
 
