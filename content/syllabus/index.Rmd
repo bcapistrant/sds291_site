@@ -52,8 +52,8 @@ Let's assume good intentions, give the benefit of the doubt, and cut ourselves a
 
 ### We will prioritize flexible activities that will be accessible to all
 - We will have accessible materials for wide accessibility, across time zones, and in myriad contexts so that you can do this work whenever works for you
-- We will have real-time sessions - lectures, office hours, discussion - as a way to learn together and combat isolation. These are optional.
-- Some of you may be bored or want to throw yourself into work to keep yourself busy; some of you are overwhelmed and can't imagine how to do this. Both can be true within the same week, day or hour. We will have a reasonable, minimum set of expectations, and plenty of opportunities for additional work if you want to do that.
+- We will have real-time sessions - lectures, office hours, discussion - as a way to learn together and combat isolation. These are optional, in that you can complete the course without them, but strongly encouraged in that they foster a sense of community and are a better way to learn the course objectives.
+- Some of you may be bored or want to throw yourself into work to keep yourself busy; some of you are overwhelmed and can't imagine how to do this. Both can be true within the same week, day or hour. We will have a reasonable, minimum set of requirements, and plenty of opportunities for additional work if you want to do that.
 
 ### We will remain flexible and adjust to the situation.
 - A lot can and will change in the 6 weeks (one or more of us could get sick, need to care for others, etc.), and we will most likely need to adjust things again
@@ -73,9 +73,9 @@ __What stays?__ We are still:
 
 __What goes?__ We are no longer:
 
-- Doing the group project as a required part of the course
+- Doing the group project as a required part of the course (now _optional_)
 - Having Take Home Exam 2 just on multiple linear regression
-- Requiring Moodle quizes -- they're now optional
+- Requiring Moodle quizes (now _optional_)
 
 __What's new?__ We are starting to:
 

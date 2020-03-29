@@ -1,0 +1,143 @@
+---
+title: "Course Logistics"
+linktitle: "2 Second Survey"
+date: "2020-03-29"
+menu:
+  blog:
+    weight: 1
+type: blog
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+RL2_deID <- read_csv("~/Dropbox/3_Smith/SDS291/sds291_site/static/break/responses2.csv") %>%
+    mutate(timezone_us_grp=as.factor(if_else(timezone=="Eastern US", "Eastern",
+                                (if_else(timezone %in% c("Central US","Mountain US","Pacific US"), "Non-Eastern US", "Outside US")))),
+         timezone_us_d=as.factor(if_else(timezone %in% c("Eastern US","Central US","Mountain US","Pacific US"), "US", "South/East Asia"))
+         )
+```
+
+Thanks to those who completed the second survey about preferences for class logistics / timings. I wanted to report back to you on what you said, how I interpreted that, and what I'm proposing as a result.  There's a **summary** at the top in case you just the highlights, and then some more details and actual data/responses below for more detail.
+
+## Summary
+
+We'll have "class" Monday/Wednesdays from 1:20-2:35PM (Eastern) via Zoom*. These will be recorded and posted to Moodle.
+
+We'll have student hours via Zoom* on Tuesdays/Thursdays from 8-9AM and 4-5PM Eastern. These will also be recorded and posted to Moodle.
+
+We'll use Slack for all other course communications outside of those Zoom sessions.
+
+The group project is definitely optional. Groups who are interested in continuing their work -- or people who want an individual alternative to a group project -- please be in touch with me directly via Slack.
+
+We will use some COVID-19 examples in class (primarily in the first week), but cautiously and with an opt-out, alternative activity.
+
+There is [syllabus addendum](https://sds291.netlify.com/syllabus/) that I encourage you to read for other course specifics moving forward if you haven't already.
+
+*I'm still sorting out how best to share the Zoom links -- I think Google Calendar is easiest -- and will post them to Slack in the meantime.
+
+## Details
+
+### Times for "Class" via Zoom
+
+<img src="https://sds291.netlify.com/break/class_times.png" alt="test" width="550"/> 
+
+I'm taking from this that most people can do Section 1 - 1:20 to 2:35 - and am proposing that we use that time slot for our Zoom meeting for "Class". Since not everyone can make that time, I don't think having people from both sections will be troublesome. And it frees up more time for student hours as needed.
+
+I initially suggested times that would move from our current course block to accomodate our different time zones, and (the next morning) got an email from the Provost who strongly encouraged us to keep any real-time learning during the same course block to minimize conflicts. So, I changed the question about availability during the course times and by doing so lost the data from those who responded to the earlier version of the question. I botched this one -- my apologies for that, and for any confusion.  
+
+### Student Hours
+
+Student hours are going to be more useful than ever, especially for those who will be watching videos of material and want to get questions answered.  This is especially true for students who are home in South/East Asia and where class time is going to be in the middle of the night.
+
+```{r student hours - code}
+#table(responses$studenthours)
+SH_tomerge<-RL2_deID %>%
+  select(ID, studenthours) %>% #Keeping only the ID and classactivities variable
+  mutate(Q2 = strsplit(studenthours, split = ",\\s?")) %>% #Splitting the multiple options that are separated by commas into multiple variables
+  unnest() %>%
+  mutate(Value = 1) %>% #Making the new variable take the value of 1 if someone had checked that box
+  spread(Q2, Value, fill = 0) %>% #Spreading this back out into columns, filling in with 0s where the option wasn't checked
+  rename(tues_8am=`Tues 8 AM Eastern / 5 AM Pacific / 8 PM China / 5 PM Karachi`,
+         tues_9am=`Tues 9 AM Eastern / 6 AM Pacific / 9 PM China / 6 PM Karachi`,
+         tues_2pm=`Tues 2 PM Eastern / 11 AM Pacific / 2 AM China / 11 PM Karachi`,
+         tues_4pm=`Tues 4 PM Eastern / 1 PM Pacific / 3 AM China / 5 PM Karachi`,
+         tues_8pm=`Tues 8 PM Eastern / 5 PM Pacific / 8 AM (Wed) China / 5 AM (Wed) Karachi`,
+         tues_9pm=`Tues 9 PM Eastern / 6 PM Pacific / 9 AM (Wed) China / 6 AM (Wed) Karachi`) %>% #Renaming the variables more consistently
+  select(ID, starts_with("tues_")) # Just keeping the ID and activity variables - this can merge back with other data via the ID
+
+
+
+RL2_deID2<-RL2_deID %>%
+  select(ID, starts_with("timezone_"))
+
+#table(RL2_deID2$timezone_us_grp)
+SH_merge_wide<-inner_join(RL2_deID2,SH_tomerge, by="ID")
+
+SH_tograph_long <- SH_tomerge %>%
+    gather("tues", "hour", -ID) 
+
+SH_merge_long<-inner_join(RL2_deID2,SH_tograph_long, by="ID") 
+
+timezone_SH_tograph <- SH_merge_long %>%
+  mutate(tues=fct_relevel(tues, "tues_8am", "tues_9am", "tues_2pm", "tues_4pm", "tues_8pm", "tues_9pm")) %>%
+  group_by(timezone_us_grp, tues) %>%
+  count(hour) %>% # Count the 1s (yes/checked) and 0s (no/unchecked)
+  mutate(total=sum(n)) %>% # Count the total per activity
+  ungroup() %>% # Stop operating by Activity group
+  mutate(pct=round((n/total)*100, digits=1)) %>% #Calculate a percentage variable of the % of responses checked for a given activity
+  filter(hour==1) 
+
+#table(timezone_SH_tograph$tues)
+SH_plot<- timezone_SH_tograph %>%
+  ggplot(aes(y=pct, x=tues, fill=timezone_us_grp)) + geom_bar(stat="identity", position = position_dodge2(preserve = "single")) + 
+  scale_x_discrete(breaks=c("tues_8am", "tues_9am", "tues_2pm", "tues_4pm", "tues_8pm", "tues_9pm"),
+        labels=c("8AM", "9AM", "2PM", "4PM", "8PM", "9PM")) +
+  theme(axis.title.x=element_blank(),
+        legend.position="bottom") + 
+  labs(fill = "Time Zone") + xlab("Student Hour, in Eastern Time") + ylab("Percent") + ggtitle("Preferences for Student Hours (on Tues or Thurs) by Time Zone")
+```
+
+```{r student hours - plot}
+SH_plot
+```
+
+There aren't a lot of surprises here, but it's still helpful to see and walk through so you know what your classmates prefer.
+
+- Eastern time folks have a pretty symmetric distribution, with preferences more for mid-day/afternoon.
+- Non-Eastern US (primarily Pacific time) preferes afternoons.
+- Those outside the US are best served by early mornings or later evenings in Eastern Time US since you're 9-13 hours ahead, so 8AM is somewhere between 5-9PM for you, and 9PM is between 6-10AM).
+
+There's no perfect overlap here, and I'm not in a position to be having multiple 12 hour days for something morning, afternoon, and night.
+
+I'm proposing 1 hour of student hours via Zoom on Tuesdays and Thursdays at 8 AM Eastern, 4PM Eastern.
+
+
+### Group Project
+
+![](project_feelings.png)
+<!---img src="project_feelings.png" width="550"/---> 
+
+Most of you agreed with making the project optional, and about half seemed to think they would keep working on it.  I'm _more than happy_ to support those who do want to keep going.  I'll let you talk amongst yourselves and just get in touch with me about where you stand on that, and we can just work directly and/or make "optional" assignments if enough groups are still going to be working on it that some shared structure and timeline would be useful.
+
+### COVID-19 Specific Examples in Class
+
+![](covid_specific.png)
+
+
+Most of you were interested in using COVID-19 related examples in class. 
+
+I also _totally_ hear those who don't and want to honor that.  I won't make any required work COVID-19 related, just for practice in-class, and will offer alternative exercises for practice with different topics.
+
+I'll also come up with some material for a kind of public health 101 sort of presentation, and will probably have that during the second week that we're back (so the week of April 6th).  Stay tuned on that.
+
+### Other thoughts
+
+Thank you for the other ideas, repsonses, and feeling that you shared. Especially those who shared that they were having a hard time -- I appreciate knowing how you're doing, and want to support you for success in the class.  Some of these ideas will be easier to talk through "together" rather than reporting back and oversimplifying the points.  But, I just wanted to be sure you know I read and appreciated what else you included even if it's not mentioned above.
+
