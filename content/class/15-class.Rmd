@@ -1,0 +1,27 @@
+---
+title: "Transformations"
+linktitle: "15 Transformations"
+date: "2020-03-30"
+class_date: "2020-03-30"
+menu:
+  class:
+    parent: Class sessions
+    weight: 15
+type: docs
+weight: 15
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In Class Materials
+
+- [Slides](https://sds291.netlify.com/15/Transformation_Slides.pdf) (.pdf format - no raw file)
+- R Code linked in the slides: [Planets](https://sds291.netlify.com/15/Planets.R), [SpeciesArea](https://sds291.netlify.com/15/SpeciesArea.R), [StateSAT82](https://sds291.netlify.com/15/StateSAT82.R)
+
+## Extra Practice
+
+- A [lab on transformations](https://sds291.netlify.com/15/Transformation_ExtraPractice_2.html) (and raw [`.rmd`](https://sds291.netlify.com/15/Transformation_ExtraPractice_2.rmd))
+- A [stand-alone document](https://sds291.netlify.com/15/Transformation_ExtraPractice_1.pdf) describing these ideas (and raw [`.rmd`](https://sds291.netlify.com/15/Transformation_ExtraPractice_1.rmd))

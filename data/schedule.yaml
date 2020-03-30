@@ -132,6 +132,7 @@ lessons:
   - title: '<i class="fas fa-university"></i> **Intro to Transformations - logs, exponents**'
     date: "March 30"
     reading: "15-reading"
+    class: "15-class"
 
   - title: '<i class="fas fa-university"></i> **Odds, Odds Ratios, Probability**'
     date: "April 1"

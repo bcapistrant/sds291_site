@@ -561,5 +561,36 @@
 </description>
     </item>
     
+    <item>
+      <title>Transformations</title>
+      <link>/class/15-class/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/class/15-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-materials&#34;&gt;In Class Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extra-practice&#34;&gt;Extra Practice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In Class Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sds291.netlify.com/15/Transformation_Slides.pdf&#34;&gt;Slides&lt;/a&gt; (.pdf format - no raw file)&lt;/li&gt;
+&lt;li&gt;R Code linked in the slides: &lt;a href=&#34;https://sds291.netlify.com/15/Planets.R&#34;&gt;Planets&lt;/a&gt;, &lt;a href=&#34;https://sds291.netlify.com/15/SpeciesArea.R&#34;&gt;SpeciesArea&lt;/a&gt;, &lt;a href=&#34;https://sds291.netlify.com/15/StateSAT82.R&#34;&gt;StateSAT82&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extra-practice&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Extra Practice&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;https://sds291.netlify.com/15/Transformation_ExtraPractice_2.html&#34;&gt;lab on transformations&lt;/a&gt; (and raw &lt;a href=&#34;https://sds291.netlify.com/15/Transformation_ExtraPractice_2.rmd&#34;&gt;&lt;code&gt;.rmd&lt;/code&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://sds291.netlify.com/15/Transformation_ExtraPractice_1.pdf&#34;&gt;stand-alone document&lt;/a&gt; describing these ideas (and raw &lt;a href=&#34;https://sds291.netlify.com/15/Transformation_ExtraPractice_1.rmd&#34;&gt;&lt;code&gt;.rmd&lt;/code&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

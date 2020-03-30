@@ -1,0 +1,139 @@
+---
+title: "Transformations"
+author: "SDS 291"
+output: pdf_document
+---
+
+```{r include=FALSE}
+# Some customization.  Do not alter unless you're very sure you know what you are doing).
+
+# knitr settings to control how R chunks work and how the pdf is compiled when knit.
+library(knitr)
+require(knitr)
+opts_chunk$set(
+  tidy=TRUE,                     # display code as typed
+  size="small",                   # slightly smaller font for code
+  tidy.opts=list(width.cutoff=80), # wrap text and long comments
+  fig.width=5, fig.height=3           #figure size
+)
+#Requiring Stat2Data package for the data
+require(Stat2Data)
+require(mosaic)
+```
+
+When regression assumptions aren't met, there are four common culprits:
+1. 
+2.
+3.
+4. 
+
+In many cases, you can transform or make changes to your data to address these issues.
+
+#Does the number of hospitals reflect the number of available doctors?
+
+```{r echo=FALSE}
+data(MetroHealth83)
+head(MetroHealth83)
+```
+
+##Choose
+```{r, echo=FALSE}
+plot(NumMDs~NumHospitals, data=MetroHealth83)
+```
+
+Model we choose to fit:
+
+##Fit
+```{r, echo=FALSE}
+m2<-lm(NumMDs~NumHospitals, data=MetroHealth83)
+summary(m2)
+
+plot(NumMDs~NumHospitals, data=MetroHealth83)
+abline(m2)
+```
+
+Interpretation of findings:
+
+##Assess
+```{r, echo=FALSE}
+plot(residuals(m2)~fitted(m2))
+#abline puts a horizontal line at 0
+abline(0,0)
+```
+
+```{r, echo=FALSE}
+hist(residuals(m2))
+```
+
+```{r, echo=FALSE}
+qqnorm(residuals(m2))
+qqline(residuals(m2))
+```
+
+
+##Choose (Again)
+```{r, echo=FALSE}
+MetroHealth83 = MetroHealth83 %>%
+  mutate(sqrtMDs = sqrt(NumMDs))
+#MetroHealth83$sqrtMDs<-sqrtMDs(NumMDs)
+plot(sqrtMDs~NumHospitals, data=MetroHealth83)
+```
+
+What Model are we choosing? <!---$$\sqrt{Y} = \beta_0 + \beta_1 \cdot NumHospitals + \epsilon $$--->
+
+##Fit (Again)
+```{r, echo=FALSE}
+m3<-lm(sqrtMDs~NumHospitals, data=MetroHealth83)
+summary(m3)
+
+plot(sqrtMDs~NumHospitals, data=MetroHealth83)
+abline(m3)
+```
+
+Interpretation of findings:
+
+##Assess (Again)
+```{r, echo=FALSE}
+plot(residuals(m2)~fitted(m3))
+#abline puts a horizontal line at 0
+abline(0,0)
+```
+
+```{r, echo=FALSE}
+hist(residuals(m3))
+```
+
+```{r, echo=FALSE}
+qqnorm(residuals(m3))
+qqline(residuals(m3))
+```
+
+##Use (Again)
+
+What if we predict for a city like Louisville that has 18 hospitals how many doctors there would be. Be sure you have the units right!
+
+```{r}
+#This is a part of the mosaic package that makes prediction somewhat easier
+predictedMDs<-makeFun(m3)
+predictedMDs(NumHospitals=18)
+predictedMDs(NumHospitals=18)^2
+```
+
+#Does the number of species vary by size of the island in Southeast Asia?
+
+```{r}
+data("SpeciesArea")
+
+plot(Species~Area, data=SpeciesArea)
+
+SpeciesArea = SpeciesArea %>%
+  mutate(ln_Species = log(Species),
+          ln_Area = log(Area))
+
+m4<-lm(ln_Species~ln_Area, data=SpeciesArea)
+plot(ln_Species~ln_Area, data=SpeciesArea)
+abline(m4)
+
+```
+
+
