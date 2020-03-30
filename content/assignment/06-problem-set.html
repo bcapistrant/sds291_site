@@ -1,0 +1,94 @@
+---
+title: "6. Problem set 6"
+date: "2020-03-30"
+due_date: "2020-04-06"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Problem sets
+    weight: 6
+type: docs
+weight: 6
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#required">Required</a><ul>
+<li><a href="#log-transformations">1. Log Transformations</a></li>
+<li><a href="#odds-probabilities-and-odds-ratios">2. Odds, Probabilities, and Odds Ratios</a></li>
+</ul></li>
+<li><a href="#recommended">Recommended</a></li>
+<li><a href="#submit-on-moodle">Submit on Moodle</a></li>
+</ul>
+</div>
+
+<div id="required" class="section level1">
+<h1>Required</h1>
+<div id="log-transformations" class="section level2">
+<h2>1. Log Transformations</h2>
+<p>Estimate the relationship between Number of Hospitals and Doctors within a sample of counties <code>CountyHealth</code>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Make a scatterplot of the relationship between <code>MDs</code> as the response and <code>Hospitals</code> as the explanatory variable and comment on what you see.</p></li>
+<li><p>Make a new variable of the log of MDs and make a scatterplot of the relationship between logged version of <code>MDs</code> and Hospitals.</p></li>
+<li><p>Fit the regression model of the relationship of the logged version of MDs and Hospitals and interpret the slope in a sentence.</p></li>
+<li><p>Use the regression model from “c” to predict the number of doctors (not log(MDs)) for 4 counties: one with 2,3,9, and 10 hospitals, respectively. Comment on how the difference in predicted number of doctors between the counties with 2 &amp; 3 and 9 &amp; 10 hospitals values corresponds to the regression slope from “c”.</p></li>
+</ol>
+</div>
+<div id="odds-probabilities-and-odds-ratios" class="section level2">
+<h2>2. Odds, Probabilities, and Odds Ratios</h2>
+<p>Below are data from an Intensive Care Unit <code>ICU</code>, on whether someone Survived (Yes/No) and their age group (Youngest: &lt;50yo, Middle: 50-69, Oldest: 70+).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">AgeGroup</th>
+<th align="right">Yes</th>
+<th align="right">No</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Youngest</td>
+<td align="right">54</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">Middle</td>
+<td align="right">60</td>
+<td align="right">17</td>
+</tr>
+<tr class="odd">
+<td align="left">Oldest</td>
+<td align="right">46</td>
+<td align="right">18</td>
+</tr>
+</tbody>
+</table>
+<p><!-- |         | Yes | No | -->
+<!-- |---------|-----|----| -->
+<!-- | Youngest |  54 | 5 | -->
+<!-- | Middle  |  60 | 17 | -->
+<!-- | Oldest  |  46  | 18 | --></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Calculate the odds of surviving in the ICU for those in the youngest, middle, and oldest age groups. Interpret the odds of survival for the oldest group in a sentence.</p></li>
+<li><p>From the odds in “a”, calculate the probability of survival for each age group. Interpret the probability of survival for the youngest group in a sentence.</p></li>
+<li><p>From the table above, calculate the proportion of those who survived in the youngest group and compare this answer to your answer in “b”.</p></li>
+<li><p>Calculate a ratio of the odds of survival between those who are Middle vs. Youngest, and a ratio for those Oldest vs. Middle Aged. (No need to interpret, just calculate).</p></li>
+</ol>
+</div>
+</div>
+<div id="recommended" class="section level1">
+<h1>Recommended</h1>
+<p>TBD</p>
+</div>
+<div id="submit-on-moodle" class="section level1">
+<h1>Submit on Moodle</h1>
+<p>There is no template for this assignment. You’re a pro at making your own RMarkdown files now!</p>
+<p>You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.</p>
+<p>Use the Homework 6 submission on Moodle for <a href="https://moodle.smith.edu/course/view.php?id=36873">section 1</a> or <a href="https://moodle.smith.edu/course/view.php?id=36874">section 2</a>.</p>
+</div>

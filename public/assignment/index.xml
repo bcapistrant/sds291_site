@@ -323,6 +323,91 @@
     </item>
     
     <item>
+      <title>6. Problem set 6</title>
+      <link>/assignment/06-problem-set/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/06-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#log-transformations&#34;&gt;1. Log Transformations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#odds-probabilities-and-odds-ratios&#34;&gt;2. Odds, Probabilities, and Odds Ratios&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recommended&#34;&gt;Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;div id=&#34;log-transformations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1. Log Transformations&lt;/h2&gt;
+&lt;p&gt;Estimate the relationship between Number of Hospitals and Doctors within a sample of counties &lt;code&gt;CountyHealth&lt;/code&gt;.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;Make a scatterplot of the relationship between &lt;code&gt;MDs&lt;/code&gt; as the response and &lt;code&gt;Hospitals&lt;/code&gt; as the explanatory variable and comment on what you see.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make a new variable of the log of MDs and make a scatterplot of the relationship between logged version of &lt;code&gt;MDs&lt;/code&gt; and Hospitals.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fit the regression model of the relationship of the logged version of MDs and Hospitals and interpret the slope in a sentence.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use the regression model from “c” to predict the number of doctors (not log(MDs)) for 4 counties: one with 2,3,9, and 10 hospitals, respectively. Comment on how the difference in predicted number of doctors between the counties with 2 &amp;amp; 3 and 9 &amp;amp; 10 hospitals values corresponds to the regression slope from “c”.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;odds-probabilities-and-odds-ratios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2. Odds, Probabilities, and Odds Ratios&lt;/h2&gt;
+&lt;p&gt;Below are data from an Intensive Care Unit &lt;code&gt;ICU&lt;/code&gt;, on whether someone Survived (Yes/No) and their age group (Youngest: &amp;lt;50yo, Middle: 50-69, Oldest: 70+).&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;AgeGroup&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Yes&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;No&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Youngest&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;54&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Middle&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;60&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;17&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Oldest&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;46&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;!-- |         | Yes | No | --&gt;
+&lt;!-- |---------|-----|----| --&gt;
+&lt;!-- | Youngest |  54 | 5 | --&gt;
+&lt;!-- | Middle  |  60 | 17 | --&gt;
+&lt;!-- | Oldest  |  46  | 18 | --&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;Calculate the odds of surviving in the ICU for those in the youngest, middle, and oldest age groups. Interpret the odds of survival for the oldest group in a sentence.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;From the odds in “a”, calculate the probability of survival for each age group. Interpret the probability of survival for the youngest group in a sentence.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;From the table above, calculate the proportion of those who survived in the youngest group and compare this answer to your answer in “b”.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Calculate a ratio of the odds of survival between those who are Middle vs. Youngest, and a ratio for those Oldest vs. Middle Aged. (No need to interpret, just calculate).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recommended&lt;/h1&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;There is no template for this assignment. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;p&gt;Use the Homework 6 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Quiz 4</title>
       <link>/assignment/04-quiz/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>

@@ -1,0 +1,84 @@
+---
+title: "6. Problem set 6"
+date: "2020-03-30"
+due_date: "2020-04-06"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Problem sets
+    weight: 6
+type: docs
+weight: 6
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Required
+
+## 1. Log Transformations
+
+Estimate the relationship between Number of Hospitals and Doctors within a sample of counties `CountyHealth`.
+
+a. Make a scatterplot of the relationship between `MDs` as the response and `Hospitals` as the explanatory variable and comment on what you see.
+
+b. Make a new variable of the log of MDs and make a scatterplot of the relationship between logged version of `MDs` and Hospitals.
+
+c. Fit the regression model of the relationship of the logged version of MDs and Hospitals and interpret the slope in a sentence.
+
+d. Use the regression model from "c" to predict the number of doctors (not log(MDs)) for 4 counties: one with 2,3,9, and 10 hospitals, respectively. Comment on how the difference in predicted number of doctors between the counties with 2 & 3 and 9 & 10 hospitals values corresponds to the regression slope from "c".
+
+## 2. Odds, Probabilities, and Odds Ratios
+
+Below are data from an Intensive Care Unit `ICU`, on whether someone Survived (Yes/No) and their age group (Youngest: <50yo, Middle: 50-69, Oldest: 70+).
+
+```{r, echo=FALSE, warning=FALSE, error=FALSE, message=FALSE}
+library(tidyverse)
+library(Stat2Data)
+data("ICU")
+ICU2<-ICU %>%
+  mutate(AgeGroup=as.factor(if_else(AgeGroup==1, "Youngest",
+                            if_else(AgeGroup==2, "Middle",
+                            if_else(AgeGroup==3, "Oldest", NA_character_)))),
+        AgeGroup=fct_relevel(AgeGroup, "Youngest", "Middle", "Oldest"),
+        Survived=as.factor(if_else(Survive==1, "Yes",
+                           if_else(Survive==0, "No", NA_character_))),
+        Survived=fct_relevel(Survived, "Yes", "No")
+  )
+
+ICU2_a<-ICU2 %>%
+  group_by(Survived) %>%
+  count(AgeGroup) %>%
+  spread(Survived,n)
+
+knitr::kable(ICU2_a)
+```
+
+  <!-- |         | Yes | No | -->
+  <!-- |---------|-----|----| -->
+  <!-- | Youngest |  54 | 5 | -->
+  <!-- | Middle  |  60 | 17 | -->
+  <!-- | Oldest  |  46  | 18 | -->
+  
+a. Calculate the odds of surviving in the ICU for those in the youngest, middle, and oldest age groups.  Interpret the odds of survival for the oldest group in a sentence.
+
+b. From the odds in "a", calculate the probability of survival for each age group. Interpret the probability of survival for the youngest group in a sentence.
+
+c. From the table above, calculate the proportion of those who survived in the youngest group and compare this answer to your answer in "b".
+
+d. Calculate a ratio of the odds of survival between those who are Middle vs. Youngest, and a ratio for those Oldest vs. Middle Aged. (No need to interpret, just calculate).
+
+
+# Recommended
+
+TBD
+
+# Submit on Moodle
+
+There is no template for this assignment. You're a pro at making your own RMarkdown files now!
+
+You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline. 
+
+Use the Homework 6 submission on Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 
