@@ -18,10 +18,10 @@ editor_options:
 
 ## In Class Materials
 
-- [Slides](https://sds291.netlify.com/15/Transformation_Slides.pdf) (.pdf format - no raw file)
+- [Slides](https://sds291.netlify.com/15/Transformations_Slides.pdf) (.pdf format - no raw file)
 - R Code linked in the slides: [Planets](https://sds291.netlify.com/15/Planets.R), [SpeciesArea](https://sds291.netlify.com/15/SpeciesArea.R), [StateSAT82](https://sds291.netlify.com/15/StateSAT82.R)
 
 ## Extra Practice
 
 - A [lab on transformations](https://sds291.netlify.com/15/Transformation_ExtraPractice_2.html) (and raw [`.rmd`](https://sds291.netlify.com/15/Transformation_ExtraPractice_2.rmd))
-- A [stand-alone document](https://sds291.netlify.com/15/Transformation_ExtraPractice_1.pdf) describing these ideas (and raw [`.rmd`](https://sds291.netlify.com/15/Transformation_ExtraPractice_1.rmd))
+- A [stand-alone document](https://sds291.netlify.com/15/Transformation_ExtraPractice_a.pdf) describing these ideas - and working through an example that just has `Y` log transformed, similar to homework (and raw [`.rmd`](https://sds291.netlify.com/15/Transformation_ExtraPractice_a.rmd))

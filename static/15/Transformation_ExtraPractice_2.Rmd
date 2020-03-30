@@ -1,5 +1,6 @@
 ---
-title: 'Transformations'
+title: "Transformations"
+date: "March 30, 2020"
 output:
   html_document:
     css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
@@ -8,8 +9,9 @@ output:
     toc: true
 ---
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE, error=FALSE}
 require(mosaic)
+require(tidyverse)
 ```
 
 Let's start by generating some random data, much like we did for the residuals lab. Like that lab, you don't need to understand the code here, we're mostly trying to illustrate concepts. Feel free to copy-paste this code. 
@@ -32,7 +34,7 @@ Now, let's pretend that we don't know the value of $p$. That is, we know that $y
 * Plot y as a function of x. Does the relationship appear to be linear?
 
 ```{r, eval=FALSE}
-xyplot(y ~ x, data=Rand)
+qplot(y=y,x=x, data=Rand)
 ```
 
 #### Fit
@@ -92,7 +94,7 @@ Rand = Rand %>%
 Note that you may have to try multiple transformations until you find something that works well. 
 
 ```{r, eval=FALSE}
-xyplot(y_new ~ x, data=Rand)
+qplot(y=y_new, x=x, data=Rand)
 ```
 
 * Once you have something that looks roughly linear, re-fit the linear model, and assess it. Does the new model fit the assumptions for linear regression better than the old one? 
@@ -184,7 +186,7 @@ data(SpeciesArea)
 * Plot the number of species as a function of the area of the island. 
 
 ```{r}
-xyplot(Species ~ Area, data=SpeciesArea)
+qplot(y=Species, x=Area, data=SpeciesArea)
 ```
 
 * Try to use Tukey's Bulging Rule and Ladder, and the **manipulate** function to linearize the data. This time, we have sliders to transform both the **Species** and the **Area** variables. Try moving one and then the other. Does it work? Why or why not? 
@@ -200,7 +202,7 @@ manipulate(
 * Try to transform the data by taking the $\log$ of **both** the response and explanatory variable. Does that work better? How do you know?
 
 ```{r, eval=FALSE}
-xyplot(log(Species) ~ log(Area), data=SpeciesArea)
+qplot(y=log(Species), x=log(Area), data=SpeciesArea)
 ```
 
 
@@ -219,12 +221,6 @@ You also might need one more plotting idea for the homework. That is making diff
 SpeciesArea = SpeciesArea %>%
   mutate(BigSmall = ifelse(Area>1500, "Big", "Small"))
 ```
-
-```{r}
-xyplot(Species~Area, data=SpeciesArea, group=BigSmall, auto.key = TRUE)
-```
-
-Or, in `ggplot2`,
 
 ```{r}
 ggplot(SpeciesArea) + geom_point(aes(x=Area, y=Species, col=BigSmall))
