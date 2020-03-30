@@ -85,6 +85,41 @@
     </item>
     
     <item>
+      <title>Setting Slack Notifications</title>
+      <link>/resources/slack/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/resources/slack/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#refresher-on-using-slack&#34;&gt;Refresher on Using Slack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#slack-notifications&#34;&gt;Slack Notifications&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We’re going to be using Slack even more in the second half of the course as we were in the first half. Some may want some additional help configuring your settings within Slack so that you’re aware of important information (and, at the same time, not overwhelmed).&lt;/p&gt;
+&lt;div id=&#34;refresher-on-using-slack&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Refresher on Using Slack&lt;/h2&gt;
+&lt;p&gt;Here are a few good options for reviewing how to get started with Slack.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://slack.com/help/articles/115004071768-What-is-Slack-&#34;&gt;What is Slack?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://slackdemo.com/&#34;&gt;Slack Demo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://slack.com/help/articles/218080037-Getting-started-for-new-members&#34;&gt;Getting Started for new members.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slack-notifications&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slack Notifications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://slackhq.com/how-to-customize-notifications-in-slack&#34;&gt;How to customize Notifications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://slack.com/help/articles/201355156-Guide-to-desktop-notifications&#34;&gt;Desktop Notifications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://slack.com/help/articles/360025446073-Guide-to-mobile-notifications&#34;&gt;Mobile Notifications&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Moving Forward After Spring Break</title>
       <link>/blog/01-rlsurvey/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
@@ -4633,17 +4668,17 @@ Figure 1: A fancy pie chart.
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;“Class”&lt;/td&gt;
-&lt;td&gt;Zoom Sessions (times TBD)&lt;/td&gt;
+&lt;td&gt;Zoom Sessions (M/W 1:20-2:35*)&lt;/td&gt;
 &lt;td&gt;Watch Recordings of Zoom Sessions, Posted to Moodle; Review Slides &amp;amp; .Rmd code; Do class activities, compare to solutions; engage on slack.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Student Hours&lt;/td&gt;
-&lt;td&gt;Zoom Sessions (times TBD)&lt;/td&gt;
+&lt;td&gt;Zoom Sessions (Tu/Th 8AM, 4PM)&lt;/td&gt;
 &lt;td&gt;Watch Recordings of Zoom Sessions, Slack for questions&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;Stat TAs&lt;/td&gt;
-&lt;td&gt;Appointment system - TBD&lt;/td&gt;
+&lt;td&gt;Appointment system &amp;amp; Slack&lt;/td&gt;
 &lt;td&gt;Class Slack&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;

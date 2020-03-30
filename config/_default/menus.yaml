@@ -62,7 +62,9 @@ group:
 resources:
   - name: R and RStudio
     weight: 1
-  - name: Textbook
+  - name: Slack
     weight: 2
-  - name: Archived Course Materials
+  - name: Textbook
     weight: 3
+  - name: Archived Course Materials
+    weight: 4

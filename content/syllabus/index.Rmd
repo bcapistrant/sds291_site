@@ -101,9 +101,9 @@ We will start off by keeping things *more or less* as they were. See your [resul
 
 | Activity | Synchronous Option | Asynchronous Options |
 |----------|--------------------|-----------------------|
-| "Class"  | Zoom Sessions (times TBD)   | Watch Recordings of Zoom Sessions, Posted to Moodle; Review Slides & .Rmd code; Do class activities, compare to solutions; engage on slack. |
-| Student Hours | Zoom Sessions (times TBD) | Watch Recordings of Zoom Sessions, Slack for questions|
-| Stat TAs | Appointment system - TBD | Class Slack |
+| "Class"  | Zoom Sessions (M/W 1:20-2:35*)   | Watch Recordings of Zoom Sessions, Posted to Moodle; Review Slides & .Rmd code; Do class activities, compare to solutions; engage on slack. |
+| Student Hours | Zoom Sessions (Tu/Th 8AM, 4PM) | Watch Recordings of Zoom Sessions, Slack for questions|
+| Stat TAs | Appointment system & Slack | Class Slack |
 | Quizzes  | N/A                | Posted Wednesday, "Due" Monday |
 | Homework practice in `R` | N/A | Posted Wednesday, "Due" Monday |
 

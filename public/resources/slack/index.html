@@ -30,10 +30,11 @@
   
     
   
-  <meta name="description" content="RMarkdown Chapter 1 1.1 - Examples in 3 parts Part 1 - Example 1.1: Loading and Printing the Data Part 2 - Example 1.2: Making a Scatterplot Part 3 - Example 1.3: Fitting a Regression Model  1.3 - Assessing Conditions    In an effort to spend more time explaining the R syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes.">
+  <meta name="description" content="Refresher on Using Slack Slack Notifications   We’re going to be using Slack even more in the second half of the course as we were in the first half. Some may want some additional help configuring your settings within Slack so that you’re aware of important information (and, at the same time, not overwhelmed).
+Refresher on Using Slack Here are a few good options for reviewing how to get started with Slack.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/resources/01-textbookch1/">
+  <link rel="alternate" hreflang="en-us" href="/resources/slack/">
 
   
 
@@ -218,7 +219,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/resources/01-textbookch1/">
+  <link rel="canonical" href="/resources/slack/">
 
   
   
@@ -234,15 +235,16 @@
   <meta property="twitter:creator" content="@bencapistrant">
   
   <meta property="og:site_name" content="Multiple Regression">
-  <meta property="og:url" content="/resources/01-textbookch1/">
-  <meta property="og:title" content="Chapter 1 | Multiple Regression">
-  <meta property="og:description" content="RMarkdown Chapter 1 1.1 - Examples in 3 parts Part 1 - Example 1.1: Loading and Printing the Data Part 2 - Example 1.2: Making a Scatterplot Part 3 - Example 1.3: Fitting a Regression Model  1.3 - Assessing Conditions    In an effort to spend more time explaining the R syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:url" content="/resources/slack/">
+  <meta property="og:title" content="Setting Slack Notifications | Multiple Regression">
+  <meta property="og:description" content="Refresher on Using Slack Slack Notifications   We’re going to be using Slack even more in the second half of the course as we were in the first half. Some may want some additional help configuring your settings within Slack so that you’re aware of important information (and, at the same time, not overwhelmed).
+Refresher on Using Slack Here are a few good options for reviewing how to get started with Slack."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-01-27T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-03-27T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-03-24T18:36:51-04:00">
+    <meta property="article:modified_time" content="2020-03-27T00:00:00&#43;00:00">
   
 
   
@@ -269,7 +271,7 @@
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Chapter 1 | Multiple Regression</title>
+  <title>Setting Slack Notifications | Multiple Regression</title>
 
 </head>
 
@@ -656,7 +658,7 @@
     <a class="docs-toc-link" href="/resources/slack/">Slack</a>
     <ul class="nav docs-sidenav">
       
-      <li >
+      <li class="active">
         <a href="/resources/slack/">Setting Slack Notifications</a>
       </li>
       
@@ -669,7 +671,7 @@
     <a class="docs-toc-link" href="/resources/01-textbookch1/">Textbook</a>
     <ul class="nav docs-sidenav">
       
-      <li class="active">
+      <li >
         <a href="/resources/01-textbookch1/">Chapter 1</a>
       </li>
       
@@ -703,7 +705,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Chapter 1</h1>
+                    <h1>Setting Slack Notifications</h1>
 
                     
 
@@ -716,66 +718,28 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#rmarkdown">RMarkdown</a></li>
-<li><a href="#chapter-1">Chapter 1</a><ul>
-<li><a href="#examples-in-3-parts">1.1 - Examples in 3 parts</a><ul>
-<li><a href="#part-1---example-1.1-loading-and-printing-the-data">Part 1 - Example 1.1: Loading and Printing the Data</a></li>
-<li><a href="#part-2---example-1.2-making-a-scatterplot">Part 2 - Example 1.2: Making a Scatterplot</a></li>
-<li><a href="#part-3---example-1.3-fitting-a-regression-model">Part 3 - Example 1.3: Fitting a Regression Model</a></li>
-</ul></li>
-<li><a href="#assessing-conditions">1.3 - Assessing Conditions</a></li>
-</ul></li>
+<li><a href="#refresher-on-using-slack">Refresher on Using Slack</a></li>
+<li><a href="#slack-notifications">Slack Notifications</a></li>
 </ul>
 </div>
 
-<p>In an effort to spend more time explaining the <code>R</code> syntax we’re using in this class and to connect what those tasks are with the examples from the book, I’ll generate videos that walk through how to create the same models, figures, and statistical output that the textbook includes.</p>
-<p>Note that these are based on the 2nd Edition of the data. The principles and steps are very similar for the 1st edition. For example, the 2nd edition uses Honda Accord prices, while the 1st edition used Porsche prices. 1st edition users can still use the <code>PorschePrice</code> data from the <code>Stat2Data</code> package.</p>
-<div id="rmarkdown" class="section level1">
-<h1>RMarkdown</h1>
-<p>Here is a quick video overview of what’s going on in an RMarkdown file using the Smith College server.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/KCKDULGkPbI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<p>We’re going to be using Slack even more in the second half of the course as we were in the first half. Some may want some additional help configuring your settings within Slack so that you’re aware of important information (and, at the same time, not overwhelmed).</p>
+<div id="refresher-on-using-slack" class="section level2">
+<h2>Refresher on Using Slack</h2>
+<p>Here are a few good options for reviewing how to get started with Slack.</p>
+<ul>
+<li><a href="https://slack.com/help/articles/115004071768-What-is-Slack-">What is Slack?</a></li>
+<li><a href="https://slackdemo.com/">Slack Demo</a></li>
+<li><a href="https://slack.com/help/articles/218080037-Getting-started-for-new-members">Getting Started for new members.</a></li>
+</ul>
 </div>
-
-</div>
-<div id="chapter-1" class="section level1">
-<h1>Chapter 1</h1>
-<div id="examples-in-3-parts" class="section level2">
-<h2>1.1 - Examples in 3 parts</h2>
-<div id="part-1---example-1.1-loading-and-printing-the-data" class="section level3">
-<h3>Part 1 - Example 1.1: Loading and Printing the Data</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/F_tGm-Aj-4M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-<div id="part-2---example-1.2-making-a-scatterplot" class="section level3">
-<h3>Part 2 - Example 1.2: Making a Scatterplot</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/O_oE3xfDOyE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-<div id="part-3---example-1.3-fitting-a-regression-model" class="section level3">
-<h3>Part 3 - Example 1.3: Fitting a Regression Model</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/A24FVWmrzVI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
-</div>
-<div id="assessing-conditions" class="section level2">
-<h2>1.3 - Assessing Conditions</h2>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/MAoN73IeNto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</div>
+<div id="slack-notifications" class="section level2">
+<h2>Slack Notifications</h2>
+<ul>
+<li><a href="https://slackhq.com/how-to-customize-notifications-in-slack">How to customize Notifications</a></li>
+<li><a href="https://slack.com/help/articles/201355156-Guide-to-desktop-notifications">Desktop Notifications</a></li>
+<li><a href="https://slack.com/help/articles/360025446073-Guide-to-mobile-notifications">Mobile Notifications</a></li>
+</ul>
 </div>
 
                     </div>
@@ -788,7 +752,7 @@
                 </div>
 
                 <div class="body-footer">
-                    <p>Last updated on March 24, 2020</p>
+                    <p>Last updated on March 27, 2020</p>
 
                     
 
@@ -800,7 +764,7 @@
   
 
 <p class="edit-page">
-  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/01-textbookCh1.html">
+  <a href="https://github.com/bencapistrant/sds291_site/edit/master/content/resources/slack.html">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
