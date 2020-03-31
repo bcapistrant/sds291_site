@@ -389,14 +389,14 @@
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;Calculate the odds of surviving in the ICU for those in the youngest, middle, and oldest age groups. Interpret the odds of survival for the oldest group in a sentence.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;From the odds in “a”, calculate the probability of survival for each age group. Interpret the probability of survival for the youngest group in a sentence.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;From the table above, calculate the proportion of those who survived in the youngest group and compare this answer to your answer in “b”.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;From the table above, calculate the &lt;em&gt;proportion&lt;/em&gt; of the youngest group who survived and compare this answer to your answer in “b”.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Calculate a ratio of the odds of survival between those who are Middle vs. Youngest, and a ratio for those Oldest vs. Middle Aged. (No need to interpret, just calculate).&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;recommended&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Recommended&lt;/h1&gt;
-&lt;p&gt;TBD&lt;/p&gt;
+&lt;p&gt;Q1e. Does this model actually fit the data well? Try other transformations - of Hospitals, MDs, or both - until you find an arrangement that looks reasonable for a linear regression model; report the results of that model and explain why you think it might be best.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Submit on Moodle&lt;/h1&gt;
