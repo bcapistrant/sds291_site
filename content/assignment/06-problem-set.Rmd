@@ -20,7 +20,7 @@ editor_options:
 
 ## 1. Log Transformations
 
-Estimate the relationship between Number of Hospitals and Doctors within a sample of counties `CountyHealth`.
+Estimate the relationship between Number of Hospitals and Doctors within a sample of counties in the dataset called `CountyHealth`. (This dataset is from the `Stat2Data` package, just like other problems from the book and you can bring it in like the code we've used in class or on previous homework problems (e.g., "Cereal", or "Perch"))
 
 a. Make a scatterplot of the relationship between `MDs` as the response and `Hospitals` as the explanatory variable and comment on what you see.
 

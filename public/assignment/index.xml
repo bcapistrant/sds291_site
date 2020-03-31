@@ -344,7 +344,7 @@
 &lt;h1&gt;Required&lt;/h1&gt;
 &lt;div id=&#34;log-transformations&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1. Log Transformations&lt;/h2&gt;
-&lt;p&gt;Estimate the relationship between Number of Hospitals and Doctors within a sample of counties &lt;code&gt;CountyHealth&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Estimate the relationship between Number of Hospitals and Doctors within a sample of counties in the dataset called &lt;code&gt;CountyHealth&lt;/code&gt;. (This dataset is from the &lt;code&gt;Stat2Data&lt;/code&gt; package, just like other problems from the book and you can bring it in like the code we’ve used in class or on previous homework problems (e.g., “Cereal”, or “Perch”))&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;Make a scatterplot of the relationship between &lt;code&gt;MDs&lt;/code&gt; as the response and &lt;code&gt;Hospitals&lt;/code&gt; as the explanatory variable and comment on what you see.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Make a new variable of the log of MDs and make a scatterplot of the relationship between logged version of &lt;code&gt;MDs&lt;/code&gt; and Hospitals.&lt;/p&gt;&lt;/li&gt;
