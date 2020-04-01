@@ -1,0 +1,29 @@
+---
+title: "Odds, Probabilities, Odds Ratios"
+linktitle: "16 Odds, Prob, ORs"
+date: "2020-04-01"
+class_date: "2020-04-01"
+menu:
+  class:
+    parent: Class sessions
+    weight: 16
+type: docs
+weight: 16
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In Class Materials
+
+- [Slides](https://sds291.netlify.com/16/16-Slides-OddsProbabilities.pdf) (.pdf format - no raw file)
+    - Slides with Answers to Calculations on last 3 slides: [Completed Slides](https://sds291.netlify.com/16/16-Slides-OddsProbabilities_Answers.pdf) (.pdf format - no raw file)
+    - R Code for how to do the calulations from the last 2 Slides in R: [Calculating OR and 95% CI in R](https://sds291.netlify.com/16/OR_95CI.R)
+    
+- Google Doc with in-class practice (both are view only - just make a copy)
+    - Original: [Blank Version](https://docs.google.com/document/d/1TMVDFn1xmfv8tD8mm5KKPeszIBROK4tWnzg1NtDob4c/edit?usp=sharing)
+    - Solutions: [Answers](https://docs.google.com/document/d/1Y3LfXq3SpOxUwxG-mnz0TejNKxGuENHGPOol4KyPQDY/edit?usp=sharing)
+
+- Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

@@ -2621,6 +2621,38 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
     </item>
     
     <item>
+      <title>Odds, Probabilities, Odds Ratios</title>
+      <link>/class/16-class/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/class/16-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-materials&#34;&gt;In Class Materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In Class Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sds291.netlify.com/16/16-Slides-OddsProbabilities.pdf&#34;&gt;Slides&lt;/a&gt; (.pdf format - no raw file)
+&lt;ul&gt;
+&lt;li&gt;Slides with Answers to Calculations on last 3 slides: &lt;a href=&#34;https://sds291.netlify.com/16/16-Slides-OddsProbabilities_Answers.pdf&#34;&gt;Completed Slides&lt;/a&gt; (.pdf format - no raw file)&lt;/li&gt;
+&lt;li&gt;R Code for how to do the calulations from the last 2 Slides in R: &lt;a href=&#34;https://sds291.netlify.com/16/OR_95CI.R&#34;&gt;Calculating OR and 95% CI in R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Google Doc with in-class practice (both are view only - just make a copy)
+&lt;ul&gt;
+&lt;li&gt;Original: &lt;a href=&#34;https://docs.google.com/document/d/1TMVDFn1xmfv8tD8mm5KKPeszIBROK4tWnzg1NtDob4c/edit?usp=sharing&#34;&gt;Blank Version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Solutions: &lt;a href=&#34;https://docs.google.com/document/d/1Y3LfXq3SpOxUwxG-mnz0TejNKxGuENHGPOol4KyPQDY/edit?usp=sharing&#34;&gt;Answers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Logistic Regression Inference</title>
       <link>/reading/18-reading/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
@@ -4387,10 +4419,8 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/class/16-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 6&lt;/td&gt;
