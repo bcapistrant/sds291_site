@@ -71,9 +71,22 @@ c. From the table above, calculate the _proportion_ of the youngest group who su
 d. Calculate a ratio of the odds of survival between those who are Middle vs. Youngest, and a ratio for those Oldest vs. Middle Aged. (No need to interpret, just calculate).
 
 
-# Recommended
+# Lightly Recommended
+
+These should be considered only for those who want a lot more practice with these ideas and to deepen your understanding beyond what we will need for this class.
 
 Q1e. Does this model actually fit the data well?  Try other transformations - of Hospitals, MDs, or both - until you find an arrangement that looks reasonable for a linear regression model; report the results of that model and explain why you think it might be best.
+
+Q2e. Calculate the 95% Confidence Intervals for the Odds Ratios.
+
+Q3. 
+a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the "Primary Endpoint" (ICU admission, intubation, or death.)
+
+b. Use [this paper](https://www.cdc.gov/mmwr/volumes/69/wr/mm6913e2.htm) out this Tuesday from the U.S. Centers for Disease Control and Prevention (CDC) to calculate the OR and 95% CI for diabetes and ICU admissions (ICU vs. non-ICU) in the U.S.
+
+c. Are the OR and the 95% CIs in "a" and "b" similar? How do they compare? 
+
+d. What does this tell you about how diabetes is associated with COVID progression in the US compared to China? What _doesn't_ it tell you, and what else would you want to know?
 
 # Submit on Moodle
 
