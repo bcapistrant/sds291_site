@@ -2673,7 +2673,12 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 &lt;ul&gt;
 &lt;li&gt;9.1-9.2, with specific attention to the &lt;em&gt;concepts&lt;/em&gt; of odds, probability, and odds ratios (not on the regression model just yet)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book-medical&#34;&gt; Journal Article
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book-medical&#34;&gt;&lt;/i&gt; Journal Article
 &lt;ul&gt;
 &lt;li&gt;Guan, W. J., Ni, Z. Y., Hu, Y., Liang, W. H., Ou, C. Q., He, J. X., … &amp;amp; Du, B. (2020). &lt;a href=&#34;https://www-nejm-org.libproxy.smith.edu/doi/full/10.1056/NEJMoa2002032&#34;&gt;Clinical characteristics of coronavirus disease 2019 in China.&lt;/a&gt; &lt;em&gt;New England Journal of Medicine&lt;/em&gt;. DOI: 10.1056/NEJMoa2002032&lt;/li&gt;
 &lt;li&gt;Tenny S, Hoffman MR. Odds Ratio (OR) [Updated 2019 Nov 26]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2020 Jan-. Available from: &lt;a href=&#34;https://www-ncbi-nlm-nih-gov.libproxy.smith.edu/books/NBK431098/&#34; class=&#34;uri&#34;&gt;https://www-ncbi-nlm-nih-gov.libproxy.smith.edu/books/NBK431098/&lt;/a&gt;&lt;/li&gt;
@@ -2682,10 +2687,11 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
 &lt;ul&gt;
 &lt;li&gt;Carroll, A.E. (2017, Nov 10). &lt;a href=&#34;https://www.nytimes.com/2017/11/10/upshot/health-alcohol-cancer-research.html&#34;&gt;A Link Between Alcohol and Cancer? It’s Not Nearly as Scary as It Seems&lt;/a&gt; &lt;em&gt;The New York Times&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt; Videos
+&lt;ul&gt;
+&lt;li&gt;The Daily Show with Jon Stewart. (2009, April 30). &lt;a href=&#34;http://www.cc.com/video-clips/hzqmb9/the-daily-show-with-jon-stewart-large-hadron-collider&#34;&gt;Large Hadron Collider&lt;/a&gt;. (particularly 3:08 - 4:25, but it’s helpful to have the set up before then)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Recommended&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
