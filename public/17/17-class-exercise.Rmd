@@ -1,0 +1,157 @@
+---
+title: "Logistic Regression"
+author: "SDS 291"
+date: "4/6/2020"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggpubr)
+```
+
+We have data from each state (n=50) on their average income, education (% high school, % college, and % advanced degrees completed), political leaning from a 2015 Gallup poll and whether President Trump won that state (1=Win) or not (0=Did not Win) in the 2016 election.
+
+```{r}
+library(Stat2Data)
+data("Election16")
+```
+ 
+\newpage
+# Income and Election Outcome
+## Plots
+Below are two plots exploring the relationship between income and President Trump winning that state.  They are depicting the same pattern; the right "jitters" the data to spread the points out. (Note for the right plot, there aren't _actually_ values >1 and <0, that's just a function of the actual data being spread out).
+
+```{r, eval=FALSE}
+qplot(y=TrumpWin, x=Income, data=Election16) 
+qplot(y=TrumpWin, x=Income, data=Election16) + geom_jitter(width = 0.1, height=0.05)
+```
+
+```{r, dpi=300, echo=FALSE}
+p1<- Election16 %>%
+  ggplot(aes(y=TrumpWin, x=Income)) + geom_point() 
+p2<- Election16 %>%
+  ggplot(aes(y=TrumpWin, x=Income)) + geom_point() + geom_jitter(width = 0.1, height=0.05)
+gridExtra::grid.arrange(p1, p2, ncol = 2)
+```
+
+
+### 1. Which is the easier graph to understand? Why?
+
+\vspace{1.5 in}
+
+### 2. What do you conclude from the plot about the relationship between income and the 2016 election results?
+
+\vspace{2 in}
+
+\newpage
+## Logistic Model
+
+Let's fit a logistic regression model to these data: $log(\frac{\pi}{1-\pi}) = \beta_0+\beta_1 X_1$
+```{r}
+m0<-glm(TrumpWin~Income, data=Election16, family="binomial")
+summary(m0)
+```
+We can write this fitted model as $log(odds) = 11.18+-0.0001967Income$
+
+\newpage
+
+Let's use Income in \$1,000s to make the interpretation a little easier.  Then we re-fit a logistic regression model.
+
+```{r}
+Election16<-Election16 %>% mutate(Income1000s = Income/1000)
+m1<-glm(TrumpWin~Income1000s, data=Election16, family="binomial")
+summary(m1)
+```
+
+### 3. Write the fitted regression model equation using the output above.
+\vspace{1.5 in}
+
+### 4. What is the direction and magnitude of the relationship between the average income and whether Pres. Trump won that state?
+\vspace{1.5 in}
+
+
+
+\newpage
+### 5. Calculate the log(odds) (the book calls this the Empirical Logit), the odds, and the probability of President Trump winning for each of the following income levels.  As a reminder, you can calculate each from the same output.
+
+_Log(odds):_ $$log(odds) = \beta_0+\beta_1 X_1$$
+_Odds:_ $$Odds = e^{\beta_0+\beta_1 X_1}$$
+_Probability:_ $$\pi = \frac{odds}{1+odds} = \frac{e^{\beta_0+\beta_1 X_1}}{1+e^{\beta_0+\beta_1 X_1}}$$
+
+\vspace{5.5 in}
+
+| Income | \$40,000    | \$50,000     | \$51,000    | \$55,000    |\$60,000    |\$61,000    |  \$70,000   |
+|-----|------------|------------|------------|------------|------------|------------|------------|
+| Log(odds) |           |           |           |           |           |           |           |
+|   |           |           |           |           |           |           |           |
+| Odds |           |           |           |           |           |           |           |
+|   |           |           |           |           |           |           |           |
+| Probability|           |           |           |           |           |           |           |
+|   |           |           |           |           |           |           |           |
+
+\newpage
+### 6. Plot the values on each of the three plots below.
+
+```{r, echo=FALSE, fig.width=3.5, fig.height=3.5, echo=FALSE, warning= FALSE}
+logodds<-predict(m1, data.frame(Income1000s=c(40:70)))
+odds<-exp(logodds)
+prob<-odds/(1+odds)
+Income1000s<-c(40:70)
+m1_data<-as.data.frame(cbind(prob,odds,logodds,Income1000s))
+```
+
+#### 6a. Log(odds)
+
+```{r, echo=FALSE, fig.width=6, fig.height=2.5, dpi=300}
+ggplot(m1_data, aes(x=Income1000s,y=logodds))  + scale_y_continuous(breaks=seq(-3,3.5,1)) 
+```
+
+#### 6b. Odds
+
+```{r, echo=FALSE, fig.width=6, fig.height=2.5, dpi=300}
+ggplot(m1_data, aes(x=Income1000s,y=odds))  + scale_y_continuous(breaks=seq(0,30,4))
+```
+
+#### 6c. Probability
+
+```{r, echo=FALSE, fig.width=6, fig.height=2.5, dpi=300}
+ggplot(m1_data, aes(x=Income1000s, y=prob)) + scale_y_continuous(breaks=seq(0,1,0.1))
+```
+
+\newpage
+
+### 7. What is the ratio of odds for President Trump winning a state?
+
+#### 7a. Calculate the ratio the odds of a (theoretical) state with \$51,000 average income to a state with \$50,000 average income.
+
+\vspace{1.5 in}
+
+#### 7b. Calculate the ratio the odds of a (theoretical) state with \$61,000 average income to a state with \$60,000 average income.
+
+\vspace{1.5 in}
+
+#### 7c. Calculate the OR from the model ($OR = e^{\beta_1}$).  Interpret the odds ratio in a sentence.
+\vspace{1.5 in}
+
+#### 7d. Did you get the same values from each approach (7a-7c)? Why or why not?
+\vspace{1.5 in}
+
+\newpage
+
+### 8. Specify your hypotheses and conduct a test of whether the relationship between average income and President Trump winning a state is statistically signficant at the $\alpha = 0.05$ level.
+
+\vspace{1.5 in}
+
+### 9. Calculate the 95% Confidence Interval for the odds ratio of each additional \$1,000 of average income and of Pres Trump winning that state. $t^* = 1.96$
+
+\vspace{4.5 in}
+
+# Extra Practice
+
+Create a binary variable of whether that state had above or below the national average rate of bachelors degree holders (35.6%) and repeat the steps above in `R`. 
+
+( _Hint_: Remember how to create a binary variable? See the IPUMS in-class exercise for examples of when you've done this before)

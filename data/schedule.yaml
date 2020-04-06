@@ -142,6 +142,7 @@ lessons:
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Intro to Logistic Regression Models**'
     date: "April 6"
     reading: "17-reading"
+    class: "17-class"
     #assignment: "05-eval-dag"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Fitting and Interpreting Models**'

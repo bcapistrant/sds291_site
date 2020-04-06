@@ -1,0 +1,28 @@
+---
+title: "Simple Logistic Regression"
+linktitle: "17 Simple Logistic - 1"
+date: "2020-04-06"
+class_date: "2020-04-06"
+menu:
+  class:
+    parent: Class sessions
+    weight: 17
+type: docs
+weight: 17
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In Class Materials
+
+- [Slides](https://sds291.netlify.com/17/17-class-lectureslides.html) ([`.rmd` raw file](https://sds291.netlify.com/17/17-class-lectureslides.rmd))
+
+- Practice 
+    - Below is the same document in different formats. PDF is easier for a tablet, pen/paper, or to use the "annotate" drawing features, and google doc is easier if you're more comfortable with that approach or want to share with classmates and work together. I will post the raw file and solutions later this week - the goal is to work on this first.
+    - `.PDF` [version](https://sds291.netlify.com/17/17-class-exercise.pdf)
+    - Google Doc [version](https://docs.google.com/document/d/1gdE_KCEtbo_9iHUbJ3IyHMMxyrFhbgDkVj0VYKnwUcA/edit?usp=sharing) (now view-only, just make a copy)
+
+- Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

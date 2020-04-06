@@ -1,0 +1,582 @@
+---
+title: "Simple Logistic Regression - Part 1"
+author: "SDS 291"
+date: "April 6, 2020"
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith()
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,eval=TRUE, cache=TRUE)
+require(tidyverse)
+require(mosaicData)
+require(Stat2Data)
+```
+
+
+---
+
+## Outline for the Week
+
+.pull-left[
+### Today
+
+- How to Choose a Logistic Regression Model
+    - Why won't linear regression work?
+    - What's the logistic transformation?
+    - What are odds and log odds?
+        - How are they related to probabilities?
+    - What are the two forms of the model?
+    - How do we specify random error in the logistic model?
+- How to define, calculate, and interpret Odds Ratios
+    - How are Odds and Odds Ratios related?
+    - How do we interpret the slope of logistic regression?
+        - Quantitative explanatory variable (today)
+        - Binary explanatory variable (Thursday)
+]
+
+.pull-right[
+### Thursday
+
+- How do we evaluate whether assumptions of the logistic regression model are met?
+    - Randomness
+    - Independence
+    - Linearity
+- How do we conduct formal inference to our population of interest with a logistic model?
+    - Likelihood and Maximum Likelihood
+    - Tests
+    - Confidence Intervals
+]
+
+---
+## Quantitative vs. Binary Response Variables
+
+Often, we want to model a **response** variable that is **binary**, meaning that it can take on only two possible outcomes. 
+
+These outcomes could be labeled "Yes" or "No", or "True" of "False", but for all intents and purposes, they can be coded as either 0 or 1. 
+
+We have seen these types of variables before (as indicator variables), but we always used them as **explanatory** variables. 
+
+Creating a model for such a variable as the response requires a more sophisticated technique than ordinary least squares regression. It requires the use of a **logistic** model.
+
+
+---
+
+## Quick Aside: Other kinds of logistic models
+
+There are forms of logistic regression for:
+
+- Binary (logistic - what we're doing in this class)
+
+  \begin{equation}
+    Alive=
+    \begin{cases}
+      0= & \text{Dead} \\
+      1= & \text{Alive}
+    \end{cases}
+  \end{equation}
+  
+- Ordinal (ordered logistic regression)
+
+  \begin{equation}
+    \text{Self Rated Health}=
+    \begin{cases}
+      0=\text{Excellent} \\
+      1=\text{Very Good} \\
+      2=\text{Good} \\
+      3=\text{Fair} \\
+      4=\text{Poor}
+    \end{cases}
+  \end{equation}
+
+
+- Nominal (multinomial logistic regression)
+
+  \begin{equation}
+    \text{Political Party}=
+    \begin{cases}
+      0=\text{Democrat} \\
+      1=\text{Green Party} \\
+      2=\text{Independent} \\
+      3=\text{Republican} \\
+      4=\text{Reform Party}
+    \end{cases}
+  \end{equation}
+
+---
+
+## Example: Binary Response, Quantitative Explanatory Variable
+
+Let's stay with the `Putts1` data from last week: the putt either made it or it missed from a number of feet away from the hole.
+
+Our goal is to determine the association between `Length` (in feet) and likelihood of making the put (`Made`= 0 (missed) or 1 (made)).
+
+```{r}
+data("Putts1")
+```
+
+---
+# Jitter is your friend
+
+.pull-left[
+```{r}
+regular_plot<-qplot(x=Length,y=Made,data=Putts1)
+regular_plot
+```
+]
+
+.pull-left[
+```{r}
+jitter_plot<-qplot(x=Length,y=Made,data=Putts1)+geom_jitter()
+jitter_plot
+```
+]
+
+## Basic Prediction
+
+.pull-left[
+ 
+```{r}
+Putts1 <- Putts1 %>%
+  mutate(avg_Made = mean(Made))
+
+Putts1 %>%
+  select(avg_Made) %>% 
+  slice(1) %>%
+  head 
+```
+
+What does this number mean?
+]
+ 
+.pull-right[
+```{r}
+jitter_plot + geom_hline(aes(yintercept = avg_Made),Putts1,color='coral', size=2)
+```
+
+What would we predict for a 3 foot putt? A 7 foot putt? Does this make sense?
+]
+
+??? 
+
+We would predict a putt from any distance - whether from 3 of 7 feet away - would have a 57.5% chance of making it.
+
+---
+# Could we use a linear model?
+
+In linear regression, the model predicts the mean of the response $Y$ (or $\bar{y}$) at each level of the explaatory variable(s).
+
+What's the "mean" of a 0/1 indicator variable?
+
+$\bar{y} =\frac{\sum{y_i}}{n} = \frac{\text{# of 1's}} {\text{# of trials}} = \text{Proportion of success}$
+
+So with a linear model for these data, essentially we are modeling $\pi$ (the response variable) like this
+$$
+  \pi = \beta_0 + \beta_1 Length
+$$
+
+[Note: Economists use this approach not infrequently and call it the "linear probability model", one of the different options for working with a "binary dependent variable"]
+
+---
+# Fitted linear model
+
+```{r}
+Putts_linear <- lm(Made ~ Length , data=Putts1)
+summary(Putts_linear)
+```
+
+- Interpret the coefficients of this model.
+- Predict the probability of making a putt for 1,3,7, and 10 feet away.
+
+?? 
+
+When you are *in* the hole (Length=0), you would have a 122% probability of making a putt. For every additional foot away you are from the hole, probability of making the putt goes down by 12.6 percentage points.
+
+From this model, a:
+- 1 foot putt would have a 109.6% probability of making it (`1.22295 +(-0.12633*1)`).
+- 3 foot putt would have a 84% probability of making it (`1.22295 +(-0.12633*3)`). 
+- 7 foot putt would have a 34% probability of making it (`1.22295 +(-0.12633*7)`).
+- 10 foot putt would have a -4% probability of making it (`1.22295 +(-0.12633*10)`).
+
+---
+# Seeing the Linear Model visually
+
+.pull-left[
+### Basic Probability
+```{r}
+jitter_plot + xlim(1,10) + geom_hline(aes(yintercept = avg_Made),Putts1,color='coral', size=2)
+```
+
+]
+
+.pull-right[
+### Linear Model 
+```{r}
+jitter_plot + xlim(1,10) + geom_smooth(method="lm", se=FALSE,fullrange=TRUE)
+```
+
+]
+
+---
+# Summary Thus Far
+
+## Basic Probability
+
+- Every putt has the same probability no matter how far away
+- Doesn't seem to fit the visual depiction of a negative relationship
+
+## Linear Model
+
+- Use probability / proportion as the response, fit a linear model of length as explanatory
+- Models the negative relationship  (i.e., *does* fit the visual depiction)
+- But makes impossible predictions (probabilities <0 or >1)
+
+So, we do not think that a linear model with probability as the response variable is the way to go. 
+
+---
+class: inverse, middle, center
+### We saw that a linear model of probabilities may not make sense. 
+
+### What if we used different units and/or transformed the dependent variable? 
+
+## Would that make for a better fitting model?
+
+---
+class: inverse, middle, center
+
+#### We had previously worked with log transformations. 
+
+#### And with odds, and saw their relationship to probabilities.
+
+## The Logistic Transformation combines both ideas: it uses the (natural) log of the odds. 
+
+#### **Goal of logistic regression:** Predict the _true proportion of success_, $\pi$, at any value of the explanatory/predictor variable.
+
+---
+Our previous linear model:
+$$
+  \pi = \beta_0 + \beta_1 X
+$$
+
+Where:
+
+- Y = Binary Response Variable (Made the Putt)
+- X = Quantitative Explanatory Variable (Length)
+- $\pi$ = Proportion of 1's (yes, successes; here, *making the putt*) at any X (length)
+
+Instead, suppose we modeled it like this
+$$
+  \log \left( \frac{\pi}{1-\pi} \right) = logit(\pi) = \beta_0 + \beta_1 X
+$$
+
+This transformation is called the **logit** function, or what the book calls the "Logit form". 
+
+Remember that you can go estimate the probability from the odds ($\pi = \frac{odds}{1+odds}$) and exponentiate to anti-log. So you could also express this regression model as:
+
+$$
+  \pi = \frac{e^{\beta_0 + \beta_1 X}}{1 + e^{\beta_0 + \beta_1 X}} \in (0,1)
+$$
+ 
+which the book calls, the "Probability form" of the model.
+
+---
+## Why use this approach?
+- The logit function _constrains the fitted values to lie within $(0,1)$_, which helps to give a natural interpretation as the probability of the response actually being 1.
+  - This avoids the estimated probabilities <0 and >1 that we got from the linear regression model above
+
+## What's happening in this model? How is it getting fitted?
+- No more squares and residuals - or OLS as the method for fitting
+- No more $R^2$ or other tests / estimates that use the sum of squares (there are approximations, though...)
+- Instead, *maximum likelihood estimation* which we'll talk about more in the next class.
+
+## How do I do this in `R`?
+- Glad you asked...
+
+---
+## Fitting a Logistic Model in `R`
+
+```{r}
+Putts_logistic <- glm(Made ~ Length, data=Putts1, family=binomial)
+```
+
+# What's different about this code from what we have used?
+
+---
+## GLM does the same thing as LM if you ask...
+
+.pull-left [
+```{r}
+Putts_linear_lm <- lm(Made ~ Length, data=Putts1)
+summary(Putts_linear_lm)
+```
+]
+
+.pull-right [
+```{r}
+Putts_linear_glm <- glm(Made ~ Length, data=Putts1, family=gaussian)
+summary(Putts_linear_glm)
+```
+]
+
+
+
+$$logit(\pi) = 7.40 -0.12 age$$
+
+6. How can we interpret the coefficients of this model in the context of the problem? 
+
+The procedure for adding the logistic curve to the plot is the same as it was before. 
+
+```{r, fig.width=10}
+fit.outcome <- makeFun(logm)
+plotFun(fit.outcome(age=x) ~ x, lwd=3, plot=myplot, add=TRUE)
+```
+
+
+## Plotting the model in space
+We can think of logistic regression models in 3 different "spaces." For this example, lets just think about one predictor. 
+```{r}
+logm2 = glm(isAlive ~ age , data=Whickham, family=binomial(logit))
+```
+
+The first space is the linear model space, where we are considering log-odds. 
+```{r}
+xyplot(log(fitted.values(logm2)/(1-fitted.values(logm2)))~age, 
+       data=Whickham, type=c("l"),ylab="log odds")
+```
+
+One is the odds space,
+```{r}
+xyplot(fitted.values(logm2)/(1-fitted.values(logm2))~age, data=Whickham, 
+       type="spline", ylab="odds")
+```
+
+Another is the probability space, 
+```{r}
+plotModel(logm2, ylab="probability")
+```
+
+## Binning
+
+Another way to make sense of a binary response variable is to **bin** the explanatory variable and then compute the average proportion of the response within each bin. [Note: This is just to give us an intuition for the logistic transformation - you won't need to do this for HW, etc.]
+
+```{r}
+Whickham <- Whickham %>%
+  mutate(ageGroup = cut(age, breaks=10))
+favstats(~isAlive | ageGroup, data=Whickham)
+```
+
+Although this is not the preferred method for performing logistic regression, it can be illustrative to see how the logistic curve fits through this series of points. 
+
+```{r, fig.width=10}
+# print(myplot)
+binned.y <- mean(~isAlive | ageGroup, data=Whickham)
+binned.x <- mean(~age | ageGroup, data=Whickham)
+binplot <- xyplot(binned.y ~ binned.x, cex=2, pch=19, col="orange", type=c("p", "r"), lwd=3)
+plotFun(fit.outcome(age=x) ~ x, lwd=3, add=TRUE, plot=binplot)
+```
+
+##### The Link Values
+
+Consider now the difference between the fitted values and the link values. Although the fitted values do not follow a linear pattern with respect to the explanatory variable, the link values do. To see this, let's plot them explicitly against the logit of the binned values. 
+
+```{r}
+xyplot(logit(binned.y) ~ binned.x, pch=19, cex=2, col="orange", type=c("p", "l"))
+Whickham = Whickham %>%
+  mutate(logm.link = predict(logm, type="link"))
+ladd(with(subset(Whickham), panel.xyplot(age, logm.link, type="l")))
+```
+
+Note how it is considerably easier for us to assess the quality of the fit visually using the link values, as opposed to the binned probabilities. 
+
+## Interpretation of Coefficients
+
+The interpretation of the coefficients in a linear regression model are clear based on an understanding of the geometry of the regression model. We use the terms *intercept* and *slope* because a simple linear regression model is a line. 
+
+In a simple logistic model, the line is transformed by the logit function. **How do the coefficients affect the shape of the curve in a logistic model?**
+
+For another way to think about the data, see this shiny app: [http://45.55.32.181/shiny/log_app/](http://45.55.32.181/shiny/log_app/)
+
+7. How do changes in the intercept term affect the shape of the logistic curve?
+
+The intercept changing is making the curve appear as though it's moving left (goes below 7 from the fitted model) and right (goes above 7 from the fitted model). In fact, it's elongating the shape of the curve either in values of the response variable where they = 1 or 0 (here, alive and dead).
+
+8. How do changes in the slope term affect the shape of the logistic curve?
+
+Higher slope terms tend to flatten out the line in the top of the curve (where the response=1, or Alive), and smaller values make the curve look more like the odds function, where it curves down and mostly goes through the values of the response = 0 (or dead).
+
+[Note that these explanations are not always true - the shape will depend on both the intercept, the slope, and the direction of the magnitude].
+
+We saw earlier that the link values are linear with respect to the explanatory variable. The link values are the $\log$ of the **odds**. Note that if an event occurs with proability $\pi$, then 
+$$
+  odds = \frac{\pi}{1-\pi}, \qquad \pi = \frac{odds}{1+odds}.
+$$
+Note that while $\pi \in [0,1]$, $odds \in (0,\infty)$. Thus, we can interpret $\hat{\beta_1}$ as the typical change in $\log{(odds)}$ for each one unit increase in the explanatory variable. More naturally, the odds of success are multiplied by $e^{\hat{\beta_1}}$ for each one unit increase in the explanatory variable, since this is the **odds ratio**. 
+$$
+  \begin{aligned}
+      odds_X &= \frac{\hat{\pi}_X}{1 - \hat{\pi}_X} = e^{\hat{\beta}_0 + \hat{\beta}_1 X} \\
+			odds_{X+1} &= \frac{\hat{\pi}_{X+1}}{1 - \hat{\pi}_{X+1}} = e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)} \\
+			\frac{odds_{X+1}}{odds_X} &= \frac{e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)}}{e^{\hat{\beta}_0 + \hat{\beta}_1 X}} = e^{\hat{\beta}_1}
+  \end{aligned}
+$$
+Furthermore, since the *logits* are linear with respect to the explanatory variable, these changes are constant. 
+
+## Calculating Odds Ratios and 95% CIs
+Finding confidence intervals for the odds ratio is easy. We could look at the point estimate and standard error from the `summary()` and use the `qnorm()` function to find a critical z value, or we could just use the convenience function `confint()`. 
+```{r, message=FALSE}
+#Odds Ratio
+exp(coef(logm))
+#95% Confidence Interval
+exp(confint(logm))
+```
+
+```{r}
+#to get the OR and 95% CI side by side
+exp(cbind(OR = coef(logm), confint(logm)))
+```
+
+**OR Interpretation**: For every additional year of age, the odds of 20-year survival are 0.88 times those of someone one year younger. In other words, someone one year older has a 12% lower odds of surviving 20 years than someone a year younger (23 year old vs. a 22 year old). This makes sense - older age is associated with higher odds of mortality and, conversely, lower odds of survival. We are 95% confident that the true odds ratio for a one-year difference in age on 20-year survival is between 0.87 and 0.89 on average in the population.
+
+Indeed, if we did change the outcome to estimate whether someone died in the 20 year follow-up (the inverse of what we're estimating with `isAlive`):
+```{r}
+logit_dead <- glm(outcome ~ age , data=Whickham, family=binomial)
+exp(cbind(OR = coef(logit_dead), confint(logit_dead)))
+```
+
+we see that for each additional year of age, the odds of 20-year mortality is 1.129 times higher than for someone a year younger. In other words, every year of age is associated with a 13% _higher_ odds of death within 20 years, on average, in the population.
+
+## Odds Ratios: 2x2 tables
+
+Smoking is also strongly associated with mortality.  Let's look at the frequencies in our data with a 2-by-2 table.
+
+```{r}
+Whickham$smoker_flip <- relevel(Whickham$smoker, ref="Yes")
+```
+
+You can look at percentage of the total are in each group
+```{r}
+tally(~ outcome + smoker_flip, margins=TRUE, format="percent",data=Whickham)
+```
+
+or conditional proportions
+```{r}
+tally(~ outcome | smoker_flip, margins=TRUE, format="percent",data=Whickham)
+```
+
+9. Based on this table, what's your hunch of the direction and magnitude of the association between smoking and survival?
+
+The percent of smokers who were alive 20 years later is higher (76.11) than non-smokers (68.6), so smoking might be associated with survival.
+
+If you needed the odds, you could calculate those from a similar table with the actual counts of people in each group.
+
+```{r}
+tally(~ outcome + smoker_flip, margins=FALSE, data=Whickham)
+```
+
+Where you have your explanatory variable as columns and your response variable as rows:
+
+   _ | Explanatory = 1 | Explanatory = 0
+ --- | --- | ---
+ **Response = 1** | a | b
+ **Response = 0** | c | d
+ 
+the odds are:
+
+- of the Response = 1 for Explanatory = 1 is $\frac{a}{c}$
+- of the Response = 1 for Explanatory = 0 is $\frac{b}{d}$
+
+The odds ratio for someone with the explanatory value = 1 is $OR = \frac{\frac{a}{c}}{\frac{b}{d}}$ or $OR = \frac{a \cdot d}{c \cdot b}$
+
+```{r}
+survival_Odds_nonsmoker<-502/230
+survival_Odds_nonsmoker
+
+survival_Odds_smoker<-443/139
+survival_Odds_smoker
+
+survival_OR_smoker<-survival_Odds_smoker/survival_Odds_nonsmoker
+survival_OR_smoker
+
+survival_logodds_smoker<-log(survival_OR_smoker)
+survival_logodds_smoker
+```
+
+**Interpretation of OR - Smoking and Survival **: So the odds of survival for a smoker comared to a non smoker was 1.46. In other words, smokers had a 46% higher odds of 20-year survival than non smokers. We interpret OR <1 as being lower than the reference and OR> 1 as being higher than the reference.
+
+`Mosaic` can also do this for us:
+```{r}
+oddsRatio(tally(~ (isAlive=="1") + smoker, margins=FALSE, data=Whickham))
+```
+
+We can also estimate the OR from the model:
+```{r, message=FALSE}
+logm2<- glm(isAlive ~ smoker , data=Whickham, family=binomial(logit))
+summary(logm2)
+exp(cbind(OR = coef(logm2), confint(logm2)))
+```
+
+**Interpretation of OR - Smoking and Survival **: Smokers have a 0.37 higher log odds of 20-year survival than non-smokers, on average in the population. The odds of survival for a smoker comared to a non smoker was 1.46 ($e^\text{0.37858}$). In other words, smokers had a 46% higher odds of 20-year survival than non smokers on average in this population. We are 95% confident that the true odds ratio of 20-year survival for smokers compared to non-smokers is between 1.14 and 1.87.
+
+## Confounding
+
+This relationship between smoking and survival seems very strange. From what we know of the health risks about smoking, we would not expect smokers to be living longer than non-smokers. Moreover, there are common cohort trends in smoking - the oldest women in this sample grew up in a time where few women smoked, but younger age groups were more likely to start smoking. 
+
+We likely have a classic issue of confounding -- age is associated with smoking and also associated with survival, but wasn't included in our model.
+
+First, let's look at the OR for smoking stratified by age - three age groups that we used before in the "Bin" exercise.
+
+```{r}
+require(magrittr)
+require(tidyverse)
+Whickham_1<-Whickham %>%
+  filter(ageGroup=="(17.9,24.6]") 
+Whickham_4<-Whickham %>%
+  filter(ageGroup=="(44.4,51]") 
+Whickham_9<-Whickham %>%
+  filter(ageGroup=="(70.8,77.4]") 
+oddsRatio(tally(~ (isAlive=="1") + smoker, margins=FALSE, data=Whickham_1))
+oddsRatio(tally(~ (isAlive=="1") + smoker, margins=FALSE, data=Whickham_4))
+oddsRatio(tally(~ (isAlive=="1") + smoker, margins=FALSE, data=Whickham_9))
+```
+
+**Interpretation of OR _and counfounding by age_**: Here, we see the odds ratio for smoking is smallest in the youngest age group. Among 18-25 year olds, the odds of 20-year survival for smokers are .37 times that of non-smokers. This suggests young smokers are far less likely to survive 20 years than non-smokers; specifically, 18-25 year old smokers have, on average, a 63% lower odds of surviving 20 years than non-smokers of th same age range. However, the odds ratio is much closer to 1 for the oldest population: for 70-77 year olds, the odds of 20-year survival for a smokers is, on average, 0.92 times that of a non-smoker. So a smoker in this age group has 8.5% lower odds of 20-year survival compared to a non-smoker, on average, in the population. 
+
+Conceptually, this makes sense. If we loosen our interpretation to be causal for the sake of illustration:  if you're a 70 year old smoker, smoking is less likely to kill you - you must be pretty robust to have lived to 70 or 75 as a smoker. But young people haven't yet faced the repercussions of smoking, so the difference in odds of 20-year survival is much bigger between smokers and non-smokers is much bigger at younger ages than it is at older ages.  We can think of this stratification by age as one way of "controlling" for age, although it doesn't give us an average estimate across all the age groups.
+
+It is notable here, that after controlling for age, the direction of the odds ratio has reversed - now smokers have a lower odds of 20-year survival than non-smokers, which is what we would have expected. All of the smokers are young, and young people are also likely to survive 20-years. The reason we didn't see it before in the unadjusted OR for survival is that we hadn't controlled for age.
+
+
+So we might expect `age` would make a difference in this model. Let's use both in the same model (We'll do more of this next week...just a teaser for now).
+
+```{r, message=FALSE}
+logm3<- glm(isAlive ~ smoker + age, data=Whickham, family=binomial(logit))
+summary(logm3)
+exp(cbind(OR = coef(logm3), confint(logm3)))
+```
+
+**Interpretation of OR**: 
+
+_Smoker_: After adjusting for Age, the association between smoking and survival in this sample was no longer statistically significant. Specifically, the odds of 20-year survival for a smoker were .814-fold lower than those of a non-smoker, adjusted for age, on average in this population. However, the z-statistic was small (-1.215) and pvalue was large (p=224) relative to their critical values (z=1.96, p<0.05), so we fail to reject the null hypothesis that the odds of survival for smokers was statistically signficantly different from non-smokers. We also see that the 95% CI for this estimate (OR:0.814, 95% CI: 0.584, 1.13) included the null of 1.
+
+_Age_: After adjusting for smoking status, the odds of 20-year survival for each additional year of age was 0.884-fold lower (than someone one year younger), on average, in the population. For example, a 45 year old would have an 11.6% lower odds of surviving 20 years than a 44 year old; a 36 year old would have an 11.6% lower odds of surviving 20 years than a 35 year old, on average, in the population. (We'll talk more about formal tests on Thursday.)
+
+
+Again, we can reverse the outcome to focus on mortality if that's more interpretable:
+
+```{r, message=FALSE}
+logit_dead_adjusted<- glm(outcome ~ smoker +age, data=Whickham, family=binomial(logit))
+summary(logit_dead_adjusted)
+exp(cbind(OR = coef(logit_dead_adjusted), confint(logit_dead_adjusted)))
+```
+
+Here, a smoker has a 22.7% higher odds of mortality in the next 20 years compared to a non-smoker, on average, after adjusting for age, in the population. Since the p-value is large, we cannot reject the null hypothesis that the odds ratio of mortality for a smoker compared to a non-smoker are statistically significantly different from 1 (or that the log-odds are different from 0).

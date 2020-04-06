@@ -1,0 +1,512 @@
+fit<-lm(y~x1+x2)
+plot3d(x1, x2, y, type = "s", col = "red", size = .5)
+coefs <- coef(fit)
+a <- coefs["x1"]
+b <- coefs["x2"]
+c <- -1
+d <- coefs["(Intercept)"]
+planes3d(a, b, c, d, alpha = 0.5)
+rglwidget(width = 1000, height = 1000, reuse = FALSE)
+summary(fit)
+plot(fit, which=c(1:2))
+print(df)
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+set.seed(8675309)
+id<-1:8
+x1 <- runif(8,1,4)
+x2 <- runif(8,1,4)
+b0 <- 1
+b1 <- 3
+b2 <- -2
+sigma <- 1.5
+eps <- rnorm(x1,0,sigma)
+y <- b0 + b1*x1  + b2*x2 + eps
+df<-as.data.frame(cbind(id,y,x1,x2))
+print(df)
+print(df)
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+set.seed(8675309)
+marshmellow<-1:8
+x1 <- runif(8,1,4)
+x2 <- runif(8,1,4)
+b0 <- 1
+b1 <- 3
+b2 <- -2
+sigma <- 1.5
+eps <- rnorm(x1,0,sigma)
+y <- b0 + b1*x1  + b2*x2 + eps
+df<-as.data.frame(cbind(marshmellow,y,x1,x2))
+print(df)
+print(df)
+df2<-df %>%
+mutate(x1=round(x1,digits=2),
+x2=round(x2,digits=2),
+y=round(y,digits=2)
+)
+print(df2)
+df2<-df %>%
+mutate(x1=round(x1,digits=1),
+x2=round(x2,digits=1),
+y=round(y,digits=1)
+)
+print(df2)
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+set.seed(8675309)
+marshmellow<-1:8
+x1 <- runif(8,1,4)
+x2 <- runif(8,1,4)
+b0 <- 1
+b1 <- 3
+b2 <- -2
+sigma <- 1.5
+eps <- rnorm(x1,0,sigma)
+y <- b0 + b1*x1  + b2*x2 + eps
+df<-as.data.frame(cbind(marshmellow,y,x1,x2))
+df2<-df %>%
+mutate(x1=round(x1,digits=1),
+x2=round(x2,digits=1),
+y=round(y,digits=1)
+)
+xtable::xtable(df2)
+kable::kable(df2)
+knitr::kable(df2)
+blogdown:::serve_site()
+blogdown:::serve_site()
+blogdown:::serve_site()
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+library(Stat2Data)
+data("RailsTrails")
+m1<-lm(Price2014 ~ SquareFeet + Distance , data = RailsTrails)
+summary(m1)
+knitr::opts_chunk$set(echo = TRUE)
+library(Stat2Data)
+data("ClintonSanders")
+summary(lm(Delegates~PopularVote+AfAmPercent, data=ClintonSanders))
+summary(lm(Delegates~AfAmPercent, data=ClintonSanders))
+summary(lm(Price2014~Bedrooms, data=RailsTrails))
+summary(lm(Price2014~Bedrooms+Distance, data=ClintonSanders))
+summary(lm(Price2014~Bedrooms, data=RailsTrails))
+summary(lm(Price2014~Bedrooms+Distance, data=RailsTrails))
+blogdown:::serve_site()
+lci<-(-15.788+(1.96*7.586))
+uci<-(-15.788-(1.96*7.586))
+c(lci,uci)
+predicted<-(78.985 + (147.920*1.7) + (-15.788*0.96) )
+predicted
+actual<-222.864
+actual - predicted
+anova(m1)
+n<-row_number(RailsTrails)
+n<-n(RailsTrails)
+n<- nrow(RailsTrails)
+RSq<- 1- (433959/(813976+18611+433959))
+RSq
+n<- nrow(RailsTrails)
+k<-2
+AdjRSq<- 1- ( (433959 / (n-k-1)) / ((813976+18611+433959) / (n-1)) )
+AdjRSq
+library(broom)
+m1_data<-augment(m1)
+SSE <- sum((m1_data$.resid)^2)
+SSE
+RSE<-sqrt(SSE/(n-k-1))
+RSE
+library(broom)
+m1_data<-augment(m1)
+SSE <- sum((m1_data$.resid)^2)
+SSE
+RSE<-sqrt(SSE/(n-k-1))
+RSE
+MSM<-SSM/k
+SSE<- 433959
+SST<- 813976+18611+433959
+SSM<- 813976+18611
+RSq<- 1- (SSE/SST)
+RSq
+n<- nrow(RailsTrails)
+k<-2
+AdjRSq<- 1- ( (SSE / (n-k-1)) / ( SST / (n-1)) )
+AdjRSq
+MSM<-SSM/k
+MSE<-SSE/(n-k-1)
+FStat<-MSM/MSE
+FStat
+blogdown:::serve_site()
+blogdown:::serve_site()
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+library(Stat2Data)
+data("RailsTrails")
+library(moderndive)
+qplot(y=Price2014, x=SquareFeet, color=Distance, data=RailsTrails)+geom_parallel_slopes()
+library(moderndive)
+qplot(y=Price2014, x=SquareFeet, color=DistGroup, data=RailsTrails)+geom_parallel_slopes()
+library(moderndive)
+qplot(y=Price2014, x=SquareFeet, color=DistGroup, data=RailsTrails)+geom_parallel_slopes(se=FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+library(Stat2Data)
+data("Pulse")
+data("Pulse")
+mPulse<-lm(Active~Rest+Wgt+Exercise, data=Pulse)
+summary(mPulse)
+lowerCI<-0.03420-(1.96*0.03173)
+upperCI<-0.03420+(1.96*0.03173)
+cbind(lowerCI,upperCI)
+yhat_200<-coef(mpulse[1])+(coef(mpulse[2])*76)+(coef(mpulse[3])*200)+(coef(mpulse[3])*7)
+yhat_200<-coef(mPulse[1])+(coef(mPulse[2])*76)+(coef(mPulse[3])*200)+(coef(mPulse[3])*7)
+library(broom)
+mPulse_df<-augment(mPulse)
+library(broom)
+mPulse_df<-augment(mPulse)
+yhat_200<-coef(mPulse[1,1])+(coef(mPulse[2,1])*76)+(coef(mPulse[3,1])*200)+(coef(mPulse[4,1])*7)
+coef(mPulse)
+coef(mPulse)[1]
+coef(mPulse[1])
+coef(mPulse)[1]
+yhat_200<-coef(mPulse)[1])+(coef(mPulse)[2]*76)+(coef(mPulse)[3]*200)+(coef(mPulse)[4]*7)
+yhat_200<-coef(mPulse)[1]+(coef(mPulse)[2]*76)+(coef(mPulse)[3]*200)+(coef(mPulse)[4]*7)
+yhat_200m<-11.84+(1.1194*76)+(0.03420*200)+(-1.085*7)
+R2<-SSM/SST
+SST<-17190
+SSM<-9350
+SSE<-7840
+n<-36
+k<-2
+R2<-SSM/SST
+AdjR2<-(SSE/(n-k-1))/(SSTotal/(n-1))
+R2<-SSM/SST
+AdjR2<-(SSE/(n-k-1))/(SST/(n-1))
+cbind(R2,AdjR2)
+data("Cereals")
+summary(lm(Calories~Sugar+Fiber,data=Cereals))
+data("Cereal")
+summary(lm(Calories~Sugar+Fiber,data=Cereal))
+R2<-SSM/SST
+AdjR2<-(SSE/(n-k-1))/(SST/(n-1))
+cbind(R2,AdjR2)
+summary(lm(Calories~Sugar+Fiber,data=Cereal))
+R2<-SSM/SST
+AdjR2<-1-((SSE/(n-k-1))/(SST/(n-1)))
+cbind(R2,AdjR2)
+data("Cereal")
+summary(lm(Calories~Sugar+Fiber,data=Cereal))
+RSE<-sqrt(SSE/(n-k-1))
+RSE
+RSE<-sqrt(SSE/(n-2))
+RSE
+RSE<-sqrt(SSE/(n-k-1))
+RSE
+RSE<-sqrt(SSE/(n-k-1))
+RSE
+MSE<-SSE/(n-k-1)
+MSM<-SSM/k
+Fratio<-MSE/MSM
+Fratio
+MSE<-SSE/(n-k-1)
+MSM<-SSM/k
+Fratio<-MSM/MSE
+Fratio
+cbind(MSE,MSM,Fratio)
+mCereal<-lm(Calories~Sugar+Fiber, data=Cereal))
+mCereal<-lm(Calories~Sugar+Fiber, data=Cereal)
+anova(mCereal)
+data("RailsTrails")
+mRT<-lm(Price2014~Distance, data=RailsTrails)
+summary(mRT)
+mRT2<-lm(Price2014~Distance+Bedrooms, data=RailsTrails)
+summary(mRT2)
+confint(mRT2)
+yhat_75_3<-coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*3)
+yhat_75_4<-coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*3)
+cbind(yhat_75_3,yhat_75_4)
+yhat_75_3<-coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*3)
+yhat_75_4<-coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*4)
+cbind(yhat_75_3,yhat_75_4)
+yhat_75_3<-coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*3)
+yhat_75_4<-coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*4)
+cbind(yhat_75_3,yhat_75_4)
+yhat_75_4-yhat_75_3
+as.numeric(yhat_75_4-yhat_75_3)
+yhat_75_3<-as.numeric(coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*3))
+yhat_75_4<-as.numeric(coef(mRT2)[1]+(coef(mRT2)[2]*0.75)+(coef(mRT2)[3]*4))
+cbind(yhat_75_3,yhat_75_4)
+as.numeric(yhat_75_4-yhat_75_3)
+yhat_025_2<-as.numeric(coef(mRT2)[1]+(coef(mRT2)[2]*0.25)+(coef(mRT2)[3]*2))
+yhat_125_2<-as.numeric(coef(mRT2)[1]+(coef(mRT2)[2]*1.25)+(coef(mRT2)[3]*2))
+cbind(yhat_025_2,yhat_125_2)
+diff2<-as.numeric(yhat_125_2-yhat_025_2)
+blogdown:::serve_site()
+knitr::opts_chunk$set(echo = TRUE, tidy=FALSE)
+require(mosaic)
+require(tidyverse)
+require(magrittr)
+data("Gestation")
+Gestation<-Gestation %>% filter(!is.na(smoke), !is.na(wt))
+m_quant<-lm(wt~smoke, data=Gestation)
+summary(m_quant)
+Gestation<-Gestation %>%
+mutate(smoke_factor=as.factor(smoke))
+m_cat1<-lm(wt~smoke_factor, data=Gestation)
+summary(m_cat1)
+Gestation<-Gestation %>%
+mutate(smoke_cat=as.factor(if_else(smoke==0,"never smoker",
+if_else(smoke==1,"current smoker",
+if_else(smoke==2,"pre-pregnancy smoker",
+if_else(smoke==3,"other former smoker","NA"))))
+)
+)
+tally(~smoke_cat, data=Gestation)
+smoke_factor_labels<-lm(wt~I(smoke_cat), data=Gestation)
+summary(smoke_factor_labels)
+Gestation$smoke_cat<-relevel(Gestation$smoke_cat, ref = "never smoker")
+Gestation<-Gestation %>%
+mutate(
+smoke_nev=if_else(smoke==0,1,0),
+smoke_cur=if_else(smoke==1,1,0),
+smoke_pre=if_else(smoke==2,1,0),
+smoke_fmr=if_else(smoke==3,1,0)
+)
+tally(c("smoke_nev", "smoke_cur", "smoke_pre", "smoke_fmr"), data=Gestation)
+smoke_indicators<-lm(wt~smoke_nev+smoke_cur+smoke_pre+smoke_fmr, data=Gestation)
+summary(smoke_indicators)
+anova(smoke_indicators)
+Gestation<-Gestation %>%
+mutate(smoke_cur_d=as.factor(if_else(smoke==1,"Smoker","NonSmoker")))
+smoke_cur_d<-lm(wt~smoke_cur_d, data=Gestation)
+summary(smoke_cur_d)
+anova(smoke_cur_d,smoke_indicators)
+library(moderndive)
+qplot(y=wt, x=age, color=smoke_cat, data=Gestation)+geom_parallel_slopes(se=FALSE)
+## Reference
+blogdown:::serve_site()
+vignette("value-labels", package = "ipumsr")
+blogdown:::serve_site()
+blogdown:::serve_site()
+# Some customization to format the file, bring in the data you need.  Do not alter.
+# knitr settings to control how R chunks work and how the pdf is compiled when knit.
+library(knitr)
+require(knitr)
+opts_chunk$set(
+tidy=TRUE,                     # display code as typed
+size="small",                   # slightly smaller font for code
+tidy.opts=list(width.cutoff=65), # wrap text and long comments
+fig.width=7, fig.height=5           #figure size
+)
+#Requiring Stat2Data package for the data
+#install.packages(Stat2Data)
+require(Stat2Data)
+require(mosaic)
+require(magrittr)
+require(tidyverse)
+data("Speed")
+m0<-lm(FatalityRate~Year, data=Speed)
+summary(m0)
+plot(m0, which=1)
+m1<-lm(FatalityRate~Year*StateControl, data=Speed)
+summary(m1)
+anova(m0,m1)
+anova(m0,m1)
+anova(m1,m0)
+anova(m0,m1)
+anova(m1,m0)
+m2<-lm(FatalityRate~Year+StateControl, data=Speed)
+anova(m2,m1)
+m2<-lm(FatalityRate~Year+StateControl, data=Speed)
+anova(m2,m1)
+anova(m2,m0)
+anova(m0,m2)
+anova(m1,m0)
+anova(m0,m1)
+m2<-lm(FatalityRate~Year+StateControl, data=Speed)
+anova(m2,m1)
+??Speed
+data(Blood1)
+View(Blood1)
+m0<-lm(SystolicBP~Overwt, data=Blood1)
+m1<-lm(SystolicBP~as.factor(Overwt), data=Blood1)
+summary(m0)
+summary(m1)
+knitr::opts_chunk$set(echo = FALSE)
+require(tidyverse)
+require(magrittr)
+require(mosaic)
+require(Stat2Data)
+require(mosaic)
+data("PorschePrice")
+qplot(y=Price, x=Mileage, data=PorschePrice)+geom_smooth(method="lm", se=FALSE)
+qplot(y=Price, x=Mileage, data=resample(PorschePrice))+geom_smooth(method="lm", se=FALSE)
+#xyplot(Price ~ Mileage, data=resample(PorschePrice), pch=19, cex=2, alpha=0.5, type=c("p","r"), lwd=5)
+data<-read_csv("http://www.science.smith.edu/~bcapistrant/LEActivity.csv")
+LAC<-data %>%
+filter(region=="Latin America & Caribbean")
+fm<-lm(life_exp~year, data=LAC)
+summary(fm)
+confint(fm)
+plot(fm, which=2)
+bootstrap <- do(10000) * coef(lm(life_exp~year, data=resample(LAC)))
+p2 <- ggplot(bootstrap, aes(x=year)) +
+geom_density() +
+geom_vline(aes(xintercept=coef(fm)["year"]),
+color="red", linetype="dashed", size=3)
+p2
+bootstrap <- do(10000) * coef(lm(life_exp~year, data=resample(LAC)))
+p2 <- ggplot(bootstrap, aes(x=year)) +
+geom_density() +
+geom_vline(aes(xintercept=coef(fm)["year"]),
+color="red", size=1)
+p2
+data<-read.csv("http://sds291.netlify.com/exam/291birthweight.csv")
+data_bwt<-read.csv("http://sds291.netlify.com/exam/291birthweight.csv")
+m_mage<-lm(weight~mage, data=data_bwt)
+summary(m_mage)
+confint(m_mage)
+plot(m_mage, which=2)
+qplot(x=.resid, data=m_mage)
+library(broom)
+m_mage_df<-augment(m_mage)
+qplot(x=.resid, data=m_mage_df)
+bootstrap <- do(10000) * coef(lm(weight~mage, data=resample(data_bwt)))
+p2 <- ggplot(bootstrap, aes(x=mage)) +
+geom_density() +
+geom_vline(aes(xintercept=coef(fm)["mage"]),
+color="red", size=1)
+p2
+bootstrap <- do(10000) * coef(lm(weight~mage, data=resample(data_bwt)))
+p2 <- ggplot(bootstrap, aes(x=mage)) +
+geom_density() +
+geom_vline(aes(xintercept=coef(m_mage)["mage"]),
+color="red", size=1)
+p2
+zs <- qnorm(c(0.025, 0.975))
+sd<- bootstrap %>% summarise(sd=mage)
+sd(~mage, data=bootstrap)
+bootstrap %>% summarise(sd=mage)
+bootstrap %>% summarise(sd=sd(mage))
+bootstrap %>% summarise(sd=sd(mage))
+sd(~mage, data=bootstrap)
+coef(m_mage)["mage"] + zs * sd
+sd<- bootstrap %>%
+mutate(as.numeric(sd=sd(mage)))
+sd<- bootstrap %>%
+summarise(as.numeric(sd=sd(mage)))
+sd<- bootstrap %>%
+summarise(as.numeric(sd(mage)))
+coef(m_mage)["mage"] + zs * sd
+zs <- qnorm(c(0.025, 0.975))
+sd<- bootstrap %>%
+summarise(as.numeric(sd(mage)))
+uci<-coef(m_mage)["mage"] + (zs * sd)
+lci<-coef(m_mage)["mage"] - (zs * sd)
+c(lci,uci)
+sd<- bootstrap %>%  sd(mage)
+sd<- bootstrap %>% sd(mage)
+sd<- bootstrap %>% summarise(sd(mage))
+rm(sd)
+rm(zs)
+zs <- qnorm(c(0.025, 0.975))
+sd<- bootstrap %>% summarise(sd(mage))
+uci<-coef(m_mage)["mage"] + (zs * sd)
+lci<-coef(m_mage)["mage"] - (zs * sd)
+c(lci,uci)
+zs <- qnorm(c(0.025, 0.975))
+sd<- bootstrap %>% summarise(sd=sd(mage))
+uci<-coef(m_mage)["mage"] + (zs * sd)
+lci<-coef(m_mage)["mage"] - (zs * sd)
+c(lci,uci)
+sd <- bootstrap %>%
+mutate(sd=sd(mage)) %>%
+filter(n=n()) %>%
+select(sd)
+sd <- bootstrap %>%
+mutate(sd=sd(mage)) %>%
+filter(n==n()) %>%
+select(sd)
+sd <- bootstrap %>%
+mutate(sd=sd(mage)) %>%
+filter(n==1) %>%
+select(sd)
+sd <- bootstrap %>%
+mutate(sd=sd(mage)) %>%
+select(sd)
+sd <- bootstrap %>%
+mutate(sd=sd(mage)) %>%
+select(sd) $>$
+sd <- bootstrap %>%
+mutate(sd=sd(mage)) %>%
+select(sd) %>%
+slice(1)
+zs <- qnorm(c(0.025, 0.975))
+sd <- bootstrap %>%
+mutate(sd=sd(mage)) %>%
+select(sd) %>%
+slice(1)
+uci<-coef(m_mage)["mage"] + (zs * sd)
+lci<-coef(m_mage)["mage"] - (zs * sd)
+c(lci,uci)
+cbind(c(lci,uci))
+sd <- bootstrap %>%
+summarise(sd=sd(mage))
+View(uci)
+cbind(lci,uci)
+uci<-coef(m_mage)["mage"] + (zs * sd) %>%
+rename(sd=uci)
+uci<-coef(m_mage)["mage"] + (zs * sd) %>%
+rename(uci=sd)
+uci<-coef(m_mage)["mage"] + (zs * sd) %>%
+rename(uci=sd)
+lci<-coef(m_mage)["mage"] - (zs * sd)%>%
+rename(lci=sd)
+cbind(lci,uci)
+zs <- qnorm(0.975)
+sd <- bootstrap %>%
+summarise(sd=sd(mage))
+uci<-coef(m_mage)["mage"] + (zs * sd) %>%
+rename(uci=sd)
+lci<-coef(m_mage)["mage"] - (zs * sd)%>%
+rename(lci=sd)
+cbind(lci,uci)
+data_bwt<-read.csv("http://sds291.netlify.com/exam/291birthweight.csv")
+m_mage<-lm(weight~mage, data=data_bwt)
+summary(m_mage)
+confint(m_mage)
+plot(m_mage, which=2)
+library(broom)
+m_mage_df<-augment(m_mage)
+qplot(x=.resid, data=m_mage_df)
+qdata(~mage, p=c(0.025, 0.975), data=bootstrap)
+qs <- qdata(~mage, p = c(0.025, 0.975), data=bootstrap)$quantile
+coef(m_mage)["mage"] - (qs - coef(m_mage)["mage"])
+blogdown:::serve_site()
+blogdown:::serve_site()
+blogdown:::serve_site()
+blogdown:::serve_site()
+blogdown:::serve_site()
+blogdown:::serve_site()
+??if_else
+?base::Logic
+?Comparison
+??%in%
+??resample
+blogdown:::serve_site()
+setwd("~/Desktop")
+library(ipumsr)
+usa_ddi <- read_ipums_ddi("usa_00005.xml")
+usa_data <- read_ipums_micro(usa_ddi, verbose = FALSE)
+k=2
+n=36
+(2*(k+1)/n)
+(3*(k+1)/n)
+library(Stat2Data)
+data("Cereal")
+m0<-lm(Calories~Sugar+Fiber, data=Cereal)
+m0_df<-ls.diag(m0)
+View(m0_df)
+table(m0_df$hat)
+blogdown:::serve_site()
+blogdown:::serve_site()
