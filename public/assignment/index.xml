@@ -443,13 +443,23 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
 &lt;li&gt;9.20 (1st Ed) or 9.31 (2nd Ed) to finish off the required example&lt;/li&gt;
 &lt;li&gt;9.17 (1st Ed) / 9.27 (2nd Ed), 9.30, and 9.32 (2nd Ed, see below)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;HW7_ExtraQ2ndEd.png&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://sds291.netlify.com/HW/HW7_ExtraQ2ndEd.png&#34; /&gt;
 # Clarifications &amp;amp; Cautions&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;9.18 or 9.28: don’t calculate the OR here – that comes later. For “a”, you can use conditional proptortions or percentages - of females, what % survived - but don’t do more than that here (calculating the OR comes in 9.19/9.29c). And for “b”, just talk about the direction of the slope and how it corresponds to “a”.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;9.19/9.29c: it refers to “an estimated coefficient from the output for the model found in (b)” – that should be “in 9.18/9.28b” &lt;em&gt;not&lt;/em&gt; 9.19/9.29b.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There are multiple Titanic datasets that exist in different R packages, so be sure that you’re drawing on the one from Stat2Data package (it is &lt;code&gt;Titanic&lt;/code&gt; with a capital “T”).&lt;/p&gt;
+&lt;p&gt;Yes, &lt;a href=&#34;https://www.theguardian.com/news/1912/apr/16/leadersandreply.mainsection&#34;&gt;this Titanic&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Or, if you want, this one.
+&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51mTtUGvUCL._SY445_.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And maybe, given how Spring 2020 is shaping up, this one?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode(&amp;#39;youtube&amp;#39;, &amp;quot;X2WH8mHJnhM&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/X2WH8mHJnhM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Submit on Moodle&lt;/h1&gt;
