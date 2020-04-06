@@ -1,5 +1,5 @@
 ---
-title: "Logistic Regression"
+title: "Simple Logistic Regression"
 author: "SDS 291"
 date: "4/6/2020"
 output:

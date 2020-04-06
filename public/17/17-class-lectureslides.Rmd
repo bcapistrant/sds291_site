@@ -25,6 +25,8 @@ require(Stat2Data)
 ```
 
 
+![](gerbil.png)
+
 ---
 
 ## Outline for the Week
@@ -283,10 +285,11 @@ which the book calls, the "Probability form" of the model.
 
 ---
 ## Fitting a Logistic Model in `R`
-
+.medium[
 ```{r}
 Putts_logistic <- glm(Made ~ Length, data=Putts1, family=binomial)
 ```
+]
 
 ### What's different about this code from what we have used?
 
@@ -300,7 +303,7 @@ m0_lm <- lm(Made ~ Length, data=Putts1)
 summary(m0_lm)
 ```
 ]
-]/
+]
 
 .pull-right[
 .tiny[
@@ -310,13 +313,13 @@ summary(m0_glm)
 ```
 ]
 ]
-+
+
 
 ---
 ## Visualizing the Logistic Regression Model
 
 .pull-left[
-# Extended Version
+#### Extended Version
 
 ```{r, echo=FALSE}
 regular_plot +xlim(0,15) + 
@@ -326,7 +329,7 @@ regular_plot +xlim(0,15) +
 ]
 
 .pull-right[
-# Zoomed / Focused Version
+#### Zoomed-in / Focused Version
 ```{r, echo=FALSE}
 regular_plot + 
   geom_smooth(method="glm",method.args=list(family="binomial"), se=FALSE,fullrange=TRUE)
@@ -360,7 +363,7 @@ logit_data<-as.data.frame(cbind(prob,odds,logodds,Length))
 
 The first is the linear model, where we are considering log-odds as the unit of the response variable. This is the actual model we're fitting -- a linear model on the log scale.
 
-```{r}
+```{r, fig.height=4}
 qplot(x=Length, y=logodds, data=logit_data)
 ```
 
@@ -368,7 +371,7 @@ qplot(x=Length, y=logodds, data=logit_data)
 # Odds
 
 The second is the odds, which are a more understandable set of units than the log(odds). 
-```{r}
+```{r, fig.height=4}
 qplot(x=Length, y=odds, data=logit_data)
 ```
 
@@ -377,15 +380,15 @@ We can see this downward, curved trend as evidence for why we might want to log-
 ---
 # Probability
 
-The third is the probability, which is an alternative set of units to the odds.
+The third is the probability, which is an alternative set of units to the odds. We have already seen this version before, now with the specific probabilities for each length plotted in red.
 
-We have already seen this version before, now with the specific probabilities for each length plotted in red.
-
-```{r}
+.tiny[
+```{r, fig.height=4}
 regular_plot + 
   geom_smooth(method="glm",method.args=list(family="binomial"), se=FALSE,fullrange=TRUE) +
   geom_point(x=Length, y=prob, data=logit_data, color="red")
 ```
+]
 
 This figure illustrates the logistic transformation - the "S" shape curve - that is a better fit of the probability scale than the OLS/linear model or fixed relationship (just the horizontal line of the average probability).
 
@@ -401,16 +404,19 @@ In a simple logistic model, the line is transformed by the logit function. **How
 
 ---
 
-## How do changes in the intercept and slope term affect the shape of the logistic curve?
+### How do changes in the intercept and slope term affect the shape of the logistic curve?
 
-### Intercept 
+#### Intercept 
 
 - The intercept changing is making the curve appear as though it's moving left or right. 
 
 - In fact, it's elongating the shape of the curve either in values of the response variable where they = 1 or 0 (here, made or missed).
 
-### Slope
-Higher slope terms tend to flatten out the line in the top of the curve (where the response=1), and smaller values make the curve look more like the odds function, where it curves down and mostly goes through the values of the response = 0.
+#### Slope
+
+- Higher slope terms tend to flatten out the line in the top of the curve (where the response=1)
+
+- Smaller values make the curve look more like the odds function, where it curves down and mostly goes through the values of the response = 0.
 
 [Note that these explanations are not always true - the shape will depend on both the intercept, the slope, and the direction of the magnitude].
 
@@ -421,44 +427,41 @@ We can interpret $\hat{\beta_1}$ as the typical change in $\log{(odds)}$ for eac
 
 More naturally, the odds of success are multiplied by $e^{\hat{\beta_1}}$ for each one unit increase in the explanatory variable, since this is the **odds ratio**.
 
-$$
-  \begin{aligned}
-      odds_X &= \frac{\hat{\pi}_X}{1 - \hat{\pi}_X} = e^{\hat{\beta}_0 + \hat{\beta}_1 X} \\
-			odds_{X+1} &= \frac{\hat{\pi}_{X+1}}{1 - \hat{\pi}_{X+1}} = e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)} \\
-			\frac{odds_{X+1}}{odds_X} &= \frac{e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)}}{e^{\hat{\beta}_0 + \hat{\beta}_1 X}} = e^{\hat{\beta}_1}
-  \end{aligned}
-$$
-Furthermore, since the *logits* are linear with respect to the explanatory variable, these changes are constant. 
+$$odds_X = \frac{\hat{\pi}_X}{1 - \hat{\pi}_X} = e^{\hat{\beta}_0 + \hat{\beta}_1 X}$$ 
+$$odds_{X+1} = \frac{\hat{\pi}_{X+1}}{1 - \hat{\pi}_{X+1}} = e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)}$$ 
+$$\frac{odds_{X+1}}{odds_X} = \frac{e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)}}{e^{\hat{\beta}_0 + \hat{\beta}_1 X}} = e^{\hat{\beta}_1}$$
+Since the *logits* (i.e., logodds) are linear with respect to the explanatory variable, these changes are constant. 
 
 ---
 ## Calculating Odds Ratios and 95% CIs
-Finding confidence intervals for the odds ratio is easy. We could look at the point estimate and standard error from the `summary()` and use the `qnorm()` function to find a critical z value, or we could just use the convenience function `confint()`. 
+Finding confidence intervals for the odds ratio is easy. We could look at the point estimate and standard error from the `summary()` and use the `qnorm()` function to find a critical z value, or we could just use the convenience function `confint()`.
+
+.tiny[
 ```{r, message=FALSE}
 #Odds Ratio
 exp(coef(Putts_logistic))
 #95% Confidence Interval
 exp(confint(Putts_logistic))
 ```
+]
 
-```{r}
+Or in one line of code...
+.tiny[
+```{r, message=FALSE}
 #to get the OR and 95% CI side by side
 exp(cbind(OR = coef(Putts_logistic), confint(Putts_logistic)))
 ```
+]
 
-<!-- **OR Interpretation**: For every additional year of age, the odds of 20-year survival are 0.88 times those of someone one year younger. In other words, someone one year older has a 12% lower odds of surviving 20 years than someone a year younger (23 year old vs. a 22 year old). This makes sense - older age is associated with higher odds of mortality and, conversely, lower odds of survival. We are 95% confident that the true odds ratio for a one-year difference in age on 20-year survival is between 0.87 and 0.89 on average in the population. -->
+<!-- **OR Interpretation**: For every additional foot away from the cup, the offs of making a putt are 0.56 times those of someone one foot closer. In other words, someone one foot further away has 44% lower odds of making the putt than someone one foot closer.  This makes sense - being further is associated with lower odds of making a shot. We are 95% confident that the true odds ratio for a one foot  difference in distance fromt the cup on making the putt is between 0.496 and 0.646 on average in the population. -->
 
-<!-- Indeed, if we did change the outcome to estimate whether someone died in the 20 year follow-up (the inverse of what we're estimating with `isAlive`): -->
-<!-- ```{r} -->
-<!-- logit_dead <- glm(outcome ~ age , data=Whickham, family=binomial) -->
-<!-- exp(cbind(OR = coef(logit_dead), confint(logit_dead))) -->
-<!-- ``` -->
-
-<!-- we see that for each additional year of age, the odds of 20-year mortality is 1.129 times higher than for someone a year younger. In other words, every year of age is associated with a 13% _higher_ odds of death within 20 years, on average, in the population. -->
-
+---
 ## Odds Ratios: 2x2 tables
 
 We have seen - and calculated! - the odds ratio from 2-by-2 tables for this example. Let's confirm that we can re-create those results with a regression model -- thereby illustrating that $e^{\hat\beta_1}$ is the odds ratio.
 
+.pull-left[
+.medium[
 ```{r}
 Putts1_6_7 <- Putts1 %>%
   filter(Length %in% c(6,7)) 
@@ -467,18 +470,35 @@ Putts1_6_7%>%
   group_by(Length) %>%
   count(Made)
 ```
+]
+]
 
-These are the same numbers we saw before. 
-
+.pull-right[
 $$ OR = \frac{44/90}{61/64} = 0.512 $$
 $$ log(OR) = -0.667 $$
-$$ SE(OR) = \sqrt{\frac{1}{\text{a}} +\frac{1}{\text{b}}+\frac{1}{\text{c}}+\frac{1}{\text{d}}} = \sqrt{\frac{1}{\text{44}} +\frac{1}{\text{90}}+\frac{1}{\text{61}}+\frac{1}{\text{64}}} = 0.25 $$
-$$ 95\% CI = e^{ln(OR) \pm z* SE(OR)} = e^{-0.667 \pm 1.96*0.25} = e^{( -1.17, -0.16)} = 0.31, 0.85 $$
+$$SE(log(OR) = \sqrt{\frac{1}{\text{44}} +\frac{1}{\text{90}}+\frac{1}{\text{61}}+\frac{1}{\text{64}}} = 0.25$$
+$$95\% CI:e^{log(OR) \pm 1.96*SE(log(OR))}$$
+$$e^{-0.667 \pm 1.96*0.25} = e^{( -1.17, -0.16)}$$
+$$95\% CI = 0.31, 0.85$$
+See last completed slide from previous class to see that we did this before.
+]
 
-See last completed slide from previous class.
+---
+### Do we get the same numbers from a regression model?
 
+.pull-left[
+.tiny[
 ```{r, warning=FALSE, error=FALSE, message=FALSE}
-Putts_logistic_6_7 <- glm(Made ~ Length, data=Putts1_6_7, family=binomial)
-summary(Putts_logistic_6_7)
-exp(cbind(OR = coef(Putts_logistic_6_7), confint(Putts_logistic_6_7)))
+OR_6_7 <- glm(Made ~ Length, data=Putts1_6_7, family=binomial)
+summary(OR_6_7)
 ```
+]
+]
+
+.pull-right[
+.tiny[
+```{r,warning=FALSE}
+exp(cbind(OR = coef(OR_6_7), confint(OR_6_7)))
+```
+]
+]
