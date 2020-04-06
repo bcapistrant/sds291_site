@@ -25,7 +25,9 @@ editor_options:
 - 9.17 (1st Ed) / 9.27 (2nd Ed), 9.30, and 9.32 (2nd Ed, see below)
 
 ![](https://sds291.netlify.com/HW/HW7_ExtraQ2ndEd.png)
-# Clarifications & Cautions
+
+
+# Clarifications and Cautions
 
 - 9.18 or 9.28: don't calculate the OR here -- that comes later. For "a", you can use conditional proptortions or percentages - of females, what % survived - but don't do more than that here (calculating the OR comes in 9.19/9.29c). And for "b", just talk about the direction of the slope and how it corresponds to "a".
 
@@ -40,7 +42,7 @@ Or, if you want, this one.
 
 And maybe, given how Spring 2020 is shaping up, this one?
 
-```{r}
+```{r, echo=FALSE}
 blogdown::shortcode('youtube', "X2WH8mHJnhM")
 ```
 

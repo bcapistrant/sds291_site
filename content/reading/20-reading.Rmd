@@ -1,0 +1,21 @@
+---
+title: "Multiple Logistic Regression Inference"
+linktitle: "20: Multiple Logistic 2"
+date: "2020-04-15"
+read_date: "2020-04-15"
+menu:
+  reading:
+    parent: Readings
+    weight: 20
+type: docs
+---
+
+## Required  
+
+- <i class="fas fa-book"></i>  _STAT2_ Textbook
+  - 10.3-10.4
+
+## Recommended
+
+- <i class="fas fa-book"></i>  _STAT2_ Textbook
+  - 10.5

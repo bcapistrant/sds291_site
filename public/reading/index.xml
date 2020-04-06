@@ -13,6 +13,103 @@
     </image>
     
     <item>
+      <title>Comparing Logistic Models</title>
+      <link>/reading/22-reading/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/22-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.4 (review), 11.1-11.2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization for Logistic Regression</title>
+      <link>/reading/21-reading/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/21-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TBD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multiple Logistic Regression Inference</title>
+      <link>/reading/20-reading/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/20-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.3-10.4&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.5&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multiple Logistic Regression Intro</title>
+      <link>/reading/19-reading/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/19-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.1-10.2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Logistic Regression Inference</title>
       <link>/reading/18-reading/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>

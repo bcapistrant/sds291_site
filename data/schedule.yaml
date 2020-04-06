@@ -143,7 +143,7 @@ lessons:
     date: "April 6"
     reading: "17-reading"
     class: "17-class"
-    #assignment: "05-eval-dag"
+    assignment: "06-problem-set"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Fitting and Interpreting Models**'
     date: "April 8"
@@ -151,21 +151,21 @@ lessons:
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
     date: "April 13"
-    #reading: "05-reading"
-    #assignment: "05-eval-dag"
+    reading: "19-reading"
+    assignment: "07-problem-set"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
     date: "April 15"
-    #reading: "05-reading" 
+    reading: "20-reading" 
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Visualizing Coefficients and Predicted Probabilities**'
     date: "April 20"
-    #reading: "05-reading"
+    reading: "21-reading"
     #assignment: "05-eval-dag"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Log Likelihood, Ratio Tests**'
     date: "April 22"
-    #reading: "05-reading"
+    reading: "22-reading"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
     date: "April 27"

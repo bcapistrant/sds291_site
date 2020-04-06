@@ -1,0 +1,19 @@
+---
+title: "Data Visualization for Logistic Regression"
+linktitle: "21: Logistic Visualization"
+date: "2020-04-20"
+read_date: "2020-04-20"
+menu:
+  reading:
+    parent: Readings
+    weight: 21
+type: docs
+---
+
+## Required  
+
+- TBD
+
+## Recommended
+
+TBD

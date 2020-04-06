@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Multiple Regression</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/social-image.png</url>
       <title>Multiple Regression</title>
@@ -2358,6 +2358,7 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#recommended&#34;&gt;Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clarifications-and-cautions&#34;&gt;Clarifications and Cautions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -2374,8 +2375,10 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
 &lt;li&gt;9.20 (1st Ed) or 9.31 (2nd Ed) to finish off the required example&lt;/li&gt;
 &lt;li&gt;9.17 (1st Ed) / 9.27 (2nd Ed), 9.30, and 9.32 (2nd Ed, see below)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://sds291.netlify.com/HW/HW7_ExtraQ2ndEd.png&#34; /&gt;
-# Clarifications &amp;amp; Cautions&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sds291.netlify.com/HW/HW7_ExtraQ2ndEd.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clarifications-and-cautions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Clarifications and Cautions&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;9.18 or 9.28: don’t calculate the OR here – that comes later. For “a”, you can use conditional proptortions or percentages - of females, what % survived - but don’t do more than that here (calculating the OR comes in 9.19/9.29c). And for “b”, just talk about the direction of the slope and how it corresponds to “a”.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;9.19/9.29c: it refers to “an estimated coefficient from the output for the model found in (b)” – that should be “in 9.18/9.28b” &lt;em&gt;not&lt;/em&gt; 9.19/9.29b.&lt;/p&gt;&lt;/li&gt;
@@ -2385,7 +2388,6 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
 &lt;p&gt;Or, if you want, this one.
 &lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51mTtUGvUCL._SY445_.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And maybe, given how Spring 2020 is shaping up, this one?&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode(&amp;#39;youtube&amp;#39;, &amp;quot;X2WH8mHJnhM&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/X2WH8mHJnhM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -2731,6 +2733,103 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparing Logistic Models</title>
+      <link>/reading/22-reading/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/22-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.4 (review), 11.1-11.2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization for Logistic Regression</title>
+      <link>/reading/21-reading/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/21-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TBD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multiple Logistic Regression Inference</title>
+      <link>/reading/20-reading/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/20-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.3-10.4&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.5&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multiple Logistic Regression Intro</title>
+      <link>/reading/19-reading/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/19-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;em&gt;STAT2&lt;/em&gt; Textbook
+&lt;ul&gt;
+&lt;li&gt;10.1-10.2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -4511,10 +4610,9 @@ Figure 1: A fancy pie chart.
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
                     href=&#34;/reading/17-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/assignment/06-problem-set/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -4552,14 +4650,12 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 13&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Multiple Regression&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/reading/19-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/assignment/07-problem-set/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -4576,10 +4672,9 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 15&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Multiple Regression&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/reading/20-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -4600,10 +4695,9 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 20&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Visualizing Coefficients and Predicted Probabilities&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/reading/21-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -4624,10 +4718,9 @@ Figure 1: A fancy pie chart.
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 22&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Log Likelihood, Ratio Tests&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/reading/22-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;

@@ -1,0 +1,19 @@
+---
+title: "Multiple Logistic Regression Intro"
+linktitle: "19: Multiple Logistic 1"
+date: "2020-04-13"
+read_date: "2020-04-13"
+menu:
+  reading:
+    parent: Readings
+    weight: 19
+type: docs
+---
+
+## Required  
+
+- <i class="fas fa-book"></i>  _STAT2_ Textbook
+  - 10.1-10.2
+
+## Recommended
+
