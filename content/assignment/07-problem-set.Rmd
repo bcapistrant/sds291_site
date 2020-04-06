@@ -18,7 +18,7 @@ editor_options:
 
 # Required
 
-- 9.18, 9.19 (1st Edition); 9.27, 9.28, 9.29 (2nd Edition)
+- 9.18, 9.19 (1st Edition); 9.28, 9.29 (2nd Edition)
 
 # Recommended
 - 9.20 (1st Ed) or 9.31 (2nd Ed) to finish off the required example
