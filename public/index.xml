@@ -2730,8 +2730,41 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
 &lt;li&gt;Below is the same document in different formats. PDF is easier for a tablet, pen/paper, or to use the “annotate” drawing features, and google doc is easier if you’re more comfortable with that approach or want to share with classmates and work together. I will post the raw file and solutions later this week - the goal is to work on this first.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;.PDF&lt;/code&gt; &lt;a href=&#34;https://sds291.netlify.com/17/17-class-exercise.pdf&#34;&gt;version&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Google Doc &lt;a href=&#34;https://docs.google.com/document/d/1gdE_KCEtbo_9iHUbJ3IyHMMxyrFhbgDkVj0VYKnwUcA/edit?usp=sharing&#34;&gt;version&lt;/a&gt; (now view-only, just make a copy)&lt;/li&gt;
+&lt;li&gt;Answer set &lt;a href=&#34;https://sds291.netlify.com/17/17-class-exercise_answers.pdf&#34;&gt;here&lt;/a&gt; and raw rmd &lt;a href=&#34;https://sds291.netlify.com/17/17-class-exercise_answers.rmd&#34;&gt;here.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simple Logistic Regression - 2</title>
+      <link>/class/18-class/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/class/18-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-activities&#34;&gt;In-class Activities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extra-practice&#34;&gt;Extra Practice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-activities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In-class Activities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/18/18-slides.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extra-practice&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Extra Practice&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/18/18-simplelogistic-lab.html&#34;&gt;Lab&lt;/a&gt; (raw .rmd &lt;a href=&#34;http://sds291.netlify.com/18/18-simplelogistic-lab.rmd&#34;&gt;here&lt;/a&gt;)
+&lt;ul&gt;
+&lt;li&gt;Answers: &lt;a href=&#34;http://sds291.netlify.com/18/18-simplelogistic-lab-answers.pdf&#34;&gt;Complete &lt;code&gt;.pdf&lt;/code&gt;&lt;/a&gt; or &lt;a href=&#34;http://sds291.netlify.com/18/18-simplelogistic-lab-answers.rmd&#34;&gt;raw &lt;code&gt;.rmd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -4642,10 +4675,8 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/class/18-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 13&lt;/td&gt;

@@ -23,3 +23,4 @@ editor_options:
 ## Extra Practice
 
 - [Lab](http://sds291.netlify.com/18/18-simplelogistic-lab.html) (raw .rmd [here](http://sds291.netlify.com/18/18-simplelogistic-lab.rmd))
+  - Answers: [Complete `.pdf`](http://sds291.netlify.com/18/18-simplelogistic-lab-answers.pdf) or [raw `.rmd`](http://sds291.netlify.com/18/18-simplelogistic-lab-answers.rmd)
