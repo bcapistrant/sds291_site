@@ -148,6 +148,7 @@ lessons:
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Fitting and Interpreting Models**'
     date: "April 8"
     reading: "18-reading"
+    class: "18-class"
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
     date: "April 13"

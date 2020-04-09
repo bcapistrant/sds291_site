@@ -1,0 +1,25 @@
+---
+title: "Simple Logistic Regression - 2"
+linktitle: "18 Simple Logistic 2"
+date: "2020-04-08"
+class_date: "2020-04-08"
+menu:
+  class:
+    parent: Class sessions
+    weight: 18
+type: docs
+weight: 18
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In-class Activities
+
+- [Slides](http://sds291.netlify.com/18/18-slides.pdf)
+
+## Extra Practice
+
+- [Lab](http://sds291.netlify.com/18/18-simplelogistic-lab.html) (raw .rmd [here](http://sds291.netlify.com/18/18-simplelogistic-lab.rmd))

@@ -1,0 +1,32 @@
+---
+title: "8. Problem set 8"
+date: "2020-04-20"
+due_date: "2020-04-20"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Problem sets
+    weight: 8
+type: docs
+weight: 8
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Required
+- 10.12 (1st Ed) / 10.23 (2nd Ed)
+
+# Lightly Recommended
+- 10.13 (1st Ed) / 10.24 (2nd Ed)
+- 10.19 (1st Ed) / 10.31 (2nd Ed)
+
+# Submit on Moodle
+
+There is no template for this assignment. You're a pro at making your own RMarkdown files now!
+
+You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline. 
+
+Use the Homework 8 submission on [Moodle.](https://moodle.smith.edu/course/view.php?id=37984)

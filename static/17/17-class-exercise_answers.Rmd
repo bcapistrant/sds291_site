@@ -1,0 +1,259 @@
+---
+title: "Logistic Regression - Answers"
+author: "SDS 291"
+date: "4/6/2020"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    css: ~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css
+    highlight: textmate
+    theme: journal
+    toc: yes
+---
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggpubr)
+```
+
+We have data from each state (n=50) on their average income, education (% high school, % college, and % advanced degrees completed), political leaning from a 2015 Gallup poll and whether President Trump won that state (1=Win) or not (0=Did not Win) in the 2016 election.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+library(Stat2Data)
+data("Election16")
+str(Election16)
+```
+ 
+# Income and Election Outcome
+## Plots
+Below are two plots exploring the relationship between income and President Trump winning that state.  They are depicting the same pattern; the second "jitters" the data.
+
+```{r, fig.width=3.5, fig.height=3.5, echo=FALSE}
+Election16 %>%
+  ggplot(aes(y=TrumpWin, x=Income)) + geom_point() 
+Election16 %>%
+  ggplot(aes(y=TrumpWin, x=Income)) + geom_jitter(width = 0.1, height=0.05)
+```
+
+1. Which is the easier graph to understand? Why?
+
+The right plot, with the jittered data makes the patterns more apparent since the points aren't overlaying.
+
+2. What do you conclude from the plot about the relationship between income and the 2016 election results?
+
+The plot depicts a negative relationship between income and the 2016 election results. It is hard to determine the magnitude, but it seems sort of moderately to weak, since there are a number of states with the same average income that President Trump won and didn't win.
+
+## Logistic Model
+
+Let's fit a logistic regression model to these data: $log(\frac{\pi}{1-\pi}) = \beta_0+\beta_1 X_1$
+
+Let's use Income in \$1,000s to make the interpretation a little easier.  Then we re-fit a logistic regression model.
+
+```{r}
+Election16<-Election16 %>% mutate(Income1000s = Income/1000)
+m1<-glm(TrumpWin~Income1000s, data=Election16)
+summary(m1)
+```
+
+3. Write the fitted regression model equation using the output above.
+
+$log(odds) = 2.432+-0.03373Income1000s$
+
+4. What is the direction and magnitude of the relationship between the average income and whether Pres. Trump won that state?
+
+The association is negative and slight/shallow slope.
+
+5. Calculate the log(odds) (the book calls this the Empirical Logit), the odds, and the probability of President Trump winning for each of the following income levels.  As a reminder, you can calculate each from the same output.
+
+_Log(odds):_ $$log(odds) = \beta_0+\beta_1 X_1$$
+_Odds:_ $$Odds = e^{\beta_0+\beta_1 X_1}$$
+_Probability:_ $$\pi = \frac{odds}{1+odds} = \frac{e^{\beta_0+\beta_1 X_1}}{1+e^{\beta_0+\beta_1 X_1}}$$
+
+```{r, fig.width=3.5, fig.height=3.5, warning= FALSE}
+Income1000s<-c(40:70)
+logodds<-coef(m1)[1]+ (coef(m1)[2]*Income1000s)
+m1_data<-as.data.frame(cbind(Income1000s,logodds))
+m1_data <- m1_data %>%
+  mutate(odds=exp(logodds),
+        prob = odds/(1+odds))
+```
+
+| Income | \$40,000    | \$50,000     | \$51,000    | \$55,000    |\$60,000    |\$61,000    |  \$70,000   |
+|-----|------------|------------|------------|------------|------------|------------|------------|
+| Log(odds) | `r m1_data$logodds[1]`  |  `r m1_data$logodds[11]` | `r m1_data$logodds[12]` | `r m1_data$logodds[16]` | `r m1_data$logodds[21]` | `r m1_data$logodds[22]`  |  `r m1_data$logodds[31]` |
+| Odds | `r m1_data$odds[1]`  |  `r m1_data$odds[11]` | `r m1_data$odds[12]` | `r m1_data$odds[16]` | `r m1_data$odds[21]` | `r m1_data$odds[22]`  |  `r m1_data$odds[31]` |
+| Probability|  `r m1_data$prob[1]`  |  `r m1_data$prob[11]` | `r m1_data$prob[12]` | `r m1_data$prob[16]` | `r m1_data$prob[21]` | `r m1_data$prob[22]`  |  `r m1_data$prob[31]` |
+
+```{r, fig.width=3.5, fig.height=3.5, echo=FALSE, warning= FALSE}
+glimpse(m1_data)
+```
+
+6. Plot the values on each of the three plots below.
+
+
+Log(odds)
+
+```{r, echo=FALSE, fig.width=6, fig.height=2.5, echo=FALSE}
+ggplot(m1_data, aes(x=Income1000s,y=logodds)) +geom_point() +geom_smooth(method="lm", se=FALSE)
+```
+
+Odds
+
+```{r, echo=FALSE, fig.width=6, fig.height=2.5, echo=FALSE}
+ggplot(m1_data, aes(x=Income1000s,y=odds)) + geom_point() + geom_smooth(method = "glm", formula = y~x,
+                      method.args = list(family = gaussian(link = 'log')), se=FALSE)
+```
+
+Probability
+
+```{r, echo=FALSE, fig.width=6, fig.height=2.5, echo=FALSE, warning=FALSE}
+ggplot(m1_data, aes(x=Income1000s, y=prob)) + scale_y_continuous(breaks=seq(0,1,0.1))  + geom_jitter(width = 0.5, height = 0.1) + stat_smooth(method="glm", method.args=list(family="binomial"), se=FALSE)
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=2.5, echo=FALSE, warning=FALSE}
+ggplot(Election16, aes(x=Income1000s, y=TrumpWin)) + scale_y_continuous(breaks=seq(0,1,0.1))  + geom_jitter(width = 0.5, height = 0.05) + stat_smooth(method="glm", method.args=list(family="binomial"), se=FALSE)
+```
+
+7. What is the ratio of odds for President Trump winning a state?
+
+7a. Calculate the ratio the odds of a (theoretical) state with \$51,000 average income to a state with \$50,000 average income.
+
+```{r}
+Odds51<-2.037466
+Odds50<-2.107361
+OR5051<-Odds51/Odds50
+OR5051
+```
+
+
+
+7b. Calculate the ratio the odds of a (theoretical) state with \$61,000 average income to a state with \$60,000 average income.
+
+```{r}
+Odds61<-1.454137
+Odds60<-1.504021
+OR6061<-Odds61/Odds60
+OR6061
+```
+
+
+7c. Calculate the OR from the model ($OR = e^{\beta_1}$).  Interpret the odds ratio in a sentence.
+
+```{r}
+exp(coef(m1)[2])
+```
+
+Each additional \$1,000 average income was associated with 0.9668 times the odds of Trump winning in a state. States with \$1,000 higher average income had a lower odds of Trump winning than a state with \$1,000 lower average income.
+
+7d. Did you get the same values from each approach? Why or why not?
+
+Yes. Since we fit the logistic regression model as a linear model on the log(odds) scale, the slope of the line, or the Odds Ratio, is constant, just as a slope was in linear regression.
+
+
+8. Specify your hypotheses and conduct a test of whether the relationship between average income and President Trump winning a state is statistically signficant at the $\alpha = 0.05$ level.
+
+$H_0: \beta_1 = 0$
+
+$H_0: \beta_1 \ne 0$
+
+We reject the null hypothesis since the test statistic for the relationship between income and Trump winning was below the critical value (-5.333<-1.96) and the associated p-value is below the 0.05 threshold (p<0.001).
+
+
+9. Calculate the 95% Confidence Interval for the odds ratio of each additional \$1,000 of average income and of Pres Trump winning that state. $t^* = 1.96$
+
+```{r}
+lci<-exp(-0.033729 - (1.96*0.006324))
+uci<-exp(-0.033729 + (1.96*0.006324))
+CIs<-cbind(lci,uci)
+CIs
+```
+
+Or get `R` to do it for you:
+
+```{r}
+exp(confint(m1))
+```
+
+
+10. Create a binary variable of whether that state had above or below the national average rate of bachelor's degree holders (29.1%) and repeat the steps above in `R`. (A note, these are the averages from these data, rather than from an external source that quoted a higher value.  You might want to dichomoize at the median rather than the mean to avoid some very high/low BA degree states skewing the data, but nonethelesss, this is one approach.)
+
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+Election16<-Election16 %>%
+  mutate(Bach_Avg=as.factor(if_else(BA>=29,"Above","Below")))
+Election16$Bach_Avg <- relevel(Election16$Bach_Avg, ref="Below")
+
+Election16 %>%
+  ggplot(aes(y=TrumpWin, x=Bach_Avg)) + geom_jitter(width=0.1, height=0.05) 
+
+#another way to look at this is with a boxplot -- it will give you a solid line to indicate where most of the distribution is
+Election16 %>%
+  ggplot(aes(y=TrumpWin, x=Bach_Avg)) + geom_boxplot()
+```
+
+We see from the visual that being in a state that has higher than average rates of bachelor's degree holders is negatively associated with Trump winning those states.
+
+```{r, warning=FALSE, message=FALSE, error=FALSE}
+library(mosaic)
+tally(TrumpWin~Bach_Avg, data=Election16)
+tally(TrumpWin~Bach_Avg, margins=TRUE, format = "proportion", data=Election16)
+
+#
+library(gmodels)
+with(Election16, CrossTable(TrumpWin, Bach_Avg,
+prop.r=FALSE, prop.chisq=FALSE, prop.t=FALSE))
+```
+
+## Models
+```{r}
+m2_2016<-glm(TrumpWin~Bach_Avg, data=Election16)
+summary(m2_2016)
+
+#This code combines the odds ratios and the 95% CIs into three columns (OR, lower CI, Upper CI) for each of the terms in the model (here, just the intercept and the slope)
+results_2016<-exp(cbind(coef(m2_2016), confint(m2_2016)))
+results_2016
+```
+
+A state with more than the national average of bachelor's degree holders (i.e., a more highly educated state) has 0.47 times lower odds of Trump winning the state than a state with less than the national average of bachelor degree holders. We are 95% confident that the true relationship between having above average amount of bachelor's degree holders, compared to below average, and odds Trump winning is between 0.39 and 0.57.  We can reject the null hypothesis ($H_0: \beta_1 = 0$ and $H_A: \beta_1 \ne 0$) and conclude that the association between a state having an above average number of bachelor degree holders had significantly lower odds of Trump winning than a state with below average bachelor's degree holders, as evidenced by the large test statstic (-8.018 < -1.96) and the small p-value (2.07e-10, which is below our threshold of 0.05).
+
+# Recreating the above with the Elections 2008 data 
+
+The `Election16` data is in version 2.0 of the Stat2Data package, which isn't yet on the server in the Stat2Data package. You could practice with the `Election08` data, with the same variables based on the 2008 election.
+
+```{r}
+data("Election08")
+Election08<-Election08 %>%
+  mutate(Bach_Avg=as.factor(if_else(BA>=27.14,"Above","Below")),
+    Income1000s = Income/1000)
+Election08$Bach_Avg <- relevel(Election08$Bach_Avg, ref="Below")
+
+```
+
+#Obama Winning and Income
+```{r, warning=FALSE, message=FALSE, error=FALSE}
+
+Election08 %>%
+  ggplot(aes(y=ObamaWin, x=Income)) + geom_jitter(width = 0.1, height=0.05)
+
+m1_2008<-glm(ObamaWin~Income1000s, data=Election08)
+summary(m1_2008)
+
+#This code combines the odds ratios and the 95% CIs into three columns (OR, lower CI, Upper CI) for each of the terms in the model (here, just the intercept and the slope)
+results1_2008<-exp(cbind(coef(m1_2008), confint(m1_2008)))
+results1_2008
+```
+
+#Obama Winning and Bachelor's Degrees
+```{r, warning=FALSE, message=FALSE, error=FALSE}
+
+Election08 %>%
+  ggplot(aes(y=ObamaWin, x=Bach_Avg)) + geom_jitter(width = 0.1, height=0.05)
+
+m2_2008<-glm(ObamaWin~Bach_Avg, data=Election08)
+summary(m2_2008)
+
+#This code combines the odds ratios and the 95% CIs into three columns (OR, lower CI, Upper CI) for each of the terms in the model (here, just the intercept and the slope)
+results2_2008<-exp(cbind(coef(m2_2008), confint(m2_2008)))
+results2_2008
+```

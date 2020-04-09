@@ -1,0 +1,146 @@
+---
+title: "Simple Logistic Regression Lab"
+author: "SDS 291"
+date: "April 8, 2020"
+output:
+  html_document:
+    css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: true
+---
+
+```{r, eval=FALSE, warning=FALSE, error=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(mosaic)
+library(Stat2Data)
+library(magrittr)
+library(tidyverse)
+```
+
+We're going to keep working with the `Whickham` data from class on Tuesday.  Bring in the relevant packages (above) and the data (below, from the mosaic package).
+
+```{r, eval=FALSE}
+data("Whickham")
+?Whickham
+```
+
+# Age and Outcome
+
+1. Visualize the relationship between age and the outcome
+
+```{r, eval=FALSE}
+qplot(x=age,y=outcome,data=Whickham, geom="boxplot")
+qplot(x=outcome,y=age,data=Whickham)+geom_jitter()+coord_flip()
+qplot(x=outcome,y=age,data=Whickham,geom="boxplot")+coord_flip()
+```
+
+1. Fit a logistic model to test the relationship between outcome and age (with code below).
+
+
+
+```{r, eval=FALSE}
+Whickham$outcome<-relevel(Whickham$outcome, ref="Alive")
+m0<-glm(outcome~age, data=Whickham, family=binomial)
+summary(m0)
+```
+
+`relevel` establishes the reference group (`ref=`) for a given variable. Remember, `R`'s default is to use the first alphabetical as the reference group, which would mean non-smokers and dead would be the reference groups. Instead, we want to flip that around.  This command uses "base" `R`, which uses the `dataset$variablename` syntax.
+
+1. Write the fitted equation and interpret the results (in these units) in light of the question. Be sure to comment on the magnitude and direction of the association.
+
+1. Based on this model, what is the probability that a 60 year old was dead?
+
+```{r, eval=FALSE}
+newdata = data.frame(age=60)
+predict(m0, newdata, type="response")
+
+age<-60
+logodds<-coef(m0)[1]+ (coef(m0)[2]*age)
+m0_data<-as.data.frame(cbind(age,logodds))
+m0_data <- m0_data %>%
+  mutate(odds=exp(logodds),
+        prob = odds/(1+odds))
+m0_data
+```
+
+1. What is the odds ratio for the association between age and dying?
+
+```{r, eval=FALSE}
+exp(coef(m0))
+```
+
+# Outcome and Smoker
+
+## 2-by-2 table
+Construct a two-way table to explore whether smoking is associated with the outcome (staying alive).
+
+```{r, eval=FALSE}
+Whickham$smoker<-relevel(Whickham$smoker, "Yes", "No")
+Whickham$outcome<-relevel(Whickham$outcome, "Dead","Alive")
+tally(~ smoker + outcome, margins=FALSE, data=Whickham)
+tally(~ smoker + outcome, margins=TRUE, format = "proportion", data=Whickham)
+```
+
+
+1. Calculate the the proportion of smokers who were dead and of smokers who were alive 20 years later. 
+
+
+1. Use the code below to calculate the Odds Ratio using the numbers of people in the relevant table cells (a-d).
+
+```{r, eval=FALSE}
+#         Response
+#        Yes | No
+# Expl.|-----|-----|
+# Yes  |  a  |  b  |
+#      |-----|-----|
+# No   |  c  |  d  |
+#      |-----|-----|
+# 
+OR<-(a/b)/(c/d)
+OR
+```
+
+
+## Modeling
+
+First we have to be sure that we are going to calculate the same OR that we did above -- smokers' odds of dying compared to non-smokers'.
+
+1. Relevel the `smoker` variable with the appropriate reference group
+
+
+1. Fit a logistic model of the relationship between smoking status and outcome.
+```{r, eval=FALSE}
+Whickham$outcome<-relevel(Whickham$outcome, ref="Alive")
+Whickham$smoker<-relevel(Whickham$smoker, ref="No")
+m1<-glm(outcome~smoker, data=Whickham, family=binomial)
+summary(m1)
+exp(cbind(OR=coef(m1), confint(m1)))
+```
+
+1. Write the fitted equation and interpret the results (in these units) in light of the question. Be sure to comment on the magnitude and direction of the association.
+
+1. Using the two-way table above, show that you can calculate the coefficient for smoking status from your regression model.
+
+1. Based on your model, what's the probability that a smoker was alive?
+
+1. What are the regression assumptions? Evaluate whether they are met.
+
+[Hint: for the question above, check the textbook in Chapter 9.3-9.4 for what the assumptions are.  See the code below for one of the assumptions (linearity, p.473). The book suggest ~5 bins, but we're using 10]
+```{r, eval=FALSE, error=FALSE, warning=FALSE, message=FALSE}
+#let's make `outcome` a numeric variable between 0 and 1 so that the proportion makes sense
+#and decide what the 10 age groups should be by "cutting" the data into 10 evenly sized groups.
+Whickham <- Whickham %>%
+  mutate(isDead=as.numeric(if_else(outcome=="Dead",1,0)),
+         ageGroup = cut(age, breaks=10))
+
+# Then generate the proportion of those alive for each age group (so you have something to plot on the y-axis)
+# And the average age for each age group (so you have something to plot on the x-axis)
+Whickham_bin <- Whickham %>%
+  group_by(ageGroup) %>%
+  mutate(binned.y=mean(isDead), binned.x=mean(age))
+
+#is this roughly linear on the log-odds scale?
+qplot(y=logit(binned.y), x=binned.x, data=Whickham_bin) + geom_smooth(method="lm", se=FALSE, fullrange=TRUE)
+
+```
