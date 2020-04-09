@@ -1,0 +1,5 @@
+\contentsline {section}{Income and Election Outcome}{1}{section*.2}% 
+\contentsline {subsection}{Plots}{1}{section*.3}% 
+\contentsline {subsection}{Logistic Model}{2}{section*.4}% 
+\contentsline {subsection}{Models}{9}{section*.5}% 
+\contentsline {section}{Recreating the above with the Elections 2008 data}{10}{section*.6}% 

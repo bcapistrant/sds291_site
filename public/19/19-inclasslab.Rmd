@@ -1,0 +1,99 @@
+---
+title: "Logistic Regression"
+author: "SDS 291"
+date: "April 13, 2020"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r, warning=FALSE, error=FALSE, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(mosaic)
+library(Stat2Data)
+library(magrittr)
+library(tidyverse)
+data("Whickham")
+Whickham$outcome<-relevel(Whickham$outcome, ref="Dead")
+```
+
+We're going to work with the `Whickham` data contains observations about women, and whether they were alive 20 years after their initial observation (`outcome` is a 2 level factor variable - Alive/Dead). You can learn more about these data from the `mosaicData` help feature if you'd like.
+
+Specifically, we're interested in: the association of age, smoking status (smoker), and 20-year survival (outcome: alive (success), dead (reference / failure)).  Bring in the relevant packages and the data (above, from the mosaic package).
+
+# Age and Outcome
+
+```{r, fig.height=3, fig.width=3, echo=FALSE}
+qplot(x=outcome,y=age,data=Whickham)+geom_jitter()+coord_flip()
+qplot(x=outcome,y=age,data=Whickham,geom="boxplot")+coord_flip()
+```
+
+
+```{r}
+m0<-glm(outcome~age, data=Whickham, family=binomial)
+summary(m0)
+```
+
+1. Write the fitted equation and interpret the results (in these units) in light of the question. Be sure to comment on the magnitude and direction of the association.
+
+\vspace{3in}
+
+2. Based on this model, what is the probability that a 60 year old was alive 20 years after the initial survey?
+
+\vspace{3in}
+
+\newpage
+# Smoking Status and Outcome (Alive)
+
+```{r}
+Whickham$smoker<-factor(Whickham$smoker, levels=c("Yes", "No"))
+Whickham$outcome<-factor(Whickham$outcome, levels=c("Alive", "Dead"))
+tally(~ smoker + outcome, margins=FALSE, data=Whickham)
+```
+
+
+3. Calculate the Odds Ratio of non-smokers being alive in 20 years compared to smokers from the table above.
+\vspace{3in}
+
+```{r}
+Whickham$smoker<-relevel(Whickham$smoker, ref= "No")
+Whickham$outcome<-relevel(Whickham$outcome, ref= "Dead")
+m1<-glm(outcome~smoker, data=Whickham, family=binomial)
+summary(m1)
+```
+
+4. Show that you can calculate the coefficient for smoking status from your regression model as you did in #3.
+
+\vspace{3in}
+
+5. Based on your model, what's the probability that a smoker was alive 20 years later?
+
+\vspace{3in}
+
+6. Based on what you know about the risk of death for age and smoking status, do these results make sense? Explain your answer.
+
+\newpage
+## Multiple Logistic Regression
+```{r}
+m2<-glm(outcome~age+smoker, data=Whickham, family=binomial)
+summary(m2)
+```
+
+7. What is the odds ratio for smokers compared to non-smokers in this model? Interpret in a sentence in the context of this real-world problem.
+
+\vspace{3in}
+
+
+8. What is the probability of a 60 year old non-smoker being alive 20 years later?
+
+\vspace{3in}
+
+
+9. What is the probability of a 40 year old smoker being alive 20 years later?
+
+\vspace{3in}
+
+
+10. What does this model help us to understand about our simple logistic regression estimates above?
+
+\vspace{3in}

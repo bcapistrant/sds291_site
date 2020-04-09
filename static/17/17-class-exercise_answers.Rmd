@@ -53,13 +53,13 @@ Let's use Income in \$1,000s to make the interpretation a little easier.  Then w
 
 ```{r}
 Election16<-Election16 %>% mutate(Income1000s = Income/1000)
-m1<-glm(TrumpWin~Income1000s, data=Election16)
+m1<-glm(TrumpWin~Income1000s, data=Election16, family=binomial)
 summary(m1)
 ```
 
 3. Write the fitted regression model equation using the output above.
 
-$log(odds) = 2.432+-0.03373Income1000s$
+$log(odds) = 11.18186+-0.19668 Income1000s$
 
 4. What is the direction and magnitude of the relationship between the average income and whether Pres. Trump won that state?
 
@@ -82,13 +82,9 @@ m1_data <- m1_data %>%
 
 | Income | \$40,000    | \$50,000     | \$51,000    | \$55,000    |\$60,000    |\$61,000    |  \$70,000   |
 |-----|------------|------------|------------|------------|------------|------------|------------|
-| Log(odds) | `r m1_data$logodds[1]`  |  `r m1_data$logodds[11]` | `r m1_data$logodds[12]` | `r m1_data$logodds[16]` | `r m1_data$logodds[21]` | `r m1_data$logodds[22]`  |  `r m1_data$logodds[31]` |
-| Odds | `r m1_data$odds[1]`  |  `r m1_data$odds[11]` | `r m1_data$odds[12]` | `r m1_data$odds[16]` | `r m1_data$odds[21]` | `r m1_data$odds[22]`  |  `r m1_data$odds[31]` |
-| Probability|  `r m1_data$prob[1]`  |  `r m1_data$prob[11]` | `r m1_data$prob[12]` | `r m1_data$prob[16]` | `r m1_data$prob[21]` | `r m1_data$prob[22]`  |  `r m1_data$prob[31]` |
-
-```{r, fig.width=3.5, fig.height=3.5, echo=FALSE, warning= FALSE}
-glimpse(m1_data)
-```
+| Log(odds) | `r round(m1_data$logodds[1],3)`  |  `r round(m1_data$logodds[11],3)` | `r round(m1_data$logodds[12],3)` | `r round(m1_data$logodds[16],3)` | `r round(m1_data$logodds[21],3)` | `r round(m1_data$logodds[22],3)`  |  `r round(m1_data$logodds[31],3)` |
+| Odds | `r round(m1_data$odds[1],3)`  |  `r round(m1_data$odds[11],3)` | `r round(m1_data$odds[12],3)` | `r round(m1_data$odds[16],3)` | `r round(m1_data$odds[21],3)` | `r round(m1_data$odds[22],3)`  |  `r round(m1_data$odds[31],3)` |
+| Probability|  `r round(m1_data$prob[1],3)`  |  `r round(m1_data$prob[11],3)` | `r round(m1_data$prob[12],3)` | `r round(m1_data$prob[16],3)` | `r round(m1_data$prob[21],3)` | `r round(m1_data$prob[22],3)`  |  `r round(m1_data$prob[31],3)` |
 
 6. Plot the values on each of the three plots below.
 
@@ -121,8 +117,8 @@ ggplot(Election16, aes(x=Income1000s, y=TrumpWin)) + scale_y_continuous(breaks=s
 7a. Calculate the ratio the odds of a (theoretical) state with \$51,000 average income to a state with \$50,000 average income.
 
 ```{r}
-Odds51<-2.037466
-Odds50<-2.107361
+Odds51<-3.1623911
+Odds50<-3.8497399
 OR5051<-Odds51/Odds50
 OR5051
 ```
@@ -132,8 +128,8 @@ OR5051
 7b. Calculate the ratio the odds of a (theoretical) state with \$61,000 average income to a state with \$60,000 average income.
 
 ```{r}
-Odds61<-1.454137
-Odds60<-1.504021
+Odds61<-0.4424431
+Odds60<-0.5386085
 OR6061<-Odds61/Odds60
 OR6061
 ```
@@ -145,7 +141,7 @@ OR6061
 exp(coef(m1)[2])
 ```
 
-Each additional \$1,000 average income was associated with 0.9668 times the odds of Trump winning in a state. States with \$1,000 higher average income had a lower odds of Trump winning than a state with \$1,000 lower average income.
+Each additional \$1,000 average income was associated with 0.82 times the odds of Trump winning in a state. States with \$1,000 higher average income had a lower odds of Trump winning than a state with \$1,000 lower average income.
 
 7d. Did you get the same values from each approach? Why or why not?
 
@@ -158,21 +154,21 @@ $H_0: \beta_1 = 0$
 
 $H_0: \beta_1 \ne 0$
 
-We reject the null hypothesis since the test statistic for the relationship between income and Trump winning was below the critical value (-5.333<-1.96) and the associated p-value is below the 0.05 threshold (p<0.001).
+We reject the null hypothesis since the test statistic for the relationship between income and Trump winning was below the critical value (-3.523<-1.96) and the associated p-value is below the 0.05 threshold (p<0.001).
 
 
 9. Calculate the 95% Confidence Interval for the odds ratio of each additional \$1,000 of average income and of Pres Trump winning that state. $t^* = 1.96$
 
 ```{r}
-lci<-exp(-0.033729 - (1.96*0.006324))
-uci<-exp(-0.033729 + (1.96*0.006324))
+lci<-exp(-0.19668 - (1.96*0.05582))
+uci<-exp(-0.19668 + (1.96*0.05582))
 CIs<-cbind(lci,uci)
 CIs
 ```
 
 Or get `R` to do it for you:
 
-```{r}
+```{r, warning=FALSE, message=FALSE, error=FALSE}
 exp(confint(m1))
 ```
 
@@ -207,7 +203,7 @@ prop.r=FALSE, prop.chisq=FALSE, prop.t=FALSE))
 
 ## Models
 ```{r}
-m2_2016<-glm(TrumpWin~Bach_Avg, data=Election16)
+m2_2016<-glm(TrumpWin~Bach_Avg, data=Election16, family=binomial)
 summary(m2_2016)
 
 #This code combines the odds ratios and the 95% CIs into three columns (OR, lower CI, Upper CI) for each of the terms in the model (here, just the intercept and the slope)
@@ -215,7 +211,7 @@ results_2016<-exp(cbind(coef(m2_2016), confint(m2_2016)))
 results_2016
 ```
 
-A state with more than the national average of bachelor's degree holders (i.e., a more highly educated state) has 0.47 times lower odds of Trump winning the state than a state with less than the national average of bachelor degree holders. We are 95% confident that the true relationship between having above average amount of bachelor's degree holders, compared to below average, and odds Trump winning is between 0.39 and 0.57.  We can reject the null hypothesis ($H_0: \beta_1 = 0$ and $H_A: \beta_1 \ne 0$) and conclude that the association between a state having an above average number of bachelor degree holders had significantly lower odds of Trump winning than a state with below average bachelor's degree holders, as evidenced by the large test statstic (-8.018 < -1.96) and the small p-value (2.07e-10, which is below our threshold of 0.05).
+A state with more than the national average of bachelor's degree holders (i.e., a more highly educated state) has 0.017 times the odds of Trump winning the state than a state with less than the national average of bachelor degree holders. We are 95% confident that the true relationship between having above average amount of bachelor's degree holders, compared to below average, and odds Trump winning is between 0.002 and 0.086.  We can reject the null hypothesis ($H_0: \beta_1 = 0$ and $H_A: \beta_1 \ne 0$) and conclude that the association between a state having an above average number of bachelor degree holders had significantly lower odds of Trump winning than a state with below average bachelor's degree holders, as evidenced by the large test statstic (-4.429 < -1.96) and the small p-value (9.46e-06, which is below our threshold of 0.05).
 
 # Recreating the above with the Elections 2008 data 
 
@@ -236,7 +232,7 @@ Election08$Bach_Avg <- relevel(Election08$Bach_Avg, ref="Below")
 Election08 %>%
   ggplot(aes(y=ObamaWin, x=Income)) + geom_jitter(width = 0.1, height=0.05)
 
-m1_2008<-glm(ObamaWin~Income1000s, data=Election08)
+m1_2008<-glm(ObamaWin~Income1000s, data=Election08, family=binomial)
 summary(m1_2008)
 
 #This code combines the odds ratios and the 95% CIs into three columns (OR, lower CI, Upper CI) for each of the terms in the model (here, just the intercept and the slope)
@@ -250,7 +246,7 @@ results1_2008
 Election08 %>%
   ggplot(aes(y=ObamaWin, x=Bach_Avg)) + geom_jitter(width = 0.1, height=0.05)
 
-m2_2008<-glm(ObamaWin~Bach_Avg, data=Election08)
+m2_2008<-glm(ObamaWin~Bach_Avg, data=Election08, family=binomial)
 summary(m2_2008)
 
 #This code combines the odds ratios and the 95% CIs into three columns (OR, lower CI, Upper CI) for each of the terms in the model (here, just the intercept and the slope)
