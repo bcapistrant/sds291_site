@@ -96,15 +96,12 @@ and explanatory variables about their:
 ```{r}
 require(Stat2Data)
 data("ICU")
-
-head(ICU)
-str(ICU)
 ```
 
 ```{r, fig.width=2, echo=FALSE}
-qplot(x=Age, y=Survive, data=ICU, group=Survive, geom="boxplot")
-qplot(x=SysBP, y=Survive, data=ICU, group=Survive, geom="boxplot")
-qplot(x=Pulse, y=Survive, data=ICU, group=Survive, geom="boxplot")
+qplot(x=Age, y=Survive, data=ICU, group=Survive)
+qplot(x=SysBP, y=Survive, data=ICU, group=Survive)
+qplot(x=Pulse, y=Survive, data=ICU, group=Survive)
 tally(~AgeGroup+Survive, data=ICU)
 tally(~Sex+Survive, data=ICU)
 tally(~Infection+Survive, data=ICU)
@@ -123,7 +120,7 @@ lrtest(icu_m0)
 
 1. Write down the logit and probability forms of the model
 
-2. Comment on the effectiveness of each of the predictors in the two-predictor modle.
+2. Comment on the effectiveness of each of the predictors in the two-predictor model.
 
 3. Estimate the probability and odds of an young man surviving the ICU
 
