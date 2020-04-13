@@ -154,6 +154,7 @@ lessons:
     date: "April 13"
     reading: "19-reading"
     assignment: "07-problem-set"
+    class: "19-class"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
     date: "April 15"
