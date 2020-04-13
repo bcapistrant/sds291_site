@@ -96,15 +96,12 @@ and explanatory variables about their:
 ```{r}
 require(Stat2Data)
 data("ICU")
-
-head(ICU)
-str(ICU)
 ```
 
 ```{r, fig.width=2, echo=FALSE}
-qplot(y=Age, x=Survive, data=ICU, group=Survive, geom="boxplot")
-qplot(y=SysBP, x=Survive, data=ICU, group=Survive, geom="boxplot")
-qplot(y=Pulse, x=Survive, data=ICU, group=Survive, geom="boxplot")
+qplot(x=Age, y=Survive, data=ICU, group=Survive)
+qplot(x=SysBP, y=Survive, data=ICU, group=Survive)
+qplot(x=Pulse, y=Survive, data=ICU, group=Survive)
 tally(~AgeGroup+Survive, data=ICU)
 tally(~Sex+Survive, data=ICU)
 tally(~Infection+Survive, data=ICU)
@@ -113,7 +110,7 @@ tally(~Emergency+Survive, data=ICU)
 
 ## Multiple Logistic Regression Model
 ```{r, message=FALSE}
-icu_m0 <- glm(Survive ~ Age+SysBP+Pulse, family=binomial, data=ICU)
+icu_m0 <- glm(Survive ~ Age+Sex+SysBP+Pulse, family=binomial, data=ICU)
 summary(icu_m0)
 exp(cbind(OR = coef(icu_m0), confint(icu_m0)))
 lrtest(icu_m0)
@@ -123,93 +120,15 @@ lrtest(icu_m0)
 
 1. Write down the logit and probability forms of the model
 
-2. Comment on the effectiveness of each of the predictors in the two-predictor modle.
+2. Comment on the effectiveness of each of the predictors in the two-predictor model.
 
-3. Estimate the probability and odds of an 18yo man surviving the titanic
+3. Estimate the probability and odds of an young man surviving the ICU
 
-4. Repeat 3 for a woman who is 18yo and find the odds ratio
+4. Repeat 3 for a young woman and find the odds ratio
 
-5. Redo both 3&4 for a man and woman 50yo
+5. Redo both 3&4 for a man and woman aged 70+
 
 6. What happens to the OR as age increases? Will that always be the case?
 
-7. Test Age*Sex. Explain how the coefficients in the model relate to separate linear models for males and females to predict log(offs) of survival based on age
-
-8. Is the model a significant improvement over the two factor model?
-
-9. 
-**What does your model predict for the odds and probability of survival for the first person in the dataset?**
-
-```{r}
-icu_m0a <- glm(Survive ~ Emergency*Pulse, family=binomial, data=ICU)
-summary(icu_m0a)
-exp(cbind(OR = coef(icu_m0a), confint(icu_m0a)))
-```
-
-## What about Binary Explanatory Variables?
-
-  \begin{equation}
-    Emergency=
-    \begin{cases}
-      0, & \text{Elective Admission} \\
-      1, & \text{Emergency Admission}
-    \end{cases}
-  \end{equation}
-  
-```{r, message=FALSE}
-icu_m1 <- glm(Survive ~ Age+SysBP+Emergency, family=binomial, data=ICU)
-summary(icu_m1)
-exp(cbind(OR = coef(icu_m1), confint(icu_m1)))
-```
-
-
-## What about Categorical Explanatory Variables?
-
-```{r}
-ICU <- ICU %>% 
-  mutate(AgeGroup=as.factor(AgeGroup),
-         
-         age_young=if_else(AgeGroup==1, 1,0),
-         age_mid=if_else(AgeGroup==2, 1,0),
-         age_old=if_else(AgeGroup==3, 1,0),
-         
-         Survive_flip=if_else(Survive==1,"Alive","Dead")
-         )
-
-tally(~Survive_flip+AgeGroup, data=ICU, margins=FALSE)
-
-```
-
-```{r}
-
-survodds_young<-54/5
-survodds_mid<-60/17
-survodds_old<-46/18
-
-surv_OR_mid<-survodds_mid/survodds_young
-surv_OR_mid
-surv_OR_old<-survodds_old/survodds_young
-surv_OR_old
-
-icu_slr_m2 <- glm(Survive ~ I(AgeGroup), family=binomial, data=ICU)
-exp(coef(icu_slr_m2))
-```
-
-```{r, message=FALSE}
-icu_m2 <- glm(Survive ~ I(AgeGroup)+SysBP+Emergency, family=binomial, data=ICU)
-summary(icu_m2)
-exp(cbind(OR = coef(icu_m2), confint(icu_m2)))
-```
-
-
-**What does your model predict for the odds and probability of survival for an older person with BP=100 and Non-Emergency Admission?**
-
-
-## Is this model better than our original model?
-```{r}
-lrtest(icu_m2,icu_m0)
-
-minus2ll<-(-83.096--91.618)*2
-minus2ll
-```
+7. What would Age*Sex do? Explain how the coefficients in the model relate to separate linear models for males and females to predict log(odds) of survival based on age
 
