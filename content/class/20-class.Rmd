@@ -1,0 +1,27 @@
+---
+title: "Multiple Logistic Regression"
+linktitle: "20 Multiple Logistic - 2"
+date: "2020-04-15"
+class_date: "2020-04-15"
+menu:
+  class:
+    parent: Class sessions
+    weight: 20
+type: docs
+weight: 20
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In Class Materials
+
+- In-Class "Lab"
+    - We're going to work through an example in small groups and then come back together and go over the answers together. If you move through quickly, there's some additional, additional practice below to do in the meantime.
+    - Below is the same document in different formats. PDF is easier for a tablet or pen/paper, or to use the "annotate" drawing features, and Google Doc is easier if you're more comfortable with that approach or want to share with classmates and work together. I will post the raw file and solutions later this week - the goal is to work on this first, and to do so while having to practice doing the calculations directly.
+    - `.PDF` [version](https://sds291.netlify.com/20/20-inclasslab.pdf) 
+    - Google Doc [version](https://drive.google.com/file/d/1YBCAhzkmgJZUwe7uw8aQG8TeHMtGaRK4/view?usp=sharing) (now view-only, just make a copy)
+
+- Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

@@ -20,11 +20,6 @@ editor_options:
 
 - [Slides](https://sds291.netlify.com/19/19-slides.html) ([`.rmd` raw file](https://sds291.netlify.com/19/19-slides.rmd))
 
-- [Google Doc of the example we worked through together](https://docs.google.com/document/d/1FuFYOtzCG6JX7tQCBpqjLtATg7FHsebBRWnjMLhb5iI/edit?usp=sharing).
-
-- Extra Practice 
-    - Below is the same document in different formats. PDF is easier for a tablet or pen/paper, or to use the "annotate" drawing features, and Google Doc is easier if you're more comfortable with that approach or want to share with classmates and work together. I will post the raw file and solutions later this week - the goal is to work on this first, and to do so while having to practice doing the calculations directly.
-    - `.PDF` [version](https://sds291.netlify.com/17/17-class-exercise.pdf) 
-    - Google Doc [version](https://drive.google.com/file/d/1YBCAhzkmgJZUwe7uw8aQG8TeHMtGaRK4/view?usp=sharing) (now view-only, just make a copy)
+- [Google Doc of the example we worked through together.](https://docs.google.com/document/d/1FuFYOtzCG6JX7tQCBpqjLtATg7FHsebBRWnjMLhb5iI/edit?usp=sharing)
 
 - Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

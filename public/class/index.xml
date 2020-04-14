@@ -703,14 +703,37 @@
 &lt;h2&gt;In Class Materials&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sds291.netlify.com/19/19-slides.html&#34;&gt;Slides&lt;/a&gt; (&lt;a href=&#34;https://sds291.netlify.com/19/19-slides.rmd&#34;&gt;&lt;code&gt;.rmd&lt;/code&gt; raw file&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/document/d/1FuFYOtzCG6JX7tQCBpqjLtATg7FHsebBRWnjMLhb5iI/edit?usp=sharing&#34;&gt;Google Doc of the example we worked through together&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Extra Practice
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/document/d/1FuFYOtzCG6JX7tQCBpqjLtATg7FHsebBRWnjMLhb5iI/edit?usp=sharing&#34;&gt;Google Doc of the example we worked through together.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multiple Logistic Regression</title>
+      <link>/class/20-class/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/class/20-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-materials&#34;&gt;In Class Materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In Class Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;In-Class “Lab”
+&lt;ul&gt;
+&lt;li&gt;We’re going to work through an example in small groups and then come back together and go over the answers together. If you move through quickly, there’s some additional, additional practice below to do in the meantime.&lt;/li&gt;
 &lt;li&gt;Below is the same document in different formats. PDF is easier for a tablet or pen/paper, or to use the “annotate” drawing features, and Google Doc is easier if you’re more comfortable with that approach or want to share with classmates and work together. I will post the raw file and solutions later this week - the goal is to work on this first, and to do so while having to practice doing the calculations directly.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.PDF&lt;/code&gt; &lt;a href=&#34;https://sds291.netlify.com/17/17-class-exercise.pdf&#34;&gt;version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.PDF&lt;/code&gt; &lt;a href=&#34;https://sds291.netlify.com/20/20-inclasslab.pdf&#34;&gt;version&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Google Doc &lt;a href=&#34;https://drive.google.com/file/d/1YBCAhzkmgJZUwe7uw8aQG8TeHMtGaRK4/view?usp=sharing&#34;&gt;version&lt;/a&gt; (now view-only, just make a copy)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
