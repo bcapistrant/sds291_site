@@ -473,6 +473,50 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
     </item>
     
     <item>
+      <title>8. Problem set 8</title>
+      <link>/assignment/08-problem-set/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/08-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recommended&#34;&gt;Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clarifications-and-cautions&#34;&gt;Clarifications and Cautions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10.12 (1st Edition); 10.23 (2nd Edition)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recommended&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10.13 (1st Ed) / 10.24 (2nd Ed) to extend the required example&lt;/li&gt;
+&lt;li&gt;10.19 (1st Ed) / 10.31 (2nd Ed) to work with a categorical explanatory variable (2nd Ed, see below)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clarifications-and-cautions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Clarifications and Cautions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Be sure to use &lt;code&gt;SexCode&lt;/code&gt;, not &lt;code&gt;Sex&lt;/code&gt; so that the direction of the associations are consistent with others from the class – makes working together easier – and to facilitate some od the subsequent question and calculations. [Note, you can get the exact same thing from using &lt;code&gt;Sex&lt;/code&gt; so long as you define the reference group the same way &lt;code&gt;SexCode&lt;/code&gt; is coded – that 1 is females and 0/reference for males – so that the regression coefficients calculate the same thing. If you want extra practice, try both!]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;There is no template for this assignment. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;p&gt;Use the Homework 8 submission on &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=37984&#34;&gt;Moodle.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Quiz 4</title>
       <link>/assignment/04-quiz/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>

@@ -1,0 +1,38 @@
+---
+title: "8. Problem set 8"
+date: "2020-04-06"
+due_date: "2020-04-13"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Problem sets
+    weight: 8
+type: docs
+weight: 8
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Required
+
+- 10.12 (1st Edition); 10.23 (2nd Edition)
+
+# Recommended
+- 10.13 (1st Ed) / 10.24 (2nd Ed) to extend the required example
+- 10.19 (1st Ed) / 10.31 (2nd Ed) to work with a categorical explanatory variable (2nd Ed, see below)
+
+
+# Clarifications and Cautions
+
+- Be sure to use `SexCode`, not `Sex` so that the direction of the associations are consistent with others from the class -- makes working together easier -- and to facilitate some od the subsequent question and calculations. [Note, you can get the exact same thing from using `Sex` so long as you define the reference group the same way `SexCode` is coded -- that 1 is females and 0/reference for males -- so that the regression coefficients calculate the same thing. If you want extra practice, try both!]
+
+# Submit on Moodle
+
+There is no template for this assignment. You're a pro at making your own RMarkdown files now!
+
+You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline. 
+
+Use the Homework 8 submission on [Moodle.](https://moodle.smith.edu/course/view.php?id=37984) 

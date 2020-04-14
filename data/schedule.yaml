@@ -163,7 +163,7 @@ lessons:
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Visualizing Coefficients and Predicted Probabilities**'
     date: "April 20"
     reading: "21-reading"
-    #assignment: "05-eval-dag"
+    assignment: "08-problem-set"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Log Likelihood, Ratio Tests**'
     date: "April 22"
