@@ -158,7 +158,8 @@ lessons:
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Multiple Regression**'
     date: "April 15"
-    reading: "20-reading" 
+    reading: "20-reading"
+    class: "20-class"
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Visualizing Coefficients and Predicted Probabilities**'
     date: "April 20"

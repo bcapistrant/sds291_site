@@ -3,8 +3,8 @@ title: "Multiple Logistic Regression"
 author: "SDS 291"
 date: "April 15, 2020"
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
 ---
 
 ```{r, warning=FALSE, error=FALSE, message=FALSE, echo=FALSE}
@@ -55,7 +55,7 @@ tally(~ smoker + outcome, margins=FALSE, data=Whickham)
 ```
 
 
-3. Calculate the Odds Ratio of non-smokers being alive in 20 years compared to smokers from the table above.
+3. Calculate the Odds Ratio of smokers being alive in 20 years compared to non-smokers from the table above.
 \vspace{3in}
 
 ```{r}
