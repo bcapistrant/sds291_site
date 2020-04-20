@@ -20,4 +20,8 @@ editor_options:
 
 - [Data Visualizations](https://sds291.netlify.com/21/Visualization_Examples_2020_v01.pdf) (and [.rmd](https://sds291.netlify.com/21/Visualization_Examples_2020_v01.rmd))
 
+## Extra Practice
+
+- [Extra Practice Lab](https://sds291.netlify.com/21/ExtraLogisticVisualization_lab.html)
+
 - Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

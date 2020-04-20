@@ -1,0 +1,247 @@
+---
+title: "Visualizing Logistic Models"
+author: "SDS 291 - Multiple Regression"
+date: "4/20/2020"
+output:
+  html_document:
+    css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: true
+---
+
+Fox News ran a poll in early April ostensibly about the [The Coronavirus Aid, Relief, and Economic Security (CARES) Act](https://home.treasury.gov/policy-issues/cares) and responses to it, particularly by political party affiliation. The sample was 1,107 people, collected by telephone. You can read more about the results of the poll [here.](https://www.foxnews.com/politics/fox-news-poll-trump-job-approval-hits-new-high-as-voters-rally-during-crisis)
+
+We're going to be working with the raw data from this poll to investigate how perceptions of the cost / economic size of the CARES Act was too much (vs. just right or too little) by political party.
+
+## How to find the data
+
+Find the dataset (#31117298) via the [Roper Center](https://ropercenter-cornell-edu.libproxy.smith.edu/) or directly [here.](https://ropercenter-cornell-edu.libproxy.smith.edu/CFIDE/cf/action/ipoll/abstract.cfm?keyword=31117298&keywordoptions=1&exclude=&excludeOptions=1&topic=Any&organization=Any&label=&fromdate=1/1/1935&toDate=&&archno=31117298&start=summary)  Smith College is a member of the Roper Center, and both of those links should send you via Smith (you may need to log in with your Smith credentials as you would to get on Banner, the Portal, etc.).
+
+Choose the [.pdf option](https://ropercenter-cornell-edu.libproxy.smith.edu/CFIDE/cf/action/ipoll/abstract.cfm?download=1&start=download&id=193315&archno=31117298&label=&sortBy=DESC&keyword=31117298&keywordOptions=1&exclude=&excludeOptions=1&topic=Any&organization=Any&fromDate=1/1/1935&toDate=) to get the codebook (the questions and answers) and the Stata version of the file ( [try this direct link](https://ropercenter-cornell-edu.libproxy.smith.edu/CFIDE/cf/action/ipoll/abstract.cfm?download=1&start=download&id=193319&archno=31117298&label=&sortBy=DESC&keyword=31117298&keywordOptions=1&exclude=&excludeOptions=1&topic=Any&organization=Any&fromDate=1/1/1935&toDate=)).
+
+If the above links don't work (not sure if they will time out, are linked to my particular session, etc.), select the files from here:
+
+![](RoperCenter.gif)
+
+
+```{r setup, eval=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#You may need to install the haven package and the broom package.
+library(haven)
+library(tidyverse)
+#You'll need to change this file path to be wherever that Stata (.DTA) version of the file was saved)
+COVID19_Poll <- read_dta("~/Downloads/31117298.DTA")
+```
+
+
+## Data Cleaning
+
+```{r, eval=FALSE}
+COVID19_Poll2 <- COVID19_Poll %>%
+  mutate( 
+         #political party - Republican / Democrat ? (Explanatory Variable)
+    
+         ## Democrat - 1 (Yes), 0 (No, i.e., Republicans, Non Party Affiliated, Missing)
+         dem_d_num=as.numeric(if_else(party==1, 1, 
+                              if_else(party %in% 2:4, 0, NA_real_))),
+         
+         ## Republican - 1 (Yes), 0 (No)
+         rep_d_num=as.numeric(if_else(party==2, 1, 
+                              if_else(party %in% c(1,3,4), 0, NA_real_))),
+         
+         ## Party factor variable - assigning labels
+         party=factor(party, labels = c("Democrat","Republican","Neither","Don't Know")),
+         
+         # Demographics & SES - Potential Counfounders
+         age=agex,
+         income=factor(income, labels = c("<30k","30-50k","50-75k","75-100k", ">100k", "DK")),
+         gender=factor(gender, labels = c("Female","Male")),
+         race=factor(raceq, labels = c("White","Black","Asian","Latinx", "Other", "DK")),
+         whtevang = factor(whtevang, labels = c("Yes","No")),
+         urban = factor(carea, labels = c("Urban", "Suburban", "Small town", "Rural", "DK")),
+
+         #CARES act - Too Big / Too Little ? (Response Variable)
+         ## Too Little - 1 (Yes), 0 (No, i.e., right amount, too much, or don't know /missing)
+         rellit_d_num=as.numeric(if_else(Q32==3,1,
+                                  if_else(Q32 %in% c(1,2,4),0,NA_real_))),
+         ## Too Much - 1 (Yes), 0 (No, i.e., right amount, too little, or don't know /missing)
+         relmuch_d_num=as.numeric(if_else(Q32==1,1,
+                                  if_else(Q32 %in% 2:4,0,NA_real_))),
+         ## Relief act factor variable - assigning labels
+         relief_cat_fct=factor(Q32, labels = c("Too much","Just about right","Too little","Don't Know"))
+         )
+```
+
+## Model Fitting
+We're using the COVID poll data to estimate the simple logistic regression of differences in believing the CARES relief act was too much by Republican party affiliation (Model 1), and then a multiple logistic regression model adjusted for age (Model 2).
+
+1. Fit the models below
+```{r, eval=FALSE}
+model_1<-glm(relmuch_d_num~party, family=binomial, data=COVID19_Poll2)
+model_2<-glm(relmuch_d_num~party+age, family=binomial, data=COVID19_Poll2)
+```
+
+1. Look at the results with the `summary()` function. 
+
+1. Exponentiate the coefficients to calculate the odds ratios, and interpret the OR for Republican vs. non-Republicans' belief that the CARES recovery act was too much in a sentence.
+
+## Model Fitting
+Then we're going to use the `broom` package to exponentiate the coefficients (i.e., calculating the OR), the confidence interval, and a new variable to indicate which model that OR was from -- all saved into a dataset. 
+
+We're doing to do this process once for each model, and then we're going to combine them together into a new dataframe called oddsratios. 
+
+And then we're going to keep only the ORs and CIs for Republican party variable, since that's the only one we want to illustrate -- this would likely be your main explanatory variable from your main hypothesis that you want to depict across multiple models. 
+```{r, eval=FALSE}
+library(broom)
+#Here we're using `tidy` fucntion because we want the odds scale, and exponentiate just exponentiates the coefficients to give us the ORs
+preds_1 <- tidy(model_1, conf.int = TRUE, exponentiate = TRUE) %>%
+    mutate(Model = "M1: Unadjusted")
+preds_2 <- tidy(model_2, conf.int = TRUE, exponentiate = TRUE) %>%
+    mutate(Model = "M2: Age Adjusted")
+
+oddsratios<- bind_rows(preds_1, preds_2)
+View(oddsratios)
+oddsratios <- oddsratios %>%
+  filter(term %in% c("partyRepublican","partyNeither","partyDon't Know"))
+```
+
+1. Run the code above and the enter `View(oddsratios)` either in the chunk or the console to check the structure of the dataset. Describe this structure in a sentence or two.
+
+### Plotting the Odds Ratios
+```{r, eval=FALSE}
+# Saving this as OR_plot, and working from the odds ratio dataset
+OR_Plot<- oddsratios %>%     
+# Defining the Y as your estimated OR, x as the name of the OR 
+# (here, it's for SexCode) and coloring the Models differently
+  ggplot(aes(y = estimate, x = term, colour = Model)) +
+  # making the OR a point, with the CI as a line through the OR
+        geom_pointrange(aes(ymin = conf.low, ymax = conf.high),
+  # dodged/offset horizontally to make it w
+                       position = position_dodge(width = 0.5),          
+                       size = .75) +
+  # putting in a dotted line at the OR null = 1
+        geom_hline(yintercept = 1.0, linetype = "dotted", size = .5) +  
+  # Making the axis scale be on the log scale
+        scale_y_log10(breaks = c(0,0.25,0.5, 1.0,2,5,10)) +   
+  # Labeling the x and y axes
+        labs(y = "Odds ratio", x = "Variable") +   
+        scale_x_discrete(name ="Party (ref: Democrats)", labels=c("partyRepublican" = "Republicans",
+                                                                  "partyNeither" = "Neither",
+                                                                  "partyDon't Know" = "Don't Know")) +
+  # Making the background white instead of grey
+        theme_bw() +
+  # Flipping the y and x axes (similar to what we had to do with the boxplots)
+        coord_flip(ylim = c(0.01, 10))
+OR_Plot
+
+```
+
+1. Describe the plot in a few sentences, as though you were walking someone through how to understand what they're seeing -- including in the context of this particular problem. 
+
+### Predicted Probabilities
+
+Maybe instead of odds ratios you want predicted probabilities - they're more intuitive, etc. To do that, we're going to take slightly different approach and use the `predict()` function like we have in homeworks to get the predicted probability. Remember that the predict function requires a "new" dataset with sample values for whom we want the predicted probabilities to be calculated. We're going to use the same model above: believing CARES act was too much as a function of party (not just binary), adjusted for age.
+
+#### Calculate the probabilities
+
+```{r, eval=FALSE}
+library(broom)
+#Here we're using `augment` function because we need broom to do a little more to the raw model coefficients -- they need to be augmented to calculate new variables, in this case the probabilities.
+
+# We then need to calculate the lower and upper confidence intervals
+preds_1p <- augment(x=model_1,type.predict = "response") %>%
+  mutate(lci=`.fitted`-(1.96*`.se.fit`),
+         uci=`.fitted`+(1.96*`.se.fit`),
+         model="M1: Unadjusted") %>%
+  rename(prob=`.fitted`)
+preds_2p <- augment(x=model_2,type.predict = "response") %>%
+  mutate(lci=`.fitted`-(1.96*`.se.fit`),
+         uci=`.fitted`+(1.96*`.se.fit`),
+         model="M2: Age adjusted") %>%
+  rename(prob=`.fitted`)
+
+probs<- bind_rows(preds_1p, preds_2p) %>%
+  select(model,prob,lci,uci,party,age)
+```
+
+
+#### Plot the probabilities
+
+```{r, eval=FALSE}
+# Elements like pointrange and position_dodge only work when the outcome
+#   is mapped to y, need to go through with prob set as y then flip at the
+#   end
+TooMuch_Prob_Plot <- probs %>%
+  filter((age==50 | is.na(age)) & party!="Don't Know") %>%
+  ggplot(aes(y = prob, x = party, colour = as.factor(model))) +
+        geom_pointrange(aes(ymin = lci, ymax = uci),
+                       position = position_dodge(width = 0.5),
+                       size = .75) +
+      # Legend label
+        scale_color_hue(name="Party",             
+                      # Defining the colors by your variable categories
+                     breaks=c("1", "2", "3", "4"), 
+                     # Making longer, sensible variable labels for the legend
+                     labels=c("Democrat","Republican","Neither","Don't Know")) +
+       # geom_hline(yintercept = 1.0, linetype = "dotted", size = .5) +
+        #scale_y_log10(breaks = c(0,0.1,0.25,0.5, 1.0, 1.5)) +
+        labs(y = "Probability of Thinking CARES Relief Cost Too Much", x = "Age") +
+        #coord_flip(ylim = c(0.1, 1.5)) +
+        theme_bw()
+TooMuch_Prob_Plot
+```
+
+1. Explain the plot in a few sentences, and connect it conceptually to the OR plot above.
+
+1. Where did the "Don't Know" group go?  What piece of code did this? And why do you think that was a good idea?
+
+1. How are we "controlling" for age in this visual?
+
+
+### Relationship between Age, Party and Belief that the CARES relief cost too much
+
+```{r, eval=FALSE}
+# Elements like pointrange and position_dodge only work when the outcome
+#   is mapped to y, need to go through with prob set as y then flip at the
+#   end
+TooMuch_Prob_Plot_age <- probs %>%
+  filter(age %in% c(20,30,40,50,60,70,80) & model=="M4: Age adjusted" & party %in% c("Republican", "Democrat", "Neither")) %>%
+  group_by(age,party) %>%
+  slice(1) %>%
+  ggplot(aes(y = prob, x = age, colour = party)) +
+        geom_pointrange(aes(ymin = lci, ymax = uci),
+                       position = position_dodge(width = 3),
+                       size = .75) +
+      # Legend label
+       # geom_hline(yintercept = 1.0, linetype = "dotted", size = .5) +
+        #scale_y_log10(breaks = c(0,0.1,0.25,0.5, 1.0, 1.5)) +
+        labs(y = "Probability CARES Relief Cost Too Much", x = "Age") +
+        #coord_flip(ylim = c(0.1, 1.5)) +
+        theme_bw()
+TooMuch_Prob_Plot_age
+```
+
+1. Explain the plot in a few sentences, and connect it conceptually to the probability plot above.
+
+# More Practice
+
+1. Extend these examples above by adding other or different explantory variables to your model.
+
+## Practice with other data
+
+1. Use the PDF Codebook to choose a different response variable and clean the variables as needed (making it binary).
+
+Some suggestions:
+
+- How concerned are you about each of the following:
+    - Q26: "The coronavirus pandemic will lead to economic hardship for your family" (Answers: 1. Very, 2. Somewhat, 3. Not very, 4. Not at all, 5. (Don't know))
+    - Q27. "Being able to get a coronavirus test if necessary" (Answers: 1. Very, 2. Somewhat, 3. Not very, 4. Not at all, 5. (Don't know))
+
+- Q33. "In light of the coronavirus pandemic, how much have you changed the way you lead your everyday life?" (Answers: 1. A great deal 2. Somewhat 3. Not much 4. Not at all)
+
+1. Estimate the model with your new response variable
+
+1. Generate visuals on both the OR and probability scale.
+
+1. Describe in <2 sentences the take-away message from the visual(s) you generated.
