@@ -1,0 +1,141 @@
+---
+title: "MLR In Class Activity"
+author: "SDS 291"
+date: "March 9-11, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Bringing in data with `ipumsr` package
+
+```{r, error=FALSE, message=FALSE, warning=FALSE}
+library(ipumsr)
+library(tidyverse, warn.conflicts = FALSE)
+# Note that you can pass in the loaded DDI into the `read_ipums_micro()`
+usa_ddi <- read_ipums_ddi("~/Downloads/usa_00008.xml")
+usa_data <- read_ipums_micro(usa_ddi, verbose = FALSE)
+
+# Convert the labels to factors (and drop the unused levels)
+usa_data <- usa_data %>%
+  mutate(sex_factor = droplevels(as_factor(SEX)),
+         marital_factor=droplevels(as_factor(MARST)),
+         newchild_factor=droplevels(as_factor(FERTYR)),
+         race_factor= droplevels(as_factor(RACE)),
+         hispan_factor= droplevels(as_factor(HISPAN)),
+         educ_factor= droplevels(as_factor(EDUC)),
+         hinsur_factor= droplevels(as_factor(HCOVANY)),
+         degfield_factor= droplevels(as_factor(DEGFIELD)),
+         empstat_factor= droplevels(as_factor(EMPSTAT)),
+         occ_factor= droplevels(as_factor(OCC)),
+         ind_factor= droplevels(as_factor(IND)),
+         diffmob_factor=droplevels(as_factor(DIFFMOB)),
+         diffcare_factor=droplevels(as_factor(DIFFCARE)),
+         vetstat_factor=droplevels(as_factor(VETSTAT)),
+         pwstate_factor=droplevels(as_factor(PWSTATE2)),
+         tranwork_factor=droplevels(as_factor(TRANWORK))
+  )
+
+```
+
+# Cleaning up the data
+
+## Working with variables
+
+```{r}
+usa_data<-usa_data %>%
+  mutate(empstat_factor=if_else(empstat_factor=="Employed",1,0),
+         newchild_factor=if_else(newchild_factor=="Yes",1,0),
+         degfield_factor=if_else(degfield_factor %in% c("Environment and Natural Resources", "Computer and Information Sciences", "Engineering", "Engineering Technologies ", "Biology and Life Sciences", "Mathematics and Statistics", "Physical Sciences", "Nuclear, Industrial Radiology, and Biological Technologies", "Psychology", "Medical and Health Sciences and Services"),"STEM", "Not STEM")
+  )
+
+```
+
+
+## Keeping only necessary observations and variables
+
+```{r}
+usa_data2<-usa_data %>%
+  filter(empstat_factor==1, AGE>18) %>%
+  select(PERNUM,SERIAL,AGE,sex_factor,marital_factor,newchild_factor,race_factor,hispan_factor,educ_factor,hinsur_factor,degfield_factor,occ_factor,ind_factor,diffmob_factor,diffcare_factor,vetstat_factor,pwstate_factor,tranwork_factor,TRANTIME, INCTOT,FTOTINC,UHRSWORK)
+```
+
+
+## Create a Data Appendix
+
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+library(mosaic)
+favstats(~AGE, data=usa_data)
+tally(~sex_factor, data=usa_data)
+```
+
+
+## Fitting and Visualizing Regression Models
+
+```{r, message=FALSE, warning=FALSE, results='asis'}
+m0<-lm(TRANTIME~AGE, data=usa_data2)
+m1<-lm(TRANTIME~AGE*race_factor, data=usa_data2)
+m2<-lm(TRANTIME~AGE*race_factor+educ_factor+tranwork_factor, data=usa_data2)
+m3<-lm(TRANTIME~AGE*race_factor+educ_factor+sex_factor+marital_factor, data=usa_data2)
+```
+
+# Table
+```{r, message=FALSE, warning=FALSE, results='asis'}
+require(knitr)
+library(stargazer)
+stargazer(m0,m1,m2,m3, type="html")
+```
+
+### Visually
+
+```{r}
+#calculating the different intercepts
+intercepts <- c(coef(m3)["(Intercept)"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorBlack/African American/Negro"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorAmerican Indian or Alaska Native"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorChinese"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorJapanese"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorOther Asian or Pacific Islander"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorOther race, nec"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorTwo major races"],
+                coef(m3)["(Intercept)"] + coef(m3)["race_factorThree or more major races"])
+
+
+
+slopes <- c(coef(m3)["AGE"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorBlack/African American/Negro"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorAmerican Indian or Alaska Native"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorChinese"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorJapanese"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorOther Asian or Pacific Islander"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorOther race, nec"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorTwo major races"],
+                coef(m3)["AGE"] + coef(m3)["AGE:race_factorThree or more major races"])
+
+#putting these into a new data frame with the slope and transmission indicator variable
+usadata.df <- data.frame(intercepts = intercepts,
+                       slopes = slopes,
+                       Race = levels(usa_data2$race_factor))
+#making the plot
+usaplot1<- ggplot(usa_data2, aes(x = AGE, y = TRANTIME)) + geom_point(color="grey", alpha = .1) + labs( x= 'Age', y='Commute Time (Minutes)') +
+coord_cartesian(ylim = c(0,100)) + 
+  geom_abline(aes(intercept = intercepts, 
+                  slope = slopes, 
+                  color = Race), data = usadata.df)
+usaplot1
+```
+
+#### Zoomed in
+
+```{r}
+usaplot<- ggplot(usa_data2, aes(x = AGE, y = TRANTIME)) + geom_point(color="grey", alpha = .1) + labs( x= 'Age', y='Commute Time (Minutes)') +
+coord_cartesian(ylim = c(20,40)) + 
+  geom_abline(aes(intercept = intercepts, 
+                  slope = slopes, 
+                  color = Race), data = usadata.df)
+usaplot
+```

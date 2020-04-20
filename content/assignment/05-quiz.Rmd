@@ -1,0 +1,16 @@
+---
+title: "Quiz 5"
+linktitle: "Quiz 5"
+date: "2020-03-01"
+due_date: "2020-03-04"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Quizes
+    weight: 5
+type: docs
+---
+
+- Quiz 5 will be open as of Friday 3/1/20 at 12:00pm (noon) and due before noon on Monday 3/4.
+
+- <i class="fas fa-question-circle"></i> See Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 

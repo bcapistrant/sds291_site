@@ -89,6 +89,7 @@ lessons:
     date: "March 4"
     reading: "12-reading"
     class: "12-class"
+    quiz: "05-quiz"
     
   - title: '<i class="fas fa-university"></i> **MLR: In-Class Project**'
     date: "March 9"
@@ -165,6 +166,8 @@ lessons:
     date: "April 20"
     reading: "21-reading"
     assignment: "08-problem-set"
+    quiz: "06-quiz"
+    class: "21-class"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Log Likelihood, Ratio Tests**'
     date: "April 22"

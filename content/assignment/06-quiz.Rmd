@@ -1,0 +1,16 @@
+---
+title: "Quiz 6"
+linktitle: "Quiz 6"
+date: "2020-04-13"
+due_date: "2020-04-20"
+due_time: "11:59 AM"
+menu:
+  assignment:
+    parent: Quizes
+    weight: 6
+type: docs
+---
+
+- Quiz 6 is optional
+
+- <i class="fas fa-question-circle"></i> See [Moodle](https://moodle.smith.edu/course/view.php?id=37984) for quiz. 

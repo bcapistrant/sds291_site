@@ -1,0 +1,23 @@
+---
+title: "Data Visualization for Logistic Regression"
+linktitle: "21 Logistic Data Visualization"
+date: "2020-04-20"
+class_date: "2020-04-20"
+menu:
+  class:
+    parent: Class sessions
+    weight: 21
+type: docs
+weight: 21
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In Class Materials
+
+- [Data Visualizations](https://sds291.netlify.com/21/Visualization_Examples_2020_v01.pdf) (and [.rmd](https://sds291.netlify.com/21/Visualization_Examples_2020_v01.rmd))
+
+- Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

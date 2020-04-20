@@ -1,0 +1,17 @@
+\contentsline {section}{Visualizing Distributions \& Frequencies}{1}{section*.2}% 
+\contentsline {subsection}{Binary Response Variable, Quantitative Explanatory Variable}{1}{section*.3}% 
+\contentsline {subsubsection}{Boxplot}{1}{section*.4}% 
+\contentsline {subsubsection}{Distributions}{2}{section*.5}% 
+\contentsline {subsection}{Quantitative response variable and categorical/binary explanatory variable}{3}{section*.6}% 
+\contentsline {subsection}{Binary Response and Binary Explanatory Variables}{4}{section*.7}% 
+\contentsline {section}{Visualizing Regression Models}{5}{section*.8}% 
+\contentsline {subsection}{Binary Repsonse Variables / Logistic Regression Models}{5}{section*.9}% 
+\contentsline {subsubsection}{Plotting the Odds Ratios}{6}{section*.10}% 
+\contentsline {paragraph}{Plotting ORs for Categorical Explanatory Variable}{7}{section*.11}% 
+\contentsline {subsubsection}{Predicted Probabilities}{8}{section*.12}% 
+\contentsline {paragraph}{Calculate the probabilities}{9}{section*.13}% 
+\contentsline {paragraph}{Plot the probabilities}{9}{section*.14}% 
+\contentsline {subsection}{Binary Explanatory and Quantitative Response}{10}{section*.15}% 
+\contentsline {subsubsection}{Plotting}{11}{section*.16}% 
+\contentsline {paragraph}{With a point and CI for the prediction around the point}{11}{section*.17}% 
+\contentsline {paragraph}{Same as above but as a bar}{12}{section*.18}% 

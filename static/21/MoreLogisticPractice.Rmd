@@ -1,0 +1,113 @@
+---
+title: "More Logistic Practice"
+author: "SDS 291"
+date: "April 17, 2018"
+output:
+  html_document:
+    css: "C:/Users/bcapistr/Google Drive/SDS 291/1_Spring2018/Labs/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, eval=FALSE}
+library(ipumsr)
+library(tidyverse)
+library(magrittr)
+nhis_ddi <- read_ipums_ddi("nhis_00015.xml")
+nhis_data <- read_ipums_micro(nhis_ddi, verbose = FALSE)
+
+nhis_data1 <- nhis_data %>%
+  mutate(sex = droplevels(as_factor(SEX)),
+         marital=droplevels(as_factor(MARSTAT)),
+         sexorient=droplevels(as_factor(SEXORIEN)),
+         race= droplevels(as_factor(RACEA)),
+         hispanic= droplevels(as_factor(HISPYN)),
+         education= droplevels(as_factor(EDUC)),
+         nohinsur= droplevels(as_factor(HINOTCOVE)),
+         nativity=droplevels(as_factor(USBORN)),
+         medcare=droplevels(as_factor(USUALPL)),
+         mam_1yr=droplevels(as_factor(MAMHAD1YR)),
+         mam_ev=droplevels(as_factor(MAMEV)),
+         pap_1yr=droplevels(as_factor(PAPHAD1YR)),
+         pap_ev=droplevels(as_factor(PAPEV))
+  )
+nhis_data2 <- nhis_data1 %>%
+  filter(sex=="Female", AGE>18, pap_ev!="NIU", mam_ev!="NIU") %>%
+  mutate(mam_1yr=as_factor(if_else(mam_1yr=="Yes","Yes","No")),
+         mam_ev=as_factor(if_else(mam_ev=="Yes","Yes","No")),
+         pap_1yr=as_factor(if_else(pap_1yr=="Yes","Yes","No")),
+         pap_ev=as_factor(if_else(pap_ev=="Yes","Yes","No")),
+         notusborn=as_factor(if_else(nativity!="Yes, born in U.S. state or DC","Yes","No")),
+         usualdr=as_factor(if_else(medcare!="Yes, has a usual place or Yes","Yes","No")),
+         noinsur=as_factor(if_else(hinsur=="Unknown-don't know", NA_character_,
+                            if_else(hinsur=="No, has coverage", "Insured",
+                            if_else(hinsur=="Yes, has no coverage", "No Insurance", "NA")))),
+         ed_cat=as_factor(if_else(education %in% c("Never attended/kindergarten only","Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6", " Grade 7", " Grade 8", " Grade 9", " Grade 10", " Grade 11", "12th grade, no diploma"), "<HS",
+                        if_else(education %in% c("High school graduate","GED or equivalent"), "HS",
+                        if_else(education %in% c("Some college, no degree","AA degree: technical/vocational/occupational", "AA degree: academic program"), "Some College",
+                        if_else(education=="Bachelor's degree (BA, AB, BS, BBA)", "College",
+                        if_else(education %in% c("Master's degree (MA, MS, Meng, Med, MBA)", "Professional degree (MD, DDS, DVM, JD)", "Doctoral degree (PhD, EdD)"), "Graduate School", NA_character_)))))) 
+  )
+
+
+```
+
+# Additional Data Wrangling
+1. Make a new race variable - a factor variable called `race_cat` -- with four categories: White, Black, Asian, Other.
+
+# Prediction Modeling - Cervical Cancer Screening
+
+1. Fit a *one* predictor model with the lowest deviance and highest $\chi^2$ for the model.
+
+1. Fit a *two* predictor model with the lowest deviance and highest $\chi^2$ for the model.
+
+1. Fit a *three or more* predictor model with the lowest deviance and highest $\chi^2$ for the model.
+
+1. Now fit your model from 3+ variables in the test dataset.
+
+# Testing and Visualizing
+
+```{r, eval=FALSE}
+table(nhis_data2$race)
+nhis_data2_temp<-nhis_data2 %>%
+  mutate(race_cat=as_factor(if_else(race=="White", "White",
+                            if_else(race=="Black/African-American", "Black",
+                            if_else(race %in% c("Chinese", "Filipino", "Filipino", "Other Asian (1999 forward)"), "Asian", "Other"))))) %>%
+  select(pap_1yr, AGE, race_cat, notusborn,noinsur)
+
+library(broom)
+finalmodel_0<-glm(pap_1yr~race_cat, family=binomial, data=nhis_data2_temp)
+final_preds_0 <- tidy(finalmodel_0, conf.int = TRUE, exponentiate = TRUE) %>%
+    mutate(Model = "M0")
+
+finalmodel_1<-glm(pap_1yr~AGE+race_cat+notusborn+noinsur, family=binomial, data=nhis_data2_temp)
+final_preds_1 <- tidy(finalmodel_1, conf.int = TRUE, exponentiate = TRUE) %>%
+    mutate(Model = "M1")
+
+oddsratios<- bind_rows(final_preds_0, final_preds_1)
+oddsratios
+oddsratios <- oddsratios %>%
+  filter(term %in% c("race_catBlack", "race_catOther", "race_catAsian"))
+
+dodger = position_dodge(width = 0.5)
+# Elements like pointrange and position_dodge only work when the outcome
+#   is mapped to y, need to go through with OR set as y then flip at the
+#   end
+ggplot(oddsratios, aes(y = estimate, x = term, colour = Model)) +
+        geom_pointrange(aes(ymin = conf.low, ymax = conf.high),
+                       position = dodger,
+                       size = 1.2) +
+        geom_hline(yintercept = 1.0, linetype = "dotted", size = .5) +
+        scale_y_log10(breaks = c(0.5, 1.0, 2.0),
+                      minor_breaks = NULL) +
+        labs(y = "Odds ratio", x = "Variable") +
+        coord_flip(ylim = c(0.1, 10)) +
+        theme_bw()
+
+```

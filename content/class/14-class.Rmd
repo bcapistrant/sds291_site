@@ -26,6 +26,8 @@ We will also talk some of this through in class together.
 
 - [Activity](http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html)
 
+- [Activity Answers](http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.html) (and raw [`.rmd` file](http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.rmd))
+
 Use your RMD from Day 1, and extend it on with regression modeling.
 
 ### Submit to Moodle
@@ -34,3 +36,5 @@ There is no template for this activity. You're a pro at making your own RMarkdow
 You are expected to knit to pdf and to submit your rmd as well (just like a homework). Please submit 1 .rmd and 1 .pdf per group.
 
 Use the Day 14 submission on Moodle for [section 1](https://moodle.smith.edu/course/view.php?id=36873) or [section 2](https://moodle.smith.edu/course/view.php?id=36874). 
+
+## 

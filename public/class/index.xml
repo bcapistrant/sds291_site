@@ -511,7 +511,8 @@
 &lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;In-class Activity&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html&#34;&gt;Activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html&#34;&gt;Activity&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.html&#34;&gt;Activity Answers&lt;/a&gt; (and raw &lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.rmd&#34;&gt;&lt;code&gt;.rmd&lt;/code&gt; file&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You need to have gotten through the bringing in and cleaning up the data by the end of Day 1. We will extend this on Day 2 with regression modeling.&lt;/p&gt;
 &lt;div id=&#34;submit-to-moodle&#34; class=&#34;section level3&#34;&gt;
@@ -537,6 +538,7 @@
 &lt;li&gt;&lt;a href=&#34;#in-class-activity&#34;&gt;In-class Activity&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#submit-to-moodle&#34;&gt;Submit to Moodle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#section&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -548,7 +550,8 @@
 &lt;div id=&#34;in-class-activity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;In-class Activity&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html&#34;&gt;Activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html&#34;&gt;Activity&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.html&#34;&gt;Activity Answers&lt;/a&gt; (and raw &lt;a href=&#34;http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.rmd&#34;&gt;&lt;code&gt;.rmd&lt;/code&gt; file&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Use your RMD from Day 1, and extend it on with regression modeling.&lt;/p&gt;
 &lt;div id=&#34;submit-to-moodle&#34; class=&#34;section level3&#34;&gt;
@@ -557,6 +560,9 @@
 &lt;p&gt;You are expected to knit to pdf and to submit your rmd as well (just like a homework). Please submit 1 .rmd and 1 .pdf per group.&lt;/p&gt;
 &lt;p&gt;Use the Day 14 submission on Moodle for &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36873&#34;&gt;section 1&lt;/a&gt; or &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=36874&#34;&gt;section 2&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -735,6 +741,29 @@
 &lt;li&gt;&lt;a href=&#34;https://sds291.netlify.com/20/20-inclasslab-answers.pdf&#34;&gt;Suggested Solutions&lt;/a&gt; (and &lt;a href=&#34;https://sds291.netlify.com/20/20-inclasslab-answers.rmd&#34;&gt;.rmd&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization for Logistic Regression</title>
+      <link>/class/21-class/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/class/21-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-materials&#34;&gt;In Class Materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In Class Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sds291.netlify.com/21/Visualization_Examples_2020_v01.pdf&#34;&gt;Data Visualizations&lt;/a&gt; (and &lt;a href=&#34;https://sds291.netlify.com/21/Visualization_Examples_2020_v01.rmd&#34;&gt;.rmd&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>

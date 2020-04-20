@@ -20,6 +20,8 @@ editor_options:
 
 - [Activity](http://sds291.netlify.com/mlr/mlr_inclass_2020_v00.html)
 
+- [Activity Answers](http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.html) (and raw [`.rmd` file](http://sds291.netlify.com/mlr/mlr_inclass_2020_answers_v00.rmd))
+
 You need to have gotten through the bringing in and cleaning up the data by the end of Day 1.  We will extend this on Day 2 with regression modeling.
 
 ### Submit to Moodle
