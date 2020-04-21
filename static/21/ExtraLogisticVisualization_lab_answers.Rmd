@@ -25,7 +25,7 @@ If the above links don't work (not sure if they will time out, are linked to my 
 ![](RoperCenter.gif)
 
 
-```{r setup, eval=FALSE}
+```{r setup}
 knitr::opts_chunk$set(echo = TRUE)
 #You may need to install the haven package and the broom package.
 library(haven)
@@ -37,7 +37,7 @@ COVID19_Poll <- read_dta("~/Downloads/31117298.DTA")
 
 ## Data Cleaning
 
-```{r, eval=FALSE}
+```{r}
 COVID19_Poll2 <- COVID19_Poll %>%
   mutate( 
          #political party - Republican / Democrat ? (Explanatory Variable)
@@ -77,7 +77,7 @@ COVID19_Poll2 <- COVID19_Poll %>%
 We're using the COVID poll data to estimate the simple logistic regression of differences in believing the CARES relief act was too much by Republican party affiliation (Model 1), and then a multiple logistic regression model adjusted for age (Model 2).
 
 1. Fit the models below
-```{r, eval=FALSE}
+```{r}
 model_1<-glm(relmuch_d_num~party, family=binomial, data=COVID19_Poll2)
 model_2<-glm(relmuch_d_num~party+age, family=binomial, data=COVID19_Poll2)
 ```
@@ -92,7 +92,7 @@ Then we're going to use the `broom` package to exponentiate the coefficients (i.
 We're doing to do this process once for each model, and then we're going to combine them together into a new dataframe called oddsratios. 
 
 And then we're going to keep only the ORs and CIs for Republican party variable, since that's the only one we want to illustrate -- this would likely be your main explanatory variable from your main hypothesis that you want to depict across multiple models. 
-```{r, eval=FALSE}
+```{r}
 library(broom)
 #Here we're using `tidy` fucntion because we want the odds scale, and exponentiate just exponentiates the coefficients to give us the ORs
 preds_1 <- tidy(model_1, conf.int = TRUE, exponentiate = TRUE) %>%
@@ -109,7 +109,7 @@ oddsratios <- oddsratios %>%
 1. Run the code above and the enter `View(oddsratios)` either in the chunk or the console to check the structure of the dataset. Describe this structure in a sentence or two.
 
 ### Plotting the Odds Ratios
-```{r, eval=FALSE}
+```{r}
 # Saving this as OR_plot, and working from the odds ratio dataset
 OR_Plot<- oddsratios %>%     
 # Defining the Y as your estimated OR, x as the name of the OR 
@@ -145,7 +145,7 @@ Maybe instead of odds ratios you want predicted probabilities - they're more int
 
 #### Calculate the probabilities
 
-```{r, eval=FALSE}
+```{r}
 library(broom)
 #Here we're using `augment` function because we need broom to do a little more to the raw model coefficients -- they need to be augmented to calculate new variables, in this case the probabilities.
 
@@ -168,7 +168,7 @@ probs<- bind_rows(preds_1p, preds_2p) %>%
 
 #### Plot the probabilities
 
-```{r, eval=FALSE}
+```{r}
 # Elements like pointrange and position_dodge only work when the outcome
 #   is mapped to y, need to go through with prob set as y then flip at the
 #   end
@@ -201,7 +201,7 @@ TooMuch_Prob_Plot
 
 ### Relationship between Age, Party and Belief that the CARES relief cost too much
 
-```{r, eval=FALSE}
+```{r}
 # Elements like pointrange and position_dodge only work when the outcome
 #   is mapped to y, need to go through with prob set as y then flip at the
 #   end
