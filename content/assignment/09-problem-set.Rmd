@@ -33,15 +33,9 @@ editor_options:
 knitr::include_graphics("http://sds291.netlify.app/HW/HW9_ExtraQs.JPG")
 ```
 
-- 10.19 (1st Ed) / 10.31 (2nd Ed)*
-
-* If you didn't do this last week, try it now. If you *did* do it already, reconsider the question in light of the revisiting of likelihoods, *G* statistic, and drop-in-deviance test. Try it again and/or reflect on what the similarities and differences are in these approaches.  See the [ChiSquare test handout](http://sds291.netlify.app/20/ChiSq.pdf) (or [RMD](http://sds291.netlify.app/20/ChiSq.rmd)) for more reference.
+- 10.19 (1st Ed) / 10.31 (2nd Ed). If you didn't do this last week, try it now. If you *did* do it already, reconsider the question in light of the revisiting of likelihoods, *G* statistic, and drop-in-deviance test. Try it again and/or reflect on what the similarities and differences are in these approaches.  See the [ChiSquare test handout](http://sds291.netlify.app/20/ChiSq.pdf) (or [RMD](http://sds291.netlify.app/20/ChiSq.rmd)) for more reference.
 
 
-# Submit on Moodle
+# Don't Submit on Moodle
 
-There is no template for this assignment. You're a pro at making your own RMarkdown files now!
-
-You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline. 
-
-Use the Homework 8 submission on [Moodle.](https://moodle.smith.edu/course/view.php?id=37984) 
+There is nothing you need to submit, everything is optional and to be done if you want.  I'd encourage you to talk amongst yourselves on Slack about any of the extra practice problems as a way of checking answers.
