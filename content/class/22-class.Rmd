@@ -1,0 +1,25 @@
+---
+title: "Data Visualization for Logistic Regression"
+linktitle: "22 Logistic Data Visualization"
+date: "2020-04-22"
+class_date: "2020-04-22"
+menu:
+  class:
+    parent: Class sessions
+    weight: 22
+type: docs
+weight: 22
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In Class Materials
+
+- [Slides](https://sds291.netlify.com/22/22-class-lectureslides.pdf) (no rmd)
+
+- [Likelihood Calculation (incl. extra practice)](https://sds291.netlify.com/22/Likelihoods.pdf) (and [.rmd](https://sds291.netlify.com/21/Likelihoods.rmd) with solutions and code -- try first with just the .pdf)
+
+- Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

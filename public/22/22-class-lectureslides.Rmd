@@ -1,0 +1,563 @@
+---
+title: "Simple Logistic Regression - Part 1"
+author: "SDS 291"
+date: "April 6, 2020"
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: my-theme.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith()
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,eval=TRUE, cache=TRUE)
+require(tidyverse)
+require(mosaicData)
+require(Stat2Data)
+```
+
+
+## Outline for Today
+
+.pull-left[
+### Revisit Likelihoods
+
+- What it is
+- What is means to maximize
+- How to use it to make comparisons
+
+]
+
+.pull-right[
+### Diagnostics for Logistic Regression
+
+- Goodness-of-fit tests
+- Saturated model
+
+- Logistic diagnostics
+- Overdispersion
+- Concordance
+- Pseudo-R2
+
+]
+
+---
+## Maximum Likelihood Estimation for a Single Proportion
+
+### Imagine we had a (random sample) survey...
+
+- 40 people (n=40) asked whether they had a good night's sleep
+- 16 said yes
+- 24 said no
+
+### What's the proportion of people with a good night's sleep?
+
+---
+## Maximum Likelihood Estimation for a Single Proportion
+
+For any proportion $\pi$, we find the probability (likelihood) of getting this particular sample.
+
+The probability for each “yes” is $\pi$ and for each “no” is 1 - $\pi$.
+
+We **_multiply the probabilities together to find the likelihood_**. (note: we're doing this in part b/c we know it's a random, not a biased, sample...)
+
+What does that multiplication look like?
+
+---
+## Maximum Likelihood Estimation for a Single Proportion
+
+$$L = \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \cdot \pi \times (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi) \cdot (1-\pi)$$
+
+$$
+
+\begin{align}
+L = &\pi \cdot \pi \cdot \pi \cdot \pi \cdot \\
+    &\pi \cdot \pi \cdot \pi \cdot \pi \cdot \\
+    &\pi \cdot \pi \cdot \pi \cdot \pi \cdot \\
+    &\pi \cdot \pi \cdot \pi \cdot \pi \\
+    & \times \\
+    &(1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot \\
+    &(1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot \\
+    &(1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot \\
+    &(1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot  \\
+    &(1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot \\
+    &(1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi) \cdot (1 -\pi)  \\
+=& \pi^{16} \cdot (1-\pi)^{24}
+\end{align}
+
+$$
+
+
+.pull-right[
+### Diagnostics for Logistic Regression
+
+- Goodness-of-fit tests
+- Saturated model
+
+- Logistic diagnostics
+- Overdispersion
+- Concordance
+- Pseudo-R2
+
+]
+---
+## Quantitative vs. Binary Response Variables
+
+#### Often, we want to model a **response** variable that is **binary**, meaning that it can take on only two possible outcomes. 
+
+#### These outcomes could be labeled "Yes" or "No", or "True" of "False", but for all intents and purposes, they can be coded as either 0 or 1. 
+
+#### We have seen these types of variables before (as indicator variables), but we always used them as **explanatory** variables. 
+
+#### Creating a model for such a variable as the response requires a more sophisticated technique than ordinary least squares regression. It requires the use of a **logistic** model.
+
+
+---
+
+## Quick Aside: Other kinds of logistic models
+
+There are forms of logistic regression for:
+
+- Binary (logistic - what we're doing in this class)
+  - Alive : 0 = Dead, 1 = Alive
+  
+- Ordinal (ordered logistic regression)
+  - Self Rated Health : 0=Excellent, 1=Very Good, 2=Good, 3=Fair, 4=Poor
+
+- Nominal (multinomial logistic regression)
+  - Political Party: 0=Democrat, 1=Green Party, 2=Independent, 3=Republican, 4=Reform Party
+
+---
+
+## Example: Binary Response, Quantitative Explanatory Variable
+
+.pull-left[
+Let's stay with the mini-golf example from last week: the putt either made it or it missed from a number of feet away from the hole.
+
+Our goal is to determine the association between `Length` (in feet) and likelihood of making the put (`Made`= 0 (missed) or 1 (made)); we're using data called `Putts1` from the book's data package.
+]
+
+.pull-right[
+
+<img src="yoshi_golf.png" alt="Yoshi Playing Golf"/>
+
+]
+
+```{r, echo=FALSE}
+data("Putts1")
+```
+
+---
+# Jitter is your friend
+
+.pull-left[
+.tiny[
+```{r}
+regular_plot<-qplot(x=Length,y=Made,data=Putts1)
+
+regular_plot
+```
+]
+
+]
+.pull-left[
+.tiny[
+```{r}
+jitter_plot <- qplot(x=Length,y=Made,data=Putts1) +
+  geom_jitter(height = 0.05)
+jitter_plot
+```
+]
+]
+
+---
+
+## Basic Prediction
+
+.pull-left[
+.medium[
+
+```{r}
+Putts1 <- Putts1 %>%
+  mutate(avg_Made = mean(Made))
+
+Putts1 %>%
+  select(avg_Made) %>% 
+  slice(1) %>%
+  head 
+```
+]
+
+What does this number mean?
+
+]
+ 
+.pull-right[
+.tiny[
+```{r}
+jitter_plot + 
+  geom_hline(aes(yintercept = avg_Made),Putts1,color='coral', size=2)
+```
+]
+What would we predict for a 3 foot putt? A 7 foot putt? Does this make sense?
+]
+
+---
+# Could we use a linear model?
+
+In linear regression, the model predicts the mean of the response $Y$ (or $\bar{y}$) at each level of the explaatory variable(s).
+
+What's the "mean" of a 0/1 indicator variable?
+
+$\bar{y} =\frac{\sum{y_i}}{n} = \frac{\text{# of 1's}} {\text{# of trials}} = \text{Proportion of success}$
+
+So with a linear model for these data, essentially we are modeling $\pi$ (the response variable) like this
+$$
+  \pi = \beta_0 + \beta_1 Length
+$$
+
+[Note: Economists use this approach not infrequently and call it the "linear probability model", one of the different options for working with a "binary dependent variable"]
+
+---
+# Fitted linear model
+
+```{r}
+Putts_linear <- lm(Made ~ Length , data=Putts1)
+summary(Putts_linear)
+```
+
+- Interpret the coefficients of this model.
+- Predict the probability of making a putt for 1,3,7, and 10 feet away.
+
+??? 
+
+When you are *in* the hole (Length=0), you would have a 122% probability of making a putt. For every additional foot away you are from the hole, probability of making the putt goes down by 12.6 percentage points.
+
+From this model, a:
+- 1 foot putt would have a 109.6% probability of making it (`1.22295 +(-0.12633*1)`).
+- 3 foot putt would have a 84% probability of making it (`1.22295 +(-0.12633*3)`). 
+- 7 foot putt would have a 34% probability of making it (`1.22295 +(-0.12633*7)`).
+- 10 foot putt would have a -4% probability of making it (`1.22295 +(-0.12633*10)`).
+
+---
+# Seeing the Linear Model visually
+
+.pull-left[
+### Basic Probability
+```{r, echo=FALSE, warning=FALSE, error=FALSE, message=FALSE}
+jitter_plot + xlim(1,10) + ylim(0,1) + 
+  geom_hline(aes(yintercept = avg_Made),Putts1,color='coral', size=2)
+```
+
+]
+
+.pull-right[
+### Linear Model 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+jitter_plot + xlim(1,10) + ylim(0,1) + geom_smooth(method="lm", se=FALSE,fullrange=TRUE)
+```
+
+]
+
+---
+# Summary Thus Far
+
+## Basic Probability
+
+- Every putt has the same probability no matter how far away
+- Doesn't seem to fit the visual depiction of a negative relationship
+
+## Linear Model
+
+- Use probability / proportion as the response, fit a linear model of length as explanatory
+- Models the negative relationship  (i.e., *does* fit the visual depiction)
+- But makes impossible predictions (probabilities <0 or >1)
+
+### So, we do not think that a linear model with probability as the response variable is the way to go. 
+
+---
+class: inverse, middle, center
+### We saw that a linear model of probabilities may not make sense. 
+
+### What if we used different units and/or transformed the dependent variable? 
+
+## Would that make for a better fitting model?
+
+---
+class: inverse, middle, center
+
+#### We had previously worked with log transformations. 
+
+#### And with odds, and saw their relationship to probabilities.
+
+## The Logistic Transformation combines both ideas: it uses the (natural) log of the odds. 
+
+#### *Goal of logistic regression:* Predict the _true proportion of success_, $\pi$, at any value of the explanatory/predictor variable.
+
+---
+Our previous linear model:
+$$
+  \pi = \beta_0 + \beta_1 X
+$$
+
+Where:
+
+- Y = Binary Response Variable (Made the Putt)
+- X = Quantitative Explanatory Variable (Length)
+- $\pi$ = Proportion of 1's (yes, successes; here, *making the putt*) at any X (length)
+
+Instead, suppose we modeled it like this
+$$
+  \log \left( \frac{\pi}{1-\pi} \right) = logit(\pi) = \beta_0 + \beta_1 X
+$$
+
+This transformation is called the **logit** function, or what the book calls the "Logit form". 
+
+Remember that you can go estimate the probability from the odds ( $\pi = \frac{odds}{1+odds}$ ) and exponentiate to anti-log. So you could also express this regression model as:
+
+$$
+  \pi = \frac{e^{\beta_0 + \beta_1 X}}{1 + e^{\beta_0 + \beta_1 X}} \in (0,1)
+$$
+ 
+which the book calls, the "Probability form" of the model.
+
+---
+### Why use this approach?
+- The logit function _constrains the fitted values to lie within $(0,1)$_, which helps to give a natural interpretation as the probability of the response actually being 1.
+  - This avoids the estimated probabilities <0 and >1 that we got from the linear regression model above
+
+### What's happening in this model? How is it getting fitted?
+- No more squares and residuals - or OLS as the method for fitting
+- No more $R^2$ or other tests / estimates that use the sum of squares (there are approximations, though...)
+- Instead, *maximum likelihood estimation* which we'll talk about more in the next class.
+
+### How do I do this in `R`?
+- Glad you asked...
+
+---
+## Fitting a Logistic Model in `R`
+.medium[
+```{r}
+Putts_logistic <- glm(Made ~ Length, data=Putts1, family=binomial)
+```
+]
+
+### What's different about this code from what we have used?
+
+---
+### GLM does the same thing as LM if you ask...
+
+.pull-left[
+.tiny[
+```{r}
+m0_lm <- lm(Made ~ Length, data=Putts1)
+summary(m0_lm)
+```
+]
+]
+
+.pull-right[
+.tiny[
+```{r}
+m0_glm <- glm(Made ~ Length, data=Putts1, family=gaussian)
+summary(m0_glm)
+```
+]
+]
+
+
+---
+## Visualizing the Logistic Regression Model
+
+.pull-left[
+#### Extended Version
+
+```{r, echo=FALSE}
+regular_plot +xlim(0,15) + 
+  geom_smooth(method="glm",method.args=list(family="binomial"), se=FALSE,fullrange=TRUE)
+```
+
+]
+
+.pull-right[
+#### Zoomed-in / Focused Version
+```{r, echo=FALSE}
+regular_plot + 
+  geom_smooth(method="glm",method.args=list(family="binomial"), se=FALSE,fullrange=TRUE)
+```
+
+]
+
+---
+## Plotting the model in space: 3 ways
+
+We can think of visualizing logistic regression models with one of three forms of the outcome:
+
+- log-odds
+- odds
+- probability
+
+Each depiction is illustrating the _same_ model.
+
+The repetition is meant to illustrate how the same model operates with the different forms of outcomes.
+
+```{r, echo=FALSE, warning=FALSE, error=FALSE, message=FALSE }
+logodds<-predict(Putts_logistic, data.frame(Length=c(3:7)))
+odds<-exp(logodds)
+prob<-odds/(1+odds)
+Length<-c(3:7)
+logit_data<-as.data.frame(cbind(prob,odds,logodds,Length))
+```
+
+---
+# Log-Odds
+
+The first is the linear model, where we are considering log-odds as the unit of the response variable. This is the actual model we're fitting -- a linear model on the log scale.
+
+```{r, fig.height=4}
+qplot(x=Length, y=logodds, data=logit_data)
+```
+
+---
+# Odds
+
+The second is the odds, which are a more understandable set of units than the log(odds). 
+```{r, fig.height=4}
+qplot(x=Length, y=odds, data=logit_data)
+```
+
+We can see this downward, curved trend as evidence for why we might want to log-transform the odds so that we can fit a linear model.
+
+---
+# Probability
+
+The third is the probability, which is an alternative set of units to the odds. We have already seen this version before, now with the specific probabilities for each length plotted in red.
+
+.tiny[
+```{r, fig.height=4}
+regular_plot + 
+  geom_smooth(method="glm",method.args=list(family="binomial"), se=FALSE,fullrange=TRUE) +
+  geom_point(x=Length, y=prob, data=logit_data, color="red")
+```
+]
+
+This figure illustrates the logistic transformation - the "S" shape curve - that is a better fit of the probability scale than the OLS/linear model or fixed relationship (just the horizontal line of the average probability).
+
+--- 
+
+## Interpretation of Coefficients
+
+The interpretation of the coefficients in a linear regression model are clear based on an understanding of the geometry of the regression model.
+
+- We use the terms *intercept* and *slope* because a simple linear regression model is a line. 
+
+In a simple logistic model, the line is transformed by the logit function. **How do the coefficients affect the shape of the curve in a logistic model?**
+
+---
+
+### How do changes in the intercept and slope term affect the shape of the logistic curve?
+
+#### Intercept 
+
+- The intercept changing is making the curve appear as though it's moving left or right. 
+
+- In fact, it's elongating the shape of the curve either in values of the response variable where they = 1 or 0 (here, made or missed).
+
+#### Slope
+
+- Higher slope terms tend to flatten out the line in the top of the curve (where the response=1)
+
+- Smaller values make the curve look more like the odds function, where it curves down and mostly goes through the values of the response = 0.
+
+[Note that these explanations are not always true - the shape will depend on both the intercept, the slope, and the direction of the magnitude].
+
+---
+# Math behind the OR as a measure of the slope
+
+We can interpret $\hat{\beta_1}$ as the typical change in $\log{(odds)}$ for each one unit increase in the explanatory variable. 
+
+More naturally, the odds of success are multiplied by $e^{\hat{\beta_1}}$ for each one unit increase in the explanatory variable, since this is the **odds ratio**.
+
+$$odds_X = \frac{\hat{\pi}_X}{1 - \hat{\pi}_X} = e^{\hat{\beta}_0 + \hat{\beta}_1 X}$$ 
+$$odds_{X+1} = \frac{\hat{\pi}_{X+1}}{1 - \hat{\pi}_{X+1}} = e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)}$$ 
+$$\frac{odds_{X+1}}{odds_X} = \frac{e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)}}{e^{\hat{\beta}_0 + \hat{\beta}_1 X}} = e^{\hat{\beta}_1}$$
+Since the *logits* (i.e., logodds) are linear with respect to the explanatory variable, these changes are constant. 
+
+---
+## Calculating Odds Ratios and 95% CIs
+Finding confidence intervals for the odds ratio is easy. We could look at the point estimate and standard error from the `summary()` and use the `qnorm()` function to find a critical z value, or we could just use the convenience function `confint()`.
+
+.tiny[
+```{r, message=FALSE}
+#Odds Ratio
+exp(coef(Putts_logistic))
+#95% Confidence Interval
+exp(confint(Putts_logistic))
+```
+]
+
+Or in one line of code...
+.tiny[
+```{r, message=FALSE}
+#to get the OR and 95% CI side by side
+exp(cbind(OR = coef(Putts_logistic), confint(Putts_logistic)))
+```
+]
+
+<!-- **OR Interpretation**: For every additional foot away from the cup, the offs of making a putt are 0.56 times those of someone one foot closer. In other words, someone one foot further away has 44% lower odds of making the putt than someone one foot closer.  This makes sense - being further is associated with lower odds of making a shot. We are 95% confident that the true odds ratio for a one foot  difference in distance fromt the cup on making the putt is between 0.496 and 0.646 on average in the population. -->
+
+---
+## Odds Ratios: 2x2 tables
+
+We have seen - and calculated! - the odds ratio from 2-by-2 tables for this example. Let's confirm that we can re-create those results with a regression model -- thereby illustrating that $e^{\hat\beta_1}$ is the odds ratio.
+
+.pull-left[
+.medium[
+```{r}
+Putts1_6_7 <- Putts1 %>%
+  filter(Length %in% c(6,7)) 
+
+Putts1_6_7%>%
+  group_by(Length) %>%
+  count(Made)
+```
+]
+]
+
+.pull-right[
+$$ OR = \frac{44/90}{61/64} = 0.512 $$
+$$ log(OR) = -0.667 $$
+$$SE(log(OR) = \sqrt{\frac{1}{\text{44}} +\frac{1}{\text{90}}+\frac{1}{\text{61}}+\frac{1}{\text{64}}} = 0.25$$
+$$95\% CI:e^{log(OR) \pm 1.96*SE(log(OR))}$$
+$$e^{-0.667 \pm 1.96*0.25} = e^{( -1.17, -0.16)}$$
+$$95\% CI = 0.31, 0.85$$
+See last completed slide from previous class to see that we did this before.
+]
+
+---
+### Do we get the same numbers from a regression model?
+
+.pull-left[
+.tiny[
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+OR_6_7 <- glm(Made ~ Length, data=Putts1_6_7, family=binomial)
+summary(OR_6_7)
+```
+]
+]
+
+.pull-right[
+.tiny[
+```{r,warning=FALSE}
+exp(cbind(OR = coef(OR_6_7), confint(OR_6_7)))
+```
+]
+]

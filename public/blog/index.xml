@@ -5,7 +5,7 @@
     <link>/blog/</link>
       <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Blogs</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/social-image.png</url>
       <title>Blogs</title>
@@ -130,6 +130,42 @@
 &lt;p&gt;&lt;img src=&#34;/blog/01-RLSurvey_files/figure-html/time%20for%20class-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Most of you expect to have about the same amount of time as you did when you were on campus to dedicate to this class. I fully expect that your responses on Wednesday before spring break may have been optimistic and have changed now a few weeks into this reality. Moreover, about 30% of you thought you would have less time. I think the best approach here is minimal and realistic expectations so that everyone feels set up for success. Practically this means, I’m planning to make less required work and offering more recommended additional problems.&lt;/p&gt;
 &lt;p&gt;For those who can do more, you’re welcome to - and the sky is the limit there. There are some (12%) who said you might have &lt;em&gt;more&lt;/em&gt; time. If you find yourself wanting substantially more work - or a bigger scope of work - there are many possibilities for additional regression modeling work within my own research projects and/or plenty of other data. I will come up with a few ideas of how to structure this and will look for more input from you all soon. If you have thoughts in the meantime, please let me know.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Beginning to Wrap Up</title>
+      <link>/blog/03-wrappingup/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/blog/03-wrappingup/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#last-week-of-classes&#34;&gt;Last week of classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#second-exam&#34;&gt;Second Exam&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;last-week-of-classes&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Last week of classes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The Optional HW9 will be “due” Monday, 4/27 as per usual. You don’t need to turn it in and get no extra credit for doing this work – it’s purely up to you whether it makes sense to do it or not. The strongly recommended practice problems have answers in the back of the book so you can “grade” yourself.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;No quiz this week.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We will have a review of Logistic Regression in Class on Monday 4/27. This will cover the ideas of transformations, odds/probabilities, simple logistic models, multiple logistics models, and assessing the goodness of a model fit (i.e., the likelihood test).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Wednesday’s activities are TBD. We could just have time for questions, do extra practice together, have student hours, or cancel class. We’ll resolve what this looks like on Monday.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;second-exam&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Second Exam&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The second take-home exam will be distributed on Wednesday 4/29 at 3pm (so, after class). It will be due Friday, May 8th before 11:59PM, submitted via Moodle.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The structure of the exam will be similar to the first take-home exam – you’ll get a dataset and have to work through a variety of calculations, tests, fitting, and interpreting models – just for logistic regression.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It will only cover what we’ve done since Spring Break.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You will be expected to work by yourself on this exam. You can ask me questions, and I will respond back to the group as best I can (i.e., trying to clarify, but without giving the answer) on Slack.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I will have limited office hours (by appointment) during finals period, but I will be available on Slack every day.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>

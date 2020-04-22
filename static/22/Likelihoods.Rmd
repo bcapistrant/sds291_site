@@ -1,0 +1,155 @@
+---
+title: "Likelihoods"
+author: "SDS 291 - Multiple Regression"
+date: "4/22/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(Stat2Data)
+data("Titanic")
+```
+
+# Likelihoods
+
+$$L = \prod \hat\pi^{y_i} \times (1-\hat\pi)^{1-y_i}$$
+
+# Titanic Data
+
+## Table of Sex and Survival
+```{r}
+gmodels::CrossTable(Titanic$Sex, Titanic$Survived, prop.chisq = FALSE, prop.c = FALSE, prop.t = FALSE)
+```
+
+### Null  Deviance
+
+What if *everyone* had the same probability of survival, regardless of their sex? Calculate the $\pi$ for the total sample, irrespective of sex and calculate the Log-Likelihood there.
+
+```{r}
+TitNullL = (0.343^450) * (0.657^863) 
+TitNulllog_L = 450*(log(0.343)) + 863*(log(0.657))
+TitNullNeg2LL = -2*(TitNulllog_L)
+cbind(`-2LL` = TitNullNeg2LL, LogLikelihood = TitNulllog_L, Likelihood = TitNullL)
+```
+
+### Residual Deviance
+
+The alternative is that there *is* some relationship between probability of survival and sex. 
+
+```{r}
+TitL = (0.167^142) * (0.833^709) * (.667^308) * (.333^154)
+Titlog_L = 142*(log(0.167)) + 709*(log(.833)) + 308*(log(.667)) + 154*(log(0.333)) 
+TitNeg2LL = -2*(Titlog_L)
+cbind(`-2LL` = TitNeg2LL, LogLikelihood = Titlog_L, Likelihood = TitL)
+```
+
+### Regression Models
+
+Do you get the same -2LogLikelihood as the Null and Residual Deviance statistics in the regression model below?  
+
+```{r}
+m_titanic<-glm(Survived~SexCode, data=Titanic, family=binomial)
+summary(m_titanic)
+```
+
+#### *G* Statistic or Drop-in-Deviance test
+```{r, error=FALSE, warning=FALSE,message=FALSE}
+library(lmtest)
+lrtest(m_titanic)
+```
+
+Can you identify/calculate the *G* test statistic from the information given in the regression summary?
+
+You can use the code above to test whether *G* is statistically signficant.  Or the anova function:
+
+```{r}
+anova(m_titanic, test="Chisq")
+```
+
+Alternatively, you can use the general framework of `R` code for `1-pchisq(G,df)` to calculate the p-value where *G* is the *G* test statistic and *df* is the degrees of freedom in the difference between the null and alternative models (in this case, think about how many $\hat\beta$ there are that are different between the null and alternative models -- the number is the degree of freedom).
+
+```{r}
+G <- TitNullNeg2LL - TitNeg2LL
+1-pchisq(G,1)
+```
+
+# `Whickham` Data - Smoking and Survival
+
+```{r, error=FALSE, message=FALSE, warning=FALSE, echo=FALSE}
+library(mosaic)
+data("Whickham")
+gmodels::CrossTable(Whickham$smoker, Whickham$outcome, prop.chisq = FALSE, prop.c = FALSE, prop.t = FALSE)
+```
+
+## Do it by Hand
+
+Practice with the example above to calculate the null and residual deviance from this 2-by-2 table.
+
+<!---Null Deviance--->
+```{r, echo=FALSE, include=FALSE, eval=FALSE}
+table(Whickham$outcome)
+```
+
+```{r, echo=FALSE, include=FALSE, eval=FALSE}
+pi = 945/(945+369)
+pi
+```
+
+```{r, echo=FALSE, include=FALSE, eval=FALSE}
+NullL = (pi^945) * ((1-pi)^369)
+Nulllog_L = 945*(log(0.72)) + 369*(log(.28))
+NullNeg2LL = -2*(Nulllog_L)
+cbind(`-2LL` = NullNeg2LL, LogLikelihood = Nulllog_L, Likelihood = NullL)
+```
+
+
+<!---Residual Deviance--->
+```{r, include=FALSE, echo=FALSE, eval=FALSE}
+L = (0.761^443) * (0.239^139) * (0.686^502) * (0.314^230)
+log_L = 443*(log(0.761)) + 139*(log(0.239)) + 502*(log(0.686)) + 230*(log(0.314)) 
+Neg2LL = -2*(log_L)
+cbind(`-2LL` = Neg2LL, LogLikelihood = log_L, Likelihood = L)
+```
+
+
+## Regression Modeling
+
+Can you get the same example as the regression model?
+```{r, echo=FALSE, eval=FALSE, include=FALSE}
+Whickham$outcome<-relevel(Whickham$outcome, ref="Dead")
+m0_Whickham<-glm(outcome~smoker, data=Whickham, family=binomial)
+summary(m0_Whickham)
+```
+
+## Calculate and Test *G*
+
+Calculate *G* by hand and evaluate that value on the $\chi^2$ distribution with 1 df: (https://gallery.shinyapps.io/dist_calc/)
+
+Use one of the functions above to have R calculate it for you.
+
+```{r, eval=FALSE, echo=FALSE, include=FALSE}
+anova(m0_Whickham, test="Chisq")
+lrtest(m0_Whickham)
+```
+
+Try both!
+
+<!-- ## Visualizing the difference that we're testing with the Likelihoods -->
+
+<!-- Here's a way to generate a figure of this relationship on the probability scale. -->
+```{r, eval=FALSE, include=FALSE, echo=FALSE}
+library(mosaic)
+data("Whickham")
+#Here the explanatory variable is smoker and the response variable is outcome (dead/alive)
+binary_by_binary <- Whickham %>% #saving the plot as binary_by_binary, working from the Whickham data set 
+  group_by(smoker) %>% #by smoking status
+  count(outcome) %>% #count how many are dead and alive
+  mutate(pi=n/sum(n)) %>% #calculate the count as a proportion (proprtion dead of smokers; dead of nonsmokers)
+  filter(outcome=="Dead") %>% #only keep the dead outcomes (alive is just 1-pi)
+  ggplot(aes(y=pi, x=smoker)) + #starting the plot of the probability by smoking status
+  ylab("Probabiltiy of Dead") + #Just naming the y-xis so it's clear which outcome we're plotting (alive or dead)
+  geom_bar(stat="identity") #plot the proportion/probability for each smoker group
+
+binary_by_binary
+```

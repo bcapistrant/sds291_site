@@ -206,7 +206,7 @@ TooMuch_Prob_Plot
 #   is mapped to y, need to go through with prob set as y then flip at the
 #   end
 TooMuch_Prob_Plot_age <- probs %>%
-  filter(age %in% c(20,30,40,50,60,70,80) & model=="M4: Age adjusted" & party %in% c("Republican", "Democrat", "Neither")) %>%
+  filter(age %in% c(20,30,40,50,60,70,80) & model=="M2: Age adjusted" & party %in% c("Republican", "Democrat", "Neither")) %>%
   group_by(age,party) %>%
   slice(1) %>%
   ggplot(aes(y = prob, x = age, colour = party)) +

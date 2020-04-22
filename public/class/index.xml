@@ -776,5 +776,29 @@
 </description>
     </item>
     
+    <item>
+      <title>Data Visualization for Logistic Regression</title>
+      <link>/class/22-class/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/class/22-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-materials&#34;&gt;In Class Materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In Class Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sds291.netlify.com/22/22-class-lectureslides.pdf&#34;&gt;Slides&lt;/a&gt; (no rmd)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sds291.netlify.com/22/Likelihoods.pdf&#34;&gt;Likelihood Calculation (incl. extra practice)&lt;/a&gt; (and &lt;a href=&#34;https://sds291.netlify.com/21/Likelihoods.rmd&#34;&gt;.rmd&lt;/a&gt; with solutions and code – try first with just the .pdf)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

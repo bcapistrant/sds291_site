@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Multiple Regression</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/social-image.png</url>
       <title>Multiple Regression</title>
@@ -1766,6 +1766,42 @@ logit(GoodHealth) = \beta_0 + \beta_1 SexualMinority + \beta_2 NonWhiteRace + \\
     </item>
     
     <item>
+      <title>Beginning to Wrap Up</title>
+      <link>/blog/03-wrappingup/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/blog/03-wrappingup/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#last-week-of-classes&#34;&gt;Last week of classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#second-exam&#34;&gt;Second Exam&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;last-week-of-classes&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Last week of classes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The Optional HW9 will be “due” Monday, 4/27 as per usual. You don’t need to turn it in and get no extra credit for doing this work – it’s purely up to you whether it makes sense to do it or not. The strongly recommended practice problems have answers in the back of the book so you can “grade” yourself.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;No quiz this week.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We will have a review of Logistic Regression in Class on Monday 4/27. This will cover the ideas of transformations, odds/probabilities, simple logistic models, multiple logistics models, and assessing the goodness of a model fit (i.e., the likelihood test).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Wednesday’s activities are TBD. We could just have time for questions, do extra practice together, have student hours, or cancel class. We’ll resolve what this looks like on Monday.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;second-exam&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Second Exam&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The second take-home exam will be distributed on Wednesday 4/29 at 3pm (so, after class). It will be due Friday, May 8th before 11:59PM, submitted via Moodle.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The structure of the exam will be similar to the first take-home exam – you’ll get a dataset and have to work through a variety of calculations, tests, fitting, and interpreting models – just for logistic regression.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It will only cover what we’ve done since Spring Break.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You will be expected to work by yourself on this exam. You can ask me questions, and I will respond back to the group as best I can (i.e., trying to clarify, but without giving the answer) on Slack.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I will have limited office hours (by appointment) during finals period, but I will be available on Slack every day.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>3. Problem set 3</title>
       <link>/assignment/03-problem-set/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
@@ -2501,6 +2537,56 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
     </item>
     
     <item>
+      <title>9. Problem set 9</title>
+      <link>/assignment/09-problem-set/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/09-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#strongly-recommended&#34;&gt;Strongly Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#only-if-you-really-want-the-extra-practice&#34;&gt;Only if you &lt;em&gt;really&lt;/em&gt; want the extra practice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Nothing :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;strongly-recommended&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Strongly Recommended&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Do the extra practice of Likelihood from Class on Wednesday (and check your own answers against the solutions from the RMD)&lt;/li&gt;
+&lt;li&gt;11.7, 11.9 (check your answers with the back of the book)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;only-if-you-really-want-the-extra-practice&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Only if you &lt;em&gt;really&lt;/em&gt; want the extra practice&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10.21, 10.22 (2nd Ed or see below)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::include_graphics(&amp;quot;http://sds291.netlify.app/HW/HW9_ExtraQs.JPG&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://sds291.netlify.app/HW/HW9_ExtraQs.JPG&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;10.19 (1st Ed) / 10.31 (2nd Ed)*&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you didn’t do this last week, try it now. If you &lt;em&gt;did&lt;/em&gt; do it already, reconsider the question in light of the revisiting of likelihoods, &lt;em&gt;G&lt;/em&gt; statistic, and drop-in-deviance test. Try it again and/or reflect on what the similarities and differences are in these approaches. See the &lt;a href=&#34;http://sds291.netlify.app/20/ChiSq.pdf&#34;&gt;ChiSquare test handout&lt;/a&gt; (or &lt;a href=&#34;http://sds291.netlify.app/20/ChiSq.rmd&#34;&gt;RMD&lt;/a&gt;) for more reference.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;There is no template for this assignment. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;p&gt;Use the Homework 8 submission on &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=37984&#34;&gt;Moodle.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Parallel &amp; Non-Parallel Slopes</title>
       <link>/class/09-class/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
@@ -2900,6 +2986,48 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sds291.netlify.com/21/ExtraLogisticVisualization_lab.html&#34;&gt;Extra Practice Lab&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization for Logistic Regression</title>
+      <link>/class/22-class/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/class/22-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-materials&#34;&gt;In Class Materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-materials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;In Class Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sds291.netlify.com/22/22-class-lectureslides.pdf&#34;&gt;Slides&lt;/a&gt; (no rmd)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sds291.netlify.com/22/Likelihoods.pdf&#34;&gt;Likelihood Calculation (incl. extra practice)&lt;/a&gt; (and &lt;a href=&#34;https://sds291.netlify.com/21/Likelihoods.rmd&#34;&gt;.rmd&lt;/a&gt; with solutions and code – try first with just the .pdf)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Links to Zoom Recording are posted on &lt;a href=&#34;https://moodle.smith.edu/user/index.php?contextid=814530&#34;&gt;Moodle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Logistic Regression Review</title>
+      <link>/reading/23-reading/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/reading/23-reading/</guid>
+      <description>
+
+
+&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;p&gt;Chapters 9, 10, 11.1-11.2, 11.4&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommended&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommended&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -4919,22 +5047,18 @@ Figure 1: A fancy pie chart.
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-users&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/class/22-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;April 27&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Logistic Regression: Review&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/reading/23-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/assignment/08-problem-set/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-question-circle&#34;&gt;&lt;/i&gt;&lt;/font&gt;

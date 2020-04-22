@@ -1,0 +1,17 @@
+---
+title: "Logistic Regression Review"
+linktitle: "23: Logistic Review"
+date: "2020-04-27"
+read_date: "2020-04-27"
+menu:
+  reading:
+    parent: Readings
+    weight: 23
+type: docs
+---
+
+## Required  
+
+Chapters 9, 10, 11.1-11.2, 11.4
+
+## Recommended

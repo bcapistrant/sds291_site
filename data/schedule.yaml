@@ -172,11 +172,12 @@ lessons:
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Log Likelihood, Ratio Tests**'
     date: "April 22"
     reading: "22-reading"
+    class: "22-class"
     
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
     date: "April 27"
-    #reading: "05-reading"
-    #assignment: "05-eval-dag"
+    reading: "23-reading"
+    assignment: "08-problem-set"
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
     date: "April 29"

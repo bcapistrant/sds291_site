@@ -517,6 +517,56 @@ a. Use the Guan paper to calculate the OR and 95% CI for Diabetes and the “Pri
     </item>
     
     <item>
+      <title>9. Problem set 9</title>
+      <link>/assignment/09-problem-set/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/09-problem-set/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#required&#34;&gt;Required&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#strongly-recommended&#34;&gt;Strongly Recommended&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#only-if-you-really-want-the-extra-practice&#34;&gt;Only if you &lt;em&gt;really&lt;/em&gt; want the extra practice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#submit-on-moodle&#34;&gt;Submit on Moodle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;required&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Required&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Nothing :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;strongly-recommended&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Strongly Recommended&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Do the extra practice of Likelihood from Class on Wednesday (and check your own answers against the solutions from the RMD)&lt;/li&gt;
+&lt;li&gt;11.7, 11.9 (check your answers with the back of the book)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;only-if-you-really-want-the-extra-practice&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Only if you &lt;em&gt;really&lt;/em&gt; want the extra practice&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10.21, 10.22 (2nd Ed or see below)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::include_graphics(&amp;quot;http://sds291.netlify.app/HW/HW9_ExtraQs.JPG&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://sds291.netlify.app/HW/HW9_ExtraQs.JPG&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;10.19 (1st Ed) / 10.31 (2nd Ed)*&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you didn’t do this last week, try it now. If you &lt;em&gt;did&lt;/em&gt; do it already, reconsider the question in light of the revisiting of likelihoods, &lt;em&gt;G&lt;/em&gt; statistic, and drop-in-deviance test. Try it again and/or reflect on what the similarities and differences are in these approaches. See the &lt;a href=&#34;http://sds291.netlify.app/20/ChiSq.pdf&#34;&gt;ChiSquare test handout&lt;/a&gt; (or &lt;a href=&#34;http://sds291.netlify.app/20/ChiSq.rmd&#34;&gt;RMD&lt;/a&gt;) for more reference.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit-on-moodle&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Submit on Moodle&lt;/h1&gt;
+&lt;p&gt;There is no template for this assignment. You’re a pro at making your own RMarkdown files now!&lt;/p&gt;
+&lt;p&gt;You are expected to knit to pdf. Please allow enough time to resolve any errors before the deadline.&lt;/p&gt;
+&lt;p&gt;Use the Homework 8 submission on &lt;a href=&#34;https://moodle.smith.edu/course/view.php?id=37984&#34;&gt;Moodle.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Quiz 6</title>
       <link>/assignment/06-quiz/</link>
       <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
