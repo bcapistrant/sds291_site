@@ -20,6 +20,6 @@ editor_options:
 
 - [Slides](https://sds291.netlify.com/22/22-class-lectureslides.pdf) (no rmd)
 
-- [Likelihood Calculation (incl. extra practice)](https://sds291.netlify.com/22/Likelihoods.pdf) (and [.rmd](https://sds291.netlify.com/21/Likelihoods.rmd) with solutions and code -- try first with just the .pdf)
+- [Likelihood Calculation (incl. extra practice)](https://sds291.netlify.com/22/Likelihoods.pdf) (and [.rmd](https://sds291.netlify.com/22/Likelihoods.rmd) with solutions and code -- try first with just the .pdf)
 
 - Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)
