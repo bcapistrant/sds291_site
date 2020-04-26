@@ -1,0 +1,69 @@
+---
+title: "Take Home Project 1"
+author: "SDS 291, Spring 2020"
+date: "Due: 2/17/2020"
+output:
+  html_document:
+    css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Birthweight is an important public health measure, reflecting social determinants of health, pregnancy / maternal health care and also newborn and infant developmental trajectories that have the ability to impact the baby's health for the rest of their lives. Specfically, we know that low birthweight is a risk factor for infections and illness within the first weeks of life. Low birthweight has also been associated with motor control and social development delays as well as learning disabilities into childhood and beyond. 
+
+You got the internship with the North Carolina Department of Public Health (yay!) and they were so impressed with your simply linear regression modelling that they wanted your help to identify risk factors for *low* birthweight. You have data on low birthweight (< 5.5lbs at birth$^*$) and characteristics of the birth parent / pregnancy that are associated with birthweight from North Carolina in a given year (2015). The data are a random sample of 1,000 births from all the births in that year. You do not need deep knowledge of birthweight for this exercise -- no additional reading or googling should be needed -- but for context, 37 weeks is considered a full-term pregnancy, and mothers < 15 and > 35 years old are at higher risk of having a child who is lower birthweight.
+
+Your answers should be in complete sentences and interpreted in the context of this problem -- with appropriate units and explained with respect to the actual explanatory and response variables you are modeling. This is not just an exercise in getting the "right" answer, but to practice communicating those answers thoughtfully to a non-technical audience -- someone who has a working understanding of introductory statistics, but is not themselves a data analyst so much as someone who consumes statistical results.
+
+$^*$ Low birthweight is reflected in two different variables, and you can choose which you want to use: `lowbirthweight` is a factor variable withe the categories of  "low" and "not low"; and `lowCode` is a numeric, binary indicator variable where 0 indicates a baby was not low birthweight and 1 indicates the baby was low birthweight. `lowCode` will be easier to use as a response variable because you don't have to futz with the levels of the variables and tell `R` which is the reference group. However, you'll need to remember what's 0 and what's 1. 
+
+The data are here:
+```{r}
+data<-read.csv("http://sds291.netlify.app/exam/291-2ndExam.csv")
+```
+
+# 1. Low birthweight and Number of Hospital Visits (`visits`)
+
+You might imagine that birth outcomes are a reflection of the amount of health care the pregnant parent received during pregnancy. There is a variable in this dataset that reflects the number of hospital visits during pregnancy. 
+
+a. Generate a visual of the relationship between your explanatory and response variable and interpret what you see. Do not include the regression line.
+
+b. Use R to estimate a logistic regression model and write the fitted regression equation in the logit form. You should have one equation expressed in two different ways, one with the fitted values (i.e., numbers) and one way without the numbers.
+
+c. Calculate and interpret the odds ratio of the slope in a sentence, in the context of this problem, and conduct a hypothesis test of the significance of this odds ratio.
+
+d. Calculate the odds and probability of having a child born at low birthweight for birth parent who had 3, 4, 14, and 15 hospital visits. 
+
+e. Interpret the values for 3 and 4 visits in a sentence in the context of the problem, and connect these values to the odds ratio you calculated in 1c.
+
+
+# 2. Low birtweight and Marital Status (`marital`)
+
+Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes. 
+
+```{r, echo=FALSE}
+gmodels::CrossTable(data$marital,data$lowbirthweight, prop.r = FALSE, prop.c=FALSE,prop.t = FALSE, prop.chisq = FALSE)
+```
+
+a. Use the information from the two-way table above to calculate the odds and probabilities of having a child who is low birthweight for married and unmarried parents.
+
+b. Fit a logistic regression model to estimate the relationship between low birthweight and marital status. Use the estimates from this fitted model to calculate the odds and probabilties of having a child who is low birthweight for married and unmarried parents.
+
+c. Calculate the odds ratio from both the two-way table and from the regression output, and interpret this odds ratio in the context of this problem.
+
+d. Calculate the 95% Confidence Interval for the odds ratio and interpret this value in a sentence in the context of the problem.
+
+# 3. Extending Each Model, Revisiting Gestational Duration
+
+You may remember that gestational duration (`weeks`) was important when you considered birthweight as a quantitative variable in linear regression. You want to use that again, and add it to the models that you have already built with `visits` and `marital`.
+
+a. Fit a multiple logistic regression model of low birthweight with `weeks`, `visits`, and `marital` as explanatory variables. 
+
+b. Interpret the odds ratio for each explanatory variable in the context of this problem, and comment on the statistical significance of each variable.
+
+c. Is this model better than the simple logistic regression models you fit in question 1? Conduct a test that compares the models, and explain what you conclude in the context of this problem (i.e., what does this test tell us about these particular relationships)?
