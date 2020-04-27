@@ -178,6 +178,7 @@ lessons:
     date: "April 27"
     reading: "23-reading"
     assignment: "08-problem-set"
+    class: "23-class"
 
   - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
     date: "April 29"

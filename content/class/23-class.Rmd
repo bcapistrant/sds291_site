@@ -1,0 +1,23 @@
+---
+title: "Logistic Regression Review"
+linktitle: "23 Logistic Regression Review"
+date: "2020-04-27"
+class_date: "2020-04-27"
+menu:
+  class:
+    parent: Class sessions
+    weight: 23
+type: docs
+weight: 23
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## In Class Materials
+
+- [Extra Practice](https://sds291.netlify.com/23/23-lab.html) (no rmd)
+
+- Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)
