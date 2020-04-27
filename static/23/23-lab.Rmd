@@ -29,7 +29,7 @@ These questions focus on my former dog, Porkchop. She was the best, as are Pants
 
 The data for these examples are available on the course website, and you can bring them into your local RStudio environment with the following code:
 
-```{r,eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 load(url("http://sds291.netlify.app/23/LogisticReviewPractice.RData"))
 ```
 
