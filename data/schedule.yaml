@@ -180,9 +180,9 @@ lessons:
     assignment: "08-problem-set"
     class: "23-class"
 
-  - title: '<i class="fas fa-university"></i> **Logistic Regression: Review**'
+  - title: '<i class="fas fa-university"></i> **Student Hours / Open Session**'
     date: "April 29"
-    #reading: "05-reading"
+    class: "24-class"
     
   - title: '<i class="fas fa-file-code"></i> **Take Home Exam 2: Logistic Regression**'
     date: "May 8"

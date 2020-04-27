@@ -1,0 +1,21 @@
+---
+title: "Student Hours / Open Session"
+linktitle: "24 Open Review"
+date: "2020-04-29"
+class_date: "2020-04-29"
+menu:
+  class:
+    parent: Class sessions
+    weight: 24
+type: docs
+weight: 24
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+Open session (i.e., nothing planned or expected -- just taking things as they come) talking through questions, practice problems (from last class), etc.
+
+- Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)
