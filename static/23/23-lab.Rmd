@@ -1,0 +1,66 @@
+---
+title: "Multiple Logistic Regression - Review"
+output:
+  html_document:
+    css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
+    highlight: textmate
+    theme: journal
+    toc: true
+---
+
+```{r include=FALSE}
+# Some customization.  You can alter or delete as desired (if you know what you are doing).
+
+# This changes the default colors in lattice plots.
+#trellis.par.set(theme=theme.mosaic())  
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy=FALSE,     # display code as typed
+  size="small"    # slightly smaller font for code
+)
+```
+
+
+These questions focus on my former dog, Porkchop. She was the best, as are Pants le Pants and Queen Pickles. (It turns out, being the best isn't zero-sum! It's an every-dog-way tie!) (It also turns out that I really like silly dog names that start with [the letter "P"](https://www.youtube.com/watch?v=LqSyHtEExBc). `r emo::ji("shrug")` `r emo::ji("heavy_heart_exclamation")` `r emo::ji("parking")` `r emo::ji("dog")`)
+
+
+# 1. Couch or Floor?
+
+Porkchop loved when the sun is out and shined through the windows. She also loved sitting on the couch. When the sun was out, she seemed to prefer laying on the floor in the spot of sun shining through the windows. When the sun was not out, she seemed to prefer hanging out on the couch, often under a blanket.
+
+Porkchop had started Dogs 4 Data Science, a data science consulting firm by dogs and for dogs. Since I wouldn’t buy her a Fitbit to track her activity habits, she asked me to gather data for her. I collected data for roughly the last year and a half (n=435 days) of how sunny the weather was and where Porkchop was sitting when I got home from work on a weekday (she was very unpredictable on a weekend...).  These data are stored in the dataframe called `sun_couch`.
+
+```{r, eval=FALSE}
+load("http://sds291.netlify.app/23/LogisticReviewPractice.RData")
+```
+
+
+```{r, echo=TRUE}
+gmodels::CrossTable(data$marital,data$lowbirthweight, prop.r = FALSE, prop.c=FALSE,prop.t = FALSE, prop.chisq = FALSE)
+```
+
+## 1a. Use the information from the two-way table above to calculate the odds that Porkchop was on the floor on a sunny day.
+<br>
+## 1b. Use the information from the two-way table above to calculate the odds that Porkchop was on the floor on a cloudy day.
+<br>
+## 1c. As a data analysis consultant for Dogs 4 Data science, Porkchop asks you to use these data to fit a logistic regression model to estimate the relationship between the weather and where she was sitting. Show numerically how your answers from 1a & 1b correspond to this regression output. Briefly explain the relationship between the weather and where Porkchop is sitting in a sentence.
+<br>
+## 1d. Write the fitted regression equation (in logit form) of this regression model for Porkchop.
+<br>
+## 1.e. Is there a significant difference in Porkchop being on the floor by the weather? Use the evidence from Porkchop’s requested regression model to test this question.
+<br>
+###. 1.e.i. State the formula and related hypothesis for the test.
+<br> 1.2.ii. Conduct the test and state your conclusion from the test in a sentence.
+
+# 2. Walks and Breaks
+
+```{r, out.width='15%'}
+knitr::include_graphics("IMG_6729.jpg")
+```
+
+
+Dogs 4 Data Science (D4DS) won a contract from the Humane Society to collect a data on well- being of dogs in Western Massachusetts. Porkchop and her colleagues randomly sampled 7200 dogs in Hampshire, Hampden, Franklin, and Berkshire Counties (the Western Massachusetts counties) and surveyed them on: 1. how long of a walk they take (in miles), 2. the day’s temperature (in degrees Farenheit), and 3. whether they need to stop during the walk to have a break (1= Yes, took a break; 0 = No break).
+
+Based on her experience, Porkchop had a hypothesis that dogs with brachycephalic breeds – more commonly, have a ”smooshed face” instead of a full snout – would might need more breaks; the smooshed face makes it harder for them to breathe, especially in the heat. They also included a variable called ”smooshface” as measure of breed, which is 1 = Smooshed Face (e.g., pugs, boston terriers, bulldogs, shih tzus), or 0 = Not Smooshed / Full Snout (e.g., labradors, collies, poodles, all other breeds).
