@@ -18,6 +18,16 @@ editor_options:
 
 ## In Class Materials
 
-- [Extra Practice](https://sds291.netlify.com/23/23-lab.html) (no rmd)
+- [Practice Set](https://sds291.netlify.com/23/23-lab.html) 
+
+    - [Work from class on Q1](https://sds291.netlify.com/23/23-lab-answers-in-class.html)
+
+    - [Complete Answers](https://sds291.netlify.com/23/SDS291_Sp19_secondexam_v03_key02.pdf)
+
+## Extra Practice
+
+- [Additional Practice Set](https://sds291.netlify.com/23/SDS291_Sp18_secondexam.pdf) 
+    
+    - [Complete Answers](https://sds291.netlify.com/23/SDS291_Sp18_secondexam_sampleanswers.pdf)
 
 - Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)
