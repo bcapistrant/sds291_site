@@ -1,0 +1,71 @@
+---
+title: "Take Home Exam 2"
+date: "2020-04-29"
+due_date: "2020-05-08"
+due_time: "11:59 PM Eastern"
+menu:
+  assignment:
+    parent: Take Home Exams
+    weight: 2
+type: docs
+weight: 2
+output:
+  blogdown::html_page:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+*Note of explanation*: I'm still reluctant to call this an exam because the word "exam" just invokes stress and anxiety, neither of which we need more of right now.  Numerically this is equivalent to < 1 homework/problem sets (since HW9 was optional, each HW is 30% of the second half of the course, and this exam is worth 20%), so I would encourage you to think about this as just like a problem set.  Also, most of you got grades that were really similar to a HW grade on Exam 1, so I supsect you'll do fine on this.
+
+# Overall Instructions
+
+- The assignment is [here.](http://sds291.netlify.com/exam/take-home-exam-2.html) 
+- There are 14 total exercises within 4 general topics. Please answer by the exercise number.
+- There is not an `.rmd` template. You can use one from a problem set or start a blank file.
+- The file should be knitted to a `.pdf.` and submitted with your `.rmd` file on Moodle, just like a homework/problem set.  Check your section's moodle page for more details on where exactly to submit.
+- To be safe, should include your code in the knitted output, which you can do with the following command in your first code chunk (it's already there in the HW templates:
+
+```{r, eval=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- Be clear and organized about your output, and make it clear where you are getting your numbers/answers from. For example, if you have a summary output of a model under question X, and you answering question M with something that comes from the output you have in question X, just refer back to Question X in your answer.
+- If you're formatting equations with Markdown, see [the resources section of the course site](https://sds291.netlify.com/resources/equations/) for some suggestions on key symbols and formatting.
+- You can read in the data directly, as below:
+
+```{r, eval=FALSE}
+data<-read.csv("http://sds291.netlify.com/exam/291birthweight.csv")
+```
+
+
+# Guidelines for the Exam
+
+## What you cannot do
+
+This exam is to be done completely independently: you may not talk to or work with anyone about the exam before the exam period closes (05/08/20 at 12:00pm Noon). All code and answers must be entirely your own.
+
+You're expected to abide by the college honor code about this exam.  Any allegations or suspicion of violations of these policies or the honor code are taken extremely seriously and will be reported to the honor board.
+
+Don't cheat. Please.
+
+## What you *can* do
+
+You can ask me questions to clarify any logistical piece, phrasing of the questions, or other similar details about the exam.  Please DM me on slack with questions and I will likely answer them for everyone so that everyone has the same information.
+
+I will also be having student hours on Thursday 4/30 (4-5pm). I can address both clarifying questions for the exam and review concepts that we've covered so far in class, but I cannot speak to the exam content directly. For example, if you're wondering about how to interpret the slope, bring examples from the book, from class, or previous problem sets. 
+
+You can ask Stat TAs about general concepts for the exam in a similar way.
+
+You can use your book.  In fact, I'd strongly encourage it.
+
+You can use your class notes -- labs, slides, notes you've taken, etc.
+
+You can google for help if needed. You shouldn't need any `R` code you haven't already seen in class, and much of the advice on the internet is spotty in quality, so I would take it with a grain of salt. But you can use the internet. 
+
+# Some general suggestions
+
+- Some of these concepts are subjective and may not have totally clear right or wrong answers. The safe bet is always to explain your rationale sufficiently.
+- Most of the questions are pretty explicit about what you should be interpreting, but when in doubt, ask.
+- Keep things organized, make it clear what your answer is (especially in a longer answer that can wander and make it hard to get your take away message), include everything (output, figures, etc.) you need for that particular answer (or refer clearly to where it is if you don't want to reproduct it).
+

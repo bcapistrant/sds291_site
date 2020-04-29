@@ -154,6 +154,71 @@
     </item>
     
     <item>
+      <title>Take Home Exam 2</title>
+      <link>/assignment/02-take-home-exam/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/assignment/02-take-home-exam/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overall-instructions&#34;&gt;Overall Instructions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#guidelines-for-the-exam&#34;&gt;Guidelines for the Exam&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-you-cannot-do&#34;&gt;What you cannot do&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-you-can-do&#34;&gt;What you &lt;em&gt;can&lt;/em&gt; do&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#some-general-suggestions&#34;&gt;Some general suggestions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note of explanation&lt;/em&gt;: I’m still reluctant to call this an exam because the word “exam” just invokes stress and anxiety, neither of which we need more of right now. Numerically this is equivalent to &amp;lt; 1 homework/problem sets (since HW9 was optional, each HW is 30% of the second half of the course, and this exam is worth 20%), so I would encourage you to think about this as just like a problem set. Also, most of you got grades that were really similar to a HW grade on Exam 1, so I supsect you’ll do fine on this.&lt;/p&gt;
+&lt;div id=&#34;overall-instructions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overall Instructions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The assignment is &lt;a href=&#34;http://sds291.netlify.com/exam/take-home-exam-2.html&#34;&gt;here.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are 14 total exercises within 4 general topics. Please answer by the exercise number.&lt;/li&gt;
+&lt;li&gt;There is not an &lt;code&gt;.rmd&lt;/code&gt; template. You can use one from a problem set or start a blank file.&lt;/li&gt;
+&lt;li&gt;The file should be knitted to a &lt;code&gt;.pdf.&lt;/code&gt; and submitted with your &lt;code&gt;.rmd&lt;/code&gt; file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details on where exactly to submit.&lt;/li&gt;
+&lt;li&gt;To be safe, should include your code in the knitted output, which you can do with the following command in your first code chunk (it’s already there in the HW templates:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::opts_chunk$set(echo = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Be clear and organized about your output, and make it clear where you are getting your numbers/answers from. For example, if you have a summary output of a model under question X, and you answering question M with something that comes from the output you have in question X, just refer back to Question X in your answer.&lt;/li&gt;
+&lt;li&gt;If you’re formatting equations with Markdown, see &lt;a href=&#34;https://sds291.netlify.com/resources/equations/&#34;&gt;the resources section of the course site&lt;/a&gt; for some suggestions on key symbols and formatting.&lt;/li&gt;
+&lt;li&gt;You can read in the data directly, as below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data&amp;lt;-read.csv(&amp;quot;http://sds291.netlify.com/exam/291birthweight.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;guidelines-for-the-exam&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Guidelines for the Exam&lt;/h1&gt;
+&lt;div id=&#34;what-you-cannot-do&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What you cannot do&lt;/h2&gt;
+&lt;p&gt;This exam is to be done completely independently: you may not talk to or work with anyone about the exam before the exam period closes (05/08/20 at 12:00pm Noon). All code and answers must be entirely your own.&lt;/p&gt;
+&lt;p&gt;You’re expected to abide by the college honor code about this exam. Any allegations or suspicion of violations of these policies or the honor code are taken extremely seriously and will be reported to the honor board.&lt;/p&gt;
+&lt;p&gt;Don’t cheat. Please.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-can-do&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What you &lt;em&gt;can&lt;/em&gt; do&lt;/h2&gt;
+&lt;p&gt;You can ask me questions to clarify any logistical piece, phrasing of the questions, or other similar details about the exam. Please DM me on slack with questions and I will likely answer them for everyone so that everyone has the same information.&lt;/p&gt;
+&lt;p&gt;I will also be having student hours on Thursday 4/30 (4-5pm). I can address both clarifying questions for the exam and review concepts that we’ve covered so far in class, but I cannot speak to the exam content directly. For example, if you’re wondering about how to interpret the slope, bring examples from the book, from class, or previous problem sets.&lt;/p&gt;
+&lt;p&gt;You can ask Stat TAs about general concepts for the exam in a similar way.&lt;/p&gt;
+&lt;p&gt;You can use your book. In fact, I’d strongly encourage it.&lt;/p&gt;
+&lt;p&gt;You can use your class notes – labs, slides, notes you’ve taken, etc.&lt;/p&gt;
+&lt;p&gt;You can google for help if needed. You shouldn’t need any &lt;code&gt;R&lt;/code&gt; code you haven’t already seen in class, and much of the advice on the internet is spotty in quality, so I would take it with a grain of salt. But you can use the internet.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-general-suggestions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some general suggestions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Some of these concepts are subjective and may not have totally clear right or wrong answers. The safe bet is always to explain your rationale sufficiently.&lt;/li&gt;
+&lt;li&gt;Most of the questions are pretty explicit about what you should be interpreting, but when in doubt, ask.&lt;/li&gt;
+&lt;li&gt;Keep things organized, make it clear what your answer is (especially in a longer answer that can wander and make it hard to get your take away message), include everything (output, figures, etc.) you need for that particular answer (or refer clearly to where it is if you don’t want to reproduct it).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>2. Problem set 2</title>
       <link>/assignment/02-problem-set/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>

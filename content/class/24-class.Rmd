@@ -16,6 +16,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-Open session (i.e., nothing planned or expected -- just taking things as they come) talking through questions, practice problems (from last class), etc.
+## In Class Materials
+
+- [Practice Set](https://sds291.netlify.com/23/23-lab.html) 
+
+    - [Work from class on Q1](https://sds291.netlify.com/23/24-lab-answers-in-class.html)
 
 - Links to Zoom Recording are posted on [Moodle](https://moodle.smith.edu/user/index.php?contextid=814530)

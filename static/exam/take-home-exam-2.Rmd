@@ -1,7 +1,7 @@
 ---
-title: "Take Home Project 1"
+title: "Take Home Exam 2"
 author: "SDS 291, Spring 2020"
-date: "Due: 2/17/2020"
+date: "Due: 05/08/2020"
 output:
   html_document:
     css: "~/Dropbox/3_Smith/SDS291/sds291_site/static/img/labs.css"
@@ -27,7 +27,7 @@ The data are here:
 data<-read.csv(url("http://sds291.netlify.app/exam/291-2ndExam.csv"))
 ```
 
-# 1. Low birthweight and Number of Hospital Visits (`visits`)
+# Low birthweight and Number of Hospital Visits (`visits`)
 
 You might imagine that birth outcomes are a reflection of the amount of health care the pregnant parent received during pregnancy. There is a variable in this dataset that reflects the number of hospital visits during pregnancy. 
 
@@ -43,7 +43,7 @@ e. Interpret the values for 3 and 4 visits in a sentence in the context of the p
 f. Connect these odds for all 4 of these values of visits to the hospital to the odds ratio you calculated in Exercise 3.
 
 
-# 2. Low birtweight and Marital Status (`marital`)
+# Low birtweight and Marital Status (`marital`)
 
 Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes. 
 
@@ -59,7 +59,7 @@ c. Calculate the odds ratio from both the two-way table and from the regression 
 
 d. Calculate the 95% Confidence Interval for the odds ratio and interpret this value in a sentence in the context of the problem.
 
-# 3. Extending Each Model, Revisiting Gestational Duration
+# Extending Each Model, Revisiting Gestational Duration
 
 You may remember that gestational duration (`weeks`) was important when you considered birthweight as a quantitative variable in linear regression. You want to use that again, and add it to the models that you have already built with `visits` and `marital`.
 
@@ -69,6 +69,6 @@ b. Interpret the odds ratio for each explanatory variable in the context of this
 
 c. Is this model better than the simple logistic regression models you fit in Exercise 2? Conduct a test that compares the models, and explain what you conclude in the context of this problem (i.e., what does this test tell us about these particular relationships)?
 
-# 4. Communicating Take-Away Message
+# Communicating Take-Away Message
 
 a. Imagine your supervisor is preparing to invest in a prevention campaign to reduce low birthweight. Based on your models, what do you think she should focus on? Summarize in 2-3 sentences what you found through these models about risk factors for low birthweight for your supervisor. Use this as an opportunity to illustrate you understand statistical models, but without overly technical details.
