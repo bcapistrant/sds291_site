@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Birthweight is an important public health measure, reflecting social determinants of health, pregnancy / maternal health care and also newborn and infant developmental trajectories that have the ability to impact the baby's health for the rest of their lives. Specfically, we know that low birthweight is a risk factor for infections and illness within the first weeks of life. Low birthweight has also been associated with motor control and social development delays as well as learning disabilities into childhood and beyond. 
 
-You got the internship with the North Carolina Department of Public Health (yay!) and they were so impressed with your simply linear regression modelling that they wanted your help to identify risk factors for *low* birthweight. You have data on low birthweight (< 5.5lbs at birth$^*$) and characteristics of the birth parent / pregnancy that are associated with birthweight from North Carolina in a given year (2015). The data are a random sample of 1,000 births from all the births in that year. You do not need deep knowledge of birthweight for this exercise -- no additional reading or googling should be needed -- but for context, 37 weeks is considered a full-term pregnancy, and mothers < 15 and > 35 years old are at higher risk of having a child who is lower birthweight.
+You got the internship with the North Carolina Department of Public Health (yay!) and they were so impressed with your simply linear regression modelling that they wanted your help to identify risk factors for *low* birthweight. You have data on low birthweight (< 5.5lbs at birth$^*$) and characteristics of the birth parent / pregnancy that are associated with birthweight from North Carolina in a given year (2015). The data are a random sample of 1,000 births from all the births in that year (12 were excluded for missing data on some of the variables, but you can assume this missingness was random). You do not need deep knowledge of birthweight for this exercise -- no additional reading or googling should be needed -- but for context, 37 weeks is considered a full-term pregnancy, and mothers < 15 and > 35 years old are at higher risk of having a child who is lower birthweight.
 
 Your answers should be in complete sentences and interpreted in the context of this problem -- with appropriate units and explained with respect to the actual explanatory and response variables you are modeling. This is not just an exercise in getting the "right" answer, but to practice communicating those answers thoughtfully to a non-technical audience -- someone who has a working understanding of introductory statistics, but is not themselves a data analyst so much as someone who consumes statistical results.
 
@@ -26,6 +26,7 @@ The data are here:
 ```{r}
 data<-read.csv(url("http://sds291.netlify.app/exam/291-2ndExam.csv"))
 ```
+
 
 # Low birthweight and Number of Hospital Visits (`visits`)
 
@@ -67,7 +68,7 @@ a. Fit a multiple logistic regression model of low birthweight with `weeks`, `vi
 
 b. Interpret the odds ratio for each explanatory variable in the context of this problem, and comment on the statistical significance of each variable.
 
-c. Is this model better than the simple logistic regression models you fit in Exercise 2? Conduct a test that compares the models, and explain what you conclude in the context of this problem (i.e., what does this test tell us about these particular relationships)?
+c. Is this model better than the simple logistic regression model you fit in Exercise 2? Conduct a test that compares the models, and explain what you conclude in the context of this problem (i.e., what does this test tell us about these particular relationships)?
 
 # Communicating Take-Away Message
 
