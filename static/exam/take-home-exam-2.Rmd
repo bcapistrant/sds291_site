@@ -56,6 +56,7 @@ a. Use the information from the two-way table above to calculate the odds and pr
 
 b. Fit a logistic regression model to estimate the relationship between low birthweight and marital status. Use the estimates from this fitted model to calculate the odds and probabilties of having a child who is low birthweight for married and unmarried parents.
 
+
 c. Calculate the odds ratio from both the two-way table and from the regression output, and interpret this odds ratio in the context of this problem.
 
 d. Calculate the 95% Confidence Interval for the odds ratio and interpret this value in a sentence in the context of the problem.

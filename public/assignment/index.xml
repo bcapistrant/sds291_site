@@ -175,7 +175,7 @@
 &lt;div id=&#34;overall-instructions&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overall Instructions&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;The assignment is &lt;a href=&#34;http://sds291.netlify.com/exam/take-home-exam-2.html&#34;&gt;here.&lt;/a&gt; [&lt;em&gt;note: updated on Wednesday 4/30 at 10pm to clarify issues of missing data&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;The assignment is &lt;a href=&#34;http://sds291.netlify.com/exam/take-home-exam-2.html&#34;&gt;here.&lt;/a&gt; [&lt;em&gt;note: updated on Thursday 4/30 at 4:45pm to update the table from Exercise 7&lt;/em&gt;]&lt;/li&gt;
 &lt;li&gt;There are 14 total exercises within 4 general topics. Please answer by the exercise number.&lt;/li&gt;
 &lt;li&gt;There is not an &lt;code&gt;.rmd&lt;/code&gt; template. You can use one from a problem set or start a blank file.&lt;/li&gt;
 &lt;li&gt;The file should be knitted to a &lt;code&gt;.pdf.&lt;/code&gt; and submitted with your &lt;code&gt;.rmd&lt;/code&gt; file on Moodle, just like a homework/problem set. Check your section’s moodle page for more details on where exactly to submit.&lt;/li&gt;
