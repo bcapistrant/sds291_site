@@ -5,7 +5,7 @@ data("ncbirths")
 ncbirths2 <- ncbirths %>%
   mutate(lowCode = if_else(lowbirthweight=="low",1,
                      if_else(lowbirthweight=="not low",0,NA_real_))) %>%
-  select(lowCode, lowbirthweight, mage, weeks, visits, marital,habit,whitemom) %>%
+  select(lowCode, lowbirthweight, weeks, visits, marital) %>%
   filter(complete.cases(.))
 
  
