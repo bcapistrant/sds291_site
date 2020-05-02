@@ -396,10 +396,10 @@ summary {
 <pre class="r"><code>data&lt;-read.csv(url(&quot;http://sds291.netlify.app/exam/291-2ndExam.csv&quot;))</code></pre>
 <div id="low-birthweight-and-number-of-hospital-visits-visits" class="section level1">
 <h1>Low birthweight and Number of Hospital Visits (<code>visits</code>)</h1>
-<p>You might imagine that birth outcomes are a reflection of the amount of health care the pregnant parent received during pregnancy. There is a variable in this dataset that reflects the number of hospital visits during pregnancy.</p>
+<p>You might imagine that birth outcomes are a reflection of the amount of health care the pregnant parent received during pregnancy. The following 6 questions refer to the variable in this dataset that reflects the number of hospital visits during pregnancy (<code>visits</code>).</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Generate a visual of the relationship between your explanatory and response variable and interpret what you see. Do not include the regression line.</p></li>
-<li><p>Use R to estimate a logistic regression model and write the fitted regression equation in the logit form. You should have one equation expressed in two different ways, one with the fitted values (i.e., numbers) and one way without the numbers.</p></li>
+<li><p>Use R to estimate a simple logistic regression model and write the fitted regression equation in the logit form. You should have one equation expressed in two different ways, one with the fitted values (i.e., numbers) and one way without the numbers.</p></li>
 <li><p>Calculate and interpret the odds ratio of the slope in a sentence, in the context of this problem, and conduct a hypothesis test of the significance of this odds ratio.</p></li>
 <li><p>Calculate the odds and probability of having a child born at low birthweight for birth parent who had 3, 4, 14, and 15 hospital visits.</p></li>
 <li>Interpret the values for 3 and 4 visits in a sentence in the context of the problem,</li>
@@ -408,7 +408,7 @@ summary {
 </div>
 <div id="low-birtweight-and-marital-status-marital" class="section level1">
 <h1>Low birtweight and Marital Status (<code>marital</code>)</h1>
-<p>Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes.</p>
+<p>Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes. The following 4 questions refer to the variable in this dataset that reflects marital status (<code>marital</code>).</p>
 <pre><code>## 
 ##  
 ##    Cell Contents
@@ -417,17 +417,17 @@ summary {
 ## |-------------------------|
 ## 
 ##  
-## Total Observations in Table:  988 
+## Total Observations in Table:  990 
 ## 
 ##  
 ##              | data$lowbirthweight 
 ## data$marital |       low |   not low | Row Total | 
 ## -------------|-----------|-----------|-----------|
-##      married |        60 |       319 |       379 | 
+##      married |        60 |       320 |       380 | 
 ## -------------|-----------|-----------|-----------|
-##  not married |        48 |       561 |       609 | 
+##  not married |        48 |       562 |       610 | 
 ## -------------|-----------|-----------|-----------|
-## Column Total |       108 |       880 |       988 | 
+## Column Total |       108 |       882 |       990 | 
 ## -------------|-----------|-----------|-----------|
 ## 
 ## </code></pre>
@@ -440,7 +440,7 @@ summary {
 </div>
 <div id="extending-each-model-revisiting-gestational-duration" class="section level1">
 <h1>Extending Each Model, Revisiting Gestational Duration</h1>
-<p>You may remember that gestational duration (<code>weeks</code>) was important when you considered birthweight as a quantitative variable in linear regression. You want to use that again, and add it to the models that you have already built with <code>visits</code> and <code>marital</code>.</p>
+<p>You may remember that gestational duration (<code>weeks</code>) was important when you considered birthweight as a quantitative variable in linear regression. You want to use that again, and add it to the models that you have already built with <code>visits</code> and <code>marital</code>. The following 3 questions refer to the variables you have already used, plus also <code>weeks</code> that you used in the first exam.</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Fit a multiple logistic regression model of low birthweight with <code>weeks</code>, <code>visits</code>, and <code>marital</code> as explanatory variables.</p></li>
 <li><p>Interpret the odds ratio for each explanatory variable in the context of this problem, and comment on the statistical significance of each variable.</p></li>

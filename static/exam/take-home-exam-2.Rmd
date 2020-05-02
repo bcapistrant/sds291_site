@@ -30,11 +30,11 @@ data<-read.csv(url("http://sds291.netlify.app/exam/291-2ndExam.csv"))
 
 # Low birthweight and Number of Hospital Visits (`visits`)
 
-You might imagine that birth outcomes are a reflection of the amount of health care the pregnant parent received during pregnancy. There is a variable in this dataset that reflects the number of hospital visits during pregnancy. 
+You might imagine that birth outcomes are a reflection of the amount of health care the pregnant parent received during pregnancy. The following 6 questions refer to the variable in this dataset that reflects the number of hospital visits during pregnancy (`visits`).
 
 a. Generate a visual of the relationship between your explanatory and response variable and interpret what you see. Do not include the regression line.
 
-b. Use R to estimate a logistic regression model and write the fitted regression equation in the logit form. You should have one equation expressed in two different ways, one with the fitted values (i.e., numbers) and one way without the numbers.
+b. Use R to estimate a simple logistic regression model and write the fitted regression equation in the logit form. You should have one equation expressed in two different ways, one with the fitted values (i.e., numbers) and one way without the numbers.
 
 c. Calculate and interpret the odds ratio of the slope in a sentence, in the context of this problem, and conduct a hypothesis test of the significance of this odds ratio.
 
@@ -46,7 +46,7 @@ f. Connect these odds for all 4 of these values of visits to the hospital to the
 
 # Low birtweight and Marital Status (`marital`)
 
-Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes. 
+Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes. The following 4 questions refer to the variable in this dataset that reflects marital status (`marital`).
 
 ```{r, echo=FALSE}
 gmodels::CrossTable(data$marital,data$lowbirthweight, prop.r = FALSE, prop.c=FALSE,prop.t = FALSE, prop.chisq = FALSE)
@@ -56,14 +56,13 @@ a. Use the information from the two-way table above to calculate the odds and pr
 
 b. Fit a logistic regression model to estimate the relationship between low birthweight and marital status. Use the estimates from this fitted model to calculate the odds and probabilties of having a child who is low birthweight for married and unmarried parents.
 
-
 c. Calculate the odds ratio from both the two-way table and from the regression output, and interpret this odds ratio in the context of this problem.
 
 d. Calculate the 95% Confidence Interval for the odds ratio and interpret this value in a sentence in the context of the problem.
 
 # Extending Each Model, Revisiting Gestational Duration
 
-You may remember that gestational duration (`weeks`) was important when you considered birthweight as a quantitative variable in linear regression. You want to use that again, and add it to the models that you have already built with `visits` and `marital`.
+You may remember that gestational duration (`weeks`) was important when you considered birthweight as a quantitative variable in linear regression. You want to use that again, and add it to the models that you have already built with `visits` and `marital`. The following 3 questions refer to the variables you have already used, plus also `weeks` that you used in the first exam.
 
 a. Fit a multiple logistic regression model of low birthweight with `weeks`, `visits`, and `marital` as explanatory variables. 
 
