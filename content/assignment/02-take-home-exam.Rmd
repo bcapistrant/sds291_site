@@ -20,7 +20,7 @@ editor_options:
 
 # Overall Instructions
 
-- The assignment is [here.](http://sds291.netlify.com/exam/take-home-exam-2.html) [*note: updated on Saturday 5/2 at 11:45am to clarify the organization of the exercises (no question wording was changed).*]
+- The assignment is [here.](http://sds291.netlify.com/exam/take-home-exam-2.html) [*note: updated on Tuesday 5/5 at 9:00am to clarify not to change the `marital` variable).*]
 - There are 14 total exercises within 4 general topics. Please answer by the exercise number.
 - There is not an `.rmd` template. You can use one from a problem set or start a blank file.
 - The file should be knitted to a `.pdf.` and submitted with your `.rmd` file on Moodle, just like a homework/problem set.  Check your section's moodle page for more details on where exactly to submit.

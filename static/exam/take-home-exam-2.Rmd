@@ -40,13 +40,14 @@ c. Calculate and interpret the odds ratio of the slope in a sentence, in the con
 
 d. Calculate the odds and probability of having a child born at low birthweight for birth parent who had 3, 4, 14, and 15 hospital visits. 
 
-e. Interpret the values for 3 and 4 visits in a sentence in the context of the problem, 
+e. Interpret the calculated odds and probabilities of low birthweight for 3 and 4 visits in complete sentences in the context of the problem.
+
 f. Connect these odds for all 4 of these values of visits to the hospital to the odds ratio you calculated in Exercise 3.
 
 
 # Low birtweight and Marital Status (`marital`)
 
-Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes. The following 4 questions refer to the variable in this dataset that reflects marital status (`marital`).
+Marital status can be a reflection of socioeconomic status - dual earning households, potentially shared access to health insurance afforded to married couples - that may be related to birth outcomes. The following 4 questions refer to the variable in this dataset that reflects marital status (`marital`). [**Note:** do not change the `marital` variable -- use it exactly as is.]
 
 ```{r, echo=FALSE}
 gmodels::CrossTable(data$marital,data$lowbirthweight, prop.r = FALSE, prop.c=FALSE,prop.t = FALSE, prop.chisq = FALSE)
